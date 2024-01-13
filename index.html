@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <title>Conjugation master</title>
+</head>
+
+<body>
+    <header>
+        <h1>Conjugation master</h1>
+        <h2>Master French verb conjugation in context</h2>
+    </header>
+    <main>
+        <div class="tense-section">
+            <lable for="tense">Choose a tense:</lable>
+            <select name="tense" id="tense">
+                <option value="present-indicatif">le présent (indicatif)</option>
+                <option value="passe-compose">le passé composé</option>
+                <option value="imparfait">l'imparfait</option>
+            </select>
+        </div>
+        <div class="verb-display-section">
+            <p>The verb to conjugate:</p>
+            <div class="verb-display"></div>
+        </div>
+        <div class="phrase-section"></div>
+        <div class="type-section"></div>
+        <div class="submit-section"><button id="submit-btn">submit</button></div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
