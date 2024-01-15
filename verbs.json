@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "verb": "dire",
+      "phrase": "Je ____ la vérité à mes parents",
+      "answer": "dis"
+    },
+
+    {
+      "id": 2,
+      "verb": "dire",
+      "phrase": "Vous ____ quoi ?",
+      "answer": "dites"
+    },
+
+    {
+      "id": 3,
+      "verb": "dire",
+      "phrase": "Ils ____ tout !",
+      "answer": "disent"
+    },
+
+    {
+      "id": 4,
+      "verb": "dire",
+      "phrase": "Je ne comprends pas ce que tu ____. ",
+      "answer": "dis"
+    },
+
+    {
+      "id": 5,
+      "verb": "dire",
+      "phrase": "Tout ce qu'elle ____ est vrai. ",
+      "answer": "dit"
+    },
+
+    {
+      "id": 6,
+      "verb": "dire",
+      "phrase": "Nous vous ____ tout.",
+      "answer": "disons"
+    },
+
+    {
+      "id": 7,
+      "verb": "dire",
+      "phrase": "Comment on ____ en français... ? ",
+      "answer": "dit"
+    }
+  ]
+}
