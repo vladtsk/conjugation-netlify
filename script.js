@@ -10,35 +10,43 @@ async function launchApp() {
   // An index that will be henerated randomly
   let k;
 
-  async function delay(time) {
-    return new Promise(function (resolve) {
-      setTimeout(function () {
-        resolve();
-      }, time);
-    });
-  }
+  setSpecialBtns();
 
-  async function generateElements() {
-    let i = 0;
-    while (i < 5) {
-      // Generate a random and unique index
-      do {
-        k = Math.floor(Math.random() * jsonData.data.length);
-      } while (indexArray.includes(k));
+  function generateElements() {
+    // Generate a random and unique index
+    do {
+      k = Math.floor(Math.random() * jsonData.presentind.length);
+    } while (indexArray.includes(k));
 
-      indexArray.push(k);
-      displayVerb(k);
-      displayPhrase(k);
-      checkAnswer(k);
-      // Set a delay before displaying the next element
-      const msgArea = document.querySelector(".msg-section p");
-      if (msgArea.innerText !== "Please type a valid verb") {
-        await delay(3000);
-        i++;
-      }
-    }
+    indexArray.push(k);
+    displayVerb(k);
+    displayPhrase(k);
+    checkAnswer(k);
   }
   generateElements();
+  displayNext();
+
+  // Display the next element
+  function displayNext() {
+    // Select the 'next' section
+    const nextSection = document.querySelector(".next-section");
+    // Select the 'next' button
+    const nextBtn = document.getElementById("next-btn");
+    // Selecting the submit section
+    const submitSection = document.querySelector(".submit-section");
+    // Selecting the message "p" element
+    const msgArea = document.querySelector(".msg-section p");
+    // Select the input element
+    const inputArea = document.querySelector(".type-section input");
+
+    nextBtn.addEventListener("click", () => {
+      msgArea.innerText = "";
+      inputArea.value = "";
+      generateElements();
+      nextSection.style.display = "none";
+      submitSection.style.display = "flex";
+    });
+  }
 }
 
 launchApp();
@@ -47,8 +55,8 @@ launchApp();
 function displayVerb(i) {
   // Selecting the verb display section
   const verbDisplay = document.querySelector(".verb-display p");
-  if (jsonData && jsonData.data.length > 0) {
-    verbDisplay.textContent = jsonData.data[i].verb;
+  if (jsonData && jsonData.presentind.length > 0) {
+    verbDisplay.textContent = jsonData.presentind[i].verb;
   }
 }
 
@@ -56,23 +64,25 @@ function displayVerb(i) {
 function displayPhrase(i) {
   // Selecting the phrase display section (the "p" element)
   const phraseDisplay = document.querySelector(".phrase-section p");
-  if (jsonData && jsonData.data.length > 0) {
-    phraseDisplay.textContent = jsonData.data[i].phrase;
+  if (jsonData && jsonData.presentind.length > 0) {
+    phraseDisplay.textContent = jsonData.presentind[i].phrase;
   }
 }
 
 // A function that reads the user input and compares it to the correct answer
 function checkAnswer(i) {
-  // Selecting the message section
+  // Select the message section
   const msgSection = document.querySelector(".msg-section");
-  // Selecting the submit button
+  // Select "p" element for a message to display
+  const msgArea = document.querySelector(".msg-section p");
+  // Selecting the submit section
+  const submitSection = document.querySelector(".submit-section");
+  // Select the submit button
   const submitBtn = document.getElementById("submit-btn");
   // Selecting the input element
   const inputArea = document.querySelector(".type-section input");
-
-  // Creating a "p" element for a message to display
-  const msgArea = document.createElement("p");
-  msgSection.appendChild(msgArea);
+  // Select the 'next' section
+  const nextSection = document.querySelector(".next-section");
 
   submitBtn.addEventListener("click", () => {
     const inputText = inputArea.value;
@@ -80,11 +90,28 @@ function checkAnswer(i) {
       case "":
         msgArea.innerText = "Please type a valid verb";
         break;
-      case jsonData.data[i].answer:
+      case jsonData.presentind[i].answer:
         msgArea.innerText = "Correct";
+        submitSection.style.display = "none";
+        nextSection.style.display = "flex";
         break;
       default:
-        msgArea.innerText = `Incorrect. The correct answer is: "${jsonData.data[i].answer}"`;
+        msgArea.innerText = `Incorrect. The correct answer is: "${jsonData.presentind[i].answer}"`;
+        submitSection.style.display = "none";
+        nextSection.style.display = "flex";
     }
+  });
+}
+
+// Special characters buttons
+function setSpecialBtns() {
+  // Select the input element
+  const inputArea = document.querySelector(".type-section input");
+  // Select all the buttons
+  const specialBtns = document.querySelectorAll(".letters-section button");
+  specialBtns.forEach((button) => {
+    button.addEventListener("click", () => {
+      inputArea.value += button.innerText;
+    });
   });
 }

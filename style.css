@@ -16,10 +16,11 @@ header {
   text-align: center;
   margin-top: 40px;
   margin-bottom: 30px;
+  font-weight: bold;
 }
 
 h2 {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 main {
@@ -28,7 +29,7 @@ main {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 80px;
+  padding-top: 60px;
   padding-bottom: 20px;
   padding-left: 100px;
   padding-right: 100px;
@@ -82,15 +83,29 @@ main {
   align-items: center;
   color: black;
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  padding: 5px;
   background-color: var(--color-secondary);
   border-radius: 6px;
   height: 60px;
 }
 
+/* Styling the sections with special letters */
+.letters-section {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.letters-section button {
+  font-size: 1em;
+  width: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
 /* Styling the section where a user can type their answer */
 .type-section {
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -125,7 +140,7 @@ main {
 /* Styling the submit section */
 .submit-section {
   display: flex;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 #submit-btn {
@@ -141,5 +156,27 @@ main {
 }
 
 #submit-btn:hover {
+  background-color: #d90429;
+}
+
+/* Styling the 'next' section */
+.next-section {
+  display: none;
+  margin-top: 20px;
+}
+
+#next-btn {
+  margin: auto;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 6px;
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+  font-size: 0.9em;
+}
+
+#next-btn:hover {
   background-color: #d90429;
 }
