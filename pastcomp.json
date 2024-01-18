@@ -1,0 +1,223 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "verb": "avoir",
+      "phrase": "Hier, j'____ un rendez-vous.",
+      "answer": "ai eu"
+    },
+    {
+      "id": 2,
+      "verb": "rencontrer",
+      "phrase": "J'____ Julie.",
+      "answer": "ai rencontré"
+    },
+    {
+      "id": 3,
+      "verb": "poser",
+      "phrase": "Ils ____ des questions sur ma formation.",
+      "answer": "ont posé"
+    },
+    {
+      "id": 4,
+      "verb": "répondre",
+      "phrase": "J'____ à leurs questions.",
+      "answer": "ai répondu"
+    },
+    {
+      "id": 5,
+      "verb": "réussir",
+      "phrase": "J'____ mon entretien.",
+      "answer": "ai réussi"
+    },
+    {
+      "id": 6,
+      "verb": "écrire",
+      "phrase": "J'____ un message.",
+      "answer": "ai écrit"
+    },
+    {
+      "id": 7,
+      "verb": "choisir",
+      "phrase": "Vous ____ ?",
+      "answer": "avez choisi"
+    },
+    {
+      "id": 8,
+      "verb": "prendre",
+      "phrase": "Elles ____ l'avion.",
+      "answer": "ont pris"
+    },
+    {
+      "id": 9,
+      "verb": "gagner",
+      "phrase": "On ____.",
+      "answer": "a gagné"
+    },
+    {
+      "id": 10,
+      "verb": "finir",
+      "phrase": "Tu n'____ pas ____ ?",
+      "answer": "as fini"
+    },
+    {
+      "id": 11,
+      "verb": "dire",
+      "phrase": "Elle n'____ pas ____ bonjour.",
+      "answer": "a dit"
+    },
+    {
+      "id": 12,
+      "verb": "voir",
+      "phrase": "J'____ Emma ce matin.",
+      "answer": "ai vu"
+    },
+    {
+      "id": 13,
+      "verb": "accepter",
+      "phrase": "Il n'____ pas ____ ma proposition.",
+      "answer": "a accepté"
+    },
+    {
+      "id": 14,
+      "verb": "visiter",
+      "phrase": "J'____ Paris l'année dernière.",
+      "answer": "ai visité"
+    },
+    {
+      "id": 15,
+      "verb": "manger",
+      "phrase": "Vous ____ au restaurant ?",
+      "answer": "avez mangé"
+    },
+    {
+      "id": 16,
+      "verb": "recevoir",
+      "phrase": "J'____ un message de Lisa.",
+      "answer": "ai reçu"
+    },
+    {
+      "id": 17,
+      "verb": "envoyer",
+      "phrase": "J'____ un message à Alex.",
+      "answer": "ai envoyé"
+    },
+    {
+      "id": 18,
+      "verb": "parler",
+      "phrase": "J'____ de mon travail.",
+      "answer": "ai parlé"
+    },
+    {
+      "id": 19,
+      "verb": "parler",
+      "phrase": "Nous ____ environ une heure.",
+      "answer": "avons parlé"
+    },
+    {
+      "id": 20,
+      "verb": "acheter",
+      "phrase": "Tu ____ du pain ?",
+      "answer": "as acheté"
+    },
+    {
+      "id": 21,
+      "verb": "se coucher",
+      "phrase": "Je (masculine) ____ tard.",
+      "answer": "me suis couché",
+      "aux": "être"
+    },
+    {
+      "id": 22,
+      "verb": "avoir",
+      "phrase": "Ils ____ des problèmes.",
+      "answer": "ont eu"
+    },
+    {
+      "id": 23,
+      "verb": "arriver",
+      "phrase": "Ils ____ ce matin.",
+      "answer": "sont arrivés",
+      "aux": "être"
+    },
+    {
+      "id": 24,
+      "verb": "retourner",
+      "phrase": "Elle ____ aux États-Unis.",
+      "answer": "est retournée",
+      "aux": "être"
+    },
+    {
+      "id": 25,
+      "verb": "pouvoir",
+      "phrase": "On n'____ pas ____ venir plus tôt.",
+      "answer": "a pu"
+    },
+    {
+      "id": 26,
+      "verb": "monter",
+      "phrase": "Nous ____ à la tour Eiffel.",
+      "answer": "sommes montés",
+      "aux": "être"
+    },
+    {
+      "id": 27,
+      "verb": "rester",
+      "phrase": "Il ____ chez lui.",
+      "answer": "est resté",
+      "aux": "être"
+    },
+    {
+      "id": 28,
+      "verb": "aller",
+      "phrase": "Je (masculine) ____ en Belgique.",
+      "answer": "suis allé",
+      "aux": "être"
+    },
+    {
+      "id": 29,
+      "verb": "dormir",
+      "phrase": "J'____ à l'hôtel Métropole.",
+      "answer": "ai dormi"
+    },
+    {
+      "id": 30,
+      "verb": "se lever",
+      "phrase": "Je (masculine) ____ à 9 h.",
+      "answer": "me suis levé",
+      "aux": "être"
+    },
+    {
+      "id": 31,
+      "verb": "manger",
+      "phrase": "J'ai ____ des frites.",
+      "answer": "mangé"
+    },
+    {
+      "id": 32,
+      "verb": "boire",
+      "phrase": "J'ai ____ de la bière.",
+      "answer": "bu"
+    },
+    {
+      "id": 33,
+      "verb": "parler",
+      "phrase": "J'ai ____ français.",
+      "answer": "parlé"
+    },
+    {
+      "id": 34,
+      "verb": "rentrer",
+      "phrase": "Je (féminine) ____ à la maison.",
+      "answer": "suis rentrée",
+      "aux": "être"
+    },
+    {
+      "id": 35,
+      "verb": "venir",
+      "phrase": "Ils ____ à 9 heures.",
+      "answer": "sont venus",
+      "aux": "être"
+    }
+  ]
+}

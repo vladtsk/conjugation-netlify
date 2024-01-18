@@ -1,5 +1,5 @@
 {
-  "presentind": [
+  "data": [
     {
       "id": 1,
       "verb": "dire",
@@ -436,8 +436,8 @@
     {
       "id": 68,
       "verb": "se lever",
-      "phrase": "Tu te ____ à quelle heure demain matin ?",
-      "answer": "lèves"
+      "phrase": "Tu ____ à quelle heure demain matin ?",
+      "answer": "te lèves"
     },
     {
       "id": 69,
@@ -448,8 +448,8 @@
     {
       "id": 70,
       "verb": "se lever",
-      "phrase": "Je me ____ tous les jours à 6 h.",
-      "answer": "lève"
+      "phrase": "Je ____ tous les jours à 6 h.",
+      "answer": "me lève"
     },
     {
       "id": 71,
@@ -669,9 +669,135 @@
     },
     {
       "id": 107,
-      "verb": "reposer",
+      "verb": "se reposer",
       "phrase": "Le samedi et le dimanche, on ____.",
       "answer": "se repose"
+    },
+    {
+      "id": 108,
+      "verb": "coûter",
+      "phrase": "Au supermarché, les produits ____ souvent moins cher.",
+      "answer": "coûtent"
+    },
+    {
+      "id": 109,
+      "verb": "coûter",
+      "phrase": "Combien ça ____ ?",
+      "answer": "coûte"
+    },
+    {
+      "id": 110,
+      "verb": "acheter",
+      "phrase": "J'____ du pain à la boulangerie.",
+      "answer": "achète"
+    },
+    {
+      "id": 111,
+      "verb": "penser",
+      "phrase": "Qu'est-ce que tu en ____ ?",
+      "answer": "penses"
+    },
+    {
+      "id": 112,
+      "verb": "porter",
+      "phrase": "Il ____ des vêtements légers.",
+      "answer": "porte"
+    },
+    {
+      "id": 113,
+      "verb": "croire",
+      "phrase": "Je ____ qu'on est perdus !",
+      "answer": "crois"
+    },
+    {
+      "id": 114,
+      "verb": "pouvoir",
+      "phrase": "Les enfants ne ____ pas se promener seuls.",
+      "answer": "peuvent"
+    },
+    {
+      "id": 115,
+      "verb": "voyager",
+      "phrase": "Je ____ beaucoup.",
+      "answer": "voyage"
+    },
+    {
+      "id": 116,
+      "verb": "vivre",
+      "phrase": "Tu ____ en Guadeloupe depuis longtemps ?",
+      "answer": "vis"
+    },
+    {
+      "id": 117,
+      "verb": "se passer",
+      "phrase": "Comment ça ____ en Suisse ?",
+      "answer": "se passe"
+    },
+    {
+      "id": 118,
+      "verb": "inquiéter",
+      "phrase": "Ne t'____ pas.",
+      "answer": "inquiète"
+    },
+    {
+      "id": 119,
+      "verb": "venir",
+      "phrase": "Je ____ pour retirer un colis.",
+      "answer": "viens"
+    },
+    {
+      "id": 120,
+      "verb": "lire",
+      "phrase": "Est-ce que tu ____ le journal ?",
+      "answer": "lis"
+    },
+    {
+      "id": 121,
+      "verb": "partir",
+      "phrase": "Martin ____ pour un an.",
+      "answer": "part"
+    },
+    {
+      "id": 122,
+      "verb": "sortir",
+      "phrase": "Margaux et Nick ____ ensemble.",
+      "answer": "sortent"
+    },
+    {
+      "id": 123,
+      "verb": "habiter",
+      "phrase": "Elle ____ toute seule.",
+      "answer": "habite"
+    },
+    {
+      "id": 124,
+      "verb": "sortir",
+      "phrase": "Je ____ avec une fille de mon travail.",
+      "answer": "sors"
+    },
+    {
+      "id": 125,
+      "verb": "chercher",
+      "phrase": "On ____ un appartement plus grand.",
+      "answer": "cherche"
+    },
+    {
+      "id": 126,
+      "verb": "prendre",
+      "phrase": "Je ____ des médicaments.",
+      "answer": "prends"
+    },
+    {
+      "id": 127,
+      "verb": "gagner",
+      "phrase": "Il ____ bien sa vie.",
+      "answer": "gagne"
+    },
+    {
+      "id": 128,
+      "verb": "habiter",
+      "phrase": "J'____ au dernier étage.",
+      "answer": "habite"
     }
   ]
 }

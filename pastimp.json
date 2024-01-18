@@ -1,0 +1,10 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "verb": "avoir",
+      "phrase": "Hier, j'____ un rendez-vous.",
+      "answer": "ai eu"
+    }
+  ]
+}
