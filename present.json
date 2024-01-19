@@ -4,7 +4,8 @@
       "id": 1,
       "verb": "dire",
       "phrase": "Je ____ la vérité à mes parents",
-      "answer": "dis"
+      "answer": "dis",
+      "tense": "present"
     },
 
     {

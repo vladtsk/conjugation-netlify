@@ -68,6 +68,23 @@ main {
   font-size: 0.8em;
 }
 
+/* Styling the 'number of phrases' section */
+.nb-phrases {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+#phraseNb {
+  color: black;
+  background-color: var(--color-secondary);
+
+  border-radius: 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8em;
+}
+
 /* Styling the start section */
 
 .start-section {
@@ -219,4 +236,35 @@ main {
 
 #next-btn:hover {
   background-color: #d90429;
+}
+
+/* Styling the finish section */
+
+.finish-section {
+  display: none;
+  margin-top: 20px;
+}
+
+#finish-btn {
+  margin: auto;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 6px;
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+  font-size: 0.9em;
+}
+
+#finish-btn:hover {
+  background-color: #d90429;
+}
+
+/* Styling the result section */
+.result {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  font-size: 24px;
 }

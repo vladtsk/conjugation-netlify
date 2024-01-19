@@ -1,59 +1,7 @@
-let jsonData;
-
-// Fetch data from the JSON file and launching the app
-function launchApp(jsonInfo) {
-  jsonData = jsonInfo;
-
-  // Create an array of indeces
-  let indexArray = [];
-  // An index that will be henerated randomly
-  let k;
-
-  buildPageStructure(jsonData);
-
-  setSpecialBtns();
-
-  function generateElements(jsonInfo) {
-    jsonData = jsonInfo;
-
-    // Generate a random and unique index
-    do {
-      k = Math.floor(Math.random() * jsonData.data.length);
-    } while (indexArray.includes(k));
-
-    indexArray.push(k);
-    displayVerb(k);
-    displayPhrase(k);
-    checkAnswer(k);
-  }
-  generateElements(jsonData);
-  displayNext(jsonData);
-
-  // Display the next element
-  function displayNext(jsonInfo) {
-    jsonData = jsonInfo;
-    // Select the 'next' section
-    const nextSection = document.querySelector(".next-section");
-    // Select the 'next' button
-    const nextBtn = document.getElementById("next-btn");
-    // Selecting the submit section
-    const submitSection = document.querySelector(".submit-section");
-    // Selecting the message "p" element
-    const msgArea = document.querySelector(".msg-section p");
-    // Select the input element
-    const inputArea = document.querySelector(".type-section input");
-
-    nextBtn.addEventListener("click", () => {
-      msgArea.innerText = "";
-      inputArea.value = "";
-      generateElements(jsonData);
-      nextSection.style.display = "none";
-      submitSection.style.display = "flex";
-    });
-  }
-}
-
-showFirstPage();
+let score = 0;
+let phraseNumber = 5;
+// Create an array of indeces
+let indexArray = [];
 
 // Showing the first page
 async function showFirstPage() {
@@ -65,7 +13,7 @@ async function showFirstPage() {
   mainSection.appendChild(welcomeDiv);
 
   const welcomeP = document.createElement("p");
-  welcomeP.innerText = "Welcome to Conjugation master!";
+  welcomeP.innerText = "Welcome to Conjugation Master!";
   welcomeDiv.appendChild(welcomeP);
 
   // Tense selection section
@@ -75,7 +23,7 @@ async function showFirstPage() {
 
   const labelTense = document.createElement("label");
   labelTense.htmlFor = "tense";
-  labelTense.innerText = "Choose a tense:";
+  labelTense.innerText = "Choose a tense you'd like practise:";
   tenseSelect.appendChild(labelTense);
 
   const selectElement = document.createElement("select");
@@ -85,19 +33,50 @@ async function showFirstPage() {
 
   const optionPresent = document.createElement("option");
   optionPresent.value = "present";
-  optionPresent.innerText = "le présent (indicatif)";
+  optionPresent.innerText = "present (le présent de l'indicatif)";
 
   const optionPastComp = document.createElement("option");
   optionPastComp.value = "pastcomp";
-  optionPastComp.innerText = "le passé composé";
+  optionPastComp.innerText = "past (le passé composé)";
 
   const optionPastImp = document.createElement("option");
   optionPastImp.value = "pastimp";
-  optionPastImp.innerText = "l'imparfait";
+  optionPastImp.innerText = "imperfect past (l'imparfait)";
 
   selectElement.appendChild(optionPresent);
   selectElement.appendChild(optionPastComp);
   selectElement.appendChild(optionPastImp);
+
+  // The "number of phrases" section
+  const phrNbSection = document.createElement("div");
+  phrNbSection.classList.add("nb-phrases");
+  mainSection.appendChild(phrNbSection);
+
+  const phrNbLabel = document.createElement("label");
+  phrNbLabel.htmlFor = "phraseNb";
+  phrNbLabel.innerText = "How many phrases would you like to practise?";
+  phrNbSection.appendChild(phrNbLabel);
+
+  const selectPhrNb = document.createElement("select");
+  selectPhrNb.name = "phraseNb";
+  selectPhrNb.id = "phraseNb";
+  phrNbSection.appendChild(selectPhrNb);
+
+  const phrNb5 = document.createElement("option");
+  phrNb5.value = 5;
+  phrNb5.innerText = "5";
+
+  const phrNb10 = document.createElement("option");
+  phrNb10.value = 10;
+  phrNb10.innerText = "10";
+
+  const phrNb15 = document.createElement("option");
+  phrNb15.value = 15;
+  phrNb15.innerText = "15";
+
+  selectPhrNb.appendChild(phrNb5);
+  selectPhrNb.appendChild(phrNb10);
+  selectPhrNb.appendChild(phrNb15);
 
   // Start button
 
@@ -107,17 +86,22 @@ async function showFirstPage() {
 
   const startBtn = document.createElement("start");
   startBtn.id = "start-btn";
-  startBtn.innerText = "start";
+  startBtn.innerText = "Start now!";
   startSection.appendChild(startBtn);
 
   // Customer selecting the tense
 
   let response = await fetch("present.json");
-  jsonData = await response.json();
+  let jsonData = await response.json();
 
   selectElement.addEventListener("change", async () => {
     response = await fetch(`${selectElement.value}.json`);
     jsonData = await response.json();
+  });
+
+  // Customer selecting the number of phrases
+  selectPhrNb.addEventListener("change", () => {
+    phraseNumber = selectPhrNb.value;
   });
 
   // Adding an event listener on the start button
@@ -126,9 +110,59 @@ async function showFirstPage() {
   });
 }
 
+// Launching the app
+function launchApp(data) {
+  // An index that will be henerated randomly
+  let k;
+
+  buildPageStructure(data);
+
+  setSpecialBtns();
+
+  function generateElements(data) {
+    // Generate a random and unique index
+    do {
+      k = Math.floor(Math.random() * data.data.length);
+    } while (indexArray.includes(k));
+
+    indexArray.push(k);
+    displayVerb(k, data);
+    displayPhrase(k, data);
+    checkAnswer(k, data);
+  }
+
+  generateElements(data);
+  displayNext(data);
+
+  // Display the next element
+  function displayNext(data) {
+    // Select the 'next' section
+    const nextSection = document.querySelector(".next-section");
+    // Select the 'next' button
+    const nextBtn = document.getElementById("next-btn");
+    // Selecting the submit section
+    const submitSection = document.querySelector(".submit-section");
+
+    // Selecting the message "p" element
+    const msgArea = document.querySelector(".msg-section p");
+    // Select the input element
+    const inputArea = document.querySelector(".type-section input");
+
+    nextBtn.addEventListener("click", () => {
+      msgArea.innerText = "";
+      inputArea.value = "";
+      generateElements(data);
+      nextSection.style.display = "none";
+      submitSection.style.display = "flex";
+      console.log(indexArray.length);
+    });
+  }
+}
+
+showFirstPage();
+
 // Building the main page structure
-function buildPageStructure(jsonInfo) {
-  jsonData = jsonInfo;
+function buildPageStructure(data) {
   // Deleting all the elements in the "main" section
   const mainSection = document.querySelector("main");
   mainSection.innerHTML = "";
@@ -241,28 +275,38 @@ function buildPageStructure(jsonInfo) {
   nextBtn.id = "next-btn";
   nextBtn.innerText = "next";
   nextSection.appendChild(nextBtn);
+
+  // Finish section
+  const finishSection = document.createElement("div");
+  finishSection.classList.add("finish-section");
+  mainSection.appendChild(finishSection);
+
+  const finishBtn = document.createElement("button");
+  finishBtn.id = "finish-btn";
+  finishBtn.innerText = "finish";
+  finishSection.appendChild(finishBtn);
 }
 
 // A function that displays a verb to conjugate
-function displayVerb(i) {
+function displayVerb(i, data) {
   // Selecting the verb display section
   const verbDisplay = document.querySelector(".verb-display p");
-  if (jsonData && jsonData.data.length > 0) {
-    verbDisplay.textContent = jsonData.data[i].verb;
+  if (data && data.data.length > 0) {
+    verbDisplay.textContent = data.data[i].verb;
   }
 }
 
 // A function that displays a phrase (the context)
-function displayPhrase(i) {
+function displayPhrase(i, data) {
   // Selecting the phrase display section (the "p" element)
   const phraseDisplay = document.querySelector(".phrase-section p");
-  if (jsonData && jsonData.data.length > 0) {
-    phraseDisplay.textContent = jsonData.data[i].phrase;
+  if (data && data.data.length > 0) {
+    phraseDisplay.textContent = data.data[i].phrase;
   }
 }
 
 // A function that reads the user input and compares it to the correct answer
-function checkAnswer(i) {
+function checkAnswer(i, data) {
   // Select the message section
   const msgSection = document.querySelector(".msg-section");
   // Select "p" element for a message to display
@@ -275,22 +319,38 @@ function checkAnswer(i) {
   const inputArea = document.querySelector(".type-section input");
   // Select the 'next' section
   const nextSection = document.querySelector(".next-section");
+  // Select the finish section
+  const finishSection = document.querySelector(".finish-section");
+  // Select the finish button
+  const finishBtn = document.getElementById("finish-btn");
 
   submitBtn.addEventListener("click", () => {
     const inputText = inputArea.value;
+    let displaySection;
+
+    if (indexArray.length < phraseNumber) {
+      displaySection = nextSection;
+    } else {
+      displaySection = finishSection;
+    }
+
     switch (inputText) {
       case "":
         msgArea.innerText = "Please type a valid verb";
         break;
-      case jsonData.data[i].answer:
+      case data.data[i].answer:
         msgArea.innerText = "Correct";
-        submitSection.style.display = "none";
-        nextSection.style.display = "flex";
         break;
       default:
-        msgArea.innerText = `Incorrect. The correct answer is: "${jsonData.data[i].answer}"`;
-        submitSection.style.display = "none";
-        nextSection.style.display = "flex";
+        msgArea.innerText = `Incorrect. The correct answer is: "${data.data[i].answer}"`;
+    }
+
+    if (inputText !== "") {
+      submitSection.style.display = "none";
+      displaySection.style.display = "flex";
+      finishBtn.addEventListener("click", () => {
+        showResultPage();
+      });
     }
   });
 }
@@ -306,4 +366,17 @@ function setSpecialBtns() {
       inputArea.value += button.innerText;
     });
   });
+}
+
+function showResultPage() {
+  const mainSection = document.querySelector("main");
+  mainSection.innerHTML = "";
+
+  const resultDiv = document.createElement("div");
+  resultDiv.classList.add("result");
+  mainSection.appendChild(resultDiv);
+
+  const resultMsg = document.createElement("p");
+  resultMsg.innerText = "You have finished the exercise!";
+  resultDiv.appendChild(resultMsg);
 }
