@@ -84,7 +84,7 @@ async function showFirstPage() {
   startSection.classList.add("start-section");
   mainSection.appendChild(startSection);
 
-  const startBtn = document.createElement("start");
+  const startBtn = document.createElement("button");
   startBtn.id = "start-btn";
   startBtn.innerText = "Start now!";
   startSection.appendChild(startBtn);
@@ -118,6 +118,13 @@ function launchApp(data) {
   buildPageStructure(data);
 
   setSpecialBtns();
+
+  // Selecting the tense display section
+  const tenseDisplay = document.querySelector(".tense-display p");
+  // Displaying the tense
+  if (data && data.data.length > 0) {
+    tenseDisplay.textContent = data.data[0].tense;
+  }
 
   function generateElements(data) {
     // Generate a random and unique index
@@ -154,7 +161,6 @@ function launchApp(data) {
       generateElements(data);
       nextSection.style.display = "none";
       submitSection.style.display = "flex";
-      console.log(indexArray.length);
     });
   }
 }
@@ -166,6 +172,22 @@ function buildPageStructure(data) {
   // Deleting all the elements in the "main" section
   const mainSection = document.querySelector("main");
   mainSection.innerHTML = "";
+
+  // Tense display section
+  const tenseDisplaySection = document.createElement("div");
+  tenseDisplaySection.classList.add("tense-display-section");
+  mainSection.appendChild(tenseDisplaySection);
+
+  const tensePElement = document.createElement("p");
+  tensePElement.innerText = "The tense:";
+  tenseDisplaySection.appendChild(tensePElement);
+
+  const tenseDisplay = document.createElement("div");
+  tenseDisplay.classList.add("tense-display");
+  tenseDisplaySection.appendChild(tenseDisplay);
+
+  const tenseDisplayP = document.createElement("p");
+  tenseDisplay.appendChild(tenseDisplayP);
 
   // Verb display section
   const verbDisplaySection = document.createElement("div");
@@ -291,6 +313,7 @@ function buildPageStructure(data) {
 function displayVerb(i, data) {
   // Selecting the verb display section
   const verbDisplay = document.querySelector(".verb-display p");
+
   if (data && data.data.length > 0) {
     verbDisplay.textContent = data.data[i].verb;
   }
@@ -340,6 +363,7 @@ function checkAnswer(i, data) {
         break;
       case data.data[i].answer:
         msgArea.innerText = "Correct";
+        score++;
         break;
       default:
         msgArea.innerText = `Incorrect. The correct answer is: "${data.data[i].answer}"`;
@@ -348,10 +372,11 @@ function checkAnswer(i, data) {
     if (inputText !== "") {
       submitSection.style.display = "none";
       displaySection.style.display = "flex";
-      finishBtn.addEventListener("click", () => {
-        showResultPage();
-      });
     }
+  });
+
+  finishBtn.addEventListener("click", () => {
+    showResultPage();
   });
 }
 
@@ -379,4 +404,33 @@ function showResultPage() {
   const resultMsg = document.createElement("p");
   resultMsg.innerText = "You have finished the exercise!";
   resultDiv.appendChild(resultMsg);
+
+  const scoreDiv = document.createElement("div");
+  scoreDiv.classList.add("score-section");
+  mainSection.appendChild(scoreDiv);
+
+  const trophyIcon = document.createElement("i");
+  trophyIcon.classList.add("fa-solid");
+  trophyIcon.classList.add("fa-trophy");
+  scoreDiv.appendChild(trophyIcon);
+
+  const scoreMsg = document.createElement("p");
+  scoreMsg.innerText = `Your score is: ${score}/${phraseNumber}`;
+  scoreDiv.appendChild(scoreMsg);
+
+  const restartSection = document.createElement("div");
+  restartSection.classList.add("restart");
+  mainSection.appendChild(restartSection);
+  const restartBtn = document.createElement("button");
+  restartBtn.id = "restart-btn";
+  restartBtn.innerText = "restart";
+  restartSection.appendChild(restartBtn);
+
+  restartBtn.addEventListener("click", () => {
+    mainSection.innerHTML = "";
+    score = 0;
+    phraseNumber = 5;
+    indexArray = [];
+    showFirstPage();
+  });
 }

@@ -4,7 +4,8 @@
       "id": 1,
       "verb": "avoir",
       "phrase": "Hier, j'____ un rendez-vous.",
-      "answer": "ai eu"
+      "answer": "ai eu",
+      "tense": "imperfect past (l'imparfait)"
     }
   ]
 }

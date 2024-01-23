@@ -4,7 +4,8 @@
       "id": 1,
       "verb": "avoir",
       "phrase": "Hier, j'____ un rendez-vous.",
-      "answer": "ai eu"
+      "answer": "ai eu",
+      "tense": "past (le passé composé)"
     },
     {
       "id": 2,
@@ -190,20 +191,20 @@
     {
       "id": 31,
       "verb": "manger",
-      "phrase": "J'ai ____ des frites.",
-      "answer": "mangé"
+      "phrase": "J'____ des frites.",
+      "answer": "ai mangé"
     },
     {
       "id": 32,
       "verb": "boire",
-      "phrase": "J'ai ____ de la bière.",
-      "answer": "bu"
+      "phrase": "J'____ de la bière.",
+      "answer": "ai bu"
     },
     {
       "id": 33,
       "verb": "parler",
-      "phrase": "J'ai ____ français.",
-      "answer": "parlé"
+      "phrase": "J'____ français.",
+      "answer": "ai parlé"
     },
     {
       "id": 34,
@@ -218,6 +219,690 @@
       "phrase": "Ils ____ à 9 heures.",
       "answer": "sont venus",
       "aux": "être"
+    },
+    {
+      "id": 36,
+      "verb": "lire",
+      "phrase": "Est-ce que tu ____ ce livre ?",
+      "answer": "as lu"
+    },
+    {
+      "id": 37,
+      "verb": "se voir",
+      "phrase": "On (masc.) ne s'____ pas ____ depuis longtemps.",
+      "answer": "est vus",
+      "aux": "être"
+    },
+    {
+      "id": 38,
+      "verb": "partir",
+      "phrase": "Nous ____ à Bordeaux.",
+      "answer": "sommes partis",
+      "aux": "être"
+    },
+    {
+      "id": 39,
+      "verb": "passer",
+      "phrase": "J'____ une bonne journée.",
+      "answer": "ai passé"
+    },
+    {
+      "id": 40,
+      "verb": "rencontrer",
+      "phrase": "Vous ____ des gens intéressants.",
+      "answer": "avez rencontré"
+    },
+    {
+      "id": 41,
+      "verb": "utiliser",
+      "phrase": "Elles ____ le français pour communiquer.",
+      "answer": "ont utilisé"
+    },
+    {
+      "id": 42,
+      "verb": "déjeuner",
+      "phrase": "Tu ____ tôt.",
+      "answer": "as déjeuné"
+    },
+    {
+      "id": 43,
+      "verb": "acheter",
+      "phrase": "Ils ____ des bonbons.",
+      "answer": "ont acheté"
+    },
+    {
+      "id": 44,
+      "verb": "faire",
+      "phrase": "Tu ____ des gâteaux.",
+      "answer": "as fait"
+    },
+    {
+      "id": 45,
+      "verb": "acheter",
+      "phrase": "Il ____ son pain à la boulangerie.",
+      "answer": "a acheté"
+    },
+    {
+      "id": 46,
+      "verb": "passer",
+      "phrase": "Tu ____ une bonne journée ?",
+      "answer": "as passé"
+    },
+    {
+      "id": 47,
+      "verb": "faire",
+      "phrase": "Qu'est-ce que tu ____ aujourd'hui ?",
+      "answer": "as fait"
+    },
+    {
+      "id": 48,
+      "verb": "avoir",
+      "phrase": "Ce matin, j'____ un cours de conversation.",
+      "answer": "ai eu"
+    },
+    {
+      "id": 49,
+      "verb": "rencontrer",
+      "phrase": "Tu ____ des gens ?",
+      "answer": "as rencontré"
+    },
+    {
+      "id": 50,
+      "verb": "parler",
+      "phrase": "J'____ avec des Italiens.",
+      "answer": "ai parlé"
+    },
+    {
+      "id": 51,
+      "verb": "parler",
+      "phrase": "Vous ____ en français ?",
+      "answer": "avez parlé"
+    },
+    {
+      "id": 52,
+      "verb": "utiliser",
+      "phrase": "Nous n'____ pas ____ l'anglais.",
+      "answer": "avons utilisé"
+    },
+    {
+      "id": 53,
+      "verb": "manger",
+      "phrase": "Vous ____ ensemble ?",
+      "answer": "avez mangé"
+    },
+    {
+      "id": 54,
+      "verb": "regarder",
+      "phrase": "J'____ un film.",
+      "answer": "ai regardé"
+    },
+    {
+      "id": 55,
+      "verb": "aller",
+      "phrase": "Où est-ce que tu (féminine) ____ ?",
+      "answer": "es allée",
+      "aux": "être"
+    },
+    {
+      "id": 56,
+      "verb": "aller",
+      "phrase": "Je (masculine) ____ au musée.",
+      "answer": "suis allé",
+      "aux": "être"
+    },
+    {
+      "id": 57,
+      "verb": "rester",
+      "phrase": "Tu (masculine) ____ toute la journée à la maison ?",
+      "answer": "es resté",
+      "aux": "être"
+    },
+    {
+      "id": 58,
+      "verb": "sortir",
+      "phrase": "Je (masculine) ____ à 22 heures.",
+      "answer": "suis sorti",
+      "aux": "être"
+    },
+    {
+      "id": 59,
+      "verb": "passer",
+      "phrase": "Je (féminine) ____ chez Olivia.",
+      "answer": "suis passée",
+      "aux": "être"
+    },
+    {
+      "id": 60,
+      "verb": "acheter",
+      "phrase": "On ____ plein de choses.",
+      "answer": "a acheté"
+    },
+    {
+      "id": 61,
+      "verb": "prendre",
+      "phrase": "On ____ le bus.",
+      "answer": "a pris"
+    },
+    {
+      "id": 62,
+      "verb": "aller",
+      "phrase": "Vous (masc., plural) ____ où ?",
+      "answer": "êtes allés",
+      "aux": "être"
+    },
+    {
+      "id": 63,
+      "verb": "acheter",
+      "phrase": "Qu'est-ce que tu ____ ?",
+      "answer": "as acheté"
+    },
+    {
+      "id": 64,
+      "verb": "prendre",
+      "phrase": "J'____ mes chaussures.",
+      "answer": "ai pris"
+    },
+    {
+      "id": 65,
+      "verb": "faire",
+      "phrase": "Tu ____ les courses ?",
+      "answer": "as fait"
+    },
+    {
+      "id": 66,
+      "verb": "faire",
+      "phrase": "J' ____ les courses.",
+      "answer": "ai fait"
+    },
+    {
+      "id": 67,
+      "verb": "mettre",
+      "phrase": "Où est-ce que tu ____ les clés ?",
+      "answer": "as mis"
+    },
+    {
+      "id": 68,
+      "verb": "ouvrir",
+      "phrase": "J'____ une bouteille de vin.",
+      "answer": "ai ouvert"
+    },
+    {
+      "id": 69,
+      "verb": "prendre",
+      "phrase": "Tu n'____ pas ____ de lait ?",
+      "answer": "as pris"
+    },
+    {
+      "id": 70,
+      "verb": "mettre",
+      "phrase": "J'____ les bouteilles dans le frigo.",
+      "answer": "ai mis"
+    },
+    {
+      "id": 71,
+      "verb": "faire",
+      "phrase": "J'____ un gâteau.",
+      "answer": "ai fait"
+    },
+    {
+      "id": 72,
+      "verb": "trouver",
+      "phrase": "J'____ la recette dans ce livre.",
+      "answer": "ai trouvé"
+    },
+    {
+      "id": 73,
+      "verb": "faire",
+      "phrase": "Qu'est-ce que vous ____ ce matin ?",
+      "answer": "avez fait"
+    },
+    {
+      "id": 74,
+      "verb": "apprendre",
+      "phrase": "J'____ à conduire.",
+      "answer": "ai appris"
+    },
+    {
+      "id": 75,
+      "verb": "faire",
+      "phrase": "Vous ____ le ménage ?",
+      "answer": "avez fait"
+    },
+    {
+      "id": 76,
+      "verb": "faire",
+      "phrase": "J'____ mon lit.",
+      "answer": "ai fait"
+    },
+    {
+      "id": 77,
+      "verb": "faire",
+      "phrase": "Elle n'____ pas ____ son lit.",
+      "answer": "a fait"
+    },
+    {
+      "id": 78,
+      "verb": "mettre",
+      "phrase": "Vous ____ la table ?",
+      "answer": "avez mis"
+    },
+    {
+      "id": 79,
+      "verb": "dire",
+      "phrase": "Qu'est-ce que vous ____ ?",
+      "answer": "avez dit"
+    },
+    {
+      "id": 80,
+      "verb": "comprendre",
+      "phrase": "Je n'____ pas bien ____.",
+      "answer": "ai compris"
+    },
+    {
+      "id": 81,
+      "verb": "partir",
+      "phrase": "Je (masc.) ____ de la maison vers 9 heures.",
+      "answer": "suis parti",
+      "aux": "être"
+    },
+    {
+      "id": 82,
+      "verb": "arriver",
+      "phrase": "Je (fem.) ____ vers 10 h.",
+      "answer": "suis arrivée",
+      "aux": "être"
+    },
+    {
+      "id": 83,
+      "verb": "rester",
+      "phrase": "Combien de temps est-ce que vous (masc., sing.) ____ là-bas ?",
+      "answer": "êtes resté",
+      "aux": "être"
+    },
+    {
+      "id": 84,
+      "verb": "monter",
+      "phrase": "Je (masc.) ____ au 6e étage.",
+      "answer": "suis monté",
+      "aux": "être"
+    },
+    {
+      "id": 85,
+      "verb": "entrer",
+      "phrase": "Je (masc.) ____ dans mon bureau.",
+      "answer": "suis entré",
+      "aux": "être"
+    },
+    {
+      "id": 86,
+      "verb": "faire",
+      "phrase": "Qu'est-ce que vous ____ ?",
+      "answer": "avez fait",
+      "aux": "avoir"
+    },
+    {
+      "id": 87,
+      "verb": "descendre",
+      "phrase": "Je (masc.) ____ à la réception.",
+      "answer": "suis descendu",
+      "aux": "être"
+    },
+    {
+      "id": 88,
+      "verb": "appeler",
+      "phrase": "J'ai ____ la police.",
+      "answer": "appelé",
+      "aux": "avoir"
+    },
+    {
+      "id": 89,
+      "verb": "arriver",
+      "phrase": "Les pompiers ____.",
+      "answer": "sont arrivés",
+      "aux": "être"
+    },
+    {
+      "id": 90,
+      "verb": "arriver",
+      "phrase": "Ils ____ très vite.",
+      "answer": "sont arrivés",
+      "aux": "être"
+    },
+    {
+      "id": 91,
+      "verb": "aller",
+      "phrase": "Ils ____ à l'hôpital.",
+      "answer": "sont allés",
+      "aux": "être"
+    },
+    {
+      "id": 92,
+      "verb": "retourner",
+      "phrase": "Vous (masc., sing.) n'____ pas ____ à votre bureau ?",
+      "answer": "êtes retourné",
+      "aux": "être"
+    },
+    {
+      "id": 93,
+      "verb": "se passer",
+      "phrase": "Ça ____ très bien ____.",
+      "answer": "s'est passé",
+      "aux": "être"
+    },
+    {
+      "id": 94,
+      "verb": "se reposer",
+      "phrase": "Je (masc.) ____.",
+      "answer": "me suis reposé",
+      "aux": "être"
+    },
+    {
+      "id": 95,
+      "verb": "se lever",
+      "phrase": "Je (fem.) ____ tard tous les jours.",
+      "answer": "me suis levée",
+      "aux": "être"
+    },
+    {
+      "id": 96,
+      "verb": "se baigner",
+      "phrase": "Tu (masc.) ____ ?",
+      "answer": "t'es baigné",
+      "aux": "être"
+    },
+    {
+      "id": 97,
+      "verb": "se baigner",
+      "phrase": "Je (fem.) ____ dans le lac.",
+      "answer": "me suis baignée",
+      "aux": "être"
+    },
+    {
+      "id": 98,
+      "verb": "se promener",
+      "phrase": "Tu (masc.) ____ en ville ?",
+      "answer": "t'es promené",
+      "aux": "être"
+    },
+    {
+      "id": 99,
+      "verb": "se promener",
+      "phrase": "Je (masc.) ____.",
+      "answer": "me suis promené",
+      "aux": "être"
+    },
+    {
+      "id": 100,
+      "verb": "se perdre",
+      "phrase": "Je (fem.) ____ !",
+      "answer": "me suis perdue",
+      "aux": "être"
+    },
+    {
+      "id": 101,
+      "verb": "aller",
+      "phrase": "Tu (fem.) n'____ pas ____ danser ?",
+      "answer": "es allée",
+      "aux": "être"
+    },
+    {
+      "id": 102,
+      "verb": "aller",
+      "phrase": "Je (fem.) ____ en boîte.",
+      "answer": "suis allée",
+      "aux": "être"
+    },
+    {
+      "id": 103,
+      "verb": "s'amuser",
+      "phrase": "Je (masc.) ____ bien ____.",
+      "answer": "me suis amusé",
+      "aux": "être"
+    },
+    {
+      "id": 104,
+      "verb": "se coucher",
+      "phrase": "Je (masc.) ____ tard.",
+      "answer": "me suis couché",
+      "aux": "être"
+    },
+    {
+      "id": 105,
+      "verb": "se passer",
+      "phrase": "Ça ____ bien ____ ?",
+      "answer": "s'est passé",
+      "aux": "être"
+    },
+    {
+      "id": 106,
+      "verb": "se disputer",
+      "phrase": "Je (fem.) ____ avec lui.",
+      "answer": "me suis disputée",
+      "aux": "être"
+    },
+    {
+      "id": 107,
+      "verb": "se téléphoner",
+      "phrase": "Nous ____ tous les jours.",
+      "answer": "nous sommes téléphoné",
+      "aux": "être"
+    },
+    {
+      "id": 108,
+      "verb": "se reposer",
+      "phrase": "Je (fem.) ____.",
+      "answer": "me suis reposée",
+      "aux": "être"
+    },
+    {
+      "id": 109,
+      "verb": "avoir",
+      "phrase": "J'____ un petit problème.",
+      "answer": "ai eu"
+    },
+    {
+      "id": 110,
+      "verb": "attendre",
+      "phrase": "Nous ____ une heure.",
+      "answer": "avons attendu"
+    },
+    {
+      "id": 111,
+      "verb": "dormir",
+      "phrase": "Vous ____ dans l'avion ?",
+      "answer": "avez dormi"
+    },
+    {
+      "id": 112,
+      "verb": "pouvoir",
+      "phrase": "Vous ____ trouver l'hôtel ?",
+      "answer": "avez pu"
+    },
+    {
+      "id": 113,
+      "verb": "perdre",
+      "phrase": "On ____ deux heures.",
+      "answer": "a perdu"
+    },
+    {
+      "id": 114,
+      "verb": "voir",
+      "phrase": "Vous ____ ce film ?",
+      "answer": "avez vu"
+    },
+    {
+      "id": 115,
+      "verb": "avoir",
+      "phrase": "On n'____ pas ____ le temps.",
+      "answer": "a eu"
+    },
+    {
+      "id": 116,
+      "verb": "devoir",
+      "phrase": "J'____ retourner aux États-Unis.",
+      "answer": "ai dû"
+    },
+    {
+      "id": 117,
+      "verb": "voir",
+      "phrase": "Tu ____ Guillaume ?",
+      "answer": "as vu"
+    },
+    {
+      "id": 118,
+      "verb": "pouvoir",
+      "phrase": "J'____ dîner avec elle mercredi soir.",
+      "answer": "ai pu"
+    },
+    {
+      "id": 119,
+      "verb": "boire",
+      "phrase": "Vous ____ de la bière.",
+      "answer": "avez bu"
+    },
+    {
+      "id": 120,
+      "verb": "avoir",
+      "phrase": "Nous ____ l'occasion de déguster des sushis délicieux !",
+      "answer": "avons eu"
+    },
+    {
+      "id": 121,
+      "verb": "entendre",
+      "phrase": "Tu ____ la nouvelle ?",
+      "answer": "as entendu"
+    },
+    {
+      "id": 122,
+      "verb": "recevoir",
+      "phrase": "J'____ un mail ce matin.",
+      "answer": "ai reçu"
+    },
+    {
+      "id": 123,
+      "verb": "répondre",
+      "phrase": "Je n'____ pas encore ____.",
+      "answer": "ai répondu"
+    },
+    {
+      "id": 124,
+      "verb": "vendre",
+      "phrase": "Elle ____ sa maison.",
+      "answer": "a vendu"
+    },
+    {
+      "id": 125,
+      "verb": "trouver",
+      "phrase": "J'____ mes clés.",
+      "answer": "ai trouvé"
+    },
+    {
+      "id": 126,
+      "verb": "dîner",
+      "phrase": "Tu ____ ?",
+      "answer": "as dîné"
+    },
+    {
+      "id": 127,
+      "verb": "dîner",
+      "phrase": "J'____ à huit heures.",
+      "answer": "ai dîné"
+    },
+    {
+      "id": 128,
+      "verb": "manger",
+      "phrase": "Qu'est-ce que tu _____ ?",
+      "answer": "as mangé"
+    },
+    {
+      "id": 129,
+      "verb": "manger",
+      "phrase": "J'____ une banane.",
+      "answer": "ai mangé"
+    },
+    {
+      "id": 130,
+      "verb": "préparer",
+      "phrase": "J'_____ le dîner.",
+      "answer": "ai préparé"
+    },
+    {
+      "id": 131,
+      "verb": "regarder",
+      "phrase": "Tu ____ les infos ?",
+      "answer": "as regardé"
+    },
+    {
+      "id": 132,
+      "verb": "regarder",
+      "phrase": "Je n'____ pas ____ la télé.",
+      "answer": "ai regardé"
+    },
+    {
+      "id": 133,
+      "verb": "écouter",
+      "phrase": "J'____ de la musique.",
+      "answer": "ai écouté"
+    },
+    {
+      "id": 134,
+      "verb": "travailler",
+      "phrase": "J'____ toute la journée.",
+      "answer": "ai travaillé"
+    },
+    {
+      "id": 135,
+      "verb": "déjeuner",
+      "phrase": "J'____ avec elle.",
+      "answer": "ai déjeuné"
+    },
+    {
+      "id": 136,
+      "verb": "parler",
+      "phrase": "Nous ____ assez longtemps.",
+      "answer": "avons parlé"
+    },
+    {
+      "id": 137,
+      "verb": "décider",
+      "phrase": "Elle ____ de partir.",
+      "answer": "a décidé"
+    },
+    {
+      "id": 138,
+      "verb": "expliquer",
+      "phrase": "Elle m'____ ses projets.",
+      "answer": "a expliqué"
+    },
+    {
+      "id": 139,
+      "verb": "déjeuner",
+      "phrase": "Nous ____ dans un restaurant.",
+      "answer": "avons déjeuné"
+    },
+    {
+      "id": 140,
+      "verb": "commencer",
+      "phrase": "Elle ____ à apprendre le chinois.",
+      "answer": "a commencé"
+    },
+    {
+      "id": 141,
+      "verb": "parler",
+      "phrase": "Vous ____ chinois ?",
+      "answer": "avez parlé"
+    },
+    {
+      "id": 142,
+      "verb": "inviter",
+      "phrase": "J'____ Sophie à dîner.",
+      "answer": "ai invité"
+    },
+    {
+      "id": 143,
+      "verb": "téléphoner",
+      "phrase": "J'____ à Margot ce matin.",
+      "answer": "ai téléphoné"
     }
   ]
 }
