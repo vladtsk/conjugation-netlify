@@ -3,9 +3,657 @@
     {
       "id": 1,
       "verb": "avoir",
-      "phrase": "Hier, j'____ un rendez-vous.",
-      "answer": "ai eu",
+      "phrase": "Il y ____ beaucoup de monde.",
+      "answer": "avait",
       "tense": "imperfect past (l'imparfait)"
+    },
+    {
+      "id": 2,
+      "verb": "aller",
+      "phrase": "Elles ____ à la mer.",
+      "answer": "allaient"
+    },
+    {
+      "id": 3,
+      "verb": "être",
+      "phrase": "Tu ____ calme.",
+      "answer": "étais"
+    },
+    {
+      "id": 4,
+      "verb": "dormir",
+      "phrase": "Vous ____ bien ?",
+      "answer": "dormiez"
+    },
+    {
+      "id": 5,
+      "verb": "boire",
+      "phrase": "Je ____ du thé.",
+      "answer": "buvais"
+    },
+    {
+      "id": 6,
+      "verb": "prendre",
+      "phrase": "On ____ un bain le dimanche.",
+      "answer": "prenait"
+    },
+    {
+      "id": 7,
+      "verb": "se promener",
+      "phrase": "Tu ____ beaucoup.",
+      "answer": "te promenais"
+    },
+    {
+      "id": 8,
+      "verb": "lire",
+      "phrase": "Elle ____ tous les jours.",
+      "answer": "lisait"
+    },
+    {
+      "id": 9,
+      "verb": "étudier",
+      "phrase": "Vous ____ chez vous.",
+      "answer": "étudiiez"
+    },
+    {
+      "id": 10,
+      "verb": "faire",
+      "phrase": "Nous ____ beaucoup de bruit.",
+      "answer": "faisions"
+    },
+    {
+      "id": 11,
+      "verb": "envoyer",
+      "phrase": "Avant, on ____ des lettres.",
+      "answer": "envoyait"
+    },
+    {
+      "id": 12,
+      "verb": "avoir",
+      "phrase": "Avant, tout le monde ____ une radio.",
+      "answer": "avait"
+    },
+    {
+      "id": 13,
+      "verb": "laver",
+      "phrase": "Avant, on ____ son linge à la main.",
+      "answer": "lavait"
+    },
+    {
+      "id": 14,
+      "verb": "travailler",
+      "phrase": "Avant, les Français ____ 45 h par semaine.",
+      "answer": "travaillaient"
+    },
+    {
+      "id": 15,
+      "verb": "acheter",
+      "phrase": "Avant, on ____ le lait à la ferme.",
+      "answer": "achetait"
+    },
+    {
+      "id": 16,
+      "verb": "prendre",
+      "phrase": "On ne ____ pas le train.",
+      "answer": "prenait"
+    },
+    {
+      "id": 17,
+      "verb": "conduire",
+      "phrase": "On ____ des voitures.",
+      "answer": "conduisait"
+    },
+    {
+      "id": 18,
+      "verb": "écrire",
+      "phrase": "Les gens ____ des lettres.",
+      "answer": "écrivaient"
+    },
+    {
+      "id": 19,
+      "verb": "avoir",
+      "phrase": "Ils n'____ pas la télévision.",
+      "answer": "avaient"
+    },
+    {
+      "id": 20,
+      "verb": "lire",
+      "phrase": "Ils ____ le journal.",
+      "answer": "lisaient"
+    },
+    {
+      "id": 21,
+      "verb": "s'occuper",
+      "phrase": "Les femmes ____ des enfants.",
+      "answer": "s'occupaient"
+    },
+    {
+      "id": 22,
+      "verb": "voyager",
+      "phrase": "On ne ____ pas à l'étranger.",
+      "answer": "voyageait"
+    },
+    {
+      "id": 23,
+      "verb": "parler",
+      "phrase": "On ____ avec nos voisins.",
+      "answer": "parlait"
+    },
+    {
+      "id": 24,
+      "verb": "aller",
+      "phrase": "Les enfants n'____ pas à l'école le jeudi.",
+      "answer": "allaient"
+    },
+    {
+      "id": 25,
+      "verb": "jouer",
+      "phrase": "Quand j'étais petite, je ____ à la poupée.",
+      "answer": "jouais"
+    },
+    {
+      "id": 26,
+      "verb": "lire",
+      "phrase": "Je ____ des livres.",
+      "answer": "lisais"
+    },
+    {
+      "id": 27,
+      "verb": "aider",
+      "phrase": "J'____ mes parents à la maison.",
+      "answer": "aidais"
+    },
+    {
+      "id": 28,
+      "verb": "se coucher",
+      "phrase": "Je ____ à 21 h.",
+      "answer": "me couchais"
+    },
+    {
+      "id": 29,
+      "verb": "rendre visite",
+      "phrase": "Je ____ à mes grands-parents tous les week-ends.",
+      "answer": "rendais visite"
+    },
+    {
+      "id": 30,
+      "verb": "habiter",
+      "phrase": "Ils ____ à la campagne.",
+      "answer": "habitaient"
+    },
+    {
+      "id": 31,
+      "verb": "cuisiner",
+      "phrase": "Je ____ avec ma grand-mère.",
+      "answer": "cuisinais"
+    },
+    {
+      "id": 32,
+      "verb": "se promener",
+      "phrase": "On ____ dans le parc.",
+      "answer": "se promenait"
+    },
+    {
+      "id": 33,
+      "verb": "regarder",
+      "phrase": "Je ne ____ jamais la télé.",
+      "answer": "regardais"
+    },
+    {
+      "id": 34,
+      "verb": "pleuvoir",
+      "phrase": "Il ____ quand les enfants sont sortis.",
+      "answer": "pleuvait"
+    },
+    {
+      "id": 35,
+      "verb": "faire",
+      "phrase": "On ____ les courses.",
+      "answer": "faisait"
+    },
+    {
+      "id": 36,
+      "verb": "être",
+      "phrase": "Nous ____ dehors.",
+      "answer": "étions"
+    },
+    {
+      "id": 37,
+      "verb": "avoir",
+      "phrase": "Ils ____ 10 ans quand on a pris cette photo.",
+      "answer": "avaient"
+    },
+    {
+      "id": 38,
+      "verb": "prendre",
+      "phrase": "Je ____ une douche.",
+      "answer": "prenais"
+    },
+    {
+      "id": 39,
+      "verb": "faire",
+      "phrase": "Il ____ froid.",
+      "answer": "faisait"
+    },
+    {
+      "id": 40,
+      "verb": "aimer",
+      "phrase": "J'____ beaucoup la musique.",
+      "answer": "aimais"
+    },
+    {
+      "id": 41,
+      "verb": "ouvrir",
+      "phrase": "J'____ une boîte de sardines.",
+      "answer": "ouvrais"
+    },
+    {
+      "id": 42,
+      "verb": "faire",
+      "phrase": "Il ____ du ski.",
+      "answer": "faisait"
+    },
+    {
+      "id": 43,
+      "verb": "comprendre",
+      "phrase": "Je ne ____ pas.",
+      "answer": "comprenais"
+    },
+    {
+      "id": 44,
+      "verb": "être",
+      "phrase": "Il ____ malade.",
+      "answer": "était"
+    },
+    {
+      "id": 45,
+      "verb": "connaître",
+      "phrase": "Je ne ____ pas la ville.",
+      "answer": "connaissais"
+    },
+    {
+      "id": 46,
+      "verb": "habiter",
+      "phrase": "Tu te souviens quand nous ____ dans le petit studio ?",
+      "answer": "habitions"
+    },
+    {
+      "id": 47,
+      "verb": "faire",
+      "phrase": "On ____ la cuisine.",
+      "answer": "faisait"
+    },
+    {
+      "id": 48,
+      "verb": "avoir",
+      "phrase": "Nous ____ un chat.",
+      "answer": "avions"
+    },
+    {
+      "id": 49,
+      "verb": "boire",
+      "phrase": "Nous ____ du café.",
+      "answer": "buvions"
+    },
+    {
+      "id": 50,
+      "verb": "avoir",
+      "phrase": "Tu ____ un téléphone quand tu étais petite ?",
+      "answer": "avais"
+    },
+    {
+      "id": 51,
+      "verb": "avoir",
+      "phrase": "Je n'____ pas de téléphone.",
+      "answer": "avais"
+    },
+    {
+      "id": 52,
+      "verb": "avoir",
+      "phrase": "Les gens n'____ pas la même vie que maintenant.",
+      "answer": "avaient"
+    },
+    {
+      "id": 53,
+      "verb": "avoir",
+      "phrase": "On ____ moins de vacances.",
+      "answer": "avait"
+    },
+    {
+      "id": 54,
+      "verb": "regarder",
+      "phrase": "Tu ____ la télévision ?",
+      "answer": "regardais"
+    },
+    {
+      "id": 55,
+      "verb": "avoir",
+      "phrase": "Mes parents n'____ pas la télévision.",
+      "answer": "avaient"
+    },
+    {
+      "id": 56,
+      "verb": "écouter",
+      "phrase": "On ____ la radio.",
+      "answer": "écoutait"
+    },
+    {
+      "id": 57,
+      "verb": "être",
+      "phrase": "J'____ petite.",
+      "answer": "étais"
+    },
+    {
+      "id": 58,
+      "verb": "lire",
+      "phrase": "Avant on ____ plus que maintenant.",
+      "answer": "lisait"
+    },
+    {
+      "id": 59,
+      "verb": "avoir",
+      "phrase": "J'____ beaucoup d'amis.",
+      "answer": "avais"
+    },
+    {
+      "id": 60,
+      "verb": "s'amuser",
+      "phrase": "On ____ bien.",
+      "answer": "s'amusait"
+    },
+    {
+      "id": 61,
+      "verb": "jouer",
+      "phrase": "On ____ dehors.",
+      "answer": "jouait"
+    },
+    {
+      "id": 62,
+      "verb": "courir",
+      "phrase": "On ____ tous les jours.",
+      "answer": "courait"
+    },
+    {
+      "id": 63,
+      "verb": "habiter",
+      "phrase": "Tu te souviens quand nous ____ dans le petit studio ?",
+      "answer": "habitions"
+    },
+    {
+      "id": 64,
+      "verb": "jouer",
+      "phrase": " Tu ____ au football ?",
+      "answer": "jouais"
+    },
+    {
+      "id": 65,
+      "verb": "parler",
+      "phrase": "Ils ____ tout le temps.",
+      "answer": "parlaient"
+    },
+    {
+      "id": 66,
+      "verb": "entendre",
+      "phrase": "On ____ des conversations.",
+      "answer": "entendait"
+    },
+    {
+      "id": 67,
+      "verb": "savoir",
+      "phrase": "Je ____ que j'avais oublié quelque chose.",
+      "answer": "savais"
+    },
+    {
+      "id": 68,
+      "verb": "écrire",
+      "phrase": "Il ____ tout ce que je disais.",
+      "answer": "écrivait"
+    },
+    {
+      "id": 69,
+      "verb": "parler",
+      "phrase": "Les gens ____ fort.",
+      "answer": "parlaient"
+    },
+    {
+      "id": 70,
+      "verb": "avoir",
+      "phrase": "Quand j'étais jeune, je n'____ pas de voiture.",
+      "answer": "avais"
+    },
+    {
+      "id": 71,
+      "verb": "aller",
+      "phrase": "J'____ chaque année en vacances dans les Alpes.",
+      "answer": "allais"
+    },
+    {
+      "id": 72,
+      "verb": "jouer",
+      "phrase": "Il ____ toujours au football avec ses copains.",
+      "answer": "jouait"
+    },
+    {
+      "id": 73,
+      "verb": "penser",
+      "phrase": "Je ____ qu'il était malade.",
+      "answer": "pensais"
+    },
+    {
+      "id": 74,
+      "verb": "croire",
+      "phrase": "Je ____ qu'elle avait des enfants.",
+      "answer": "croyais"
+    },
+    {
+      "id": 75,
+      "verb": "dire",
+      "phrase": "Je n'écoutais plus ce qu'elle me ____.",
+      "answer": "disait"
+    },
+    {
+      "id": 76,
+      "verb": "se sentir",
+      "phrase": "Elle ne ____ pas bien.",
+      "answer": "se sentait"
+    },
+    {
+      "id": 77,
+      "verb": "sortir",
+      "phrase": "Je ____ de la maison quand tu as appelé.",
+      "answer": "sortais"
+    },
+    {
+      "id": 78,
+      "verb": "voir",
+      "phrase": "Je ne ____ pas bien quand je ne portais pas de lunettes.",
+      "answer": "voyais"
+    },
+    {
+      "id": 79,
+      "verb": "voir",
+      "phrase": "On ne ____ rien.",
+      "answer": "voyait"
+    },
+    {
+      "id": 80,
+      "verb": "entendre",
+      "phrase": "Elle n'____ pas.",
+      "answer": "entendait"
+    },
+    {
+      "id": 81,
+      "verb": "vouloir",
+      "phrase": "Je ____ l'aider.",
+      "answer": "voulais"
+    },
+    {
+      "id": 82,
+      "verb": "vouloir",
+      "phrase": "Ma sœur ne ____ pas partir.",
+      "answer": "voulait"
+    },
+    {
+      "id": 83,
+      "verb": "vouloir",
+      "phrase": "On ____ aller à Amsterdam.",
+      "answer": "voulait"
+    },
+    {
+      "id": 84,
+      "verb": "vouloir",
+      "phrase": "J'ai fait ce que tu ____.",
+      "answer": "voulais"
+    },
+    {
+      "id": 85,
+      "verb": "dormir",
+      "phrase": "Je ____ beaucoup mieux quand j'étais enfant.",
+      "answer": "dormais"
+    },
+    {
+      "id": 86,
+      "verb": "venir",
+      "phrase": "Il ne t'a pas dit que je ____.",
+      "answer": "venais"
+    },
+    {
+      "id": 87,
+      "verb": "pouvoir",
+      "phrase": "Je ne ____ pas rester.",
+      "answer": "pouvais"
+    },
+    {
+      "id": 88,
+      "verb": "devoir",
+      "phrase": "Il ____ me rappeler, mais il a oublié.",
+      "answer": "devait"
+    },
+    {
+      "id": 89,
+      "verb": "devoir",
+      "phrase": "Je ____ rester à la maison avec mon petit frère.",
+      "answer": "devais"
+    },
+    {
+      "id": 90,
+      "verb": "pouvoir",
+      "phrase": "Ils ____ rester éveillés toute la nuit.",
+      "answer": "pouvaient"
+    },
+    {
+      "id": 91,
+      "verb": "devoir",
+      "phrase": "Elles ____ rentrer tôt.",
+      "answer": "devaient"
+    },
+    {
+      "id": 92,
+      "verb": "conduire",
+      "phrase": "Nous ____ notre voiture.",
+      "answer": "conduisions"
+    },
+    {
+      "id": 93,
+      "verb": "penser",
+      "phrase": "Ils ____ pouvoir le faire.",
+      "answer": "pensaient"
+    },
+    {
+      "id": 94,
+      "verb": "servir",
+      "phrase": "Ils ____ des plats trop chauds.",
+      "answer": "servaient"
+    },
+    {
+      "id": 95,
+      "verb": "finir",
+      "phrase": "Tu ____ toujours un peu tard.",
+      "answer": "finissais"
+    },
+    {
+      "id": 96,
+      "verb": "continuer",
+      "phrase": "Je ____ ma route.",
+      "answer": "continuais"
+    },
+    {
+      "id": 97,
+      "verb": "danser",
+      "phrase": "Ils ____ toute la nuit.",
+      "answer": "dansaient"
+    },
+    {
+      "id": 98,
+      "verb": "prendre",
+      "phrase": "Je ____ les transports en commun.",
+      "answer": "prenais"
+    },
+    {
+      "id": 99,
+      "verb": "vouloir",
+      "phrase": "Nous ____ changer nos habitudes.",
+      "answer": "voulions"
+    },
+    {
+      "id": 100,
+      "verb": "revenir",
+      "phrase": "Ils ____ plusieurs fois.",
+      "answer": "revenaient"
+    },
+    {
+      "id": 101,
+      "verb": "lire",
+      "phrase": "Ils ____ des romans chaque soir avant de dormir.",
+      "answer": "lisaient"
+    },
+    {
+      "id": 102,
+      "verb": "mettre",
+      "phrase": "Tu ____ du sucre dans ton café.",
+      "answer": "mettais"
+    },
+    {
+      "id": 103,
+      "verb": "pouvoir",
+      "phrase": "Vous ____ faire beaucoup de choses.",
+      "answer": "pouviez"
+    },
+    {
+      "id": 104,
+      "verb": "pouvoir",
+      "phrase": "Je ne ____ pas y aller.",
+      "answer": "pouvais"
+    },
+    {
+      "id": 105,
+      "verb": "entendre",
+      "phrase": "Tu ____ bien le professeur.",
+      "answer": "entendais"
+    },
+    {
+      "id": 106,
+      "verb": "vouloir",
+      "phrase": "On ____ faire plus d'activités sportives.",
+      "answer": "voulait"
+    },
+    {
+      "id": 107,
+      "verb": "voir",
+      "phrase": "Je ____ cet endroit pour la première fois.",
+      "answer": "voyais"
+    },
+    {
+      "id": 108,
+      "verb": "vouloir",
+      "phrase": "Tu ____ le faire pour moi ?",
+      "answer": "voulais"
+    },
+    {
+      "id": 109,
+      "verb": "venir",
+      "phrase": "Tu ____ rarement nous voir.",
+      "answer": "venais"
     }
   ]
 }
