@@ -38,19 +38,20 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
 
-const userEmail = document.getElementById("userEmail");
-const userPassword = document.getElementById("userPassword");
-const authForm = document.querySelector(".authForm");
+const signUpForm = document.querySelector(".signUpForm");
+const logInForm = document.querySelector(".logInForm");
 const signUpButton = document.getElementById("signUpButton");
 const logInButton = document.getElementById("logInButton");
 const logOutButton = document.getElementById("logOutButton");
-const mainH1 = document.querySelector("main h1");
 
 const secretSection = document.querySelector(".secretSection");
 
 secretSection.style.display = "none";
 
 async function userSignUp() {
+  const userEmail = document.getElementById("signUpEmail");
+  const userPassword = document.getElementById("signUpPassword");
+
   const signUpEmail = userEmail.value;
   const signUpPassword = userPassword.value;
   createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword)
@@ -64,17 +65,17 @@ async function userSignUp() {
       // Access the database
       const database = getDatabase(app);
 
-      // Reference to the 'users' node
-      const usersRef = ref(database, "users");
+      // Reference to the 'user' node
+      const userRef = ref(database, "users/" + user.uid);
 
       // User data
       let userData = {
-        email: userEmail,
+        email: user.email,
         last_login: Date.now(),
       };
 
       // Adding the data to the Database
-      set(usersRef("users/" + user.uid), userData);
+      set(userRef, userData);
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -84,6 +85,8 @@ async function userSignUp() {
 }
 
 async function userLogIn() {
+  const userEmail = document.getElementById("logInEmail");
+  const userPassword = document.getElementById("logInPassword");
   const logInEmail = userEmail.value;
   const logInPassword = userPassword.value;
   signInWithEmailAndPassword(auth, logInEmail, logInPassword)
@@ -93,18 +96,16 @@ async function userLogIn() {
 
       // User data
       let userData = {
+        email: user.email,
         last_login: Date.now(),
       };
 
       // Access the database
       const database = getDatabase(app);
 
-      // Reference to the 'users' node
-      const usersRef = ref(database, "users");
+      // Reference to the 'user' node
 
-      const userRef = ref(usersRef, user.uid);
-
-      console.log(userRef);
+      const userRef = ref(database, "users/" + user.uid);
 
       // Adding the data to the Database
       set(userRef, userData);
@@ -124,17 +125,32 @@ async function userLogOut() {
 async function checkAuthState() {
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      authForm.style.display = "none";
-      mainH1.style.display = "none";
+      logInForm.style.display = "none";
+      signUpForm.style.display = "none";
       secretSection.style.display = "flex";
     } else {
-      authForm.style.display = "block";
+      logInForm.style.display = "block";
       secretSection.style.display = "none";
     }
   });
 }
 
 checkAuthState();
+
+signUpForm.style.display = "none";
+
+//Signup / login forms switch
+const logInSwitch = document.getElementById("logInSwitch");
+logInSwitch.addEventListener("click", () => {
+  signUpForm.style.display = "none";
+  logInForm.style.display = "block";
+});
+
+const signUpSwitch = document.getElementById("signUpSwitch");
+signUpSwitch.addEventListener("click", () => {
+  logInForm.style.display = "none";
+  signUpForm.style.display = "block";
+});
 
 signUpButton.addEventListener("click", (event) => {
   event.preventDefault();
@@ -150,3 +166,13 @@ logOutButton.addEventListener("click", (event) => {
   event.preventDefault();
   userLogOut();
 });
+
+// Validate an email
+function validateEmail(email) {
+  let emailRegExp = /[a-z0-9._-]+@[a-z0-9._-]+.[a-z0-9._-]+/;
+  if (emailRegExp.test(email)) {
+    // Email is valid
+  } else {
+    // Email is not valid
+  }
+}

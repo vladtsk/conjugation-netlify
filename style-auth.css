@@ -55,8 +55,9 @@ main {
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
-  color: var(--color-primary);
+  font-size: 28px;
+  padding-bottom: 30px;
+  color: var(--color-secondary);
 }
 
 /* Styling the signup form */
@@ -83,8 +84,8 @@ input {
 
 button {
   margin-top: 10px;
-  padding-inline: 10px;
-  padding-block: 6px;
+  padding-inline: 12px;
+  padding-block: 8px;
   font-family: "Poppins", sans-serif;
   font-size: 0.9em;
   border: none;
@@ -99,4 +100,37 @@ button:hover {
 
 .btn-section {
   text-align: center;
+}
+
+/* Form switch */
+.switch-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.switch-section p {
+  font-size: 0.9em;
+}
+#signUpSwitch {
+  text-decoration: underline;
+  font-size: 0.8em;
+}
+
+#logInSwitch {
+  text-decoration: underline;
+  font-size: 0.8em;
+  display: block;
+}
+
+#signUpSwitch:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+#logInSwitch:hover {
+  text-decoration: underline;
+  opacity: 80%;
+  cursor: pointer;
 }

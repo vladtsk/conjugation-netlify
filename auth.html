@@ -19,43 +19,77 @@
 
 <body>
     <header>
-        <nav>
+        <!--<nav>
             <a href="">Home</a>
             <a href="">Learn more</a>
             <button type="submit" id="logInButtonMenu">Login</button>
             <button type="submit" id="logOutButtonMenu">Logout</button>
 
-        </nav>
+        </nav> -->
     </header>
     <main>
 
-        <h1>Create an account</h1>
+        <form class="signUpForm">
 
-        <form class="authForm">
+            <h1>Sign up</h1>
 
             <section>
-                <!--<p>
+                <p>
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="name" required>
-                </p> -->
+                </p>
 
                 <p>
-                    <label for="userEmail">Email:</label>
-                    <input type="email" name="email" id="userEmail" required>
+                    <label for="signUpEmail">Email:</label>
+                    <input type="email" name="email" id="signUpEmail" required>
                 </p>
                 <p>
-                    <label for="userPassword">Password:</label>
-                    <input type="password" name="password" id="userPassword" required>
+                    <label for="signUpPassword">Password:</label>
+                    <input type="password" name="password" id="signUpPassword" required>
                 </p>
             </section>
             <section class="btn-section">
                 <p>
                     <button type="submit" id="signUpButton">Sign Up</button>
+                </p>
+            </section>
+
+            <section class="switch-section">
+                <p>Already have an account? </p>
+                <p><a id="logInSwitch">Log in</a></p>
+            </section>
+
+        </form>
+
+
+        <form class="logInForm">
+
+            <h1>Log in</h1>
+
+            <section>
+
+                <p>
+                    <label for="logInEmail">Email:</label>
+                    <input type="email" name="email" id="logInEmail" required>
+                </p>
+                <p>
+                    <label for="logInPassword">Password:</label>
+                    <input type="password" name="password" id="logInPassword" required>
+                </p>
+            </section>
+            <section class="btn-section">
+                <p>
                     <button type="submit" id="logInButton">Log In</button>
                 </p>
             </section>
 
+            <section class="switch-section">
+                <p>Don't have an account yet? </p>
+                <a id="signUpSwitch">Sign up</a>
+            </section>
+
         </form>
+
     </main>
 
 
@@ -66,6 +100,8 @@
             <button type="submit" id="logOutButton">Log out</button>
         </p>
     </div>
+
+
 
 
 
