@@ -1,42 +1,17 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-analytics.js";
-
 import {
+  app,
   getAuth,
+  getDatabase,
+  ref,
+  set,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
-} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+} from "./config.js";
 
-import {
-  getDatabase,
-  ref,
-  set,
-  push,
-  onValue,
-  remove,
-} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
-
-// Our web app's Firebase configuration
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBZ1QOvcAhKxmwB1nePN-PHM0ICT5CZgBU",
-  authDomain: "conjugation-app-18572.firebaseapp.com",
-  databaseURL:
-    "https://conjugation-app-18572-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "conjugation-app-18572",
-  storageBucket: "conjugation-app-18572.appspot.com",
-  messagingSenderId: "5598733131",
-  appId: "1:5598733131:web:24e88341326430868c3ece",
-  measurementId: "G-S8228N5HBV",
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const auth = getAuth(app);
+const database = getDatabase(app);
 
 const signUpForm = document.querySelector(".signUpForm");
 const logInForm = document.querySelector(".logInForm");
@@ -61,9 +36,6 @@ async function userSignUp() {
       alert("Your account has been created!");
 
       // Add the user to out Database
-
-      // Access the database
-      const database = getDatabase(app);
 
       // Reference to the 'user' node
       const userRef = ref(database, "users/" + user.uid);
@@ -94,14 +66,17 @@ async function userLogIn() {
       const user = userCredential.user;
       alert("Your have logged in!");
 
-      // User data
+      // User data (TO CHANGE)
       let userData = {
         email: user.email,
         last_login: Date.now(),
+        verbs: {
+          present: [
+            { id: 1, phraseScore: "" },
+            { id: 2, phraseScore: "" },
+          ],
+        },
       };
-
-      // Access the database
-      const database = getDatabase(app);
 
       // Reference to the 'user' node
 

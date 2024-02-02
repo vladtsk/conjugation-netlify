@@ -1,7 +1,17 @@
+import { app, getAuth, getDatabase, ref, set } from "./config.js";
+const auth = getAuth(app);
+const database = getDatabase(app);
+
 let score = 0;
 let phraseNumber = 5;
 // Create an array of indeces
 let indexArray = [];
+
+// Arrays containig information for database about user performance (how well they did on each tested phrase)
+let presentDb = [];
+let pastcompDb = [];
+let pastimpDb = [];
+//  present: [{ id: 1, phraseScore: "" }, { id: 2, phraseScore: "" },]
 
 // Showing the first page
 async function showFirstPage() {
@@ -112,8 +122,30 @@ async function showFirstPage() {
 
 // Launching the app
 function launchApp(data) {
-  // An index that will be henerated randomly
+  // An index that will be generated randomly
   let k;
+
+  let dbArray;
+  if (data && data.data.length > 0) {
+    switch (data.data[0].tense) {
+      case "present (le présent de l'indicatif)":
+        dbArray = presentDb;
+        break;
+      case "past (le passé composé)":
+        dbArray = pastcompDb;
+        break;
+      case "imperfect past (l'imparfait)":
+        dbArray = pastimpDb;
+        break;
+    }
+  }
+
+  // Initializing a database array depending on the selected tense (adding zeros for each element)
+  if (data && data.data.length > 0 && dbArray.length === 0) {
+    for (let i = 0; i < data.data.length; i++) {
+      dbArray.push(0);
+    }
+  }
 
   buildPageStructure(data);
 
@@ -135,7 +167,8 @@ function launchApp(data) {
     indexArray.push(k);
     displayVerb(k, data);
     displayPhrase(k, data);
-    checkAnswer(k, data);
+    checkAnswer(k, data, dbArray);
+    console.log(dbArray);
   }
 
   generateElements(data);
@@ -156,6 +189,7 @@ function launchApp(data) {
     const inputArea = document.querySelector(".type-section input");
 
     nextBtn.addEventListener("click", () => {
+      console.log(dbArray);
       msgArea.innerText = "";
       inputArea.value = "";
       generateElements(data);
@@ -329,7 +363,7 @@ function displayPhrase(i, data) {
 }
 
 // A function that reads the user input and compares it to the correct answer
-function checkAnswer(i, data) {
+function checkAnswer(i, data, dbArray) {
   // Select the message section
   const msgSection = document.querySelector(".msg-section");
   // Select "p" element for a message to display
@@ -364,10 +398,13 @@ function checkAnswer(i, data) {
       case data.data[i].answer:
         msgArea.innerText = "Correct";
         score++;
+        dbArray[i]++;
         break;
       default:
         msgArea.innerText = `Incorrect. The correct answer is: "${data.data[i].answer}"`;
+        dbArray[i] = 0;
     }
+    //console.log(dbArray);
 
     if (inputText !== "") {
       submitSection.style.display = "none";
@@ -377,6 +414,27 @@ function checkAnswer(i, data) {
 
   finishBtn.addEventListener("click", () => {
     showResultPage();
+
+    // Adding data to the database
+    const user = auth.currentUser;
+    const userRef = ref(database, "users/" + user.uid);
+
+    // Data to add to the database
+    let dataForDb;
+
+    switch (data.data[0].tense) {
+      case "present (le présent de l'indicatif)":
+        dataForDb = { present: dbArray };
+        break;
+      case "past (le passé composé)":
+        dataForDb = { pastcomp: dbArray };
+        break;
+      case "imperfect past (l'imparfait)":
+        dataForDb = { pastimp: dbArray };
+        break;
+    }
+
+    set(userRef, dataForDb);
   });
 }
 
