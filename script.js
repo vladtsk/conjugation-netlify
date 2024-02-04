@@ -11,7 +11,9 @@ let indexArray = [];
 let presentDb = [];
 let pastcompDb = [];
 let pastimpDb = [];
-//  present: [{ id: 1, phraseScore: "" }, { id: 2, phraseScore: "" },]
+
+// Creating an array that will be equal to one of the 3 arrays above depending on the tense choice
+let dbArray;
 
 // Showing the first page
 async function showFirstPage() {
@@ -114,20 +116,8 @@ async function showFirstPage() {
     phraseNumber = selectPhrNb.value;
   });
 
-  // Adding an event listener on the start button
-  startBtn.addEventListener("click", () => {
-    launchApp(jsonData);
-  });
-}
-
-// Launching the app
-function launchApp(data) {
-  // An index that will be generated randomly
-  let k;
-
-  let dbArray;
-  if (data && data.data.length > 0) {
-    switch (data.data[0].tense) {
+  if (jsonData && jsonData.data.length > 0) {
+    switch (jsonData.data[0].tense) {
       case "present (le présent de l'indicatif)":
         dbArray = presentDb;
         break;
@@ -139,6 +129,17 @@ function launchApp(data) {
         break;
     }
   }
+
+  // Adding an event listener on the start button
+  startBtn.addEventListener("click", () => {
+    launchApp(jsonData);
+  });
+}
+
+// Launching the app
+function launchApp(data) {
+  // An index that will be generated randomly
+  let k;
 
   // Initializing a database array depending on the selected tense (adding zeros for each element)
   if (data && data.data.length > 0 && dbArray.length === 0) {
@@ -167,7 +168,7 @@ function launchApp(data) {
     indexArray.push(k);
     displayVerb(k, data);
     displayPhrase(k, data);
-    checkAnswer(k, data, dbArray);
+    checkAnswer(k, data);
     console.log(dbArray);
   }
 
@@ -363,7 +364,7 @@ function displayPhrase(i, data) {
 }
 
 // A function that reads the user input and compares it to the correct answer
-function checkAnswer(i, data, dbArray) {
+function checkAnswer(i, data) {
   // Select the message section
   const msgSection = document.querySelector(".msg-section");
   // Select "p" element for a message to display
@@ -382,6 +383,7 @@ function checkAnswer(i, data, dbArray) {
   const finishBtn = document.getElementById("finish-btn");
 
   submitBtn.addEventListener("click", () => {
+    console.log(dbArray);
     const inputText = inputArea.value;
     let displaySection;
 
@@ -399,12 +401,13 @@ function checkAnswer(i, data, dbArray) {
         msgArea.innerText = "Correct";
         score++;
         dbArray[i]++;
+
         break;
       default:
         msgArea.innerText = `Incorrect. The correct answer is: "${data.data[i].answer}"`;
         dbArray[i] = 0;
     }
-    //console.log(dbArray);
+    console.log(dbArray);
 
     if (inputText !== "") {
       submitSection.style.display = "none";
