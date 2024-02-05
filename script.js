@@ -3,6 +3,10 @@ const auth = getAuth(app);
 const database = getDatabase(app);
 
 let score = 0;
+
+// An index that will be generated randomly
+let k;
+
 let phraseNumber = 5;
 // Create an array of indeces
 let indexArray = [];
@@ -136,11 +140,10 @@ async function showFirstPage() {
   });
 }
 
-// Launching the app
-function launchApp(data) {
-  // An index that will be generated randomly
-  let k;
+showFirstPage();
 
+// A function launching the app
+function launchApp(data) {
   // Initializing a database array depending on the selected tense (adding zeros for each element)
   if (data && data.data.length > 0 && dbArray.length === 0) {
     for (let i = 0; i < data.data.length; i++) {
@@ -166,21 +169,38 @@ function launchApp(data) {
     } while (indexArray.includes(k));
 
     indexArray.push(k);
-    displayVerb(k, data);
-    displayPhrase(k, data);
-    checkAnswer(k, data);
-    console.log(dbArray);
+    displayVerb(data);
+    displayPhrase(data);
+
+    console.log("when the elements generated", dbArray);
   }
 
   generateElements(data);
-  displayNext(data);
+
+  // Adding an event listener to check the answer when the 'submit' button is clicked
+
+  // Select the submit button
+  const submitBtn = document.getElementById("submit-btn");
+
+  submitBtn.addEventListener("click", () => {
+    console.log("after clicking submit", dbArray, k);
+    checkAnswer(data);
+  });
+
+  // Adding an event listener to display the next phrase to test
+
+  // Select the 'next' button
+  const nextBtn = document.getElementById("next-btn");
+
+  nextBtn.addEventListener("click", () => {
+    displayNext(data);
+  });
 
   // Display the next element
   function displayNext(data) {
     // Select the 'next' section
     const nextSection = document.querySelector(".next-section");
-    // Select the 'next' button
-    const nextBtn = document.getElementById("next-btn");
+
     // Selecting the submit section
     const submitSection = document.querySelector(".submit-section");
 
@@ -189,18 +209,14 @@ function launchApp(data) {
     // Select the input element
     const inputArea = document.querySelector(".type-section input");
 
-    nextBtn.addEventListener("click", () => {
-      console.log(dbArray);
-      msgArea.innerText = "";
-      inputArea.value = "";
-      generateElements(data);
-      nextSection.style.display = "none";
-      submitSection.style.display = "flex";
-    });
+    console.log("clicking next", dbArray);
+    msgArea.innerText = "";
+    inputArea.value = "";
+    generateElements(data);
+    nextSection.style.display = "none";
+    submitSection.style.display = "flex";
   }
 }
-
-showFirstPage();
 
 // Building the main page structure
 function buildPageStructure(data) {
@@ -345,26 +361,26 @@ function buildPageStructure(data) {
 }
 
 // A function that displays a verb to conjugate
-function displayVerb(i, data) {
+function displayVerb(data) {
   // Selecting the verb display section
   const verbDisplay = document.querySelector(".verb-display p");
 
   if (data && data.data.length > 0) {
-    verbDisplay.textContent = data.data[i].verb;
+    verbDisplay.textContent = data.data[k].verb;
   }
 }
 
 // A function that displays a phrase (the context)
-function displayPhrase(i, data) {
+function displayPhrase(data) {
   // Selecting the phrase display section (the "p" element)
   const phraseDisplay = document.querySelector(".phrase-section p");
   if (data && data.data.length > 0) {
-    phraseDisplay.textContent = data.data[i].phrase;
+    phraseDisplay.textContent = data.data[k].phrase;
   }
 }
 
 // A function that reads the user input and compares it to the correct answer
-function checkAnswer(i, data) {
+function checkAnswer(data) {
   // Select the message section
   const msgSection = document.querySelector(".msg-section");
   // Select "p" element for a message to display
@@ -382,38 +398,35 @@ function checkAnswer(i, data) {
   // Select the finish button
   const finishBtn = document.getElementById("finish-btn");
 
-  submitBtn.addEventListener("click", () => {
-    console.log(dbArray);
-    const inputText = inputArea.value;
-    let displaySection;
+  const inputText = inputArea.value;
+  let displaySection;
 
-    if (indexArray.length < phraseNumber) {
-      displaySection = nextSection;
-    } else {
-      displaySection = finishSection;
-    }
+  if (indexArray.length < phraseNumber) {
+    displaySection = nextSection;
+  } else {
+    displaySection = finishSection;
+  }
 
-    switch (inputText) {
-      case "":
-        msgArea.innerText = "Please type a valid verb";
-        break;
-      case data.data[i].answer:
-        msgArea.innerText = "Correct";
-        score++;
-        dbArray[i]++;
+  switch (inputText) {
+    case "":
+      msgArea.innerText = "Please type a valid verb";
+      break;
+    case data.data[k].answer:
+      msgArea.innerText = "Correct";
+      score++;
+      dbArray[k]++;
 
-        break;
-      default:
-        msgArea.innerText = `Incorrect. The correct answer is: "${data.data[i].answer}"`;
-        dbArray[i] = 0;
-    }
-    console.log(dbArray);
+      break;
+    default:
+      msgArea.innerText = `Incorrect. The correct answer is: "${data.data[k].answer}"`;
+      dbArray[k] = 0;
+  }
+  console.log("after checking the answer", dbArray, k);
 
-    if (inputText !== "") {
-      submitSection.style.display = "none";
-      displaySection.style.display = "flex";
-    }
-  });
+  if (inputText !== "") {
+    submitSection.style.display = "none";
+    displaySection.style.display = "flex";
+  }
 
   finishBtn.addEventListener("click", () => {
     showResultPage();
