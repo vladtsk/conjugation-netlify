@@ -13,6 +13,7 @@ import {
   getDatabase,
   ref,
   set,
+  onValue,
 } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
 
 export {
@@ -24,6 +25,7 @@ export {
   signOut,
   ref,
   set,
+  onValue,
 };
 
 // Our web app's Firebase configuration

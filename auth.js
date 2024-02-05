@@ -70,12 +70,12 @@ async function userLogIn() {
       let userData = {
         email: user.email,
         last_login: Date.now(),
-        verbs: {
+        /*verbs: {
           present: [
             { id: 1, phraseScore: "" },
             { id: 2, phraseScore: "" },
           ],
-        },
+        }, */
       };
 
       // Reference to the 'user' node

@@ -1,4 +1,4 @@
-import { app, getAuth, getDatabase, ref, set } from "./config.js";
+import { app, getAuth, getDatabase, ref, set, onValue } from "./config.js";
 const auth = getAuth(app);
 const database = getDatabase(app);
 
@@ -17,7 +17,7 @@ let pastcompDb = [];
 let pastimpDb = [];
 
 // Creating an array that will be equal to one of the 3 arrays above depending on the tense choice
-let dbArray;
+let dbArray = [];
 
 // Showing the first page
 async function showFirstPage() {
@@ -144,6 +144,53 @@ showFirstPage();
 
 // A function launching the app
 function launchApp(data) {
+  // Getting information from the database about the user's performance
+  const user = auth.currentUser;
+  //const userRef = ref(database, "users/" + user.uid);
+
+  const presentRef = ref(database, "users/" + user.uid + "/present");
+  const pastcompRef = ref(database, "users/" + user.uid + "/pastcomp");
+  const pastimpRef = ref(database, "users/" + user.uid + "/pastimp");
+
+  /*if (dbData.present || dbData.pastcomp || dbData.pastimp) {
+      // Checking the user's tense choice
+      switch (data.data[0].tense) {
+        case "present (le présent de l'indicatif)":
+          dbArray = dbData.present || [];
+          break;
+        case "past (le passé composé)":
+          dbArray = dbData.pastcomp || [];
+          break;
+        case "imperfect past (l'imparfait)":
+          dbArray = dbData.pastimp || [];
+          break;
+      }
+    } */
+
+  onValue(presentRef, (snapshot) => {
+    const dbPresentRefData = snapshot.val();
+    if (
+      data.data[0].tense === "present (le présent de l'indicatif)" &&
+      dbPresentRefData
+    ) {
+      dbArray = dbPresentRefData;
+    }
+  });
+
+  onValue(pastcompRef, (snapshot) => {
+    const dbPastcompRefData = snapshot.val();
+    if (data.data[0].tense === "past (le passé composé)" && dbPastcompRefData) {
+      dbArray = dbPastcompRefData;
+    }
+  });
+
+  onValue(pastimpRef, (snapshot) => {
+    const dbPastimpRefData = snapshot.val();
+    if (data.data[0].tense === "past (le passé composé)" && dbPastimpRefData) {
+      dbArray = dbPastimpRefData;
+    }
+  });
+
   // Initializing a database array depending on the selected tense (adding zeros for each element)
   if (data && data.data.length > 0 && dbArray.length === 0) {
     for (let i = 0; i < data.data.length; i++) {
@@ -171,8 +218,6 @@ function launchApp(data) {
     indexArray.push(k);
     displayVerb(data);
     displayPhrase(data);
-
-    console.log("when the elements generated", dbArray);
   }
 
   generateElements(data);
@@ -183,7 +228,6 @@ function launchApp(data) {
   const submitBtn = document.getElementById("submit-btn");
 
   submitBtn.addEventListener("click", () => {
-    console.log("after clicking submit", dbArray, k);
     checkAnswer(data);
   });
 
@@ -194,6 +238,31 @@ function launchApp(data) {
 
   nextBtn.addEventListener("click", () => {
     displayNext(data);
+  });
+
+  // Select the finish button
+  const finishBtn = document.getElementById("finish-btn");
+  finishBtn.addEventListener("click", () => {
+    showResultPage();
+
+    // Adding data to the database
+    const user = auth.currentUser;
+    //const userRef = ref(database, "users/" + user.uid);
+    const presentRef = ref(database, "users/" + user.uid + "/present");
+    const pastcompRef = ref(database, "users/" + user.uid + "/pastcomp");
+    const pastimpRef = ref(database, "users/" + user.uid + "/pastimp");
+
+    switch (data.data[0].tense) {
+      case "present (le présent de l'indicatif)":
+        set(presentRef, dbArray);
+        break;
+      case "past (le passé composé)":
+        set(pastcompRef, dbArray);
+        break;
+      case "imperfect past (l'imparfait)":
+        set(pastimpRef, dbArray);
+        break;
+    }
   });
 
   // Display the next element
@@ -209,7 +278,6 @@ function launchApp(data) {
     // Select the input element
     const inputArea = document.querySelector(".type-section input");
 
-    console.log("clicking next", dbArray);
     msgArea.innerText = "";
     inputArea.value = "";
     generateElements(data);
@@ -421,37 +489,11 @@ function checkAnswer(data) {
       msgArea.innerText = `Incorrect. The correct answer is: "${data.data[k].answer}"`;
       dbArray[k] = 0;
   }
-  console.log("after checking the answer", dbArray, k);
 
   if (inputText !== "") {
     submitSection.style.display = "none";
     displaySection.style.display = "flex";
   }
-
-  finishBtn.addEventListener("click", () => {
-    showResultPage();
-
-    // Adding data to the database
-    const user = auth.currentUser;
-    const userRef = ref(database, "users/" + user.uid);
-
-    // Data to add to the database
-    let dataForDb;
-
-    switch (data.data[0].tense) {
-      case "present (le présent de l'indicatif)":
-        dataForDb = { present: dbArray };
-        break;
-      case "past (le passé composé)":
-        dataForDb = { pastcomp: dbArray };
-        break;
-      case "imperfect past (l'imparfait)":
-        dataForDb = { pastimp: dbArray };
-        break;
-    }
-
-    set(userRef, dataForDb);
-  });
 }
 
 // Special characters buttons
