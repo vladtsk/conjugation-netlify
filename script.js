@@ -153,9 +153,7 @@ showFirstPage();
 
 // A function launching the app
 function launchApp(data) {
-  // Getting information from the database about the user's performance
-  //const user = auth.currentUser;
-  //console.log(user);
+  // Getting information from the database about the user's performance and copying the database information to dbArray
 
   onAuthStateChanged(auth, (user) => {
     if (user) {
@@ -191,6 +189,13 @@ function launchApp(data) {
         ) {
           dbArray = dbPastimpRefData;
         }
+        console.log(indexArray);
+        // Checking if any of the phrases has reached the result = 3 to stop showing them
+        for (let i = 0; i < data.data.length; i++) {
+          if (dbArray[i].result >= 3) {
+            indexArray.push(dbArray[i].id - 1);
+          }
+        }
       });
     } else {
       console.log("User is signed out");
@@ -200,7 +205,8 @@ function launchApp(data) {
   // Initializing a database array depending on the selected tense (adding zeros for each element)
   if (data && data.data.length > 0 && dbArray.length === 0) {
     for (let i = 0; i < data.data.length; i++) {
-      dbArray.push(0);
+      let object = { id: i + 1, result: 0 };
+      dbArray.push(object);
     }
   }
 
@@ -216,10 +222,14 @@ function launchApp(data) {
   }
 
   function generateElements(data) {
+    console.log(indexArray);
     // Generate a random and unique index
     do {
       k = Math.floor(Math.random() * data.data.length);
     } while (indexArray.includes(k));
+
+    console.log(k);
+    console.log(indexArray);
 
     indexArray.push(k);
     displayVerb(data);
@@ -252,23 +262,28 @@ function launchApp(data) {
     showResultPage();
 
     // Adding data to the database
-    const user = auth.currentUser;
-    //const userRef = ref(database, "users/" + user.uid);
-    const presentRef = ref(database, "users/" + user.uid + "/present");
-    const pastcompRef = ref(database, "users/" + user.uid + "/pastcomp");
-    const pastimpRef = ref(database, "users/" + user.uid + "/pastimp");
 
-    switch (data.data[0].tense) {
-      case "present (le présent de l'indicatif)":
-        set(presentRef, dbArray);
-        break;
-      case "past (le passé composé)":
-        set(pastcompRef, dbArray);
-        break;
-      case "imperfect past (l'imparfait)":
-        set(pastimpRef, dbArray);
-        break;
-    }
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const presentRef = ref(database, "users/" + user.uid + "/present");
+        const pastcompRef = ref(database, "users/" + user.uid + "/pastcomp");
+        const pastimpRef = ref(database, "users/" + user.uid + "/pastimp");
+
+        switch (data.data[0].tense) {
+          case "present (le présent de l'indicatif)":
+            set(presentRef, dbArray);
+            break;
+          case "past (le passé composé)":
+            set(pastcompRef, dbArray);
+            break;
+          case "imperfect past (l'imparfait)":
+            set(pastimpRef, dbArray);
+            break;
+        }
+      } else {
+        console.log("User is signed out");
+      }
+    });
   });
 
   // Display the next element
@@ -488,12 +503,12 @@ function checkAnswer(data) {
     case data.data[k].answer:
       msgArea.innerText = "Correct";
       score++;
-      dbArray[k]++;
+      dbArray[k].result++;
 
       break;
     default:
       msgArea.innerText = `Incorrect. The correct answer is: "${data.data[k].answer}"`;
-      dbArray[k] = 0;
+      dbArray[k].result = 0;
   }
 
   if (inputText !== "") {
@@ -553,6 +568,7 @@ function showResultPage() {
     score = 0;
     phraseNumber = 5;
     indexArray = [];
+    dbArray = [];
     showFirstPage();
   });
 }

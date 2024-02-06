@@ -430,372 +430,366 @@
     },
     {
       "id": 67,
-      "verb": "porter",
-      "phrase": "Je ____ une robe.",
-      "answer": "porte"
-    },
-    {
-      "id": 68,
       "verb": "se lever",
       "phrase": "Tu ____ à quelle heure demain matin ?",
       "answer": "te lèves"
     },
     {
-      "id": 69,
+      "id": 68,
       "verb": "se réveiller",
       "phrase": "Marc ____ tard le dimanche.",
       "answer": "se réveille"
     },
     {
-      "id": 70,
+      "id": 69,
       "verb": "se lever",
       "phrase": "Je ____ tous les jours à 6 h.",
       "answer": "me lève"
     },
     {
-      "id": 71,
+      "id": 70,
       "verb": "vouloir",
       "phrase": "Qu'est-ce que tu ____ faire ce soir ?",
       "answer": "veux"
     },
     {
-      "id": 72,
+      "id": 71,
       "verb": "vouloir",
       "phrase": "Est-ce que Léo ____ bien rester un peu plus tard ?",
       "answer": "veut"
     },
     {
-      "id": 73,
+      "id": 72,
       "verb": "vouloir",
       "phrase": "Je ne ____ pas travailler dans cette entreprise.",
       "answer": "veux"
     },
     {
-      "id": 74,
+      "id": 73,
       "verb": "entendre",
       "phrase": "Je n'____ rien.",
       "answer": "entends"
     },
     {
-      "id": 75,
+      "id": 74,
       "verb": "avoir",
       "phrase": "J'____ mal à la tête.",
       "answer": "ai"
     },
     {
-      "id": 76,
+      "id": 75,
       "verb": "aller",
       "phrase": "Ce train ____ vite !",
       "answer": "va"
     },
     {
-      "id": 77,
+      "id": 76,
       "verb": "être",
       "phrase": "Tu ____ en colère ?",
       "answer": "es"
     },
     {
-      "id": 78,
+      "id": 77,
       "verb": "fumer",
       "phrase": "Elle ____ beaucoup.",
       "answer": "fume"
     },
     {
-      "id": 79,
+      "id": 78,
       "verb": "devoir",
       "phrase": "Je ____ aller à l'hôpital.",
       "answer": "dois"
     },
     {
-      "id": 80,
+      "id": 79,
       "verb": "pouvoir",
       "phrase": "Je ____ vous aider ?",
       "answer": "peux"
     },
     {
-      "id": 81,
+      "id": 80,
       "verb": "devoir",
       "phrase": "Combien de comprimés est-ce que je ____ prendre ?",
       "answer": "dois"
     },
     {
-      "id": 82,
+      "id": 81,
       "verb": "faire",
       "phrase": "Je ____ mes études dans une université parisienne.",
       "answer": "fais"
     },
     {
-      "id": 83,
+      "id": 82,
       "verb": "vouloir",
       "phrase": "Il ____ étudier les mathématiques.",
       "answer": "veut"
     },
     {
-      "id": 84,
+      "id": 83,
       "verb": "étudier",
       "phrase": "Il ____ l'histoire.",
       "answer": "étudie"
     },
     {
-      "id": 85,
+      "id": 84,
       "verb": "apprendre",
       "phrase": "Il ____ l'italien.",
       "answer": "apprend"
     },
     {
-      "id": 86,
+      "id": 85,
       "verb": "être",
       "phrase": "Ils ____ sympas tes profs ?",
       "answer": "sont"
     },
     {
-      "id": 87,
+      "id": 86,
       "verb": "travailler",
       "phrase": "Je ____ de 9 heures à 17 heures.",
       "answer": "travaille"
     },
     {
-      "id": 88,
+      "id": 87,
       "verb": "détester",
       "phrase": "Je ____ mon travail.",
       "answer": "déteste"
     },
     {
-      "id": 89,
+      "id": 88,
       "verb": "prendre",
       "phrase": "Quand est-ce que tu ____ tes vacances ?",
       "answer": "prends"
     },
     {
-      "id": 90,
+      "id": 89,
       "verb": "faire",
       "phrase": "On ____ quoi samedi soir ?",
       "answer": "fait"
     },
     {
-      "id": 91,
+      "id": 90,
       "verb": "fermer",
       "phrase": "À quelle heure ____ le musée ?",
       "answer": "ferme"
     },
     {
-      "id": 92,
+      "id": 91,
       "verb": "se retrouver",
       "phrase": "On ____ où ?",
       "answer": "se retrouve"
     },
     {
-      "id": 93,
+      "id": 92,
       "verb": "être",
       "phrase": "Quels ____ vos acteurs ou actrices préférés ?",
       "answer": "sont"
     },
     {
-      "id": 94,
+      "id": 93,
       "verb": "prendre",
       "phrase": "Il ____ son petit-déjeuner.",
       "answer": "prend"
     },
     {
-      "id": 95,
+      "id": 94,
       "verb": "boire",
       "phrase": "Il ____ un café.",
       "answer": "boit"
     },
     {
-      "id": 96,
+      "id": 95,
       "verb": "se coucher",
       "phrase": "Il ____ tard.",
       "answer": "se couche"
     },
     {
-      "id": 97,
+      "id": 96,
       "verb": "partir",
       "phrase": "Elle ____ travailler.",
       "answer": "part"
     },
     {
-      "id": 98,
+      "id": 97,
       "verb": "se lever",
       "phrase": "Je ____ à 6 heures.",
       "answer": "me lève"
     },
     {
-      "id": 99,
+      "id": 98,
       "verb": "rentrer",
       "phrase": "Je ____ à la maison à 19 heures.",
       "answer": "rentre"
     },
     {
-      "id": 100,
+      "id": 99,
       "verb": "se coucher",
       "phrase": "Je ____ vers minuit.",
       "answer": "me couche"
     },
     {
-      "id": 101,
+      "id": 100,
       "verb": "partir",
       "phrase": "Je ____ au travail.",
       "answer": "pars"
     },
     {
-      "id": 102,
+      "id": 101,
       "verb": "commencer",
       "phrase": "À quelle heure tu ____ demain ?",
       "answer": "commences"
     },
     {
-      "id": 103,
+      "id": 102,
       "verb": "mettre",
       "phrase": "Tu ____ le réveil à quelle heure ?",
       "answer": "mets"
     },
     {
-      "id": 104,
+      "id": 103,
       "verb": "finir",
       "phrase": "Tu ____ tard ce soir ?",
       "answer": "finis"
     },
     {
-      "id": 105,
+      "id": 104,
       "verb": "finir",
       "phrase": "Aujourd'hui, je ____ à 17 heures.",
       "answer": "finis"
     },
     {
-      "id": 106,
+      "id": 105,
       "verb": "rentrer",
       "phrase": "À quelle heure tu ____ ?",
       "answer": "rentres"
     },
     {
-      "id": 107,
+      "id": 106,
       "verb": "se reposer",
       "phrase": "Le samedi et le dimanche, on ____.",
       "answer": "se repose"
     },
     {
-      "id": 108,
+      "id": 107,
       "verb": "coûter",
       "phrase": "Au supermarché, les produits ____ souvent moins cher.",
       "answer": "coûtent"
     },
     {
-      "id": 109,
+      "id": 108,
       "verb": "coûter",
       "phrase": "Combien ça ____ ?",
       "answer": "coûte"
     },
     {
-      "id": 110,
+      "id": 109,
       "verb": "acheter",
       "phrase": "J'____ du pain à la boulangerie.",
       "answer": "achète"
     },
     {
-      "id": 111,
+      "id": 110,
       "verb": "penser",
       "phrase": "Qu'est-ce que tu en ____ ?",
       "answer": "penses"
     },
     {
-      "id": 112,
+      "id": 111,
       "verb": "porter",
       "phrase": "Il ____ des vêtements légers.",
       "answer": "porte"
     },
     {
-      "id": 113,
+      "id": 112,
       "verb": "croire",
       "phrase": "Je ____ qu'on est perdus !",
       "answer": "crois"
     },
     {
-      "id": 114,
+      "id": 113,
       "verb": "pouvoir",
       "phrase": "Les enfants ne ____ pas se promener seuls.",
       "answer": "peuvent"
     },
     {
-      "id": 115,
+      "id": 114,
       "verb": "voyager",
       "phrase": "Je ____ beaucoup.",
       "answer": "voyage"
     },
     {
-      "id": 116,
+      "id": 115,
       "verb": "vivre",
       "phrase": "Tu ____ en Guadeloupe depuis longtemps ?",
       "answer": "vis"
     },
     {
-      "id": 117,
+      "id": 116,
       "verb": "se passer",
       "phrase": "Comment ça ____ en Suisse ?",
       "answer": "se passe"
     },
     {
-      "id": 118,
+      "id": 117,
       "verb": "inquiéter",
       "phrase": "Ne t'____ pas.",
       "answer": "inquiète"
     },
     {
-      "id": 119,
+      "id": 118,
       "verb": "venir",
       "phrase": "Je ____ pour retirer un colis.",
       "answer": "viens"
     },
     {
-      "id": 120,
+      "id": 119,
       "verb": "lire",
       "phrase": "Est-ce que tu ____ le journal ?",
       "answer": "lis"
     },
     {
-      "id": 121,
+      "id": 120,
       "verb": "partir",
       "phrase": "Martin ____ pour un an.",
       "answer": "part"
     },
     {
-      "id": 122,
+      "id": 121,
       "verb": "sortir",
       "phrase": "Margaux et Nick ____ ensemble.",
       "answer": "sortent"
     },
     {
-      "id": 123,
+      "id": 122,
       "verb": "habiter",
       "phrase": "Elle ____ toute seule.",
       "answer": "habite"
     },
     {
-      "id": 124,
+      "id": 123,
       "verb": "sortir",
       "phrase": "Je ____ avec une fille de mon travail.",
       "answer": "sors"
     },
     {
-      "id": 125,
+      "id": 124,
       "verb": "chercher",
       "phrase": "On ____ un appartement plus grand.",
       "answer": "cherche"
     },
     {
-      "id": 126,
+      "id": 125,
       "verb": "prendre",
       "phrase": "Je ____ des médicaments.",
       "answer": "prends"
     },
     {
-      "id": 127,
+      "id": 126,
       "verb": "gagner",
       "phrase": "Il ____ bien sa vie.",
       "answer": "gagne"
     },
     {
-      "id": 128,
+      "id": 127,
       "verb": "habiter",
       "phrase": "J'____ au dernier étage.",
       "answer": "habite"
