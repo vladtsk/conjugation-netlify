@@ -1,4 +1,13 @@
-import { app, getAuth, getDatabase, ref, set, onValue } from "./config.js";
+import {
+  app,
+  getAuth,
+  getDatabase,
+  ref,
+  set,
+  onValue,
+  onAuthStateChanged,
+} from "./config.js";
+
 const auth = getAuth(app);
 const database = getDatabase(app);
 
@@ -145,49 +154,46 @@ showFirstPage();
 // A function launching the app
 function launchApp(data) {
   // Getting information from the database about the user's performance
-  const user = auth.currentUser;
-  //const userRef = ref(database, "users/" + user.uid);
+  //const user = auth.currentUser;
+  //console.log(user);
 
-  const presentRef = ref(database, "users/" + user.uid + "/present");
-  const pastcompRef = ref(database, "users/" + user.uid + "/pastcomp");
-  const pastimpRef = ref(database, "users/" + user.uid + "/pastimp");
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      const presentRef = ref(database, "users/" + user.uid + "/present");
+      const pastcompRef = ref(database, "users/" + user.uid + "/pastcomp");
+      const pastimpRef = ref(database, "users/" + user.uid + "/pastimp");
 
-  /*if (dbData.present || dbData.pastcomp || dbData.pastimp) {
-      // Checking the user's tense choice
-      switch (data.data[0].tense) {
-        case "present (le présent de l'indicatif)":
-          dbArray = dbData.present || [];
-          break;
-        case "past (le passé composé)":
-          dbArray = dbData.pastcomp || [];
-          break;
-        case "imperfect past (l'imparfait)":
-          dbArray = dbData.pastimp || [];
-          break;
-      }
-    } */
+      onValue(presentRef, (snapshot) => {
+        const dbPresentRefData = snapshot.val();
+        if (
+          data.data[0].tense === "present (le présent de l'indicatif)" &&
+          dbPresentRefData
+        ) {
+          dbArray = dbPresentRefData;
+        }
+      });
 
-  onValue(presentRef, (snapshot) => {
-    const dbPresentRefData = snapshot.val();
-    if (
-      data.data[0].tense === "present (le présent de l'indicatif)" &&
-      dbPresentRefData
-    ) {
-      dbArray = dbPresentRefData;
-    }
-  });
+      onValue(pastcompRef, (snapshot) => {
+        const dbPastcompRefData = snapshot.val();
+        if (
+          data.data[0].tense === "past (le passé composé)" &&
+          dbPastcompRefData
+        ) {
+          dbArray = dbPastcompRefData;
+        }
+      });
 
-  onValue(pastcompRef, (snapshot) => {
-    const dbPastcompRefData = snapshot.val();
-    if (data.data[0].tense === "past (le passé composé)" && dbPastcompRefData) {
-      dbArray = dbPastcompRefData;
-    }
-  });
-
-  onValue(pastimpRef, (snapshot) => {
-    const dbPastimpRefData = snapshot.val();
-    if (data.data[0].tense === "past (le passé composé)" && dbPastimpRefData) {
-      dbArray = dbPastimpRefData;
+      onValue(pastimpRef, (snapshot) => {
+        const dbPastimpRefData = snapshot.val();
+        if (
+          data.data[0].tense === "past (le passé composé)" &&
+          dbPastimpRefData
+        ) {
+          dbArray = dbPastimpRefData;
+        }
+      });
+    } else {
+      console.log("User is signed out");
     }
   });
 

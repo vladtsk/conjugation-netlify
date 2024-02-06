@@ -38,7 +38,7 @@ async function userSignUp() {
       // Add the user to out Database
 
       // Reference to the 'user' node
-      const userRef = ref(database, "users/" + user.uid);
+      const userRef = ref(database, "users/" + user.uid + "/info");
 
       // User data
       let userData = {
@@ -70,17 +70,11 @@ async function userLogIn() {
       let userData = {
         email: user.email,
         last_login: Date.now(),
-        /*verbs: {
-          present: [
-            { id: 1, phraseScore: "" },
-            { id: 2, phraseScore: "" },
-          ],
-        }, */
       };
 
       // Reference to the 'user' node
 
-      const userRef = ref(database, "users/" + user.uid);
+      const userRef = ref(database, "users/" + user.uid + "/info");
 
       // Adding the data to the Database
       set(userRef, userData);
