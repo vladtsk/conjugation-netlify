@@ -20,12 +20,11 @@ let phraseNumber = 5;
 // Create an array of indeces
 let indexArray = [];
 
-// Arrays containig information for database about user performance (how well they did on each tested phrase)
-let presentDb = [];
-let pastcompDb = [];
-let pastimpDb = [];
+// Adding a variable counting the nb of phrases that have been shown to the user
+let phraseCount = 0;
 
-// Creating an array that will be equal to one of the 3 arrays above depending on the tense choice
+// Creating an array containig information for database about user performance
+//(how well they did on each tested phrase)
 let dbArray = [];
 
 // Showing the first page
@@ -129,20 +128,6 @@ async function showFirstPage() {
     phraseNumber = selectPhrNb.value;
   });
 
-  if (jsonData && jsonData.data.length > 0) {
-    switch (jsonData.data[0].tense) {
-      case "present (le présent de l'indicatif)":
-        dbArray = presentDb;
-        break;
-      case "past (le passé composé)":
-        dbArray = pastcompDb;
-        break;
-      case "imperfect past (l'imparfait)":
-        dbArray = pastimpDb;
-        break;
-    }
-  }
-
   // Adding an event listener on the start button
   startBtn.addEventListener("click", () => {
     launchApp(jsonData);
@@ -191,7 +176,7 @@ function launchApp(data) {
         }
         console.log(indexArray);
         // Checking if any of the phrases has reached the result = 3 to stop showing them
-        for (let i = 0; i < data.data.length; i++) {
+        for (let i = 0; i < dbArray.length; i++) {
           if (dbArray[i].result >= 3) {
             indexArray.push(dbArray[i].id - 1);
           }
@@ -224,6 +209,7 @@ function launchApp(data) {
   function generateElements(data) {
     console.log(indexArray);
     // Generate a random and unique index
+    k = Math.floor(Math.random() * data.data.length);
     do {
       k = Math.floor(Math.random() * data.data.length);
     } while (indexArray.includes(k));
@@ -457,6 +443,7 @@ function displayVerb(data) {
   if (data && data.data.length > 0) {
     verbDisplay.textContent = data.data[k].verb;
   }
+  phraseCount++;
 }
 
 // A function that displays a phrase (the context)
@@ -490,7 +477,7 @@ function checkAnswer(data) {
   const inputText = inputArea.value;
   let displaySection;
 
-  if (indexArray.length < phraseNumber) {
+  if (phraseCount < phraseNumber) {
     displaySection = nextSection;
   } else {
     displaySection = finishSection;
@@ -567,6 +554,7 @@ function showResultPage() {
     mainSection.innerHTML = "";
     score = 0;
     phraseNumber = 5;
+    phraseCount = 0;
     indexArray = [];
     dbArray = [];
     showFirstPage();
