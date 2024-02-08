@@ -20,12 +20,12 @@ header {
   padding-right: 5px;
   font-weight: bold;
 }
-h1 {
+header h1 {
   font-weight: 600;
   font-size: 40px;
   color: var(--color-primary);
 }
-h2 {
+header h2 {
   margin-top: 20px;
   color: var(--color-primary);
 }

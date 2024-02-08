@@ -18,10 +18,12 @@ const logInForm = document.querySelector(".logInForm");
 const signUpButton = document.getElementById("signUpButton");
 const logInButton = document.getElementById("logInButton");
 const logOutButton = document.getElementById("logOutButton");
+const logOutSection = document.querySelector(".logOutSection");
+const main = document.querySelector("main");
 
-const secretSection = document.querySelector(".secretSection");
+//const secretSection = document.querySelector(".secretSection");
 
-secretSection.style.display = "none";
+//secretSection.style.display = "none";
 
 async function userSignUp() {
   const userEmail = document.getElementById("signUpEmail");
@@ -33,7 +35,7 @@ async function userSignUp() {
     .then((userCredential) => {
       const user = userCredential.user;
       console.log(user);
-      alert("Your account has been created!");
+      //alert("Your account has been created!");
 
       // Add the user to out Database
 
@@ -64,7 +66,7 @@ async function userLogIn() {
   signInWithEmailAndPassword(auth, logInEmail, logInPassword)
     .then((userCredential) => {
       const user = userCredential.user;
-      alert("Your have logged in!");
+      //alert("Your have logged in!");
 
       // User data (TO CHANGE)
       let userData = {
@@ -96,10 +98,12 @@ async function checkAuthState() {
     if (user) {
       logInForm.style.display = "none";
       signUpForm.style.display = "none";
-      secretSection.style.display = "flex";
+      main.style.display = "block";
+      logOutSection.style.display = "flex";
     } else {
       logInForm.style.display = "block";
-      secretSection.style.display = "none";
+      main.style.display = "none";
+      logOutSection.style.display = "none";
     }
   });
 }

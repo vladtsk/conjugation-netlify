@@ -131,6 +131,7 @@ async function showFirstPage() {
   // Adding an event listener on the start button
   startBtn.addEventListener("click", () => {
     launchApp(jsonData);
+    console.log(dbArray);
   });
 }
 
@@ -169,23 +170,25 @@ function launchApp(data) {
       onValue(pastimpRef, (snapshot) => {
         const dbPastimpRefData = snapshot.val();
         if (
-          data.data[0].tense === "past (le passé composé)" &&
+          data.data[0].tense === "imperfect past (l'imparfait)" &&
           dbPastimpRefData
         ) {
           dbArray = dbPastimpRefData;
-        }
-        console.log(indexArray);
-        // Checking if any of the phrases has reached the result = 3 to stop showing them
-        for (let i = 0; i < dbArray.length; i++) {
-          if (dbArray[i].result >= 3) {
-            indexArray.push(dbArray[i].id - 1);
-          }
         }
       });
     } else {
       console.log("User is signed out");
     }
   });
+
+  // A function checking if any of the phrases has reached the result = 3 to stop showing them
+  function checkPhraseResults() {
+    for (let i = 0; i < dbArray.length; i++) {
+      if (dbArray[i].result >= 3) {
+        indexArray.push(dbArray[i].id - 1);
+      }
+    }
+  }
 
   // Initializing a database array depending on the selected tense (adding zeros for each element)
   if (data && data.data.length > 0 && dbArray.length === 0) {
@@ -196,33 +199,29 @@ function launchApp(data) {
   }
 
   buildPageStructure(data);
+  displayTense(data);
 
   setSpecialBtns();
 
-  // Selecting the tense display section
-  const tenseDisplay = document.querySelector(".tense-display p");
-  // Displaying the tense
-  if (data && data.data.length > 0) {
-    tenseDisplay.textContent = data.data[0].tense;
-  }
+  checkPhraseResults();
+  generateElements(data);
 
   function generateElements(data) {
-    console.log(indexArray);
-    // Generate a random and unique index
-    k = Math.floor(Math.random() * data.data.length);
-    do {
+    if (indexArray.length !== data.data.length) {
+      // Generate a random and unique index
       k = Math.floor(Math.random() * data.data.length);
-    } while (indexArray.includes(k));
+      do {
+        k = Math.floor(Math.random() * data.data.length);
+      } while (indexArray.includes(k));
 
-    console.log(k);
-    console.log(indexArray);
+      indexArray.push(k);
+    } else {
+      console.log("No more phrases to practise!");
+    }
 
-    indexArray.push(k);
     displayVerb(data);
     displayPhrase(data);
   }
-
-  generateElements(data);
 
   // Adding an event listener to check the answer when the 'submit' button is clicked
 
@@ -442,6 +441,9 @@ function displayVerb(data) {
 
   if (data && data.data.length > 0) {
     verbDisplay.textContent = data.data[k].verb;
+    console.log("phrasecount:", phraseCount);
+    console.log("phraseNb:", phraseNumber);
+    console.log(k);
   }
   phraseCount++;
 }
@@ -452,6 +454,16 @@ function displayPhrase(data) {
   const phraseDisplay = document.querySelector(".phrase-section p");
   if (data && data.data.length > 0) {
     phraseDisplay.textContent = data.data[k].phrase;
+  }
+}
+
+// A function displaying the tense
+function displayTense(data) {
+  // Selecting the tense display section
+  const tenseDisplay = document.querySelector(".tense-display p");
+  // Displaying the tense
+  if (data && data.data.length > 0) {
+    tenseDisplay.textContent = data.data[0].tense;
   }
 }
 
