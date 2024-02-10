@@ -31,9 +31,15 @@ header h2 {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.mainSection {
   color: var(--color-secondary);
   background-color: var(--color-primary);
-  width: 50%;
+  /*width: 80%;*/
   /*min-width: 200px; */
   margin-left: auto;
   margin-right: auto;
@@ -240,6 +246,14 @@ main {
   font-style: italic;
 }
 
+/*The popup conjugation section*/
+
+.conjugSection {
+  color: var(--color-primary);
+  border: solid 1px var(--color-primary);
+  width: 30%;
+}
+
 /* Styling the submit section */
 .submit-section {
   display: flex;
@@ -357,7 +371,6 @@ main {
 /* Responsive design */
 @media screen and (max-width: 1200px) {
   main {
-    width: 60%;
     padding-top: 30px;
     padding-bottom: 20px;
     padding-left: 30px;
@@ -366,8 +379,7 @@ main {
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  main {
-    width: 90%;
+  .mainSection {
     padding-top: 30px;
     padding-bottom: 20px;
     padding-left: 10px;
@@ -389,8 +401,7 @@ main {
     flex-direction: column;
   }
 
-  main {
-    width: 95%;
+  .mainSection {
     padding-top: 20px;
     padding-left: 10px;
     padding-right: 10px;

@@ -27,9 +27,12 @@ let phraseCount = 0;
 //(how well they did on each tested phrase)
 let dbArray = [];
 
+const responseConjug = await fetch("conjugation.json");
+const jsonConjug = await responseConjug.json();
+
 // Showing the first page
 async function showFirstPage() {
-  const mainSection = document.querySelector("main");
+  const mainSection = document.querySelector(".mainSection");
 
   // Welcome section
   const welcomeDiv = document.createElement("div");
@@ -140,7 +143,6 @@ showFirstPage();
 // A function launching the app
 function launchApp(data) {
   // Getting information from the database about the user's performance and copying the database information to dbArray
-
   onAuthStateChanged(auth, (user) => {
     if (user) {
       const presentRef = ref(database, "users/" + user.uid + "/present");
@@ -295,7 +297,9 @@ function launchApp(data) {
 // Building the main page structure
 function buildPageStructure(data) {
   // Deleting all the elements in the "main" section
-  const mainSection = document.querySelector("main");
+  const main = document.querySelector("main");
+  const mainSection = document.querySelector(".mainSection");
+
   mainSection.innerHTML = "";
 
   // Tense display section
@@ -403,6 +407,15 @@ function buildPageStructure(data) {
   const messageP = document.createElement("p");
   messageSection.appendChild(messageP);
 
+  // Conjugation popup section
+  const conjugSection = document.createElement("div");
+  conjugSection.classList.add("conjugSection");
+  main.appendChild(conjugSection);
+  conjugSection.style.display = "none";
+
+  const conjugPopup = document.createElement("p");
+  conjugSection.appendChild(conjugPopup);
+
   // Sibmit section
   const submitSection = document.createElement("div");
   submitSection.classList.add("submit-section");
@@ -473,6 +486,9 @@ function checkAnswer(data) {
   const msgSection = document.querySelector(".msg-section");
   // Select "p" element for a message to display
   const msgArea = document.querySelector(".msg-section p");
+  // Conjugation popup section
+  const conjugSection = document.querySelector(".conjugSection");
+  const conjugPopup = document.querySelector(".conjugSection p");
   // Selecting the submit section
   const submitSection = document.querySelector(".submit-section");
   // Select the submit button
@@ -507,6 +523,16 @@ function checkAnswer(data) {
       break;
     default:
       msgArea.innerText = `Incorrect. The correct answer is: "${data.data[k].answer}"`;
+      let popupMsg =
+        jsonConjug.verbs[`${data.data[k].verb}`][`${data.data[0].tenseShort}`];
+      let popupMsgValues = Object.values(popupMsg);
+
+      for (let i = 0; i < popupMsgValues.length; i++) {
+        conjugSection.innerHTML += `<p>${popupMsgValues[i]}</p>`;
+      }
+
+      conjugSection.style.display = "block";
+
       dbArray[k].result = 0;
   }
 
@@ -530,7 +556,7 @@ function setSpecialBtns() {
 }
 
 function showResultPage() {
-  const mainSection = document.querySelector("main");
+  const mainSection = document.querySelector(".mainSection");
   mainSection.innerHTML = "";
 
   const resultDiv = document.createElement("div");

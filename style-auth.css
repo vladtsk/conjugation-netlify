@@ -44,6 +44,7 @@ main {
   font-size: 18px;
 } */
 
+/*
 .secretSection {
   display: flex;
   flex-direction: column;
@@ -51,8 +52,8 @@ main {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   margin-inline: auto;
-  align-items: center;
-}
+  align-items: center; 
+} */
 
 form h1 {
   text-align: center;

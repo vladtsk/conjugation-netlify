@@ -5,7 +5,8 @@
       "verb": "dire",
       "phrase": "Je ____ la vérité à mes parents",
       "answer": "dis",
-      "tense": "present (le présent de l'indicatif)"
+      "tense": "present (le présent de l'indicatif)",
+      "tenseShort": "present"
     },
 
     {
@@ -730,7 +731,7 @@
     },
     {
       "id": 117,
-      "verb": "inquiéter",
+      "verb": "s'inquiéter",
       "phrase": "Ne t'____ pas.",
       "answer": "inquiète"
     },

@@ -19,7 +19,7 @@ const signUpButton = document.getElementById("signUpButton");
 const logInButton = document.getElementById("logInButton");
 const logOutButton = document.getElementById("logOutButton");
 const logOutSection = document.querySelector(".logOutSection");
-const main = document.querySelector("main");
+const mainSection = document.querySelector(".mainSection");
 
 //const secretSection = document.querySelector(".secretSection");
 
@@ -98,11 +98,11 @@ async function checkAuthState() {
     if (user) {
       logInForm.style.display = "none";
       signUpForm.style.display = "none";
-      main.style.display = "block";
+      mainSection.style.display = "block";
       logOutSection.style.display = "flex";
     } else {
       logInForm.style.display = "block";
-      main.style.display = "none";
+      mainSection.style.display = "none";
       logOutSection.style.display = "none";
     }
   });

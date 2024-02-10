@@ -5,7 +5,8 @@
       "verb": "avoir",
       "phrase": "Il y ____ beaucoup de monde.",
       "answer": "avait",
-      "tense": "imperfect past (l'imparfait)"
+      "tense": "imperfect past (l'imparfait)",
+      "tenseShort": "pastimp"
     },
     {
       "id": 2,

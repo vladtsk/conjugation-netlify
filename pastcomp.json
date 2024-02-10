@@ -5,7 +5,8 @@
       "verb": "avoir",
       "phrase": "Hier, j'____ un rendez-vous.",
       "answer": "ai eu",
-      "tense": "past (le passé composé)"
+      "tense": "past (le passé composé)",
+      "tenseShort": "pastcomp"
     },
     {
       "id": 2,
