@@ -2268,6 +2268,84 @@
         "5": "vous expliquiez",
         "6": "ils/elles expliquaient"
       }
+    },
+    "chercher": {
+      "present": {
+        "1": "je cherche",
+        "2": "tu cherches",
+        "3": "il/elle/on cherche",
+        "4": "nous cherchons",
+        "5": "vous cherchez",
+        "6": "ils/elles cherchent"
+      },
+      "pastcomp": {
+        "1": "j'ai cherché",
+        "2": "tu as cherché",
+        "3": "il/elle/on a cherché",
+        "4": "nous avons cherché",
+        "5": "vous avez cherché",
+        "6": "ils/elles ont cherché"
+      },
+      "pastimp": {
+        "1": "je cherchais",
+        "2": "tu cherchais",
+        "3": "il/elle/on cherchait",
+        "4": "nous cherchions",
+        "5": "vous cherchiez",
+        "6": "ils/elles cherchaient"
+      }
+    },
+    "fermer": {
+      "present": {
+        "1": "je ferme",
+        "2": "tu fermes",
+        "3": "il/elle/on ferme",
+        "4": "nous fermons",
+        "5": "vous fermez",
+        "6": "ils/elles ferment"
+      },
+      "pastcomp": {
+        "1": "j'ai fermé",
+        "2": "tu as fermé",
+        "3": "il/elle/on a fermé",
+        "4": "nous avons fermé",
+        "5": "vous avez fermé",
+        "6": "ils/elles ont fermé"
+      },
+      "pastimp": {
+        "1": "je fermais",
+        "2": "tu fermais",
+        "3": "il/elle/on fermait",
+        "4": "nous fermions",
+        "5": "vous fermiez",
+        "6": "ils/elles fermaient"
+      }
+    },
+    "détester": {
+      "present": {
+        "1": "je déteste",
+        "2": "tu détestes",
+        "3": "il/elle/on déteste",
+        "4": "nous détestons",
+        "5": "vous détestez",
+        "6": "ils/elles détestent"
+      },
+      "pastcomp": {
+        "1": "j'ai détesté",
+        "2": "tu as détesté",
+        "3": "il/elle/on a détesté",
+        "4": "nous avons détesté",
+        "5": "vous avez détesté",
+        "6": "ils/elles ont détesté"
+      },
+      "pastimp": {
+        "1": "je détestais",
+        "2": "tu détestais",
+        "3": "il/elle/on détestait",
+        "4": "nous détestions",
+        "5": "vous détestiez",
+        "6": "ils/elles détestaient"
+      }
     }
   }
 }

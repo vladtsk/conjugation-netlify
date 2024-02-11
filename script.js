@@ -236,16 +236,21 @@ function launchApp(data) {
 
   // Adding an event listener to display the next phrase to test
 
-  // Select the 'next' button
+  // Select the 'next' button and the conjugation popup section
   const nextBtn = document.getElementById("next-btn");
+  const conjugSection = document.querySelector(".conjugSection");
 
   nextBtn.addEventListener("click", () => {
+    conjugSection.innerHTML = "";
+    conjugSection.style.display = "none";
     displayNext(data);
   });
 
   // Select the finish button
   const finishBtn = document.getElementById("finish-btn");
   finishBtn.addEventListener("click", () => {
+    conjugSection.innerHTML = "";
+    conjugSection.style.display = "none";
     showResultPage();
 
     // Adding data to the database
@@ -413,9 +418,6 @@ function buildPageStructure(data) {
   main.appendChild(conjugSection);
   conjugSection.style.display = "none";
 
-  const conjugPopup = document.createElement("p");
-  conjugSection.appendChild(conjugPopup);
-
   // Sibmit section
   const submitSection = document.createElement("div");
   submitSection.classList.add("submit-section");
@@ -488,7 +490,6 @@ function checkAnswer(data) {
   const msgArea = document.querySelector(".msg-section p");
   // Conjugation popup section
   const conjugSection = document.querySelector(".conjugSection");
-  const conjugPopup = document.querySelector(".conjugSection p");
   // Selecting the submit section
   const submitSection = document.querySelector(".submit-section");
   // Select the submit button
@@ -526,6 +527,7 @@ function checkAnswer(data) {
       let popupMsg =
         jsonConjug.verbs[`${data.data[k].verb}`][`${data.data[0].tenseShort}`];
       let popupMsgValues = Object.values(popupMsg);
+      conjugSection.innerHTML = `<i class="fa-regular fa-lightbulb" style="color: #2b2d42;"></i>`;
 
       for (let i = 0; i < popupMsgValues.length; i++) {
         conjugSection.innerHTML += `<p>${popupMsgValues[i]}</p>`;

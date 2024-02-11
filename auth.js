@@ -99,11 +99,11 @@ async function checkAuthState() {
       logInForm.style.display = "none";
       signUpForm.style.display = "none";
       mainSection.style.display = "block";
-      logOutSection.style.display = "flex";
+      /*logOutSection.style.display = "flex";*/
     } else {
       logInForm.style.display = "block";
       mainSection.style.display = "none";
-      logOutSection.style.display = "none";
+      /*logOutSection.style.display = "none";*/
     }
   });
 }

@@ -149,12 +149,10 @@ input {
   padding-inline: 12px;
   padding-block: 8px;
 
-  font-size: 0.8em;
   border-radius: 6px;
 }
 
 #logOutButton:hover {
   background-color: var(--color-primary);
   color: var(--color-secondary);
-  border: none;
 }
