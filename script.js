@@ -239,10 +239,13 @@ function launchApp(data) {
   // Select the 'next' button and the conjugation popup section
   const nextBtn = document.getElementById("next-btn");
   const conjugSection = document.querySelector(".conjugSection");
+  // The phrase section
+  const phraseDisplay = document.querySelector(".phrase-section p");
 
   nextBtn.addEventListener("click", () => {
     conjugSection.innerHTML = "";
     conjugSection.style.display = "none";
+    phraseDisplay.style.color = "black";
     displayNext(data);
   });
 
@@ -502,6 +505,8 @@ function checkAnswer(data) {
   const finishSection = document.querySelector(".finish-section");
   // Select the finish button
   const finishBtn = document.getElementById("finish-btn");
+  // The phrase display section
+  const phraseDisplay = document.querySelector(".phrase-section p");
 
   const inputText = inputArea.value;
   let displaySection;
@@ -517,17 +522,21 @@ function checkAnswer(data) {
       msgArea.innerText = "Please type a valid verb";
       break;
     case data.data[k].answer:
+      phraseDisplay.textContent = data.data[k].fullPhrase;
       msgArea.innerText = "Correct";
       score++;
       dbArray[k].result++;
 
       break;
     default:
+      phraseDisplay.textContent = data.data[k].fullPhrase;
+      phraseDisplay.style.color = "#ef233c";
       msgArea.innerText = `Incorrect. The correct answer is: "${data.data[k].answer}"`;
       let popupMsg =
         jsonConjug.verbs[`${data.data[k].verb}`][`${data.data[0].tenseShort}`];
       let popupMsgValues = Object.values(popupMsg);
-      conjugSection.innerHTML = `<i class="fa-regular fa-lightbulb" style="color: #2b2d42;"></i>`;
+      conjugSection.innerHTML = `<div class="popup-icons"><i class="fa-regular fa-lightbulb bulb-animation" 
+      style="color: #ef233c;"></i><i class="fa-solid fa-xmark popup-close"></i></div>`;
 
       for (let i = 0; i < popupMsgValues.length; i++) {
         conjugSection.innerHTML += `<p>${popupMsgValues[i]}</p>`;
@@ -536,6 +545,15 @@ function checkAnswer(data) {
       conjugSection.style.display = "block";
 
       dbArray[k].result = 0;
+  }
+
+  // Popup close icon
+  const popupCloseBtn = document.querySelector(".popup-close");
+  if (popupCloseBtn) {
+    popupCloseBtn.addEventListener("click", () => {
+      conjugSection.innerHTML = "";
+      conjugSection.style.display = "none";
+    });
   }
 
   if (inputText !== "") {

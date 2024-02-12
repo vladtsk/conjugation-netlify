@@ -5,6 +5,7 @@
       "verb": "avoir",
       "phrase": "Il y ____ beaucoup de monde.",
       "answer": "avait",
+      "fullPhrase": "Il y avait beaucoup de monde.",
       "tense": "imperfect past (l'imparfait)",
       "tenseShort": "pastimp"
     },
@@ -12,649 +13,757 @@
       "id": 2,
       "verb": "aller",
       "phrase": "Elles ____ à la mer.",
-      "answer": "allaient"
+      "answer": "allaient",
+      "fullPhrase": "Elles allaient à la mer."
     },
     {
       "id": 3,
       "verb": "être",
       "phrase": "Tu ____ calme.",
-      "answer": "étais"
+      "answer": "étais",
+      "fullPhrase": "Tu étais calme."
     },
     {
       "id": 4,
       "verb": "dormir",
       "phrase": "Vous ____ bien ?",
-      "answer": "dormiez"
+      "answer": "dormiez",
+      "fullPhrase": "Vous dormiez bien ?"
     },
     {
       "id": 5,
       "verb": "boire",
       "phrase": "Je ____ du thé.",
-      "answer": "buvais"
+      "answer": "buvais",
+      "fullPhrase": "Je buvais du thé."
     },
     {
       "id": 6,
       "verb": "prendre",
       "phrase": "On ____ un bain le dimanche.",
-      "answer": "prenait"
+      "answer": "prenait",
+      "fullPhrase": "On prenait un bain le dimanche."
     },
     {
       "id": 7,
       "verb": "se promener",
       "phrase": "Tu ____ beaucoup.",
-      "answer": "te promenais"
+      "answer": "te promenais",
+      "fullPhrase": "Tu te promenais beaucoup."
     },
     {
       "id": 8,
       "verb": "lire",
       "phrase": "Elle ____ tous les jours.",
-      "answer": "lisait"
+      "answer": "lisait",
+      "fullPhrase": "Elle lisait tous les jours."
     },
     {
       "id": 9,
       "verb": "étudier",
       "phrase": "Vous ____ chez vous.",
-      "answer": "étudiiez"
+      "answer": "étudiiez",
+      "fullPhrase": "Vous étudiiez chez vous."
     },
     {
       "id": 10,
       "verb": "faire",
       "phrase": "Nous ____ beaucoup de bruit.",
-      "answer": "faisions"
+      "answer": "faisions",
+      "fullPhrase": "Nous faisions beaucoup de bruit."
     },
     {
       "id": 11,
       "verb": "envoyer",
       "phrase": "Avant, on ____ des lettres.",
-      "answer": "envoyait"
+      "answer": "envoyait",
+      "fullPhrase": "Avant, on envoyait des lettres."
     },
     {
       "id": 12,
       "verb": "avoir",
       "phrase": "Avant, tout le monde ____ une radio.",
-      "answer": "avait"
+      "answer": "avait",
+      "fullPhrase": "Avant, tout le monde avait une radio."
     },
     {
       "id": 13,
       "verb": "laver",
       "phrase": "Avant, on ____ son linge à la main.",
-      "answer": "lavait"
+      "answer": "lavait",
+      "fullPhrase": "Avant, on lavait son linge à la main."
     },
     {
       "id": 14,
       "verb": "travailler",
       "phrase": "Avant, les Français ____ 45 h par semaine.",
-      "answer": "travaillaient"
+      "answer": "travaillaient",
+      "fullPhrase": "Avant, les Français travaillaient 45 h par semaine."
     },
     {
       "id": 15,
       "verb": "acheter",
       "phrase": "Avant, on ____ le lait à la ferme.",
-      "answer": "achetait"
+      "answer": "achetait",
+      "fullPhrase": "Avant, on achetait le lait à la ferme."
     },
     {
       "id": 16,
       "verb": "prendre",
       "phrase": "On ne ____ pas le train.",
-      "answer": "prenait"
+      "answer": "prenait",
+      "fullPhrase": "On ne prenait pas le train."
     },
     {
       "id": 17,
       "verb": "conduire",
       "phrase": "On ____ des voitures.",
-      "answer": "conduisait"
+      "answer": "conduisait",
+      "fullPhrase": "On conduisait des voitures."
     },
     {
       "id": 18,
       "verb": "écrire",
       "phrase": "Les gens ____ des lettres.",
-      "answer": "écrivaient"
+      "answer": "écrivaient",
+      "fullPhrase": "Les gens écrivaient des lettres."
     },
     {
       "id": 19,
       "verb": "avoir",
       "phrase": "Ils n'____ pas la télévision.",
-      "answer": "avaient"
+      "answer": "avaient",
+      "fullPhrase": "Ils n'avaient pas la télévision."
     },
     {
       "id": 20,
       "verb": "lire",
       "phrase": "Ils ____ le journal.",
-      "answer": "lisaient"
+      "answer": "lisaient",
+      "fullPhrase": "Ils lisaient le journal."
     },
     {
       "id": 21,
       "verb": "s'occuper",
       "phrase": "Les femmes ____ des enfants.",
-      "answer": "s'occupaient"
+      "answer": "s'occupaient",
+      "fullPhrase": "Les femmes s'occupaient des enfants."
     },
     {
       "id": 22,
       "verb": "voyager",
       "phrase": "On ne ____ pas à l'étranger.",
-      "answer": "voyageait"
+      "answer": "voyageait",
+      "fullPhrase": "On ne voyageait pas à l'étranger."
     },
     {
       "id": 23,
       "verb": "parler",
       "phrase": "On ____ avec nos voisins.",
-      "answer": "parlait"
+      "answer": "parlait",
+      "fullPhrase": "On parlait avec nos voisins."
     },
     {
       "id": 24,
       "verb": "aller",
       "phrase": "Les enfants n'____ pas à l'école le jeudi.",
-      "answer": "allaient"
+      "answer": "allaient",
+      "fullPhrase": "Les enfants n'allaient pas à l'école le jeudi."
     },
     {
       "id": 25,
       "verb": "jouer",
       "phrase": "Quand j'étais petite, je ____ à la poupée.",
-      "answer": "jouais"
+      "answer": "jouais",
+      "fullPhrase": "Quand j'étais petite, je jouais à la poupée."
     },
     {
       "id": 26,
       "verb": "lire",
       "phrase": "Je ____ des livres.",
-      "answer": "lisais"
+      "answer": "lisais",
+      "fullPhrase": "Je lisais des livres."
     },
     {
       "id": 27,
       "verb": "aider",
       "phrase": "J'____ mes parents à la maison.",
-      "answer": "aidais"
+      "answer": "aidais",
+      "fullPhrase": "J'aidais mes parents à la maison."
     },
     {
       "id": 28,
       "verb": "se coucher",
       "phrase": "Je ____ à 21 h.",
-      "answer": "me couchais"
+      "answer": "me couchais",
+      "fullPhrase": "Je me couchais à 21 h."
     },
     {
       "id": 29,
       "verb": "rendre visite",
       "phrase": "Je ____ à mes grands-parents tous les week-ends.",
-      "answer": "rendais visite"
+      "answer": "rendais visite",
+      "fullPhrase": "Je rendais visite à mes grands-parents tous les week-ends."
     },
     {
       "id": 30,
       "verb": "habiter",
       "phrase": "Ils ____ à la campagne.",
-      "answer": "habitaient"
+      "answer": "habitaient",
+      "fullPhrase": "Ils habitaient à la campagne."
     },
     {
       "id": 31,
       "verb": "cuisiner",
       "phrase": "Je ____ avec ma grand-mère.",
-      "answer": "cuisinais"
+      "answer": "cuisinais",
+      "fullPhrase": "Je cuisinais avec ma grand-mère."
     },
     {
       "id": 32,
       "verb": "se promener",
       "phrase": "On ____ dans le parc.",
-      "answer": "se promenait"
+      "answer": "se promenait",
+      "fullPhrase": "On se promenait dans le parc."
     },
     {
       "id": 33,
       "verb": "regarder",
       "phrase": "Je ne ____ jamais la télé.",
-      "answer": "regardais"
+      "answer": "regardais",
+      "fullPhrase": "Je ne regardais jamais la télé."
     },
     {
       "id": 34,
       "verb": "pleuvoir",
       "phrase": "Il ____ quand les enfants sont sortis.",
-      "answer": "pleuvait"
+      "answer": "pleuvait",
+      "fullPhrase": "Il pleuvait quand les enfants sont sortis."
     },
     {
       "id": 35,
       "verb": "faire",
       "phrase": "On ____ les courses.",
-      "answer": "faisait"
+      "answer": "faisait",
+      "fullPhrase": "On faisait les courses."
     },
     {
       "id": 36,
       "verb": "être",
       "phrase": "Nous ____ dehors.",
-      "answer": "étions"
+      "answer": "étions",
+      "fullPhrase": "Nous étions dehors."
     },
     {
       "id": 37,
       "verb": "avoir",
       "phrase": "Ils ____ 10 ans quand on a pris cette photo.",
-      "answer": "avaient"
+      "answer": "avaient",
+      "fullPhrase": "Ils avaient 10 ans quand on a pris cette photo."
     },
     {
       "id": 38,
       "verb": "prendre",
       "phrase": "Je ____ une douche.",
-      "answer": "prenais"
+      "answer": "prenais",
+      "fullPhrase": "Je prenais une douche."
     },
     {
       "id": 39,
       "verb": "faire",
       "phrase": "Il ____ froid.",
-      "answer": "faisait"
+      "answer": "faisait",
+      "fullPhrase": "Il faisait froid."
     },
     {
       "id": 40,
       "verb": "aimer",
       "phrase": "J'____ beaucoup la musique.",
-      "answer": "aimais"
+      "answer": "aimais",
+      "fullPhrase": "J'aimais beaucoup la musique."
     },
     {
       "id": 41,
       "verb": "ouvrir",
       "phrase": "J'____ une boîte de sardines.",
-      "answer": "ouvrais"
+      "answer": "ouvrais",
+      "fullPhrase": "J'ouvrais une boîte de sardines."
     },
     {
       "id": 42,
       "verb": "faire",
       "phrase": "Il ____ du ski.",
-      "answer": "faisait"
+      "answer": "faisait",
+      "fullPhrase": "Il faisait du ski."
     },
     {
       "id": 43,
       "verb": "comprendre",
       "phrase": "Je ne ____ pas.",
-      "answer": "comprenais"
+      "answer": "comprenais",
+      "fullPhrase": "Je ne comprenais pas."
     },
     {
       "id": 44,
       "verb": "être",
       "phrase": "Il ____ malade.",
-      "answer": "était"
+      "answer": "était",
+      "fullPhrase": "Il était malade."
     },
     {
       "id": 45,
       "verb": "connaître",
       "phrase": "Je ne ____ pas la ville.",
-      "answer": "connaissais"
+      "answer": "connaissais",
+      "fullPhrase": "Je ne connaissais pas la ville."
     },
     {
       "id": 46,
       "verb": "habiter",
       "phrase": "Tu te souviens quand nous ____ dans le petit studio ?",
-      "answer": "habitions"
+      "answer": "habitions",
+      "fullPhrase": "Tu te souviens quand nous habitions dans le petit studio ?"
     },
     {
       "id": 47,
       "verb": "faire",
       "phrase": "On ____ la cuisine.",
-      "answer": "faisait"
+      "answer": "faisait",
+      "fullPhrase": "On faisait la cuisine."
     },
     {
       "id": 48,
       "verb": "avoir",
       "phrase": "Nous ____ un chat.",
-      "answer": "avions"
+      "answer": "avions",
+      "fullPhrase": "Nous avions un chat."
     },
     {
       "id": 49,
       "verb": "boire",
       "phrase": "Nous ____ du café.",
-      "answer": "buvions"
+      "answer": "buvions",
+      "fullPhrase": "Nous buvions du café."
     },
     {
       "id": 50,
       "verb": "avoir",
       "phrase": "Tu ____ un téléphone quand tu étais petite ?",
-      "answer": "avais"
+      "answer": "avais",
+      "fullPhrase": "Tu avais un téléphone quand tu étais petite ?"
     },
     {
       "id": 51,
       "verb": "avoir",
       "phrase": "Je n'____ pas de téléphone.",
-      "answer": "avais"
+      "answer": "avais",
+      "fullPhrase": "Je n'avais pas de téléphone."
     },
     {
       "id": 52,
       "verb": "avoir",
       "phrase": "Les gens n'____ pas la même vie que maintenant.",
-      "answer": "avaient"
+      "answer": "avaient",
+      "fullPhrase": "Les gens n'avaient pas la même vie que maintenant."
     },
     {
       "id": 53,
       "verb": "avoir",
       "phrase": "On ____ moins de vacances.",
-      "answer": "avait"
+      "answer": "avait",
+      "fullPhrase": "On avait moins de vacances."
     },
     {
       "id": 54,
       "verb": "regarder",
       "phrase": "Tu ____ la télévision ?",
-      "answer": "regardais"
+      "answer": "regardais",
+      "fullPhrase": "Tu regardais la télévision ?"
     },
     {
       "id": 55,
       "verb": "avoir",
       "phrase": "Mes parents n'____ pas la télévision.",
-      "answer": "avaient"
+      "answer": "avaient",
+      "fullPhrase": "Mes parents n'avaient pas la télévision."
     },
     {
       "id": 56,
       "verb": "écouter",
       "phrase": "On ____ la radio.",
-      "answer": "écoutait"
+      "answer": "écoutait",
+      "fullPhrase": "On écoutait la radio."
     },
     {
       "id": 57,
       "verb": "être",
       "phrase": "J'____ petite.",
-      "answer": "étais"
+      "answer": "étais",
+      "fullPhrase": "J'étais petite."
     },
     {
       "id": 58,
       "verb": "lire",
       "phrase": "Avant on ____ plus que maintenant.",
-      "answer": "lisait"
+      "answer": "lisait",
+      "fullPhrase": "Avant on lisait plus que maintenant."
     },
     {
       "id": 59,
       "verb": "avoir",
       "phrase": "J'____ beaucoup d'amis.",
-      "answer": "avais"
+      "answer": "avais",
+      "fullPhrase": "J'avais beaucoup d'amis."
     },
     {
       "id": 60,
       "verb": "s'amuser",
       "phrase": "On ____ bien.",
-      "answer": "s'amusait"
+      "answer": "s'amusait",
+      "fullPhrase": "On s'amusait bien."
     },
     {
       "id": 61,
       "verb": "jouer",
       "phrase": "On ____ dehors.",
-      "answer": "jouait"
+      "answer": "jouait",
+      "fullPhrase": "On jouait dehors."
     },
     {
       "id": 62,
       "verb": "courir",
       "phrase": "On ____ tous les jours.",
-      "answer": "courait"
+      "answer": "courait",
+      "fullPhrase": "On courait tous les jours."
     },
     {
       "id": 63,
       "verb": "habiter",
       "phrase": "Tu te souviens quand nous ____ dans le petit studio ?",
-      "answer": "habitions"
+      "answer": "habitions",
+      "fullPhrase": "Tu te souviens quand nous habitions dans le petit studio ?"
     },
     {
       "id": 64,
       "verb": "jouer",
       "phrase": " Tu ____ au football ?",
-      "answer": "jouais"
+      "answer": "jouais",
+      "fullPhrase": "Tu jouais au football ?"
     },
     {
       "id": 65,
       "verb": "parler",
       "phrase": "Ils ____ tout le temps.",
-      "answer": "parlaient"
+      "answer": "parlaient",
+      "fullPhrase": "Ils parlaient tout le temps."
     },
     {
       "id": 66,
       "verb": "entendre",
       "phrase": "On ____ des conversations.",
-      "answer": "entendait"
+      "answer": "entendait",
+      "fullPhrase": "On entendait des conversations."
     },
     {
       "id": 67,
       "verb": "savoir",
       "phrase": "Je ____ que j'avais oublié quelque chose.",
-      "answer": "savais"
+      "answer": "savais",
+      "fullPhrase": "Je savais que j'avais oublié quelque chose."
     },
     {
       "id": 68,
       "verb": "écrire",
       "phrase": "Il ____ tout ce que je disais.",
-      "answer": "écrivait"
+      "answer": "écrivait",
+      "fullPhrase": "Il écrivait tout ce que je disais."
     },
     {
       "id": 69,
       "verb": "parler",
       "phrase": "Les gens ____ fort.",
-      "answer": "parlaient"
+      "answer": "parlaient",
+      "fullPhrase": "Les gens parlaient fort."
     },
     {
       "id": 70,
       "verb": "avoir",
       "phrase": "Quand j'étais jeune, je n'____ pas de voiture.",
-      "answer": "avais"
+      "answer": "avais",
+      "fullPhrase": "Quand j'étais jeune, je n'avais pas de voiture."
     },
     {
       "id": 71,
       "verb": "aller",
       "phrase": "J'____ chaque année en vacances dans les Alpes.",
-      "answer": "allais"
+      "answer": "allais",
+      "fullPhrase": "J'allais chaque année en vacances dans les Alpes."
     },
     {
       "id": 72,
       "verb": "jouer",
       "phrase": "Il ____ toujours au football avec ses copains.",
-      "answer": "jouait"
+      "answer": "jouait",
+      "fullPhrase": "Il jouait toujours au football avec ses copains."
     },
     {
       "id": 73,
       "verb": "penser",
       "phrase": "Je ____ qu'il était malade.",
-      "answer": "pensais"
+      "answer": "pensais",
+      "fullPhrase": "Je pensais qu'il était malade."
     },
     {
       "id": 74,
       "verb": "croire",
       "phrase": "Je ____ qu'elle avait des enfants.",
-      "answer": "croyais"
+      "answer": "croyais",
+      "fullPhrase": "Je croyais qu'elle avait des enfants."
     },
     {
       "id": 75,
       "verb": "dire",
       "phrase": "Je n'écoutais plus ce qu'elle me ____.",
-      "answer": "disait"
+      "answer": "disait",
+      "fullPhrase": "Je n'écoutais plus ce qu'elle me disait."
     },
     {
       "id": 76,
       "verb": "se sentir",
       "phrase": "Elle ne ____ pas bien.",
-      "answer": "se sentait"
+      "answer": "se sentait",
+      "fullPhrase": "Elle ne se sentait pas bien."
     },
     {
       "id": 77,
       "verb": "sortir",
       "phrase": "Je ____ de la maison quand tu as appelé.",
-      "answer": "sortais"
+      "answer": "sortais",
+      "fullPhrase": "Je sortais de la maison quand tu as appelé."
     },
     {
       "id": 78,
       "verb": "voir",
       "phrase": "Je ne ____ pas bien quand je ne portais pas de lunettes.",
-      "answer": "voyais"
+      "answer": "voyais",
+      "fullPhrase": "Je ne voyais pas bien quand je ne portais pas de lunettes."
     },
     {
       "id": 79,
       "verb": "voir",
       "phrase": "On ne ____ rien.",
-      "answer": "voyait"
+      "answer": "voyait",
+      "fullPhrase": "On ne voyait rien."
     },
     {
       "id": 80,
       "verb": "entendre",
       "phrase": "Elle n'____ pas.",
-      "answer": "entendait"
+      "answer": "entendait",
+      "fullPhrase": "Elle n'entendait pas."
     },
     {
       "id": 81,
       "verb": "vouloir",
       "phrase": "Je ____ l'aider.",
-      "answer": "voulais"
+      "answer": "voulais",
+      "fullPhrase": "Je voulais l'aider."
     },
     {
       "id": 82,
       "verb": "vouloir",
       "phrase": "Ma sœur ne ____ pas partir.",
-      "answer": "voulait"
+      "answer": "voulait",
+      "fullPhrase": "Ma sœur ne voulait pas partir."
     },
     {
       "id": 83,
       "verb": "vouloir",
       "phrase": "On ____ aller à Amsterdam.",
-      "answer": "voulait"
+      "answer": "voulait",
+      "fullPhrase": "On voulait aller à Amsterdam."
     },
     {
       "id": 84,
       "verb": "vouloir",
       "phrase": "J'ai fait ce que tu ____.",
-      "answer": "voulais"
+      "answer": "voulais",
+      "fullPhrase": "J'ai fait ce que tu voulais."
     },
     {
       "id": 85,
       "verb": "dormir",
       "phrase": "Je ____ beaucoup mieux quand j'étais enfant.",
-      "answer": "dormais"
+      "answer": "dormais",
+      "fullPhrase": "Je dormais beaucoup mieux quand j'étais enfant."
     },
     {
       "id": 86,
       "verb": "venir",
       "phrase": "Il ne t'a pas dit que je ____.",
-      "answer": "venais"
+      "answer": "venais",
+      "fullPhrase": "Il ne t'a pas dit que je venais."
     },
     {
       "id": 87,
       "verb": "pouvoir",
       "phrase": "Je ne ____ pas rester.",
-      "answer": "pouvais"
+      "answer": "pouvais",
+      "fullPhrase": "Je ne pouvais pas rester."
     },
     {
       "id": 88,
       "verb": "devoir",
       "phrase": "Il ____ me rappeler, mais il a oublié.",
-      "answer": "devait"
+      "answer": "devait",
+      "fullPhrase": "Il devait me rappeler, mais il a oublié."
     },
     {
       "id": 89,
       "verb": "devoir",
       "phrase": "Je ____ rester à la maison avec mon petit frère.",
-      "answer": "devais"
+      "answer": "devais",
+      "fullPhrase": "Je devais rester à la maison avec mon petit frère."
     },
     {
       "id": 90,
       "verb": "pouvoir",
       "phrase": "Ils ____ rester éveillés toute la nuit.",
-      "answer": "pouvaient"
+      "answer": "pouvaient",
+      "fullPhrase": "Ils pouvaient rester éveillés toute la nuit."
     },
     {
       "id": 91,
       "verb": "devoir",
       "phrase": "Elles ____ rentrer tôt.",
-      "answer": "devaient"
+      "answer": "devaient",
+      "fullPhrase": "Elles devaient rentrer tôt."
     },
     {
       "id": 92,
       "verb": "conduire",
       "phrase": "Nous ____ notre voiture.",
-      "answer": "conduisions"
+      "answer": "conduisions",
+      "fullPhrase": "Nous conduisions notre voiture."
     },
     {
       "id": 93,
       "verb": "penser",
       "phrase": "Ils ____ pouvoir le faire.",
-      "answer": "pensaient"
+      "answer": "pensaient",
+      "fullPhrase": "Ils pensaient pouvoir le faire."
     },
     {
       "id": 94,
       "verb": "servir",
       "phrase": "Ils ____ des plats trop chauds.",
-      "answer": "servaient"
+      "answer": "servaient",
+      "fullPhrase": "Ils servaient des plats trop chauds."
     },
     {
       "id": 95,
       "verb": "finir",
       "phrase": "Tu ____ toujours un peu tard.",
-      "answer": "finissais"
+      "answer": "finissais",
+      "fullPhrase": "Tu finissais toujours un peu tard."
     },
     {
       "id": 96,
       "verb": "continuer",
       "phrase": "Je ____ ma route.",
-      "answer": "continuais"
+      "answer": "continuais",
+      "fullPhrase": "Je continuais ma route."
     },
     {
       "id": 97,
       "verb": "danser",
       "phrase": "Ils ____ toute la nuit.",
-      "answer": "dansaient"
+      "answer": "dansaient",
+      "fullPhrase": "Ils dansaient toute la nuit."
     },
     {
       "id": 98,
       "verb": "prendre",
       "phrase": "Je ____ les transports en commun.",
-      "answer": "prenais"
+      "answer": "prenais",
+      "fullPhrase": "Je prenais les transports en commun."
     },
     {
       "id": 99,
       "verb": "vouloir",
       "phrase": "Nous ____ changer nos habitudes.",
-      "answer": "voulions"
+      "answer": "voulions",
+      "fullPhrase": "Nous voulions changer nos habitudes."
     },
     {
       "id": 100,
       "verb": "revenir",
       "phrase": "Ils ____ plusieurs fois.",
-      "answer": "revenaient"
+      "answer": "revenaient",
+      "fullPhrase": "Ils revenaient plusieurs fois."
     },
     {
       "id": 101,
       "verb": "lire",
       "phrase": "Ils ____ des romans chaque soir avant de dormir.",
-      "answer": "lisaient"
+      "answer": "lisaient",
+      "fullPhrase": "Ils lisaient des romans chaque soir avant de dormir."
     },
     {
       "id": 102,
       "verb": "mettre",
       "phrase": "Tu ____ du sucre dans ton café.",
-      "answer": "mettais"
+      "answer": "mettais",
+      "fullPhrase": "Tu mettais du sucre dans ton café."
     },
     {
       "id": 103,
       "verb": "pouvoir",
       "phrase": "Vous ____ faire beaucoup de choses.",
-      "answer": "pouviez"
+      "answer": "pouviez",
+      "fullPhrase": "Vous pouviez faire beaucoup de choses."
     },
     {
       "id": 104,
       "verb": "pouvoir",
       "phrase": "Je ne ____ pas y aller.",
-      "answer": "pouvais"
+      "answer": "pouvais",
+      "fullPhrase": "Je ne pouvais pas y aller."
     },
     {
       "id": 105,
       "verb": "entendre",
       "phrase": "Tu ____ bien le professeur.",
-      "answer": "entendais"
+      "answer": "entendais",
+      "fullPhrase": "Tu entendais bien le professeur."
     },
     {
       "id": 106,
       "verb": "vouloir",
       "phrase": "On ____ faire plus d'activités sportives.",
-      "answer": "voulait"
+      "answer": "voulait",
+      "fullPhrase": "On voulait faire plus d'activités sportives."
     },
     {
       "id": 107,
       "verb": "voir",
       "phrase": "Je ____ cet endroit pour la première fois.",
-      "answer": "voyais"
+      "answer": "voyais",
+      "fullPhrase": "Je voyais cet endroit pour la première fois."
     },
     {
       "id": 108,
       "verb": "vouloir",
       "phrase": "Tu ____ le faire pour moi ?",
-      "answer": "voulais"
+      "answer": "voulais",
+      "fullPhrase": "Tu voulais le faire pour moi ?"
     },
     {
       "id": 109,
       "verb": "venir",
       "phrase": "Tu ____ rarement nous voir.",
-      "answer": "venais"
+      "answer": "venais",
+      "fullPhrase": "Tu venais rarement nous voir."
     }
   ]
 }

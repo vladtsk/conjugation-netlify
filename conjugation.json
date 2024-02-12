@@ -2346,6 +2346,32 @@
         "5": "vous détestiez",
         "6": "ils/elles détestaient"
       }
+    },
+    "téléphoner": {
+      "present": {
+        "1": "je téléphone",
+        "2": "tu téléphones",
+        "3": "il/elle/on téléphone",
+        "4": "nous téléphonons",
+        "5": "vous téléphonez",
+        "6": "ils/elles téléphonent"
+      },
+      "pastcomp": {
+        "1": "j'ai téléphoné",
+        "2": "tu as téléphoné",
+        "3": "il/elle/on a téléphoné",
+        "4": "nous avons téléphoné",
+        "5": "vous avez téléphoné",
+        "6": "ils/elles ont téléphoné"
+      },
+      "pastimp": {
+        "1": "je téléphonais",
+        "2": "tu téléphonais",
+        "3": "il/elle/on téléphonait",
+        "4": "nous téléphonions",
+        "5": "vous téléphoniez",
+        "6": "ils/elles téléphonaient"
+      }
     }
   }
 }

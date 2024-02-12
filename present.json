@@ -5,6 +5,7 @@
       "verb": "dire",
       "phrase": "Je ____ la vérité à mes parents",
       "answer": "dis",
+      "fullPhrase": "Je dis la vérité à mes parents",
       "tense": "present (le présent de l'indicatif)",
       "tenseShort": "present"
     },
@@ -13,787 +14,883 @@
       "id": 2,
       "verb": "dire",
       "phrase": "Vous ____ quoi ?",
-      "answer": "dites"
+      "answer": "dites",
+      "fullPhrase": "Vous dites quoi ?"
     },
-
     {
       "id": 3,
       "verb": "dire",
       "phrase": "Ils ____ tout !",
-      "answer": "disent"
+      "answer": "disent",
+      "fullPhrase": "Ils disent tout !"
     },
-
     {
       "id": 4,
       "verb": "dire",
       "phrase": "Je ne comprends pas ce que tu ____. ",
-      "answer": "dis"
+      "answer": "dis",
+      "fullPhrase": "Je ne comprends pas ce que tu dis."
     },
-
     {
       "id": 5,
       "verb": "dire",
       "phrase": "Tout ce qu'elle ____ est vrai. ",
-      "answer": "dit"
+      "answer": "dit",
+      "fullPhrase": "Tout ce qu'elle dit est vrai."
     },
-
     {
       "id": 6,
       "verb": "dire",
       "phrase": "Nous vous ____ tout.",
-      "answer": "disons"
+      "answer": "disons",
+      "fullPhrase": "Nous vous disons tout."
     },
-
     {
       "id": 7,
       "verb": "dire",
       "phrase": "Comment on ____ en français... ? ",
-      "answer": "dit"
+      "answer": "dit",
+      "fullPhrase": "Comment on dit en français... ?"
     },
-
     {
       "id": 8,
       "verb": "rester",
       "phrase": "Je ____ ici pour les vacances.",
-      "answer": "reste"
+      "answer": "reste",
+      "fullPhrase": "Je reste ici pour les vacances."
     },
-
     {
       "id": 9,
       "verb": "travailler",
       "phrase": "Je ____ ici depuis deux ans.",
-      "answer": "travaille"
+      "answer": "travaille",
+      "fullPhrase": "Je travaille ici depuis deux ans."
     },
-
     {
       "id": 10,
       "verb": "détester",
       "phrase": "Je ____ attendre au restaurant.",
-      "answer": "déteste"
+      "answer": "déteste",
+      "fullPhrase": "Je déteste attendre au restaurant."
     },
-
     {
       "id": 11,
       "verb": "regarder",
       "phrase": "Je ____ la télé.",
-      "answer": "regarde"
+      "answer": "regarde",
+      "fullPhrase": "Je regarde la télé."
     },
-
     {
       "id": 12,
       "verb": "danser",
       "phrase": "Elle ____ tous les mardis.",
-      "answer": "danse"
+      "answer": "danse",
+      "fullPhrase": "Elle danse tous les mardis."
     },
-
     {
       "id": 13,
       "verb": "chanter",
       "phrase": "Tu ____ bien ?",
-      "answer": "chantes"
+      "answer": "chantes",
+      "fullPhrase": "Tu chantes bien ?"
     },
-
     {
       "id": 14,
       "verb": "fermer",
       "phrase": "Nous ____ la porte à clé.",
-      "answer": "fermons"
+      "answer": "fermons",
+      "fullPhrase": "Nous fermons la porte à clé."
     },
-
     {
       "id": 15,
       "verb": "arrêter",
       "phrase": "Ils ____ de travailler.",
-      "answer": "arrêtent"
+      "answer": "arrêtent",
+      "fullPhrase": "Ils arrêtent de travailler."
     },
-
     {
       "id": 16,
       "verb": "chercher",
       "phrase": "On ____ une solution à notre problème.",
-      "answer": "cherche"
+      "answer": "cherche",
+      "fullPhrase": "On cherche une solution à notre problème."
     },
-
     {
       "id": 17,
       "verb": "regarder",
       "phrase": "Je ____ un film.",
-      "answer": "regarde"
+      "answer": "regarde",
+      "fullPhrase": "Je regarde un film."
     },
-
     {
       "id": 18,
       "verb": "aller",
       "phrase": "Juliette ____ à la salle de sport.",
-      "answer": "va"
+      "answer": "va",
+      "fullPhrase": "Juliette va à la salle de sport."
     },
-
     {
       "id": 19,
       "verb": "mettre",
       "phrase": "Je vous ____ quel gâteau ?",
-      "answer": "mets"
+      "answer": "mets",
+      "fullPhrase": "Je vous mets quel gâteau ?"
     },
-
     {
       "id": 20,
       "verb": "savoir",
       "phrase": "Je ne ____ pas.",
-      "answer": "sais"
+      "answer": "sais",
+      "fullPhrase": "Je ne sais pas."
     },
-
     {
       "id": 21,
       "verb": "être",
       "phrase": "Tous les trains ____ en retard.",
-      "answer": "sont"
+      "answer": "sont",
+      "fullPhrase": "Tous les trains sont en retard."
     },
-
     {
       "id": 22,
       "verb": "être",
       "phrase": "Le train de Marseille ____ à l'heure.",
-      "answer": "est"
+      "answer": "est",
+      "fullPhrase": "Le train de Marseille est à l'heure."
     },
-
     {
       "id": 23,
       "verb": "être",
       "phrase": "Je ____ en retard.",
-      "answer": "suis"
+      "answer": "suis",
+      "fullPhrase": "Je suis en retard."
     },
-
     {
       "id": 24,
       "verb": "faire",
       "phrase": "Tu ____ quoi?",
-      "answer": "fais"
+      "answer": "fais",
+      "fullPhrase": "Tu fais quoi?"
     },
-
     {
       "id": 25,
       "verb": "faire",
       "phrase": "Qu'est-ce que vous ____?",
-      "answer": "faites"
+      "answer": "faites",
+      "fullPhrase": "Qu'est-ce que vous faites?"
     },
-
     {
       "id": 26,
       "verb": "chanter",
       "phrase": "Antoine ____ toujours cette chanson.",
-      "answer": "chante"
+      "answer": "chante",
+      "fullPhrase": "Antoine chante toujours cette chanson."
     },
-
     {
       "id": 27,
       "verb": "avoir",
       "phrase": "Tu ____ de l'argent ?",
-      "answer": "as"
+      "answer": "as",
+      "fullPhrase": "Tu as de l'argent ?"
     },
-
     {
       "id": 28,
       "verb": "écrire",
       "phrase": "Tu ____ souvent à tes amis ?",
-      "answer": "écris"
+      "answer": "écris",
+      "fullPhrase": "Tu écris souvent à tes amis ?"
     },
-
     {
       "id": 29,
       "verb": "parler",
       "phrase": "Tu ____ souvent avec Aïda ?",
-      "answer": "parles"
+      "answer": "parles",
+      "fullPhrase": "Tu parles souvent avec Aïda ?"
     },
-
     {
       "id": 30,
       "verb": "aller",
       "phrase": "Vous ____ bien ?",
-      "answer": "allez"
+      "answer": "allez",
+      "fullPhrase": "Vous allez bien ?"
     },
-
     {
       "id": 31,
       "verb": "vouloir",
       "phrase": "Vous ____ boire du jus d'orange ?",
-      "answer": "voulez"
+      "answer": "voulez",
+      "fullPhrase": "Vous voulez boire du jus d'orange ?"
     },
-
     {
       "id": 32,
       "verb": "aller",
       "phrase": "Tu ____ à la piscine ?",
-      "answer": "vas"
+      "answer": "vas",
+      "fullPhrase": "Tu vas à la piscine ?"
     },
     {
       "id": 33,
       "verb": "attendre",
       "phrase": "J'____ ta réponse.",
-      "answer": "attends"
+      "answer": "attends",
+      "fullPhrase": "J'attends ta réponse."
     },
     {
       "id": 34,
       "verb": "pouvoir",
       "phrase": "Je ____ rester à la maison?",
-      "answer": "peux"
+      "answer": "peux",
+      "fullPhrase": "Je peux rester à la maison?"
     },
     {
       "id": 35,
       "verb": "être",
       "phrase": "Cet appartement ____ trop cher.",
-      "answer": "est"
+      "answer": "est",
+      "fullPhrase": "Cet appartement est trop cher."
     },
     {
       "id": 36,
       "verb": "parler",
       "phrase": "Elle ____ trois langues.",
-      "answer": "parle"
+      "answer": "parle",
+      "fullPhrase": "Elle parle trois langues."
     },
     {
       "id": 37,
       "verb": "porter",
       "phrase": "Je ____ une robe.",
-      "answer": "porte"
+      "answer": "porte",
+      "fullPhrase": "Je porte une robe."
     },
     {
       "id": 38,
       "verb": "habiter",
       "phrase": "J'____ à Londres.",
-      "answer": "habite"
+      "answer": "habite",
+      "fullPhrase": "J'habite à Londres."
     },
     {
       "id": 39,
       "verb": "travailler",
       "phrase": "Il ____ dans un cinéma.",
-      "answer": "travaille"
+      "answer": "travaille",
+      "fullPhrase": "Il travaille dans un cinéma."
     },
     {
       "id": 40,
       "verb": "acheter",
       "phrase": "Elle ____ une baguette tous les jours.",
-      "answer": "achète"
+      "answer": "achète",
+      "fullPhrase": "Elle achète une baguette tous les jours."
     },
     {
       "id": 41,
       "verb": "voyager",
       "phrase": "Est-ce que vous ____ souvent ?",
-      "answer": "voyagez"
+      "answer": "voyagez",
+      "fullPhrase": "Est-ce que vous voyagez souvent ?"
     },
     {
       "id": 42,
       "verb": "pouvoir",
       "phrase": "On ne ____ pas.",
-      "answer": "peut"
+      "answer": "peut",
+      "fullPhrase": "On ne peut pas."
     },
     {
       "id": 43,
       "verb": "devoir",
       "phrase": "Zack ____ travailler.",
-      "answer": "doit"
+      "answer": "doit",
+      "fullPhrase": "Zack doit travailler."
     },
     {
       "id": 44,
       "verb": "être",
       "phrase": "Est-ce que vous ____ disponibles samedi 15 octobre?",
-      "answer": "êtes"
+      "answer": "êtes",
+      "fullPhrase": "Est-ce que vous êtes disponibles samedi 15 octobre?"
     },
     {
       "id": 45,
       "verb": "pouvoir",
       "phrase": "Vous ____ venir avec les enfants.",
-      "answer": "pouvez"
+      "answer": "pouvez",
+      "fullPhrase": "Vous pouvez venir avec les enfants."
     },
     {
       "id": 46,
       "verb": "prendre",
       "phrase": "Tu ____ un thé ?",
-      "answer": "prends"
+      "answer": "prends",
+      "fullPhrase": "Tu prends un thé ?"
     },
     {
       "id": 47,
       "verb": "pouvoir",
       "phrase": "On ____ vous contacter pendant les vacances ?",
-      "answer": "peut"
+      "answer": "peut",
+      "fullPhrase": "On peut vous contacter pendant les vacances ?"
     },
     {
       "id": 48,
       "verb": "prendre",
       "phrase": "Je ____ mon train dans 10 minutes.",
-      "answer": "prends"
+      "answer": "prends",
+      "fullPhrase": "Je prends mon train dans 10 minutes."
     },
     {
       "id": 49,
       "verb": "faire",
       "phrase": "Il ____ très froid ce matin.",
-      "answer": "fait"
+      "answer": "fait",
+      "fullPhrase": "Il fait très froid ce matin."
     },
     {
       "id": 50,
       "verb": "avoir",
       "phrase": "Tu ____ quel âge ?",
-      "answer": "as"
+      "answer": "as",
+      "fullPhrase": "Tu as quel âge ?"
     },
     {
       "id": 51,
       "verb": "être",
       "phrase": "Je ____ américaine.",
-      "answer": "suis"
+      "answer": "suis",
+      "fullPhrase": "Je suis américaine."
     },
     {
       "id": 52,
       "verb": "aller",
       "phrase": "Nous ____ au théâtre.",
-      "answer": "allons"
+      "answer": "allons",
+      "fullPhrase": "Nous allons au théâtre."
     },
     {
       "id": 53,
       "verb": "être",
       "phrase": "On ____ à la poste.",
-      "answer": "est"
+      "answer": "est",
+      "fullPhrase": "On est à la poste."
     },
     {
       "id": 54,
       "verb": "aller",
       "phrase": "Vous ____ où ?",
-      "answer": "allez"
+      "answer": "allez",
+      "fullPhrase": "Vous allez où ?"
     },
     {
       "id": 55,
       "verb": "avoir",
       "phrase": "Ils ____ très faim.",
-      "answer": "ont"
+      "answer": "ont",
+      "fullPhrase": "Ils ont très faim."
     },
     {
       "id": 56,
       "verb": "avoir",
       "phrase": "Vous ____ froid ?",
-      "answer": "avez"
+      "answer": "avez",
+      "fullPhrase": "Vous avez froid ?"
     },
     {
       "id": 57,
       "verb": "avoir",
       "phrase": "Nous ____ quatre enfants.",
-      "answer": "avons"
+      "answer": "avons",
+      "fullPhrase": "Nous avons quatre enfants."
     },
     {
       "id": 58,
       "verb": "avoir",
       "phrase": "Elles ____ une belle maison.",
-      "answer": "ont"
+      "answer": "ont",
+      "fullPhrase": "Elles ont une belle maison."
     },
     {
       "id": 59,
       "verb": "avoir",
       "phrase": "Il ____ 40 ans.",
-      "answer": "a"
+      "answer": "a",
+      "fullPhrase": "Il a 40 ans."
     },
     {
       "id": 60,
       "verb": "être",
       "phrase": "Ce livre ____ vraiment nul.",
-      "answer": "est"
+      "answer": "est",
+      "fullPhrase": "Ce livre est vraiment nul."
     },
     {
       "id": 61,
       "verb": "faire",
       "phrase": "Tu ____ du sport ?",
-      "answer": "fais"
+      "answer": "fais",
+      "fullPhrase": "Tu fais du sport ?"
     },
     {
       "id": 62,
       "verb": "avoir",
       "phrase": "Tu ____ faim ?",
-      "answer": "as"
+      "answer": "as",
+      "fullPhrase": "Tu as faim ?"
     },
     {
       "id": 63,
       "verb": "être",
       "phrase": "Il ____ déjà 17 h.",
-      "answer": "est"
+      "answer": "est",
+      "fullPhrase": "Il est déjà 17 h."
     },
     {
       "id": 64,
       "verb": "avoir",
       "phrase": "On ____ envie de dormir.",
-      "answer": "a"
+      "answer": "a",
+      "fullPhrase": "On a envie de dormir."
     },
     {
       "id": 65,
       "verb": "aller",
       "phrase": "Mes amis ____ en Espagne la semaine prochaine.",
-      "answer": "vont"
+      "answer": "vont",
+      "fullPhrase": "Mes amis vont en Espagne la semaine prochaine."
     },
     {
       "id": 66,
       "verb": "aller",
       "phrase": "À quelle heure est-ce que tu ____ à l'université ?",
-      "answer": "vas"
+      "answer": "vas",
+      "fullPhrase": "À quelle heure est-ce que tu vas à l'université ?"
     },
     {
       "id": 67,
       "verb": "se lever",
       "phrase": "Tu ____ à quelle heure demain matin ?",
-      "answer": "te lèves"
+      "answer": "te lèves",
+      "fullPhrase": "Tu te lèves à quelle heure demain matin ?"
     },
     {
       "id": 68,
       "verb": "se réveiller",
       "phrase": "Marc ____ tard le dimanche.",
-      "answer": "se réveille"
+      "answer": "se réveille",
+      "fullPhrase": "Marc se réveille tard le dimanche."
     },
     {
       "id": 69,
       "verb": "se lever",
       "phrase": "Je ____ tous les jours à 6 h.",
-      "answer": "me lève"
+      "answer": "me lève",
+      "fullPhrase": "Je me lève tous les jours à 6 h."
     },
     {
       "id": 70,
       "verb": "vouloir",
       "phrase": "Qu'est-ce que tu ____ faire ce soir ?",
-      "answer": "veux"
+      "answer": "veux",
+      "fullPhrase": "Qu'est-ce que tu veux faire ce soir ?"
     },
     {
       "id": 71,
       "verb": "vouloir",
       "phrase": "Est-ce que Léo ____ bien rester un peu plus tard ?",
-      "answer": "veut"
+      "answer": "veut",
+      "fullPhrase": "Est-ce que Léo veut bien rester un peu plus tard ?"
     },
     {
       "id": 72,
       "verb": "vouloir",
       "phrase": "Je ne ____ pas travailler dans cette entreprise.",
-      "answer": "veux"
+      "answer": "veux",
+      "fullPhrase": "Je ne veux pas travailler dans cette entreprise."
     },
     {
       "id": 73,
       "verb": "entendre",
       "phrase": "Je n'____ rien.",
-      "answer": "entends"
+      "answer": "entends",
+      "fullPhrase": "Je n'entends rien."
     },
     {
       "id": 74,
       "verb": "avoir",
       "phrase": "J'____ mal à la tête.",
-      "answer": "ai"
+      "answer": "ai",
+      "fullPhrase": "J'ai mal à la tête."
     },
     {
       "id": 75,
       "verb": "aller",
       "phrase": "Ce train ____ vite !",
-      "answer": "va"
+      "answer": "va",
+      "fullPhrase": "Ce train va vite !"
     },
     {
       "id": 76,
       "verb": "être",
       "phrase": "Tu ____ en colère ?",
-      "answer": "es"
+      "answer": "es",
+      "fullPhrase": "Tu es en colère ?"
     },
     {
       "id": 77,
       "verb": "fumer",
       "phrase": "Elle ____ beaucoup.",
-      "answer": "fume"
+      "answer": "fume",
+      "fullPhrase": "Elle fume beaucoup."
     },
     {
       "id": 78,
       "verb": "devoir",
       "phrase": "Je ____ aller à l'hôpital.",
-      "answer": "dois"
+      "answer": "dois",
+      "fullPhrase": "Je dois aller à l'hôpital."
     },
     {
       "id": 79,
       "verb": "pouvoir",
       "phrase": "Je ____ vous aider ?",
-      "answer": "peux"
+      "answer": "peux",
+      "fullPhrase": "Je peux vous aider ?"
     },
     {
       "id": 80,
       "verb": "devoir",
       "phrase": "Combien de comprimés est-ce que je ____ prendre ?",
-      "answer": "dois"
+      "answer": "dois",
+      "fullPhrase": "Combien de comprimés est-ce que je dois prendre ?"
     },
     {
       "id": 81,
       "verb": "faire",
       "phrase": "Je ____ mes études dans une université parisienne.",
-      "answer": "fais"
+      "answer": "fais",
+      "fullPhrase": "Je fais mes études dans une université parisienne."
     },
     {
       "id": 82,
       "verb": "vouloir",
       "phrase": "Il ____ étudier les mathématiques.",
-      "answer": "veut"
+      "answer": "veut",
+      "fullPhrase": "Il veut étudier les mathématiques."
     },
     {
       "id": 83,
       "verb": "étudier",
       "phrase": "Il ____ l'histoire.",
-      "answer": "étudie"
+      "answer": "étudie",
+      "fullPhrase": "Il étudie l'histoire."
     },
     {
       "id": 84,
       "verb": "apprendre",
       "phrase": "Il ____ l'italien.",
-      "answer": "apprend"
+      "answer": "apprend",
+      "fullPhrase": "Il apprend l'italien."
     },
     {
       "id": 85,
       "verb": "être",
       "phrase": "Ils ____ sympas tes profs ?",
-      "answer": "sont"
+      "answer": "sont",
+      "fullPhrase": "Ils sont sympas tes profs ?"
     },
     {
       "id": 86,
       "verb": "travailler",
       "phrase": "Je ____ de 9 heures à 17 heures.",
-      "answer": "travaille"
+      "answer": "travaille",
+      "fullPhrase": "Je travaille de 9 heures à 17 heures."
     },
     {
       "id": 87,
       "verb": "détester",
       "phrase": "Je ____ mon travail.",
-      "answer": "déteste"
+      "answer": "déteste",
+      "fullPhrase": "Je déteste mon travail."
     },
     {
       "id": 88,
       "verb": "prendre",
       "phrase": "Quand est-ce que tu ____ tes vacances ?",
-      "answer": "prends"
+      "answer": "prends",
+      "fullPhrase": "Quand est-ce que tu prends tes vacances ?"
     },
     {
       "id": 89,
       "verb": "faire",
       "phrase": "On ____ quoi samedi soir ?",
-      "answer": "fait"
+      "answer": "fait",
+      "fullPhrase": "On fait quoi samedi soir ?"
     },
     {
       "id": 90,
       "verb": "fermer",
       "phrase": "À quelle heure ____ le musée ?",
-      "answer": "ferme"
+      "answer": "ferme",
+      "fullPhrase": "À quelle heure ferme le musée ?"
     },
     {
       "id": 91,
       "verb": "se retrouver",
       "phrase": "On ____ où ?",
-      "answer": "se retrouve"
+      "answer": "se retrouve",
+      "fullPhrase": "On se retrouve où ?"
     },
     {
       "id": 92,
       "verb": "être",
       "phrase": "Quels ____ vos acteurs ou actrices préférés ?",
-      "answer": "sont"
+      "answer": "sont",
+      "fullPhrase": "Quels sont vos acteurs ou actrices préférés ?"
     },
     {
       "id": 93,
       "verb": "prendre",
       "phrase": "Il ____ son petit-déjeuner.",
-      "answer": "prend"
+      "answer": "prend",
+      "fullPhrase": "Il prend son petit-déjeuner."
     },
     {
       "id": 94,
       "verb": "boire",
       "phrase": "Il ____ un café.",
-      "answer": "boit"
+      "answer": "boit",
+      "fullPhrase": "Il boit un café."
     },
     {
       "id": 95,
       "verb": "se coucher",
       "phrase": "Il ____ tard.",
-      "answer": "se couche"
+      "answer": "se couche",
+      "fullPhrase": "Il se couche tard."
     },
     {
       "id": 96,
       "verb": "partir",
       "phrase": "Elle ____ travailler.",
-      "answer": "part"
+      "answer": "part",
+      "fullPhrase": "Elle part travailler."
     },
     {
       "id": 97,
       "verb": "se lever",
       "phrase": "Je ____ à 6 heures.",
-      "answer": "me lève"
+      "answer": "me lève",
+      "fullPhrase": "Je me lève à 6 heures."
     },
     {
       "id": 98,
       "verb": "rentrer",
       "phrase": "Je ____ à la maison à 19 heures.",
-      "answer": "rentre"
+      "answer": "rentre",
+      "fullPhrase": "Je rentre à la maison à 19 heures."
     },
     {
       "id": 99,
       "verb": "se coucher",
       "phrase": "Je ____ vers minuit.",
-      "answer": "me couche"
+      "answer": "me couche",
+      "fullPhrase": "Je me couche vers minuit."
     },
     {
       "id": 100,
       "verb": "partir",
       "phrase": "Je ____ au travail.",
-      "answer": "pars"
+      "answer": "pars",
+      "fullPhrase": "Je pars au travail."
     },
     {
       "id": 101,
       "verb": "commencer",
       "phrase": "À quelle heure tu ____ demain ?",
-      "answer": "commences"
+      "answer": "commences",
+      "fullPhrase": "À quelle heure tu commences demain ?"
     },
     {
       "id": 102,
       "verb": "mettre",
       "phrase": "Tu ____ le réveil à quelle heure ?",
-      "answer": "mets"
+      "answer": "mets",
+      "fullPhrase": "Tu mets le réveil à quelle heure ?"
     },
     {
       "id": 103,
       "verb": "finir",
       "phrase": "Tu ____ tard ce soir ?",
-      "answer": "finis"
+      "answer": "finis",
+      "fullPhrase": "Tu finis tard ce soir ?"
     },
     {
       "id": 104,
       "verb": "finir",
       "phrase": "Aujourd'hui, je ____ à 17 heures.",
-      "answer": "finis"
+      "answer": "finis",
+      "fullPhrase": "Aujourd'hui, je finis à 17 heures."
     },
     {
       "id": 105,
       "verb": "rentrer",
       "phrase": "À quelle heure tu ____ ?",
-      "answer": "rentres"
+      "answer": "rentres",
+      "fullPhrase": "À quelle heure tu rentres ?"
     },
     {
       "id": 106,
       "verb": "se reposer",
       "phrase": "Le samedi et le dimanche, on ____.",
-      "answer": "se repose"
+      "answer": "se repose",
+      "fullPhrase": "Le samedi et le dimanche, on se repose."
     },
     {
       "id": 107,
       "verb": "coûter",
       "phrase": "Au supermarché, les produits ____ souvent moins cher.",
-      "answer": "coûtent"
+      "answer": "coûtent",
+      "fullPhrase": "Au supermarché, les produits coûtent souvent moins cher."
     },
     {
       "id": 108,
       "verb": "coûter",
       "phrase": "Combien ça ____ ?",
-      "answer": "coûte"
+      "answer": "coûte",
+      "fullPhrase": "Combien ça coûte ?"
     },
     {
       "id": 109,
       "verb": "acheter",
       "phrase": "J'____ du pain à la boulangerie.",
-      "answer": "achète"
+      "answer": "achète",
+      "fullPhrase": "J'achète du pain à la boulangerie."
     },
     {
       "id": 110,
       "verb": "penser",
       "phrase": "Qu'est-ce que tu en ____ ?",
-      "answer": "penses"
+      "answer": "penses",
+      "fullPhrase": "Qu'est-ce que tu en penses ?"
     },
     {
       "id": 111,
       "verb": "porter",
       "phrase": "Il ____ des vêtements légers.",
-      "answer": "porte"
+      "answer": "porte",
+      "fullPhrase": "Il porte des vêtements légers."
     },
     {
       "id": 112,
       "verb": "croire",
       "phrase": "Je ____ qu'on est perdus !",
-      "answer": "crois"
+      "answer": "crois",
+      "fullPhrase": "Je crois qu'on est perdus !"
     },
     {
       "id": 113,
       "verb": "pouvoir",
       "phrase": "Les enfants ne ____ pas se promener seuls.",
-      "answer": "peuvent"
+      "answer": "peuvent",
+      "fullPhrase": "Les enfants ne peuvent pas se promener seuls."
     },
     {
       "id": 114,
       "verb": "voyager",
       "phrase": "Je ____ beaucoup.",
-      "answer": "voyage"
+      "answer": "voyage",
+      "fullPhrase": "Je voyage beaucoup."
     },
     {
       "id": 115,
       "verb": "vivre",
       "phrase": "Tu ____ en Guadeloupe depuis longtemps ?",
-      "answer": "vis"
+      "answer": "vis",
+      "fullPhrase": "Tu vis en Guadeloupe depuis longtemps ?"
     },
     {
       "id": 116,
       "verb": "se passer",
       "phrase": "Comment ça ____ en Suisse ?",
-      "answer": "se passe"
+      "answer": "se passe",
+      "fullPhrase": "Comment ça se passe en Suisse ?"
     },
     {
       "id": 117,
       "verb": "s'inquiéter",
       "phrase": "Ne t'____ pas.",
-      "answer": "inquiète"
+      "answer": "inquiète",
+      "fullPhrase": "Ne t'inquiète pas."
     },
     {
       "id": 118,
       "verb": "venir",
       "phrase": "Je ____ pour retirer un colis.",
-      "answer": "viens"
+      "answer": "viens",
+      "fullPhrase": "Je viens pour retirer un colis."
     },
     {
       "id": 119,
       "verb": "lire",
       "phrase": "Est-ce que tu ____ le journal ?",
-      "answer": "lis"
+      "answer": "lis",
+      "fullPhrase": "Est-ce que tu lis le journal ?"
     },
     {
       "id": 120,
       "verb": "partir",
       "phrase": "Martin ____ pour un an.",
-      "answer": "part"
+      "answer": "part",
+      "fullPhrase": "Martin part pour un an."
     },
     {
       "id": 121,
       "verb": "sortir",
       "phrase": "Margaux et Nick ____ ensemble.",
-      "answer": "sortent"
+      "answer": "sortent",
+      "fullPhrase": "Margaux et Nick sortent ensemble."
     },
     {
       "id": 122,
       "verb": "habiter",
       "phrase": "Elle ____ toute seule.",
-      "answer": "habite"
+      "answer": "habite",
+      "fullPhrase": "Elle habite toute seule."
     },
     {
       "id": 123,
       "verb": "sortir",
       "phrase": "Je ____ avec une fille de mon travail.",
-      "answer": "sors"
+      "answer": "sors",
+      "fullPhrase": "Je sors avec une fille de mon travail."
     },
     {
       "id": 124,
       "verb": "chercher",
       "phrase": "On ____ un appartement plus grand.",
-      "answer": "cherche"
+      "answer": "cherche",
+      "fullPhrase": "On cherche un appartement plus grand."
     },
     {
       "id": 125,
       "verb": "prendre",
       "phrase": "Je ____ des médicaments.",
-      "answer": "prends"
+      "answer": "prends",
+      "fullPhrase": "Je prends des médicaments."
     },
     {
       "id": 126,
       "verb": "gagner",
       "phrase": "Il ____ bien sa vie.",
-      "answer": "gagne"
+      "answer": "gagne",
+      "fullPhrase": "Il gagne bien sa vie."
     },
     {
       "id": 127,
       "verb": "habiter",
       "phrase": "J'____ au dernier étage.",
-      "answer": "habite"
+      "answer": "habite",
+      "fullPhrase": "J'habite au dernier étage."
     }
   ]
 }

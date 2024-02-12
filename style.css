@@ -59,6 +59,7 @@ main {
   flex-direction: column;
   margin: auto;
   gap: 10px;
+  position: relative;
 }
 
 .mainSection {
@@ -206,6 +207,7 @@ main {
   align-items: center;
   text-align: center;
   color: black;
+  font-weight: 600;
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: auto;
@@ -278,14 +280,39 @@ main {
   padding-block: 10px;
   padding-inline: 15px;
   color: var(--color-primary);
+  background-color: #edf2f4;
   border: solid 1px var(--color-primary);
   border-radius: 5px;
   min-width: 150px;
+  position: fixed;
+  z-index: 2;
+  right: 12%;
+  top: 20%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .conjugSection i {
   display: block;
   margin-bottom: 8px;
+  z-index: 3;
+}
+
+.popup-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+@keyframes colorChange {
+  from {
+    color: var(--color-primary);
+  }
+  to {
+    color: var(--color-tertiary);
+  }
+}
+
+.bulb-animation {
+  animation: colorChange 0.8s 2;
 }
 
 /* Styling the submit section */
