@@ -1176,12 +1176,12 @@
         "6": "ils/elles montent"
       },
       "pastcomp": {
-        "1": "j'ai monté",
-        "2": "tu as monté",
-        "3": "il/elle/on a monté",
-        "4": "nous avons monté",
-        "5": "vous avez monté",
-        "6": "ils/elles ont monté"
+        "1": "je suis monté(e)",
+        "2": "tu es monté(e)",
+        "3": "il/elle/on est monté(e)(s)",
+        "4": "nous sommes monté(e)s",
+        "5": "vous êtes monté(e)(s)",
+        "6": "ils/elles sont monté(e)s"
       },
       "pastimp": {
         "1": "je montais",
@@ -2371,6 +2371,58 @@
         "4": "nous téléphonions",
         "5": "vous téléphoniez",
         "6": "ils/elles téléphonaient"
+      }
+    },
+    "savoir": {
+      "present": {
+        "1": "je sais",
+        "2": "tu sais",
+        "3": "il/elle/on sait",
+        "4": "nous savons",
+        "5": "vous savez",
+        "6": "ils/elles savent"
+      },
+      "pastcomp": {
+        "1": "j'ai su",
+        "2": "tu as su",
+        "3": "il/elle/on a su",
+        "4": "nous avons su",
+        "5": "vous avez su",
+        "6": "ils/elles ont su"
+      },
+      "pastimp": {
+        "1": "je savais",
+        "2": "tu savais",
+        "3": "il/elle/on savait",
+        "4": "nous savions",
+        "5": "vous saviez",
+        "6": "ils/elles savaient"
+      }
+    },
+    "chanter": {
+      "present": {
+        "1": "je chante",
+        "2": "tu chantes",
+        "3": "il/elle/on chante",
+        "4": "nous chantons",
+        "5": "vous chantez",
+        "6": "ils/elles chantent"
+      },
+      "pastcomp": {
+        "1": "j'ai chanté",
+        "2": "tu as chanté",
+        "3": "il/elle/on a chanté",
+        "4": "nous avons chanté",
+        "5": "vous avez chanté",
+        "6": "ils/elles ont chanté"
+      },
+      "pastimp": {
+        "1": "je chantais",
+        "2": "tu chantais",
+        "3": "il/elle/on chantait",
+        "4": "nous chantions",
+        "5": "vous chantiez",
+        "6": "ils/elles chantaient"
       }
     }
   }

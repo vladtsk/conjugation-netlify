@@ -12,33 +12,36 @@ body {
   background-color: var(--color-secondary);
 }
 
-header {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-weight: bold;
+a {
+  color: inherit;
 }
 
-header h1 {
-  font-weight: 600;
-  font-size: 40px;
+header {
+  margin-bottom: 20px;
+  padding-block: 10px;
   color: var(--color-primary);
-}
-header h2 {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  /*margin-right: 80px;*/
   margin-top: 20px;
-  color: var(--color-primary);
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  margin-left: 8%;
 }
 
 nav {
-  display: flex;
-  gap: 30px;
-  justify-content: end;
+  margin-right: 10%;
+}
+
+.menu {
+  font-weight: bold;
+  /*display: flex;
+  justify-content: end; */
   align-items: center;
-  margin-right: 80px;
-  margin-top: 20px;
-  font-family: "Poppins", sans-serif;
 }
 
 nav button {
@@ -66,11 +69,11 @@ main {
   color: var(--color-secondary);
   background-color: var(--color-primary);
 
-  min-width: 40%;
+  min-width: 300px;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 80px;
   padding-right: 80px;
@@ -270,7 +273,7 @@ main {
   font-size: 0.6 em;
   text-align: center;
   font-style: italic;
-  margin-inline: 10px;
+  margin-inline: 30px;
 }
 
 /*The popup conjugation section*/
@@ -287,7 +290,7 @@ main {
   position: fixed;
   z-index: 2;
   right: 12%;
-  top: 20%;
+  top: 18%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -432,7 +435,7 @@ main {
 /* Responsive design */
 @media screen and (max-width: 1200px) {
   .mainSection {
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 30px;
     padding-right: 30px;
@@ -441,7 +444,7 @@ main {
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .mainSection {
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 10px;
     padding-right: 10px;

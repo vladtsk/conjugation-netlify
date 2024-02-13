@@ -134,7 +134,6 @@ async function showFirstPage() {
   // Adding an event listener on the start button
   startBtn.addEventListener("click", () => {
     launchApp(jsonData);
-    console.log(dbArray);
   });
 }
 
@@ -241,11 +240,14 @@ function launchApp(data) {
   const conjugSection = document.querySelector(".conjugSection");
   // The phrase section
   const phraseDisplay = document.querySelector(".phrase-section p");
+  // The input area
+  const inputArea = document.querySelector(".type-section input");
 
   nextBtn.addEventListener("click", () => {
     conjugSection.innerHTML = "";
     conjugSection.style.display = "none";
     phraseDisplay.style.color = "black";
+    inputArea.style.color = "black";
     displayNext(data);
   });
 
@@ -459,9 +461,6 @@ function displayVerb(data) {
 
   if (data && data.data.length > 0) {
     verbDisplay.textContent = data.data[k].verb;
-    console.log("phrasecount:", phraseCount);
-    console.log("phraseNb:", phraseNumber);
-    console.log(k);
   }
   phraseCount++;
 }
@@ -487,24 +486,20 @@ function displayTense(data) {
 
 // A function that reads the user input and compares it to the correct answer
 function checkAnswer(data) {
-  // Select the message section
-  const msgSection = document.querySelector(".msg-section");
   // Select "p" element for a message to display
   const msgArea = document.querySelector(".msg-section p");
   // Conjugation popup section
   const conjugSection = document.querySelector(".conjugSection");
   // Selecting the submit section
   const submitSection = document.querySelector(".submit-section");
-  // Select the submit button
-  const submitBtn = document.getElementById("submit-btn");
+
   // Selecting the input element
   const inputArea = document.querySelector(".type-section input");
   // Select the 'next' section
   const nextSection = document.querySelector(".next-section");
   // Select the finish section
   const finishSection = document.querySelector(".finish-section");
-  // Select the finish button
-  const finishBtn = document.getElementById("finish-btn");
+
   // The phrase display section
   const phraseDisplay = document.querySelector(".phrase-section p");
 
@@ -522,26 +517,30 @@ function checkAnswer(data) {
       msgArea.innerText = "Please type a valid verb";
       break;
     case data.data[k].answer:
-      phraseDisplay.textContent = data.data[k].fullPhrase;
-      msgArea.innerText = "Correct";
+      phraseDisplay.innerHTML = `<p><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase}</p>`;
+      phraseDisplay.style.color = "#228b22";
+      msgArea.innerText = "Correct!";
       score++;
       dbArray[k].result++;
 
       break;
     default:
       phraseDisplay.textContent = data.data[k].fullPhrase;
-      phraseDisplay.style.color = "#ef233c";
+      inputArea.style.color = "#ef233c";
       msgArea.innerText = `Incorrect. The correct answer is: "${data.data[k].answer}"`;
-      let popupMsg =
-        jsonConjug.verbs[`${data.data[k].verb}`][`${data.data[0].tenseShort}`];
-      let popupMsgValues = Object.values(popupMsg);
-      conjugSection.innerHTML = `<div class="popup-icons"><i class="fa-regular fa-lightbulb bulb-animation" 
+      if (jsonConjug) {
+        let popupMsg =
+          jsonConjug.verbs[`${data.data[k].verb}`][
+            `${data.data[0].tenseShort}`
+          ];
+        let popupMsgValues = Object.values(popupMsg);
+        conjugSection.innerHTML = `<div class="popup-icons"><i class="fa-regular fa-lightbulb bulb-animation" 
       style="color: #ef233c;"></i><i class="fa-solid fa-xmark popup-close"></i></div>`;
 
-      for (let i = 0; i < popupMsgValues.length; i++) {
-        conjugSection.innerHTML += `<p>${popupMsgValues[i]}</p>`;
+        for (let i = 0; i < popupMsgValues.length; i++) {
+          conjugSection.innerHTML += `<p>${popupMsgValues[i]}</p>`;
+        }
       }
-
       conjugSection.style.display = "block";
 
       dbArray[k].result = 0;

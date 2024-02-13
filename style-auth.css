@@ -1,60 +1,3 @@
-/*
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  --color-primary: #2b2d42;
-  --color-secondary: #edf2f4;
-  --color-tertiary: #ef233c;
-
-  background-color: var(--color-secondary);
-}
-
-nav {
-  display: flex;
-  gap: 30px;
-  justify-content: end;
-  align-items: center;
-  margin-right: 80px;
-  margin-top: 20px;
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-}
-
-nav button {
-  display: block;
-}
-
-nav a {
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: var(--color-tertiary);
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  margin-top: 60px;
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
-} */
-
-/*
-.secretSection {
-  display: flex;
-  flex-direction: column;
-  margin-top: 60px;
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  margin-inline: auto;
-  align-items: center; 
-} */
-
 form h1 {
   text-align: center;
   font-size: 28px;
@@ -70,9 +13,10 @@ form {
   background-color: var(--color-primary);
   color: var(--color-secondary);
   border-radius: 10px;
-  width: 30%;
+  min-width: 300px;
   margin-inline: auto;
-  padding: 40px;
+  padding-inline: 40px;
+  padding-block: 20px;
 }
 
 input {
@@ -155,4 +99,12 @@ input {
 #logOutButton:hover {
   background-color: var(--color-primary);
   color: var(--color-secondary);
+}
+
+/* Responsive design */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  form {
+    padding-inline: 25px;
+    padding-block: 10px;
+  }
 }
