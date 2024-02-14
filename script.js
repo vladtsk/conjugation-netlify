@@ -13,6 +13,14 @@ const database = getDatabase(app);
 
 let score = 0;
 
+// Creating arrays corresponding to 6 boxes allowing to implement a spaced repetition system
+let box1 = [];
+let box2 = [];
+let box3 = [];
+let box4 = [];
+let box5 = [];
+let box6 = [];
+
 // An index that will be generated randomly
 let k;
 
@@ -24,8 +32,8 @@ let indexArray = [];
 let phraseCount = 0;
 
 // Creating an array containig information for database about user performance
-//(how well they did on each tested phrase)
-let dbArray = [];
+
+// let dbArray = [];
 
 const responseConjug = await fetch("conjugation.json");
 const jsonConjug = await responseConjug.json();
@@ -154,7 +162,12 @@ function launchApp(data) {
           data.data[0].tense === "present (le présent de l'indicatif)" &&
           dbPresentRefData
         ) {
-          dbArray = dbPresentRefData;
+          box1 = dbPresentRefData.box1;
+          box2 = dbPresentRefData.box2;
+          box3 = dbPresentRefData.box3;
+          box4 = dbPresentRefData.box4;
+          box5 = dbPresentRefData.box5;
+          box6 = dbPresentRefData.box6;
         }
       });
 
@@ -164,7 +177,12 @@ function launchApp(data) {
           data.data[0].tense === "past (le passé composé)" &&
           dbPastcompRefData
         ) {
-          dbArray = dbPastcompRefData;
+          box1 = dbPastcompRefData.box1;
+          box2 = dbPastcompRefData.box2;
+          box3 = dbPastcompRefData.box3;
+          box4 = dbPastcompRefData.box4;
+          box5 = dbPastcompRefData.box5;
+          box6 = dbPastcompRefData.box6;
         }
       });
 
@@ -174,7 +192,12 @@ function launchApp(data) {
           data.data[0].tense === "imperfect past (l'imparfait)" &&
           dbPastimpRefData
         ) {
-          dbArray = dbPastimpRefData;
+          box1 = dbPastimpRefData.box1;
+          box2 = dbPastimpRefData.box2;
+          box3 = dbPastimpRefData.box3;
+          box4 = dbPastimpRefData.box4;
+          box5 = dbPastimpRefData.box5;
+          box6 = dbPastimpRefData.box6;
         }
       });
     } else {
@@ -182,29 +205,67 @@ function launchApp(data) {
     }
   });
 
-  // A function checking if any of the phrases has reached the result = 3 to stop showing them
-  function checkPhraseResults() {
-    for (let i = 0; i < dbArray.length; i++) {
-      if (dbArray[i].result >= 3) {
-        indexArray.push(dbArray[i].id - 1);
+  // A function selecting phrases (actually their IDs) not to show based on the scheduled repetition date (i.e. indices to exclude)
+  function checkRepetDate(box) {
+    const today = new Date();
+    for (let i = 0; i < box.length; i++) {
+      if (box[i].repetDate > today) {
+        indexArray.push(box[i].id - 1);
       }
     }
   }
 
-  // Initializing a database array depending on the selected tense (adding zeros for each element)
-  if (data && data.data.length > 0 && dbArray.length === 0) {
+  // Initializing the array box1 if there is no previous history (all the phrases go to box1)
+  if (
+    data &&
+    data.data.length > 0 &&
+    box1.length === 0 &&
+    box2.length === 0 &&
+    box3.length === 0 &&
+    box4.length === 0 &&
+    box5.length === 0 &&
+    box6.length === 0
+  ) {
     for (let i = 0; i < data.data.length; i++) {
-      let object = { id: i + 1, result: 0 };
-      dbArray.push(object);
+      let object = { id: i + 1, repetDate: 0 };
+      box1.push(object);
     }
   }
+
+  // Initializing all the other boxes
+  function initBox(box) {
+    if (box.length === 0) {
+      for (let i = 0; i < data.data.length; i++) {
+        let object = { id: 0, repetDate: 0 };
+        box.push(object);
+      }
+    }
+  }
+
+  initBox(box2);
+  initBox(box3);
+  initBox(box4);
+  initBox(box5);
+  initBox(box6);
 
   buildPageStructure(data);
   displayTense(data);
 
   setSpecialBtns();
 
-  checkPhraseResults();
+  checkRepetDate(box1);
+  checkRepetDate(box2);
+  checkRepetDate(box3);
+  checkRepetDate(box4);
+  checkRepetDate(box5);
+
+  //Excluding the elements in the Box6
+  for (let i = 0; i < box6.length; i++) {
+    if (box6[i].repetDate !== 0) {
+      indexArray.push(box6[i].id - 1);
+    }
+  }
+
   generateElements(data);
 
   function generateElements(data) {
@@ -262,19 +323,105 @@ function launchApp(data) {
 
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        const presentRef = ref(database, "users/" + user.uid + "/present");
-        const pastcompRef = ref(database, "users/" + user.uid + "/pastcomp");
-        const pastimpRef = ref(database, "users/" + user.uid + "/pastimp");
+        const presentRefBox1 = ref(
+          database,
+          "users/" + user.uid + "/present" + "/box1"
+        );
+        const presentRefBox2 = ref(
+          database,
+          "users/" + user.uid + "/present" + "/box2"
+        );
+        const presentRefBox3 = ref(
+          database,
+          "users/" + user.uid + "/present" + "/box3"
+        );
+        const presentRefBox4 = ref(
+          database,
+          "users/" + user.uid + "/present" + "/box4"
+        );
+        const presentRefBox5 = ref(
+          database,
+          "users/" + user.uid + "/present" + "/box5"
+        );
+        const presentRefBox6 = ref(
+          database,
+          "users/" + user.uid + "/present" + "/box6"
+        );
+
+        const pastcompRefBox1 = ref(
+          database,
+          "users/" + user.uid + "/pastcomp" + "/box1"
+        );
+        const pastcompRefBox2 = ref(
+          database,
+          "users/" + user.uid + "/pastcomp" + "/box2"
+        );
+        const pastcompRefBox3 = ref(
+          database,
+          "users/" + user.uid + "/pastcomp" + "/box3"
+        );
+        const pastcompRefBox4 = ref(
+          database,
+          "users/" + user.uid + "/pastcomp" + "/box4"
+        );
+        const pastcompRefBox5 = ref(
+          database,
+          "users/" + user.uid + "/pastcomp" + "/box5"
+        );
+        const pastcompRefBox6 = ref(
+          database,
+          "users/" + user.uid + "/pastcomp" + "/box6"
+        );
+
+        const pastimpRefBox1 = ref(
+          database,
+          "users/" + user.uid + "/pastimp" + "/box1"
+        );
+        const pastimpRefBox2 = ref(
+          database,
+          "users/" + user.uid + "/pastimp" + "/box2"
+        );
+        const pastimpRefBox3 = ref(
+          database,
+          "users/" + user.uid + "/pastimp" + "/box3"
+        );
+        const pastimpRefBox4 = ref(
+          database,
+          "users/" + user.uid + "/pastimp" + "/box4"
+        );
+        const pastimpRefBox5 = ref(
+          database,
+          "users/" + user.uid + "/pastimp" + "/box5"
+        );
+        const pastimpRefBox6 = ref(
+          database,
+          "users/" + user.uid + "/pastimp" + "/box6"
+        );
 
         switch (data.data[0].tense) {
           case "present (le présent de l'indicatif)":
-            set(presentRef, dbArray);
+            set(presentRefBox1, box1);
+            set(presentRefBox2, box2);
+            set(presentRefBox3, box3);
+            set(presentRefBox4, box4);
+            set(presentRefBox5, box5);
+            set(presentRefBox6, box6);
             break;
           case "past (le passé composé)":
-            set(pastcompRef, dbArray);
+            set(pastcompRefBox1, box1);
+            set(pastcompRefBox2, box2);
+            set(pastcompRefBox3, box3);
+            set(pastcompRefBox4, box4);
+            set(pastcompRefBox5, box5);
+            set(pastcompRefBox6, box6);
             break;
           case "imperfect past (l'imparfait)":
-            set(pastimpRef, dbArray);
+            set(pastimpRefBox1, box1);
+            set(pastimpRefBox2, box2);
+            set(pastimpRefBox3, box3);
+            set(pastimpRefBox4, box4);
+            set(pastimpRefBox5, box5);
+            set(pastimpRefBox6, box6);
             break;
         }
       } else {
@@ -521,7 +668,9 @@ function checkAnswer(data) {
       phraseDisplay.style.color = "#228b22";
       msgArea.innerText = "Correct!";
       score++;
-      dbArray[k].result++;
+      //dbArray[k].result++;
+      console.log(box2);
+      movePhraseForward();
 
       break;
     default:
@@ -544,6 +693,82 @@ function checkAnswer(data) {
       conjugSection.style.display = "block";
 
       dbArray[k].result = 0;
+  }
+
+  // A function that moves a phrase to the next box and changes the next repetition date
+  function movePhraseForward() {
+    const today = new Date();
+    const newRepetDate = new Date(today);
+    console.log(box5);
+
+    const foundElementBox5 = box5.find(({ id }) => id === k + 1);
+    if (foundElementBox5) {
+      const foundIndex = box5.indexOf(foundElementBox5);
+
+      // The phrase won't be shown again (we don't show phrases from box6)
+
+      foundElementBox5.repetDate = 0;
+
+      box6.push(foundElementBox5); // adding the element to box6
+
+      box5.splice(foundIndex, 1); // deleting it from box5
+    }
+
+    const foundElementBox4 = box4.find(({ id }) => id === k + 1);
+    if (foundElementBox4) {
+      const foundIndex = box4.indexOf(foundElementBox4);
+
+      newRepetDate.setDate(today.getDate() + 30); // The next repetition is in 30 days
+      console.log(newRepetDate.toDateString());
+
+      foundElementBox4.repetDate = newRepetDate;
+
+      box5.push(foundElementBox4); // adding the element to box5
+
+      box4.splice(foundIndex, 1); // deleting it from box4
+    }
+
+    const foundElementBox3 = box3.find(({ id }) => id === k + 1);
+    if (foundElementBox3) {
+      const foundIndex = box3.indexOf(foundElementBox3);
+
+      newRepetDate.setDate(today.getDate() + 14); // The next repetition is in 14 days
+      console.log(newRepetDate.toDateString());
+
+      foundElementBox3.repetDate = newRepetDate;
+
+      box4.push(foundElementBox3); // adding the element to box4
+
+      box3.splice(foundIndex, 1); // deleting it from box3
+    }
+
+    const foundElementBox2 = box2.find(({ id }) => id === k + 1);
+    if (foundElementBox2) {
+      const foundIndex = box2.indexOf(foundElementBox2);
+
+      newRepetDate.setDate(today.getDate() + 7); // The next repetition is in 7 days
+      console.log(newRepetDate.toDateString());
+
+      foundElementBox2.repetDate = newRepetDate;
+
+      box3.push(foundElementBox2); // adding the element to box3
+
+      box2.splice(foundIndex, 1); // deleting it from box2
+    }
+
+    const foundElementBox1 = box1.find(({ id }) => id === k + 1);
+    if (foundElementBox1) {
+      const foundIndex = box1.indexOf(foundElementBox1);
+
+      newRepetDate.setDate(today.getDate() + 3); // The next repetition is in 3 days
+      console.log(newRepetDate.toDateString());
+
+      foundElementBox1.repetDate = newRepetDate;
+
+      box2.push(foundElementBox1); // adding the element to box2
+
+      box1.splice(foundIndex, 1); // deleting it from box1
+    }
   }
 
   // Popup close icon
