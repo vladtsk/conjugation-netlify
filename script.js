@@ -162,12 +162,24 @@ function launchApp(data) {
           data.data[0].tense === "present (le présent de l'indicatif)" &&
           dbPresentRefData
         ) {
-          box1 = dbPresentRefData.box1;
-          box2 = dbPresentRefData.box2;
-          box3 = dbPresentRefData.box3;
-          box4 = dbPresentRefData.box4;
-          box5 = dbPresentRefData.box5;
-          box6 = dbPresentRefData.box6;
+          if (dbPresentRefData.box1) {
+            box1 = dbPresentRefData.box1;
+          }
+          if (dbPresentRefData.box2) {
+            box2 = dbPresentRefData.box2;
+          }
+          if (dbPresentRefData.box3) {
+            box3 = dbPresentRefData.box3;
+          }
+          if (dbPresentRefData.box4) {
+            box4 = dbPresentRefData.box4;
+          }
+          if (dbPresentRefData.box5) {
+            box5 = dbPresentRefData.box5;
+          }
+          if (dbPresentRefData.box6) {
+            box6 = dbPresentRefData.box6;
+          }
         }
       });
 
