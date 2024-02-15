@@ -390,17 +390,6 @@
         "6": "ils/elles se reposaient"
       }
     },
-    "coûter": {
-      "present": {
-        "3": "ça coûte"
-      },
-      "pastcomp": {
-        "3": "ça a coûté"
-      },
-      "pastimp": {
-        "3": "ça coûtait"
-      }
-    },
     "acheter": {
       "present": {
         "1": "j'achète",
@@ -2423,6 +2412,32 @@
         "4": "nous chantions",
         "5": "vous chantiez",
         "6": "ils/elles chantaient"
+      }
+    },
+    "coûter": {
+      "present": {
+        "1": "je coûte",
+        "2": "tu coûtes",
+        "3": "il/elle/on coûte",
+        "4": "nous coûtons",
+        "5": "vous coûtez",
+        "6": "ils/elles coûtent"
+      },
+      "pastcomp": {
+        "1": "j'ai coûté",
+        "2": "tu as coûté",
+        "3": "il/elle/on a coûté",
+        "4": "nous avons coûté",
+        "5": "vous avez coûté",
+        "6": "ils/elles ont coûté"
+      },
+      "pastimp": {
+        "1": "je coûtais",
+        "2": "tu coûtais",
+        "3": "il/elle/on coûtait",
+        "4": "nous coûtions",
+        "5": "vous coûtiez",
+        "6": "ils/elles coûtaient"
       }
     }
   }

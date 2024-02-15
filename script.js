@@ -156,62 +156,80 @@ function launchApp(data) {
       const pastcompRef = ref(database, "users/" + user.uid + "/pastcomp");
       const pastimpRef = ref(database, "users/" + user.uid + "/pastimp");
 
-      onValue(presentRef, (snapshot) => {
-        const dbPresentRefData = snapshot.val();
-        if (
-          data.data[0].tense === "present (le présent de l'indicatif)" &&
-          dbPresentRefData
-        ) {
-          if (dbPresentRefData.box1) {
-            box1 = dbPresentRefData.box1;
+      onValue(
+        presentRef,
+        (snapshot) => {
+          const dbPresentRefData = snapshot.val();
+          if (
+            data.data[0].tense === "present (le présent de l'indicatif)" &&
+            dbPresentRefData
+          ) {
+            if (dbPresentRefData.box1) {
+              box1 = dbPresentRefData.box1;
+            }
+            if (dbPresentRefData.box2) {
+              box2 = dbPresentRefData.box2;
+            }
+            if (dbPresentRefData.box3) {
+              box3 = dbPresentRefData.box3;
+            }
+            if (dbPresentRefData.box4) {
+              box4 = dbPresentRefData.box4;
+            }
+            if (dbPresentRefData.box5) {
+              box5 = dbPresentRefData.box5;
+            }
+            if (dbPresentRefData.box6) {
+              box6 = dbPresentRefData.box6;
+            }
           }
-          if (dbPresentRefData.box2) {
-            box2 = dbPresentRefData.box2;
-          }
-          if (dbPresentRefData.box3) {
-            box3 = dbPresentRefData.box3;
-          }
-          if (dbPresentRefData.box4) {
-            box4 = dbPresentRefData.box4;
-          }
-          if (dbPresentRefData.box5) {
-            box5 = dbPresentRefData.box5;
-          }
-          if (dbPresentRefData.box6) {
-            box6 = dbPresentRefData.box6;
-          }
+        },
+        {
+          onlyOnce: true,
         }
-      });
+      );
 
-      onValue(pastcompRef, (snapshot) => {
-        const dbPastcompRefData = snapshot.val();
-        if (
-          data.data[0].tense === "past (le passé composé)" &&
-          dbPastcompRefData
-        ) {
-          box1 = dbPastcompRefData.box1;
-          box2 = dbPastcompRefData.box2;
-          box3 = dbPastcompRefData.box3;
-          box4 = dbPastcompRefData.box4;
-          box5 = dbPastcompRefData.box5;
-          box6 = dbPastcompRefData.box6;
+      onValue(
+        pastcompRef,
+        (snapshot) => {
+          const dbPastcompRefData = snapshot.val();
+          if (
+            data.data[0].tense === "past (le passé composé)" &&
+            dbPastcompRefData
+          ) {
+            box1 = dbPastcompRefData.box1;
+            box2 = dbPastcompRefData.box2;
+            box3 = dbPastcompRefData.box3;
+            box4 = dbPastcompRefData.box4;
+            box5 = dbPastcompRefData.box5;
+            box6 = dbPastcompRefData.box6;
+          }
+        },
+        {
+          onlyOnce: true,
         }
-      });
+      );
 
-      onValue(pastimpRef, (snapshot) => {
-        const dbPastimpRefData = snapshot.val();
-        if (
-          data.data[0].tense === "imperfect past (l'imparfait)" &&
-          dbPastimpRefData
-        ) {
-          box1 = dbPastimpRefData.box1;
-          box2 = dbPastimpRefData.box2;
-          box3 = dbPastimpRefData.box3;
-          box4 = dbPastimpRefData.box4;
-          box5 = dbPastimpRefData.box5;
-          box6 = dbPastimpRefData.box6;
+      onValue(
+        pastimpRef,
+        (snapshot) => {
+          const dbPastimpRefData = snapshot.val();
+          if (
+            data.data[0].tense === "imperfect past (l'imparfait)" &&
+            dbPastimpRefData
+          ) {
+            box1 = dbPastimpRefData.box1;
+            box2 = dbPastimpRefData.box2;
+            box3 = dbPastimpRefData.box3;
+            box4 = dbPastimpRefData.box4;
+            box5 = dbPastimpRefData.box5;
+            box6 = dbPastimpRefData.box6;
+          }
+        },
+        {
+          onlyOnce: true,
         }
-      });
+      );
     } else {
       console.log("User is signed out");
     }
@@ -244,6 +262,7 @@ function launchApp(data) {
     }
   }
 
+  /*
   // Initializing all the other boxes
   function initBox(box) {
     if (box.length === 0) {
@@ -258,7 +277,7 @@ function launchApp(data) {
   initBox(box3);
   initBox(box4);
   initBox(box5);
-  initBox(box6);
+  initBox(box6); */
 
   buildPageStructure(data);
   displayTense(data);
@@ -287,7 +306,7 @@ function launchApp(data) {
       do {
         k = Math.floor(Math.random() * data.data.length);
       } while (indexArray.includes(k));
-
+      console.log(k);
       indexArray.push(k);
     } else {
       console.log("No more phrases to practise!");
@@ -335,7 +354,16 @@ function launchApp(data) {
 
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        const presentRefBox1 = ref(
+        const presentRef = ref(database, "users/" + user.uid + "/present");
+
+        addBoxToDb(box1, user);
+        addBoxToDb(box2, user);
+        addBoxToDb(box3, user);
+        addBoxToDb(box4, user);
+        addBoxToDb(box5, user);
+        addBoxToDb(box6, user);
+
+        /*const presentRefBox1 = ref(
           database,
           "users/" + user.uid + "/present" + "/box1"
         );
@@ -408,10 +436,11 @@ function launchApp(data) {
         const pastimpRefBox6 = ref(
           database,
           "users/" + user.uid + "/pastimp" + "/box6"
-        );
-
+        ); */
+        /*
         switch (data.data[0].tense) {
           case "present (le présent de l'indicatif)":
+            console.log(box2);
             set(presentRefBox1, box1);
             set(presentRefBox2, box2);
             set(presentRefBox3, box3);
@@ -435,12 +464,35 @@ function launchApp(data) {
             set(pastimpRefBox5, box5);
             set(pastimpRefBox6, box6);
             break;
-        }
+        } */
       } else {
         console.log("User is signed out");
       }
     });
   });
+
+  function addBoxToDb(box, user) {
+    let tense;
+
+    switch (data.data[0].tense) {
+      case "present (le présent de l'indicatif)":
+        tense = "/present/";
+        break;
+      case "past (le passé composé)":
+        tense = "/pastcomp/";
+        break;
+
+      case "imperfect past (l'imparfait)":
+        tense = "/pastimp/";
+        break;
+    }
+  }
+    /* Sould correct this issue!
+    let boxName = `"${box}"`;
+    let boxRef = ref(database, "users/" + user.uid + tense + boxName);
+    set(boxRef, box);
+  }
+  */
 
   // Display the next element
   function displayNext(data) {
@@ -711,7 +763,6 @@ function checkAnswer(data) {
   function movePhraseForward() {
     const today = new Date();
     const newRepetDate = new Date(today);
-    console.log(box5);
 
     const foundElementBox5 = box5.find(({ id }) => id === k + 1);
     if (foundElementBox5) {
@@ -733,7 +784,7 @@ function checkAnswer(data) {
       newRepetDate.setDate(today.getDate() + 30); // The next repetition is in 30 days
       console.log(newRepetDate.toDateString());
 
-      foundElementBox4.repetDate = newRepetDate;
+      foundElementBox4.repetDate = newRepetDate.getTime();
 
       box5.push(foundElementBox4); // adding the element to box5
 
@@ -747,7 +798,7 @@ function checkAnswer(data) {
       newRepetDate.setDate(today.getDate() + 14); // The next repetition is in 14 days
       console.log(newRepetDate.toDateString());
 
-      foundElementBox3.repetDate = newRepetDate;
+      foundElementBox3.repetDate = newRepetDate.getTime();
 
       box4.push(foundElementBox3); // adding the element to box4
 
@@ -761,7 +812,7 @@ function checkAnswer(data) {
       newRepetDate.setDate(today.getDate() + 7); // The next repetition is in 7 days
       console.log(newRepetDate.toDateString());
 
-      foundElementBox2.repetDate = newRepetDate;
+      foundElementBox2.repetDate = newRepetDate.getTime();
 
       box3.push(foundElementBox2); // adding the element to box3
 
@@ -773,9 +824,9 @@ function checkAnswer(data) {
       const foundIndex = box1.indexOf(foundElementBox1);
 
       newRepetDate.setDate(today.getDate() + 3); // The next repetition is in 3 days
-      console.log(newRepetDate.toDateString());
+      console.log(newRepetDate.getTime());
 
-      foundElementBox1.repetDate = newRepetDate;
+      foundElementBox1.repetDate = newRepetDate.getTime();
 
       box2.push(foundElementBox1); // adding the element to box2
 
