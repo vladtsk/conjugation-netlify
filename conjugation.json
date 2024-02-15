@@ -2439,6 +2439,32 @@
         "5": "vous coûtiez",
         "6": "ils/elles coûtaient"
       }
+    },
+    "s'occuper": {
+      "present": {
+        "1": "je m'occupe",
+        "2": "tu t'occupes",
+        "3": "il/elle/on s'occupe",
+        "4": "nous nous occupons",
+        "5": "vous vous occupez",
+        "6": "ils/elles s'occupent"
+      },
+      "pastcomp": {
+        "1": "je me suis occupé(e)",
+        "2": "tu t'es occupé(e)",
+        "3": "il/elle/on s'est occupé(e)",
+        "4": "nous nous sommes occupé(e)s",
+        "5": "vous vous êtes occupé(e)s",
+        "6": "ils/elles se sont occupé(e)s"
+      },
+      "pastimp": {
+        "1": "je m'occupais",
+        "2": "tu t'occupais",
+        "3": "il/elle/on s'occupait",
+        "4": "nous nous occupions",
+        "5": "vous vous occupiez",
+        "6": "ils/elles s'occupaient"
+      }
     }
   }
 }

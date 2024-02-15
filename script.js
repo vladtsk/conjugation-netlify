@@ -156,6 +156,95 @@ function launchApp(data) {
       const pastcompRef = ref(database, "users/" + user.uid + "/pastcomp");
       const pastimpRef = ref(database, "users/" + user.uid + "/pastimp");
 
+      if (data.data[0].tense === "present (le présent de l'indicatif)") {
+        readDataFromDb(presentRef);
+      }
+
+      if (data.data[0].tense === "past (le passé composé)") {
+        readDataFromDb(pastcompRef);
+      }
+
+      if (data.data[0].tense === "imperfect past (l'imparfait)") {
+        readDataFromDb(pastimpRef);
+      }
+
+      function readDataFromDb(timeRef) {
+        onValue(
+          timeRef,
+          (snapshot) => {
+            const dbRefData = snapshot.val();
+            if (dbRefData) {
+              if (dbRefData.box1) {
+                box1 = dbRefData.box1;
+              }
+              if (dbRefData.box2) {
+                box2 = dbRefData.box2;
+              }
+              if (dbRefData.box3) {
+                box3 = dbRefData.box3;
+              }
+              if (dbRefData.box4) {
+                box4 = dbRefData.box4;
+              }
+              if (dbRefData.box5) {
+                box5 = dbRefData.box5;
+              }
+              if (dbRefData.box6) {
+                box6 = dbRefData.box6;
+              }
+            }
+            checkRepetDate(box1);
+            checkRepetDate(box2);
+            checkRepetDate(box3);
+            checkRepetDate(box4);
+            checkRepetDate(box5);
+          },
+          {
+            onlyOnce: true,
+          }
+        );
+      }
+
+      /*
+      onValue(
+        presentRef,
+        (snapshot) => {
+          const dbPresentRefData = snapshot.val();
+          if (
+            data.data[0].tense === "present (le présent de l'indicatif)" &&
+            dbPresentRefData
+          ) {
+            if (dbPresentRefData.box1) {
+              box1 = dbPresentRefData.box1;
+            }
+            if (dbPresentRefData.box2) {
+              box2 = dbPresentRefData.box2;
+            }
+            if (dbPresentRefData.box3) {
+              box3 = dbPresentRefData.box3;
+            }
+            if (dbPresentRefData.box4) {
+              box4 = dbPresentRefData.box4;
+            }
+            if (dbPresentRefData.box5) {
+              box5 = dbPresentRefData.box5;
+            }
+            if (dbPresentRefData.box6) {
+              box6 = dbPresentRefData.box6;
+            }
+          }
+
+          checkRepetDate(box1);
+          checkRepetDate(box2);
+          checkRepetDate(box3);
+          checkRepetDate(box4);
+          checkRepetDate(box5);
+        },
+        {
+          onlyOnce: true,
+        }
+      );
+
       onValue(
         presentRef,
         (snapshot) => {
@@ -203,12 +292,24 @@ function launchApp(data) {
             data.data[0].tense === "past (le passé composé)" &&
             dbPastcompRefData
           ) {
-            box1 = dbPastcompRefData.box1;
-            box2 = dbPastcompRefData.box2;
-            box3 = dbPastcompRefData.box3;
-            box4 = dbPastcompRefData.box4;
-            box5 = dbPastcompRefData.box5;
-            box6 = dbPastcompRefData.box6;
+            if (dbPastcompRefData.box1) {
+              box1 = dbPastcompRefData.box1;
+            }
+            if (dbPastcompRefData.box2) {
+              box2 = dbPastcompRefData.box2;
+            }
+            if (dbPastcompRefData.box3) {
+              box3 = dbPastcompRefData.box3;
+            }
+            if (dbPastcompRefData.box4) {
+              box4 = dbPastcompRefData.box4;
+            }
+            if (dbPastcompRefData.box5) {
+              box5 = dbPastcompRefData.box5;
+            }
+            if (dbPastcompRefData.box6) {
+              box6 = dbPastcompRefData.box6;
+            }
           }
           checkRepetDate(box1);
           checkRepetDate(box2);
@@ -229,12 +330,27 @@ function launchApp(data) {
             data.data[0].tense === "imperfect past (l'imparfait)" &&
             dbPastimpRefData
           ) {
-            box1 = dbPastimpRefData.box1;
-            box2 = dbPastimpRefData.box2;
-            box3 = dbPastimpRefData.box3;
-            box4 = dbPastimpRefData.box4;
-            box5 = dbPastimpRefData.box5;
-            box6 = dbPastimpRefData.box6;
+            if (dbPastimpRefData.box1) {
+              box1 = dbPastimpRefData.box1;
+            }
+            if (dbPastimpRefData.box2) {
+              box2 = dbPastimpRefData.box2;
+            }
+            if (dbPastimpRefData.box3) {
+              box3 = dbPastimpRefData.box3;
+            }
+            if (dbPastimpRefData.box4) {
+              box4 = dbPastimpRefData.box4;
+            }
+            if (dbPastimpRefData.box4) {
+              box4 = dbPastimpRefData.box4;
+            }
+            if (dbPastimpRefData.box5) {
+              box5 = dbPastimpRefData.box5;
+            }
+            if (dbPastimpRefData.box6) {
+              box6 = dbPastimpRefData.box6;
+            }
           }
           checkRepetDate(box1);
           checkRepetDate(box2);
@@ -246,6 +362,8 @@ function launchApp(data) {
           onlyOnce: true,
         }
       );
+
+      */
     } else {
       console.log("User is signed out");
     }
@@ -316,6 +434,7 @@ function launchApp(data) {
 
   submitBtn.addEventListener("click", () => {
     checkAnswer(data);
+    console.log(box2);
   });
 
   // Adding an event listener to display the next phrase to test
@@ -851,7 +970,12 @@ function showResultPage() {
     phraseNumber = 5;
     phraseCount = 0;
     indexArray = [];
-    dbArray = [];
+    let box1 = [];
+    let box2 = [];
+    let box3 = [];
+    let box4 = [];
+    let box5 = [];
+    let box6 = [];
     showFirstPage();
   });
 }
