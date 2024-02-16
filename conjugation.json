@@ -2465,6 +2465,58 @@
         "5": "vous vous occupiez",
         "6": "ils/elles s'occupaient"
       }
+    },
+    "laver": {
+      "present": {
+        "1": "je lave",
+        "2": "tu laves",
+        "3": "il/elle/on lave",
+        "4": "nous lavons",
+        "5": "vous lavez",
+        "6": "ils/elles lavent"
+      },
+      "pastcomp": {
+        "1": "j'ai lavé",
+        "2": "tu as lavé",
+        "3": "il/elle/on a lavé",
+        "4": "nous avons lavé",
+        "5": "vous avez lavé",
+        "6": "ils/elles ont lavé"
+      },
+      "pastimp": {
+        "1": "je lavais",
+        "2": "tu lavais",
+        "3": "il/elle/on lavait",
+        "4": "nous lavions",
+        "5": "vous laviez",
+        "6": "ils/elles lavaient"
+      }
+    },
+    "revenir": {
+      "present": {
+        "1": "je reviens",
+        "2": "tu reviens",
+        "3": "il/elle/on revient",
+        "4": "nous revenons",
+        "5": "vous revenez",
+        "6": "ils/elles reviennent"
+      },
+      "pastcomp": {
+        "1": "je suis revenu(e)",
+        "2": "tu es revenu(e)",
+        "3": "il/elle/on est revenu(e)(s)",
+        "4": "nous sommes revenu(e)s",
+        "5": "vous êtes revenu(e)(s)",
+        "6": "ils/elles sont revenu(e)s"
+      },
+      "pastimp": {
+        "1": "je revenais",
+        "2": "tu revenais",
+        "3": "il/elle/on revenait",
+        "4": "nous revenions",
+        "5": "vous reveniez",
+        "6": "ils/elles revenaient"
+      }
     }
   }
 }

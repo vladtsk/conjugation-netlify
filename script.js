@@ -149,6 +149,14 @@ showFirstPage();
 
 // A function launching the app
 function launchApp(data) {
+  // Making sure all the boxes are empty (to avoid errors when relaunching the app)
+  box1 = [];
+  box2 = [];
+  box3 = [];
+  box4 = [];
+  box5 = [];
+  box6 = [];
+
   // Getting information from the database about the user's performance and copying the database information to dbArray
   onAuthStateChanged(auth, (user) => {
     if (user) {
@@ -204,166 +212,6 @@ function launchApp(data) {
           }
         );
       }
-
-      /*
-      onValue(
-        presentRef,
-        (snapshot) => {
-          const dbPresentRefData = snapshot.val();
-          if (
-            data.data[0].tense === "present (le présent de l'indicatif)" &&
-            dbPresentRefData
-          ) {
-            if (dbPresentRefData.box1) {
-              box1 = dbPresentRefData.box1;
-            }
-            if (dbPresentRefData.box2) {
-              box2 = dbPresentRefData.box2;
-            }
-            if (dbPresentRefData.box3) {
-              box3 = dbPresentRefData.box3;
-            }
-            if (dbPresentRefData.box4) {
-              box4 = dbPresentRefData.box4;
-            }
-            if (dbPresentRefData.box5) {
-              box5 = dbPresentRefData.box5;
-            }
-            if (dbPresentRefData.box6) {
-              box6 = dbPresentRefData.box6;
-            }
-          }
-
-          checkRepetDate(box1);
-          checkRepetDate(box2);
-          checkRepetDate(box3);
-          checkRepetDate(box4);
-          checkRepetDate(box5);
-        },
-        {
-          onlyOnce: true,
-        }
-      );
-
-      onValue(
-        presentRef,
-        (snapshot) => {
-          const dbPresentRefData = snapshot.val();
-          if (
-            data.data[0].tense === "present (le présent de l'indicatif)" &&
-            dbPresentRefData
-          ) {
-            if (dbPresentRefData.box1) {
-              box1 = dbPresentRefData.box1;
-            }
-            if (dbPresentRefData.box2) {
-              box2 = dbPresentRefData.box2;
-            }
-            if (dbPresentRefData.box3) {
-              box3 = dbPresentRefData.box3;
-            }
-            if (dbPresentRefData.box4) {
-              box4 = dbPresentRefData.box4;
-            }
-            if (dbPresentRefData.box5) {
-              box5 = dbPresentRefData.box5;
-            }
-            if (dbPresentRefData.box6) {
-              box6 = dbPresentRefData.box6;
-            }
-          }
-
-          checkRepetDate(box1);
-          checkRepetDate(box2);
-          checkRepetDate(box3);
-          checkRepetDate(box4);
-          checkRepetDate(box5);
-        },
-        {
-          onlyOnce: true,
-        }
-      );
-
-      onValue(
-        pastcompRef,
-        (snapshot) => {
-          const dbPastcompRefData = snapshot.val();
-          if (
-            data.data[0].tense === "past (le passé composé)" &&
-            dbPastcompRefData
-          ) {
-            if (dbPastcompRefData.box1) {
-              box1 = dbPastcompRefData.box1;
-            }
-            if (dbPastcompRefData.box2) {
-              box2 = dbPastcompRefData.box2;
-            }
-            if (dbPastcompRefData.box3) {
-              box3 = dbPastcompRefData.box3;
-            }
-            if (dbPastcompRefData.box4) {
-              box4 = dbPastcompRefData.box4;
-            }
-            if (dbPastcompRefData.box5) {
-              box5 = dbPastcompRefData.box5;
-            }
-            if (dbPastcompRefData.box6) {
-              box6 = dbPastcompRefData.box6;
-            }
-          }
-          checkRepetDate(box1);
-          checkRepetDate(box2);
-          checkRepetDate(box3);
-          checkRepetDate(box4);
-          checkRepetDate(box5);
-        },
-        {
-          onlyOnce: true,
-        }
-      );
-
-      onValue(
-        pastimpRef,
-        (snapshot) => {
-          const dbPastimpRefData = snapshot.val();
-          if (
-            data.data[0].tense === "imperfect past (l'imparfait)" &&
-            dbPastimpRefData
-          ) {
-            if (dbPastimpRefData.box1) {
-              box1 = dbPastimpRefData.box1;
-            }
-            if (dbPastimpRefData.box2) {
-              box2 = dbPastimpRefData.box2;
-            }
-            if (dbPastimpRefData.box3) {
-              box3 = dbPastimpRefData.box3;
-            }
-            if (dbPastimpRefData.box4) {
-              box4 = dbPastimpRefData.box4;
-            }
-            if (dbPastimpRefData.box4) {
-              box4 = dbPastimpRefData.box4;
-            }
-            if (dbPastimpRefData.box5) {
-              box5 = dbPastimpRefData.box5;
-            }
-            if (dbPastimpRefData.box6) {
-              box6 = dbPastimpRefData.box6;
-            }
-          }
-          checkRepetDate(box1);
-          checkRepetDate(box2);
-          checkRepetDate(box3);
-          checkRepetDate(box4);
-          checkRepetDate(box5);
-        },
-        {
-          onlyOnce: true,
-        }
-      );
-
-      */
     } else {
       console.log("User is signed out");
     }
@@ -748,11 +596,12 @@ function checkAnswer(data) {
       phraseDisplay.textContent = data.data[k].fullPhrase;
       inputArea.style.color = "#ef233c";
       msgArea.innerText = `Incorrect. The correct answer is: "${data.data[k].answer}"`;
-      if (jsonConjug) {
+      try {
         let popupMsg =
           jsonConjug.verbs[`${data.data[k].verb}`][
             `${data.data[0].tenseShort}`
           ];
+
         let popupMsgValues = Object.values(popupMsg);
         conjugSection.innerHTML = `<div class="popup-icons"><i class="fa-regular fa-lightbulb bulb-animation" 
       style="color: #ef233c;"></i><i class="fa-solid fa-xmark popup-close"></i></div>`;
@@ -760,8 +609,10 @@ function checkAnswer(data) {
         for (let i = 0; i < popupMsgValues.length; i++) {
           conjugSection.innerHTML += `<p>${popupMsgValues[i]}</p>`;
         }
+        conjugSection.style.display = "block";
+      } catch {
+        console.log("Verb " + data.data[k].verb + " is not found in database ");
       }
-      conjugSection.style.display = "block";
 
       movePhraseBackward();
   }
@@ -970,12 +821,6 @@ function showResultPage() {
     phraseNumber = 5;
     phraseCount = 0;
     indexArray = [];
-    let box1 = [];
-    let box2 = [];
-    let box3 = [];
-    let box4 = [];
-    let box5 = [];
-    let box6 = [];
     showFirstPage();
   });
 }

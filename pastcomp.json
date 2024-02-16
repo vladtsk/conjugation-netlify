@@ -681,7 +681,7 @@
       "phrase": "Ça ____ très bien ____.",
       "answer": "s'est passé",
       "aux": "être",
-      "fullPhrase": "Ça s'est passé très bien."
+      "fullPhrase": "Ça s'est très bien passé."
     },
     {
       "id": 94,
@@ -694,10 +694,10 @@
     {
       "id": 95,
       "verb": "se lever",
-      "phrase": "Je (fem.) ____ tard tous les jours.",
+      "phrase": "Je (fem.) ____ tard.",
       "answer": "me suis levée",
       "aux": "être",
-      "fullPhrase": "Je me suis levée tard tous les jours."
+      "fullPhrase": "Je me suis levée tard."
     },
     {
       "id": 96,
@@ -777,7 +777,7 @@
       "phrase": "Ça ____ bien ____ ?",
       "answer": "s'est passé",
       "aux": "être",
-      "fullPhrase": "Ça s'est passé bien ?"
+      "fullPhrase": "Ça s'est bien passé ?"
     },
     {
       "id": 106,
