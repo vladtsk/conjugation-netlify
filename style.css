@@ -410,6 +410,11 @@ main {
   display: block;
 }
 
+.fa-volume-low {
+  color: var(--color-primary);
+  font-size: 1.2em;
+}
+
 /* Styling the restart section */
 .restart {
   display: flex;

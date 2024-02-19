@@ -8,7 +8,8 @@ import {
   onAuthStateChanged,
 } from "./config.js";
 
-/*from "https://cdn.jsdelivr.net/npm/easy-speech/+esm";
+/*
+import easySpeech from "https://cdn.jsdelivr.net/npm/easy-speech/+esm";
 
 console.log(easySpeech.detect());
 
@@ -18,7 +19,8 @@ easySpeech
     interval: 250,
   })
   .then(() => console.debug("load complete"))
-  .catch((e) => console.error(e)); */
+  .catch((e) => console.error(e));
+  */
 
 const auth = getAuth(app);
 const database = getDatabase(app);
@@ -586,15 +588,6 @@ function checkAnswer(data) {
   const inputText = inputArea.value;
   let displaySection;
 
-  let speech = new SpeechSynthesisUtterance();
-  speech.lang = "fr-FR";
-  speech.volume = 1;
-  speech.rate = 1;
-  /*
-  speech.text = "Bonjour, oui et toi ?";
-  speechSynthesis.speak(speech);
-  console.log(speech); */
-
   if (phraseCount < phraseNumber) {
     displaySection = nextSection;
   } else {
@@ -606,11 +599,19 @@ function checkAnswer(data) {
       msgArea.innerText = "Please type a valid verb";
       break;
     case data.data[k].answer:
-      phraseDisplay.innerHTML = `<p><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase}</p>`;
+      phraseDisplay.innerHTML = `<p><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low"></i></p>`;
       phraseDisplay.style.color = "#228b22";
       msgArea.innerText = "Correct!";
-      speech.text = `"${data.data[k].fullPhrase}"`;
-      speechSynthesis.speak(speech);
+
+      // The speaker icon
+      const speaker = document.querySelector(".fa-volume-low");
+
+      if (speaker) {
+        speaker.addEventListener("click", () => {
+          playAudio(`"${data.data[k].fullPhrase}"`);
+        });
+      }
+
       //pronouncePhrase(`"${data.data[k].fullPhrase}"`);
       score++;
       movePhraseForward();
@@ -641,142 +642,14 @@ function checkAnswer(data) {
       movePhraseBackward();
   }
 
-  // A function that moves a phrase to the next box and changes the next repetition date
-  function movePhraseForward() {
-    const today = new Date();
-    const newRepetDate = new Date(today);
-
-    const foundElementBox5 = box5.find(({ id }) => id === k + 1);
-    if (foundElementBox5) {
-      const foundIndex = box5.indexOf(foundElementBox5);
-
-      // The phrase won't be shown again (we don't show phrases from box6)
-
-      foundElementBox5.repetDate = 0;
-
-      box6.push(foundElementBox5); // adding the element to box6
-
-      box5.splice(foundIndex, 1); // deleting it from box5
-    }
-
-    const foundElementBox4 = box4.find(({ id }) => id === k + 1);
-    if (foundElementBox4) {
-      const foundIndex = box4.indexOf(foundElementBox4);
-
-      newRepetDate.setDate(today.getDate() + 30); // The next repetition is in 30 days
-      console.log(newRepetDate.toDateString());
-
-      foundElementBox4.repetDate = newRepetDate.getTime();
-
-      box5.push(foundElementBox4); // adding the element to box5
-
-      box4.splice(foundIndex, 1); // deleting it from box4
-    }
-
-    const foundElementBox3 = box3.find(({ id }) => id === k + 1);
-    if (foundElementBox3) {
-      const foundIndex = box3.indexOf(foundElementBox3);
-
-      newRepetDate.setDate(today.getDate() + 14); // The next repetition is in 14 days
-      console.log(newRepetDate.toDateString());
-
-      foundElementBox3.repetDate = newRepetDate.getTime();
-
-      box4.push(foundElementBox3); // adding the element to box4
-
-      box3.splice(foundIndex, 1); // deleting it from box3
-    }
-
-    const foundElementBox2 = box2.find(({ id }) => id === k + 1);
-    if (foundElementBox2) {
-      const foundIndex = box2.indexOf(foundElementBox2);
-
-      newRepetDate.setDate(today.getDate() + 7); // The next repetition is in 7 days
-      console.log(newRepetDate.toDateString());
-
-      foundElementBox2.repetDate = newRepetDate.getTime();
-
-      box3.push(foundElementBox2); // adding the element to box3
-
-      box2.splice(foundIndex, 1); // deleting it from box2
-    }
-
-    const foundElementBox1 = box1.find(({ id }) => id === k + 1);
-    if (foundElementBox1) {
-      const foundIndex = box1.indexOf(foundElementBox1);
-
-      newRepetDate.setDate(today.getDate() + 3); // The next repetition is in 3 days
-      console.log(newRepetDate.toDateString());
-
-      foundElementBox1.repetDate = newRepetDate.getTime();
-
-      box2.push(foundElementBox1); // adding the element to box2
-
-      box1.splice(foundIndex, 1); // deleting it from box1
-    }
-  }
-
-  // A function that moves a phrase to a lower box (when a user makes a mistake) and changes the next repetition date
-  function movePhraseBackward() {
-    const today = new Date();
-    const newRepetDate = new Date(today);
-
-    newRepetDate.setDate(today.getDate() + 1); // The next repetition is in 1 day for all the elements in all boxes
-    console.log(newRepetDate.getTime());
-
-    const foundElementBox1 = box1.find(({ id }) => id === k + 1);
-    if (foundElementBox1) {
-      const foundIndex = box1.indexOf(foundElementBox1);
-
-      foundElementBox1.repetDate = newRepetDate.getTime();
-
-      // The element stays in the same box
-    }
-
-    const foundElementBox2 = box2.find(({ id }) => id === k + 1);
-    if (foundElementBox2) {
-      const foundIndex = box2.indexOf(foundElementBox2);
-
-      foundElementBox2.repetDate = newRepetDate.getTime();
-
-      box1.push(foundElementBox2); // adding the element to box1
-
-      box2.splice(foundIndex, 1); // deleting it from box2
-    }
-
-    const foundElementBox3 = box3.find(({ id }) => id === k + 1);
-    if (foundElementBox3) {
-      const foundIndex = box3.indexOf(foundElementBox3);
-
-      foundElementBox3.repetDate = newRepetDate.getTime();
-
-      box2.push(foundElementBox3); // adding the element to box2
-
-      box3.splice(foundIndex, 1); // deleting it from box3
-    }
-
-    const foundElementBox4 = box4.find(({ id }) => id === k + 1);
-    if (foundElementBox4) {
-      const foundIndex = box4.indexOf(foundElementBox4);
-
-      foundElementBox4.repetDate = newRepetDate.getTime();
-
-      box2.push(foundElementBox4); // adding the element to box2 (it goes 2 boxes lower)
-
-      box4.splice(foundIndex, 1); // deleting it from box4
-    }
-
-    const foundElementBox5 = box5.find(({ id }) => id === k + 1);
-    if (foundElementBox5) {
-      const foundIndex = box5.indexOf(foundElementBox5);
-
-      foundElementBox5.repetDate = newRepetDate.getTime();
-
-      box3.push(foundElementBox5); // adding the element to box3 (it goes 2 boxes lower)
-
-      box5.splice(foundIndex, 1); // deleting it from box5
-    }
-    console.log(box1);
+  // A function playing an audio
+  function playAudio(text) {
+    let speech = new SpeechSynthesisUtterance();
+    speech.lang = "fr-FR";
+    speech.volume = 1;
+    speech.rate = 1;
+    speech.text = text;
+    speechSynthesis.speak(speech);
   }
 
   // Popup close icon
@@ -807,16 +680,156 @@ function setSpecialBtns() {
   });
 }
 
-// A function reading the text
-/*
+// A function that moves a phrase to the next box and changes the next repetition date
+function movePhraseForward() {
+  const today = new Date();
+  const newRepetDate = new Date(today);
+
+  const foundElementBox5 = box5.find(({ id }) => id === k + 1);
+  if (foundElementBox5) {
+    const foundIndex = box5.indexOf(foundElementBox5);
+
+    // The phrase won't be shown again (we don't show phrases from box6)
+
+    foundElementBox5.repetDate = 0;
+
+    box6.push(foundElementBox5); // adding the element to box6
+
+    box5.splice(foundIndex, 1); // deleting it from box5
+  }
+
+  const foundElementBox4 = box4.find(({ id }) => id === k + 1);
+  if (foundElementBox4) {
+    const foundIndex = box4.indexOf(foundElementBox4);
+
+    newRepetDate.setDate(today.getDate() + 30); // The next repetition is in 30 days
+    console.log(newRepetDate.toDateString());
+
+    foundElementBox4.repetDate = newRepetDate.getTime();
+
+    box5.push(foundElementBox4); // adding the element to box5
+
+    box4.splice(foundIndex, 1); // deleting it from box4
+  }
+
+  const foundElementBox3 = box3.find(({ id }) => id === k + 1);
+  if (foundElementBox3) {
+    const foundIndex = box3.indexOf(foundElementBox3);
+
+    newRepetDate.setDate(today.getDate() + 14); // The next repetition is in 14 days
+    console.log(newRepetDate.toDateString());
+
+    foundElementBox3.repetDate = newRepetDate.getTime();
+
+    box4.push(foundElementBox3); // adding the element to box4
+
+    box3.splice(foundIndex, 1); // deleting it from box3
+  }
+
+  const foundElementBox2 = box2.find(({ id }) => id === k + 1);
+  if (foundElementBox2) {
+    const foundIndex = box2.indexOf(foundElementBox2);
+
+    newRepetDate.setDate(today.getDate() + 7); // The next repetition is in 7 days
+    console.log(newRepetDate.toDateString());
+
+    foundElementBox2.repetDate = newRepetDate.getTime();
+
+    box3.push(foundElementBox2); // adding the element to box3
+
+    box2.splice(foundIndex, 1); // deleting it from box2
+  }
+
+  const foundElementBox1 = box1.find(({ id }) => id === k + 1);
+  if (foundElementBox1) {
+    const foundIndex = box1.indexOf(foundElementBox1);
+
+    newRepetDate.setDate(today.getDate() + 3); // The next repetition is in 3 days
+    console.log(newRepetDate.toDateString());
+
+    foundElementBox1.repetDate = newRepetDate.getTime();
+
+    box2.push(foundElementBox1); // adding the element to box2
+
+    box1.splice(foundIndex, 1); // deleting it from box1
+  }
+}
+
+// A function that moves a phrase to a lower box (when a user makes a mistake) and changes the next repetition date
+function movePhraseBackward() {
+  const today = new Date();
+  const newRepetDate = new Date(today);
+
+  newRepetDate.setDate(today.getDate() + 1); // The next repetition is in 1 day for all the elements in all boxes
+  console.log(newRepetDate.getTime());
+
+  const foundElementBox1 = box1.find(({ id }) => id === k + 1);
+  if (foundElementBox1) {
+    const foundIndex = box1.indexOf(foundElementBox1);
+
+    foundElementBox1.repetDate = newRepetDate.getTime();
+
+    // The element stays in the same box
+  }
+
+  const foundElementBox2 = box2.find(({ id }) => id === k + 1);
+  if (foundElementBox2) {
+    const foundIndex = box2.indexOf(foundElementBox2);
+
+    foundElementBox2.repetDate = newRepetDate.getTime();
+
+    box1.push(foundElementBox2); // adding the element to box1
+
+    box2.splice(foundIndex, 1); // deleting it from box2
+  }
+
+  const foundElementBox3 = box3.find(({ id }) => id === k + 1);
+  if (foundElementBox3) {
+    const foundIndex = box3.indexOf(foundElementBox3);
+
+    foundElementBox3.repetDate = newRepetDate.getTime();
+
+    box2.push(foundElementBox3); // adding the element to box2
+
+    box3.splice(foundIndex, 1); // deleting it from box3
+  }
+
+  const foundElementBox4 = box4.find(({ id }) => id === k + 1);
+  if (foundElementBox4) {
+    const foundIndex = box4.indexOf(foundElementBox4);
+
+    foundElementBox4.repetDate = newRepetDate.getTime();
+
+    box2.push(foundElementBox4); // adding the element to box2 (it goes 2 boxes lower)
+
+    box4.splice(foundIndex, 1); // deleting it from box4
+  }
+
+  const foundElementBox5 = box5.find(({ id }) => id === k + 1);
+  if (foundElementBox5) {
+    const foundIndex = box5.indexOf(foundElementBox5);
+
+    foundElementBox5.repetDate = newRepetDate.getTime();
+
+    box3.push(foundElementBox5); // adding the element to box3 (it goes 2 boxes lower)
+
+    box5.splice(foundIndex, 1); // deleting it from box5
+  }
+  console.log(box1);
+}
+
+/* A function reading the text
+const voice = easySpeech.voices()[9];
+
 async function pronouncePhrase(phrase) {
   await easySpeech.init({ maxTimeout: 5000, interval: 250 });
   try {
     await easySpeech.speak({
       text: phrase,
       pitch: 1,
-      language: "fr-FR",
+      language: "fr(-|_)FR",
       rate: 1,
+      voice: voice,
       volume: 1,
 
       boundary: (e) => console.debug("boundary reached"),
