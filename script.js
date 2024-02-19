@@ -8,6 +8,18 @@ import {
   onAuthStateChanged,
 } from "./config.js";
 
+/*from "https://cdn.jsdelivr.net/npm/easy-speech/+esm";
+
+console.log(easySpeech.detect());
+
+easySpeech
+  .init({
+    maxTimeout: 5000,
+    interval: 250,
+  })
+  .then(() => console.debug("load complete"))
+  .catch((e) => console.error(e)); */
+
 const auth = getAuth(app);
 const database = getDatabase(app);
 
@@ -574,6 +586,15 @@ function checkAnswer(data) {
   const inputText = inputArea.value;
   let displaySection;
 
+  let speech = new SpeechSynthesisUtterance();
+  speech.lang = "fr-FR";
+  speech.volume = 1;
+  speech.rate = 1;
+  /*
+  speech.text = "Bonjour, oui et toi ?";
+  speechSynthesis.speak(speech);
+  console.log(speech); */
+
   if (phraseCount < phraseNumber) {
     displaySection = nextSection;
   } else {
@@ -588,6 +609,9 @@ function checkAnswer(data) {
       phraseDisplay.innerHTML = `<p><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase}</p>`;
       phraseDisplay.style.color = "#228b22";
       msgArea.innerText = "Correct!";
+      speech.text = `"${data.data[k].fullPhrase}"`;
+      speechSynthesis.speak(speech);
+      //pronouncePhrase(`"${data.data[k].fullPhrase}"`);
       score++;
       movePhraseForward();
 
@@ -752,6 +776,7 @@ function checkAnswer(data) {
 
       box5.splice(foundIndex, 1); // deleting it from box5
     }
+    console.log(box1);
   }
 
   // Popup close icon
@@ -781,6 +806,25 @@ function setSpecialBtns() {
     });
   });
 }
+
+// A function reading the text
+/*
+async function pronouncePhrase(phrase) {
+  await easySpeech.init({ maxTimeout: 5000, interval: 250 });
+  try {
+    await easySpeech.speak({
+      text: phrase,
+      pitch: 1,
+      language: "fr-FR",
+      rate: 1,
+      volume: 1,
+
+      boundary: (e) => console.debug("boundary reached"),
+    });
+  } catch (error) {
+    console.error(error);
+  }
+} */
 
 function showResultPage() {
   const mainSection = document.querySelector(".mainSection");
