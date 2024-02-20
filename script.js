@@ -45,7 +45,6 @@ const jsonConjug = await responseConjug.json();
 export async function launchFirstPage() {
   showFirstPage(); // Building the first page structure
   phraseNumber = 5; // Making sure the phrase number is back to its default value
-  console.log(phraseNumber);
 
   // Fetching the present tense data by default
 
@@ -57,22 +56,26 @@ export async function launchFirstPage() {
   const startBtn = document.getElementById("start-btn");
 
   // Adding an event listener in case the user changes the tense
-
-  selectElement.addEventListener("change", async () => {
-    response = await fetch(`${selectElement.value}.json`);
-    jsonData = await response.json();
-  });
+  if (selectElement) {
+    selectElement.addEventListener("change", async () => {
+      response = await fetch(`${selectElement.value}.json`);
+      jsonData = await response.json();
+    });
+  }
 
   // Customer selecting the number of phrases
-  selectPhrNb.addEventListener("change", () => {
-    phraseNumber = selectPhrNb.value;
-  });
+  if (selectPhrNb) {
+    selectPhrNb.addEventListener("change", () => {
+      phraseNumber = selectPhrNb.value;
+    });
+  }
 
   // Adding an event listener on the start button
-  startBtn.addEventListener("click", () => {
-    launchApp(jsonData);
-    console.log(phraseNumber);
-  });
+  if (startBtn) {
+    startBtn.addEventListener("click", () => {
+      launchApp(jsonData);
+    });
+  }
 }
 
 launchFirstPage();
