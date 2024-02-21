@@ -48,9 +48,9 @@
     {
       "id": 7,
       "verb": "dire",
-      "phrase": "Comment on ____ en français... ? ",
+      "phrase": "Comment on ____ en français... ?",
       "answer": "dit",
-      "fullPhrase": "Comment on dit en français... ?"
+      "fullPhrase": "Comment on dit en français ?"
     },
     {
       "id": 8,

@@ -10,22 +10,29 @@ import {
   signOut,
 } from "./config.js";
 
+import { generateSignUpForm, generateLogInForm } from "./pagesetup.js";
+
+import { launchFirstPage } from "./script.js";
+
 const auth = getAuth(app);
 const database = getDatabase(app);
+
+generateLogInForm();
+generateSignUpForm();
 
 const signUpForm = document.querySelector(".signUpForm");
 const logInForm = document.querySelector(".logInForm");
 const signUpButton = document.getElementById("signUpButton");
 const logInButton = document.getElementById("logInButton");
+const logInButtonMenu = document.getElementById("logInButtonMenu");
 const logOutButton = document.getElementById("logOutButton");
 const logOutSection = document.querySelector(".logOutSection");
 const mainSection = document.querySelector(".mainSection");
 
-//const secretSection = document.querySelector(".secretSection");
-
-//secretSection.style.display = "none";
+//signUpForm.style.display = "none";
 
 async function userSignUp() {
+  //generateSignUpForm();
   const userEmail = document.getElementById("signUpEmail");
   const userPassword = document.getElementById("signUpPassword");
 
@@ -34,8 +41,8 @@ async function userSignUp() {
   createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword)
     .then((userCredential) => {
       const user = userCredential.user;
-      console.log(user);
-      //alert("Your account has been created!");
+
+      alert("Your account has been created!");
 
       // Add the user to out Database
 
@@ -65,8 +72,9 @@ async function userLogIn() {
   const logInPassword = userPassword.value;
   signInWithEmailAndPassword(auth, logInEmail, logInPassword)
     .then((userCredential) => {
+      launchFirstPage();
       const user = userCredential.user;
-      //alert("Your have logged in!");
+      alert("Your have logged in!");
 
       // User data (TO CHANGE)
       let userData = {
@@ -91,54 +99,89 @@ async function userLogIn() {
 
 async function userLogOut() {
   await signOut(auth);
+  launchFirstPage();
+  alert("Your have logged out");
 }
 
 async function checkAuthState() {
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      logInForm.style.display = "none";
-      signUpForm.style.display = "none";
+      //launchFirstPage();
+
+      if (logInForm) {
+        logInForm.style.display = "none";
+      }
+
+      if (signUpForm) {
+        signUpForm.style.display = "none";
+      }
+
+      logInButtonMenu.style.display = "none";
+      logOutButton.style.display = "inline-block";
+
       mainSection.style.display = "block";
-      logOutButton.style.display = "inline";
     } else {
-      logInForm.style.display = "block";
-      mainSection.style.display = "none";
+      //logInForm.style.display = "block";
+      //mainSection.style.display = "none";
       logOutButton.style.display = "none";
+      logInButtonMenu.style.display = "inline-block";
     }
   });
 }
 
 checkAuthState();
 
-signUpForm.style.display = "none";
-
 //Signup / login forms switch
 const logInSwitch = document.getElementById("logInSwitch");
-logInSwitch.addEventListener("click", () => {
-  signUpForm.style.display = "none";
-  logInForm.style.display = "block";
-});
+
+if (logInSwitch) {
+  logInSwitch.addEventListener("click", () => {
+    signUpForm.style.display = "none";
+    //generateLogInForm();
+
+    logInButtonMenu.style.display = "none";
+    logInForm.style.display = "block";
+  });
+}
 
 const signUpSwitch = document.getElementById("signUpSwitch");
-signUpSwitch.addEventListener("click", () => {
-  logInForm.style.display = "none";
-  signUpForm.style.display = "block";
-});
+if (signUpSwitch) {
+  signUpSwitch.addEventListener("click", () => {
+    logInForm.style.display = "none";
+    //generateSignUpForm();
 
-signUpButton.addEventListener("click", (event) => {
-  event.preventDefault();
-  userSignUp();
-});
+    logInButtonMenu.style.display = "none";
+    signUpForm.style.display = "block";
+  });
+}
 
-logInButton.addEventListener("click", (event) => {
-  event.preventDefault();
-  userLogIn();
-});
+if (signUpButton) {
+  signUpButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    userSignUp();
+  });
+}
 
-logOutButton.addEventListener("click", (event) => {
-  event.preventDefault();
-  userLogOut();
-});
+if (logInButton) {
+  logInButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    userLogIn();
+  });
+}
+
+if (logOutButton) {
+  logOutButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    userLogOut();
+  });
+}
+
+if (logInButtonMenu) {
+  logInButtonMenu.addEventListener("click", () => {
+    mainSection.style.display = "none";
+    logInForm.style.display = "block";
+  });
+}
 
 // Validate an email
 function validateEmail(email) {

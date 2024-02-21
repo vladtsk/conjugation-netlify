@@ -80,8 +80,7 @@ export async function launchFirstPage() {
 
 launchFirstPage();
 
-// A function launching the app
-function launchApp(data) {
+export function initializeApp() {
   // Making sure all the boxes are empty (to avoid errors when relaunching the app)
   box1 = [];
   box2 = [];
@@ -97,6 +96,11 @@ function launchApp(data) {
   phraseCount = 0;
 
   score = 0;
+}
+
+// A function launching the app
+function launchApp(data) {
+  initializeApp();
 
   // Getting information from the database about the user's performance and copying the database information to dbArray
   onAuthStateChanged(auth, (user) => {
@@ -252,10 +256,11 @@ function launchApp(data) {
     showResultPage(score, phraseNumber);
 
     // Adding data to the database
+    // Mistake to correct: when user signs up at this point, all the data is erased from the DB
 
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        const presentRef = ref(database, "users/" + user.uid + "/present");
+        //const presentRef = ref(database, "users/" + user.uid + "/present");
         addBoxToDb(user);
       } else {
         console.log("User is signed out");
@@ -385,7 +390,7 @@ function checkAnswer(data) {
 
       if (speaker) {
         speaker.addEventListener("click", () => {
-          playAudio(`"${data.data[k].fullPhrase}"`);
+          playAudio(data.data[k].fullPhrase);
         });
       }
 

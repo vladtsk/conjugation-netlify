@@ -298,6 +298,7 @@ export function generateSignUpForm() {
 
   const signUpForm = document.createElement("form");
   signUpForm.classList.add("signUpForm");
+  signUpForm.style.display = "none";
   main.appendChild(signUpForm);
 
   const signUpH1 = document.createElement("h1");
@@ -373,6 +374,7 @@ export function generateLogInForm() {
 
   const logInForm = document.createElement("form");
   logInForm.classList.add("logInForm");
+  logInForm.style.display = "none";
   main.appendChild(logInForm);
 
   const logInH1 = document.createElement("h1");

@@ -97,6 +97,10 @@ input {
   border-radius: 6px;
 }
 
+#logOutButton {
+  display: none;
+}
+
 #logOutButton:hover {
   background-color: var(--color-primary);
   color: var(--color-secondary);
