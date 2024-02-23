@@ -76,7 +76,7 @@ async function userLogIn() {
       const user = userCredential.user;
       alert("Your have logged in!");
 
-      // User data (TO CHANGE)
+      // User data
       let userData = {
         email: user.email,
         last_login: Date.now(),

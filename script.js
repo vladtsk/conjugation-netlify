@@ -18,6 +18,8 @@ import {
 const auth = getAuth(app);
 const database = getDatabase(app);
 
+let userId;
+
 let score;
 
 // Creating arrays corresponding to 6 boxes allowing to implement a spaced repetition system
@@ -96,6 +98,8 @@ export function initializeApp() {
   phraseCount = 0;
 
   score = 0;
+
+  userId = 0;
 }
 
 // A function launching the app
@@ -105,9 +109,19 @@ function launchApp(data) {
   // Getting information from the database about the user's performance and copying the database information to dbArray
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      const presentRef = ref(database, "users/" + user.uid + "/present");
-      const pastcompRef = ref(database, "users/" + user.uid + "/pastcomp");
-      const pastimpRef = ref(database, "users/" + user.uid + "/pastimp");
+      userId = auth.currentUser.uid;
+      const presentRef = ref(
+        database,
+        "users/" + userId + "/data/" + "/present"
+      );
+      const pastcompRef = ref(
+        database,
+        "users/" + userId + "/data/" + "/pastcomp"
+      );
+      const pastimpRef = ref(
+        database,
+        "users/" + userId + "/data/" + "/pastimp"
+      );
 
       if (data.data[0].tense === "present (le présent de l'indicatif)") {
         readDataFromDb(presentRef);
@@ -184,6 +198,8 @@ function launchApp(data) {
 
   setSpecialBtns();
 
+  console.log(userId);
+
   // A function selecting phrases (actually their IDs) not to show based on the scheduled repetition date (i.e. indices to exclude)
   function checkRepetDate(box) {
     const today = new Date();
@@ -258,17 +274,14 @@ function launchApp(data) {
     // Adding data to the database
     // Mistake to correct: when user signs up at this point, all the data is erased from the DB
 
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        //const presentRef = ref(database, "users/" + user.uid + "/present");
-        addBoxToDb(user);
-      } else {
-        console.log("User is signed out");
-      }
-    });
+    if (userId) {
+      addBoxToDb();
+    } else {
+      console.log("User is signed out");
+    }
   });
 
-  function addBoxToDb(user) {
+  function addBoxToDb() {
     let tense;
     const boxes = [box1, box2, box3, box4, box5, box6];
 
@@ -286,7 +299,7 @@ function launchApp(data) {
     }
     for (let i = 0; i < boxes.length; i++) {
       let boxName = "box" + (i + 1);
-      let boxRef = ref(database, "users/" + user.uid + tense + boxName);
+      let boxRef = ref(database, "users/" + userId + "/data" + tense + boxName);
       set(boxRef, boxes[i])
         .then(() => {
           console.log("Box " + boxName + " added successfully do DB");
