@@ -1,4 +1,6 @@
-import { launchFirstPage } from "./script.js";
+// Functions that dinamically build the pages
+
+import { launchFirstPage } from "./init.js";
 
 // Showing the first page
 export async function showFirstPage() {

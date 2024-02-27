@@ -15,6 +15,8 @@ import {
   showResultPage,
 } from "./pagesetup.js";
 
+import { launchFirstPage } from "./init.js";
+
 const auth = getAuth(app);
 const database = getDatabase(app);
 
@@ -44,45 +46,10 @@ let phraseCount;
 const responseConjug = await fetch("conjugation.json");
 const jsonConjug = await responseConjug.json();
 
-export async function launchFirstPage() {
-  showFirstPage(); // Building the first page structure
-  phraseNumber = 5; // Making sure the phrase number is back to its default value
+launchFirstPage(phraseNumber);
 
-  // Fetching the present tense data by default
-
-  let response = await fetch("present.json");
-  let jsonData = await response.json();
-
-  const selectElement = document.getElementById("tense");
-  const selectPhrNb = document.getElementById("phraseNb");
-  const startBtn = document.getElementById("start-btn");
-
-  // Adding an event listener in case the user changes the tense
-  if (selectElement) {
-    selectElement.addEventListener("change", async () => {
-      response = await fetch(`${selectElement.value}.json`);
-      jsonData = await response.json();
-    });
-  }
-
-  // Customer selecting the number of phrases
-  if (selectPhrNb) {
-    selectPhrNb.addEventListener("change", () => {
-      phraseNumber = selectPhrNb.value;
-    });
-  }
-
-  // Adding an event listener on the start button
-  if (startBtn) {
-    startBtn.addEventListener("click", () => {
-      launchApp(jsonData);
-    });
-  }
-}
-
-launchFirstPage();
-
-export function initializeApp() {
+// A function launching the app
+export function launchApp(data) {
   // Making sure all the boxes are empty (to avoid errors when relaunching the app)
   box1 = [];
   box2 = [];
@@ -100,11 +67,6 @@ export function initializeApp() {
   score = 0;
 
   userId = 0;
-}
-
-// A function launching the app
-function launchApp(data) {
-  initializeApp();
 
   // Getting information from the database about the user's performance and copying the database information to dbArray
   onAuthStateChanged(auth, (user) => {
@@ -243,7 +205,7 @@ function launchApp(data) {
 
   submitBtn.addEventListener("click", () => {
     checkAnswer(data);
-    console.log(box2);
+    console.log(score);
   });
 
   // Adding an event listener to display the next phrase to test
