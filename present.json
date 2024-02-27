@@ -818,9 +818,9 @@
     {
       "id": 117,
       "verb": "s'inquiéter",
-      "phrase": "Ne t'____ pas.",
-      "answer": "inquiète",
-      "fullPhrase": "Ne t'inquiète pas."
+      "phrase": "Elle ____ pour l'examen.",
+      "answer": "s'inquiète",
+      "fullPhrase": "Elle s'inquiète pour l'examen."
     },
     {
       "id": 118,

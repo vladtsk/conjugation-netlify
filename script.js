@@ -24,13 +24,15 @@ let userId;
 
 let score;
 
-// Creating arrays corresponding to 6 boxes allowing to implement a spaced repetition system
-let box1 = [];
+// Creating an array containing 6 arrays corresponding to 6 boxes allowing to implement a spaced repetition system
+/*let box1 = [];
 let box2 = [];
 let box3 = [];
 let box4 = [];
 let box5 = [];
-let box6 = [];
+let box6 = [];*/
+
+let boxes = [[], [], [], [], [], []];
 
 // An index that will be generated randomly
 let k;
@@ -51,12 +53,14 @@ launchFirstPage(phraseNumber);
 // A function launching the app
 export function launchApp(data) {
   // Making sure all the boxes are empty (to avoid errors when relaunching the app)
-  box1 = [];
+  /*box1 = [];
   box2 = [];
   box3 = [];
   box4 = [];
   box5 = [];
-  box6 = [];
+  box6 = [];*/
+
+  boxes = [[], [], [], [], [], []];
 
   // Initializing the index array
   indexArray = [];
@@ -104,29 +108,29 @@ export function launchApp(data) {
             const dbRefData = snapshot.val();
             if (dbRefData) {
               if (dbRefData.box1) {
-                box1 = dbRefData.box1;
+                boxes[0] = dbRefData.box1;
               }
               if (dbRefData.box2) {
-                box2 = dbRefData.box2;
+                boxes[1] = dbRefData.box2;
               }
               if (dbRefData.box3) {
-                box3 = dbRefData.box3;
+                boxes[2] = dbRefData.box3;
               }
               if (dbRefData.box4) {
-                box4 = dbRefData.box4;
+                boxes[3] = dbRefData.box4;
               }
               if (dbRefData.box5) {
-                box5 = dbRefData.box5;
+                boxes[4] = dbRefData.box5;
               }
               if (dbRefData.box6) {
-                box6 = dbRefData.box6;
+                boxes[5] = dbRefData.box6;
               }
             }
-            checkRepetDate(box1);
-            checkRepetDate(box2);
-            checkRepetDate(box3);
-            checkRepetDate(box4);
-            checkRepetDate(box5);
+
+            // Checking the first 5 boxes for the repetition date (the last one is not shown by default)
+            for (let i = 0; i < boxes.length - 1; i++) {
+              checkRepetDate(boxes[i]);
+            }
           },
           {
             onlyOnce: true,
@@ -142,16 +146,16 @@ export function launchApp(data) {
   if (
     data &&
     data.data.length > 0 &&
-    box1.length === 0 &&
-    box2.length === 0 &&
-    box3.length === 0 &&
-    box4.length === 0 &&
-    box5.length === 0 &&
-    box6.length === 0
+    boxes[0].length === 0 &&
+    boxes[1].length === 0 &&
+    boxes[2].length === 0 &&
+    boxes[3].length === 0 &&
+    boxes[4].length === 0 &&
+    boxes[5].length === 0
   ) {
     for (let i = 0; i < data.data.length; i++) {
       let object = { id: i + 1, repetDate: 0 };
-      box1.push(object);
+      boxes[0].push(object);
     }
   }
 
@@ -173,9 +177,9 @@ export function launchApp(data) {
   }
 
   //Excluding the elements in the Box6
-  for (let i = 0; i < box6.length; i++) {
-    if (box6[i].repetDate !== 0) {
-      indexArray.push(box6[i].id - 1);
+  for (let i = 0; i < boxes[5].length; i++) {
+    if (boxes[5][i].repetDate !== 0) {
+      indexArray.push(boxes[5][i].id - 1);
     }
   }
 
@@ -188,7 +192,7 @@ export function launchApp(data) {
       do {
         k = Math.floor(Math.random() * data.data.length);
       } while (indexArray.includes(k));
-      console.log(k);
+      console.log(boxes[1]);
       indexArray.push(k);
     } else {
       console.log("No more phrases to practise!");
@@ -205,7 +209,6 @@ export function launchApp(data) {
 
   submitBtn.addEventListener("click", () => {
     checkAnswer(data);
-    console.log(score);
   });
 
   // Adding an event listener to display the next phrase to test
@@ -245,7 +248,6 @@ export function launchApp(data) {
 
   function addBoxToDb() {
     let tense;
-    const boxes = [box1, box2, box3, box4, box5, box6];
 
     switch (data.data[0].tense) {
       case "present (le présent de l'indicatif)":
@@ -429,73 +431,73 @@ function movePhraseForward() {
   const today = new Date();
   const newRepetDate = new Date(today);
 
-  const foundElementBox5 = box5.find(({ id }) => id === k + 1);
+  const foundElementBox5 = boxes[4].find(({ id }) => id === k + 1);
   if (foundElementBox5) {
-    const foundIndex = box5.indexOf(foundElementBox5);
+    const foundIndex = boxes[4].indexOf(foundElementBox5);
 
     // The phrase won't be shown again (we don't show phrases from box6)
 
     foundElementBox5.repetDate = 0;
 
-    box6.push(foundElementBox5); // adding the element to box6
+    boxes[5].push(foundElementBox5); // adding the element to box6
 
-    box5.splice(foundIndex, 1); // deleting it from box5
+    boxes[4].splice(foundIndex, 1); // deleting it from box5
   }
 
-  const foundElementBox4 = box4.find(({ id }) => id === k + 1);
+  const foundElementBox4 = boxes[3].find(({ id }) => id === k + 1);
   if (foundElementBox4) {
-    const foundIndex = box4.indexOf(foundElementBox4);
+    const foundIndex = boxes[3].indexOf(foundElementBox4);
 
     newRepetDate.setDate(today.getDate() + 30); // The next repetition is in 30 days
     console.log(newRepetDate.toDateString());
 
     foundElementBox4.repetDate = newRepetDate.getTime();
 
-    box5.push(foundElementBox4); // adding the element to box5
+    boxes[4].push(foundElementBox4); // adding the element to box5
 
-    box4.splice(foundIndex, 1); // deleting it from box4
+    boxes[3].splice(foundIndex, 1); // deleting it from box4
   }
 
-  const foundElementBox3 = box3.find(({ id }) => id === k + 1);
+  const foundElementBox3 = boxes[2].find(({ id }) => id === k + 1);
   if (foundElementBox3) {
-    const foundIndex = box3.indexOf(foundElementBox3);
+    const foundIndex = boxes[2].indexOf(foundElementBox3);
 
     newRepetDate.setDate(today.getDate() + 14); // The next repetition is in 14 days
     console.log(newRepetDate.toDateString());
 
     foundElementBox3.repetDate = newRepetDate.getTime();
 
-    box4.push(foundElementBox3); // adding the element to box4
+    boxes[3].push(foundElementBox3); // adding the element to box4
 
-    box3.splice(foundIndex, 1); // deleting it from box3
+    boxes[2].splice(foundIndex, 1); // deleting it from box3
   }
 
-  const foundElementBox2 = box2.find(({ id }) => id === k + 1);
+  const foundElementBox2 = boxes[1].find(({ id }) => id === k + 1);
   if (foundElementBox2) {
-    const foundIndex = box2.indexOf(foundElementBox2);
+    const foundIndex = boxes[1].indexOf(foundElementBox2);
 
     newRepetDate.setDate(today.getDate() + 7); // The next repetition is in 7 days
     console.log(newRepetDate.toDateString());
 
     foundElementBox2.repetDate = newRepetDate.getTime();
 
-    box3.push(foundElementBox2); // adding the element to box3
+    boxes[2].push(foundElementBox2); // adding the element to box3
 
-    box2.splice(foundIndex, 1); // deleting it from box2
+    boxes[1].splice(foundIndex, 1); // deleting it from box2
   }
 
-  const foundElementBox1 = box1.find(({ id }) => id === k + 1);
+  const foundElementBox1 = boxes[0].find(({ id }) => id === k + 1);
   if (foundElementBox1) {
-    const foundIndex = box1.indexOf(foundElementBox1);
+    const foundIndex = boxes[0].indexOf(foundElementBox1);
 
     newRepetDate.setDate(today.getDate() + 3); // The next repetition is in 3 days
     console.log(newRepetDate.toDateString());
 
     foundElementBox1.repetDate = newRepetDate.getTime();
 
-    box2.push(foundElementBox1); // adding the element to box2
+    boxes[1].push(foundElementBox1); // adding the element to box2
 
-    box1.splice(foundIndex, 1); // deleting it from box1
+    boxes[0].splice(foundIndex, 1); // deleting it from box1
   }
 }
 
@@ -507,57 +509,57 @@ function movePhraseBackward() {
   newRepetDate.setDate(today.getDate() + 1); // The next repetition is in 1 day for all the elements in all boxes
   console.log(newRepetDate.getTime());
 
-  const foundElementBox1 = box1.find(({ id }) => id === k + 1);
+  const foundElementBox1 = boxes[0].find(({ id }) => id === k + 1);
   if (foundElementBox1) {
-    const foundIndex = box1.indexOf(foundElementBox1);
+    const foundIndex = boxes[0].indexOf(foundElementBox1);
 
     foundElementBox1.repetDate = newRepetDate.getTime();
 
     // The element stays in the same box
   }
 
-  const foundElementBox2 = box2.find(({ id }) => id === k + 1);
+  const foundElementBox2 = boxes[1].find(({ id }) => id === k + 1);
   if (foundElementBox2) {
-    const foundIndex = box2.indexOf(foundElementBox2);
+    const foundIndex = boxes[1].indexOf(foundElementBox2);
 
     foundElementBox2.repetDate = newRepetDate.getTime();
 
-    box1.push(foundElementBox2); // adding the element to box1
+    boxes[0].push(foundElementBox2); // adding the element to box1
 
-    box2.splice(foundIndex, 1); // deleting it from box2
+    boxes[1].splice(foundIndex, 1); // deleting it from box2
   }
 
-  const foundElementBox3 = box3.find(({ id }) => id === k + 1);
+  const foundElementBox3 = boxes[2].find(({ id }) => id === k + 1);
   if (foundElementBox3) {
-    const foundIndex = box3.indexOf(foundElementBox3);
+    const foundIndex = boxes[2].indexOf(foundElementBox3);
 
     foundElementBox3.repetDate = newRepetDate.getTime();
 
-    box2.push(foundElementBox3); // adding the element to box2
+    boxes[1].push(foundElementBox3); // adding the element to box2
 
-    box3.splice(foundIndex, 1); // deleting it from box3
+    boxes[2].splice(foundIndex, 1); // deleting it from box3
   }
 
-  const foundElementBox4 = box4.find(({ id }) => id === k + 1);
+  const foundElementBox4 = boxes[3].find(({ id }) => id === k + 1);
   if (foundElementBox4) {
-    const foundIndex = box4.indexOf(foundElementBox4);
+    const foundIndex = boxes[3].indexOf(foundElementBox4);
 
     foundElementBox4.repetDate = newRepetDate.getTime();
 
-    box2.push(foundElementBox4); // adding the element to box2 (it goes 2 boxes lower)
+    boxes[1].push(foundElementBox4); // adding the element to box2 (it goes 2 boxes lower)
 
-    box4.splice(foundIndex, 1); // deleting it from box4
+    boxes[3].splice(foundIndex, 1); // deleting it from box4
   }
 
-  const foundElementBox5 = box5.find(({ id }) => id === k + 1);
+  const foundElementBox5 = boxes[4].find(({ id }) => id === k + 1);
   if (foundElementBox5) {
-    const foundIndex = box5.indexOf(foundElementBox5);
+    const foundIndex = boxes[4].indexOf(foundElementBox5);
 
     foundElementBox5.repetDate = newRepetDate.getTime();
 
-    box3.push(foundElementBox5); // adding the element to box3 (it goes 2 boxes lower)
+    boxes[2].push(foundElementBox5); // adding the element to box3 (it goes 2 boxes lower)
 
-    box5.splice(foundIndex, 1); // deleting it from box5
+    boxes[4].splice(foundIndex, 1); // deleting it from box5
   }
-  console.log(box1);
+  console.log(boxes[0]);
 }
