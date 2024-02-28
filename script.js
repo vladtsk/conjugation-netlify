@@ -15,7 +15,9 @@ import {
   showResultPage,
 } from "./pagesetup.js";
 
-import { launchFirstPage } from "./init.js";
+import { launchFirstPage, readDataFromDb } from "./init.js";
+
+import { generateElements, displayTense } from "./main.js";
 
 const auth = getAuth(app);
 const database = getDatabase(app);
@@ -24,43 +26,29 @@ let userId;
 
 let score;
 
-// Creating an array containing 6 arrays corresponding to 6 boxes allowing to implement a spaced repetition system
-/*let box1 = [];
-let box2 = [];
-let box3 = [];
-let box4 = [];
-let box5 = [];
-let box6 = [];*/
-
 let boxes = [[], [], [], [], [], []];
 
-// An index that will be generated randomly
-let k;
-
-let phraseNumber = 5;
+//let phraseNumber = 5;
 
 // Create an array of indeces
 let indexArray = [];
 
-// Adding a variable counting the nb of phrases that have been shown to the user
-let phraseCount;
-
 const responseConjug = await fetch("conjugation.json");
 const jsonConjug = await responseConjug.json();
 
-launchFirstPage(phraseNumber);
+launchFirstPage();
 
 // A function launching the app
-export function launchApp(data) {
+export function launchApp(data, phraseNumber) {
   // Making sure all the boxes are empty (to avoid errors when relaunching the app)
-  /*box1 = [];
-  box2 = [];
-  box3 = [];
-  box4 = [];
-  box5 = [];
-  box6 = [];*/
 
   boxes = [[], [], [], [], [], []];
+
+  // An index that will be generated randomly
+  let k;
+
+  // Adding a variable counting the nb of phrases that have been shown to the user
+  let phraseCount;
 
   // Initializing the index array
   indexArray = [];
@@ -90,52 +78,15 @@ export function launchApp(data) {
       );
 
       if (data.data[0].tense === "present (le présent de l'indicatif)") {
-        readDataFromDb(presentRef);
+        readDataFromDb(presentRef, boxes, indexArray);
       }
 
       if (data.data[0].tense === "past (le passé composé)") {
-        readDataFromDb(pastcompRef);
+        readDataFromDb(pastcompRef, boxes, indexArray);
       }
 
       if (data.data[0].tense === "imperfect past (l'imparfait)") {
-        readDataFromDb(pastimpRef);
-      }
-
-      function readDataFromDb(timeRef) {
-        onValue(
-          timeRef,
-          (snapshot) => {
-            const dbRefData = snapshot.val();
-            if (dbRefData) {
-              if (dbRefData.box1) {
-                boxes[0] = dbRefData.box1;
-              }
-              if (dbRefData.box2) {
-                boxes[1] = dbRefData.box2;
-              }
-              if (dbRefData.box3) {
-                boxes[2] = dbRefData.box3;
-              }
-              if (dbRefData.box4) {
-                boxes[3] = dbRefData.box4;
-              }
-              if (dbRefData.box5) {
-                boxes[4] = dbRefData.box5;
-              }
-              if (dbRefData.box6) {
-                boxes[5] = dbRefData.box6;
-              }
-            }
-
-            // Checking the first 5 boxes for the repetition date (the last one is not shown by default)
-            for (let i = 0; i < boxes.length - 1; i++) {
-              checkRepetDate(boxes[i]);
-            }
-          },
-          {
-            onlyOnce: true,
-          }
-        );
+        readDataFromDb(pastimpRef, boxes, indexArray);
       }
     } else {
       console.log("User is signed out");
@@ -143,16 +94,7 @@ export function launchApp(data) {
   });
 
   // Initializing the array box1 if there is no previous history (all the phrases go to box1)
-  if (
-    data &&
-    data.data.length > 0 &&
-    boxes[0].length === 0 &&
-    boxes[1].length === 0 &&
-    boxes[2].length === 0 &&
-    boxes[3].length === 0 &&
-    boxes[4].length === 0 &&
-    boxes[5].length === 0
-  ) {
+  if (data && data.data.length > 0 && boxes.every((box) => box.length === 0)) {
     for (let i = 0; i < data.data.length; i++) {
       let object = { id: i + 1, repetDate: 0 };
       boxes[0].push(object);
@@ -164,43 +106,11 @@ export function launchApp(data) {
 
   setSpecialBtns();
 
-  console.log(userId);
-
-  // A function selecting phrases (actually their IDs) not to show based on the scheduled repetition date (i.e. indices to exclude)
-  function checkRepetDate(box) {
-    const today = new Date();
-    for (let i = 0; i < box.length; i++) {
-      if (box[i].repetDate > today.getTime()) {
-        indexArray.push(box[i].id - 1);
-      }
-    }
-  }
-
-  //Excluding the elements in the Box6
-  for (let i = 0; i < boxes[5].length; i++) {
-    if (boxes[5][i].repetDate !== 0) {
-      indexArray.push(boxes[5][i].id - 1);
-    }
-  }
-
-  generateElements(data);
-
-  function generateElements(data) {
-    if (indexArray.length !== data.data.length) {
-      // Generate a random and unique index
-      k = Math.floor(Math.random() * data.data.length);
-      do {
-        k = Math.floor(Math.random() * data.data.length);
-      } while (indexArray.includes(k));
-      console.log(boxes[1]);
-      indexArray.push(k);
-    } else {
-      console.log("No more phrases to practise!");
-    }
-
-    displayVerb(data);
-    displayPhrase(data);
-  }
+  // Generating a unique index and displaying a verb and a phrase
+  generateElements(data, indexArray, phraseCount, k);
+  phraseCount++;
+  k = generateElements(data, indexArray, phraseCount, k);
+  console.log("k", k);
 
   // Adding an event listener to check the answer when the 'submit' button is clicked
 
@@ -208,7 +118,7 @@ export function launchApp(data) {
   const submitBtn = document.getElementById("submit-btn");
 
   submitBtn.addEventListener("click", () => {
-    checkAnswer(data);
+    checkAnswer(data, k, phraseCount, phraseNumber);
   });
 
   // Adding an event listener to display the next phrase to test
@@ -227,6 +137,7 @@ export function launchApp(data) {
     phraseDisplay.style.color = "black";
     inputArea.style.color = "black";
     displayNext(data);
+    console.log("phrasecount", phraseCount);
   });
 
   // Select the finish button
@@ -289,44 +200,16 @@ export function launchApp(data) {
 
     msgArea.innerText = "";
     inputArea.value = "";
-    generateElements(data);
+    generateElements(data, indexArray, phraseCount, k);
+    phraseCount++;
+    k = generateElements(data, indexArray, phraseCount, k);
     nextSection.style.display = "none";
     submitSection.style.display = "flex";
   }
 }
 
-// A function that displays a verb to conjugate
-function displayVerb(data) {
-  // Selecting the verb display section
-  const verbDisplay = document.querySelector(".verb-display p");
-
-  if (data && data.data.length > 0) {
-    verbDisplay.textContent = data.data[k].verb;
-  }
-  phraseCount++;
-}
-
-// A function that displays a phrase (the context)
-function displayPhrase(data) {
-  // Selecting the phrase display section (the "p" element)
-  const phraseDisplay = document.querySelector(".phrase-section p");
-  if (data && data.data.length > 0) {
-    phraseDisplay.textContent = data.data[k].phrase;
-  }
-}
-
-// A function displaying the tense
-function displayTense(data) {
-  // Selecting the tense display section
-  const tenseDisplay = document.querySelector(".tense-display p");
-  // Displaying the tense
-  if (data && data.data.length > 0) {
-    tenseDisplay.textContent = data.data[0].tense;
-  }
-}
-
 // A function that reads the user input and compares it to the correct answer
-function checkAnswer(data) {
+function checkAnswer(data, k, phraseCount, phraseNumber) {
   // Select "p" element for a message to display
   const msgArea = document.querySelector(".msg-section p");
   // Conjugation popup section
@@ -347,11 +230,16 @@ function checkAnswer(data) {
   const inputText = inputArea.value;
   let displaySection;
 
+  console.log(phraseCount, phraseNumber);
+
   if (phraseCount < phraseNumber) {
     displaySection = nextSection;
   } else {
     displaySection = finishSection;
   }
+
+  console.log("box2", boxes[1]);
+  console.log("indexArray", indexArray);
 
   switch (inputText) {
     case "":
@@ -373,7 +261,7 @@ function checkAnswer(data) {
 
       //pronouncePhrase(`"${data.data[k].fullPhrase}"`);
       score++;
-      movePhraseForward();
+      movePhraseForward(k);
 
       break;
     default:
@@ -398,7 +286,7 @@ function checkAnswer(data) {
         console.log("Verb " + data.data[k].verb + " is not found in database ");
       }
 
-      movePhraseBackward();
+      movePhraseBackward(k);
   }
 
   // A function playing an audio
@@ -427,7 +315,7 @@ function checkAnswer(data) {
 }
 
 // A function that moves a phrase to the next box and changes the next repetition date
-function movePhraseForward() {
+function movePhraseForward(k) {
   const today = new Date();
   const newRepetDate = new Date(today);
 
@@ -502,7 +390,7 @@ function movePhraseForward() {
 }
 
 // A function that moves a phrase to a lower box (when a user makes a mistake) and changes the next repetition date
-function movePhraseBackward() {
+function movePhraseBackward(k) {
   const today = new Date();
   const newRepetDate = new Date(today);
 
