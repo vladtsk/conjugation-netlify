@@ -28,6 +28,13 @@ input {
   border: solid black 1px;
 }
 
+button,
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 #logInButton,
 #signUpButton {
   margin-top: 10px;
@@ -95,6 +102,7 @@ input {
   padding-block: 8px;
 
   border-radius: 6px;
+  background-color: var(--color-secondary);
 }
 
 #logOutButton {

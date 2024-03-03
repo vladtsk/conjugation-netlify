@@ -118,7 +118,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes) {
     displaySection = finishSection;
   }
 
-  switch (inputText) {
+  switch (inputText.trim().toLowerCase()) {
     case "":
       msgArea.innerText = "Please type a valid verb";
       break;
@@ -147,11 +147,10 @@ export function checkAnswer(data, k, phraseInfo, score, boxes) {
       phraseDisplay.textContent = data.data[k].fullPhrase;
       inputArea.style.color = "#ef233c";
       msgArea.innerText = `Incorrect. The correct answer is: "${data.data[k].answer}"`;
-      console.log("box1 outside function before", boxes[0]);
+
       if (userId) {
         boxes = movePhraseBackward(k, boxes);
       }
-      console.log("box1 outside function after", boxes[0]);
 
       try {
         let popupMsg =

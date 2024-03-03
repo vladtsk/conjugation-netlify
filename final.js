@@ -35,7 +35,6 @@ export function movePhraseForward(k, boxes) {
     const foundIndex = boxes[3].indexOf(foundElementBox4);
 
     newRepetDate.setDate(today.getDate() + 30); // The next repetition is in 30 days
-    console.log(newRepetDate.toDateString());
 
     foundElementBox4.repetDate = newRepetDate.getTime();
 
@@ -49,7 +48,6 @@ export function movePhraseForward(k, boxes) {
     const foundIndex = boxes[2].indexOf(foundElementBox3);
 
     newRepetDate.setDate(today.getDate() + 14); // The next repetition is in 14 days
-    console.log(newRepetDate.toDateString());
 
     foundElementBox3.repetDate = newRepetDate.getTime();
 
@@ -63,7 +61,6 @@ export function movePhraseForward(k, boxes) {
     const foundIndex = boxes[1].indexOf(foundElementBox2);
 
     newRepetDate.setDate(today.getDate() + 7); // The next repetition is in 7 days
-    console.log(newRepetDate.toDateString());
 
     foundElementBox2.repetDate = newRepetDate.getTime();
 
@@ -77,7 +74,6 @@ export function movePhraseForward(k, boxes) {
     const foundIndex = boxes[0].indexOf(foundElementBox1);
 
     newRepetDate.setDate(today.getDate() + 3); // The next repetition is in 3 days
-    console.log(newRepetDate.toDateString());
 
     foundElementBox1.repetDate = newRepetDate.getTime();
 
@@ -90,20 +86,16 @@ export function movePhraseForward(k, boxes) {
 
 // A function that moves a phrase to a lower box (when a user makes a mistake) and changes the next repetition date
 export function movePhraseBackward(k, boxes) {
-  console.log("box1 inside moveback", boxes[0]);
-
   const today = new Date();
   const newRepetDate = new Date(today);
 
   newRepetDate.setDate(today.getDate() + 1); // The next repetition is in 1 day for all the elements in all boxes
-  console.log(newRepetDate.getTime());
 
   const foundElementBox1 = boxes[0].find(({ id }) => id === k + 1);
   if (foundElementBox1) {
     const foundIndex = boxes[0].indexOf(foundElementBox1);
 
     foundElementBox1.repetDate = newRepetDate.getTime();
-    console.log("foundElBox1", foundElementBox1);
 
     // The element stays in the same box
   }
@@ -111,12 +103,10 @@ export function movePhraseBackward(k, boxes) {
   const foundElementBox2 = boxes[1].find(({ id }) => id === k + 1);
   if (foundElementBox2) {
     const foundIndex = boxes[1].indexOf(foundElementBox2);
-    console.log("foundElBox2", foundElementBox2);
 
     foundElementBox2.repetDate = newRepetDate.getTime();
 
     boxes[0].push(foundElementBox2); // adding the element to box1
-    console.log("box1 after push", boxes[0]);
 
     boxes[1].splice(foundIndex, 1); // deleting it from box2
   }
@@ -126,8 +116,6 @@ export function movePhraseBackward(k, boxes) {
     const foundIndex = boxes[2].indexOf(foundElementBox3);
 
     foundElementBox3.repetDate = newRepetDate.getTime();
-
-    console.log("foundElBox3", foundElementBox3);
 
     boxes[1].push(foundElementBox3); // adding the element to box2
 
@@ -139,8 +127,6 @@ export function movePhraseBackward(k, boxes) {
     const foundIndex = boxes[3].indexOf(foundElementBox4);
 
     foundElementBox4.repetDate = newRepetDate.getTime();
-
-    console.log("foundElBox4", foundElementBox4);
 
     boxes[1].push(foundElementBox4); // adding the element to box2 (it goes 2 boxes lower)
 
@@ -157,7 +143,6 @@ export function movePhraseBackward(k, boxes) {
 
     boxes[4].splice(foundIndex, 1); // deleting it from box5
   }
-  console.log("box2 inside moveback", boxes[1]);
   return boxes;
 }
 

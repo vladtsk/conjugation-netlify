@@ -35,8 +35,6 @@ let score;
 
 let boxes = [[], [], [], [], [], []];
 
-//let phraseNumber = 5;
-
 // Create an array of indeces
 let indexArray = [];
 
@@ -97,8 +95,6 @@ export function launchApp(data, phraseNumber) {
     }
   });
 
-  console.log(userId);
-
   // Initializing the array box1 if there is no previous history (all the phrases go to box1)
   if (data && data.data.length > 0 && boxes.every((box) => box.length === 0)) {
     for (let i = 0; i < data.data.length; i++) {
@@ -115,7 +111,6 @@ export function launchApp(data, phraseNumber) {
   // Generating a unique index and displaying a verb and a phrase
   k = generateElements(data, indexArray, phraseCount, k);
   phraseCount++;
-  console.log("k", k);
 
   // Adding an event listener to check the answer when the 'submit' button is clicked
 
@@ -126,13 +121,10 @@ export function launchApp(data, phraseNumber) {
   let scoreBoxes;
 
   submitBtn.addEventListener("click", () => {
-    console.log("score", score);
     let phraseInfo = [phraseCount, phraseNumber];
     scoreBoxes = checkAnswer(data, k, phraseInfo, score, boxes);
-    console.log(scoreBoxes);
     score = scoreBoxes[0];
     boxes = scoreBoxes[1];
-    console.log("box2", boxes[1]);
   });
 
   // Adding an event listener to display the next phrase to test
