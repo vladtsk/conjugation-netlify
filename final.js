@@ -17,133 +17,39 @@ export function movePhraseForward(k, boxes) {
   const today = new Date();
   const newRepetDate = new Date(today);
 
-  const foundElementBox5 = boxes[4].find(({ id }) => id === k + 1);
-  if (foundElementBox5) {
-    const foundIndex = boxes[4].indexOf(foundElementBox5);
+  const repetDateArrow = [3, 7, 14, 30, 0];
+  for (let i = 4; i >= 0; i--) {
+    const foundElement = boxes[i].find(({ id }) => id === k + 1);
+    if (foundElement) {
+      const foundIndex = boxes[i].indexOf(foundElement);
+      newRepetDate.setDate(today.getDate() + repetDateArrow[i]);
+      foundElement.repetDate = newRepetDate.getTime();
+      boxes[i + 1].push(foundElement); // adding the element to the next box
+      boxes[i].splice(foundIndex, 1); // deleting it from the current box
 
-    // The phrase won't be shown again (we don't show phrases from box6)
-
-    foundElementBox5.repetDate = 0;
-
-    boxes[5].push(foundElementBox5); // adding the element to box6
-
-    boxes[4].splice(foundIndex, 1); // deleting it from box5
+      // Note: the elements from box6 won't be shown again
+    }
   }
-
-  const foundElementBox4 = boxes[3].find(({ id }) => id === k + 1);
-  if (foundElementBox4) {
-    const foundIndex = boxes[3].indexOf(foundElementBox4);
-
-    newRepetDate.setDate(today.getDate() + 30); // The next repetition is in 30 days
-
-    foundElementBox4.repetDate = newRepetDate.getTime();
-
-    boxes[4].push(foundElementBox4); // adding the element to box5
-
-    boxes[3].splice(foundIndex, 1); // deleting it from box4
-  }
-
-  const foundElementBox3 = boxes[2].find(({ id }) => id === k + 1);
-  if (foundElementBox3) {
-    const foundIndex = boxes[2].indexOf(foundElementBox3);
-
-    newRepetDate.setDate(today.getDate() + 14); // The next repetition is in 14 days
-
-    foundElementBox3.repetDate = newRepetDate.getTime();
-
-    boxes[3].push(foundElementBox3); // adding the element to box4
-
-    boxes[2].splice(foundIndex, 1); // deleting it from box3
-  }
-
-  const foundElementBox2 = boxes[1].find(({ id }) => id === k + 1);
-  if (foundElementBox2) {
-    const foundIndex = boxes[1].indexOf(foundElementBox2);
-
-    newRepetDate.setDate(today.getDate() + 7); // The next repetition is in 7 days
-
-    foundElementBox2.repetDate = newRepetDate.getTime();
-
-    boxes[2].push(foundElementBox2); // adding the element to box3
-
-    boxes[1].splice(foundIndex, 1); // deleting it from box2
-  }
-
-  const foundElementBox1 = boxes[0].find(({ id }) => id === k + 1);
-  if (foundElementBox1) {
-    const foundIndex = boxes[0].indexOf(foundElementBox1);
-
-    newRepetDate.setDate(today.getDate() + 3); // The next repetition is in 3 days
-
-    foundElementBox1.repetDate = newRepetDate.getTime();
-
-    boxes[1].push(foundElementBox1); // adding the element to box2
-
-    boxes[0].splice(foundIndex, 1); // deleting it from box1
-  }
-  return boxes;
 }
 
-// A function that moves a phrase to a lower box (when a user makes a mistake) and changes the next repetition date
+// A function that moves a phrase to the box below (when a user makes a mistake) and changes the next repetition date
 export function movePhraseBackward(k, boxes) {
   const today = new Date();
   const newRepetDate = new Date(today);
 
   newRepetDate.setDate(today.getDate() + 1); // The next repetition is in 1 day for all the elements in all boxes
 
-  const foundElementBox1 = boxes[0].find(({ id }) => id === k + 1);
-  if (foundElementBox1) {
-    const foundIndex = boxes[0].indexOf(foundElementBox1);
-
-    foundElementBox1.repetDate = newRepetDate.getTime();
-
-    // The element stays in the same box
+  for (let i = 0; i <= 4; i++) {
+    const foundElement = boxes[i].find(({ id }) => id === k + 1);
+    if (foundElement) {
+      const foundIndex = boxes[i].indexOf(foundElement);
+      foundElement.repetDate = newRepetDate.getTime();
+      if (i !== 0) {
+        boxes[i - 1].push(foundElement); // the element goes one box down
+        boxes[i].splice(foundIndex, 1); // deleting it from the current box
+      }
+    }
   }
-
-  const foundElementBox2 = boxes[1].find(({ id }) => id === k + 1);
-  if (foundElementBox2) {
-    const foundIndex = boxes[1].indexOf(foundElementBox2);
-
-    foundElementBox2.repetDate = newRepetDate.getTime();
-
-    boxes[0].push(foundElementBox2); // adding the element to box1
-
-    boxes[1].splice(foundIndex, 1); // deleting it from box2
-  }
-
-  const foundElementBox3 = boxes[2].find(({ id }) => id === k + 1);
-  if (foundElementBox3) {
-    const foundIndex = boxes[2].indexOf(foundElementBox3);
-
-    foundElementBox3.repetDate = newRepetDate.getTime();
-
-    boxes[1].push(foundElementBox3); // adding the element to box2
-
-    boxes[2].splice(foundIndex, 1); // deleting it from box3
-  }
-
-  const foundElementBox4 = boxes[3].find(({ id }) => id === k + 1);
-  if (foundElementBox4) {
-    const foundIndex = boxes[3].indexOf(foundElementBox4);
-
-    foundElementBox4.repetDate = newRepetDate.getTime();
-
-    boxes[1].push(foundElementBox4); // adding the element to box2 (it goes 2 boxes lower)
-
-    boxes[3].splice(foundIndex, 1); // deleting it from box4
-  }
-
-  const foundElementBox5 = boxes[4].find(({ id }) => id === k + 1);
-  if (foundElementBox5) {
-    const foundIndex = boxes[4].indexOf(foundElementBox5);
-
-    foundElementBox5.repetDate = newRepetDate.getTime();
-
-    boxes[2].push(foundElementBox5); // adding the element to box3 (it goes 2 boxes lower)
-
-    boxes[4].splice(foundIndex, 1); // deleting it from box5
-  }
-  return boxes;
 }
 
 export function addBoxToDb(data, boxes, userId, database) {

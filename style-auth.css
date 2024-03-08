@@ -103,6 +103,8 @@ input {
 
   border-radius: 6px;
   background-color: var(--color-secondary);
+  color: black;
+  border-color: var(--color-primary);
 }
 
 #logOutButton {

@@ -98,10 +98,11 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   gap: 20px;
+}
+
+.tense-section select {
+  text-align: center;
 }
 
 #tense {
@@ -113,6 +114,8 @@ main {
   height: 40px;
   font-family: "Poppins", sans-serif;
   font-size: 0.8em;
+  /*margin-left: auto;
+  margin-right: auto;*/
 }
 
 /* Styling the 'number of phrases' section */
@@ -418,6 +421,41 @@ main {
 .fa-volume-low {
   color: var(--color-primary);
   font-size: 1.2em;
+}
+
+.correctCheck {
+  display: none;
+}
+
+.correctAnswer {
+  display: none;
+}
+
+.summary {
+  min-width: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  margin-inline: auto;
+
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+
+  border: solid var(--color-primary) 4px;
+  border-radius: 10px;
+}
+
+.summary h1 {
+  text-align: center;
+}
+
+.summary li {
+  margin-top: 20px;
 }
 
 /* Styling the restart section */

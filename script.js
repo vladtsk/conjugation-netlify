@@ -120,9 +120,11 @@ export function launchApp(data, phraseNumber) {
   // An array containing the score variable and the boxes array
   let scoreBoxes;
 
+  let phraseStats = [];
+
   submitBtn.addEventListener("click", () => {
     let phraseInfo = [phraseCount, phraseNumber];
-    scoreBoxes = checkAnswer(data, k, phraseInfo, score, boxes);
+    scoreBoxes = checkAnswer(data, k, phraseInfo, score, boxes, phraseStats);
     score = scoreBoxes[0];
     boxes = scoreBoxes[1];
   });
@@ -151,7 +153,7 @@ export function launchApp(data, phraseNumber) {
   finishBtn.addEventListener("click", () => {
     conjugSection.innerHTML = "";
     conjugSection.style.display = "none";
-    showResultPage(score, phraseNumber);
+    showResultPage(score, phraseNumber, phraseStats);
 
     // Adding data to the database
 

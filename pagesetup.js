@@ -254,10 +254,11 @@ export function setSpecialBtns() {
   });
 }
 
-export function showResultPage(score, phraseNumber) {
+export function showResultPage(score, phraseNumber, phraseStats) {
   const mainSection = document.querySelector(".mainSection");
-  //const main = document.querySelector("main");
   mainSection.innerHTML = "";
+
+  const main = document.querySelector("main");
 
   const resultDiv = document.createElement("div");
   resultDiv.classList.add("result");
@@ -288,10 +289,52 @@ export function showResultPage(score, phraseNumber) {
   restartBtn.innerText = "restart";
   restartSection.appendChild(restartBtn);
 
+  let summary = document.querySelector("summary");
+
   restartBtn.addEventListener("click", () => {
     mainSection.innerHTML = "";
+    if (summary) {
+      main.removeChild(summary);
+    }
     launchFirstPage();
   });
+
+  if (!summary) {
+    summary = document.createElement("div");
+    summary.classList.add("summary");
+    main.appendChild(summary);
+  }
+
+  const summaryH = document.createElement("h1");
+  summary.appendChild(summaryH);
+  summaryH.innerText = "Summary";
+
+  const summaryList = document.createElement("ul");
+  summary.appendChild(summaryList);
+  for (let i = 0; i < phraseStats.length; i++) {
+    const listEl = document.createElement("li");
+    summaryList.appendChild(listEl);
+    console.log(phraseStats[i].isCorrect);
+    listEl.innerHTML = `Question ${i + 1}: <span style="font-weight: bold;">${
+      phraseStats[i].phrase
+    }</span>
+    <p>Your answer: <span style="font-weight: bold;">${
+      phraseStats[i].input
+    }</span> <i class="fa-solid fa-square-check correctCheck"></i></p>
+    <p class="correctAnswer">The correct answer: <span style="font-weight: bold;">${
+      phraseStats[i].correctAnswer
+    }</span></p>`;
+    const correctCheck = listEl.querySelector(".correctCheck");
+    const correctAnswer = listEl.querySelector(".correctAnswer");
+
+    if (phraseStats[i].isCorrect) {
+      correctCheck.style.display = "inline";
+      correctAnswer.style.display = "none";
+    } else {
+      correctAnswer.style.display = "inline";
+      correctCheck.style.display = "none";
+    }
+  }
 }
 
 export function generateSignUpForm() {

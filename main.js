@@ -86,9 +86,16 @@ export function displayNext(data, indexArray, k) {
 }
 
 // A function that reads the user input and compares it to the correct answer
-export function checkAnswer(data, k, phraseInfo, score, boxes) {
+export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
   let phraseCount = phraseInfo[0];
   let phraseNumber = phraseInfo[1];
+  //let phraseStats = [];
+  let phraseStatObject = {
+    phrase: "",
+    input: "",
+    correctAnswer: "",
+    isCorrect: false,
+  };
 
   let scoreBoxes;
 
@@ -118,6 +125,10 @@ export function checkAnswer(data, k, phraseInfo, score, boxes) {
     displaySection = finishSection;
   }
 
+  phraseStatObject.phrase = data.data[k].phrase;
+  phraseStatObject.input = inputText;
+  phraseStatObject.correctAnswer = data.data[k].answer;
+
   switch (inputText.trim().toLowerCase()) {
     case "":
       msgArea.innerText = "Please type a valid verb";
@@ -126,6 +137,8 @@ export function checkAnswer(data, k, phraseInfo, score, boxes) {
       phraseDisplay.innerHTML = `<p><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low"></i></p>`;
       phraseDisplay.style.color = "#228b22";
       msgArea.innerText = "Correct!";
+
+      phraseStatObject.isCorrect = true;
 
       // The speaker icon
       const speaker = document.querySelector(".fa-volume-low");
@@ -139,7 +152,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes) {
       score++;
 
       if (userId) {
-        boxes = movePhraseForward(k, boxes);
+        movePhraseForward(k, boxes);
       }
 
       break;
@@ -149,7 +162,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes) {
       msgArea.innerText = `Incorrect. The correct answer is: "${data.data[k].answer}"`;
 
       if (userId) {
-        boxes = movePhraseBackward(k, boxes);
+        movePhraseBackward(k, boxes);
       }
 
       try {
@@ -170,6 +183,9 @@ export function checkAnswer(data, k, phraseInfo, score, boxes) {
         console.log("Verb " + data.data[k].verb + " is not found in database ");
       }
   }
+
+  phraseStats.push(phraseStatObject);
+  console.log(phraseStats);
 
   // Popup close icon
   const popupCloseBtn = document.querySelector(".popup-close");
