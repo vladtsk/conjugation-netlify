@@ -4,6 +4,8 @@ import { playAudio, movePhraseForward, movePhraseBackward } from "./final.js";
 
 import { onAuthStateChanged, app, getAuth } from "./config.js";
 
+import { showNoMorePhrasesPage } from "./pagesetup.js";
+
 const auth = getAuth(app);
 
 // Fetching verb conjugation tables
@@ -19,7 +21,7 @@ onAuthStateChanged(auth, (user) => {
 });
 
 // A function generating a unique index and displaying a verb and a phrase corresponding to the index
-export function generateElements(data, indexArray, k) {
+export function generateElements(data, indexArray, k, score, phraseStats) {
   if (indexArray.length !== data.data.length) {
     // Generate a random and unique index
     k = Math.floor(Math.random() * data.data.length);
@@ -27,11 +29,13 @@ export function generateElements(data, indexArray, k) {
       k = Math.floor(Math.random() * data.data.length);
     } while (indexArray.includes(k));
     indexArray.push(k);
+    displayVerb(data, k);
+    displayPhrase(data, k);
   } else {
     console.log("No more phrases to practise!");
+    showNoMorePhrasesPage(score, phraseStats);
   }
-  displayVerb(data, k);
-  displayPhrase(data, k);
+
   return k;
 }
 
@@ -65,7 +69,7 @@ export function displayTense(data) {
 }
 
 // Display the next element
-export function displayNext(data, indexArray, k) {
+export function displayNext(data, indexArray, k, score, phraseStats) {
   // Select the 'next' section
   const nextSection = document.querySelector(".next-section");
 
@@ -76,10 +80,17 @@ export function displayNext(data, indexArray, k) {
   const msgArea = document.querySelector(".msg-section p");
   // Select the input element
   const inputArea = document.querySelector(".type-section input");
+  inputArea.removeAttribute("disabled");
+
+  // Selecting the special character buttons
+  const specialBtns = document.querySelectorAll(".letters-section button");
+  specialBtns.forEach((button) => {
+    button.removeAttribute("disabled");
+  });
 
   msgArea.innerText = "";
   inputArea.value = "";
-  k = generateElements(data, indexArray, k);
+  k = generateElements(data, indexArray, k, score, phraseStats);
   nextSection.style.display = "none";
   submitSection.style.display = "flex";
   return k;
@@ -112,6 +123,8 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
   const nextSection = document.querySelector(".next-section");
   // Select the finish section
   const finishSection = document.querySelector(".finish-section");
+  // Selecting the special character buttons
+  const specialBtns = document.querySelectorAll(".letters-section button");
 
   // The phrase display section
   const phraseDisplay = document.querySelector(".phrase-section p");
@@ -140,6 +153,12 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
 
       phraseStatObject.isCorrect = true;
 
+      inputArea.setAttribute("disabled", "");
+
+      specialBtns.forEach((button) => {
+        button.setAttribute("disabled", "");
+      });
+
       // The speaker icon
       const speaker = document.querySelector(".fa-volume-low");
 
@@ -154,12 +173,16 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       if (userId) {
         movePhraseForward(k, boxes);
       }
-
+      phraseStats.push(phraseStatObject);
       break;
     default:
       phraseDisplay.textContent = data.data[k].fullPhrase;
       inputArea.style.color = "#ef233c";
       msgArea.innerText = `Incorrect. The correct answer is: "${data.data[k].answer}"`;
+      inputArea.setAttribute("disabled", "");
+      specialBtns.forEach((button) => {
+        button.setAttribute("disabled", "");
+      });
 
       if (userId) {
         movePhraseBackward(k, boxes);
@@ -182,9 +205,9 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       } catch {
         console.log("Verb " + data.data[k].verb + " is not found in database ");
       }
+      phraseStats.push(phraseStatObject);
   }
 
-  phraseStats.push(phraseStatObject);
   console.log(phraseStats);
 
   // Popup close icon
@@ -196,7 +219,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
     });
   }
 
-  if (inputText !== "") {
+  if (inputText.trim().toLowerCase() !== "") {
     submitSection.style.display = "none";
     displaySection.style.display = "flex";
   }

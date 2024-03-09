@@ -28,6 +28,8 @@ const logInButtonMenu = document.getElementById("logInButtonMenu");
 const logOutButton = document.getElementById("logOutButton");
 const logOutSection = document.querySelector(".logOutSection");
 const mainSection = document.querySelector(".mainSection");
+const main = document.querySelector("main");
+let summary = document.querySelector(".summary");
 
 //signUpForm.style.display = "none";
 
@@ -95,10 +97,14 @@ async function userLogIn() {
       const errorMessage = error.message;
       console.log(errorCode + errorMessage);
     });
+
+  mainSection.innerHTML = "";
 }
 
 async function userLogOut() {
   await signOut(auth);
+  mainSection.innerHTML = "";
+
   launchFirstPage();
   alert("Your have logged out");
 }
@@ -106,8 +112,6 @@ async function userLogOut() {
 async function checkAuthState() {
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      //launchFirstPage();
-
       if (logInForm) {
         logInForm.style.display = "none";
       }
@@ -121,8 +125,6 @@ async function checkAuthState() {
 
       mainSection.style.display = "block";
     } else {
-      //logInForm.style.display = "block";
-      //mainSection.style.display = "none";
       logOutButton.style.display = "none";
       logInButtonMenu.style.display = "inline-block";
     }
@@ -137,7 +139,6 @@ const logInSwitch = document.getElementById("logInSwitch");
 if (logInSwitch) {
   logInSwitch.addEventListener("click", () => {
     signUpForm.style.display = "none";
-    //generateLogInForm();
 
     logInButtonMenu.style.display = "none";
     logInForm.style.display = "block";
@@ -148,7 +149,6 @@ const signUpSwitch = document.getElementById("signUpSwitch");
 if (signUpSwitch) {
   signUpSwitch.addEventListener("click", () => {
     logInForm.style.display = "none";
-    //generateSignUpForm();
 
     logInButtonMenu.style.display = "none";
     signUpForm.style.display = "block";
@@ -172,12 +172,20 @@ if (logInButton) {
 if (logOutButton) {
   logOutButton.addEventListener("click", (event) => {
     event.preventDefault();
+    summary = document.querySelector(".summary");
+    if (summary) {
+      main.removeChild(summary);
+    }
     userLogOut();
   });
 }
 
 if (logInButtonMenu) {
   logInButtonMenu.addEventListener("click", () => {
+    summary = document.querySelector(".summary");
+    if (summary) {
+      main.removeChild(summary);
+    }
     mainSection.style.display = "none";
     logInForm.style.display = "block";
   });

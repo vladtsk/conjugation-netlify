@@ -205,6 +205,7 @@ export function buildPageStructure(data) {
   messageSection.appendChild(messageP);
 
   // Conjugation popup section
+  // Add verbs with 2 auxiliaries !!!
   const conjugSection = document.createElement("div");
   conjugSection.classList.add("conjugSection");
   main.appendChild(conjugSection);
@@ -254,7 +255,7 @@ export function setSpecialBtns() {
   });
 }
 
-export function showResultPage(score, phraseNumber, phraseStats) {
+export function showResultPage(score, phraseStats) {
   const mainSection = document.querySelector(".mainSection");
   mainSection.innerHTML = "";
 
@@ -278,7 +279,7 @@ export function showResultPage(score, phraseNumber, phraseStats) {
   scoreDiv.appendChild(trophyIcon);
 
   const scoreMsg = document.createElement("p");
-  scoreMsg.innerText = `Your score is: ${score}/${phraseNumber}`;
+  scoreMsg.innerText = `Your score is: ${score}/${phraseStats.length}`;
   scoreDiv.appendChild(scoreMsg);
 
   const restartSection = document.createElement("div");
@@ -289,20 +290,85 @@ export function showResultPage(score, phraseNumber, phraseStats) {
   restartBtn.innerText = "restart";
   restartSection.appendChild(restartBtn);
 
-  let summary = document.querySelector("summary");
+  let summary = document.querySelector(".summary");
+
+  showSummary(phraseStats);
 
   restartBtn.addEventListener("click", () => {
+    summary = document.querySelector(".summary");
     mainSection.innerHTML = "";
     if (summary) {
       main.removeChild(summary);
     }
     launchFirstPage();
   });
+}
+
+export function showNoMorePhrasesPage(score, phraseStats) {
+  const mainSection = document.querySelector(".mainSection");
+  mainSection.innerHTML = "";
+
+  const main = document.querySelector("main");
+
+  const noMorePhrDiv = document.createElement("div");
+  noMorePhrDiv.classList.add("noMorePhrDiv");
+  mainSection.appendChild(noMorePhrDiv);
+
+  const noMorePhrMsg = document.createElement("p");
+  noMorePhrMsg.innerText = "You have no more phrases to practise!";
+  noMorePhrDiv.appendChild(noMorePhrMsg);
+
+  const noMorePhrExpl = document.createElement("p");
+  noMorePhrExpl.classList.add("noMorePhrExpl");
+  noMorePhrExpl.innerText =
+    "Don't worry! Our smart repetition system shows you phrases at specific intervals, enhancing your ability to memorize them efficiently. Feel free to experiment with different tenses to explore more phrases for learning.";
+  noMorePhrDiv.appendChild(noMorePhrExpl);
+
+  const scoreDiv = document.createElement("div");
+  scoreDiv.classList.add("score-section");
+  mainSection.appendChild(scoreDiv);
+
+  const trophyIcon = document.createElement("i");
+  trophyIcon.classList.add("fa-solid");
+  trophyIcon.classList.add("fa-trophy");
+  scoreDiv.appendChild(trophyIcon);
+
+  const scoreMsg = document.createElement("p");
+  scoreMsg.innerText = `Your score is: ${score}/${phraseStats.length}`;
+  scoreDiv.appendChild(scoreMsg);
+
+  const restartSection = document.createElement("div");
+  restartSection.classList.add("restart");
+  mainSection.appendChild(restartSection);
+  const restartBtn = document.createElement("button");
+  restartBtn.id = "restart-btn";
+  restartBtn.innerText = "restart";
+  restartSection.appendChild(restartBtn);
+
+  let summary = document.querySelector(".summary");
+
+  showSummary(phraseStats);
+
+  restartBtn.addEventListener("click", () => {
+    summary = document.querySelector(".summary");
+    console.log(summary);
+    mainSection.innerHTML = "";
+    if (summary) {
+      main.removeChild(summary);
+    }
+    launchFirstPage();
+  });
+}
+
+function showSummary(phraseStats) {
+  const main = document.querySelector("main");
+  let summary = document.querySelector(".summary");
 
   if (!summary) {
     summary = document.createElement("div");
     summary.classList.add("summary");
     main.appendChild(summary);
+    console.log(summary);
   }
 
   const summaryH = document.createElement("h1");

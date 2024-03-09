@@ -108,19 +108,19 @@ export function launchApp(data, phraseNumber) {
 
   setSpecialBtns();
 
+  // An array containing the score variable and the boxes array
+  let scoreBoxes;
+
+  let phraseStats = [];
+
   // Generating a unique index and displaying a verb and a phrase
-  k = generateElements(data, indexArray, phraseCount, k);
+  k = generateElements(data, indexArray, k, score, phraseStats);
   phraseCount++;
 
   // Adding an event listener to check the answer when the 'submit' button is clicked
 
   // Select the submit button
   const submitBtn = document.getElementById("submit-btn");
-
-  // An array containing the score variable and the boxes array
-  let scoreBoxes;
-
-  let phraseStats = [];
 
   submitBtn.addEventListener("click", () => {
     let phraseInfo = [phraseCount, phraseNumber];
@@ -144,7 +144,7 @@ export function launchApp(data, phraseNumber) {
     conjugSection.style.display = "none";
     phraseDisplay.style.color = "black";
     inputArea.style.color = "black";
-    k = displayNext(data, indexArray, phraseCount, k);
+    k = displayNext(data, indexArray, k, score, phraseStats);
     phraseCount++;
   });
 
@@ -153,7 +153,7 @@ export function launchApp(data, phraseNumber) {
   finishBtn.addEventListener("click", () => {
     conjugSection.innerHTML = "";
     conjugSection.style.display = "none";
-    showResultPage(score, phraseNumber, phraseStats);
+    showResultPage(score, phraseStats);
 
     // Adding data to the database
 

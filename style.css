@@ -11,6 +11,11 @@ body {
   --color-tertiary: #ef233c;
 
   background-color: var(--color-secondary);
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 a {
@@ -275,6 +280,13 @@ main {
   font-size: 16px;
 }
 
+input[disabled] {
+  background-color: #f2f2f2;
+}
+button[disabled] {
+  background-color: #f2f2f2;
+}
+
 /* The message section */
 .msg-section {
   color: var(--color-secondary);
@@ -400,6 +412,19 @@ main {
   text-align: center;
   margin-bottom: 40px;
   font-size: 24px;
+}
+
+.noMorePhrDiv {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+
+.noMorePhrExpl {
+  font-size: 16px;
+  margin-top: 20px;
 }
 
 /* Styling the score section */

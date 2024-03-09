@@ -1328,6 +1328,14 @@
         "5": "vous avez passé",
         "6": "ils/elles ont passé"
       },
+      "pastcompEtre": {
+        "1": "je suis passé(e)",
+        "2": "tu es passé(e)",
+        "3": "il/elle/on est passé(e)(s)",
+        "4": "nous sommes passé(e)s",
+        "5": "vous êtes passé(e)(s)",
+        "6": "ils/elles sont passé(e)s"
+      },
       "pastimp": {
         "1": "je passais",
         "2": "tu passais",
