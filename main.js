@@ -81,6 +81,7 @@ export function displayNext(data, indexArray, k, score, phraseStats) {
   // Select the input element
   const inputArea = document.querySelector(".type-section input");
   inputArea.removeAttribute("disabled");
+  inputArea.classList.remove("bold");
 
   // Selecting the special character buttons
   const specialBtns = document.querySelectorAll(".letters-section button");
@@ -90,6 +91,7 @@ export function displayNext(data, indexArray, k, score, phraseStats) {
 
   msgArea.innerText = "";
   inputArea.value = "";
+
   k = generateElements(data, indexArray, k, score, phraseStats);
   nextSection.style.display = "none";
   submitSection.style.display = "flex";
@@ -149,6 +151,8 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
     case data.data[k].answer:
       phraseDisplay.innerHTML = `<p><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low"></i></p>`;
       phraseDisplay.style.color = "#228b22";
+      inputArea.style.color = "#228b22";
+      inputArea.classList.add("bold");
       msgArea.innerText = "Correct!";
 
       phraseStatObject.isCorrect = true;
@@ -180,6 +184,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       inputArea.style.color = "#ef233c";
       msgArea.innerText = `Incorrect. The correct answer is: "${data.data[k].answer}"`;
       inputArea.setAttribute("disabled", "");
+      inputArea.classList.add("bold");
       specialBtns.forEach((button) => {
         button.setAttribute("disabled", "");
       });
@@ -193,6 +198,14 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
           jsonConjug.verbs[`${data.data[k].verb}`][
             `${data.data[0].tenseShort}`
           ];
+        if (
+          data.data[k].aux &&
+          data.data[k].aux === "être" &&
+          data.data[k].twoAux
+        ) {
+          popupMsg = jsonConjug.verbs[`${data.data[k].verb}`]["pastcompEtre"];
+          console.log(popupMsg);
+        }
 
         let popupMsgValues = Object.values(popupMsg);
         conjugSection.innerHTML = `<div class="popup-icons"><i class="fa-regular fa-lightbulb bulb-animation" 

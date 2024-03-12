@@ -22,6 +22,10 @@ a {
   color: inherit;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 header {
   margin-bottom: 20px;
   padding-block: 10px;
@@ -457,7 +461,7 @@ button[disabled] {
 }
 
 .summary {
-  min-width: 300px;
+  min-width: 250px;
   margin-top: 20px;
   margin-bottom: 20px;
 
@@ -466,8 +470,8 @@ button[disabled] {
 
   margin-inline: auto;
 
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
 

@@ -279,12 +279,13 @@
       "aux": "être",
       "fullPhrase": "Nous sommes partis à Bordeaux."
     },
+
     {
       "id": 39,
       "verb": "passer",
       "phrase": "J'____ une bonne journée.",
       "answer": "ai passé",
-      "2aux": true,
+      "twoAux": true,
       "fullPhrase": "J'ai passé une bonne journée."
     },
     {
@@ -334,9 +335,10 @@
       "verb": "passer",
       "phrase": "Tu ____ une bonne journée ?",
       "answer": "as passé",
-      "2aux": true,
+      "twoAux": true,
       "fullPhrase": "Tu as passé une bonne journée ?"
     },
+
     {
       "id": 47,
       "verb": "faire",
@@ -431,7 +433,7 @@
       "phrase": "Je (féminine) ____ chez Olivia.",
       "answer": "suis passée",
       "aux": "être",
-      "2aux": true,
+      "twoAux": true,
       "fullPhrase": "Je suis passée chez Olivia."
     },
     {
