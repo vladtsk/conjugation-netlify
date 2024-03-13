@@ -31,10 +31,7 @@ const mainSection = document.querySelector(".mainSection");
 const main = document.querySelector("main");
 let summary = document.querySelector(".summary");
 
-//signUpForm.style.display = "none";
-
 async function userSignUp() {
-  //generateSignUpForm();
   const userEmail = document.getElementById("signUpEmail");
   const userPassword = document.getElementById("signUpPassword");
 

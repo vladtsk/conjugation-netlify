@@ -9,7 +9,7 @@ import { showNoMorePhrasesPage } from "./pagesetup.js";
 const auth = getAuth(app);
 
 // Fetching verb conjugation tables
-const responseConjug = await fetch("conjugation.json");
+const responseConjug = await fetch("../src/conjugation.json");
 const jsonConjug = await responseConjug.json();
 
 // Getting the user ID
