@@ -291,6 +291,12 @@ button[disabled] {
   background-color: #f2f2f2;
 }
 
+.translation {
+  font-weight: 400;
+  color: black;
+  font-size: 14px;
+}
+
 /* The message section */
 .msg-section {
   color: var(--color-secondary);

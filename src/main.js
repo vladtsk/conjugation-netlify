@@ -149,9 +149,9 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       msgArea.innerText = "Please type a valid verb";
       break;
     case data.data[k].answer:
-      phraseDisplay.innerHTML = `<p><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low"></i></p>`;
+      phraseDisplay.innerHTML = `<div><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low"></i><p class="translation">${data.data[k].translation}</p></div>`;
       phraseDisplay.style.color = "#228b22";
-      inputArea.style.color = "#228b22";
+      /*inputArea.style.color = "#228b22";*/
       inputArea.classList.add("bold");
       msgArea.innerText = "Correct!";
 
