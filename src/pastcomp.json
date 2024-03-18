@@ -184,7 +184,9 @@
       "verb": "arriver",
       "phrase": "Ils ____ ce matin.",
       "answer": "sont arrivés",
+      "answerWoS": "sont arrivé",
       "aux": "être",
+      "plural": true,
       "fullPhrase": "Ils sont arrivés ce matin.",
       "translation": "They arrived this morning."
     },
@@ -193,7 +195,9 @@
       "verb": "retourner",
       "phrase": "Elle ____ aux États-Unis.",
       "answer": "est retournée",
+      "answerWoS": "est retourné",
       "aux": "être",
+      "fem": true,
       "fullPhrase": "Elle est retournée aux États-Unis.",
       "translation": "She returned to the United States."
     },
@@ -210,7 +214,9 @@
       "verb": "monter",
       "phrase": "Nous ____ à la tour Eiffel.",
       "answer": "sommes montés",
+      "answerWoS": "sommes monté",
       "aux": "être",
+      "plural": true,
       "fullPhrase": "Nous sommes montés à la tour Eiffel.",
       "translation": "We went up the Eiffel Tower."
     },
@@ -276,10 +282,12 @@
     {
       "id": 34,
       "verb": "rentrer",
-      "phrase": "Je (féminine) ____ à la maison.",
+      "phrase": "Je (fem.) ____ à la maison.",
       "answer": "suis rentrée",
+      "answerWoS": "suis rentré",
       "aux": "être",
-      "fullPhrase": "Je suis rentrée à la maison.",
+      "fem": true,
+      "fullPhrase": "Je (fem.) suis rentrée à la maison.",
       "translation": "I came back home."
     },
     {
@@ -287,7 +295,9 @@
       "verb": "venir",
       "phrase": "Ils ____ à 9 heures.",
       "answer": "sont venus",
+      "answerWoS": "sont venu",
       "aux": "être",
+      "plural": true,
       "fullPhrase": "Ils sont venus à 9 heures.",
       "translation": "They came at 9 o'clock."
     },
@@ -304,7 +314,9 @@
       "verb": "se voir",
       "phrase": "On (masc.) ne s'____ pas ____ depuis longtemps.",
       "answer": "est vus",
+      "answerWoS": "est vu",
       "aux": "être",
+      "plural": true,
       "fullPhrase": "On ne s'est pas vus depuis longtemps.",
       "translation": "We haven't seen each other for a long time."
     },
@@ -313,7 +325,9 @@
       "verb": "partir",
       "phrase": "Nous ____ à Bordeaux.",
       "answer": "sommes partis",
+      "answerWoS": "sommes parti",
       "aux": "être",
+      "plural": true,
       "fullPhrase": "Nous sommes partis à Bordeaux.",
       "translation": "We left for Bordeaux."
     },
@@ -452,9 +466,11 @@
       "verb": "aller",
       "phrase": "Où est-ce que tu (féminine) ____ ?",
       "answer": "es allée",
+      "answerWoS": "es allé",
       "aux": "être",
-      "fullPhrase": "Où est-ce que tu es allée ?",
-      "translation": "Where did you go? (female)"
+      "fem": true,
+      "fullPhrase": "Où est-ce que tu (fem.) es allée ?",
+      "translation": "Where did you go?"
     },
     {
       "id": 56,
@@ -486,11 +502,13 @@
     {
       "id": 59,
       "verb": "passer",
-      "phrase": "Je (féminine) ____ chez Olivia.",
+      "phrase": "Je (fem.) ____ chez Olivia.",
       "answer": "suis passée",
+      "answerWoS": "suis passé",
       "aux": "être",
       "twoAux": true,
-      "fullPhrase": "Je suis passée chez Olivia.",
+      "fem": true,
+      "fullPhrase": "Je (fem.) suis passée chez Olivia.",
       "translation": "I stopped by Olivia's."
     },
     {
@@ -514,7 +532,9 @@
       "verb": "aller",
       "phrase": "Vous (masc., plural) ____ où ?",
       "answer": "êtes allés",
+      "answerWoS": "êtes allé",
       "aux": "être",
+      "plural": true,
       "fullPhrase": "Vous êtes allés où ?",
       "translation": "Where did you (guys) go?"
     },
@@ -676,8 +696,10 @@
       "verb": "arriver",
       "phrase": "Je (fem.) ____ vers 10 h.",
       "answer": "suis arrivée",
+      "answerWoS": "suis arrivé",
       "aux": "être",
-      "fullPhrase": "Je suis arrivée vers 10 h.",
+      "fem": true,
+      "fullPhrase": "Je (fem.) suis arrivée vers 10 h.",
       "translation": "I arrived around 10 a.m."
     },
     {
@@ -739,7 +761,9 @@
       "verb": "arriver",
       "phrase": "Les pompiers ____.",
       "answer": "sont arrivés",
+      "answerWoS": "sont arrivé",
       "aux": "être",
+      "plural": true,
       "fullPhrase": "Les pompiers sont arrivés.",
       "translation": "The firefighters arrived."
     },
@@ -748,7 +772,9 @@
       "verb": "arriver",
       "phrase": "Ils ____ très vite.",
       "answer": "sont arrivés",
+      "answerWoS": "sont arrivé",
       "aux": "être",
+      "plural": true,
       "fullPhrase": "Ils sont arrivés très vite.",
       "translation": "They arrived very quickly."
     },
@@ -757,7 +783,9 @@
       "verb": "aller",
       "phrase": "Ils ____ à l'hôpital.",
       "answer": "sont allés",
+      "answerWoS": "sont allé",
       "aux": "être",
+      "plural": true,
       "fullPhrase": "Ils sont allés à l'hôpital.",
       "translation": "They went to the hospital."
     },
@@ -773,8 +801,8 @@
     {
       "id": 93,
       "verb": "se passer",
-      "phrase": "Ça ____ très bien ____.",
-      "answer": "s'est passé",
+      "phrase": "Ça s'____ très bien ____.",
+      "answer": "est passé",
       "aux": "être",
       "fullPhrase": "Ça s'est très bien passé.",
       "translation": "It went very well."
@@ -793,15 +821,17 @@
       "verb": "se lever",
       "phrase": "Je (fem.) ____ tard.",
       "answer": "me suis levée",
+      "answerWoS": "me suis levé",
       "aux": "être",
-      "fullPhrase": "Je me suis levée tard.",
+      "fem": true,
+      "fullPhrase": "Je (fem.) me suis levée tard.",
       "translation": "I got up late."
     },
     {
       "id": 96,
       "verb": "se baigner",
-      "phrase": "Tu (masc.) ____ ?",
-      "answer": "t'es baigné",
+      "phrase": "Tu (masc.) t'____ ?",
+      "answer": "es baigné",
       "aux": "être",
       "fullPhrase": "Tu t'es baigné ?",
       "translation": "Did you go for a swim?"
@@ -811,15 +841,17 @@
       "verb": "se baigner",
       "phrase": "Je (fem.) ____ dans le lac.",
       "answer": "me suis baignée",
+      "answerWoS": "me suis baigné",
       "aux": "être",
-      "fullPhrase": "Je me suis baignée dans le lac.",
+      "fem": true,
+      "fullPhrase": "Je (fem.) me suis baignée dans le lac.",
       "translation": "I went for a swim in the lake."
     },
     {
       "id": 98,
       "verb": "se promener",
-      "phrase": "Tu (masc.) ____ en ville ?",
-      "answer": "t'es promené",
+      "phrase": "Tu (masc.) t'____ en ville ?",
+      "answer": "es promené",
       "aux": "être",
       "fullPhrase": "Tu t'es promené en ville ?",
       "translation": "Did you walk around the city?"
@@ -838,8 +870,10 @@
       "verb": "se perdre",
       "phrase": "Je (fem.) ____ !",
       "answer": "me suis perdue",
+      "answerWoS": "me suis perdu",
       "aux": "être",
-      "fullPhrase": "Je me suis perdue !",
+      "fem": true,
+      "fullPhrase": "Je (fem.) me suis perdue !",
       "translation": "I got lost!"
     },
     {
@@ -847,8 +881,10 @@
       "verb": "aller",
       "phrase": "Tu (fem.) n'____ pas ____ danser ?",
       "answer": "es allée",
+      "answerWoS": "es allé",
       "aux": "être",
-      "fullPhrase": "Tu n'es pas allée danser ?",
+      "fem": true,
+      "fullPhrase": "Tu (fem.) n'es pas allée danser ?",
       "translation": "Didn't you go dancing?"
     },
     {
@@ -856,8 +892,10 @@
       "verb": "aller",
       "phrase": "Je (fem.) ____ en boîte.",
       "answer": "suis allée",
+      "answerWoS": "suis allé",
       "aux": "être",
-      "fullPhrase": "Je suis allée en boîte.",
+      "fem": true,
+      "fullPhrase": "Je (fem.) suis allée en boîte.",
       "translation": "I went to the club."
     },
     {
@@ -881,8 +919,8 @@
     {
       "id": 105,
       "verb": "se passer",
-      "phrase": "Ça ____ bien ____ ?",
-      "answer": "s'est passé",
+      "phrase": "Ça s'____ bien ____ ?",
+      "answer": "est passé",
       "aux": "être",
       "fullPhrase": "Ça s'est bien passé ?",
       "translation": "Did it go well?"
@@ -892,15 +930,17 @@
       "verb": "se disputer",
       "phrase": "Je (fem.) ____ avec lui.",
       "answer": "me suis disputée",
+      "answerWoS": "me suis disputé",
       "aux": "être",
-      "fullPhrase": "Je me suis disputée avec lui.",
+      "fem": true,
+      "fullPhrase": "Je (fem.) me suis disputée avec lui.",
       "translation": "I argued with him."
     },
     {
       "id": 107,
       "verb": "se téléphoner",
-      "phrase": "Nous ____ tous les jours.",
-      "answer": "nous sommes téléphoné",
+      "phrase": "Nous nous ____ tous les jours.",
+      "answer": "sommes téléphoné",
       "aux": "être",
       "fullPhrase": "Nous nous sommes téléphoné tous les jours.",
       "translation": "We called each other every day."
@@ -910,8 +950,10 @@
       "verb": "se reposer",
       "phrase": "Je (fem.) ____.",
       "answer": "me suis reposée",
+      "answerWoS": "me suis reposé",
       "aux": "être",
-      "fullPhrase": "Je me suis reposée.",
+      "fem": true,
+      "fullPhrase": "Je (fem.) me suis reposée.",
       "translation": "I rested."
     },
     {

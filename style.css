@@ -79,14 +79,15 @@ main {
   color: var(--color-secondary);
   background-color: var(--color-primary);
 
-  min-width: 300px;
+  /*min-width: 300px;*/
+  width: fit-content;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   border-radius: 20px;
@@ -211,7 +212,8 @@ main {
   text-align: center;
   font-weight: 500;
   background-color: var(--color-secondary);
-  min-width: 20%;
+  /*min-width: 20%;*/
+
   border-radius: 6px;
   height: 30px;
 }
@@ -230,12 +232,12 @@ main {
   margin-right: auto;
   padding-top: 5px;
   padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
   background-color: var(--color-secondary);
   border-radius: 6px;
   min-height: 60px;
-  width: 100%;
+  width: fit-content;
 }
 
 /* Styling the sections with special letters */
@@ -265,7 +267,7 @@ main {
   background-color: var(--color-secondary);
   color: black;
   border-radius: 6px;
-  width: 60%;
+  width: fit-content;
   height: 40px;
 }
 
@@ -275,8 +277,8 @@ main {
   text-align: center;
   padding: 10px;
   background-color: var(--color-secondary);
-  width: 100%;
-  height: 100%;
+  /*width: 100%;
+  height: 100%;*/
   border-radius: 6px;
 }
 
@@ -286,6 +288,7 @@ main {
 
 input[disabled] {
   background-color: #f2f2f2;
+  /*color: #383642;*/
 }
 button[disabled] {
   background-color: #f2f2f2;
@@ -300,10 +303,17 @@ button[disabled] {
 /* The message section */
 .msg-section {
   color: var(--color-secondary);
-  font-size: 0.6 em;
+  font-size: 18px;
   text-align: center;
   font-style: italic;
   margin-inline: 30px;
+  /*max-width: 60%;*/
+  margin-inline: auto;
+}
+
+.reminder {
+  font-size: 0.8em;
+  margin-top: 10px;
 }
 
 /*The popup conjugation section*/
@@ -529,8 +539,8 @@ button[disabled] {
   .mainSection {
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   /*
   .phrase-section {
@@ -550,8 +560,8 @@ button[disabled] {
 
   .mainSection {
     padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   h1 {

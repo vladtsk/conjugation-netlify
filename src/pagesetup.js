@@ -201,8 +201,8 @@ export function buildPageStructure(data) {
   messageSection.classList.add("msg-section");
   mainSection.appendChild(messageSection);
 
-  const messageP = document.createElement("p");
-  messageSection.appendChild(messageP);
+  /*const messageP = document.createElement("p");
+  messageSection.appendChild(messageP);*/
 
   // Conjugation popup section
   // Add verbs with 2 auxiliaries !!!

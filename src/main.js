@@ -77,7 +77,7 @@ export function displayNext(data, indexArray, k, score, phraseStats) {
   const submitSection = document.querySelector(".submit-section");
 
   // Selecting the message "p" element
-  const msgArea = document.querySelector(".msg-section p");
+  const msgArea = document.querySelector(".msg-section");
   // Select the input element
   const inputArea = document.querySelector(".type-section input");
   inputArea.removeAttribute("disabled");
@@ -89,7 +89,7 @@ export function displayNext(data, indexArray, k, score, phraseStats) {
     button.removeAttribute("disabled");
   });
 
-  msgArea.innerText = "";
+  msgArea.innerHTML = "";
   inputArea.value = "";
 
   k = generateElements(data, indexArray, k, score, phraseStats);
@@ -113,7 +113,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
   let scoreBoxes;
 
   // Select "p" element for a message to display
-  const msgArea = document.querySelector(".msg-section p");
+  const msgArea = document.querySelector(".msg-section");
   // Conjugation popup section
   const conjugSection = document.querySelector(".conjugSection");
   // Selecting the submit section
@@ -130,6 +130,9 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
 
   // The phrase display section
   const phraseDisplay = document.querySelector(".phrase-section p");
+
+  // The speaker icon
+  const speaker = document.querySelector(".fa-volume-low");
 
   const inputText = inputArea.value;
   let displaySection;
@@ -150,10 +153,12 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       break;
     case data.data[k].answer:
       phraseDisplay.innerHTML = `<div><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low"></i><p class="translation">${data.data[k].translation}</p></div>`;
-      phraseDisplay.style.color = "#228b22";
-      /*inputArea.style.color = "#228b22";*/
+      /*phraseDisplay.style.color = "#228b22";*/
+      inputArea.style.color = "#228b22";
       inputArea.classList.add("bold");
       msgArea.innerText = "Correct!";
+
+      //underlineWord(data, k, phraseDisplay);
 
       phraseStatObject.isCorrect = true;
 
@@ -162,9 +167,6 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       specialBtns.forEach((button) => {
         button.setAttribute("disabled", "");
       });
-
-      // The speaker icon
-      const speaker = document.querySelector(".fa-volume-low");
 
       if (speaker) {
         speaker.addEventListener("click", () => {
@@ -179,8 +181,47 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       }
       phraseStats.push(phraseStatObject);
       break;
+
+    case data.data[k]?.answerWoS:
+      phraseDisplay.innerHTML = `<div><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low"></i><p class="translation">${data.data[k].translation}</p></div>`;
+      /*phraseDisplay.style.color = "#fa8950";*/
+      inputArea.style.color = "#d96e38";
+      inputArea.classList.add("bold");
+
+      if (data.data[k].fem) {
+        msgArea.innerHTML =
+          "<p class='almost'>Almost correct.</p> <p class='reminder'>Don't forget to add an 'e' to match feminine singular subjects (elle, Anna, etc.) when a verb in conjugated with 'être' in the 'passé composé'.</p>";
+      }
+      if (data.data[k].plural) {
+        msgArea.innerHTML =
+          "<p class='almost'>Almost correct.</p> <p>Don't forget to add an 's' to match plural subjects (ils, les enfants, etc.) when a verb is conjugated with 'être' in the 'passé composé'.</p>";
+      }
+
+      phraseStatObject.isCorrect = true;
+
+      inputArea.setAttribute("disabled", "");
+
+      specialBtns.forEach((button) => {
+        button.setAttribute("disabled", "");
+      });
+
+      if (speaker) {
+        speaker.addEventListener("click", () => {
+          playAudio(data.data[k].fullPhrase);
+        });
+      }
+
+      score++;
+
+      if (userId) {
+        movePhraseForward(k, boxes);
+      }
+      phraseStats.push(phraseStatObject);
+      break;
+
     default:
       phraseDisplay.textContent = data.data[k].fullPhrase;
+      //underlineWord(data, k, phraseDisplay);
       inputArea.style.color = "#ef233c";
       msgArea.innerText = `Incorrect. The correct answer is: "${data.data[k].answer}"`;
       inputArea.setAttribute("disabled", "");
@@ -221,7 +262,26 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       phraseStats.push(phraseStatObject);
   }
 
-  console.log(phraseStats);
+  /*
+  function underlineWord(data, k, phrase) {
+    const answerSplit = data.data[k].answer.split(" ");
+    console.log(answerSplit);
+    console.log(phrase.innerHTML);
+
+    let underlinedPhrase = phrase.innerHTML;
+    answerSplit.forEach((el) => {
+      const regex = new RegExp("([\\s']|^)(" + el + ")([\\s.,!?]|$)", "g");
+      console.log(el);
+      underlinedPhrase = underlinedPhrase.replace(regex, function (match) {
+        return "<u>" + match + "</u>";
+      });
+    });
+
+    console.log(underlinedPhrase);
+    phrase.innerHTML = underlinedPhrase;
+  }
+
+  */
 
   // Popup close icon
   const popupCloseBtn = document.querySelector(".popup-close");
