@@ -15,7 +15,13 @@ import {
   showResultPage,
 } from "./pagesetup.js";
 
-import { launchFirstPage, readDataFromDb, readStatsFromDb } from "./init.js";
+import {
+  launchFirstPage,
+  readDataFromDb,
+  readStatsFromDb,
+  checkRepetDate,
+  excludeBox6,
+} from "./init.js";
 
 import {
   generateElements,
@@ -44,7 +50,7 @@ let indexArray = [];
 launchFirstPage();
 
 // A function launching the app
-export function launchApp(data, phraseNumber) {
+export async function launchApp(data, phraseNumber) {
   // Making sure all the boxes are empty (to avoid errors when relaunching the app)
 
   boxes = [[], [], [], [], [], []];
@@ -67,9 +73,24 @@ export function launchApp(data, phraseNumber) {
   userId = 0;
 
   // Getting information from the database about the user's performance and copying the database information to dbArray
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      userId = auth.currentUser.uid;
+  async function getUser() {
+    return new Promise((resolve, reject) => {
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          //userId = auth.currentUser.uid;
+          resolve(auth.currentUser.uid);
+        } else {
+          reject(new Error("User not found"));
+        }
+      });
+    });
+  }
+
+  async function getData() {
+    userId = await getUser();
+    console.log(userId);
+
+    if (userId != 0) {
       const presentRef = ref(
         database,
         "users/" + userId + "/data/" + "/present"
@@ -86,25 +107,39 @@ export function launchApp(data, phraseNumber) {
       const statsRef = ref(database, "users/" + userId + "/data/" + "/stats");
 
       if (data.data[0].tense === "present (le présent de l'indicatif)") {
-        readDataFromDb(presentRef, boxes, indexArray);
+        await readDataFromDb(presentRef, boxes).then((dbBoxes) => {
+          boxes = dbBoxes;
+        });
       }
 
       if (data.data[0].tense === "past (le passé composé)") {
-        readDataFromDb(pastcompRef, boxes, indexArray);
+        await readDataFromDb(pastcompRef, boxes).then((dbBoxes) => {
+          boxes = dbBoxes;
+        });
       }
 
       if (data.data[0].tense === "imperfect past (l'imparfait)") {
-        readDataFromDb(pastimpRef, boxes, indexArray);
+        await readDataFromDb(pastimpRef, boxes).then((dbBoxes) => {
+          boxes = dbBoxes;
+        });
       }
 
       readStatsFromDb(statsRef).then((dbStats) => {
         stats = dbStats;
-        console.log(stats);
       });
+
+      // Checking the first 5 boxes for the repetition date (the last one is not shown by default)
+      for (let i = 0; i < boxes.length - 1; i++) {
+        checkRepetDate(boxes[i], indexArray);
+      }
+      //Excluding the elements in the Box6
+      excludeBox6(boxes, indexArray);
     } else {
       console.log("User is signed out");
     }
-  });
+  }
+
+  await getData();
 
   // Initializing the array box1 if there is no previous history (all the phrases go to box1)
   if (data && data.data.length > 0 && boxes.every((box) => box.length === 0)) {
@@ -133,12 +168,14 @@ export function launchApp(data, phraseNumber) {
   // Select the submit button
   const submitBtn = document.getElementById("submit-btn");
 
-  submitBtn.addEventListener("click", () => {
-    let phraseInfo = [phraseCount, phraseNumber];
-    scoreBoxes = checkAnswer(data, k, phraseInfo, score, boxes, phraseStats);
-    score = scoreBoxes[0];
-    boxes = scoreBoxes[1];
-  });
+  if (submitBtn) {
+    submitBtn.addEventListener("click", () => {
+      let phraseInfo = [phraseCount, phraseNumber];
+      scoreBoxes = checkAnswer(data, k, phraseInfo, score, boxes, phraseStats);
+      score = scoreBoxes[0];
+      boxes = scoreBoxes[1];
+    });
+  }
 
   // Adding an event listener to display the next phrase to test
 
@@ -150,32 +187,33 @@ export function launchApp(data, phraseNumber) {
   // The input area
   const inputArea = document.querySelector(".type-section input");
 
-  nextBtn.addEventListener("click", () => {
-    console.log(stats);
-    conjugSection.innerHTML = "";
-    conjugSection.style.display = "none";
-    phraseDisplay.style.color = "black";
-    inputArea.style.color = "black";
-    k = displayNext(data, indexArray, k, score, phraseStats);
-    phraseCount++;
-  });
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      conjugSection.innerHTML = "";
+      conjugSection.style.display = "none";
+      phraseDisplay.style.color = "black";
+      inputArea.style.color = "black";
+      k = displayNext(data, indexArray, k, score, phraseStats);
+      phraseCount++;
+    });
+  }
 
   // Select the finish button
   const finishBtn = document.getElementById("finish-btn");
-  finishBtn.addEventListener("click", () => {
-    console.log(stats.length);
-    conjugSection.innerHTML = "";
-    conjugSection.style.display = "none";
+  if (finishBtn) {
+    finishBtn.addEventListener("click", () => {
+      conjugSection.innerHTML = "";
+      conjugSection.style.display = "none";
 
-    // Adding data to the database and updating the statistics
-    if (userId !== 0) {
-      addBoxToDb(data, boxes, userId, database);
-      console.log(stats);
-      addStatsToDb(userId, database, stats, phraseStats);
-    } else {
-      console.log("User is signed out");
-    }
+      // Adding data to the database and updating the statistics
+      if (userId !== 0) {
+        addBoxToDb(data, boxes, userId, database);
+        addStatsToDb(userId, database, stats, phraseStats);
+      } else {
+        console.log("User is signed out");
+      }
 
-    showResultPage(score, phraseStats, stats);
-  });
+      showResultPage(score, phraseStats, stats);
+    });
+  }
 }

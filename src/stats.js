@@ -5,8 +5,11 @@ export function generateGraph() {
   const graphDiv = document.createElement("div");
   main.appendChild(graphDiv);
   graphDiv.classList.add("chart");
-  /*graphDiv.style.maxWidth = "400px";
-  graphDiv.style.marginInline = "auto";*/
+
+  const graphTitle = document.createElement("h2");
+  graphDiv.appendChild(graphTitle);
+  graphTitle.innerText = "Your weekly performance";
+
   const canvasEl = document.createElement("canvas");
   graphDiv.appendChild(canvasEl);
   canvasEl.setAttribute("id", "myChart");
@@ -21,8 +24,6 @@ export function buildGraph(stats) {
   let practisedPhrData = [];
   let correctPhrasesData = [];
 
-  console.log(stats[0]);
-
   for (let i = 6; i >= 0; i--) {
     const foundElement = stats.find(({ timestamp }) => {
       const pastDate = new Date(today);
@@ -36,8 +37,6 @@ export function buildGraph(stats) {
       );
     });
 
-    console.log(foundElement);
-
     if (foundElement) {
       practisedPhrData.push(foundElement.nbOfPhrPractised);
       correctPhrasesData.push(foundElement.nbOfCorrectPhr);
@@ -50,7 +49,6 @@ export function buildGraph(stats) {
   const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const todaysDayofWeek = today.getDay();
 
-  //const todaysDayName = dayNames[todaysDayofWeek];
   const rearrangedDayNames = [];
 
   for (let i = todaysDayofWeek + 1; i < 7; i++) {
@@ -60,8 +58,6 @@ export function buildGraph(stats) {
   for (let i = 0; i <= todaysDayofWeek; i++) {
     rearrangedDayNames.push(dayNames[i]);
   }
-
-  console.log(rearrangedDayNames);
 
   new Chart(ctx, {
     type: "bar",
@@ -74,12 +70,14 @@ export function buildGraph(stats) {
           //data: [5, 10, 5, 15, 10, 5, 0],
           data: practisedPhrData,
           borderWidth: 1,
+          backgroundColor: "#4677c7",
         },
         {
           label: "# of correct answers",
           //data: [3, 5, 5, 10, 5, 4, 0],
           data: correctPhrasesData,
           borderWidth: 1,
+          backgroundColor: "#2bc48c",
         },
       ],
     },

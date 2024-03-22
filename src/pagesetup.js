@@ -291,18 +291,35 @@ export function showResultPage(score, phraseStats, stats) {
   restartBtn.innerText = "restart";
   restartSection.appendChild(restartBtn);
 
-  //let summary = document.querySelector(".summary");
-  console.log(stats);
+  let showSummaryBtn = document.createElement("button");
+  showSummaryBtn.id = "showSummary-btn";
+  showSummaryBtn.innerText = "show summary";
+  restartSection.appendChild(showSummaryBtn);
+
   generateGraph();
   buildGraph(stats);
 
-  showSummary(phraseStats);
-
-  let summary = document.querySelector(".summary");
+  let summary;
   let chart = document.querySelector(".chart");
+
+  showSummaryBtn.addEventListener("click", () => {
+    if (phraseStats.length != 0) {
+      showSummary(phraseStats);
+      summary = document.querySelector(".summary");
+      showSummaryBtn = document.getElementById("showSummary-btn");
+      restartSection.removeChild(showSummaryBtn);
+    }
+
+    if (chart) {
+      main.removeChild(chart);
+      chart = null;
+    }
+  });
 
   restartBtn.addEventListener("click", () => {
     mainSection.innerHTML = "";
+
+    console.log(summary);
 
     if (summary) {
       main.removeChild(summary);
@@ -335,7 +352,7 @@ export function showNoMorePhrasesPage(score, phraseStats) {
   const noMorePhrExpl = document.createElement("p");
   noMorePhrExpl.classList.add("noMorePhrExpl");
   noMorePhrExpl.innerText =
-    "Don't worry! Our smart repetition system shows you phrases at specific intervals, enhancing your ability to memorize them efficiently. Feel free to experiment with different tenses to explore more phrases for learning.";
+    "Try another tense or come back later. Our smart repetition system shows you phrases at specific intervals, enhancing your ability to memorize them efficiently.";
   noMorePhrDiv.appendChild(noMorePhrExpl);
 
   const scoreDiv = document.createElement("div");
@@ -348,8 +365,10 @@ export function showNoMorePhrasesPage(score, phraseStats) {
   scoreDiv.appendChild(trophyIcon);
 
   const scoreMsg = document.createElement("p");
-  scoreMsg.innerText = `Your score is: ${score}/${phraseStats.length}`;
-  scoreDiv.appendChild(scoreMsg);
+  if (phraseStats.length != 0) {
+    scoreMsg.innerText = `Your score is: ${score}/${phraseStats.length}`;
+    scoreDiv.appendChild(scoreMsg);
+  }
 
   const restartSection = document.createElement("div");
   restartSection.classList.add("restart");
@@ -359,10 +378,22 @@ export function showNoMorePhrasesPage(score, phraseStats) {
   restartBtn.innerText = "restart";
   restartSection.appendChild(restartBtn);
 
-  showSummary(phraseStats);
+  let showSummaryBtn = document.createElement("button");
+  showSummaryBtn.id = "showSummary-btn";
+  showSummaryBtn.innerText = "show summary";
+  restartSection.appendChild(showSummaryBtn);
 
-  let summary = document.querySelector(".summary");
+  let summary;
   let chart = document.querySelector(".chart");
+
+  showSummaryBtn.addEventListener("click", () => {
+    if (phraseStats.length != 0) {
+      showSummary(phraseStats);
+      summary = document.querySelector(".summary");
+      showSummaryBtn = document.getElementById("showSummary-btn");
+      restartSection.removeChild(showSummaryBtn);
+    }
+  });
 
   restartBtn.addEventListener("click", () => {
     mainSection.innerHTML = "";
@@ -388,7 +419,6 @@ function showSummary(phraseStats) {
     summary = document.createElement("div");
     summary.classList.add("summary");
     main.appendChild(summary);
-    console.log(phraseStats);
   }
 
   const summaryH = document.createElement("h1");
@@ -400,7 +430,7 @@ function showSummary(phraseStats) {
   for (let i = 0; i < phraseStats.length; i++) {
     const listEl = document.createElement("li");
     summaryList.appendChild(listEl);
-    console.log(phraseStats[i].isCorrect);
+
     listEl.innerHTML = `Question ${i + 1}: <span style="font-weight: bold;">${
       phraseStats[i].phrase
     }</span>

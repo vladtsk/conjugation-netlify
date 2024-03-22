@@ -82,7 +82,7 @@ export function addBoxToDb(data, boxes, userId, database) {
 
 export function addStatsToDb(userId, database, stats, phraseStats) {
   const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  //today.setHours(0, 0, 0, 0);
 
   let nbPhrases = phraseStats.length;
   let nbCorrect = 0;
@@ -93,15 +93,8 @@ export function addStatsToDb(userId, database, stats, phraseStats) {
     }
   }
 
-  //const statsLastEl = stats.slice(-1)[0];
-  const statsLastEl = stats[0];
-
-  console.log(stats);
   // Checking if the last object's date is the same as today
-  const dateDb = new Date(statsLastEl?.timestamp);
-
-  console.log(dateDb.getDate());
-  console.log(today.getDate());
+  const dateDb = new Date(stats[stats.length - 1]?.timestamp);
 
   if (dateDb.getDate() === today.getDate()) {
     stats[stats.length - 1].nbOfPhrPractised += nbPhrases;
@@ -116,7 +109,6 @@ export function addStatsToDb(userId, database, stats, phraseStats) {
     stats.push(statObject);
   }
 
-  console.log(stats);
   let statsRef = ref(database, "users/" + userId + "/data/" + "/stats");
 
   set(statsRef, stats)

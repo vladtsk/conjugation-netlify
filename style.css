@@ -508,11 +508,16 @@ button[disabled] {
 /* Styling the restart section */
 .restart {
   display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  gap: 10px;
+
   margin-top: 20px;
 }
 
 #restart-btn {
-  margin: auto;
+  /*margin: auto;*/
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 20px;
@@ -527,11 +532,29 @@ button[disabled] {
   background-color: #d90429;
 }
 
+#showSummary-btn {
+  /*margin: auto;*/
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 6px;
+  /*background-color: var(--color-tertiary);
+  color: var(--color-secondary);*/
+  font-size: 0.9em;
+}
+
 /* Styling the chart */
 .chart {
   /*max-width: 500px;*/
   min-width: 300px;
   margin-inline: auto;
+  margin-top: 20px;
+}
+
+.chart h2 {
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 /* Responsive design */
