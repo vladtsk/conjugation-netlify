@@ -287,7 +287,7 @@
       "answerWoS": "suis rentré",
       "aux": "être",
       "fem": true,
-      "fullPhrase": "Je (fem.) suis rentrée à la maison.",
+      "fullPhrase": "Je suis rentrée à la maison.",
       "translation": "I came back home."
     },
     {
@@ -469,7 +469,7 @@
       "answerWoS": "es allé",
       "aux": "être",
       "fem": true,
-      "fullPhrase": "Où est-ce que tu (fem.) es allée ?",
+      "fullPhrase": "Où est-ce que tu es allée ?",
       "translation": "Where did you go?"
     },
     {
@@ -508,7 +508,7 @@
       "aux": "être",
       "twoAux": true,
       "fem": true,
-      "fullPhrase": "Je (fem.) suis passée chez Olivia.",
+      "fullPhrase": "Je suis passée chez Olivia.",
       "translation": "I stopped by Olivia's."
     },
     {
@@ -699,7 +699,7 @@
       "answerWoS": "suis arrivé",
       "aux": "être",
       "fem": true,
-      "fullPhrase": "Je (fem.) suis arrivée vers 10 h.",
+      "fullPhrase": "Je suis arrivée vers 10 h.",
       "translation": "I arrived around 10 a.m."
     },
     {
@@ -824,7 +824,7 @@
       "answerWoS": "me suis levé",
       "aux": "être",
       "fem": true,
-      "fullPhrase": "Je (fem.) me suis levée tard.",
+      "fullPhrase": "Je me suis levée tard.",
       "translation": "I got up late."
     },
     {
@@ -844,7 +844,7 @@
       "answerWoS": "me suis baigné",
       "aux": "être",
       "fem": true,
-      "fullPhrase": "Je (fem.) me suis baignée dans le lac.",
+      "fullPhrase": "Je me suis baignée dans le lac.",
       "translation": "I went for a swim in the lake."
     },
     {
@@ -873,7 +873,7 @@
       "answerWoS": "me suis perdu",
       "aux": "être",
       "fem": true,
-      "fullPhrase": "Je (fem.) me suis perdue !",
+      "fullPhrase": "Je me suis perdue !",
       "translation": "I got lost!"
     },
     {
@@ -884,7 +884,7 @@
       "answerWoS": "es allé",
       "aux": "être",
       "fem": true,
-      "fullPhrase": "Tu (fem.) n'es pas allée danser ?",
+      "fullPhrase": "Tu n'es pas allée danser ?",
       "translation": "Didn't you go dancing?"
     },
     {
@@ -895,7 +895,7 @@
       "answerWoS": "suis allé",
       "aux": "être",
       "fem": true,
-      "fullPhrase": "Je (fem.) suis allée en boîte.",
+      "fullPhrase": "Je suis allée en boîte.",
       "translation": "I went to the club."
     },
     {
@@ -933,7 +933,7 @@
       "answerWoS": "me suis disputé",
       "aux": "être",
       "fem": true,
-      "fullPhrase": "Je (fem.) me suis disputée avec lui.",
+      "fullPhrase": "Je me suis disputée avec lui.",
       "translation": "I argued with him."
     },
     {
@@ -953,7 +953,7 @@
       "answerWoS": "me suis reposé",
       "aux": "être",
       "fem": true,
-      "fullPhrase": "Je (fem.) me suis reposée.",
+      "fullPhrase": "Je me suis reposée.",
       "translation": "I rested."
     },
     {

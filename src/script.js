@@ -15,7 +15,7 @@ import {
   showResultPage,
 } from "./pagesetup.js";
 
-import { launchFirstPage, readDataFromDb } from "./init.js";
+import { launchFirstPage, readDataFromDb, readStatsFromDb } from "./init.js";
 
 import {
   generateElements,
@@ -24,7 +24,7 @@ import {
   checkAnswer,
 } from "./main.js";
 
-import { addBoxToDb } from "./final.js";
+import { addBoxToDb, addStatsToDb } from "./final.js";
 
 const auth = getAuth(app);
 const database = getDatabase(app);
@@ -34,6 +34,9 @@ let userId;
 let score;
 
 let boxes = [[], [], [], [], [], []];
+
+// An array containing statistics about the user's performance
+let stats;
 
 // Create an array of indeces
 let indexArray = [];
@@ -45,6 +48,7 @@ export function launchApp(data, phraseNumber) {
   // Making sure all the boxes are empty (to avoid errors when relaunching the app)
 
   boxes = [[], [], [], [], [], []];
+  stats = [];
 
   // An index that will be generated randomly
   let k;
@@ -79,6 +83,8 @@ export function launchApp(data, phraseNumber) {
         "users/" + userId + "/data/" + "/pastimp"
       );
 
+      const statsRef = ref(database, "users/" + userId + "/data/" + "/stats");
+
       if (data.data[0].tense === "present (le présent de l'indicatif)") {
         readDataFromDb(presentRef, boxes, indexArray);
       }
@@ -90,6 +96,11 @@ export function launchApp(data, phraseNumber) {
       if (data.data[0].tense === "imperfect past (l'imparfait)") {
         readDataFromDb(pastimpRef, boxes, indexArray);
       }
+
+      readStatsFromDb(statsRef).then((dbStats) => {
+        stats = dbStats;
+        console.log(stats);
+      });
     } else {
       console.log("User is signed out");
     }
@@ -140,6 +151,7 @@ export function launchApp(data, phraseNumber) {
   const inputArea = document.querySelector(".type-section input");
 
   nextBtn.addEventListener("click", () => {
+    console.log(stats);
     conjugSection.innerHTML = "";
     conjugSection.style.display = "none";
     phraseDisplay.style.color = "black";
@@ -151,16 +163,19 @@ export function launchApp(data, phraseNumber) {
   // Select the finish button
   const finishBtn = document.getElementById("finish-btn");
   finishBtn.addEventListener("click", () => {
+    console.log(stats.length);
     conjugSection.innerHTML = "";
     conjugSection.style.display = "none";
-    showResultPage(score, phraseStats);
 
-    // Adding data to the database
-
+    // Adding data to the database and updating the statistics
     if (userId !== 0) {
       addBoxToDb(data, boxes, userId, database);
+      console.log(stats);
+      addStatsToDb(userId, database, stats, phraseStats);
     } else {
       console.log("User is signed out");
     }
+
+    showResultPage(score, phraseStats, stats);
   });
 }

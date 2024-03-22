@@ -79,15 +79,15 @@ main {
   color: var(--color-secondary);
   background-color: var(--color-primary);
 
-  /*min-width: 300px;*/
+  min-width: 300px;
   width: fit-content;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   border-radius: 20px;
@@ -232,8 +232,8 @@ main {
   margin-right: auto;
   padding-top: 5px;
   padding-bottom: 5px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: var(--color-secondary);
   border-radius: 6px;
   min-height: 60px;
@@ -307,7 +307,7 @@ button[disabled] {
   text-align: center;
   font-style: italic;
   margin-inline: 30px;
-  /*max-width: 60%;*/
+  max-width: 280px;
   margin-inline: auto;
 }
 
@@ -437,6 +437,7 @@ button[disabled] {
 .noMorePhrDiv {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
   margin-bottom: 40px;
   font-size: 24px;
@@ -445,6 +446,7 @@ button[disabled] {
 .noMorePhrExpl {
   font-size: 16px;
   margin-top: 20px;
+  max-width: 280px;
 }
 
 /* Styling the score section */
@@ -477,7 +479,7 @@ button[disabled] {
 }
 
 .summary {
-  min-width: 250px;
+  min-width: 300px;
   margin-top: 20px;
   margin-bottom: 20px;
 
@@ -523,6 +525,13 @@ button[disabled] {
 
 #restart-btn:hover {
   background-color: #d90429;
+}
+
+/* Styling the chart */
+.chart {
+  /*max-width: 500px;*/
+  min-width: 300px;
+  margin-inline: auto;
 }
 
 /* Responsive design */

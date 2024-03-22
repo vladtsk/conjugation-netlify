@@ -1,6 +1,7 @@
 // Functions that dinamically build the pages
 
 import { launchFirstPage } from "./init.js";
+import { generateGraph, buildGraph } from "./stats.js";
 
 // Showing the first page
 export async function showFirstPage() {
@@ -255,7 +256,7 @@ export function setSpecialBtns() {
   });
 }
 
-export function showResultPage(score, phraseStats) {
+export function showResultPage(score, phraseStats, stats) {
   const mainSection = document.querySelector(".mainSection");
   mainSection.innerHTML = "";
 
@@ -290,16 +291,29 @@ export function showResultPage(score, phraseStats) {
   restartBtn.innerText = "restart";
   restartSection.appendChild(restartBtn);
 
-  let summary = document.querySelector(".summary");
+  //let summary = document.querySelector(".summary");
+  console.log(stats);
+  generateGraph();
+  buildGraph(stats);
 
   showSummary(phraseStats);
 
+  let summary = document.querySelector(".summary");
+  let chart = document.querySelector(".chart");
+
   restartBtn.addEventListener("click", () => {
-    summary = document.querySelector(".summary");
     mainSection.innerHTML = "";
+
     if (summary) {
       main.removeChild(summary);
+      summary = null;
     }
+
+    if (chart) {
+      main.removeChild(chart);
+      chart = null;
+    }
+
     launchFirstPage();
   });
 }
@@ -345,17 +359,23 @@ export function showNoMorePhrasesPage(score, phraseStats) {
   restartBtn.innerText = "restart";
   restartSection.appendChild(restartBtn);
 
-  let summary = document.querySelector(".summary");
-
   showSummary(phraseStats);
 
+  let summary = document.querySelector(".summary");
+  let chart = document.querySelector(".chart");
+
   restartBtn.addEventListener("click", () => {
-    summary = document.querySelector(".summary");
-    console.log(summary);
     mainSection.innerHTML = "";
     if (summary) {
       main.removeChild(summary);
+      summary = null;
     }
+
+    if (chart) {
+      main.removeChild(chart);
+      chart = null;
+    }
+
     launchFirstPage();
   });
 }
@@ -368,7 +388,7 @@ function showSummary(phraseStats) {
     summary = document.createElement("div");
     summary.classList.add("summary");
     main.appendChild(summary);
-    console.log(summary);
+    console.log(phraseStats);
   }
 
   const summaryH = document.createElement("h1");
@@ -390,6 +410,7 @@ function showSummary(phraseStats) {
     <p class="correctAnswer">The correct answer: <span style="font-weight: bold;">${
       phraseStats[i].correctAnswer
     }</span></p>`;
+
     const correctCheck = listEl.querySelector(".correctCheck");
     const correctAnswer = listEl.querySelector(".correctAnswer");
 
@@ -399,6 +420,10 @@ function showSummary(phraseStats) {
     } else {
       correctAnswer.style.display = "inline";
       correctCheck.style.display = "none";
+    }
+
+    if (phraseStats[i].almostCorrectCorrect) {
+      correctCheck.style.display = "inline";
     }
   }
 }

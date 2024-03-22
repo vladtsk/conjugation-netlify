@@ -1631,6 +1631,34 @@
         "6": "ils/elles se perdaient"
       }
     },
+
+    "perdre": {
+      "present": {
+        "1": "je perds",
+        "2": "tu perds",
+        "3": "il/elle/on perd",
+        "4": "nous perdons",
+        "5": "vous perdez",
+        "6": "ils/elles perdent"
+      },
+      "pastcomp": {
+        "1": "j'ai perdu",
+        "2": "tu as perdu",
+        "3": "il/elle/on a perdu",
+        "4": "nous avons perdu",
+        "5": "vous avez perdu",
+        "6": "ils/elles ont perdu"
+      },
+      "pastimp": {
+        "1": "je perdais",
+        "2": "tu perdais",
+        "3": "il/elle/on perdait",
+        "4": "nous perdions",
+        "5": "vous perdiez",
+        "6": "ils/elles perdaient"
+      }
+    },
+
     "s'amuser": {
       "present": {
         "1": "je m'amuse",

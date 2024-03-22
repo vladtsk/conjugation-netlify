@@ -108,6 +108,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
     input: "",
     correctAnswer: "",
     isCorrect: false,
+    almostCorrect: false,
   };
 
   let scoreBoxes;
@@ -132,7 +133,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
   const phraseDisplay = document.querySelector(".phrase-section p");
 
   // The speaker icon
-  const speaker = document.querySelector(".fa-volume-low");
+  let speaker = document.querySelector(".fa-volume-low");
 
   const inputText = inputArea.value;
   let displaySection;
@@ -168,6 +169,8 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
         button.setAttribute("disabled", "");
       });
 
+      speaker = document.querySelector(".fa-volume-low");
+
       if (speaker) {
         speaker.addEventListener("click", () => {
           playAudio(data.data[k].fullPhrase);
@@ -190,20 +193,22 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
 
       if (data.data[k].fem) {
         msgArea.innerHTML =
-          "<p class='almost'>Almost correct.</p> <p class='reminder'>Don't forget to add an 'e' to match feminine singular subjects (elle, Anna, etc.) when a verb in conjugated with 'être' in the 'passé composé'.</p>";
+          "<p class='almost'>Almost correct.</p> <p class='reminder'>Don't forget to add an 'e' to match feminine singular subjects (elle, Anna, etc.) when a verb in conjugated with 'être' in the 'passé composé'.</p> <p class='reminder'> For the subjects 'je' and 'tu', pay attention to hints like '(masc.)' and '(fem.)'.</p> ";
       }
       if (data.data[k].plural) {
         msgArea.innerHTML =
-          "<p class='almost'>Almost correct.</p> <p>Don't forget to add an 's' to match plural subjects (ils, les enfants, etc.) when a verb is conjugated with 'être' in the 'passé composé'.</p>";
+          "<p class='almost'>Almost correct.</p> <p class='reminder'>Don't forget to add an 's' to match plural subjects (ils, les enfants, etc.) when a verb is conjugated with 'être' in the 'passé composé'.</p>";
       }
 
-      phraseStatObject.isCorrect = true;
+      phraseStatObject.almostCorrectCorrect = true;
 
       inputArea.setAttribute("disabled", "");
 
       specialBtns.forEach((button) => {
         button.setAttribute("disabled", "");
       });
+
+      speaker = document.querySelector(".fa-volume-low");
 
       if (speaker) {
         speaker.addEventListener("click", () => {

@@ -77,10 +77,8 @@ export function readDataFromDb(timeRef, boxes, indexArray) {
       for (let i = 0; i < boxes.length - 1; i++) {
         checkRepetDate(boxes[i], indexArray);
       }
-      console.log(indexArray);
       //Excluding the elements in the Box6
       excludeBox6(boxes, indexArray);
-      console.log(indexArray);
     },
     {
       onlyOnce: true,
@@ -88,10 +86,31 @@ export function readDataFromDb(timeRef, boxes, indexArray) {
   );
 }
 
+export function readStatsFromDb(timeRef) {
+  return new Promise((resolve, reject) => {
+    onValue(
+      timeRef,
+      (snapshot) => {
+        const dbRefData = snapshot.val();
+        console.log(dbRefData);
+        if (dbRefData) {
+          resolve(dbRefData);
+          //stats = dbRefData;
+        } else {
+          reject(new Error("Statistics not found in DB"));
+        }
+      },
+      {
+        onlyOnce: true,
+      }
+    );
+  });
+}
+
 // A function selecting phrases (actually their IDs) not to show based on the scheduled repetition date (i.e. indices to exclude)
 function checkRepetDate(box, indexArray) {
   const today = new Date();
-  console.log(today.getTime());
+
   for (let i = 0; i < box.length; i++) {
     if (box[i].repetDate > today.getTime()) {
       indexArray.push(box[i].id - 1);

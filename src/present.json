@@ -933,8 +933,8 @@
     {
       "id": 117,
       "verb": "s'inquiéter",
-      "phrase": "Elle ____ pour l'examen.",
-      "answer": "s'inquiète",
+      "phrase": "Elle s'____ pour l'examen.",
+      "answer": "inquiète",
       "fullPhrase": "Elle s'inquiète pour l'examen.",
       "translation": "She worries about the exam."
     },
