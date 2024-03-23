@@ -30,6 +30,7 @@ const logOutSection = document.querySelector(".logOutSection");
 const mainSection = document.querySelector(".mainSection");
 const main = document.querySelector("main");
 let summary = document.querySelector(".summary");
+let chart = document.querySelector(".chart");
 
 async function userSignUp() {
   const userEmail = document.getElementById("signUpEmail");
@@ -172,6 +173,12 @@ if (logOutButton) {
     summary = document.querySelector(".summary");
     if (summary) {
       main.removeChild(summary);
+      summary = null;
+    }
+    chart = document.querySelector(".chart");
+    if (chart) {
+      main.removeChild(chart);
+      chart = null;
     }
     userLogOut();
   });
@@ -182,6 +189,12 @@ if (logInButtonMenu) {
     summary = document.querySelector(".summary");
     if (summary) {
       main.removeChild(summary);
+      summary = null;
+    }
+    chart = document.querySelector(".chart");
+    if (chart) {
+      main.removeChild(chart);
+      chart = null;
     }
     mainSection.style.display = "none";
     logInForm.style.display = "block";

@@ -80,7 +80,7 @@ export async function launchApp(data, phraseNumber) {
           //userId = auth.currentUser.uid;
           resolve(auth.currentUser.uid);
         } else {
-          reject(new Error("User not found"));
+          resolve(null);
         }
       });
     });
@@ -88,9 +88,8 @@ export async function launchApp(data, phraseNumber) {
 
   async function getData() {
     userId = await getUser();
-    console.log(userId);
-
-    if (userId != 0) {
+    if (userId) {
+      console.log(userId);
       const presentRef = ref(
         database,
         "users/" + userId + "/data/" + "/present"
@@ -206,14 +205,15 @@ export async function launchApp(data, phraseNumber) {
       conjugSection.style.display = "none";
 
       // Adding data to the database and updating the statistics
-      if (userId !== 0) {
+
+      if (userId) {
         addBoxToDb(data, boxes, userId, database);
         addStatsToDb(userId, database, stats, phraseStats);
       } else {
         console.log("User is signed out");
       }
 
-      showResultPage(score, phraseStats, stats);
+      showResultPage(score, phraseStats, stats, userId);
     });
   }
 }

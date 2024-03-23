@@ -256,7 +256,7 @@ export function setSpecialBtns() {
   });
 }
 
-export function showResultPage(score, phraseStats, stats) {
+export function showResultPage(score, phraseStats, stats, userId) {
   const mainSection = document.querySelector(".mainSection");
   mainSection.innerHTML = "";
 
@@ -296,8 +296,10 @@ export function showResultPage(score, phraseStats, stats) {
   showSummaryBtn.innerText = "show summary";
   restartSection.appendChild(showSummaryBtn);
 
-  generateGraph();
-  buildGraph(stats);
+  if (userId) {
+    generateGraph();
+    buildGraph(stats);
+  }
 
   let summary;
   let chart = document.querySelector(".chart");
