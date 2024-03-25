@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   --color-primary: #2b2d42;
   --color-secondary: #edf2f4;
@@ -16,6 +21,13 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+input,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 a {
@@ -111,26 +123,73 @@ main {
   gap: 20px;
 }
 
-.tense-section select {
+/*.tense-section select {
   text-align: center;
+}*/
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.selectDiv,
+.selectNbPhrasesDiv {
+  position: relative;
+}
+
+.selectDiv::after,
+.selectNbPhrasesDiv::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  width: 0;
+  height: 0;
+
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 9px solid #000;
+
+  pointer-events: none;
+}
+
+.selectDiv::after {
+  margin-top: 15px;
+}
+
+.selectNbPhrasesDiv::after {
+  margin-top: 12px;
 }
 
 #tense {
   color: black;
   background-color: var(--color-secondary);
   text-align: center;
-  width: 80%;
+
   border-radius: 6px;
   height: 40px;
   font-family: "Poppins", sans-serif;
-  font-size: 0.8em;
-  /*margin-left: auto;
-  margin-right: auto;*/
+  font-size: 0.9em;
+  padding-inline: 30px;
+  padding-block: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/*
+.selectDiv option {
+  font-size: 0.8em;
+  text-align: center;
+}*/
 
 /* Styling the 'number of phrases' section */
 .nb-phrases {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
   text-align: center;
   margin-top: 30px;
@@ -140,10 +199,14 @@ main {
 #phraseNb {
   color: black;
   background-color: var(--color-secondary);
-
   border-radius: 6px;
   font-family: "Poppins", sans-serif;
   font-size: 0.8em;
+  width: fit-content;
+
+  padding-left: 18px;
+  padding-right: 28px;
+  padding-block: 6px;
 }
 
 /* Styling the start section */
@@ -277,8 +340,8 @@ main {
   text-align: center;
   padding: 10px;
   background-color: var(--color-secondary);
-  /*width: 100%;
-  height: 100%;*/
+  width: 100%;
+  height: 100%;
   border-radius: 6px;
 }
 
@@ -287,11 +350,13 @@ main {
 }
 
 input[disabled] {
-  background-color: #f2f2f2;
+  background-color: white;
+  opacity: 0.8;
   /*color: #383642;*/
 }
 button[disabled] {
-  background-color: #f2f2f2;
+  background-color: white;
+  opacity: 0.8;
 }
 
 .translation {
@@ -539,9 +604,14 @@ button[disabled] {
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 6px;
-  /*background-color: var(--color-tertiary);
-  color: var(--color-secondary);*/
+  color: black;
+  background-color: var(--color-secondary);
+  /*color: var(--color-secondary);*/
   font-size: 0.9em;
+}
+
+#showSummary-btn:hover {
+  background-color: #faeeeb;
 }
 
 /* Styling the chart */
@@ -571,8 +641,8 @@ button[disabled] {
   .mainSection {
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
   /*
   .phrase-section {
@@ -582,6 +652,40 @@ button[disabled] {
   .type-section input::placeholder {
     font-size: 16px;
   }
+
+  .nb-phrases label {
+    font-size: 0.9em;
+  }
+
+  #phraseNb {
+    font-size: 0.7em;
+  }
+
+  /*
+  .nb-phrases {
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 20px;
+  }
+
+  .selectNbPhrasesDiv::after {
+    top: 38%;
+  }
+
+  .nb-phrases {
+    margin-top: 30px;
+    gap: 5px;
+  }
+
+  #phraseNb {
+    padding-inline: 8px;
+    padding-block: 5px;
+    width: fit-content;
+
+    padding-left: 15px;
+    padding-right: 25px;
+    padding-block: 5px;
+  } */
 }
 
 @media screen and (max-width: 480px) {
@@ -592,8 +696,8 @@ button[disabled] {
 
   .mainSection {
     padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   h1 {
@@ -609,7 +713,7 @@ button[disabled] {
   }
 
   .nb-phrases select {
-    width: 15%;
+    /*width: 20%;*/
     text-align: center;
   }
 

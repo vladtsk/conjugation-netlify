@@ -28,10 +28,14 @@ export async function showFirstPage() {
   labelTense.innerText = "Choose a tense you'd like practise:";
   tenseSelect.appendChild(labelTense);
 
+  const selectDiv = document.createElement("div");
+  selectDiv.classList.add("selectDiv");
+  tenseSelect.appendChild(selectDiv);
+
   const selectElement = document.createElement("select");
   selectElement.name = "tense";
   selectElement.id = "tense";
-  tenseSelect.appendChild(selectElement);
+  selectDiv.appendChild(selectElement);
 
   const optionPresent = document.createElement("option");
   optionPresent.value = "present";
@@ -59,10 +63,14 @@ export async function showFirstPage() {
   phrNbLabel.innerText = "How many phrases would you like to practise?";
   phrNbSection.appendChild(phrNbLabel);
 
+  const selectNbPhrasesDiv = document.createElement("div");
+  selectNbPhrasesDiv.classList.add("selectNbPhrasesDiv");
+  phrNbSection.appendChild(selectNbPhrasesDiv);
+
   const selectPhrNb = document.createElement("select");
   selectPhrNb.name = "phraseNb";
   selectPhrNb.id = "phraseNb";
-  phrNbSection.appendChild(selectPhrNb);
+  selectNbPhrasesDiv.appendChild(selectPhrNb);
 
   const phrNb5 = document.createElement("option");
   phrNb5.value = 5;
