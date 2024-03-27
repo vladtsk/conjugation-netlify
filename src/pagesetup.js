@@ -528,6 +528,10 @@ export function generateSignUpForm() {
   passwordInput.setAttribute("required", true);
   passwordPElement.appendChild(passwordInput);
 
+  const errorMsg = document.createElement("p");
+  userInfoSection.appendChild(errorMsg);
+  errorMsg.classList.add("signUpErrorMsg");
+
   const btnSection = document.createElement("section");
   signUpForm.appendChild(btnSection);
   btnSection.classList.add("btn-section");
@@ -592,6 +596,10 @@ export function generateLogInForm() {
   passwordInput.setAttribute("id", "logInPassword");
   passwordInput.setAttribute("required", true);
   passwordPElement.appendChild(passwordInput);
+
+  const errorMsg = document.createElement("p");
+  userInfoSection.appendChild(errorMsg);
+  errorMsg.classList.add("logInErrorMsg");
 
   const btnSection = document.createElement("section");
   logInForm.appendChild(btnSection);

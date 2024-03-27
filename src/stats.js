@@ -90,3 +90,10 @@ export function buildGraph(stats) {
     },
   });
 }
+
+/*
+
+const statsBtn = document.querySelector(".fa-square-poll-vertical");
+statsBtn.addEventListener("click", () => {
+  
+}); */

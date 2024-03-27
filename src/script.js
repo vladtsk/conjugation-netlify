@@ -74,7 +74,7 @@ export async function launchApp(data, phraseNumber) {
 
   // Getting information from the database about the user's performance and copying the database information to dbArray
   async function getUser() {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       onAuthStateChanged(auth, (user) => {
         if (user) {
           //userId = auth.currentUser.uid;

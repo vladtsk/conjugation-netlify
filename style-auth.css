@@ -28,6 +28,10 @@ input {
   border: solid black 1px;
 }
 
+.logInErrorMsg {
+  font-size: 0.9em;
+}
+
 button,
 input {
   -webkit-appearance: none;
@@ -37,7 +41,7 @@ input {
 
 #logInButton,
 #signUpButton {
-  margin-top: 10px;
+  margin-top: 20px;
   padding-inline: 12px;
   padding-block: 8px;
   font-family: "Poppins", sans-serif;

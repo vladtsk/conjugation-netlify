@@ -31,6 +31,7 @@ const mainSection = document.querySelector(".mainSection");
 const main = document.querySelector("main");
 let summary = document.querySelector(".summary");
 let chart = document.querySelector(".chart");
+const signUpErrorMsgP = document.querySelector(".signUpErrorMsg");
 
 async function userSignUp() {
   const userEmail = document.getElementById("signUpEmail");
@@ -62,6 +63,10 @@ async function userSignUp() {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log(errorCode + errorMessage);
+
+      if (signUpErrorMsgP) {
+        showErrorMsg(signUpErrorMsgP, errorCode);
+      }
     });
 }
 
@@ -70,6 +75,8 @@ async function userLogIn() {
   const userPassword = document.getElementById("logInPassword");
   const logInEmail = userEmail.value;
   const logInPassword = userPassword.value;
+  const logInErrorMsgP = document.querySelector(".logInErrorMsg");
+
   signInWithEmailAndPassword(auth, logInEmail, logInPassword)
     .then((userCredential) => {
       launchFirstPage();
@@ -94,9 +101,43 @@ async function userLogIn() {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log(errorCode + errorMessage);
+      if (logInErrorMsgP) {
+        showErrorMsg(logInErrorMsgP, errorCode);
+      }
     });
 
   mainSection.innerHTML = "";
+}
+
+function showErrorMsg(errorMsgP, errorCode) {
+  console.log(errorCode);
+
+  switch (errorCode) {
+    case "auth/invalid-email":
+      errorMsgP.innerHTML =
+        "<i class='fa-solid fa-circle-exclamation'></i> Please enter a valid email address.";
+      break;
+    case "auth/wrong-password":
+      errorMsgP.innerHTML =
+        "<i class='fa-solid fa-circle-exclamation'></i> Error: Incorrect Password.";
+      break;
+    case "auth/invalid-credential":
+      errorMsgP.innerHTML =
+        "<i class='fa-solid fa-circle-exclamation'></i> Error: Incorrect Email or Password.";
+      break;
+    case "auth/missing-password":
+      errorMsgP.innerHTML =
+        "<i class='fa-solid fa-circle-exclamation'></i> Please enter your password.";
+      break;
+    case "auth/missing-email":
+      errorMsgP.innerHTML =
+        "<i class='fa-solid fa-circle-exclamation'></i> Please enter your email.";
+      break;
+
+    default:
+      errorMsgP.innerHTML =
+        "<i class='fa-solid fa-circle-exclamation'></i> An error has occurred. Make sure that the email and the password are correct.";
+  }
 }
 
 async function userLogOut() {
@@ -140,6 +181,16 @@ if (logInSwitch) {
 
     logInButtonMenu.style.display = "none";
     logInForm.style.display = "block";
+
+    const logInErrorMsgP = document.querySelector(".logInErrorMsg");
+    if (logInErrorMsgP) {
+      logInErrorMsgP.innerHTML = "";
+    }
+
+    const signUpErrorMsgP = document.querySelector(".signUpErrorMsg");
+    if (signUpErrorMsgP) {
+      signUpErrorMsgP.innerHTML = "";
+    }
   });
 }
 
@@ -150,12 +201,32 @@ if (signUpSwitch) {
 
     logInButtonMenu.style.display = "none";
     signUpForm.style.display = "block";
+
+    const logInErrorMsgP = document.querySelector(".logInErrorMsg");
+    if (logInErrorMsgP) {
+      logInErrorMsgP.innerHTML = "";
+    }
+    const signUpErrorMsgP = document.querySelector(".signUpErrorMsg");
+    if (signUpErrorMsgP) {
+      signUpErrorMsgP.innerHTML = "";
+    }
   });
 }
 
 if (signUpButton) {
   signUpButton.addEventListener("click", (event) => {
     event.preventDefault();
+
+    const logInErrorMsgP = document.querySelector(".logInErrorMsg");
+    if (logInErrorMsgP) {
+      logInErrorMsgP.innerHTML = "";
+    }
+
+    const signUpErrorMsgP = document.querySelector(".signUpErrorMsg");
+    if (signUpErrorMsgP) {
+      signUpErrorMsgP.innerHTML = "";
+    }
+
     userSignUp();
   });
 }
@@ -163,6 +234,17 @@ if (signUpButton) {
 if (logInButton) {
   logInButton.addEventListener("click", (event) => {
     event.preventDefault();
+
+    const logInErrorMsgP = document.querySelector(".logInErrorMsg");
+    if (logInErrorMsgP) {
+      logInErrorMsgP.innerHTML = "";
+    }
+
+    const signUpErrorMsgP = document.querySelector(".signUpErrorMsg");
+    if (signUpErrorMsgP) {
+      signUpErrorMsgP.innerHTML = "";
+    }
+
     userLogIn();
   });
 }
@@ -214,7 +296,7 @@ if (logInButtonMenu) {
   });
 }
 
-// Validate an email
+/* Validate an email
 function validateEmail(email) {
   let emailRegExp = /[a-z0-9._-]+@[a-z0-9._-]+.[a-z0-9._-]+/;
   if (emailRegExp.test(email)) {
@@ -222,4 +304,4 @@ function validateEmail(email) {
   } else {
     // Email is not valid
   }
-}
+}*/

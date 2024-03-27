@@ -133,7 +133,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
   const phraseDisplay = document.querySelector(".phrase-section p");
 
   // The speaker icon
-  let speaker = document.querySelector(".fa-volume-low");
+  let speaker;
 
   const inputText = inputArea.value;
   let displaySection;
@@ -153,7 +153,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       msgArea.innerText = "Please type a valid verb";
       break;
     case data.data[k].answer:
-      phraseDisplay.innerHTML = `<div><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low"></i><p class="translation">${data.data[k].translation}</p></div>`;
+      phraseDisplay.innerHTML = `<div><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low" id="speaker"></i><p class="translation">${data.data[k].translation}</p></div>`;
       /*phraseDisplay.style.color = "#228b22";*/
       inputArea.style.color = "#228b22";
       inputArea.classList.add("bold");
@@ -169,7 +169,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
         button.setAttribute("disabled", "");
       });
 
-      speaker = document.querySelector(".fa-volume-low");
+      speaker = document.getElementById("speaker");
 
       if (speaker) {
         speaker.addEventListener("click", () => {
@@ -186,7 +186,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       break;
 
     case data.data[k]?.answerWoS:
-      phraseDisplay.innerHTML = `<div><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low"></i><p class="translation">${data.data[k].translation}</p></div>`;
+      phraseDisplay.innerHTML = `<div><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low" id="speaker"></i><p class="translation">${data.data[k].translation}</p></div>`;
       /*phraseDisplay.style.color = "#fa8950";*/
       inputArea.style.color = "#d96e38";
       inputArea.classList.add("bold");
@@ -208,7 +208,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
         button.setAttribute("disabled", "");
       });
 
-      speaker = document.querySelector(".fa-volume-low");
+      speaker = document.getElementById("speaker");
 
       if (speaker) {
         speaker.addEventListener("click", () => {
@@ -225,7 +225,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       break;
 
     default:
-      phraseDisplay.textContent = data.data[k].fullPhrase;
+      phraseDisplay.innerHTML = `<div>${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low" id="speaker"></i>`;
       //underlineWord(data, k, phraseDisplay);
       inputArea.style.color = "#ef233c";
       msgArea.innerText = `Incorrect. The correct answer is: "${data.data[k].answer}"`;
@@ -234,6 +234,14 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       specialBtns.forEach((button) => {
         button.setAttribute("disabled", "");
       });
+
+      speaker = document.getElementById("speaker");
+
+      if (speaker) {
+        speaker.addEventListener("click", () => {
+          playAudio(data.data[k].fullPhrase);
+        });
+      }
 
       if (userId) {
         movePhraseBackward(k, boxes);
