@@ -186,6 +186,8 @@ export async function launchApp(data, phraseNumber) {
   // The input area
   const inputArea = document.querySelector(".type-section input");
 
+  const main = document.querySelector("main");
+
   if (nextBtn) {
     nextBtn.addEventListener("click", () => {
       conjugSection.innerHTML = "";
@@ -201,8 +203,12 @@ export async function launchApp(data, phraseNumber) {
   const finishBtn = document.getElementById("finish-btn");
   if (finishBtn) {
     finishBtn.addEventListener("click", () => {
-      conjugSection.innerHTML = "";
-      conjugSection.style.display = "none";
+      /*conjugSection.innerHTML = "";
+      conjugSection.style.display = "none"; */
+
+      if (conjugSection) {
+        main.removeChild(conjugSection);
+      }
 
       // Adding data to the database and updating the statistics
 

@@ -39,6 +39,7 @@ a {
 }
 
 header {
+  margin-top: 20px;
   margin-bottom: 20px;
   padding-block: 10px;
   color: var(--color-primary);
@@ -46,9 +47,11 @@ header {
 
   justify-content: space-between;
   align-items: center;
-  /*margin-right: 80px;*/
-  margin-top: 20px;
+  max-width: 100%;
+
   font-family: "Poppins", sans-serif;
+
+  border-bottom: 2px solid gray;
 }
 
 .logo {
@@ -56,7 +59,9 @@ header {
 }
 
 nav {
-  margin-right: 10%;
+  display: flex;
+  align-items: center;
+  margin-right: 8%;
 }
 
 .menu {
@@ -70,13 +75,14 @@ nav button {
   display: inline-block;
 }
 
-nav a {
-  text-decoration: none;
-  font-size: 16px;
-}
-
 nav a:hover {
   color: var(--color-tertiary);
+}
+
+nav .fa-circle-question {
+  font-size: 25px;
+  margin-right: 15px;
+  color: var(--color-primary);
 }
 
 main {
@@ -91,8 +97,9 @@ main {
   color: var(--color-secondary);
   background-color: var(--color-primary);
 
-  min-width: 300px;
+  min-width: 280px;
   width: fit-content;
+  max-width: 100%;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -121,6 +128,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  text-align: center;
 }
 
 /*.tense-section select {
@@ -132,9 +140,18 @@ select {
   -moz-appearance: none;
   appearance: none;
 
+  width: 100%;
+  /*overflow: hidden;*/
+
+  margin-inline: auto;
+
   background-color: #fff;
   border: 1px solid #000;
   color: #000;
+}
+
+.selectDiv {
+  min-width: 0;
 }
 
 .selectDiv,
@@ -544,7 +561,7 @@ button[disabled] {
 }
 
 .summary {
-  min-width: 300px;
+  min-width: 280px;
   margin-top: 20px;
   margin-bottom: 20px;
 
@@ -617,7 +634,7 @@ button[disabled] {
 /* Styling the chart */
 .chart {
   /*max-width: 500px;*/
-  min-width: 300px;
+  min-width: 280px;
   margin-inline: auto;
   margin-top: 20px;
 }
@@ -625,6 +642,81 @@ button[disabled] {
 .chart h2 {
   margin-bottom: 10px;
   text-align: center;
+}
+
+/* The rules section */
+
+.blurContainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.rulesSection {
+  display: none;
+
+  padding-block: 20px;
+  padding-inline: 30px;
+
+  position: fixed;
+  min-width: 320px;
+  max-width: 500px;
+
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: justify;
+
+  background-color: var(--color-secondary);
+  box-shadow: 0 0 10px var(--color-primary);
+
+  border-radius: 6px;
+  z-index: 1000;
+
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+.rulesSection h1 {
+  font-size: 24px;
+}
+
+.rulesSection h2 {
+  font-size: 18px;
+}
+
+.rulesStartDiv,
+.rulesGoalDiv,
+.rulesPronuncDiv {
+  margin-top: 20px;
+}
+
+.rulesSection p {
+  margin-top: 10px;
+}
+
+.rulesSection .popup-close {
+  margin-left: 95%;
+  font-size: 18px;
+}
+
+.rulesStartDiv,
+.rulesGoalDiv,
+.rulesPronuncDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
 }
 
 /* Responsive design */
@@ -637,6 +729,12 @@ button[disabled] {
   }
 }
 
+@media screen and (min-height: 1000px) {
+  .rulesSection {
+    top: 35vh;
+  }
+}
+
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .mainSection {
     padding-top: 20px;
@@ -644,10 +742,6 @@ button[disabled] {
     padding-left: 25px;
     padding-right: 25px;
   }
-  /*
-  .phrase-section {
-    max-width: 70%;
-  } */
 
   .type-section input::placeholder {
     font-size: 16px;
@@ -660,35 +754,13 @@ button[disabled] {
   #phraseNb {
     font-size: 0.7em;
   }
-
-  /*
-  .nb-phrases {
-    padding-left: 20px;
-    padding-right: 20px;
-    gap: 20px;
-  }
-
-  .selectNbPhrasesDiv::after {
-    top: 38%;
-  }
-
-  .nb-phrases {
-    margin-top: 30px;
-    gap: 5px;
-  }
-
-  #phraseNb {
-    padding-inline: 8px;
-    padding-block: 5px;
-    width: fit-content;
-
-    padding-left: 15px;
-    padding-right: 25px;
-    padding-block: 5px;
-  } */
 }
 
 @media screen and (max-width: 480px) {
+  header {
+    border: none;
+  }
+
   .tense-display-section,
   .verb-display-section {
     flex-direction: column;
@@ -700,12 +772,20 @@ button[disabled] {
     padding-right: 25px;
   }
 
+  .rulesSection {
+    padding-inline: 25px;
+    min-width: 300px;
+    width: 90%;
+  }
+
+  /*
   h1 {
     font-size: 32px;
   }
   h2 {
     font-size: 22px;
   }
+  */
 
   .nb-phrases {
     flex-direction: column;

@@ -289,9 +289,10 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
   */
 
   // Popup close icon
-  const popupCloseBtn = document.querySelector(".popup-close");
+  const popupCloseBtn = document.querySelector(".popup-icons .popup-close");
   if (popupCloseBtn) {
     popupCloseBtn.addEventListener("click", () => {
+      console.log(popupCloseBtn);
       conjugSection.innerHTML = "";
       conjugSection.style.display = "none";
     });

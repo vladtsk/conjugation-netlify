@@ -5,8 +5,17 @@ import { generateGraph, buildGraph } from "./stats.js";
 
 // Showing the first page
 export async function showFirstPage() {
-  const mainSection = document.querySelector(".mainSection");
-  mainSection.innerHTML = "";
+  const main = document.querySelector("main");
+  /*mainSection.innerHTML = "";*/
+
+  // Section containing the main element
+
+  let mainSection = document.querySelector(".mainSection");
+  if (!mainSection) {
+    mainSection = document.createElement("div");
+    mainSection.classList.add("mainSection");
+    main.appendChild(mainSection);
+  }
 
   // Welcome section
   const welcomeDiv = document.createElement("div");
@@ -214,7 +223,7 @@ export function buildPageStructure(data) {
   messageSection.appendChild(messageP);*/
 
   // Conjugation popup section
-  // Add verbs with 2 auxiliaries !!!
+
   const conjugSection = document.createElement("div");
   conjugSection.classList.add("conjugSection");
   main.appendChild(conjugSection);

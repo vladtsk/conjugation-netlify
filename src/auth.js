@@ -180,6 +180,12 @@ if (logOutButton) {
       main.removeChild(chart);
       chart = null;
     }
+
+    const conjugSection = document.querySelector(".conjugSection");
+
+    if (conjugSection) {
+      main.removeChild(conjugSection);
+    }
     userLogOut();
   });
 }
@@ -196,6 +202,13 @@ if (logInButtonMenu) {
       main.removeChild(chart);
       chart = null;
     }
+
+    const conjugSection = document.querySelector(".conjugSection");
+
+    if (conjugSection) {
+      main.removeChild(conjugSection);
+    }
+
     mainSection.style.display = "none";
     logInForm.style.display = "block";
   });
