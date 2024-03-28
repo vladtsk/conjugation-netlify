@@ -25,15 +25,16 @@ const logInForm = document.querySelector(".logInForm");
 const signUpButton = document.getElementById("signUpButton");
 const logInButton = document.getElementById("logInButton");
 const logInButtonMenu = document.getElementById("logInButtonMenu");
+
 const logOutButton = document.getElementById("logOutButton");
-const logOutSection = document.querySelector(".logOutSection");
-const mainSection = document.querySelector(".mainSection");
+//const logOutSection = document.querySelector(".logOutSection");
+let mainSection = document.querySelector(".mainSection");
 const main = document.querySelector("main");
 let summary = document.querySelector(".summary");
 let chart = document.querySelector(".chart");
 const signUpErrorMsgP = document.querySelector(".signUpErrorMsg");
 
-async function userSignUp() {
+function userSignUp() {
   const userEmail = document.getElementById("signUpEmail");
   const userPassword = document.getElementById("signUpPassword");
 
@@ -70,7 +71,7 @@ async function userSignUp() {
     });
 }
 
-async function userLogIn() {
+function userLogIn() {
   const userEmail = document.getElementById("logInEmail");
   const userPassword = document.getElementById("logInPassword");
   const logInEmail = userEmail.value;
@@ -115,23 +116,23 @@ function showErrorMsg(errorMsgP, errorCode) {
   switch (errorCode) {
     case "auth/invalid-email":
       errorMsgP.innerHTML =
-        "<i class='fa-solid fa-circle-exclamation'></i> Please enter a valid email address.";
+        "<i class='fa-solid fa-circle-exclamation'></i> Please enter a valid email address";
       break;
     case "auth/wrong-password":
       errorMsgP.innerHTML =
-        "<i class='fa-solid fa-circle-exclamation'></i> Error: Incorrect Password.";
+        "<i class='fa-solid fa-circle-exclamation'></i> Error: Incorrect Password";
       break;
     case "auth/invalid-credential":
       errorMsgP.innerHTML =
-        "<i class='fa-solid fa-circle-exclamation'></i> Error: Incorrect Email or Password.";
+        "<i class='fa-solid fa-circle-exclamation'></i> Error: Incorrect Email or Password";
       break;
     case "auth/missing-password":
       errorMsgP.innerHTML =
-        "<i class='fa-solid fa-circle-exclamation'></i> Please enter your password.";
+        "<i class='fa-solid fa-circle-exclamation'></i> Please enter your password";
       break;
     case "auth/missing-email":
       errorMsgP.innerHTML =
-        "<i class='fa-solid fa-circle-exclamation'></i> Please enter your email.";
+        "<i class='fa-solid fa-circle-exclamation'></i> Please enter your email";
       break;
 
     default:
@@ -148,7 +149,7 @@ async function userLogOut() {
   alert("Your have logged out");
 }
 
-async function checkAuthState() {
+function checkAuthState() {
   onAuthStateChanged(auth, (user) => {
     if (user) {
       if (logInForm) {
@@ -273,7 +274,8 @@ if (logOutButton) {
 }
 
 if (logInButtonMenu) {
-  logInButtonMenu.addEventListener("click", () => {
+  logInButtonMenu.addEventListener("click", (event) => {
+    event.preventDefault();
     summary = document.querySelector(".summary");
     if (summary) {
       main.removeChild(summary);
@@ -290,7 +292,7 @@ if (logInButtonMenu) {
     if (conjugSection) {
       main.removeChild(conjugSection);
     }
-
+    mainSection = document.querySelector(".mainSection");
     mainSection.style.display = "none";
     logInForm.style.display = "block";
   });
