@@ -1,15 +1,20 @@
 // Functions used in the first part of the application
 
-import {
-  showFirstPage,
-  buildPageStructure,
-  setSpecialBtns,
-  showResultPage,
-} from "./pagesetup.js";
+import { showFirstPage } from "./pagesetup.js";
 
-import { onValue } from "./config.js";
+import {
+  ref,
+  onValue,
+  onAuthStateChanged,
+  app,
+  getAuth,
+  getDatabase,
+} from "./config.js";
 
 import { launchApp } from "./script.js";
+
+const auth = getAuth(app);
+const database = getDatabase(app);
 
 export async function launchFirstPage() {
   showFirstPage(); // Building the first page structure
@@ -47,7 +52,7 @@ export async function launchFirstPage() {
   }
 }
 
-export function readDataFromDb(timeRef, boxes) {
+function readDataFromDb(timeRef, boxes) {
   return new Promise((resolve, reject) => {
     onValue(
       timeRef,
@@ -85,7 +90,7 @@ export function readDataFromDb(timeRef, boxes) {
   });
 }
 
-export function readStatsFromDb(timeRef) {
+function readStatsFromDb(timeRef) {
   return new Promise((resolve, reject) => {
     onValue(
       timeRef,
@@ -94,7 +99,6 @@ export function readStatsFromDb(timeRef) {
 
         if (dbRefData) {
           resolve(dbRefData);
-          //stats = dbRefData;
         } else {
           reject(new Error("Statistics not found in DB"));
         }
@@ -106,8 +110,72 @@ export function readStatsFromDb(timeRef) {
   });
 }
 
+// Getting information from the database about the user's performance and copying the database information to dbArray
+async function getUser() {
+  return new Promise((resolve) => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        //userId = auth.currentUser.uid;
+        resolve(auth.currentUser.uid);
+      } else {
+        resolve(null);
+      }
+    });
+  });
+}
+
+export async function getData(data, boxes, stats, indexArray, userId) {
+  userId = await getUser();
+  if (userId) {
+    console.log(userId);
+    const presentRef = ref(database, "users/" + userId + "/data/" + "/present");
+    const pastcompRef = ref(
+      database,
+      "users/" + userId + "/data/" + "/pastcomp"
+    );
+    const pastimpRef = ref(database, "users/" + userId + "/data/" + "/pastimp");
+
+    const statsRef = ref(database, "users/" + userId + "/data/" + "/stats");
+
+    await readStatsFromDb(statsRef).then((dbStats) => {
+      stats = dbStats;
+    });
+
+    switch (data.data[0].tense) {
+      case "present (le présent de l'indicatif)":
+        await readDataFromDb(presentRef, boxes).then((dbBoxes) => {
+          boxes = dbBoxes;
+        });
+        break;
+
+      case "past (le passé composé)":
+        await readDataFromDb(pastcompRef, boxes).then((dbBoxes) => {
+          boxes = dbBoxes;
+        });
+        break;
+
+      case "imperfect past (l'imparfait)":
+        await readDataFromDb(pastimpRef, boxes).then((dbBoxes) => {
+          boxes = dbBoxes;
+        });
+        break;
+    }
+
+    // Checking the first 5 boxes for the repetition date (the last one is not shown by default)
+    for (let i = 0; i < boxes.length - 1; i++) {
+      checkRepetDate(boxes[i], indexArray);
+    }
+    //Excluding the elements in the Box6
+    excludeBox6(boxes, indexArray);
+  } else {
+    console.log("User is signed out");
+  }
+  console.log(stats);
+  return { userId, stats };
+}
+
 // A function selecting phrases (actually their IDs) not to show based on the scheduled repetition date (i.e. indices to exclude)
-export function checkRepetDate(box, indexArray) {
+function checkRepetDate(box, indexArray) {
   const today = new Date();
 
   for (let i = 0; i < box.length; i++) {

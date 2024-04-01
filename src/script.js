@@ -1,36 +1,22 @@
-import {
-  app,
-  getAuth,
-  getDatabase,
-  ref,
-  set,
-  onValue,
-  onAuthStateChanged,
-} from "./config.js";
+import { app, getAuth, getDatabase } from "./config.js";
 
 import {
-  showFirstPage,
   buildPageStructure,
   setSpecialBtns,
   showResultPage,
 } from "./pagesetup.js";
 
-import {
-  launchFirstPage,
-  readDataFromDb,
-  readStatsFromDb,
-  checkRepetDate,
-  excludeBox6,
-} from "./init.js";
+import { launchFirstPage, getData } from "./readDbData.js";
 
 import {
   generateElements,
   displayTense,
   displayNext,
-  checkAnswer,
-} from "./main.js";
+} from "./generateElements.js";
 
-import { addBoxToDb, addStatsToDb } from "./final.js";
+import { checkAnswer } from "./checkAnswer.js";
+
+import { addBoxToDb, addStatsToDb } from "./addDataDb.js";
 
 const auth = getAuth(app);
 const database = getDatabase(app);
@@ -72,73 +58,9 @@ export async function launchApp(data, phraseNumber) {
 
   userId = 0;
 
-  // Getting information from the database about the user's performance and copying the database information to dbArray
-  async function getUser() {
-    return new Promise((resolve) => {
-      onAuthStateChanged(auth, (user) => {
-        if (user) {
-          //userId = auth.currentUser.uid;
-          resolve(auth.currentUser.uid);
-        } else {
-          resolve(null);
-        }
-      });
-    });
-  }
-
-  async function getData() {
-    userId = await getUser();
-    if (userId) {
-      console.log(userId);
-      const presentRef = ref(
-        database,
-        "users/" + userId + "/data/" + "/present"
-      );
-      const pastcompRef = ref(
-        database,
-        "users/" + userId + "/data/" + "/pastcomp"
-      );
-      const pastimpRef = ref(
-        database,
-        "users/" + userId + "/data/" + "/pastimp"
-      );
-
-      const statsRef = ref(database, "users/" + userId + "/data/" + "/stats");
-
-      if (data.data[0].tense === "present (le présent de l'indicatif)") {
-        await readDataFromDb(presentRef, boxes).then((dbBoxes) => {
-          boxes = dbBoxes;
-        });
-      }
-
-      if (data.data[0].tense === "past (le passé composé)") {
-        await readDataFromDb(pastcompRef, boxes).then((dbBoxes) => {
-          boxes = dbBoxes;
-        });
-      }
-
-      if (data.data[0].tense === "imperfect past (l'imparfait)") {
-        await readDataFromDb(pastimpRef, boxes).then((dbBoxes) => {
-          boxes = dbBoxes;
-        });
-      }
-
-      readStatsFromDb(statsRef).then((dbStats) => {
-        stats = dbStats;
-      });
-
-      // Checking the first 5 boxes for the repetition date (the last one is not shown by default)
-      for (let i = 0; i < boxes.length - 1; i++) {
-        checkRepetDate(boxes[i], indexArray);
-      }
-      //Excluding the elements in the Box6
-      excludeBox6(boxes, indexArray);
-    } else {
-      console.log("User is signed out");
-    }
-  }
-
-  await getData();
+  const result = await getData(data, boxes, stats, indexArray);
+  userId = result.userId;
+  stats = result.stats;
 
   // Initializing the array box1 if there is no previous history (all the phrases go to box1)
   if (data && data.data.length > 0 && boxes.every((box) => box.length === 0)) {
@@ -214,6 +136,7 @@ export async function launchApp(data, phraseNumber) {
 
       if (userId) {
         addBoxToDb(data, boxes, userId, database);
+        console.log(stats);
         addStatsToDb(userId, database, stats, phraseStats);
       } else {
         console.log("User is signed out");

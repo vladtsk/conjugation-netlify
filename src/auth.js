@@ -12,7 +12,7 @@ import {
 
 import { generateSignUpForm, generateLogInForm } from "./pagesetup.js";
 
-import { launchFirstPage } from "./init.js";
+import { launchFirstPage } from "./readDbData.js";
 
 const auth = getAuth(app);
 const database = getDatabase(app);

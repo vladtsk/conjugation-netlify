@@ -1,6 +1,6 @@
 // Functions that dinamically build the pages
 
-import { launchFirstPage } from "./init.js";
+import { launchFirstPage } from "./readDbData.js";
 import { generateGraph, buildGraph } from "./stats.js";
 
 // Showing the first page
