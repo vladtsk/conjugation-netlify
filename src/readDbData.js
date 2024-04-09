@@ -170,7 +170,7 @@ export async function getData(data, boxes, stats, indexArray, userId) {
   } else {
     console.log("User is signed out");
   }
-  console.log(stats);
+
   return { userId, stats };
 }
 

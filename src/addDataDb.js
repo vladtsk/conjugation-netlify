@@ -5,8 +5,6 @@ import { set, ref } from "./config.js";
 export function addBoxToDb(data, boxes, userId, database) {
   let tense;
 
-  console.log(boxes);
-
   switch (data.data[0].tense) {
     case "present (le présent de l'indicatif)":
       tense = "/present/";
@@ -39,12 +37,10 @@ export function addStatsToDb(userId, database, stats, phraseStats) {
   let nbCorrect = 0;
 
   for (let i = 0; i < nbPhrases; i++) {
-    if (phraseStats[i].isCorrect) {
+    if (phraseStats[i].isCorrect || phraseStats[i].almostCorrectCorrect) {
       nbCorrect++;
     }
   }
-
-  console.log(stats);
 
   // Checking if the last object's date is the same as today
   const dateDb = new Date(stats[stats.length - 1]?.timestamp);

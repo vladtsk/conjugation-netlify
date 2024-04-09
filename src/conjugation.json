@@ -2553,6 +2553,32 @@
         "5": "vous reveniez",
         "6": "ils/elles revenaient"
       }
+    },
+    "comprendre": {
+      "present": {
+        "1": "je comprends",
+        "2": "tu comprends",
+        "3": "il/elle/on comprend",
+        "4": "nous comprenons",
+        "5": "vous comprenez",
+        "6": "ils/elles comprennent"
+      },
+      "pastcomp": {
+        "1": "j'ai compris",
+        "2": "tu as compris",
+        "3": "il/elle/on a compris",
+        "4": "nous avons compris",
+        "5": "vous avez compris",
+        "6": "ils/elles ont compris"
+      },
+      "pastimp": {
+        "1": "je comprenais",
+        "2": "tu comprenais",
+        "3": "il/elle/on comprenait",
+        "4": "nous comprenions",
+        "5": "vous compreniez",
+        "6": "ils/elles comprenaient"
+      }
     }
   }
 }

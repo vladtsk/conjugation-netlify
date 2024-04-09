@@ -9,8 +9,7 @@ export function generateElements(data, indexArray, k, score, phraseStats) {
       k = Math.floor(Math.random() * data.data.length);
     } while (indexArray.includes(k));
     indexArray.push(k);
-    console.log(k);
-    console.log(indexArray);
+
     displayVerb(data, k);
     displayPhrase(data, k);
   } else {

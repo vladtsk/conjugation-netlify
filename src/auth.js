@@ -8,20 +8,30 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
+  sendPasswordResetEmail,
 } from "./config.js";
 
-import { generateSignUpForm, generateLogInForm } from "./pagesetup.js";
+import {
+  generateSignUpForm,
+  generateLogInForm,
+  generatePassResetForm,
+} from "./pagesetup.js";
 
 import { launchFirstPage } from "./readDbData.js";
+
+import { showErrorMsg } from "./authErrorMsg.js";
 
 const auth = getAuth(app);
 const database = getDatabase(app);
 
 generateLogInForm();
 generateSignUpForm();
+generatePassResetForm();
 
 const signUpForm = document.querySelector(".signUpForm");
 const logInForm = document.querySelector(".logInForm");
+const passResetForm = document.querySelector(".passResetForm");
+
 const signUpButton = document.getElementById("signUpButton");
 const logInButton = document.getElementById("logInButton");
 const logInButtonMenu = document.getElementById("logInButtonMenu");
@@ -110,37 +120,6 @@ function userLogIn() {
   mainSection.innerHTML = "";
 }
 
-function showErrorMsg(errorMsgP, errorCode) {
-  console.log(errorCode);
-
-  switch (errorCode) {
-    case "auth/invalid-email":
-      errorMsgP.innerHTML =
-        "<i class='fa-solid fa-circle-exclamation'></i> Please enter a valid email address";
-      break;
-    case "auth/wrong-password":
-      errorMsgP.innerHTML =
-        "<i class='fa-solid fa-circle-exclamation'></i> Error: Incorrect Password";
-      break;
-    case "auth/invalid-credential":
-      errorMsgP.innerHTML =
-        "<i class='fa-solid fa-circle-exclamation'></i> Error: Incorrect Email or Password";
-      break;
-    case "auth/missing-password":
-      errorMsgP.innerHTML =
-        "<i class='fa-solid fa-circle-exclamation'></i> Please enter your password";
-      break;
-    case "auth/missing-email":
-      errorMsgP.innerHTML =
-        "<i class='fa-solid fa-circle-exclamation'></i> Please enter your email";
-      break;
-
-    default:
-      errorMsgP.innerHTML =
-        "<i class='fa-solid fa-circle-exclamation'></i> An error has occurred. Make sure that the email and the password are correct.";
-  }
-}
-
 async function userLogOut() {
   await signOut(auth);
   mainSection.innerHTML = "";
@@ -180,7 +159,7 @@ if (logInSwitch) {
   logInSwitch.addEventListener("click", () => {
     signUpForm.style.display = "none";
 
-    logInButtonMenu.style.display = "none";
+    //logInButtonMenu.style.display = "none";
     logInForm.style.display = "block";
 
     const logInErrorMsgP = document.querySelector(".logInErrorMsg");
@@ -200,7 +179,7 @@ if (signUpSwitch) {
   signUpSwitch.addEventListener("click", () => {
     logInForm.style.display = "none";
 
-    logInButtonMenu.style.display = "none";
+    //logInButtonMenu.style.display = "none";
     signUpForm.style.display = "block";
 
     const logInErrorMsgP = document.querySelector(".logInErrorMsg");
@@ -294,9 +273,79 @@ if (logInButtonMenu) {
     }
     mainSection = document.querySelector(".mainSection");
     mainSection.style.display = "none";
+    passResetForm.style.display = "none";
     logInForm.style.display = "block";
   });
 }
+
+// Password reset
+
+const forgotPass = document.getElementById("forgotPass");
+//const userInfoSection = document.getElementById("userInfo");
+
+let resetEmail;
+
+let passResetBtn;
+
+if (forgotPass) {
+  forgotPass.addEventListener("click", (event) => {
+    event.preventDefault();
+    //main.innerHTML = "";
+
+    mainSection = document.querySelector(".mainSection");
+
+    passResetForm.style.display = "block";
+    logInForm.style.display = "none";
+    signUpForm.style.display = "none";
+
+    if (mainSection) {
+      mainSection.style.display = "none";
+    }
+
+    passResetBtn = document.getElementById("passResetButton");
+    console.log(passResetForm);
+  });
+}
+
+console.log(passResetForm);
+
+passResetForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const resetEmailEl = document.getElementById("resetEmail");
+  const passResetErrorMsg = document.querySelector(".passResetErrorMsg");
+  if (resetEmailEl) {
+    resetEmail = resetEmailEl.value;
+  }
+
+  event.preventDefault();
+  sendPasswordResetEmail(auth, resetEmail)
+    .then(() => {
+      console.log("Password reset email sent");
+      alert("Password reset email sent. Please check your email.");
+
+      passResetForm.style.display = "none";
+      logInForm.style.display = "block";
+
+      signUpForm.style.display = "none";
+
+      //forgotPass.style.display = "none";
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.error(errorCode + errorMessage);
+
+      if (passResetErrorMsg) {
+        showErrorMsg(passResetErrorMsg, errorCode);
+      }
+    });
+});
+
+/*
+passResetBtn.addEventListener("click", (event) => {
+  
+});
 
 /* Validate an email
 function validateEmail(email) {

@@ -40,7 +40,8 @@ input {
 }
 
 #logInButton,
-#signUpButton {
+#signUpButton,
+#passResetButton {
   margin-top: 20px;
   padding-inline: 12px;
   padding-block: 8px;
@@ -53,7 +54,8 @@ input {
 }
 
 #logInButton:hover,
-#signUpButton:hover {
+#signUpButton:hover,
+#passResetButton:hover {
   background-color: #d0142a;
 }
 
@@ -75,6 +77,17 @@ input {
 #signUpSwitch {
   text-decoration: underline;
   font-size: 0.8em;
+}
+
+#forgotPass {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  text-decoration: underline;
+  font-size: 0.9em;
+  display: block;
+
+  text-align: center;
 }
 
 #logInSwitch {

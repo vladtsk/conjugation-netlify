@@ -136,7 +136,7 @@ export async function launchApp(data, phraseNumber) {
 
       if (userId) {
         addBoxToDb(data, boxes, userId, database);
-        console.log(stats);
+
         addStatsToDb(userId, database, stats, phraseStats);
       } else {
         console.log("User is signed out");
