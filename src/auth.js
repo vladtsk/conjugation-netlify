@@ -162,15 +162,7 @@ if (logInSwitch) {
     //logInButtonMenu.style.display = "none";
     logInForm.style.display = "block";
 
-    const logInErrorMsgP = document.querySelector(".logInErrorMsg");
-    if (logInErrorMsgP) {
-      logInErrorMsgP.innerHTML = "";
-    }
-
-    const signUpErrorMsgP = document.querySelector(".signUpErrorMsg");
-    if (signUpErrorMsgP) {
-      signUpErrorMsgP.innerHTML = "";
-    }
+    clearFormFields();
   });
 }
 
@@ -182,30 +174,13 @@ if (signUpSwitch) {
     //logInButtonMenu.style.display = "none";
     signUpForm.style.display = "block";
 
-    const logInErrorMsgP = document.querySelector(".logInErrorMsg");
-    if (logInErrorMsgP) {
-      logInErrorMsgP.innerHTML = "";
-    }
-    const signUpErrorMsgP = document.querySelector(".signUpErrorMsg");
-    if (signUpErrorMsgP) {
-      signUpErrorMsgP.innerHTML = "";
-    }
+    clearFormFields();
   });
 }
 
 if (signUpButton) {
   signUpButton.addEventListener("click", (event) => {
     event.preventDefault();
-
-    const logInErrorMsgP = document.querySelector(".logInErrorMsg");
-    if (logInErrorMsgP) {
-      logInErrorMsgP.innerHTML = "";
-    }
-
-    const signUpErrorMsgP = document.querySelector(".signUpErrorMsg");
-    if (signUpErrorMsgP) {
-      signUpErrorMsgP.innerHTML = "";
-    }
 
     userSignUp();
   });
@@ -255,6 +230,9 @@ if (logOutButton) {
 if (logInButtonMenu) {
   logInButtonMenu.addEventListener("click", (event) => {
     event.preventDefault();
+
+    clearFormFields();
+
     summary = document.querySelector(".summary");
     if (summary) {
       main.removeChild(summary);
@@ -275,6 +253,7 @@ if (logInButtonMenu) {
     mainSection.style.display = "none";
     passResetForm.style.display = "none";
     logInForm.style.display = "block";
+    signUpForm.style.display = "none";
   });
 }
 
@@ -342,6 +321,44 @@ passResetForm.addEventListener("submit", (event) => {
     });
 });
 
+function clearFormFields() {
+  const resetEmail = document.getElementById("resetEmail");
+  const logInEmail = document.getElementById("logInEmail");
+  const logInPassword = document.getElementById("logInPassword");
+  const signUpEmail = document.getElementById("signUpEmail");
+  const signUpPassword = document.getElementById("signUpPassword");
+  const logInErrorMsgP = document.querySelector(".logInErrorMsg");
+  const signUpErrorMsgP = document.querySelector(".signUpErrorMsg");
+
+  if (logInErrorMsgP) {
+    logInErrorMsgP.innerHTML = "";
+  }
+
+  if (signUpErrorMsgP) {
+    signUpErrorMsgP.innerHTML = "";
+  }
+
+  if (resetEmail) {
+    resetEmail.value = "";
+  }
+
+  if (logInEmail) {
+    console.log(logInEmail);
+    logInEmail.value = "";
+  }
+
+  if (logInPassword) {
+    logInPassword.value = "";
+  }
+
+  if (signUpEmail) {
+    signUpEmail.value = "";
+  }
+
+  if (signUpPassword) {
+    signUpPassword.value = "";
+  }
+}
 /*
 passResetBtn.addEventListener("click", (event) => {
   

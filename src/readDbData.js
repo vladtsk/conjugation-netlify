@@ -53,7 +53,7 @@ export async function launchFirstPage() {
 }
 
 function readDataFromDb(timeRef, boxes) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     onValue(
       timeRef,
       (snapshot) => {
@@ -80,7 +80,7 @@ function readDataFromDb(timeRef, boxes) {
 
           resolve(boxes);
         } else {
-          reject(new Error("Boxes not found in DB"));
+          resolve([]);
         }
       },
       {
@@ -91,7 +91,7 @@ function readDataFromDb(timeRef, boxes) {
 }
 
 function readStatsFromDb(timeRef) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     onValue(
       timeRef,
       (snapshot) => {
@@ -100,7 +100,7 @@ function readStatsFromDb(timeRef) {
         if (dbRefData) {
           resolve(dbRefData);
         } else {
-          reject(new Error("Statistics not found in DB"));
+          resolve([]);
         }
       },
       {
@@ -125,53 +125,56 @@ async function getUser() {
 }
 
 export async function getData(data, boxes, stats, indexArray, userId) {
-  userId = await getUser();
-  if (userId) {
-    console.log(userId);
-    const presentRef = ref(database, "users/" + userId + "/data/" + "/present");
-    const pastcompRef = ref(
-      database,
-      "users/" + userId + "/data/" + "/pastcomp"
-    );
-    const pastimpRef = ref(database, "users/" + userId + "/data/" + "/pastimp");
+  try {
+    userId = await getUser();
+    if (userId) {
+      const presentRef = ref(
+        database,
+        "users/" + userId + "/data/" + "/present"
+      );
+      const pastcompRef = ref(
+        database,
+        "users/" + userId + "/data/" + "/pastcomp"
+      );
+      const pastimpRef = ref(
+        database,
+        "users/" + userId + "/data/" + "/pastimp"
+      );
 
-    const statsRef = ref(database, "users/" + userId + "/data/" + "/stats");
+      const statsRef = ref(database, "users/" + userId + "/data/" + "/stats");
 
-    await readStatsFromDb(statsRef).then((dbStats) => {
-      stats = dbStats;
-    });
+      stats = await readStatsFromDb(statsRef);
 
-    switch (data.data[0].tense) {
-      case "present (le présent de l'indicatif)":
-        await readDataFromDb(presentRef, boxes).then((dbBoxes) => {
-          boxes = dbBoxes;
-        });
-        break;
+      switch (data.data[0].tense) {
+        case "present (le présent de l'indicatif)":
+          boxes = await readDataFromDb(presentRef, boxes);
+          break;
 
-      case "past (le passé composé)":
-        await readDataFromDb(pastcompRef, boxes).then((dbBoxes) => {
-          boxes = dbBoxes;
-        });
-        break;
+        case "past (le passé composé)":
+          boxes = await readDataFromDb(pastcompRef, boxes);
+          break;
 
-      case "imperfect past (l'imparfait)":
-        await readDataFromDb(pastimpRef, boxes).then((dbBoxes) => {
-          boxes = dbBoxes;
-        });
-        break;
+        case "imperfect past (l'imparfait)":
+          boxes = await readDataFromDb(pastimpRef, boxes);
+          break;
+      }
+
+      // Checking the first 5 boxes for the repetition date (the last one is not shown by default)
+      if (boxes.length > 0) {
+        for (let i = 0; i < boxes.length - 1; i++) {
+          checkRepetDate(boxes[i], indexArray);
+        }
+        //Excluding the elements in the Box6
+        excludeBox6(boxes, indexArray);
+      }
+    } else {
+      console.log("User is signed out");
     }
 
-    // Checking the first 5 boxes for the repetition date (the last one is not shown by default)
-    for (let i = 0; i < boxes.length - 1; i++) {
-      checkRepetDate(boxes[i], indexArray);
-    }
-    //Excluding the elements in the Box6
-    excludeBox6(boxes, indexArray);
-  } else {
-    console.log("User is signed out");
+    return { userId, stats };
+  } catch (error) {
+    console.error(error.message);
   }
-
-  return { userId, stats };
 }
 
 // A function selecting phrases (actually their IDs) not to show based on the scheduled repetition date (i.e. indices to exclude)
