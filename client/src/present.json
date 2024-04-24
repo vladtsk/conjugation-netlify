@@ -1,0 +1,1022 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "verb": "dire",
+      "phrase": "Je ____ la vérité à mes parents",
+      "answer": "dis",
+      "fullPhrase": "Je dis la vérité à mes parents",
+      "tense": "present (le présent de l'indicatif)",
+      "tenseShort": "present",
+      "translation": "I tell the truth to my parents"
+    },
+    {
+      "id": 2,
+      "verb": "dire",
+      "phrase": "Vous ____ quoi ?",
+      "answer": "dites",
+      "fullPhrase": "Vous dites quoi ?",
+      "translation": "What are you saying?"
+    },
+    {
+      "id": 3,
+      "verb": "dire",
+      "phrase": "Ils ____ tout !",
+      "answer": "disent",
+      "fullPhrase": "Ils disent tout !",
+      "translation": "They say everything!"
+    },
+    {
+      "id": 4,
+      "verb": "dire",
+      "phrase": "Je ne comprends pas ce que tu ____. ",
+      "answer": "dis",
+      "fullPhrase": "Je ne comprends pas ce que tu dis.",
+      "translation": "I don't understand what you're saying."
+    },
+    {
+      "id": 5,
+      "verb": "dire",
+      "phrase": "Tout ce qu'elle ____ est vrai. ",
+      "answer": "dit",
+      "fullPhrase": "Tout ce qu'elle dit est vrai.",
+      "translation": "Everything she says is true."
+    },
+    {
+      "id": 6,
+      "verb": "dire",
+      "phrase": "Nous vous ____ tout.",
+      "answer": "disons",
+      "fullPhrase": "Nous vous disons tout.",
+      "translation": "We tell you everything."
+    },
+    {
+      "id": 7,
+      "verb": "dire",
+      "phrase": "Comment on ____ en français... ?",
+      "answer": "dit",
+      "fullPhrase": "Comment on dit en français ?",
+      "translation": "How do you say in French?"
+    },
+    {
+      "id": 8,
+      "verb": "rester",
+      "phrase": "Je ____ ici pour les vacances.",
+      "answer": "reste",
+      "fullPhrase": "Je reste ici pour les vacances.",
+      "translation": "I'm staying here for the holidays."
+    },
+    {
+      "id": 9,
+      "verb": "travailler",
+      "phrase": "Je ____ ici depuis deux ans.",
+      "answer": "travaille",
+      "fullPhrase": "Je travaille ici depuis deux ans.",
+      "translation": "I've been working here for two years."
+    },
+    {
+      "id": 10,
+      "verb": "détester",
+      "phrase": "Je ____ attendre au restaurant.",
+      "answer": "déteste",
+      "fullPhrase": "Je déteste attendre au restaurant.",
+      "translation": "I hate waiting at the restaurant."
+    },
+    {
+      "id": 11,
+      "verb": "regarder",
+      "phrase": "Je ____ la télé.",
+      "answer": "regarde",
+      "fullPhrase": "Je regarde la télé.",
+      "translation": "I'm watching TV."
+    },
+    {
+      "id": 12,
+      "verb": "danser",
+      "phrase": "Elle ____ tous les mardis.",
+      "answer": "danse",
+      "fullPhrase": "Elle danse tous les mardis.",
+      "translation": "She dances every Tuesday."
+    },
+    {
+      "id": 13,
+      "verb": "chanter",
+      "phrase": "Tu ____ bien ?",
+      "answer": "chantes",
+      "fullPhrase": "Tu chantes bien ?",
+      "translation": "Do you sing well?"
+    },
+    {
+      "id": 14,
+      "verb": "fermer",
+      "phrase": "Nous ____ la porte à clé.",
+      "answer": "fermons",
+      "fullPhrase": "Nous fermons la porte à clé.",
+      "translation": "We lock the door."
+    },
+    {
+      "id": 15,
+      "verb": "arrêter",
+      "phrase": "Ils ____ de travailler.",
+      "answer": "arrêtent",
+      "fullPhrase": "Ils arrêtent de travailler.",
+      "translation": "They stop working."
+    },
+    {
+      "id": 16,
+      "verb": "chercher",
+      "phrase": "On ____ une solution à notre problème.",
+      "answer": "cherche",
+      "fullPhrase": "On cherche une solution à notre problème.",
+      "translation": "We're looking for a solution to our problem."
+    },
+    {
+      "id": 17,
+      "verb": "regarder",
+      "phrase": "Je ____ un film.",
+      "answer": "regarde",
+      "fullPhrase": "Je regarde un film.",
+      "translation": "I'm watching a film."
+    },
+    {
+      "id": 18,
+      "verb": "aller",
+      "phrase": "Juliette ____ à la salle de sport.",
+      "answer": "va",
+      "fullPhrase": "Juliette va à la salle de sport.",
+      "translation": "Juliette goes to the gym."
+    },
+    {
+      "id": 19,
+      "verb": "mettre",
+      "phrase": "Je vous ____ quel gâteau ?",
+      "answer": "mets",
+      "fullPhrase": "Je vous mets quel gâteau ?",
+      "translation": "Which cake would you like? (...do I put for you)"
+    },
+    {
+      "id": 20,
+      "verb": "savoir",
+      "phrase": "Je ne ____ pas.",
+      "answer": "sais",
+      "fullPhrase": "Je ne sais pas.",
+      "translation": "I don't know."
+    },
+    {
+      "id": 21,
+      "verb": "être",
+      "phrase": "Tous les trains ____ en retard.",
+      "answer": "sont",
+      "fullPhrase": "Tous les trains sont en retard.",
+      "translation": "All the trains are late."
+    },
+    {
+      "id": 22,
+      "verb": "être",
+      "phrase": "Le train de Marseille ____ à l'heure.",
+      "answer": "est",
+      "fullPhrase": "Le train de Marseille est à l'heure.",
+      "translation": "The Marseille train is on time."
+    },
+    {
+      "id": 23,
+      "verb": "être",
+      "phrase": "Je ____ en retard.",
+      "answer": "suis",
+      "fullPhrase": "Je suis en retard.",
+      "translation": "I'm late."
+    },
+    {
+      "id": 24,
+      "verb": "faire",
+      "phrase": "Tu ____ quoi?",
+      "answer": "fais",
+      "fullPhrase": "Tu fais quoi?",
+      "translation": "What are you doing?"
+    },
+    {
+      "id": 25,
+      "verb": "faire",
+      "phrase": "Qu'est-ce que vous ____?",
+      "answer": "faites",
+      "fullPhrase": "Qu'est-ce que vous faites?",
+      "translation": "What are you doing?"
+    },
+    {
+      "id": 26,
+      "verb": "chanter",
+      "phrase": "Antoine ____ toujours cette chanson.",
+      "answer": "chante",
+      "fullPhrase": "Antoine chante toujours cette chanson.",
+      "translation": "Antoine always sings this song."
+    },
+    {
+      "id": 27,
+      "verb": "avoir",
+      "phrase": "Tu ____ de l'argent ?",
+      "answer": "as",
+      "fullPhrase": "Tu as de l'argent ?",
+      "translation": "Do you have (any) money?"
+    },
+    {
+      "id": 28,
+      "verb": "écrire",
+      "phrase": "Tu ____ souvent à tes amis ?",
+      "answer": "écris",
+      "fullPhrase": "Tu écris souvent à tes amis ?",
+      "translation": "Do you often write to your friends?"
+    },
+    {
+      "id": 29,
+      "verb": "parler",
+      "phrase": "Tu ____ souvent avec Aïda ?",
+      "answer": "parles",
+      "fullPhrase": "Tu parles souvent avec Aïda ?",
+      "translation": "Do you often speak with Aïda?"
+    },
+    {
+      "id": 30,
+      "verb": "aller",
+      "phrase": "Vous ____ bien ?",
+      "answer": "allez",
+      "fullPhrase": "Vous allez bien ?",
+      "translation": "Are you all right?"
+    },
+    {
+      "id": 31,
+      "verb": "vouloir",
+      "phrase": "Vous ____ boire du jus d'orange ?",
+      "answer": "voulez",
+      "fullPhrase": "Vous voulez boire du jus d'orange ?",
+      "translation": "Do you want to drink orange juice?"
+    },
+    {
+      "id": 32,
+      "verb": "aller",
+      "phrase": "Tu ____ à la piscine ?",
+      "answer": "vas",
+      "fullPhrase": "Tu vas à la piscine ?",
+      "translation": "Are you going to the swimming pool?"
+    },
+    {
+      "id": 33,
+      "verb": "attendre",
+      "phrase": "J'____ ta réponse.",
+      "answer": "attends",
+      "fullPhrase": "J'attends ta réponse.",
+      "translation": "I'm waiting for your answer."
+    },
+    {
+      "id": 34,
+      "verb": "pouvoir",
+      "phrase": "Je ____ rester à la maison?",
+      "answer": "peux",
+      "fullPhrase": "Je peux rester à la maison?",
+      "translation": "Can I stay at home?"
+    },
+    {
+      "id": 35,
+      "verb": "être",
+      "phrase": "Cet appartement ____ trop cher.",
+      "answer": "est",
+      "fullPhrase": "Cet appartement est trop cher.",
+      "translation": "This apartment is too expensive."
+    },
+    {
+      "id": 36,
+      "verb": "parler",
+      "phrase": "Elle ____ trois langues.",
+      "answer": "parle",
+      "fullPhrase": "Elle parle trois langues.",
+      "translation": "She speaks three languages."
+    },
+    {
+      "id": 37,
+      "verb": "porter",
+      "phrase": "Je ____ une robe.",
+      "answer": "porte",
+      "fullPhrase": "Je porte une robe.",
+      "translation": "I'm wearing a dress."
+    },
+    {
+      "id": 38,
+      "verb": "habiter",
+      "phrase": "J'____ à Londres.",
+      "answer": "habite",
+      "fullPhrase": "J'habite à Londres.",
+      "translation": "I live in London."
+    },
+    {
+      "id": 39,
+      "verb": "travailler",
+      "phrase": "Il ____ dans un cinéma.",
+      "answer": "travaille",
+      "fullPhrase": "Il travaille dans un cinéma.",
+      "translation": "He works in a cinema."
+    },
+    {
+      "id": 40,
+      "verb": "acheter",
+      "phrase": "Elle ____ une baguette tous les jours.",
+      "answer": "achète",
+      "fullPhrase": "Elle achète une baguette tous les jours.",
+      "translation": "She buys a baguette every day."
+    },
+    {
+      "id": 41,
+      "verb": "voyager",
+      "phrase": "Est-ce que vous ____ souvent ?",
+      "answer": "voyagez",
+      "fullPhrase": "Est-ce que vous voyagez souvent ?",
+      "translation": "Do you often travel?"
+    },
+    {
+      "id": 42,
+      "verb": "pouvoir",
+      "phrase": "On ne ____ pas.",
+      "answer": "peut",
+      "fullPhrase": "On ne peut pas.",
+      "translation": "We can't."
+    },
+    {
+      "id": 43,
+      "verb": "devoir",
+      "phrase": "Zack ____ travailler.",
+      "answer": "doit",
+      "fullPhrase": "Zack doit travailler.",
+      "translation": "Zack has to work."
+    },
+    {
+      "id": 44,
+      "verb": "être",
+      "phrase": "Est-ce que vous ____ disponibles samedi 15 octobre?",
+      "answer": "êtes",
+      "fullPhrase": "Est-ce que vous êtes disponibles samedi 15 octobre?",
+      "translation": "Are you available on Saturday, October 15th?"
+    },
+    {
+      "id": 45,
+      "verb": "pouvoir",
+      "phrase": "Vous ____ venir avec les enfants.",
+      "answer": "pouvez",
+      "fullPhrase": "Vous pouvez venir avec les enfants.",
+      "translation": "Can you come with the children?"
+    },
+    {
+      "id": 46,
+      "verb": "prendre",
+      "phrase": "Tu ____ un thé ?",
+      "answer": "prends",
+      "fullPhrase": "Tu prends un thé ?",
+      "translation": "Are you having tea?"
+    },
+    {
+      "id": 47,
+      "verb": "pouvoir",
+      "phrase": "On ____ vous contacter pendant les vacances ?",
+      "answer": "peut",
+      "fullPhrase": "On peut vous contacter pendant les vacances ?",
+      "translation": "Can we contact you during the holidays?"
+    },
+    {
+      "id": 48,
+      "verb": "prendre",
+      "phrase": "Je ____ mon train dans 10 minutes.",
+      "answer": "prends",
+      "fullPhrase": "Je prends mon train dans 10 minutes.",
+      "translation": "I'm taking my train in 10 minutes."
+    },
+    {
+      "id": 49,
+      "verb": "faire",
+      "phrase": "Il ____ très froid ce matin.",
+      "answer": "fait",
+      "fullPhrase": "Il fait très froid ce matin.",
+      "translation": "It's very cold this morning."
+    },
+    {
+      "id": 50,
+      "verb": "avoir",
+      "phrase": "Tu ____ quel âge ?",
+      "answer": "as",
+      "fullPhrase": "Tu as quel âge ?",
+      "translation": "How old are you?"
+    },
+    {
+      "id": 51,
+      "verb": "être",
+      "phrase": "Je ____ américaine.",
+      "answer": "suis",
+      "fullPhrase": "Je suis américaine.",
+      "translation": "I am American."
+    },
+    {
+      "id": 52,
+      "verb": "aller",
+      "phrase": "Nous ____ au théâtre.",
+      "answer": "allons",
+      "fullPhrase": "Nous allons au théâtre.",
+      "translation": "We're going to the theatre."
+    },
+    {
+      "id": 53,
+      "verb": "être",
+      "phrase": "On ____ à la poste.",
+      "answer": "est",
+      "fullPhrase": "On est à la poste.",
+      "translation": "We're at the post office."
+    },
+    {
+      "id": 54,
+      "verb": "aller",
+      "phrase": "Vous ____ où ?",
+      "answer": "allez",
+      "fullPhrase": "Vous allez où ?",
+      "translation": "Where are you going?"
+    },
+    {
+      "id": 55,
+      "verb": "avoir",
+      "phrase": "Ils ____ très faim.",
+      "answer": "ont",
+      "fullPhrase": "Ils ont très faim.",
+      "translation": "They are very hungry."
+    },
+    {
+      "id": 56,
+      "verb": "avoir",
+      "phrase": "Vous ____ froid ?",
+      "answer": "avez",
+      "fullPhrase": "Vous avez froid ?",
+      "translation": "Are you cold?"
+    },
+    {
+      "id": 57,
+      "verb": "avoir",
+      "phrase": "Nous ____ quatre enfants.",
+      "answer": "avons",
+      "fullPhrase": "Nous avons quatre enfants.",
+      "translation": "We have four children."
+    },
+    {
+      "id": 58,
+      "verb": "avoir",
+      "phrase": "Elles ____ une belle maison.",
+      "answer": "ont",
+      "fullPhrase": "Elles ont une belle maison.",
+      "translation": "They have a beautiful house."
+    },
+    {
+      "id": 59,
+      "verb": "avoir",
+      "phrase": "Il ____ 40 ans.",
+      "answer": "a",
+      "fullPhrase": "Il a 40 ans.",
+      "translation": "He is 40 years old."
+    },
+    {
+      "id": 60,
+      "verb": "être",
+      "phrase": "Ce livre ____ vraiment nul.",
+      "answer": "est",
+      "fullPhrase": "Ce livre est vraiment nul.",
+      "translation": "This book is really bad."
+    },
+    {
+      "id": 61,
+      "verb": "faire",
+      "phrase": "Tu ____ du sport ?",
+      "answer": "fais",
+      "fullPhrase": "Tu fais du sport ?",
+      "translation": "Do you do sports?"
+    },
+    {
+      "id": 62,
+      "verb": "avoir",
+      "phrase": "Tu ____ faim ?",
+      "answer": "as",
+      "fullPhrase": "Tu as faim ?",
+      "translation": "Are you hungry?"
+    },
+    {
+      "id": 63,
+      "verb": "être",
+      "phrase": "Il ____ déjà 17 h.",
+      "answer": "est",
+      "fullPhrase": "Il est déjà 17 h.",
+      "translation": "It's already 5 pm."
+    },
+    {
+      "id": 64,
+      "verb": "avoir",
+      "phrase": "On ____ envie de dormir.",
+      "answer": "a",
+      "fullPhrase": "On a envie de dormir.",
+      "translation": "We want to sleep."
+    },
+    {
+      "id": 65,
+      "verb": "aller",
+      "phrase": "Mes amis ____ en Espagne la semaine prochaine.",
+      "answer": "vont",
+      "fullPhrase": "Mes amis vont en Espagne la semaine prochaine.",
+      "translation": "My friends are going to Spain next week."
+    },
+    {
+      "id": 66,
+      "verb": "aller",
+      "phrase": "À quelle heure est-ce que tu ____ à l'université ?",
+      "answer": "vas",
+      "fullPhrase": "À quelle heure est-ce que tu vas à l'université ?",
+      "translation": "What time do you go to university?"
+    },
+    {
+      "id": 67,
+      "verb": "se lever",
+      "phrase": "Tu ____ à quelle heure demain matin ?",
+      "answer": "te lèves",
+      "fullPhrase": "Tu te lèves à quelle heure demain matin ?",
+      "translation": "What time do you get up tomorrow morning?"
+    },
+    {
+      "id": 68,
+      "verb": "se réveiller",
+      "phrase": "Marc ____ tard le dimanche.",
+      "answer": "se réveille",
+      "fullPhrase": "Marc se réveille tard le dimanche.",
+      "translation": "Marc wakes up late on Sundays."
+    },
+    {
+      "id": 69,
+      "verb": "se lever",
+      "phrase": "Je ____ tous les jours à 6 h.",
+      "answer": "me lève",
+      "fullPhrase": "Je me lève tous les jours à 6 h.",
+      "translation": "I get up every day at 6 a.m."
+    },
+    {
+      "id": 70,
+      "verb": "vouloir",
+      "phrase": "Qu'est-ce que tu ____ faire ce soir ?",
+      "answer": "veux",
+      "fullPhrase": "Qu'est-ce que tu veux faire ce soir ?",
+      "translation": "What do you want to do tonight?"
+    },
+    {
+      "id": 71,
+      "verb": "vouloir",
+      "phrase": "Est-ce que Léo ____ bien rester un peu plus tard ?",
+      "answer": "veut",
+      "fullPhrase": "Est-ce que Léo veut bien rester un peu plus tard ?",
+      "translation": "Does Leo want to stay a little later?"
+    },
+    {
+      "id": 72,
+      "verb": "vouloir",
+      "phrase": "Je ne ____ pas travailler dans cette entreprise.",
+      "answer": "veux",
+      "fullPhrase": "Je ne veux pas travailler dans cette entreprise.",
+      "translation": "I don't want to work in this company."
+    },
+    {
+      "id": 73,
+      "verb": "entendre",
+      "phrase": "Je n'____ rien.",
+      "answer": "entends",
+      "fullPhrase": "Je n'entends rien.",
+      "translation": "I can't hear anything."
+    },
+    {
+      "id": 74,
+      "verb": "avoir",
+      "phrase": "J'____ mal à la tête.",
+      "answer": "ai",
+      "fullPhrase": "J'ai mal à la tête.",
+      "translation": "I have a headache."
+    },
+    {
+      "id": 75,
+      "verb": "aller",
+      "phrase": "Ce train ____ vite !",
+      "answer": "va",
+      "fullPhrase": "Ce train va vite !",
+      "translation": "This train goes fast!"
+    },
+    {
+      "id": 76,
+      "verb": "être",
+      "phrase": "Tu ____ en colère ?",
+      "answer": "es",
+      "fullPhrase": "Tu es en colère ?",
+      "translation": "Are you angry?"
+    },
+    {
+      "id": 77,
+      "verb": "fumer",
+      "phrase": "Elle ____ beaucoup.",
+      "answer": "fume",
+      "fullPhrase": "Elle fume beaucoup.",
+      "translation": "She smokes a lot."
+    },
+    {
+      "id": 78,
+      "verb": "devoir",
+      "phrase": "Je ____ aller à l'hôpital.",
+      "answer": "dois",
+      "fullPhrase": "Je dois aller à l'hôpital.",
+      "translation": "I have to go to hospital."
+    },
+    {
+      "id": 79,
+      "verb": "pouvoir",
+      "phrase": "Je ____ vous aider ?",
+      "answer": "peux",
+      "fullPhrase": "Je peux vous aider ?",
+      "translation": "Can I help you?"
+    },
+    {
+      "id": 80,
+      "verb": "devoir",
+      "phrase": "Combien de comprimés est-ce que je ____ prendre ?",
+      "answer": "dois",
+      "fullPhrase": "Combien de comprimés est-ce que je dois prendre ?",
+      "translation": "How many tablets should I take?"
+    },
+    {
+      "id": 81,
+      "verb": "faire",
+      "phrase": "Je ____ mes études dans une université parisienne.",
+      "answer": "fais",
+      "fullPhrase": "Je fais mes études dans une université parisienne.",
+      "translation": "I study at a university in Paris."
+    },
+    {
+      "id": 82,
+      "verb": "vouloir",
+      "phrase": "Il ____ étudier les mathématiques.",
+      "answer": "veut",
+      "fullPhrase": "Il veut étudier les mathématiques.",
+      "translation": "He wants to study mathematics."
+    },
+    {
+      "id": 83,
+      "verb": "étudier",
+      "phrase": "Il ____ l'histoire.",
+      "answer": "étudie",
+      "fullPhrase": "Il étudie l'histoire.",
+      "translation": "He studies history."
+    },
+    {
+      "id": 84,
+      "verb": "apprendre",
+      "phrase": "Il ____ l'italien.",
+      "answer": "apprend",
+      "fullPhrase": "Il apprend l'italien.",
+      "translation": "He learns Italian."
+    },
+    {
+      "id": 85,
+      "verb": "être",
+      "phrase": "Ils ____ sympas tes profs ?",
+      "answer": "sont",
+      "fullPhrase": "Ils sont sympas tes profs ?",
+      "translation": "Are your teachers nice?"
+    },
+    {
+      "id": 86,
+      "verb": "travailler",
+      "phrase": "Je ____ de 9 heures à 17 heures.",
+      "answer": "travaille",
+      "fullPhrase": "Je travaille de 9 heures à 17 heures.",
+      "translation": "I work from 9 a.m. to 5 p.m."
+    },
+    {
+      "id": 87,
+      "verb": "détester",
+      "phrase": "Je ____ mon travail.",
+      "answer": "déteste",
+      "fullPhrase": "Je déteste mon travail.",
+      "translation": "I hate my job."
+    },
+    {
+      "id": 88,
+      "verb": "prendre",
+      "phrase": "Quand est-ce que tu ____ tes vacances ?",
+      "answer": "prends",
+      "fullPhrase": "Quand est-ce que tu prends tes vacances ?",
+      "translation": "When are you going on holiday/vacation?"
+    },
+    {
+      "id": 89,
+      "verb": "faire",
+      "phrase": "On ____ quoi samedi soir ?",
+      "answer": "fait",
+      "fullPhrase": "On fait quoi samedi soir ?",
+      "translation": "What are we doing on Saturday night?"
+    },
+    {
+      "id": 90,
+      "verb": "fermer",
+      "phrase": "À quelle heure ____ le musée ?",
+      "answer": "ferme",
+      "fullPhrase": "À quelle heure ferme le musée ?",
+      "translation": "What time does the museum close?"
+    },
+    {
+      "id": 91,
+      "verb": "se retrouver",
+      "phrase": "On ____ où ?",
+      "answer": "se retrouve",
+      "fullPhrase": "On se retrouve où ?",
+      "translation": "Where shall we meet?"
+    },
+    {
+      "id": 92,
+      "verb": "être",
+      "phrase": "Quels ____ vos acteurs ou actrices préférés ?",
+      "answer": "sont",
+      "fullPhrase": "Quels sont vos acteurs ou actrices préférés ?",
+      "translation": "Who are your favourite actors or actresses?"
+    },
+    {
+      "id": 93,
+      "verb": "prendre",
+      "phrase": "Il ____ son petit-déjeuner.",
+      "answer": "prend",
+      "fullPhrase": "Il prend son petit-déjeuner.",
+      "translation": "He eats (takes) his breakfast."
+    },
+    {
+      "id": 94,
+      "verb": "boire",
+      "phrase": "Il ____ un café.",
+      "answer": "boit",
+      "fullPhrase": "Il boit un café.",
+      "translation": "He drinks a coffee."
+    },
+    {
+      "id": 95,
+      "verb": "se coucher",
+      "phrase": "Il ____ tard.",
+      "answer": "se couche",
+      "fullPhrase": "Il se couche tard.",
+      "translation": "He goes to bed late."
+    },
+    {
+      "id": 96,
+      "verb": "partir",
+      "phrase": "Elle ____ travailler.",
+      "answer": "part",
+      "fullPhrase": "Elle part travailler.",
+      "translation": "She leaves for work (she goes to work)."
+    },
+    {
+      "id": 97,
+      "verb": "se lever",
+      "phrase": "Je ____ à 6 heures.",
+      "answer": "me lève",
+      "fullPhrase": "Je me lève à 6 heures.",
+      "translation": "I get up at 6 o'clock."
+    },
+    {
+      "id": 98,
+      "verb": "rentrer",
+      "phrase": "Je ____ à la maison à 19 heures.",
+      "answer": "rentre",
+      "fullPhrase": "Je rentre à la maison à 19 heures.",
+      "translation": "I go/come home at 7 p.m."
+    },
+    {
+      "id": 99,
+      "verb": "se coucher",
+      "phrase": "Je ____ vers minuit.",
+      "answer": "me couche",
+      "fullPhrase": "Je me couche vers minuit.",
+      "translation": "I go to bed around midnight."
+    },
+    {
+      "id": 100,
+      "verb": "partir",
+      "phrase": "Je ____ au travail.",
+      "answer": "pars",
+      "fullPhrase": "Je pars au travail.",
+      "translation": "I leave for work (I go to work)."
+    },
+    {
+      "id": 101,
+      "verb": "commencer",
+      "phrase": "À quelle heure tu ____ demain ?",
+      "answer": "commences",
+      "fullPhrase": "À quelle heure tu commences demain ?",
+      "translation": "What time do you start tomorrow?"
+    },
+    {
+      "id": 102,
+      "verb": "mettre",
+      "phrase": "Tu ____ le réveil à quelle heure ?",
+      "answer": "mets",
+      "fullPhrase": "Tu mets le réveil à quelle heure ?",
+      "translation": "What time do you set the alarm for?"
+    },
+    {
+      "id": 103,
+      "verb": "finir",
+      "phrase": "Tu ____ tard ce soir ?",
+      "answer": "finis",
+      "fullPhrase": "Tu finis tard ce soir ?",
+      "translation": "Are you finishing late tonight?"
+    },
+    {
+      "id": 104,
+      "verb": "finir",
+      "phrase": "Aujourd'hui, je ____ à 17 heures.",
+      "answer": "finis",
+      "fullPhrase": "Aujourd'hui, je finis à 17 heures.",
+      "translation": "Today, I finish at 5 p.m."
+    },
+    {
+      "id": 105,
+      "verb": "rentrer",
+      "phrase": "À quelle heure tu ____ ?",
+      "answer": "rentres",
+      "fullPhrase": "À quelle heure tu rentres ?",
+      "translation": "What time do you come (back) home?"
+    },
+    {
+      "id": 106,
+      "verb": "se reposer",
+      "phrase": "Le samedi et le dimanche, on ____.",
+      "answer": "se repose",
+      "fullPhrase": "Le samedi et le dimanche, on se repose.",
+      "translation": "On Saturdays and Sundays, we rest."
+    },
+    {
+      "id": 107,
+      "verb": "coûter",
+      "phrase": "Au supermarché, les produits ____ souvent moins cher.",
+      "answer": "coûtent",
+      "fullPhrase": "Au supermarché, les produits coûtent souvent moins cher.",
+      "translation": "At the supermarket, products often cost less."
+    },
+    {
+      "id": 108,
+      "verb": "coûter",
+      "phrase": "Combien ça ____ ?",
+      "answer": "coûte",
+      "fullPhrase": "Combien ça coûte ?",
+      "translation": "How much does it cost?"
+    },
+    {
+      "id": 109,
+      "verb": "acheter",
+      "phrase": "J'____ du pain à la boulangerie.",
+      "answer": "achète",
+      "fullPhrase": "J'achète du pain à la boulangerie.",
+      "translation": "I buy bread at the baker's (bakery)."
+    },
+    {
+      "id": 110,
+      "verb": "penser",
+      "phrase": "Qu'est-ce que tu en ____ ?",
+      "answer": "penses",
+      "fullPhrase": "Qu'est-ce que tu en penses ?",
+      "translation": "What do you think about it?"
+    },
+    {
+      "id": 111,
+      "verb": "porter",
+      "phrase": "Il ____ des vêtements légers.",
+      "answer": "porte",
+      "fullPhrase": "Il porte des vêtements légers.",
+      "translation": "He wears light clothes."
+    },
+    {
+      "id": 112,
+      "verb": "croire",
+      "phrase": "Je ____ qu'on est perdus !",
+      "answer": "crois",
+      "fullPhrase": "Je crois qu'on est perdus !",
+      "translation": "I think we are lost!"
+    },
+    {
+      "id": 113,
+      "verb": "pouvoir",
+      "phrase": "Les enfants ne ____ pas se promener seuls.",
+      "answer": "peuvent",
+      "fullPhrase": "Les enfants ne peuvent pas se promener seuls.",
+      "translation": "Children are not allowed to walk alone."
+    },
+    {
+      "id": 114,
+      "verb": "voyager",
+      "phrase": "Je ____ beaucoup.",
+      "answer": "voyage",
+      "fullPhrase": "Je voyage beaucoup.",
+      "translation": "I travel a lot."
+    },
+    {
+      "id": 115,
+      "verb": "vivre",
+      "phrase": "Tu ____ en Guadeloupe depuis longtemps ?",
+      "answer": "vis",
+      "fullPhrase": "Tu vis en Guadeloupe depuis longtemps ?",
+      "translation": "Have you been living in Guadeloupe for a long time?"
+    },
+    {
+      "id": 116,
+      "verb": "se passer",
+      "phrase": "Comment ça ____ en Suisse ?",
+      "answer": "se passe",
+      "fullPhrase": "Comment ça se passe en Suisse ?",
+      "translation": "How is it going in Switzerland?"
+    },
+    {
+      "id": 117,
+      "verb": "s'inquiéter",
+      "phrase": "Elle s'____ pour l'examen.",
+      "answer": "inquiète",
+      "fullPhrase": "Elle s'inquiète pour l'examen.",
+      "translation": "She worries about the exam."
+    },
+    {
+      "id": 118,
+      "verb": "venir",
+      "phrase": "Je ____ pour retirer un colis.",
+      "answer": "viens",
+      "fullPhrase": "Je viens pour retirer un colis.",
+      "translation": "I've come to collect a parcel."
+    },
+    {
+      "id": 119,
+      "verb": "lire",
+      "phrase": "Est-ce que tu ____ le journal ?",
+      "answer": "lis",
+      "fullPhrase": "Est-ce que tu lis le journal ?",
+      "translation": "Do you read the newspaper?"
+    },
+    {
+      "id": 120,
+      "verb": "partir",
+      "phrase": "Martin ____ pour un an.",
+      "answer": "part",
+      "fullPhrase": "Martin part pour un an.",
+      "translation": "Martin leaves for a year."
+    },
+    {
+      "id": 121,
+      "verb": "sortir",
+      "phrase": "Margaux et Nick ____ ensemble.",
+      "answer": "sortent",
+      "fullPhrase": "Margaux et Nick sortent ensemble.",
+      "translation": "Margaux and Nick are seeing each other."
+    },
+    {
+      "id": 122,
+      "verb": "habiter",
+      "phrase": "Elle ____ toute seule.",
+      "answer": "habite",
+      "fullPhrase": "Elle habite toute seule.",
+      "translation": "She lives alone."
+    },
+    {
+      "id": 123,
+      "verb": "sortir",
+      "phrase": "Je ____ avec une fille de mon travail.",
+      "answer": "sors",
+      "fullPhrase": "Je sors avec une fille de mon travail.",
+      "translation": "I go out with (date) a girl from work."
+    },
+    {
+      "id": 124,
+      "verb": "chercher",
+      "phrase": "On ____ un appartement plus grand.",
+      "answer": "cherche",
+      "fullPhrase": "On cherche un appartement plus grand.",
+      "translation": "We're looking for a bigger apartment."
+    },
+    {
+      "id": 125,
+      "verb": "prendre",
+      "phrase": "Je ____ des médicaments.",
+      "answer": "prends",
+      "fullPhrase": "Je prends des médicaments.",
+      "translation": "I take medication."
+    },
+    {
+      "id": 126,
+      "verb": "gagner",
+      "phrase": "Il ____ bien sa vie.",
+      "answer": "gagne",
+      "fullPhrase": "Il gagne bien sa vie.",
+      "translation": "He earns a good living."
+    },
+    {
+      "id": 127,
+      "verb": "habiter",
+      "phrase": "J'____ au dernier étage.",
+      "answer": "habite",
+      "fullPhrase": "J'habite au dernier étage.",
+      "translation": "I live on the top floor."
+    }
+  ]
+}
