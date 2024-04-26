@@ -29,6 +29,7 @@ export {
   ref,
   set,
   onValue,
+  update,
 };
 
 // Our web app's Firebase configuration

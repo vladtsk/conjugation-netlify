@@ -69,40 +69,37 @@ export function addStatsToDb(userId, database, stats, phraseStats) {
     });
 }
 
-export function updateSubsData(
-  userId,
-  stripeSessionId,
-  stripeCustomerId,
-  stripeStatus
-) {
-  // User data
-  let subscriptionData = {
-    sessionId: stripeSessionId,
-    customerId: stripeCustomerId,
-    status: stripeStatus,
-  };
+export function addStripeCustomerIdToDb(userId, stripeCustomerId) {
+  const stripeCustomerIdRef = ref(
+    database,
+    "users/" + userId + "/subscription/stripeCustomerId"
+  );
+  set(stripeCustomerIdRef, stripeCustomerId)
+    .then(() => {
+      console.log("Stripe customer ID added successfully do DB");
+    })
+    .catch((error) => {
+      console.error("Error adding the stripe customer ID ", error);
+    });
+}
 
-  // Reference to the 'subscription' node
+export function updateStripeStatus(userId, stripeStatus) {
+  // Reference to the 'subscription status' node
 
-  const subsRef = ref(database, "users/" + userId + "/subscription");
+  const subStatusRef = ref(
+    database,
+    "users/" + userId + "/subscription/status"
+  );
 
-  //Updating the status
+  //let updates = {};
+  //updates["status"] = newStripeStatus;
+  //update(subsRef, updates)
 
-  subscriptionData.status = newStripeStatus;
-
-  let updates = {};
-  updates["status"] = newStripeStatus;
-  update(subsRef, updates)
+  set(subStatusRef, stripeStatus)
     .then(() => {
       console.log("Status updated successfully in the database");
     })
     .catch((error) => {
       console.error("Error updating status in the database:", error);
     });
-
-  /*  
-  
-
-  // Adding the data to the Database
-  set(subsRef, subscriptionData);*/
 }

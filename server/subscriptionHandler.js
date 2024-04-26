@@ -1,10 +1,12 @@
 import { set, ref } from "../client/src/config.js";
 
-export function handleSubscriptionDeleted(subscription) {}
+import { updateStripeStatus } from "../client/src/addDataDb.js";
 
-export function handleSubscriptionCreated(subscription) {}
+export function handleSubscriptionDeleted() {}
 
-export function handleSubscriptionUpdated(subscription) {}
+export function handleSubscriptionCreated() {}
+
+export function handleSubscriptionUpdated() {}
 
 /*export function handleSubscriptionTrialEnding(subscription) {
   subscription;

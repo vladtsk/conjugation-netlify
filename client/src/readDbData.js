@@ -144,6 +144,22 @@ async function getUser() {
   });
 }
 
+export async function getStripeCustomerId(userId) {
+  try {
+    // Reference to the 'Stripe customer ID' node
+    const stripeCustomerIdRef = ref(
+      database,
+      "users/" + userId + "/subscription/stripeCustomerId"
+    );
+
+    const stripeCustomerId = await readSubsDataFromDb(stripeCustomerIdRef);
+
+    return stripeCustomerId;
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
 export async function getSubscriptionData() {
   try {
     userId = await getUser();

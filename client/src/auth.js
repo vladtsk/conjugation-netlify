@@ -9,7 +9,7 @@ import {
   onAuthStateChanged,
   signOut,
   sendPasswordResetEmail,
-} from "./config.js";
+} from "./config.mjs";
 
 import {
   generateSignUpForm,
