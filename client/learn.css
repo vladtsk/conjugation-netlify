@@ -1,0 +1,290 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  --color-primary: #2b2d42;
+  --color-secondary: #edf2f4;
+  --color-tertiary: #ef233c;
+
+  background-color: var(--color-secondary);
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-block: 10px;
+  color: var(--color-primary);
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+
+  font-family: "Poppins", sans-serif;
+
+  border-bottom: 2px solid gray;
+}
+
+.logo {
+  margin-left: 8%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  margin-right: 8%;
+}
+
+.menu {
+  font-weight: bold;
+  /*display: flex;
+    justify-content: end; */
+  align-items: center;
+}
+
+nav button {
+  display: inline-block;
+}
+
+nav a:hover {
+  color: var(--color-tertiary);
+}
+
+nav .fa-circle-question,
+.fa-square-poll-vertical {
+  font-size: 25px;
+  margin-right: 15px;
+  color: var(--color-primary);
+}
+
+.fa-exclamation-triangle {
+  color: var(--color-tertiary);
+}
+
+.fa-circle-exclamation {
+  font-size: 0.9em;
+}
+
+.fa-lightbulb {
+  font-size: 1.1em;
+}
+
+#logOutButton,
+#logInButtonMenu,
+#subscribeBtn {
+  padding-inline: 12px;
+  padding-block: 8px;
+
+  border-radius: 6px;
+  background-color: var(--color-secondary);
+  color: black;
+  border-color: var(--color-primary);
+}
+
+#subscribeBtn {
+  margin-left: 10px;
+}
+
+#logOutButton {
+  display: none;
+}
+
+#logOutButton:hover,
+#logInButtonMenu:hover,
+#subscribeBtn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.main-content {
+  margin-right: 6.5rem;
+  text-align: justify;
+
+  padding-bottom: 40px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.sidebar {
+  margin-top: 0.8rem;
+  margin-left: 8rem;
+
+  font-size: 16px;
+}
+
+.sidebar li,
+.list-no-bullet li {
+  margin-bottom: 8px;
+  list-style-type: none;
+}
+
+.list-no-bullet li {
+  padding-top: 5px;
+  font-size: 18px;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+h5 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+h4 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+p {
+  font-size: 18px;
+  margin-top: 1rem;
+}
+
+.fa-chevron-right {
+  font-size: 0.8rem;
+
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+}
+
+.content-nav {
+  margin-top: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 60%;
+}
+
+th,
+td {
+  border: solid black 1px;
+  padding: 5px;
+}
+
+th {
+  background-color: var(--color-primary);
+  color: #edf2f4;
+}
+
+.definition {
+  font-size: 18px;
+  border: solid var(--color-primary) 3px;
+
+  border-radius: 10px;
+
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-block: 1rem;
+  margin-block: 1rem;
+}
+
+.definition p {
+  margin: 0;
+}
+
+.fa-book-open {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--color-tertiary);
+}
+
+.red {
+  color: red;
+}
+
+.color3 {
+  color: var(--color-tertiary);
+}
+
+.tense-name {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.examples {
+  margin-block: 30px;
+}
+
+.examples-list {
+  margin-top: 20px;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+
+.examples-list ul {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  list-style-type: none;
+  border-left: solid var(--color-primary) 2px;
+  border-radius: 5px;
+}
+
+.examples-list li {
+  padding-bottom: 5px;
+}
+
+.list-no-bullet li {
+  padding-top: 5px;
+  font-size: 18px;
+}
+
+.list-no-bullet {
+  padding-bottom: 20px;
+}
+
+.tip {
+  padding-top: 10px;
+}
