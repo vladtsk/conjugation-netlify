@@ -8,7 +8,8 @@
       "fullPhrase": "Je dis la vérité à mes parents",
       "tense": "present (le présent de l'indicatif)",
       "tenseShort": "present",
-      "translation": "I tell the truth to my parents"
+      "translation": "I tell the truth to my parents",
+      "group": 3
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "phrase": "Vous ____ quoi ?",
       "answer": "dites",
       "fullPhrase": "Vous dites quoi ?",
-      "translation": "What are you saying?"
+      "translation": "What are you saying?",
+      "group": 3
     },
     {
       "id": 3,
@@ -24,7 +26,8 @@
       "phrase": "Ils ____ tout !",
       "answer": "disent",
       "fullPhrase": "Ils disent tout !",
-      "translation": "They say everything!"
+      "translation": "They say everything!",
+      "group": 3
     },
     {
       "id": 4,
@@ -32,7 +35,8 @@
       "phrase": "Je ne comprends pas ce que tu ____. ",
       "answer": "dis",
       "fullPhrase": "Je ne comprends pas ce que tu dis.",
-      "translation": "I don't understand what you're saying."
+      "translation": "I don't understand what you're saying.",
+      "group": 3
     },
     {
       "id": 5,
@@ -40,7 +44,8 @@
       "phrase": "Tout ce qu'elle ____ est vrai. ",
       "answer": "dit",
       "fullPhrase": "Tout ce qu'elle dit est vrai.",
-      "translation": "Everything she says is true."
+      "translation": "Everything she says is true.",
+      "group": 3
     },
     {
       "id": 6,
@@ -48,7 +53,8 @@
       "phrase": "Nous vous ____ tout.",
       "answer": "disons",
       "fullPhrase": "Nous vous disons tout.",
-      "translation": "We tell you everything."
+      "translation": "We tell you everything.",
+      "group": 3
     },
     {
       "id": 7,
@@ -56,7 +62,8 @@
       "phrase": "Comment on ____ en français... ?",
       "answer": "dit",
       "fullPhrase": "Comment on dit en français ?",
-      "translation": "How do you say in French?"
+      "translation": "How do you say in French?",
+      "group": 3
     },
     {
       "id": 8,
@@ -64,7 +71,8 @@
       "phrase": "Je ____ ici pour les vacances.",
       "answer": "reste",
       "fullPhrase": "Je reste ici pour les vacances.",
-      "translation": "I'm staying here for the holidays."
+      "translation": "I'm staying here for the holidays.",
+      "group": 1
     },
     {
       "id": 9,
@@ -72,7 +80,8 @@
       "phrase": "Je ____ ici depuis deux ans.",
       "answer": "travaille",
       "fullPhrase": "Je travaille ici depuis deux ans.",
-      "translation": "I've been working here for two years."
+      "translation": "I've been working here for two years.",
+      "group": 1
     },
     {
       "id": 10,
@@ -80,7 +89,8 @@
       "phrase": "Je ____ attendre au restaurant.",
       "answer": "déteste",
       "fullPhrase": "Je déteste attendre au restaurant.",
-      "translation": "I hate waiting at the restaurant."
+      "translation": "I hate waiting at the restaurant.",
+      "group": 1
     },
     {
       "id": 11,
@@ -88,7 +98,8 @@
       "phrase": "Je ____ la télé.",
       "answer": "regarde",
       "fullPhrase": "Je regarde la télé.",
-      "translation": "I'm watching TV."
+      "translation": "I'm watching TV.",
+      "group": 1
     },
     {
       "id": 12,
@@ -96,7 +107,8 @@
       "phrase": "Elle ____ tous les mardis.",
       "answer": "danse",
       "fullPhrase": "Elle danse tous les mardis.",
-      "translation": "She dances every Tuesday."
+      "translation": "She dances every Tuesday.",
+      "group": 1
     },
     {
       "id": 13,
@@ -104,7 +116,8 @@
       "phrase": "Tu ____ bien ?",
       "answer": "chantes",
       "fullPhrase": "Tu chantes bien ?",
-      "translation": "Do you sing well?"
+      "translation": "Do you sing well?",
+      "group": 1
     },
     {
       "id": 14,
@@ -112,7 +125,8 @@
       "phrase": "Nous ____ la porte à clé.",
       "answer": "fermons",
       "fullPhrase": "Nous fermons la porte à clé.",
-      "translation": "We lock the door."
+      "translation": "We lock the door.",
+      "group": 1
     },
     {
       "id": 15,
@@ -120,7 +134,8 @@
       "phrase": "Ils ____ de travailler.",
       "answer": "arrêtent",
       "fullPhrase": "Ils arrêtent de travailler.",
-      "translation": "They stop working."
+      "translation": "They stop working.",
+      "group": 1
     },
     {
       "id": 16,
@@ -128,7 +143,8 @@
       "phrase": "On ____ une solution à notre problème.",
       "answer": "cherche",
       "fullPhrase": "On cherche une solution à notre problème.",
-      "translation": "We're looking for a solution to our problem."
+      "translation": "We're looking for a solution to our problem.",
+      "group": 1
     },
     {
       "id": 17,
@@ -136,7 +152,8 @@
       "phrase": "Je ____ un film.",
       "answer": "regarde",
       "fullPhrase": "Je regarde un film.",
-      "translation": "I'm watching a film."
+      "translation": "I'm watching a film.",
+      "group": 1
     },
     {
       "id": 18,
@@ -144,7 +161,8 @@
       "phrase": "Juliette ____ à la salle de sport.",
       "answer": "va",
       "fullPhrase": "Juliette va à la salle de sport.",
-      "translation": "Juliette goes to the gym."
+      "translation": "Juliette goes to the gym.",
+      "group": "irregular"
     },
     {
       "id": 19,
@@ -152,7 +170,8 @@
       "phrase": "Je vous ____ quel gâteau ?",
       "answer": "mets",
       "fullPhrase": "Je vous mets quel gâteau ?",
-      "translation": "Which cake would you like? (...do I put for you)"
+      "translation": "Which cake would you like? (...do I put for you)",
+      "group": 2
     },
     {
       "id": 20,
@@ -160,7 +179,8 @@
       "phrase": "Je ne ____ pas.",
       "answer": "sais",
       "fullPhrase": "Je ne sais pas.",
-      "translation": "I don't know."
+      "translation": "I don't know.",
+      "group": 3
     },
     {
       "id": 21,
@@ -168,7 +188,8 @@
       "phrase": "Tous les trains ____ en retard.",
       "answer": "sont",
       "fullPhrase": "Tous les trains sont en retard.",
-      "translation": "All the trains are late."
+      "translation": "All the trains are late.",
+      "group": "irregular"
     },
     {
       "id": 22,
@@ -176,7 +197,8 @@
       "phrase": "Le train de Marseille ____ à l'heure.",
       "answer": "est",
       "fullPhrase": "Le train de Marseille est à l'heure.",
-      "translation": "The Marseille train is on time."
+      "translation": "The Marseille train is on time.",
+      "group": "irregular"
     },
     {
       "id": 23,
@@ -184,7 +206,8 @@
       "phrase": "Je ____ en retard.",
       "answer": "suis",
       "fullPhrase": "Je suis en retard.",
-      "translation": "I'm late."
+      "translation": "I'm late.",
+      "group": "irregular"
     },
     {
       "id": 24,
@@ -192,7 +215,8 @@
       "phrase": "Tu ____ quoi?",
       "answer": "fais",
       "fullPhrase": "Tu fais quoi?",
-      "translation": "What are you doing?"
+      "translation": "What are you doing?",
+      "group": "irregular"
     },
     {
       "id": 25,
@@ -200,7 +224,8 @@
       "phrase": "Qu'est-ce que vous ____?",
       "answer": "faites",
       "fullPhrase": "Qu'est-ce que vous faites?",
-      "translation": "What are you doing?"
+      "translation": "What are you doing?",
+      "group": "irregular"
     },
     {
       "id": 26,
@@ -208,7 +233,8 @@
       "phrase": "Antoine ____ toujours cette chanson.",
       "answer": "chante",
       "fullPhrase": "Antoine chante toujours cette chanson.",
-      "translation": "Antoine always sings this song."
+      "translation": "Antoine always sings this song.",
+      "group": 1
     },
     {
       "id": 27,
@@ -216,7 +242,8 @@
       "phrase": "Tu ____ de l'argent ?",
       "answer": "as",
       "fullPhrase": "Tu as de l'argent ?",
-      "translation": "Do you have (any) money?"
+      "translation": "Do you have (any) money?",
+      "group": "irregular"
     },
     {
       "id": 28,
@@ -224,7 +251,8 @@
       "phrase": "Tu ____ souvent à tes amis ?",
       "answer": "écris",
       "fullPhrase": "Tu écris souvent à tes amis ?",
-      "translation": "Do you often write to your friends?"
+      "translation": "Do you often write to your friends?",
+      "group": 3
     },
     {
       "id": 29,
@@ -232,7 +260,8 @@
       "phrase": "Tu ____ souvent avec Aïda ?",
       "answer": "parles",
       "fullPhrase": "Tu parles souvent avec Aïda ?",
-      "translation": "Do you often speak with Aïda?"
+      "translation": "Do you often speak with Aïda?",
+      "group": 1
     },
     {
       "id": 30,
@@ -240,7 +269,8 @@
       "phrase": "Vous ____ bien ?",
       "answer": "allez",
       "fullPhrase": "Vous allez bien ?",
-      "translation": "Are you all right?"
+      "translation": "Are you all right?",
+      "group": "irregular"
     },
     {
       "id": 31,
@@ -248,7 +278,8 @@
       "phrase": "Vous ____ boire du jus d'orange ?",
       "answer": "voulez",
       "fullPhrase": "Vous voulez boire du jus d'orange ?",
-      "translation": "Do you want to drink orange juice?"
+      "translation": "Do you want to drink orange juice?",
+      "group": 3
     },
     {
       "id": 32,
@@ -256,7 +287,8 @@
       "phrase": "Tu ____ à la piscine ?",
       "answer": "vas",
       "fullPhrase": "Tu vas à la piscine ?",
-      "translation": "Are you going to the swimming pool?"
+      "translation": "Are you going to the swimming pool?",
+      "group": "irregular"
     },
     {
       "id": 33,
@@ -264,7 +296,8 @@
       "phrase": "J'____ ta réponse.",
       "answer": "attends",
       "fullPhrase": "J'attends ta réponse.",
-      "translation": "I'm waiting for your answer."
+      "translation": "I'm waiting for your answer.",
+      "group": 3
     },
     {
       "id": 34,
@@ -272,7 +305,8 @@
       "phrase": "Je ____ rester à la maison?",
       "answer": "peux",
       "fullPhrase": "Je peux rester à la maison?",
-      "translation": "Can I stay at home?"
+      "translation": "Can I stay at home?",
+      "group": 3
     },
     {
       "id": 35,
@@ -280,7 +314,8 @@
       "phrase": "Cet appartement ____ trop cher.",
       "answer": "est",
       "fullPhrase": "Cet appartement est trop cher.",
-      "translation": "This apartment is too expensive."
+      "translation": "This apartment is too expensive.",
+      "group": "irregular"
     },
     {
       "id": 36,
@@ -288,7 +323,8 @@
       "phrase": "Elle ____ trois langues.",
       "answer": "parle",
       "fullPhrase": "Elle parle trois langues.",
-      "translation": "She speaks three languages."
+      "translation": "She speaks three languages.",
+      "group": 1
     },
     {
       "id": 37,
@@ -296,7 +332,8 @@
       "phrase": "Je ____ une robe.",
       "answer": "porte",
       "fullPhrase": "Je porte une robe.",
-      "translation": "I'm wearing a dress."
+      "translation": "I'm wearing a dress.",
+      "group": 1
     },
     {
       "id": 38,
@@ -304,7 +341,8 @@
       "phrase": "J'____ à Londres.",
       "answer": "habite",
       "fullPhrase": "J'habite à Londres.",
-      "translation": "I live in London."
+      "translation": "I live in London.",
+      "group": 1
     },
     {
       "id": 39,
@@ -312,7 +350,8 @@
       "phrase": "Il ____ dans un cinéma.",
       "answer": "travaille",
       "fullPhrase": "Il travaille dans un cinéma.",
-      "translation": "He works in a cinema."
+      "translation": "He works in a cinema.",
+      "group": 1
     },
     {
       "id": 40,
@@ -320,7 +359,8 @@
       "phrase": "Elle ____ une baguette tous les jours.",
       "answer": "achète",
       "fullPhrase": "Elle achète une baguette tous les jours.",
-      "translation": "She buys a baguette every day."
+      "translation": "She buys a baguette every day.",
+      "group": 1
     },
     {
       "id": 41,
@@ -328,7 +368,8 @@
       "phrase": "Est-ce que vous ____ souvent ?",
       "answer": "voyagez",
       "fullPhrase": "Est-ce que vous voyagez souvent ?",
-      "translation": "Do you often travel?"
+      "translation": "Do you often travel?",
+      "group": 1
     },
     {
       "id": 42,
@@ -336,7 +377,8 @@
       "phrase": "On ne ____ pas.",
       "answer": "peut",
       "fullPhrase": "On ne peut pas.",
-      "translation": "We can't."
+      "translation": "We can't.",
+      "group": 3
     },
     {
       "id": 43,
@@ -344,7 +386,8 @@
       "phrase": "Zack ____ travailler.",
       "answer": "doit",
       "fullPhrase": "Zack doit travailler.",
-      "translation": "Zack has to work."
+      "translation": "Zack has to work.",
+      "group": 3
     },
     {
       "id": 44,
@@ -352,7 +395,8 @@
       "phrase": "Est-ce que vous ____ disponibles samedi 15 octobre?",
       "answer": "êtes",
       "fullPhrase": "Est-ce que vous êtes disponibles samedi 15 octobre?",
-      "translation": "Are you available on Saturday, October 15th?"
+      "translation": "Are you available on Saturday, October 15th?",
+      "group": "irregular"
     },
     {
       "id": 45,
@@ -360,7 +404,8 @@
       "phrase": "Vous ____ venir avec les enfants.",
       "answer": "pouvez",
       "fullPhrase": "Vous pouvez venir avec les enfants.",
-      "translation": "Can you come with the children?"
+      "translation": "Can you come with the children?",
+      "group": 3
     },
     {
       "id": 46,
@@ -368,7 +413,8 @@
       "phrase": "Tu ____ un thé ?",
       "answer": "prends",
       "fullPhrase": "Tu prends un thé ?",
-      "translation": "Are you having tea?"
+      "translation": "Are you having tea?",
+      "group": 3
     },
     {
       "id": 47,
@@ -376,7 +422,8 @@
       "phrase": "On ____ vous contacter pendant les vacances ?",
       "answer": "peut",
       "fullPhrase": "On peut vous contacter pendant les vacances ?",
-      "translation": "Can we contact you during the holidays?"
+      "translation": "Can we contact you during the holidays?",
+      "group": 3
     },
     {
       "id": 48,
@@ -384,7 +431,8 @@
       "phrase": "Je ____ mon train dans 10 minutes.",
       "answer": "prends",
       "fullPhrase": "Je prends mon train dans 10 minutes.",
-      "translation": "I'm taking my train in 10 minutes."
+      "translation": "I'm taking my train in 10 minutes.",
+      "group": 3
     },
     {
       "id": 49,
@@ -392,7 +440,8 @@
       "phrase": "Il ____ très froid ce matin.",
       "answer": "fait",
       "fullPhrase": "Il fait très froid ce matin.",
-      "translation": "It's very cold this morning."
+      "translation": "It's very cold this morning.",
+      "group": "irregular"
     },
     {
       "id": 50,
@@ -400,15 +449,18 @@
       "phrase": "Tu ____ quel âge ?",
       "answer": "as",
       "fullPhrase": "Tu as quel âge ?",
-      "translation": "How old are you?"
+      "translation": "How old are you?",
+      "group": "irregular"
     },
+
     {
       "id": 51,
       "verb": "être",
       "phrase": "Je ____ américaine.",
       "answer": "suis",
       "fullPhrase": "Je suis américaine.",
-      "translation": "I am American."
+      "translation": "I am American.",
+      "group": "irregular"
     },
     {
       "id": 52,
@@ -416,7 +468,8 @@
       "phrase": "Nous ____ au théâtre.",
       "answer": "allons",
       "fullPhrase": "Nous allons au théâtre.",
-      "translation": "We're going to the theatre."
+      "translation": "We're going to the theatre.",
+      "group": 1
     },
     {
       "id": 53,
@@ -424,7 +477,8 @@
       "phrase": "On ____ à la poste.",
       "answer": "est",
       "fullPhrase": "On est à la poste.",
-      "translation": "We're at the post office."
+      "translation": "We're at the post office.",
+      "group": "irregular"
     },
     {
       "id": 54,
@@ -432,7 +486,8 @@
       "phrase": "Vous ____ où ?",
       "answer": "allez",
       "fullPhrase": "Vous allez où ?",
-      "translation": "Where are you going?"
+      "translation": "Where are you going?",
+      "group": "irregular"
     },
     {
       "id": 55,
@@ -440,7 +495,8 @@
       "phrase": "Ils ____ très faim.",
       "answer": "ont",
       "fullPhrase": "Ils ont très faim.",
-      "translation": "They are very hungry."
+      "translation": "They are very hungry.",
+      "group": "irregular"
     },
     {
       "id": 56,
@@ -448,7 +504,8 @@
       "phrase": "Vous ____ froid ?",
       "answer": "avez",
       "fullPhrase": "Vous avez froid ?",
-      "translation": "Are you cold?"
+      "translation": "Are you cold?",
+      "group": "irregular"
     },
     {
       "id": 57,
@@ -456,7 +513,8 @@
       "phrase": "Nous ____ quatre enfants.",
       "answer": "avons",
       "fullPhrase": "Nous avons quatre enfants.",
-      "translation": "We have four children."
+      "translation": "We have four children.",
+      "group": "irregular"
     },
     {
       "id": 58,
@@ -464,7 +522,8 @@
       "phrase": "Elles ____ une belle maison.",
       "answer": "ont",
       "fullPhrase": "Elles ont une belle maison.",
-      "translation": "They have a beautiful house."
+      "translation": "They have a beautiful house.",
+      "group": "irregular"
     },
     {
       "id": 59,
@@ -472,7 +531,8 @@
       "phrase": "Il ____ 40 ans.",
       "answer": "a",
       "fullPhrase": "Il a 40 ans.",
-      "translation": "He is 40 years old."
+      "translation": "He is 40 years old.",
+      "group": "irregular"
     },
     {
       "id": 60,
@@ -480,7 +540,8 @@
       "phrase": "Ce livre ____ vraiment nul.",
       "answer": "est",
       "fullPhrase": "Ce livre est vraiment nul.",
-      "translation": "This book is really bad."
+      "translation": "This book is really bad.",
+      "group": "irregular"
     },
     {
       "id": 61,
@@ -488,7 +549,8 @@
       "phrase": "Tu ____ du sport ?",
       "answer": "fais",
       "fullPhrase": "Tu fais du sport ?",
-      "translation": "Do you do sports?"
+      "translation": "Do you do sports?",
+      "group": "irregular"
     },
     {
       "id": 62,
@@ -496,7 +558,8 @@
       "phrase": "Tu ____ faim ?",
       "answer": "as",
       "fullPhrase": "Tu as faim ?",
-      "translation": "Are you hungry?"
+      "translation": "Are you hungry?",
+      "group": "irregular"
     },
     {
       "id": 63,
@@ -504,7 +567,8 @@
       "phrase": "Il ____ déjà 17 h.",
       "answer": "est",
       "fullPhrase": "Il est déjà 17 h.",
-      "translation": "It's already 5 pm."
+      "translation": "It's already 5 pm.",
+      "group": "irregular"
     },
     {
       "id": 64,
@@ -512,7 +576,8 @@
       "phrase": "On ____ envie de dormir.",
       "answer": "a",
       "fullPhrase": "On a envie de dormir.",
-      "translation": "We want to sleep."
+      "translation": "We want to sleep.",
+      "group": "irregular"
     },
     {
       "id": 65,
@@ -520,7 +585,8 @@
       "phrase": "Mes amis ____ en Espagne la semaine prochaine.",
       "answer": "vont",
       "fullPhrase": "Mes amis vont en Espagne la semaine prochaine.",
-      "translation": "My friends are going to Spain next week."
+      "translation": "My friends are going to Spain next week.",
+      "group": "irregular"
     },
     {
       "id": 66,
@@ -528,7 +594,8 @@
       "phrase": "À quelle heure est-ce que tu ____ à l'université ?",
       "answer": "vas",
       "fullPhrase": "À quelle heure est-ce que tu vas à l'université ?",
-      "translation": "What time do you go to university?"
+      "translation": "What time do you go to university?",
+      "group": "irregular"
     },
     {
       "id": 67,
@@ -536,7 +603,8 @@
       "phrase": "Tu ____ à quelle heure demain matin ?",
       "answer": "te lèves",
       "fullPhrase": "Tu te lèves à quelle heure demain matin ?",
-      "translation": "What time do you get up tomorrow morning?"
+      "translation": "What time do you get up tomorrow morning?",
+      "group": 1
     },
     {
       "id": 68,
@@ -544,7 +612,8 @@
       "phrase": "Marc ____ tard le dimanche.",
       "answer": "se réveille",
       "fullPhrase": "Marc se réveille tard le dimanche.",
-      "translation": "Marc wakes up late on Sundays."
+      "translation": "Marc wakes up late on Sundays.",
+      "group": 1
     },
     {
       "id": 69,
@@ -552,7 +621,8 @@
       "phrase": "Je ____ tous les jours à 6 h.",
       "answer": "me lève",
       "fullPhrase": "Je me lève tous les jours à 6 h.",
-      "translation": "I get up every day at 6 a.m."
+      "translation": "I get up every day at 6 a.m.",
+      "group": 1
     },
     {
       "id": 70,
@@ -560,15 +630,18 @@
       "phrase": "Qu'est-ce que tu ____ faire ce soir ?",
       "answer": "veux",
       "fullPhrase": "Qu'est-ce que tu veux faire ce soir ?",
-      "translation": "What do you want to do tonight?"
+      "translation": "What do you want to do tonight?",
+      "group": 3
     },
+
     {
       "id": 71,
       "verb": "vouloir",
       "phrase": "Est-ce que Léo ____ bien rester un peu plus tard ?",
       "answer": "veut",
       "fullPhrase": "Est-ce que Léo veut bien rester un peu plus tard ?",
-      "translation": "Does Leo want to stay a little later?"
+      "translation": "Does Leo want to stay a little later?",
+      "group": 3
     },
     {
       "id": 72,
@@ -576,7 +649,8 @@
       "phrase": "Je ne ____ pas travailler dans cette entreprise.",
       "answer": "veux",
       "fullPhrase": "Je ne veux pas travailler dans cette entreprise.",
-      "translation": "I don't want to work in this company."
+      "translation": "I don't want to work in this company.",
+      "group": 3
     },
     {
       "id": 73,
@@ -584,7 +658,8 @@
       "phrase": "Je n'____ rien.",
       "answer": "entends",
       "fullPhrase": "Je n'entends rien.",
-      "translation": "I can't hear anything."
+      "translation": "I can't hear anything.",
+      "group": 3
     },
     {
       "id": 74,
@@ -592,7 +667,8 @@
       "phrase": "J'____ mal à la tête.",
       "answer": "ai",
       "fullPhrase": "J'ai mal à la tête.",
-      "translation": "I have a headache."
+      "translation": "I have a headache.",
+      "group": "irregular"
     },
     {
       "id": 75,
@@ -600,7 +676,8 @@
       "phrase": "Ce train ____ vite !",
       "answer": "va",
       "fullPhrase": "Ce train va vite !",
-      "translation": "This train goes fast!"
+      "translation": "This train goes fast!",
+      "group": "irregular"
     },
     {
       "id": 76,
@@ -608,7 +685,8 @@
       "phrase": "Tu ____ en colère ?",
       "answer": "es",
       "fullPhrase": "Tu es en colère ?",
-      "translation": "Are you angry?"
+      "translation": "Are you angry?",
+      "group": "irregular"
     },
     {
       "id": 77,
@@ -616,7 +694,8 @@
       "phrase": "Elle ____ beaucoup.",
       "answer": "fume",
       "fullPhrase": "Elle fume beaucoup.",
-      "translation": "She smokes a lot."
+      "translation": "She smokes a lot.",
+      "group": 1
     },
     {
       "id": 78,
@@ -624,7 +703,8 @@
       "phrase": "Je ____ aller à l'hôpital.",
       "answer": "dois",
       "fullPhrase": "Je dois aller à l'hôpital.",
-      "translation": "I have to go to hospital."
+      "translation": "I have to go to hospital.",
+      "group": 3
     },
     {
       "id": 79,
@@ -632,7 +712,8 @@
       "phrase": "Je ____ vous aider ?",
       "answer": "peux",
       "fullPhrase": "Je peux vous aider ?",
-      "translation": "Can I help you?"
+      "translation": "Can I help you?",
+      "group": 3
     },
     {
       "id": 80,
@@ -640,7 +721,8 @@
       "phrase": "Combien de comprimés est-ce que je ____ prendre ?",
       "answer": "dois",
       "fullPhrase": "Combien de comprimés est-ce que je dois prendre ?",
-      "translation": "How many tablets should I take?"
+      "translation": "How many tablets should I take?",
+      "group": 3
     },
     {
       "id": 81,
@@ -648,7 +730,8 @@
       "phrase": "Je ____ mes études dans une université parisienne.",
       "answer": "fais",
       "fullPhrase": "Je fais mes études dans une université parisienne.",
-      "translation": "I study at a university in Paris."
+      "translation": "I study at a university in Paris.",
+      "group": "irregular"
     },
     {
       "id": 82,
@@ -656,7 +739,8 @@
       "phrase": "Il ____ étudier les mathématiques.",
       "answer": "veut",
       "fullPhrase": "Il veut étudier les mathématiques.",
-      "translation": "He wants to study mathematics."
+      "translation": "He wants to study mathematics.",
+      "group": 3
     },
     {
       "id": 83,
@@ -664,7 +748,8 @@
       "phrase": "Il ____ l'histoire.",
       "answer": "étudie",
       "fullPhrase": "Il étudie l'histoire.",
-      "translation": "He studies history."
+      "translation": "He studies history.",
+      "group": 1
     },
     {
       "id": 84,
@@ -672,7 +757,8 @@
       "phrase": "Il ____ l'italien.",
       "answer": "apprend",
       "fullPhrase": "Il apprend l'italien.",
-      "translation": "He learns Italian."
+      "translation": "He learns Italian.",
+      "group": 3
     },
     {
       "id": 85,
@@ -680,7 +766,8 @@
       "phrase": "Ils ____ sympas tes profs ?",
       "answer": "sont",
       "fullPhrase": "Ils sont sympas tes profs ?",
-      "translation": "Are your teachers nice?"
+      "translation": "Are your teachers nice?",
+      "group": "irregular"
     },
     {
       "id": 86,
@@ -688,7 +775,8 @@
       "phrase": "Je ____ de 9 heures à 17 heures.",
       "answer": "travaille",
       "fullPhrase": "Je travaille de 9 heures à 17 heures.",
-      "translation": "I work from 9 a.m. to 5 p.m."
+      "translation": "I work from 9 a.m. to 5 p.m.",
+      "group": 1
     },
     {
       "id": 87,
@@ -696,7 +784,8 @@
       "phrase": "Je ____ mon travail.",
       "answer": "déteste",
       "fullPhrase": "Je déteste mon travail.",
-      "translation": "I hate my job."
+      "translation": "I hate my job.",
+      "group": 1
     },
     {
       "id": 88,
@@ -704,7 +793,8 @@
       "phrase": "Quand est-ce que tu ____ tes vacances ?",
       "answer": "prends",
       "fullPhrase": "Quand est-ce que tu prends tes vacances ?",
-      "translation": "When are you going on holiday/vacation?"
+      "translation": "When are you going on holiday/vacation?",
+      "group": 3
     },
     {
       "id": 89,
@@ -712,7 +802,8 @@
       "phrase": "On ____ quoi samedi soir ?",
       "answer": "fait",
       "fullPhrase": "On fait quoi samedi soir ?",
-      "translation": "What are we doing on Saturday night?"
+      "translation": "What are we doing on Saturday night?",
+      "group": "irregular"
     },
     {
       "id": 90,
@@ -720,7 +811,8 @@
       "phrase": "À quelle heure ____ le musée ?",
       "answer": "ferme",
       "fullPhrase": "À quelle heure ferme le musée ?",
-      "translation": "What time does the museum close?"
+      "translation": "What time does the museum close?",
+      "group": 1
     },
     {
       "id": 91,
@@ -728,7 +820,8 @@
       "phrase": "On ____ où ?",
       "answer": "se retrouve",
       "fullPhrase": "On se retrouve où ?",
-      "translation": "Where shall we meet?"
+      "translation": "Where shall we meet?",
+      "group": 1
     },
     {
       "id": 92,
@@ -736,7 +829,8 @@
       "phrase": "Quels ____ vos acteurs ou actrices préférés ?",
       "answer": "sont",
       "fullPhrase": "Quels sont vos acteurs ou actrices préférés ?",
-      "translation": "Who are your favourite actors or actresses?"
+      "translation": "Who are your favourite actors or actresses?",
+      "group": "irregular"
     },
     {
       "id": 93,
@@ -744,7 +838,8 @@
       "phrase": "Il ____ son petit-déjeuner.",
       "answer": "prend",
       "fullPhrase": "Il prend son petit-déjeuner.",
-      "translation": "He eats (takes) his breakfast."
+      "translation": "He eats (takes) his breakfast.",
+      "group": 3
     },
     {
       "id": 94,
@@ -752,7 +847,8 @@
       "phrase": "Il ____ un café.",
       "answer": "boit",
       "fullPhrase": "Il boit un café.",
-      "translation": "He drinks a coffee."
+      "translation": "He drinks a coffee.",
+      "group": 3
     },
     {
       "id": 95,
@@ -760,7 +856,8 @@
       "phrase": "Il ____ tard.",
       "answer": "se couche",
       "fullPhrase": "Il se couche tard.",
-      "translation": "He goes to bed late."
+      "translation": "He goes to bed late.",
+      "group": 1
     },
     {
       "id": 96,
@@ -768,7 +865,8 @@
       "phrase": "Elle ____ travailler.",
       "answer": "part",
       "fullPhrase": "Elle part travailler.",
-      "translation": "She leaves for work (she goes to work)."
+      "translation": "She leaves for work (she goes to work).",
+      "group": 3
     },
     {
       "id": 97,
@@ -776,7 +874,8 @@
       "phrase": "Je ____ à 6 heures.",
       "answer": "me lève",
       "fullPhrase": "Je me lève à 6 heures.",
-      "translation": "I get up at 6 o'clock."
+      "translation": "I get up at 6 o'clock.",
+      "group": 1
     },
     {
       "id": 98,
@@ -784,7 +883,8 @@
       "phrase": "Je ____ à la maison à 19 heures.",
       "answer": "rentre",
       "fullPhrase": "Je rentre à la maison à 19 heures.",
-      "translation": "I go/come home at 7 p.m."
+      "translation": "I go/come home at 7 p.m.",
+      "group": 1
     },
     {
       "id": 99,
@@ -792,7 +892,8 @@
       "phrase": "Je ____ vers minuit.",
       "answer": "me couche",
       "fullPhrase": "Je me couche vers minuit.",
-      "translation": "I go to bed around midnight."
+      "translation": "I go to bed around midnight.",
+      "group": 1
     },
     {
       "id": 100,
@@ -800,7 +901,8 @@
       "phrase": "Je ____ au travail.",
       "answer": "pars",
       "fullPhrase": "Je pars au travail.",
-      "translation": "I leave for work (I go to work)."
+      "translation": "I leave for work (I go to work).",
+      "group": 3
     },
     {
       "id": 101,
@@ -808,7 +910,8 @@
       "phrase": "À quelle heure tu ____ demain ?",
       "answer": "commences",
       "fullPhrase": "À quelle heure tu commences demain ?",
-      "translation": "What time do you start tomorrow?"
+      "translation": "What time do you start tomorrow?",
+      "group": 1
     },
     {
       "id": 102,
@@ -816,7 +919,8 @@
       "phrase": "Tu ____ le réveil à quelle heure ?",
       "answer": "mets",
       "fullPhrase": "Tu mets le réveil à quelle heure ?",
-      "translation": "What time do you set the alarm for?"
+      "translation": "What time do you set the alarm for?",
+      "group": 3
     },
     {
       "id": 103,
@@ -824,7 +928,8 @@
       "phrase": "Tu ____ tard ce soir ?",
       "answer": "finis",
       "fullPhrase": "Tu finis tard ce soir ?",
-      "translation": "Are you finishing late tonight?"
+      "translation": "Are you finishing late tonight?",
+      "group": 2
     },
     {
       "id": 104,
@@ -832,7 +937,8 @@
       "phrase": "Aujourd'hui, je ____ à 17 heures.",
       "answer": "finis",
       "fullPhrase": "Aujourd'hui, je finis à 17 heures.",
-      "translation": "Today, I finish at 5 p.m."
+      "translation": "Today, I finish at 5 p.m.",
+      "group": 2
     },
     {
       "id": 105,
@@ -840,7 +946,8 @@
       "phrase": "À quelle heure tu ____ ?",
       "answer": "rentres",
       "fullPhrase": "À quelle heure tu rentres ?",
-      "translation": "What time do you come (back) home?"
+      "translation": "What time do you come (back) home?",
+      "group": 1
     },
     {
       "id": 106,
@@ -848,7 +955,8 @@
       "phrase": "Le samedi et le dimanche, on ____.",
       "answer": "se repose",
       "fullPhrase": "Le samedi et le dimanche, on se repose.",
-      "translation": "On Saturdays and Sundays, we rest."
+      "translation": "On Saturdays and Sundays, we rest.",
+      "group": 1
     },
     {
       "id": 107,
@@ -856,7 +964,8 @@
       "phrase": "Au supermarché, les produits ____ souvent moins cher.",
       "answer": "coûtent",
       "fullPhrase": "Au supermarché, les produits coûtent souvent moins cher.",
-      "translation": "At the supermarket, products often cost less."
+      "translation": "At the supermarket, products often cost less.",
+      "group": 1
     },
     {
       "id": 108,
@@ -864,7 +973,8 @@
       "phrase": "Combien ça ____ ?",
       "answer": "coûte",
       "fullPhrase": "Combien ça coûte ?",
-      "translation": "How much does it cost?"
+      "translation": "How much does it cost?",
+      "group": 1
     },
     {
       "id": 109,
@@ -872,7 +982,8 @@
       "phrase": "J'____ du pain à la boulangerie.",
       "answer": "achète",
       "fullPhrase": "J'achète du pain à la boulangerie.",
-      "translation": "I buy bread at the baker's (bakery)."
+      "translation": "I buy bread at the baker's (bakery).",
+      "group": 1
     },
     {
       "id": 110,
@@ -880,7 +991,8 @@
       "phrase": "Qu'est-ce que tu en ____ ?",
       "answer": "penses",
       "fullPhrase": "Qu'est-ce que tu en penses ?",
-      "translation": "What do you think about it?"
+      "translation": "What do you think about it?",
+      "group": 1
     },
     {
       "id": 111,
@@ -888,7 +1000,8 @@
       "phrase": "Il ____ des vêtements légers.",
       "answer": "porte",
       "fullPhrase": "Il porte des vêtements légers.",
-      "translation": "He wears light clothes."
+      "translation": "He wears light clothes.",
+      "group": 1
     },
     {
       "id": 112,
@@ -896,7 +1009,8 @@
       "phrase": "Je ____ qu'on est perdus !",
       "answer": "crois",
       "fullPhrase": "Je crois qu'on est perdus !",
-      "translation": "I think we are lost!"
+      "translation": "I think we are lost!",
+      "group": 3
     },
     {
       "id": 113,
@@ -904,7 +1018,8 @@
       "phrase": "Les enfants ne ____ pas se promener seuls.",
       "answer": "peuvent",
       "fullPhrase": "Les enfants ne peuvent pas se promener seuls.",
-      "translation": "Children are not allowed to walk alone."
+      "translation": "Children are not allowed to walk alone.",
+      "group": 3
     },
     {
       "id": 114,
@@ -912,7 +1027,8 @@
       "phrase": "Je ____ beaucoup.",
       "answer": "voyage",
       "fullPhrase": "Je voyage beaucoup.",
-      "translation": "I travel a lot."
+      "translation": "I travel a lot.",
+      "group": 1
     },
     {
       "id": 115,
@@ -920,7 +1036,8 @@
       "phrase": "Tu ____ en Guadeloupe depuis longtemps ?",
       "answer": "vis",
       "fullPhrase": "Tu vis en Guadeloupe depuis longtemps ?",
-      "translation": "Have you been living in Guadeloupe for a long time?"
+      "translation": "Have you been living in Guadeloupe for a long time?",
+      "group": 3
     },
     {
       "id": 116,
@@ -928,7 +1045,8 @@
       "phrase": "Comment ça ____ en Suisse ?",
       "answer": "se passe",
       "fullPhrase": "Comment ça se passe en Suisse ?",
-      "translation": "How is it going in Switzerland?"
+      "translation": "How is it going in Switzerland?",
+      "group": 1
     },
     {
       "id": 117,
@@ -936,7 +1054,8 @@
       "phrase": "Elle s'____ pour l'examen.",
       "answer": "inquiète",
       "fullPhrase": "Elle s'inquiète pour l'examen.",
-      "translation": "She worries about the exam."
+      "translation": "She worries about the exam.",
+      "group": 1
     },
     {
       "id": 118,
@@ -944,7 +1063,8 @@
       "phrase": "Je ____ pour retirer un colis.",
       "answer": "viens",
       "fullPhrase": "Je viens pour retirer un colis.",
-      "translation": "I've come to collect a parcel."
+      "translation": "I've come to collect a parcel.",
+      "group": 3
     },
     {
       "id": 119,
@@ -952,7 +1072,8 @@
       "phrase": "Est-ce que tu ____ le journal ?",
       "answer": "lis",
       "fullPhrase": "Est-ce que tu lis le journal ?",
-      "translation": "Do you read the newspaper?"
+      "translation": "Do you read the newspaper?",
+      "group": 3
     },
     {
       "id": 120,
@@ -960,7 +1081,8 @@
       "phrase": "Martin ____ pour un an.",
       "answer": "part",
       "fullPhrase": "Martin part pour un an.",
-      "translation": "Martin leaves for a year."
+      "translation": "Martin leaves for a year.",
+      "group": 3
     },
     {
       "id": 121,
@@ -968,7 +1090,8 @@
       "phrase": "Margaux et Nick ____ ensemble.",
       "answer": "sortent",
       "fullPhrase": "Margaux et Nick sortent ensemble.",
-      "translation": "Margaux and Nick are seeing each other."
+      "translation": "Margaux and Nick are seeing each other.",
+      "group": 3
     },
     {
       "id": 122,
@@ -976,7 +1099,8 @@
       "phrase": "Elle ____ toute seule.",
       "answer": "habite",
       "fullPhrase": "Elle habite toute seule.",
-      "translation": "She lives alone."
+      "translation": "She lives alone.",
+      "group": 1
     },
     {
       "id": 123,
@@ -984,7 +1108,8 @@
       "phrase": "Je ____ avec une fille de mon travail.",
       "answer": "sors",
       "fullPhrase": "Je sors avec une fille de mon travail.",
-      "translation": "I go out with (date) a girl from work."
+      "translation": "I go out with (date) a girl from work.",
+      "group": 3
     },
     {
       "id": 124,
@@ -992,7 +1117,8 @@
       "phrase": "On ____ un appartement plus grand.",
       "answer": "cherche",
       "fullPhrase": "On cherche un appartement plus grand.",
-      "translation": "We're looking for a bigger apartment."
+      "translation": "We're looking for a bigger apartment.",
+      "group": 1
     },
     {
       "id": 125,
@@ -1000,7 +1126,8 @@
       "phrase": "Je ____ des médicaments.",
       "answer": "prends",
       "fullPhrase": "Je prends des médicaments.",
-      "translation": "I take medication."
+      "translation": "I take medication.",
+      "group": 3
     },
     {
       "id": 126,
@@ -1008,7 +1135,8 @@
       "phrase": "Il ____ bien sa vie.",
       "answer": "gagne",
       "fullPhrase": "Il gagne bien sa vie.",
-      "translation": "He earns a good living."
+      "translation": "He earns a good living.",
+      "group": 1
     },
     {
       "id": 127,
@@ -1016,7 +1144,8 @@
       "phrase": "J'____ au dernier étage.",
       "answer": "habite",
       "fullPhrase": "J'habite au dernier étage.",
-      "translation": "I live on the top floor."
+      "translation": "I live on the top floor.",
+      "group": 1
     }
   ]
 }

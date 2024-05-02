@@ -7,3 +7,15 @@ export function playAudio(text) {
   speech.text = text;
   speechSynthesis.speak(speech);
 }
+
+//Correct answer sound effect
+export function playCorrect() {
+  const correctSound = new Audio("./src/correct.mp3");
+  correctSound.play();
+}
+
+//Incorrect answer sound effect
+export function playIncorrect() {
+  const incorrectSound = new Audio("./src/incorrect.mp3");
+  incorrectSound.play();
+}

@@ -2,7 +2,7 @@
 
 import { movePhraseForward, movePhraseBackward } from "./spacedRepetition.js";
 
-import { playAudio } from "./playAudio.js";
+import { playAudio, playCorrect, playIncorrect } from "./playAudio.js";
 
 import { onAuthStateChanged, app, getAuth } from "./config.js";
 
@@ -80,6 +80,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       inputArea.style.color = "#228b22";
       inputArea.classList.add("bold");
       msgArea.innerText = "Correct!";
+      playCorrect();
 
       //underlineWord(data, k, phraseDisplay);
 
@@ -149,14 +150,6 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
     default:
       phraseDisplay.innerHTML = `<div>${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low" id="speaker"></i>`;
       //underlineWord(data, k, phraseDisplay);
-      inputArea.style.color = "#ef233c";
-      msgArea.innerText = `Incorrect. The correct answer is: "${data.data[k].answer}"`;
-      inputArea.setAttribute("disabled", "");
-      inputArea.classList.add("bold");
-      specialBtns.forEach((button) => {
-        button.setAttribute("disabled", "");
-      });
-
       speaker = document.getElementById("speaker");
 
       if (speaker) {
@@ -164,6 +157,14 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
           playAudio(data.data[k].fullPhrase);
         });
       }
+      inputArea.style.color = "#ef233c";
+      msgArea.innerText = `Incorrect. The correct answer is: "${data.data[k].answer}"`;
+      playIncorrect();
+      inputArea.setAttribute("disabled", "");
+      inputArea.classList.add("bold");
+      specialBtns.forEach((button) => {
+        button.setAttribute("disabled", "");
+      });
 
       if (userId) {
         movePhraseBackward(k, boxes);
