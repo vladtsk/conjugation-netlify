@@ -141,24 +141,6 @@ nav .fa-circle-question,
   grid-template-columns: 1fr 3fr;
 }
 
-.sidebar {
-  margin-top: 0.8rem;
-  margin-left: 8rem;
-
-  font-size: 16px;
-}
-
-.sidebar li,
-.list-no-bullet li {
-  margin-bottom: 8px;
-  list-style-type: none;
-}
-
-.list-no-bullet li {
-  padding-top: 5px;
-  font-size: 18px;
-}
-
 h2 {
   margin-top: 30px;
   margin-bottom: 10px;

@@ -219,8 +219,10 @@ export function buildPageStructure(data) {
   messageSection.classList.add("msg-section");
   mainSection.appendChild(messageSection);
 
-  /*const messageP = document.createElement("p");
-  messageSection.appendChild(messageP);*/
+  // 'Learn more' section
+  const learnMoreSection = document.createElement("div");
+  learnMoreSection.classList.add("learnMore");
+  mainSection.appendChild(learnMoreSection);
 
   // Conjugation popup section
 

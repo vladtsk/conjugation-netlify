@@ -402,6 +402,18 @@ button[disabled] {
   margin-top: 10px;
 }
 
+/* 'Learn more' section */
+.learnMore {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.learnMore a {
+  display: inline-block;
+}
+
 /*The popup conjugation section*/
 
 .conjugSection {

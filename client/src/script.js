@@ -109,6 +109,7 @@ export async function launchApp(data, phraseNumber) {
   const inputArea = document.querySelector(".type-section input");
 
   const main = document.querySelector("main");
+  const learnMoreSection = document.querySelector(".learnMore");
 
   if (nextBtn) {
     nextBtn.addEventListener("click", () => {
@@ -118,6 +119,7 @@ export async function launchApp(data, phraseNumber) {
       inputArea.style.color = "black";
       k = displayNext(data, indexArray, k, score, phraseStats);
       phraseCount++;
+      learnMoreSection.innerHTML = "";
     });
   }
 

@@ -194,6 +194,20 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       } catch {
         console.log("Verb " + data.data[k].verb + " is not found in database ");
       }
+      const learnMoreSection = document.querySelector(".learnMore");
+      if (data.data[k].group && data.data[k].group === 1) {
+        learnMoreSection.innerHTML = `<a href="./present-group1.html" target="_blank" rel="noreferrer noopener">Learn more</a>`;
+      }
+      if (data.data[k].group && data.data[k].group === 2) {
+        learnMoreSection.innerHTML = `<a href="./present-group2.html" target="_blank" rel="noreferrer noopener">Learn more</a>`;
+      }
+      if (data.data[k].group && data.data[k].group === 3) {
+        learnMoreSection.innerHTML = `<a href="./present-group3.html" target="_blank" rel="noreferrer noopener">Learn more</a>`;
+      }
+      if (data.data[k].group && data.data[k].group === "irregular") {
+        learnMoreSection.innerHTML = `<a href="./present-irregular.html" target="_blank" rel="noreferrer noopener">Learn more</a>`;
+      }
+
       phraseStats.push(phraseStatObject);
   }
 

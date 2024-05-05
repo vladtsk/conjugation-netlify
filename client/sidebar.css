@@ -1,0 +1,37 @@
+.sidebar {
+  margin-top: 0.8rem;
+  margin-left: 5em;
+
+  font-size: 16px;
+}
+
+.practice,
+.learn {
+  font-size: 18px;
+}
+
+.sidebar a {
+  display: block;
+}
+
+.learnContainer {
+  margin-top: 10px;
+}
+
+.introMenu {
+  margin-block: 10px;
+}
+
+.present-submenu {
+  margin-top: 5px;
+}
+
+.fa-chevron-up,
+.fa-chevron-down {
+  font-size: 12px;
+}
+
+.fa-user-graduate,
+.fa-puzzle-piece {
+  font-size: 14px;
+}
