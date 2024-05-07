@@ -5,8 +5,8 @@ import { generateGraph, buildGraph } from "./stats.js";
 
 // Showing the first page
 export async function showFirstPage() {
-  const main = document.querySelector("main");
-  /*mainSection.innerHTML = "";*/
+  //const main = document.querySelector("main");
+  const contentArea = document.querySelector(".content-area");
 
   // Section containing the main element
 
@@ -14,7 +14,7 @@ export async function showFirstPage() {
   if (!mainSection) {
     mainSection = document.createElement("div");
     mainSection.classList.add("mainSection");
-    main.appendChild(mainSection);
+    contentArea.appendChild(mainSection);
   }
 
   // Welcome section
@@ -112,7 +112,7 @@ export async function showFirstPage() {
 // Building the main page structure
 export function buildPageStructure(data) {
   // Deleting all the elements in the "main" section
-  const main = document.querySelector("main");
+  const contentArea = document.querySelector(".content-area");
   const mainSection = document.querySelector(".mainSection");
 
   mainSection.innerHTML = "";
@@ -224,11 +224,17 @@ export function buildPageStructure(data) {
   learnMoreSection.classList.add("learnMore");
   mainSection.appendChild(learnMoreSection);
 
+  // Learn more info popup section
+  const infoPopupSection = document.createElement("div");
+  infoPopupSection.classList.add("infoPopupSection");
+  contentArea.appendChild(infoPopupSection);
+  infoPopupSection.style.display = "none";
+
   // Conjugation popup section
 
   const conjugSection = document.createElement("div");
   conjugSection.classList.add("conjugSection");
-  main.appendChild(conjugSection);
+  contentArea.appendChild(conjugSection);
   conjugSection.style.display = "none";
 
   // Sibmit section
@@ -279,7 +285,7 @@ export function showResultPage(score, phraseStats, stats, userId) {
   const mainSection = document.querySelector(".mainSection");
   mainSection.innerHTML = "";
 
-  const main = document.querySelector("main");
+  const contentArea = document.querySelector(".content-area");
 
   const resultDiv = document.createElement("div");
   resultDiv.classList.add("result");
@@ -332,7 +338,7 @@ export function showResultPage(score, phraseStats, stats, userId) {
     }
 
     if (chart) {
-      main.removeChild(chart);
+      contentArea.removeChild(chart);
       chart = null;
     }
   });
@@ -343,12 +349,12 @@ export function showResultPage(score, phraseStats, stats, userId) {
     console.log(summary);
 
     if (summary) {
-      main.removeChild(summary);
+      contentArea.removeChild(summary);
       summary = null;
     }
 
     if (chart) {
-      main.removeChild(chart);
+      contentArea.removeChild(chart);
       chart = null;
     }
 
@@ -360,7 +366,7 @@ export function showNoMorePhrasesPage(score, phraseStats) {
   const mainSection = document.querySelector(".mainSection");
   mainSection.innerHTML = "";
 
-  const main = document.querySelector("main");
+  const contentArea = document.querySelector(".content-area");
 
   const noMorePhrDiv = document.createElement("div");
   noMorePhrDiv.classList.add("noMorePhrDiv");
@@ -419,12 +425,12 @@ export function showNoMorePhrasesPage(score, phraseStats) {
   restartBtn.addEventListener("click", () => {
     mainSection.innerHTML = "";
     if (summary) {
-      main.removeChild(summary);
+      contentArea.removeChild(summary);
       summary = null;
     }
 
     if (chart) {
-      main.removeChild(chart);
+      contentArea.removeChild(chart);
       chart = null;
     }
 
@@ -433,13 +439,13 @@ export function showNoMorePhrasesPage(score, phraseStats) {
 }
 
 function showSummary(phraseStats) {
-  const main = document.querySelector("main");
+  const contentArea = document.querySelector(".content-area");
   let summary = document.querySelector(".summary");
 
   if (!summary) {
     summary = document.createElement("div");
     summary.classList.add("summary");
-    main.appendChild(summary);
+    contentArea.appendChild(summary);
   }
 
   const summaryH = document.createElement("h1");
@@ -480,12 +486,12 @@ function showSummary(phraseStats) {
 }
 
 export function generateSignUpForm() {
-  const main = document.querySelector("main");
+  const contentArea = document.querySelector(".content-area");
 
   const signUpForm = document.createElement("form");
   signUpForm.classList.add("signUpForm");
   signUpForm.style.display = "none";
-  main.appendChild(signUpForm);
+  contentArea.appendChild(signUpForm);
 
   const signUpH1 = document.createElement("h1");
   signUpH1.innerText = "Sign up";
@@ -558,13 +564,14 @@ export function generateSignUpForm() {
   logInSwitchPElement.appendChild(logInSwitchLink);
 }
 
+/*
 export function generatePaymentForm() {
-  const main = document.querySelector("main");
+  const contentArea = document.querySelector(".content-area");
 
   const paymentForm = document.createElement("form");
   paymentForm.classList.add("paymentForm");
   //paymentForm.style.display = "none";
-  main.appendChild(paymentForm);
+  contentArea.appendChild(paymentForm);
 
   const checkoutH1 = document.createElement("h1");
   checkoutH1.innerText = "Checkout";
@@ -609,7 +616,7 @@ export function generatePaymentForm() {
   cardSection.appendChild(cardElementDiv);
   cardElementDiv.setAttribute("id", "card-element");
 
-  /*
+  
   const passwordPElement = document.createElement("p");
   userInfoSection.appendChild(passwordPElement);
   const passwordLabel = document.createElement("label");
@@ -621,7 +628,7 @@ export function generatePaymentForm() {
   passwordInput.setAttribute("id", "signUpPassword");
   passwordInput.setAttribute("required", true);
   passwordPElement.appendChild(passwordInput);
-  */
+  
 
   const errorMsg = document.createElement("p");
   userInfoSection.appendChild(errorMsg);
@@ -637,16 +644,16 @@ export function generatePaymentForm() {
   signUpBtn.setAttribute("id", "signUpButton");
   signUpBtn.innerText = "Sign Up";
   btnSectionPElement.appendChild(signUpBtn);
-}
+} */
 
 export function generateLogInForm() {
-  const main = document.querySelector("main");
+  const contentArea = document.querySelector(".content-area");
   //main.innerHTML = "";
 
   const logInForm = document.createElement("form");
   logInForm.classList.add("logInForm");
   logInForm.style.display = "none";
-  main.appendChild(logInForm);
+  contentArea.appendChild(logInForm);
 
   const logInH1 = document.createElement("h1");
   logInH1.innerText = "Log in";
@@ -716,12 +723,12 @@ export function generateLogInForm() {
 }
 
 export function generatePassResetForm() {
-  const main = document.querySelector("main");
+  const contentArea = document.querySelector(".content-area");
   //main.innerHTML = "";
   const passResetForm = document.createElement("form");
   passResetForm.classList.add("passResetForm");
   passResetForm.style.display = "none";
-  main.appendChild(passResetForm);
+  contentArea.appendChild(passResetForm);
 
   const passResetH1 = document.createElement("h1");
   passResetH1.innerText = "Reset your password";

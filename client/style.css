@@ -31,6 +31,7 @@ button {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 .bold {
@@ -42,19 +43,17 @@ header {
   margin-bottom: 20px;
   padding-block: 10px;
   color: var(--color-primary);
-  display: flex;
-
-  justify-content: space-between;
-  align-items: center;
-  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1.3fr 3fr 1fr;
 
   font-family: "Poppins", sans-serif;
 
   border-bottom: 2px solid gray;
 }
 
-.logo {
-  margin-left: 8%;
+.logo img {
+  display: block;
+  margin: 0 auto;
 }
 
 nav {
@@ -89,6 +88,7 @@ nav .fa-circle-question,
   font-size: 0.9em;
 }
 
+/*
 main {
   display: flex;
   flex-direction: column;
@@ -96,7 +96,63 @@ main {
   gap: 10px;
   position: relative;
 }
+*/
 
+main {
+  display: grid;
+  grid-template-columns: 1.2fr 3fr 1fr;
+}
+
+/* Styling the sidebar */
+
+.sidebar {
+  /*margin-top: 0.8rem;*/
+  margin-top: 20px;
+
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar a {
+  display: block;
+}
+
+.practice,
+.learn {
+  font-size: 20px;
+  margin-bottom: 2px;
+  padding-block: 15px;
+  border-radius: 10px;
+  border: solid #b5afae 1px;
+}
+
+.practice {
+  padding-inline: 18px;
+}
+
+.learn {
+  padding-inline: 30px;
+  border-radius: 10px;
+}
+
+.practice:hover,
+.learn:hover {
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+}
+
+.select {
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  /*border: solid 2px var(--color-tertiary);*/
+}
+
+.content-area {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .mainSection {
   color: var(--color-secondary);
   background-color: var(--color-primary);
@@ -104,7 +160,6 @@ main {
   min-width: 280px;
   width: fit-content;
   max-width: 100%;
-  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;

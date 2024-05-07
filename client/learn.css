@@ -1,3 +1,4 @@
+/*
 * {
   padding: 0;
   margin: 0;
@@ -70,8 +71,7 @@ nav {
 
 .menu {
   font-weight: bold;
-  /*display: flex;
-    justify-content: end; */
+
   align-items: center;
 }
 
@@ -129,16 +129,119 @@ nav .fa-circle-question,
   color: var(--color-secondary);
 }
 
-.main-content {
-  margin-right: 6.5rem;
+*/
+
+/*
+.main-content .learning {
+  margin-left: 50px;
   text-align: justify;
 
   padding-bottom: 40px;
+} */
+
+.fa-compass {
+  color: var(--color-tertiary);
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+.select .fa-compass {
+  color: var(--color-secondary);
+}
+
+.practice i,
+.learn i {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* Styling the menu on the Learn page */
+
+.menu,
+.page-content {
+  margin-left: 2rem;
+}
+
+.menu a {
+  display: block;
+}
+
+.intro-menu,
+.present-menu,
+.past-menu,
+.present-submenu,
+.past-submenu {
+  padding-inline: 20px;
+  border-radius: 5px;
+}
+
+.intro-menu,
+.present-menu,
+.past-menu {
+  /*background-color: var(--color-primary);
+  color: var(--color-secondary);*/
+  border: solid 2px var(--color-primary);
+}
+
+.present-submenu,
+.past-submenu {
+  border: solid var(--color-primary) 2px;
+}
+
+.intro-menu,
+.present-menu,
+.past-menu {
+  font-size: 18px;
+  margin-top: 20px;
+  padding-block: 20px;
+}
+
+.present-submenu,
+.past-submenu {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  max-width: 250px;
+  margin-top: 5px;
+  padding-block: 15px;
+}
+
+.present-subcontainer,
+.past-subcontainer {
+  justify-content: space-between;
+}
+
+.fa-plane-departure {
+  display: inline-block;
+  margin-right: 10px;
+  color: var(--color-tertiary);
+}
+
+.fa-circle-chevron-right {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  color: var(--color-tertiary);
+}
+
+.present-menu,
+.past-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.present-menu i,
+.past-menu i {
+  display: inline-block;
+}
+
+.fa-square-plus,
+.fa-circle-chevron-up {
+  font-size: 20px;
+}
+
+.fa-calendar-check,
+.fa-compass {
+  margin-right: 10px;
 }
 
 h2 {
@@ -180,8 +283,8 @@ p {
 }
 
 .content-nav {
-  margin-top: 0.8rem;
   margin-bottom: 1.2rem;
+  margin-left: 2rem;
 }
 
 table {

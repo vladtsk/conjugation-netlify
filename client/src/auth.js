@@ -9,7 +9,7 @@ import {
   onAuthStateChanged,
   signOut,
   sendPasswordResetEmail,
-} from "./config.mjs";
+} from "./config.js";
 
 import {
   generateSignUpForm,
@@ -39,7 +39,7 @@ const logInButtonMenu = document.getElementById("logInButtonMenu");
 const logOutButton = document.getElementById("logOutButton");
 //const logOutSection = document.querySelector(".logOutSection");
 let mainSection = document.querySelector(".mainSection");
-const main = document.querySelector("main");
+const contentArea = document.querySelector(".content-area");
 let summary = document.querySelector(".summary");
 let chart = document.querySelector(".chart");
 const signUpErrorMsgP = document.querySelector(".signUpErrorMsg");
@@ -209,19 +209,19 @@ if (logOutButton) {
     event.preventDefault();
     summary = document.querySelector(".summary");
     if (summary) {
-      main.removeChild(summary);
+      contentArea.removeChild(summary);
       summary = null;
     }
     chart = document.querySelector(".chart");
     if (chart) {
-      main.removeChild(chart);
+      contentArea.removeChild(chart);
       chart = null;
     }
 
     const conjugSection = document.querySelector(".conjugSection");
 
     if (conjugSection) {
-      main.removeChild(conjugSection);
+      contentArea.removeChild(conjugSection);
     }
     userLogOut();
   });
@@ -235,19 +235,19 @@ if (logInButtonMenu) {
 
     summary = document.querySelector(".summary");
     if (summary) {
-      main.removeChild(summary);
+      contentArea.removeChild(summary);
       summary = null;
     }
     chart = document.querySelector(".chart");
     if (chart) {
-      main.removeChild(chart);
+      contentArea.removeChild(chart);
       chart = null;
     }
 
     const conjugSection = document.querySelector(".conjugSection");
 
     if (conjugSection) {
-      main.removeChild(conjugSection);
+      contentArea.removeChild(conjugSection);
     }
     mainSection = document.querySelector(".mainSection");
     mainSection.style.display = "none";

@@ -1,9 +1,9 @@
 // Showing statistics about the student's performance
 
 export function generateGraph() {
-  const main = document.querySelector("main");
+  const contentArea = document.querySelector(".content-area");
   const graphDiv = document.createElement("div");
-  main.appendChild(graphDiv);
+  contentArea.appendChild(graphDiv);
   graphDiv.classList.add("chart");
 
   const graphTitle = document.createElement("h2");

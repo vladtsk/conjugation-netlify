@@ -108,7 +108,7 @@ export async function launchApp(data, phraseNumber) {
   // The input area
   const inputArea = document.querySelector(".type-section input");
 
-  const main = document.querySelector("main");
+  const contentArea = document.querySelector(".content-area");
   const learnMoreSection = document.querySelector(".learnMore");
 
   if (nextBtn) {
@@ -131,7 +131,7 @@ export async function launchApp(data, phraseNumber) {
       conjugSection.style.display = "none"; */
 
       if (conjugSection) {
-        main.removeChild(conjugSection);
+        contentArea.removeChild(conjugSection);
       }
 
       // Adding data to the database and updating the statistics

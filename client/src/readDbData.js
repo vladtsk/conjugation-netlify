@@ -32,7 +32,7 @@ export async function launchFirstPage() {
   // Adding an event listener in case the user changes the tense
   if (selectElement) {
     selectElement.addEventListener("change", async () => {
-      response = await fetch(`../src/${selectElement.value}.json`);
+      response = await fetch(`../client/src/${selectElement.value}.json`);
       jsonData = await response.json();
     });
   }

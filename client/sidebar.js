@@ -2,7 +2,8 @@
 //const presentSubmenuArray = document.querySelectorAll(".present-submenu");
 
 // Buildng the sidebar menu dinamically
-const sidebar = document.querySelector(".sidebar");
+
+/*const sidebar = document.querySelector(".sidebar");
 
 const practice = document.createElement("div");
 sidebar.appendChild(practice);
@@ -100,3 +101,4 @@ presentMenu.addEventListener("click", () => {
       "The Present Tense <i class='fa-solid fa-chevron-down'></i>";
   }
 });
+*/

@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intro</title>
+    <title>Learn</title>
     <link rel="stylesheet" href="learn.css">
-    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-auth.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -20,7 +22,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
     <link rel="manifest" href="src/site.webmanifest">
-    <script src="sidebar.js" type="module" defer></script>
+    <script src="learn-menu.js" type="module" defer></script>
 
 </head>
 
@@ -29,50 +31,72 @@
         <div class="logo">
             <a href="index.html"><img src="logo.png" alt="logo" width="60%"></a>
         </div>
+        <div></div>
         <nav>
             <button type="submit" id="logInButtonMenu">Login</button>
             <button type="submit" id="logOutButton">Logout</button>
         </nav>
     </header>
     <main>
-        <div class="container">
-            <div class="sidebar">
+        <div class="sidebar">
 
-            </div>
-            <div class="main-content">
-                <div class="content-nav">
-                    <a>Verb conjugation </a> <span class="icon"><i class="fas fa-chevron-right"></i></span>
-                    <a>Intro</a>
-                </div>
-                <h1>Learn the fundamentals of verb conjugation</h1>
-                <h2>What is verb conjugation? </h2>
-
-                <div class="definition">
-                    <p><i class="fa-solid fa-book-open"></i></p><u><b>Verb conjugation</b></u> refers to changing a
-                    verb to express different aspects, such as when the action happens, who is
-                    performing the action, whether the action is completed or ongoing.
-                </div>
-                <p>For example, if you want to express <i>"I work"</i> or <i>"I'm working"</i>, you'll use: <b>je
-                        travaille</b>.
-                    For <i>"you work"</i> / <i>"you're working"</i> (singular, informal), you'd use: <b>tu
-                        travailles</b>.
-                    And for <i>"he works"</i> / <i>"he's working"</i>, the correct phrase is: <b>il travaille.</b></p>
-                <p>So you can't just say "je travaill<span class="red">er</span>", "tu travaill<span
-                        class="red">er</span>", etc. You have to
-                    conjugate the verb,
-                    so in this case you have to change the ending according to the subject (the person).</p>
-
-                <h2>What is an infinitive? </h2>
-                <p>Each verb has an <u><b>infinitive</b></u> form, which typically have one of these endings:
-                    <i>"-er"</i>,
-                    <i>"-ir"</i>, or
-                    <i>"-re"</i>.
-                    It's the form of a verb that has not been conjugated and that you can find in a dictionary.
-                </p>
-                <p>For example, <b>parler</b> (to speak), <b>finir</b> (to finish), <b>attendre</b> (to wait).</p>
-            </div>
+            <a class="practice" href="index.html"><i class='fa-solid fa-puzzle-piece'></i> PRACTISE</a>
+            <a class="learn select" href="learn.html"><i class='fa-solid fa-user-graduate'></i> LEARN </a>
 
         </div>
+        <div class="content-area">
+            <div class="content-nav">
+                <a>Verb conjugation </a> <span class="icon"><i class="fas fa-chevron-right"></i></span>
+                <a>Intro</a>
+            </div>
+
+
+            <div class="menu">
+                <h1>Learn the fundamentals of verb conjugation</h1>
+                <a class="intro-menu" href="intro.html"><i class="fa-solid fa-plane-departure"></i> Introduction to
+                    verb conjugation</a>
+                <div class="present-container">
+                    <div class="present-menu">
+                        <div class="present-line"><i class="fa-regular fa-calendar-check"></i>
+                            The Present Tense</div> <i class="fa-solid fa-square-plus"></i>
+                    </div>
+                    <div class="present-subcontainer" style="display: none;">
+                        <a class="present-submenu" href="present.html"><i
+                                class="fa-solid fa-circle-chevron-right"></i>Introduction</a>
+                        <a class="present-submenu" href="present-group1.html"><i
+                                class="fa-solid fa-circle-chevron-right"></i>Group 1</a>
+                        <a class="present-submenu" href="present-group2.html"><i
+                                class="fa-solid fa-circle-chevron-right"></i>Group 2</a>
+                        <a class="present-submenu" href="present-group3.html"><i
+                                class="fa-solid fa-circle-chevron-right"></i>Group 3</a>
+                        <a class="present-submenu" href="present-irregular.html"><i
+                                class="fa-solid fa-circle-chevron-right"></i>Irregular Verbs
+                        </a>
+                    </div>
+                </div>
+
+                <div class="past-container">
+                    <div class="past-menu">
+                        <div class="past-line"><i class="fas fa-compass"></i>
+                            The Past Tense "Passé composé"</div> <i class="fa-solid fa-square-plus"></i>
+                    </div>
+                    <div class="past-subcontainer" style="display: none;">
+                        <a class="past-submenu" href="present.html"><i
+                                class="fa-solid fa-circle-chevron-right"></i>Introduction</a>
+                        <a class="past-submenu" href="present-group1.html"><i
+                                class="fa-solid fa-circle-chevron-right"></i>Group 1</a>
+                        <a class="past-submenu" href="present-group2.html"><i
+                                class="fa-solid fa-circle-chevron-right"></i>Group 2</a>
+                        <a class="past-submenu" href="present-group3.html"><i
+                                class="fa-solid fa-circle-chevron-right"></i>Group 3</a>
+                        <a class="past-submenu" href="present-irregular.html"><i
+                                class="fa-solid fa-circle-chevron-right"></i>Irregular Verbs
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
 
 
 
