@@ -111,15 +111,22 @@ export async function launchApp(data, phraseNumber) {
   const contentArea = document.querySelector(".content-area");
   const learnMoreSection = document.querySelector(".learnMore");
 
+  const infoPopupSection = document.querySelector(".infoPopupSection");
+
   if (nextBtn) {
     nextBtn.addEventListener("click", () => {
       conjugSection.innerHTML = "";
+      infoPopupSection.innerHTML = "";
+      console.log(infoPopupSection);
       conjugSection.style.display = "none";
+      infoPopupSection.style.display = "none";
+      learnMoreSection.style.display = "none";
+      console.log(infoPopupSection);
       phraseDisplay.style.color = "black";
       inputArea.style.color = "black";
       k = displayNext(data, indexArray, k, score, phraseStats);
       phraseCount++;
-      learnMoreSection.innerHTML = "";
+      //learnMoreSection.innerHTML = "";
     });
   }
 

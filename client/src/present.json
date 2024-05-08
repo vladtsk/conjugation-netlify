@@ -9,7 +9,8 @@
       "tense": "present (le présent de l'indicatif)",
       "tenseShort": "present",
       "translation": "I tell the truth to my parents",
-      "group": 3
+      "group": 3,
+      "pattern": "lire"
     },
     {
       "id": 2,
@@ -18,7 +19,8 @@
       "answer": "dites",
       "fullPhrase": "Vous dites quoi ?",
       "translation": "What are you saying?",
-      "group": 3
+      "group": 3,
+      "pattern": "lire"
     },
     {
       "id": 3,
@@ -36,7 +38,8 @@
       "answer": "dis",
       "fullPhrase": "Je ne comprends pas ce que tu dis.",
       "translation": "I don't understand what you're saying.",
-      "group": 3
+      "group": 3,
+      "pattern": "lire"
     },
     {
       "id": 5,
@@ -45,7 +48,8 @@
       "answer": "dit",
       "fullPhrase": "Tout ce qu'elle dit est vrai.",
       "translation": "Everything she says is true.",
-      "group": 3
+      "group": 3,
+      "pattern": "lire"
     },
     {
       "id": 6,
@@ -54,7 +58,8 @@
       "answer": "disons",
       "fullPhrase": "Nous vous disons tout.",
       "translation": "We tell you everything.",
-      "group": 3
+      "group": 3,
+      "pattern": "lire"
     },
     {
       "id": 7,
@@ -63,7 +68,8 @@
       "answer": "dit",
       "fullPhrase": "Comment on dit en français ?",
       "translation": "How do you say in French?",
-      "group": 3
+      "group": 3,
+      "pattern": "lire"
     },
     {
       "id": 8,
@@ -88,6 +94,7 @@
       "verb": "détester",
       "phrase": "Je ____ attendre au restaurant.",
       "answer": "déteste",
+      "answerWoAccent": "deteste",
       "fullPhrase": "Je déteste attendre au restaurant.",
       "translation": "I hate waiting at the restaurant.",
       "group": 1
@@ -133,6 +140,7 @@
       "verb": "arrêter",
       "phrase": "Ils ____ de travailler.",
       "answer": "arrêtent",
+      "answerWoAccent": "arretent",
       "fullPhrase": "Ils arrêtent de travailler.",
       "translation": "They stop working.",
       "group": 1
@@ -171,7 +179,8 @@
       "answer": "mets",
       "fullPhrase": "Je vous mets quel gâteau ?",
       "translation": "Which cake would you like? (...do I put for you)",
-      "group": 3
+      "group": 3,
+      "pattern": "mettre"
     },
     {
       "id": 20,
@@ -180,7 +189,8 @@
       "answer": "sais",
       "fullPhrase": "Je ne sais pas.",
       "translation": "I don't know.",
-      "group": 3
+      "group": 3,
+      "pattern": "savoir"
     },
     {
       "id": 21,
@@ -250,9 +260,11 @@
       "verb": "écrire",
       "phrase": "Tu ____ souvent à tes amis ?",
       "answer": "écris",
+      "answerWoAccent": "ecris",
       "fullPhrase": "Tu écris souvent à tes amis ?",
       "translation": "Do you often write to your friends?",
-      "group": 3
+      "group": 3,
+      "pattern": "écrire"
     },
     {
       "id": 29,
@@ -279,7 +291,8 @@
       "answer": "voulez",
       "fullPhrase": "Vous voulez boire du jus d'orange ?",
       "translation": "Do you want to drink orange juice?",
-      "group": 3
+      "group": 3,
+      "pattern": "vouloir"
     },
     {
       "id": 32,
@@ -297,7 +310,8 @@
       "answer": "attends",
       "fullPhrase": "J'attends ta réponse.",
       "translation": "I'm waiting for your answer.",
-      "group": 3
+      "group": 3,
+      "pattern": "attendre"
     },
     {
       "id": 34,
@@ -306,7 +320,8 @@
       "answer": "peux",
       "fullPhrase": "Je peux rester à la maison?",
       "translation": "Can I stay at home?",
-      "group": 3
+      "group": 3,
+      "pattern": "vouloir"
     },
     {
       "id": 35,
@@ -358,9 +373,11 @@
       "verb": "acheter",
       "phrase": "Elle ____ une baguette tous les jours.",
       "answer": "achète",
+      "answerWoAccent": "achete",
       "fullPhrase": "Elle achète une baguette tous les jours.",
       "translation": "She buys a baguette every day.",
-      "group": 1
+      "group": 1,
+      "irregular": true
     },
     {
       "id": 41,
@@ -378,7 +395,8 @@
       "answer": "peut",
       "fullPhrase": "On ne peut pas.",
       "translation": "We can't.",
-      "group": 3
+      "group": 3,
+      "pattern": "vouloir"
     },
     {
       "id": 43,
@@ -387,16 +405,19 @@
       "answer": "doit",
       "fullPhrase": "Zack doit travailler.",
       "translation": "Zack has to work.",
-      "group": 3
+      "group": 3,
+      "pattern": "devoir"
     },
     {
       "id": 44,
       "verb": "être",
       "phrase": "Est-ce que vous ____ disponibles samedi 15 octobre?",
       "answer": "êtes",
+      "answerWoAccent": "etes",
       "fullPhrase": "Est-ce que vous êtes disponibles samedi 15 octobre?",
       "translation": "Are you available on Saturday, October 15th?",
-      "group": "irregular"
+      "group": "irregular",
+      "irregular": true
     },
     {
       "id": 45,
@@ -405,7 +426,8 @@
       "answer": "pouvez",
       "fullPhrase": "Vous pouvez venir avec les enfants.",
       "translation": "Can you come with the children?",
-      "group": 3
+      "group": 3,
+      "pattern": "vouloir"
     },
     {
       "id": 46,
@@ -414,7 +436,8 @@
       "answer": "prends",
       "fullPhrase": "Tu prends un thé ?",
       "translation": "Are you having tea?",
-      "group": 3
+      "group": 3,
+      "pattern": "prendre"
     },
     {
       "id": 47,
@@ -423,7 +446,8 @@
       "answer": "peut",
       "fullPhrase": "On peut vous contacter pendant les vacances ?",
       "translation": "Can we contact you during the holidays?",
-      "group": 3
+      "group": 3,
+      "pattern": "vouloir"
     },
     {
       "id": 48,
@@ -432,7 +456,8 @@
       "answer": "prends",
       "fullPhrase": "Je prends mon train dans 10 minutes.",
       "translation": "I'm taking my train in 10 minutes.",
-      "group": 3
+      "group": 3,
+      "pattern": "prendre"
     },
     {
       "id": 49,
@@ -602,27 +627,35 @@
       "verb": "se lever",
       "phrase": "Tu ____ à quelle heure demain matin ?",
       "answer": "te lèves",
+      "answerWoAccent": "te leves",
       "fullPhrase": "Tu te lèves à quelle heure demain matin ?",
       "translation": "What time do you get up tomorrow morning?",
-      "group": 1
+      "group": 1,
+      "irregular": true,
+      "reflexive": true
     },
     {
       "id": 68,
       "verb": "se réveiller",
       "phrase": "Marc ____ tard le dimanche.",
       "answer": "se réveille",
+      "answerWoAccent": "se reveille",
       "fullPhrase": "Marc se réveille tard le dimanche.",
       "translation": "Marc wakes up late on Sundays.",
-      "group": 1
+      "group": 1,
+      "reflexive": true
     },
     {
       "id": 69,
       "verb": "se lever",
       "phrase": "Je ____ tous les jours à 6 h.",
       "answer": "me lève",
+      "answerWoAccent": "me leve",
       "fullPhrase": "Je me lève tous les jours à 6 h.",
       "translation": "I get up every day at 6 a.m.",
-      "group": 1
+      "group": 1,
+      "irregular": true,
+      "reflexive": true
     },
     {
       "id": 70,
@@ -631,7 +664,8 @@
       "answer": "veux",
       "fullPhrase": "Qu'est-ce que tu veux faire ce soir ?",
       "translation": "What do you want to do tonight?",
-      "group": 3
+      "group": 3,
+      "pattern": "vouloir"
     },
 
     {
@@ -641,7 +675,8 @@
       "answer": "veut",
       "fullPhrase": "Est-ce que Léo veut bien rester un peu plus tard ?",
       "translation": "Does Leo want to stay a little later?",
-      "group": 3
+      "group": 3,
+      "pattern": "vouloir"
     },
     {
       "id": 72,
@@ -650,7 +685,8 @@
       "answer": "veux",
       "fullPhrase": "Je ne veux pas travailler dans cette entreprise.",
       "translation": "I don't want to work in this company.",
-      "group": 3
+      "group": 3,
+      "pattern": "vouloir"
     },
     {
       "id": 73,
@@ -659,7 +695,8 @@
       "answer": "entends",
       "fullPhrase": "Je n'entends rien.",
       "translation": "I can't hear anything.",
-      "group": 3
+      "group": 3,
+      "pattern": "attendre"
     },
     {
       "id": 74,
@@ -704,7 +741,8 @@
       "answer": "dois",
       "fullPhrase": "Je dois aller à l'hôpital.",
       "translation": "I have to go to hospital.",
-      "group": 3
+      "group": 3,
+      "pattern": "devoir"
     },
     {
       "id": 79,
@@ -713,7 +751,8 @@
       "answer": "peux",
       "fullPhrase": "Je peux vous aider ?",
       "translation": "Can I help you?",
-      "group": 3
+      "group": 3,
+      "pattern": "vouloir"
     },
     {
       "id": 80,
@@ -722,7 +761,8 @@
       "answer": "dois",
       "fullPhrase": "Combien de comprimés est-ce que je dois prendre ?",
       "translation": "How many tablets should I take?",
-      "group": 3
+      "group": 3,
+      "pattern": "devoir"
     },
     {
       "id": 81,
@@ -740,13 +780,15 @@
       "answer": "veut",
       "fullPhrase": "Il veut étudier les mathématiques.",
       "translation": "He wants to study mathematics.",
-      "group": 3
+      "group": 3,
+      "pattern": "vouloir"
     },
     {
       "id": 83,
       "verb": "étudier",
       "phrase": "Il ____ l'histoire.",
       "answer": "étudie",
+      "answerWoAccent": "etudie",
       "fullPhrase": "Il étudie l'histoire.",
       "translation": "He studies history.",
       "group": 1
@@ -758,7 +800,8 @@
       "answer": "apprend",
       "fullPhrase": "Il apprend l'italien.",
       "translation": "He learns Italian.",
-      "group": 3
+      "group": 3,
+      "pattern": "prendre"
     },
     {
       "id": 85,
@@ -783,6 +826,7 @@
       "verb": "détester",
       "phrase": "Je ____ mon travail.",
       "answer": "déteste",
+      "answerWoAccent": "deteste",
       "fullPhrase": "Je déteste mon travail.",
       "translation": "I hate my job.",
       "group": 1
@@ -794,7 +838,8 @@
       "answer": "prends",
       "fullPhrase": "Quand est-ce que tu prends tes vacances ?",
       "translation": "When are you going on holiday/vacation?",
-      "group": 3
+      "group": 3,
+      "pattern": "prendre"
     },
     {
       "id": 89,
@@ -821,7 +866,8 @@
       "answer": "se retrouve",
       "fullPhrase": "On se retrouve où ?",
       "translation": "Where shall we meet?",
-      "group": 1
+      "group": 1,
+      "reflexive": true
     },
     {
       "id": 92,
@@ -839,7 +885,8 @@
       "answer": "prend",
       "fullPhrase": "Il prend son petit-déjeuner.",
       "translation": "He eats (takes) his breakfast.",
-      "group": 3
+      "group": 3,
+      "pattern": "prendre"
     },
     {
       "id": 94,
@@ -857,7 +904,8 @@
       "answer": "se couche",
       "fullPhrase": "Il se couche tard.",
       "translation": "He goes to bed late.",
-      "group": 1
+      "group": 1,
+      "reflexive": true
     },
     {
       "id": 96,
@@ -866,16 +914,20 @@
       "answer": "part",
       "fullPhrase": "Elle part travailler.",
       "translation": "She leaves for work (she goes to work).",
-      "group": 3
+      "group": 3,
+      "pattern": "partir"
     },
     {
       "id": 97,
       "verb": "se lever",
       "phrase": "Je ____ à 6 heures.",
       "answer": "me lève",
+      "answerWoAccent": "me leve",
       "fullPhrase": "Je me lève à 6 heures.",
       "translation": "I get up at 6 o'clock.",
-      "group": 1
+      "group": 1,
+      "irregular": true,
+      "reflexive": true
     },
     {
       "id": 98,
@@ -893,7 +945,8 @@
       "answer": "me couche",
       "fullPhrase": "Je me couche vers minuit.",
       "translation": "I go to bed around midnight.",
-      "group": 1
+      "group": 1,
+      "reflexive": true
     },
     {
       "id": 100,
@@ -902,7 +955,8 @@
       "answer": "pars",
       "fullPhrase": "Je pars au travail.",
       "translation": "I leave for work (I go to work).",
-      "group": 3
+      "group": 3,
+      "pattern": "partir"
     },
     {
       "id": 101,
@@ -920,7 +974,8 @@
       "answer": "mets",
       "fullPhrase": "Tu mets le réveil à quelle heure ?",
       "translation": "What time do you set the alarm for?",
-      "group": 3
+      "group": 3,
+      "pattern": "mettre"
     },
     {
       "id": 103,
@@ -956,13 +1011,15 @@
       "answer": "se repose",
       "fullPhrase": "Le samedi et le dimanche, on se repose.",
       "translation": "On Saturdays and Sundays, we rest.",
-      "group": 1
+      "group": 1,
+      "reflexive": true
     },
     {
       "id": 107,
       "verb": "coûter",
       "phrase": "Au supermarché, les produits ____ souvent moins cher.",
       "answer": "coûtent",
+      "answerWoAccent": "coutent",
       "fullPhrase": "Au supermarché, les produits coûtent souvent moins cher.",
       "translation": "At the supermarket, products often cost less.",
       "group": 1
@@ -972,6 +1029,7 @@
       "verb": "coûter",
       "phrase": "Combien ça ____ ?",
       "answer": "coûte",
+      "answerWoAccent": "coute",
       "fullPhrase": "Combien ça coûte ?",
       "translation": "How much does it cost?",
       "group": 1
@@ -981,9 +1039,11 @@
       "verb": "acheter",
       "phrase": "J'____ du pain à la boulangerie.",
       "answer": "achète",
+      "answerWoAccent": "achete",
       "fullPhrase": "J'achète du pain à la boulangerie.",
       "translation": "I buy bread at the baker's (bakery).",
-      "group": 1
+      "group": 1,
+      "irregular": true
     },
     {
       "id": 110,
@@ -1019,7 +1079,8 @@
       "answer": "peuvent",
       "fullPhrase": "Les enfants ne peuvent pas se promener seuls.",
       "translation": "Children are not allowed to walk alone.",
-      "group": 3
+      "group": 3,
+      "pattern": "vouloir"
     },
     {
       "id": 114,
@@ -1046,16 +1107,20 @@
       "answer": "se passe",
       "fullPhrase": "Comment ça se passe en Suisse ?",
       "translation": "How is it going in Switzerland?",
-      "group": 1
+      "group": 1,
+      "reflexive": true
     },
     {
       "id": 117,
       "verb": "s'inquiéter",
       "phrase": "Elle s'____ pour l'examen.",
       "answer": "inquiète",
+      "alternativeAnswer": "s'inquiète",
+      "answerWoAccent": "inquiete",
       "fullPhrase": "Elle s'inquiète pour l'examen.",
       "translation": "She worries about the exam.",
-      "group": 1
+      "group": 1,
+      "irregular": true
     },
     {
       "id": 118,
@@ -1064,7 +1129,8 @@
       "answer": "viens",
       "fullPhrase": "Je viens pour retirer un colis.",
       "translation": "I've come to collect a parcel.",
-      "group": 3
+      "group": 3,
+      "pattern": "venir"
     },
     {
       "id": 119,
@@ -1073,7 +1139,8 @@
       "answer": "lis",
       "fullPhrase": "Est-ce que tu lis le journal ?",
       "translation": "Do you read the newspaper?",
-      "group": 3
+      "group": 3,
+      "pattern": "lire"
     },
     {
       "id": 120,
@@ -1082,7 +1149,8 @@
       "answer": "part",
       "fullPhrase": "Martin part pour un an.",
       "translation": "Martin leaves for a year.",
-      "group": 3
+      "group": 3,
+      "pattern": "partir"
     },
     {
       "id": 121,
@@ -1091,7 +1159,8 @@
       "answer": "sortent",
       "fullPhrase": "Margaux et Nick sortent ensemble.",
       "translation": "Margaux and Nick are seeing each other.",
-      "group": 3
+      "group": 3,
+      "pattern": "partir"
     },
     {
       "id": 122,
@@ -1109,7 +1178,8 @@
       "answer": "sors",
       "fullPhrase": "Je sors avec une fille de mon travail.",
       "translation": "I go out with (date) a girl from work.",
-      "group": 3
+      "group": 3,
+      "pattern": "partir"
     },
     {
       "id": 124,
@@ -1127,7 +1197,8 @@
       "answer": "prends",
       "fullPhrase": "Je prends des médicaments.",
       "translation": "I take medication.",
-      "group": 3
+      "group": 3,
+      "pattern": "prendre"
     },
     {
       "id": 126,

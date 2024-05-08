@@ -224,10 +224,14 @@ export function buildPageStructure(data) {
   learnMoreSection.classList.add("learnMore");
   mainSection.appendChild(learnMoreSection);
 
+  learnMoreSection.innerHTML = `<i class="fa-solid fa-circle-info"></i> Learn more`;
+  learnMoreSection.style.display = "none";
+
   // Learn more info popup section
+  const main = document.querySelector("main");
   const infoPopupSection = document.createElement("div");
   infoPopupSection.classList.add("infoPopupSection");
-  contentArea.appendChild(infoPopupSection);
+  main.appendChild(infoPopupSection);
   infoPopupSection.style.display = "none";
 
   // Conjugation popup section

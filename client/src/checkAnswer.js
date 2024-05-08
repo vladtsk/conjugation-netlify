@@ -6,7 +6,6 @@ import { playAudio, playCorrect, playIncorrect } from "./playAudio.js";
 
 import { onAuthStateChanged, app, getAuth } from "./config.js";
 import { showInfoPopup } from "./infoPopup.js";
-import { showInfoPopup } from "./infoPopup.js";
 
 const auth = getAuth(app);
 
@@ -72,11 +71,14 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
   phraseStatObject.input = inputText;
   phraseStatObject.correctAnswer = data.data[k].answer;
 
+  let answerType;
+  const learnMoreSection = document.querySelector(".learnMore");
+
   switch (inputText.trim().toLowerCase()) {
     case "":
       msgArea.innerText = "Please type a valid verb";
       break;
-    case data.data[k].answer:
+    case data.data[k].answer || data.data[k].alternativeAnswer:
       phraseDisplay.innerHTML = `<div><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low" id="speaker"></i><p class="translation">${data.data[k].translation}</p></div>`;
       /*phraseDisplay.style.color = "#228b22";*/
       inputArea.style.color = "#228b22";
@@ -149,6 +151,43 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       phraseStats.push(phraseStatObject);
       break;
 
+    case data.data[k]?.answerWoAccent:
+      phraseDisplay.innerHTML = `<div><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low" id="speaker"></i><p class="translation">${data.data[k].translation}</p></div>`;
+      inputArea.style.color = "#d96e38";
+      inputArea.classList.add("bold");
+
+      learnMoreSection.style.display = "block";
+
+      msgArea.innerHTML = "<p class='almost'>Almost correct.</p>";
+
+      answerType = "almostWoAccent";
+
+      showInfoPopup(data.data[k], answerType);
+
+      phraseStatObject.almostCorrectCorrect = true;
+
+      inputArea.setAttribute("disabled", "");
+
+      specialBtns.forEach((button) => {
+        button.setAttribute("disabled", "");
+      });
+
+      speaker = document.getElementById("speaker");
+
+      if (speaker) {
+        speaker.addEventListener("click", () => {
+          playAudio(data.data[k].fullPhrase);
+        });
+      }
+
+      score++;
+
+      if (userId) {
+        movePhraseForward(k, boxes);
+      }
+      phraseStats.push(phraseStatObject);
+      break;
+
     default:
       phraseDisplay.innerHTML = `<div>${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low" id="speaker"></i>`;
       //underlineWord(data, k, phraseDisplay);
@@ -172,32 +211,9 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
         movePhraseBackward(k, boxes);
       }
 
-      try {
-        let popupMsg =
-          jsonConjug.verbs[`${data.data[k].verb}`][
-            `${data.data[0].tenseShort}`
-          ];
-        if (
-          data.data[k].aux &&
-          data.data[k].aux === "être" &&
-          data.data[k].twoAux
-        ) {
-          popupMsg = jsonConjug.verbs[`${data.data[k].verb}`]["pastcompEtre"];
-        }
+      showConjugations(data.data[k], data.data[0], conjugSection);
 
-        let popupMsgValues = Object.values(popupMsg);
-        conjugSection.innerHTML = `<div class="popup-icons"><i class="fa-regular fa-lightbulb bulb-animation" 
-      style="color: #ef233c;"></i><i class="fa-solid fa-xmark popup-close"></i></div>`;
-
-        for (let i = 0; i < popupMsgValues.length; i++) {
-          conjugSection.innerHTML += `<p>${popupMsgValues[i]}</p>`;
-        }
-        conjugSection.style.display = "block";
-      } catch {
-        console.log("Verb " + data.data[k].verb + " is not found in database ");
-      }
-      const learnMoreSection = document.querySelector(".learnMore");
-      learnMoreSection.innerHTML = `<i class="fa-solid fa-circle-info"></i> Learn more`;
+      learnMoreSection.style.display = "block";
       showInfoPopup(data.data[k]);
       /*if (data.data[k].group && data.data[k].group === 1) {
         learnMoreSection.innerHTML = `<i class="fa-solid fa-circle-info"></i> <a href="./present-group1.html" target="_blank" rel="noreferrer noopener">Learn more</a>`;
@@ -252,4 +268,26 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
   }
   scoreBoxes = [score, boxes];
   return scoreBoxes;
+}
+
+// A function showing a table of conjugations
+function showConjugations(verbObj, verb0, conjugSection) {
+  console.log(conjugSection);
+  try {
+    let popupMsg = jsonConjug.verbs[`${verbObj.verb}`][`${verb0.tenseShort}`];
+    if (verbObj.aux && verbObj.aux === "être" && verbObj.twoAux) {
+      popupMsg = jsonConjug.verbs[`${verbObj.verb}`]["pastcompEtre"];
+    }
+
+    let popupMsgValues = Object.values(popupMsg);
+    conjugSection.innerHTML = `<div class="popup-icons"><i class="fa-regular fa-lightbulb bulb-animation" 
+  style="color: #ef233c;"></i><i class="fa-solid fa-xmark popup-close"></i></div>`;
+
+    for (let i = 0; i < popupMsgValues.length; i++) {
+      conjugSection.innerHTML += `<p>${popupMsgValues[i]}</p>`;
+    }
+    conjugSection.style.display = "block";
+  } catch {
+    console.log("Verb " + verbObj.verb + " is not found in database ");
+  }
 }
