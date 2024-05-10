@@ -519,13 +519,17 @@ button[disabled] {
   padding-block: 20px;
   padding-inline: 15px;
   color: var(--color-primary);
-  background-color: #edf2f4;
-  border: solid 1px var(--color-primary);
-  border-radius: 5px;
+  background-color: var(--color-secondary);
+  border: solid 3px var(--color-primary);
+  border-bottom: none;
+  border-radius: 2px;
   text-align: center;
   position: fixed;
   z-index: 2;
   bottom: 0%;
+
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .popupInfo-close {
@@ -726,8 +730,8 @@ button[disabled] {
 
 /* Styling the chart */
 .chart {
-  /*max-width: 500px;*/
-  min-width: 280px;
+  max-width: 450px;
+  /*min-width: 280px;*/
   margin-inline: auto;
   margin-top: 20px;
 }

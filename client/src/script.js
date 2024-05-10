@@ -134,6 +134,7 @@ export async function launchApp(data, phraseNumber) {
   const finishBtn = document.getElementById("finish-btn");
   if (finishBtn) {
     finishBtn.addEventListener("click", () => {
+      infoPopupSection.style.display = "none";
       /*conjugSection.innerHTML = "";
       conjugSection.style.display = "none"; */
 

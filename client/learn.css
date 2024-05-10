@@ -293,6 +293,11 @@ table {
   width: 60%;
 }
 
+.table-title {
+  background-color: var(--color-secondary);
+  color: black;
+}
+
 th,
 td {
   border: solid black 1px;
@@ -306,14 +311,20 @@ th {
 
 .definition {
   font-size: 18px;
-  border: solid var(--color-primary) 3px;
+  border-left: solid var(--color-tertiary) 3px;
 
-  border-radius: 10px;
+  border-radius: 8px;
 
-  padding-left: 0.5rem;
+  padding-left: 0.8rem;
   padding-right: 0.5rem;
-  padding-block: 1rem;
+  padding-block: 0.8rem;
   margin-block: 1rem;
+}
+
+.definition i {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-tertiary);
 }
 
 .definition p {
@@ -364,6 +375,17 @@ th {
 .list-no-bullet li {
   padding-top: 5px;
   font-size: 18px;
+  list-style-type: none;
+}
+
+.bullet-list {
+  margin-top: 12px;
+  font-size: 18px;
+}
+
+.bullet-list li {
+  padding-bottom: 8px;
+  font-size: 18px;
 }
 
 .list-no-bullet {
@@ -372,4 +394,8 @@ th {
 
 .tip {
   padding-top: 10px;
+}
+
+.fa-bolt {
+  color: var(--color-tertiary);
 }

@@ -373,11 +373,11 @@
       "verb": "acheter",
       "phrase": "Elle ____ une baguette tous les jours.",
       "answer": "achète",
-      "answerWoAccent": "achete",
       "fullPhrase": "Elle achète une baguette tous les jours.",
       "translation": "She buys a baguette every day.",
       "group": 1,
-      "irregular": true
+      "irregular": true,
+      "spellingChange": "accent"
     },
     {
       "id": 41,
@@ -627,12 +627,12 @@
       "verb": "se lever",
       "phrase": "Tu ____ à quelle heure demain matin ?",
       "answer": "te lèves",
-      "answerWoAccent": "te leves",
       "fullPhrase": "Tu te lèves à quelle heure demain matin ?",
       "translation": "What time do you get up tomorrow morning?",
       "group": 1,
       "irregular": true,
-      "reflexive": true
+      "reflexive": true,
+      "spellingChange": "accent"
     },
     {
       "id": 68,
@@ -650,12 +650,12 @@
       "verb": "se lever",
       "phrase": "Je ____ tous les jours à 6 h.",
       "answer": "me lève",
-      "answerWoAccent": "me leve",
       "fullPhrase": "Je me lève tous les jours à 6 h.",
       "translation": "I get up every day at 6 a.m.",
       "group": 1,
       "irregular": true,
-      "reflexive": true
+      "reflexive": true,
+      "spellingChange": "accent"
     },
     {
       "id": 70,
@@ -895,7 +895,8 @@
       "answer": "boit",
       "fullPhrase": "Il boit un café.",
       "translation": "He drinks a coffee.",
-      "group": 3
+      "group": 3,
+      "pattern": "boire"
     },
     {
       "id": 95,
@@ -922,12 +923,12 @@
       "verb": "se lever",
       "phrase": "Je ____ à 6 heures.",
       "answer": "me lève",
-      "answerWoAccent": "me leve",
       "fullPhrase": "Je me lève à 6 heures.",
       "translation": "I get up at 6 o'clock.",
       "group": 1,
       "irregular": true,
-      "reflexive": true
+      "reflexive": true,
+      "spellingChange": "accent"
     },
     {
       "id": 98,
@@ -1039,11 +1040,11 @@
       "verb": "acheter",
       "phrase": "J'____ du pain à la boulangerie.",
       "answer": "achète",
-      "answerWoAccent": "achete",
       "fullPhrase": "J'achète du pain à la boulangerie.",
       "translation": "I buy bread at the baker's (bakery).",
       "group": 1,
-      "irregular": true
+      "irregular": true,
+      "spellingChange": "accent"
     },
     {
       "id": 110,
@@ -1070,7 +1071,8 @@
       "answer": "crois",
       "fullPhrase": "Je crois qu'on est perdus !",
       "translation": "I think we are lost!",
-      "group": 3
+      "group": 3,
+      "pattern": "boire"
     },
     {
       "id": 113,
@@ -1098,7 +1100,8 @@
       "answer": "vis",
       "fullPhrase": "Tu vis en Guadeloupe depuis longtemps ?",
       "translation": "Have you been living in Guadeloupe for a long time?",
-      "group": 3
+      "group": 3,
+      "pattern": "vivre"
     },
     {
       "id": 116,
@@ -1116,11 +1119,11 @@
       "phrase": "Elle s'____ pour l'examen.",
       "answer": "inquiète",
       "alternativeAnswer": "s'inquiète",
-      "answerWoAccent": "inquiete",
       "fullPhrase": "Elle s'inquiète pour l'examen.",
       "translation": "She worries about the exam.",
       "group": 1,
-      "irregular": true
+      "irregular": true,
+      "spellingChange": "accent"
     },
     {
       "id": 118,

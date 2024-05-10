@@ -46,6 +46,19 @@ export function buildGraph(stats) {
     }
   }
 
+  console.log(practisedPhrData, correctPhrasesData);
+  const correctPhrasesDataNormalized = [];
+  for (let i = 0; i < correctPhrasesData.length; i++) {
+    const el = (correctPhrasesData[i] / practisedPhrData[i]) * 100;
+    correctPhrasesDataNormalized.push(el);
+  }
+  /*
+  const practisedPhrDataNormalized = [];
+  for (let i = 0; i < practisedPhrData.length; i++) {
+    const el = (practisedPhrData[i] / practisedPhrData[i]) * 100;
+    practisedPhrDataNormalized.push(el);
+  }
+*/
   const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const todaysDayofWeek = today.getDay();
 
@@ -62,21 +75,21 @@ export function buildGraph(stats) {
   new Chart(ctx, {
     type: "bar",
     data: {
-      //labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
       labels: rearrangedDayNames,
       datasets: [
-        {
+        /*{
           label: "# of practised phrases",
-          //data: [5, 10, 5, 15, 10, 5, 0],
-          data: practisedPhrData,
+          //data: practisedPhrData,
+          data: practisedPhrDataNormalized,
           borderWidth: 1,
           backgroundColor: "#4677c7",
-        },
+        },*/
         {
-          label: "# of correct answers",
-          //data: [3, 5, 5, 10, 5, 4, 0],
-          data: correctPhrasesData,
+          label: "% of correct answers",
+          //data: correctPhrasesData,
+          data: correctPhrasesDataNormalized,
           borderWidth: 1,
+          barThickness: 30,
           backgroundColor: "#2bc48c",
         },
       ],
