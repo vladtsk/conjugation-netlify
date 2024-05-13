@@ -139,11 +139,16 @@ nav .fa-circle-question,
   padding-bottom: 40px;
 } */
 
+.learn-select {
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+}
+
 .fa-compass {
   color: var(--color-tertiary);
 }
 
-.select .fa-compass {
+.learn-select .fa-compass {
   color: var(--color-secondary);
 }
 
@@ -321,9 +326,10 @@ th {
   margin-block: 1rem;
 }
 
-.definition i {
-  display: block;
+.definition .fa-solid {
+  display: inline-block;
   margin-bottom: 8px;
+  padding-right: 5px;
   color: var(--color-tertiary);
 }
 
@@ -378,6 +384,15 @@ th {
   list-style-type: none;
 }
 
+.list-no-bullet .fa-arrow-right {
+  font-size: 14px;
+  color: var(--color-primary);
+}
+
+.fa-exclamation-triangle {
+  color: var(--color-tertiary);
+}
+
 .bullet-list {
   margin-top: 12px;
   font-size: 18px;
@@ -389,11 +404,20 @@ th {
 }
 
 .list-no-bullet {
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 15px;
 }
 
 .tip {
   padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.tip .fa-lightbulb {
+  font-size: 16px;
+  display: inline-block;
+  padding-right: 5px;
+  color: var(--color-tertiary);
 }
 
 .fa-bolt {
