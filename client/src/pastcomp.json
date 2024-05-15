@@ -8,7 +8,8 @@
       "fullPhrase": "Hier, j'ai eu un rendez-vous.",
       "tense": "past (le passé composé)",
       "tenseShort": "pastcomp",
-      "translation": "Yesterday, I had an appointment."
+      "translation": "Yesterday, I had an appointment.",
+      "participle": "irregular"
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "phrase": "J'____ Julie.",
       "answer": "ai rencontré",
       "fullPhrase": "J'ai rencontré Julie.",
-      "translation": "I met Julie."
+      "translation": "I met Julie.",
+      "participle": "regular"
     },
     {
       "id": 3,
@@ -24,7 +26,8 @@
       "phrase": "Ils ____ des questions sur ma formation.",
       "answer": "ont posé",
       "fullPhrase": "Ils ont posé des questions sur ma formation.",
-      "translation": "They asked questions about my education."
+      "translation": "They asked questions about my education.",
+      "participle": "regular"
     },
     {
       "id": 4,
@@ -32,7 +35,8 @@
       "phrase": "J'____ à leurs questions.",
       "answer": "ai répondu",
       "fullPhrase": "J'ai répondu à leurs questions.",
-      "translation": "I answered their questions."
+      "translation": "I answered their questions.",
+      "participle": "dre"
     },
     {
       "id": 5,
@@ -40,7 +44,8 @@
       "phrase": "J'____ mon entretien.",
       "answer": "ai réussi",
       "fullPhrase": "J'ai réussi mon entretien.",
-      "translation": "I passed my interview."
+      "translation": "I passed my interview.",
+      "participle": "ir"
     },
     {
       "id": 6,
@@ -48,7 +53,8 @@
       "phrase": "J'____ un message.",
       "answer": "ai écrit",
       "fullPhrase": "J'ai écrit un message.",
-      "translation": "I wrote a message."
+      "translation": "I wrote a message.",
+      "participle": "irregular"
     },
     {
       "id": 7,
@@ -56,7 +62,8 @@
       "phrase": "Vous ____ ?",
       "answer": "avez choisi",
       "fullPhrase": "Vous avez choisi ?",
-      "translation": "Have you made your choice?"
+      "translation": "Have you made your choice?",
+      "participle": "ir"
     },
     {
       "id": 8,
@@ -64,7 +71,8 @@
       "phrase": "Elles ____ l'avion.",
       "answer": "ont pris",
       "fullPhrase": "Elles ont pris l'avion.",
-      "translation": "They took the plane."
+      "translation": "They took the plane.",
+      "participle": "prendre"
     },
     {
       "id": 9,
@@ -72,7 +80,8 @@
       "phrase": "On ____.",
       "answer": "a gagné",
       "fullPhrase": "On a gagné.",
-      "translation": "We won."
+      "translation": "We won.",
+      "participle": "regular"
     },
     {
       "id": 10,
@@ -80,7 +89,8 @@
       "phrase": "Tu n'____ pas ____ ?",
       "answer": "as fini",
       "fullPhrase": "Tu n'as pas fini ?",
-      "translation": "Haven't you finished?"
+      "translation": "Haven't you finished?",
+      "participle": "ir"
     },
     {
       "id": 11,
@@ -88,7 +98,8 @@
       "phrase": "Elle n'____ pas ____ bonjour.",
       "answer": "a dit",
       "fullPhrase": "Elle n'a pas dit bonjour.",
-      "translation": "She didn't say hello."
+      "translation": "She didn't say hello.",
+      "participle": "irregular"
     },
     {
       "id": 12,
@@ -96,7 +107,8 @@
       "phrase": "J'____ Emma ce matin.",
       "answer": "ai vu",
       "fullPhrase": "J'ai vu Emma ce matin.",
-      "translation": "I saw Emma this morning."
+      "translation": "I saw Emma this morning.",
+      "participle": "irregular"
     },
     {
       "id": 13,
@@ -104,7 +116,8 @@
       "phrase": "Il n'____ pas ____ ma proposition.",
       "answer": "a accepté",
       "fullPhrase": "Il n'a pas accepté ma proposition.",
-      "translation": "He didn't accept my proposal."
+      "translation": "He didn't accept my proposal.",
+      "participle": "regular"
     },
     {
       "id": 14,
@@ -112,7 +125,8 @@
       "phrase": "J'____ Paris l'année dernière.",
       "answer": "ai visité",
       "fullPhrase": "J'ai visité Paris l'année dernière.",
-      "translation": "I visited Paris last year."
+      "translation": "I visited Paris last year.",
+      "participle": "regular"
     },
     {
       "id": 15,
@@ -120,7 +134,8 @@
       "phrase": "Vous ____ au restaurant ?",
       "answer": "avez mangé",
       "fullPhrase": "Vous avez mangé au restaurant ?",
-      "translation": "Did you eat at the restaurant?"
+      "translation": "Did you eat at the restaurant?",
+      "participle": "regular"
     },
     {
       "id": 16,
@@ -128,7 +143,8 @@
       "phrase": "J'____ un message de Lisa.",
       "answer": "ai reçu",
       "fullPhrase": "J'ai reçu un message de Lisa.",
-      "translation": "I received a message from Lisa."
+      "translation": "I received a message from Lisa.",
+      "participle": "irregular"
     },
     {
       "id": 17,
@@ -136,7 +152,8 @@
       "phrase": "J'____ un message à Alex.",
       "answer": "ai envoyé",
       "fullPhrase": "J'ai envoyé un message à Alex.",
-      "translation": "I sent a message to Alex."
+      "translation": "I sent a message to Alex.",
+      "participle": "regular"
     },
     {
       "id": 18,
@@ -144,7 +161,8 @@
       "phrase": "J'____ de mon travail.",
       "answer": "ai parlé",
       "fullPhrase": "J'ai parlé de mon travail.",
-      "translation": "I talked about my work."
+      "translation": "I talked about my work.",
+      "participle": "regular"
     },
     {
       "id": 19,
@@ -152,7 +170,8 @@
       "phrase": "Nous ____ environ une heure.",
       "answer": "avons parlé",
       "fullPhrase": "Nous avons parlé environ une heure.",
-      "translation": "We talked for about an hour."
+      "translation": "We talked for about an hour.",
+      "participle": "regular"
     },
     {
       "id": 20,
@@ -160,7 +179,8 @@
       "phrase": "Tu ____ du pain ?",
       "answer": "as acheté",
       "fullPhrase": "Tu as acheté du pain ?",
-      "translation": "Did you buy some bread?"
+      "translation": "Did you buy some bread?",
+      "participle": "regular"
     },
     {
       "id": 21,
@@ -169,7 +189,8 @@
       "answer": "me suis couché",
       "aux": "être",
       "fullPhrase": "Je me suis couché tard.",
-      "translation": "I went to bed late."
+      "translation": "I went to bed late.",
+      "participle": "regular"
     },
     {
       "id": 22,
@@ -177,7 +198,8 @@
       "phrase": "Ils ____ des problèmes.",
       "answer": "ont eu",
       "fullPhrase": "Ils ont eu des problèmes.",
-      "translation": "They had problems."
+      "translation": "They had problems.",
+      "participle": "irregular"
     },
     {
       "id": 23,
@@ -188,7 +210,8 @@
       "aux": "être",
       "plural": true,
       "fullPhrase": "Ils sont arrivés ce matin.",
-      "translation": "They arrived this morning."
+      "translation": "They arrived this morning.",
+      "participle": "regular"
     },
     {
       "id": 24,
@@ -197,9 +220,11 @@
       "answer": "est retournée",
       "answerWoS": "est retourné",
       "aux": "être",
+      "twoAux": true,
       "fem": true,
       "fullPhrase": "Elle est retournée aux États-Unis.",
-      "translation": "She returned to the United States."
+      "translation": "She returned to the United States.",
+      "participle": "regular"
     },
     {
       "id": 25,
@@ -207,7 +232,8 @@
       "phrase": "On n'____ pas ____ venir plus tôt.",
       "answer": "a pu",
       "fullPhrase": "On n'a pas pu venir plus tôt.",
-      "translation": "We couldn't come earlier."
+      "translation": "We couldn't come earlier.",
+      "participle": "irregular"
     },
     {
       "id": 26,
@@ -216,9 +242,11 @@
       "answer": "sommes montés",
       "answerWoS": "sommes monté",
       "aux": "être",
+      "twoAux": true,
       "plural": true,
       "fullPhrase": "Nous sommes montés à la tour Eiffel.",
-      "translation": "We went up the Eiffel Tower."
+      "translation": "We went up the Eiffel Tower.",
+      "participle": "regular"
     },
     {
       "id": 27,
@@ -227,7 +255,8 @@
       "answer": "est resté",
       "aux": "être",
       "fullPhrase": "Il est resté chez lui.",
-      "translation": "He stayed at home."
+      "translation": "He stayed at home.",
+      "participle": "regular"
     },
     {
       "id": 28,
@@ -236,7 +265,8 @@
       "answer": "suis allé",
       "aux": "être",
       "fullPhrase": "Je suis allé en Belgique.",
-      "translation": "I went to Belgium."
+      "translation": "I went to Belgium.",
+      "participle": "regular"
     },
     {
       "id": 29,
@@ -244,7 +274,8 @@
       "phrase": "J'____ à l'hôtel Métropole.",
       "answer": "ai dormi",
       "fullPhrase": "J'ai dormi à l'hôtel Métropole.",
-      "translation": "I stayed (slept) at the Métropole hotel."
+      "translation": "I stayed (slept) at the Métropole hotel.",
+      "participle": "ir"
     },
     {
       "id": 30,
@@ -253,7 +284,8 @@
       "answer": "me suis levé",
       "aux": "être",
       "fullPhrase": "Je me suis levé à 9 h.",
-      "translation": "I got up at 9 a.m."
+      "translation": "I got up at 9 a.m.",
+      "participle": "regular"
     },
     {
       "id": 31,
@@ -261,7 +293,8 @@
       "phrase": "J'____ des frites.",
       "answer": "ai mangé",
       "fullPhrase": "J'ai mangé des frites.",
-      "translation": "I ate chips (fries)."
+      "translation": "I ate chips (fries).",
+      "participle": "regular"
     },
     {
       "id": 32,
@@ -269,7 +302,8 @@
       "phrase": "J'____ de la bière.",
       "answer": "ai bu",
       "fullPhrase": "J'ai bu de la bière.",
-      "translation": "I drank beer."
+      "translation": "I drank beer.",
+      "participle": "irregular"
     },
     {
       "id": 33,
@@ -277,7 +311,8 @@
       "phrase": "J'____ français.",
       "answer": "ai parlé",
       "fullPhrase": "J'ai parlé français.",
-      "translation": "I spoke French."
+      "translation": "I spoke French.",
+      "participle": "regular"
     },
     {
       "id": 34,
@@ -288,7 +323,8 @@
       "aux": "être",
       "fem": true,
       "fullPhrase": "Je suis rentrée à la maison.",
-      "translation": "I came back home."
+      "translation": "I came back home.",
+      "participle": "regular"
     },
     {
       "id": 35,
@@ -299,7 +335,8 @@
       "aux": "être",
       "plural": true,
       "fullPhrase": "Ils sont venus à 9 heures.",
-      "translation": "They came at 9 o'clock."
+      "translation": "They came at 9 o'clock.",
+      "participle": "irregular"
     },
     {
       "id": 36,
@@ -307,7 +344,8 @@
       "phrase": "Est-ce que tu ____ ce livre ?",
       "answer": "as lu",
       "fullPhrase": "Est-ce que tu as lu ce livre ?",
-      "translation": "Did you read this book?"
+      "translation": "Did you read this book?",
+      "participle": "irregular"
     },
     {
       "id": 37,
@@ -318,7 +356,8 @@
       "aux": "être",
       "plural": true,
       "fullPhrase": "On ne s'est pas vus depuis longtemps.",
-      "translation": "We haven't seen each other for a long time."
+      "translation": "We haven't seen each other for a long time.",
+      "participle": "irregular"
     },
     {
       "id": 38,
@@ -329,7 +368,8 @@
       "aux": "être",
       "plural": true,
       "fullPhrase": "Nous sommes partis à Bordeaux.",
-      "translation": "We left for Bordeaux."
+      "translation": "We left for Bordeaux.",
+      "participle": "ir"
     },
     {
       "id": 39,
@@ -338,7 +378,8 @@
       "answer": "ai passé",
       "twoAux": true,
       "fullPhrase": "J'ai passé une bonne journée.",
-      "translation": "I had a good day."
+      "translation": "I had a good day.",
+      "participle": "regular"
     },
     {
       "id": 40,
@@ -346,7 +387,8 @@
       "phrase": "Vous ____ des gens intéressants.",
       "answer": "avez rencontré",
       "fullPhrase": "Vous avez rencontré des gens intéressants.",
-      "translation": "You met interesting people."
+      "translation": "You met interesting people.",
+      "participle": "regular"
     },
     {
       "id": 41,
@@ -354,7 +396,8 @@
       "phrase": "Elles ____ le français pour communiquer.",
       "answer": "ont utilisé",
       "fullPhrase": "Elles ont utilisé le français pour communiquer.",
-      "translation": "They used French to communicate."
+      "translation": "They used French to communicate.",
+      "participle": "regular"
     },
     {
       "id": 42,
@@ -362,7 +405,8 @@
       "phrase": "Tu ____ tôt.",
       "answer": "as déjeuné",
       "fullPhrase": "Tu as déjeuné tôt.",
-      "translation": "You had breakfast/lunch early."
+      "translation": "You had breakfast/lunch early.",
+      "participle": "regular"
     },
     {
       "id": 43,
@@ -370,7 +414,8 @@
       "phrase": "Ils ____ des bonbons.",
       "answer": "ont acheté",
       "fullPhrase": "Ils ont acheté des bonbons.",
-      "translation": "They bought sweets."
+      "translation": "They bought sweets.",
+      "participle": "regular"
     },
     {
       "id": 44,
@@ -378,7 +423,8 @@
       "phrase": "Tu ____ des gâteaux.",
       "answer": "as fait",
       "fullPhrase": "Tu as fait des gâteaux.",
-      "translation": "You made cakes."
+      "translation": "You made cakes.",
+      "participle": "irregular"
     },
     {
       "id": 45,
@@ -386,7 +432,8 @@
       "phrase": "Il ____ son pain à la boulangerie.",
       "answer": "a acheté",
       "fullPhrase": "Il a acheté son pain à la boulangerie.",
-      "translation": "He bought his bread at the baker's."
+      "translation": "He bought his bread at the baker's.",
+      "participle": "regular"
     },
     {
       "id": 46,
@@ -395,7 +442,8 @@
       "answer": "as passé",
       "twoAux": true,
       "fullPhrase": "Tu as passé une bonne journée ?",
-      "translation": "Did you have a good day?"
+      "translation": "Did you have a good day?",
+      "participle": "regular"
     },
     {
       "id": 47,
@@ -403,7 +451,8 @@
       "phrase": "Qu'est-ce que tu ____ aujourd'hui ?",
       "answer": "as fait",
       "fullPhrase": "Qu'est-ce que tu as fait aujourd'hui ?",
-      "translation": "What did you do today?"
+      "translation": "What did you do today?",
+      "participle": "irregular"
     },
     {
       "id": 48,
@@ -411,7 +460,8 @@
       "phrase": "Ce matin, j'____ un cours de conversation.",
       "answer": "ai eu",
       "fullPhrase": "Ce matin, j'ai eu un cours de conversation.",
-      "translation": "This morning, I had a conversation class."
+      "translation": "This morning, I had a conversation class.",
+      "participle": "irregular"
     },
     {
       "id": 49,
@@ -419,7 +469,8 @@
       "phrase": "Tu ____ des gens ?",
       "answer": "as rencontré",
       "fullPhrase": "Tu as rencontré des gens ?",
-      "translation": "Did you meet people?"
+      "translation": "Did you meet people?",
+      "participle": "regular"
     },
     {
       "id": 50,
@@ -427,7 +478,8 @@
       "phrase": "J'____ avec des Italiens.",
       "answer": "ai parlé",
       "fullPhrase": "J'ai parlé avec des Italiens.",
-      "translation": "I spoke with Italians."
+      "translation": "I spoke with Italians.",
+      "participle": "regular"
     },
     {
       "id": 51,
@@ -435,7 +487,8 @@
       "phrase": "Vous ____ en français ?",
       "answer": "avez parlé",
       "fullPhrase": "Vous avez parlé en français ?",
-      "translation": "Did you speak in French?"
+      "translation": "Did you speak in French?",
+      "participle": "regular"
     },
     {
       "id": 52,
@@ -443,7 +496,8 @@
       "phrase": "Nous n'____ pas ____ l'anglais.",
       "answer": "avons utilisé",
       "fullPhrase": "Nous n'avons pas utilisé l'anglais.",
-      "translation": "We didn't use English."
+      "translation": "We didn't use English.",
+      "participle": "regular"
     },
     {
       "id": 53,
@@ -451,7 +505,8 @@
       "phrase": "Vous ____ ensemble ?",
       "answer": "avez mangé",
       "fullPhrase": "Vous avez mangé ensemble ?",
-      "translation": "Did you eat together?"
+      "translation": "Did you eat together?",
+      "participle": "regular"
     },
     {
       "id": 54,
@@ -459,7 +514,8 @@
       "phrase": "J'____ un film.",
       "answer": "ai regardé",
       "fullPhrase": "J'ai regardé un film.",
-      "translation": "I watched a film."
+      "translation": "I watched a film.",
+      "participle": "regular"
     },
     {
       "id": 55,
@@ -470,7 +526,8 @@
       "aux": "être",
       "fem": true,
       "fullPhrase": "Où est-ce que tu es allée ?",
-      "translation": "Where did you go?"
+      "translation": "Where did you go?",
+      "participle": "regular"
     },
     {
       "id": 56,
@@ -479,7 +536,8 @@
       "answer": "suis allé",
       "aux": "être",
       "fullPhrase": "Je suis allé au musée.",
-      "translation": "I went to the museum."
+      "translation": "I went to the museum.",
+      "participle": "regular"
     },
     {
       "id": 57,
@@ -488,7 +546,8 @@
       "answer": "es resté",
       "aux": "être",
       "fullPhrase": "Tu es resté toute la journée à la maison ?",
-      "translation": "Did you stay home all day?"
+      "translation": "Did you stay home all day?",
+      "participle": "regular"
     },
     {
       "id": 58,
@@ -497,7 +556,8 @@
       "answer": "suis sorti",
       "aux": "être",
       "fullPhrase": "Je suis sorti à 22 heures.",
-      "translation": "I went out at 10 p.m."
+      "translation": "I went out at 10 p.m.",
+      "participle": "ir"
     },
     {
       "id": 59,
@@ -509,7 +569,8 @@
       "twoAux": true,
       "fem": true,
       "fullPhrase": "Je suis passée chez Olivia.",
-      "translation": "I stopped by Olivia's."
+      "translation": "I stopped by Olivia's.",
+      "participle": "regular"
     },
     {
       "id": 60,
@@ -517,7 +578,8 @@
       "phrase": "On ____ plein de choses.",
       "answer": "a acheté",
       "fullPhrase": "On a acheté plein de choses.",
-      "translation": "We bought a lot of things."
+      "translation": "We bought a lot of things.",
+      "participle": "regular"
     },
     {
       "id": 61,
@@ -525,7 +587,8 @@
       "phrase": "On ____ le bus.",
       "answer": "a pris",
       "fullPhrase": "On a pris le bus.",
-      "translation": "We took the bus."
+      "translation": "We took the bus.",
+      "participle": "prendre"
     },
     {
       "id": 62,
@@ -536,7 +599,8 @@
       "aux": "être",
       "plural": true,
       "fullPhrase": "Vous êtes allés où ?",
-      "translation": "Where did you (guys) go?"
+      "translation": "Where did you (guys) go?",
+      "participle": "regular"
     },
     {
       "id": 63,
@@ -544,7 +608,8 @@
       "phrase": "Qu'est-ce que tu ____ ?",
       "answer": "as acheté",
       "fullPhrase": "Qu'est-ce que tu as acheté ?",
-      "translation": "What did you buy?"
+      "translation": "What did you buy?",
+      "participle": "regular"
     },
     {
       "id": 64,
@@ -552,7 +617,8 @@
       "phrase": "J'____ mes chaussures.",
       "answer": "ai pris",
       "fullPhrase": "J'ai pris mes chaussures.",
-      "translation": "I took my shoes."
+      "translation": "I took my shoes.",
+      "participle": "prendre"
     },
     {
       "id": 65,
@@ -560,7 +626,8 @@
       "phrase": "Tu ____ les courses ?",
       "answer": "as fait",
       "fullPhrase": "Tu as fait les courses ?",
-      "translation": "Did you do the shopping?"
+      "translation": "Did you do the shopping?",
+      "participle": "irregular"
     },
     {
       "id": 66,
@@ -568,7 +635,8 @@
       "phrase": "J' ____ les courses.",
       "answer": "ai fait",
       "fullPhrase": "J'ai fait les courses.",
-      "translation": "I did the shopping."
+      "translation": "I did the shopping.",
+      "participle": "irregular"
     },
     {
       "id": 67,
@@ -576,7 +644,8 @@
       "phrase": "Où est-ce que tu ____ les clés ?",
       "answer": "as mis",
       "fullPhrase": "Où est-ce que tu as mis les clés ?",
-      "translation": "Where did you put the keys?"
+      "translation": "Where did you put the keys?",
+      "participle": "irregular"
     },
     {
       "id": 68,
@@ -584,7 +653,8 @@
       "phrase": "J'____ une bouteille de vin.",
       "answer": "ai ouvert",
       "fullPhrase": "J'ai ouvert une bouteille de vin.",
-      "translation": "I opened a bottle of wine."
+      "translation": "I opened a bottle of wine.",
+      "participle": "ouvrir"
     },
     {
       "id": 69,
@@ -592,7 +662,8 @@
       "phrase": "Tu n'____ pas ____ de lait ?",
       "answer": "as pris",
       "fullPhrase": "Tu n'as pas pris de lait ?",
-      "translation": "Didn't you take any milk?"
+      "translation": "Didn't you take any milk?",
+      "participle": "prendre"
     },
     {
       "id": 70,
@@ -600,7 +671,8 @@
       "phrase": "J'____ les bouteilles dans le frigo.",
       "answer": "ai mis",
       "fullPhrase": "J'ai mis les bouteilles dans le frigo.",
-      "translation": "I put the bottles in the fridge."
+      "translation": "I put the bottles in the fridge.",
+      "participle": "irregular"
     },
     {
       "id": 71,
@@ -608,7 +680,8 @@
       "phrase": "J'____ un gâteau.",
       "answer": "ai fait",
       "fullPhrase": "J'ai fait un gâteau.",
-      "translation": "I made a cake."
+      "translation": "I made a cake.",
+      "participle": "irregular"
     },
     {
       "id": 72,
@@ -616,7 +689,8 @@
       "phrase": "J'____ la recette dans ce livre.",
       "answer": "ai trouvé",
       "fullPhrase": "J'ai trouvé la recette dans ce livre.",
-      "translation": "I found the recipe in this book."
+      "translation": "I found the recipe in this book.",
+      "participle": "regular"
     },
     {
       "id": 73,
@@ -624,7 +698,8 @@
       "phrase": "Qu'est-ce que vous ____ ce matin ?",
       "answer": "avez fait",
       "fullPhrase": "Qu'est-ce que vous avez fait ce matin ?",
-      "translation": "What did you do this morning?"
+      "translation": "What did you do this morning?",
+      "participle": "irregular"
     },
     {
       "id": 74,
@@ -632,7 +707,8 @@
       "phrase": "J'____ à conduire.",
       "answer": "ai appris",
       "fullPhrase": "J'ai appris à conduire.",
-      "translation": "I learned to drive."
+      "translation": "I learned to drive.",
+      "participle": "prendre"
     },
     {
       "id": 75,
@@ -640,7 +716,8 @@
       "phrase": "Vous ____ le ménage ?",
       "answer": "avez fait",
       "fullPhrase": "Vous avez fait le ménage ?",
-      "translation": "Have you cleaned up?"
+      "translation": "Have you cleaned up?",
+      "participle": "irregular"
     },
     {
       "id": 76,
@@ -648,7 +725,8 @@
       "phrase": "J'____ mon lit.",
       "answer": "ai fait",
       "fullPhrase": "J'ai fait mon lit.",
-      "translation": "I made my bed."
+      "translation": "I made my bed.",
+      "participle": "irregular"
     },
     {
       "id": 77,
@@ -656,7 +734,8 @@
       "phrase": "Elle n'____ pas ____ son lit.",
       "answer": "a fait",
       "fullPhrase": "Elle n'a pas fait son lit.",
-      "translation": "She didn't make her bed."
+      "translation": "She didn't make her bed.",
+      "participle": "irregular"
     },
     {
       "id": 78,
@@ -664,7 +743,8 @@
       "phrase": "Vous ____ la table ?",
       "answer": "avez mis",
       "fullPhrase": "Vous avez mis la table ?",
-      "translation": "Did you set the table?"
+      "translation": "Did you set the table?",
+      "participle": "irregular"
     },
     {
       "id": 79,
@@ -672,7 +752,8 @@
       "phrase": "Qu'est-ce que vous ____ ?",
       "answer": "avez dit",
       "fullPhrase": "Qu'est-ce que vous avez dit ?",
-      "translation": "What did you say?"
+      "translation": "What did you say?",
+      "participle": "irregular"
     },
     {
       "id": 80,
@@ -680,7 +761,8 @@
       "phrase": "Je n'____ pas bien ____.",
       "answer": "ai compris",
       "fullPhrase": "Je n'ai pas bien compris.",
-      "translation": "I didn't understand well."
+      "translation": "I didn't understand well.",
+      "participle": "prendre"
     },
     {
       "id": 81,
@@ -689,7 +771,8 @@
       "answer": "suis parti",
       "aux": "être",
       "fullPhrase": "Je suis parti de la maison vers 9 heures.",
-      "translation": "I left the house around 9 a.m."
+      "translation": "I left the house around 9 a.m.",
+      "participle": "ir"
     },
     {
       "id": 82,
@@ -700,7 +783,8 @@
       "aux": "être",
       "fem": true,
       "fullPhrase": "Je suis arrivée vers 10 h.",
-      "translation": "I arrived around 10 a.m."
+      "translation": "I arrived around 10 a.m.",
+      "participle": "regular"
     },
     {
       "id": 83,
@@ -709,7 +793,8 @@
       "answer": "êtes resté",
       "aux": "être",
       "fullPhrase": "Combien de temps est-ce que vous êtes resté là-bas ?",
-      "translation": "How long did you stay there?"
+      "translation": "How long did you stay there?",
+      "participle": "regular"
     },
     {
       "id": 84,
@@ -717,8 +802,10 @@
       "phrase": "Je (masc.) ____ au 6e étage.",
       "answer": "suis monté",
       "aux": "être",
+      "twoAux": true,
       "fullPhrase": "Je suis monté au 6e étage.",
-      "translation": "I went up to the 6th floor."
+      "translation": "I went up to the 6th floor.",
+      "participle": "regular"
     },
     {
       "id": 85,
@@ -726,8 +813,10 @@
       "phrase": "Je (masc.) ____ dans mon bureau.",
       "answer": "suis entré",
       "aux": "être",
+      "twoAux": true,
       "fullPhrase": "Je suis entré dans mon bureau.",
-      "translation": "I entered my office."
+      "translation": "I entered my office.",
+      "participle": "regular"
     },
     {
       "id": 86,
@@ -736,7 +825,8 @@
       "answer": "avez fait",
       "aux": "avoir",
       "fullPhrase": "Qu'est-ce que vous avez fait ?",
-      "translation": "What did you do?"
+      "translation": "What did you do?",
+      "participle": "irregular"
     },
     {
       "id": 87,
@@ -744,8 +834,10 @@
       "phrase": "Je (masc.) ____ à la réception.",
       "answer": "suis descendu",
       "aux": "être",
+      "twoAux": true,
       "fullPhrase": "Je suis descendu à la réception.",
-      "translation": "I went down to the reception."
+      "translation": "I went down to the reception.",
+      "participle": "dre"
     },
     {
       "id": 88,
@@ -754,7 +846,8 @@
       "answer": "appelé",
       "aux": "avoir",
       "fullPhrase": "J'ai appelé la police.",
-      "translation": "I called the police."
+      "translation": "I called the police.",
+      "participle": "regular"
     },
     {
       "id": 89,
@@ -765,7 +858,8 @@
       "aux": "être",
       "plural": true,
       "fullPhrase": "Les pompiers sont arrivés.",
-      "translation": "The firefighters arrived."
+      "translation": "The firefighters arrived.",
+      "participle": "regular"
     },
     {
       "id": 90,
@@ -776,7 +870,8 @@
       "aux": "être",
       "plural": true,
       "fullPhrase": "Ils sont arrivés très vite.",
-      "translation": "They arrived very quickly."
+      "translation": "They arrived very quickly.",
+      "participle": "regular"
     },
     {
       "id": 91,
@@ -787,7 +882,8 @@
       "aux": "être",
       "plural": true,
       "fullPhrase": "Ils sont allés à l'hôpital.",
-      "translation": "They went to the hospital."
+      "translation": "They went to the hospital.",
+      "participle": "regular"
     },
     {
       "id": 92,
@@ -795,8 +891,10 @@
       "phrase": "Vous (masc., sing.) n'____ pas ____ à votre bureau ?",
       "answer": "êtes retourné",
       "aux": "être",
+      "twoAux": true,
       "fullPhrase": "Vous n'êtes pas retourné à votre bureau ?",
-      "translation": "Didn't you go back to your office?"
+      "translation": "Didn't you go back to your office?",
+      "participle": "regular"
     },
     {
       "id": 93,
@@ -805,7 +903,8 @@
       "answer": "est passé",
       "aux": "être",
       "fullPhrase": "Ça s'est très bien passé.",
-      "translation": "It went very well."
+      "translation": "It went very well.",
+      "participle": "regular"
     },
     {
       "id": 94,
@@ -814,7 +913,8 @@
       "answer": "me suis reposé",
       "aux": "être",
       "fullPhrase": "Je me suis reposé.",
-      "translation": "I rested."
+      "translation": "I rested.",
+      "participle": "regular"
     },
     {
       "id": 95,
@@ -825,7 +925,8 @@
       "aux": "être",
       "fem": true,
       "fullPhrase": "Je me suis levée tard.",
-      "translation": "I got up late."
+      "translation": "I got up late.",
+      "participle": "regular"
     },
     {
       "id": 96,
@@ -834,7 +935,8 @@
       "answer": "es baigné",
       "aux": "être",
       "fullPhrase": "Tu t'es baigné ?",
-      "translation": "Did you go for a swim?"
+      "translation": "Did you go for a swim?",
+      "participle": "regular"
     },
     {
       "id": 97,
@@ -845,7 +947,8 @@
       "aux": "être",
       "fem": true,
       "fullPhrase": "Je me suis baignée dans le lac.",
-      "translation": "I went for a swim in the lake."
+      "translation": "I went for a swim in the lake.",
+      "participle": "regular"
     },
     {
       "id": 98,
@@ -854,7 +957,8 @@
       "answer": "es promené",
       "aux": "être",
       "fullPhrase": "Tu t'es promené en ville ?",
-      "translation": "Did you walk around the city?"
+      "translation": "Did you walk around the city?",
+      "participle": "regular"
     },
     {
       "id": 99,
@@ -863,7 +967,8 @@
       "answer": "me suis promené",
       "aux": "être",
       "fullPhrase": "Je me suis promené.",
-      "translation": "I walked."
+      "translation": "I went for a walk / I walked.",
+      "participle": "regular"
     },
     {
       "id": 100,
@@ -874,7 +979,8 @@
       "aux": "être",
       "fem": true,
       "fullPhrase": "Je me suis perdue !",
-      "translation": "I got lost!"
+      "translation": "I got lost!",
+      "participle": "dre"
     },
     {
       "id": 101,
@@ -885,7 +991,8 @@
       "aux": "être",
       "fem": true,
       "fullPhrase": "Tu n'es pas allée danser ?",
-      "translation": "Didn't you go dancing?"
+      "translation": "Didn't you go dancing?",
+      "participle": "regular"
     },
     {
       "id": 102,
@@ -896,7 +1003,8 @@
       "aux": "être",
       "fem": true,
       "fullPhrase": "Je suis allée en boîte.",
-      "translation": "I went to the club."
+      "translation": "I went to the club.",
+      "participle": "regular"
     },
     {
       "id": 103,
@@ -905,7 +1013,8 @@
       "answer": "me suis amusé",
       "aux": "être",
       "fullPhrase": "Je me suis bien amusé.",
-      "translation": "I had fun."
+      "translation": "I had fun.",
+      "participle": "regular"
     },
     {
       "id": 104,
@@ -914,7 +1023,8 @@
       "answer": "me suis couché",
       "aux": "être",
       "fullPhrase": "Je me suis couché tard.",
-      "translation": "I went to bed late."
+      "translation": "I went to bed late.",
+      "participle": "regular"
     },
     {
       "id": 105,
@@ -923,7 +1033,8 @@
       "answer": "est passé",
       "aux": "être",
       "fullPhrase": "Ça s'est bien passé ?",
-      "translation": "Did it go well?"
+      "translation": "Did it go well?",
+      "participle": "regular"
     },
     {
       "id": 106,
@@ -934,7 +1045,8 @@
       "aux": "être",
       "fem": true,
       "fullPhrase": "Je me suis disputée avec lui.",
-      "translation": "I argued with him."
+      "translation": "I argued with him.",
+      "participle": "regular"
     },
     {
       "id": 107,
@@ -943,7 +1055,8 @@
       "answer": "sommes téléphoné",
       "aux": "être",
       "fullPhrase": "Nous nous sommes téléphoné tous les jours.",
-      "translation": "We called each other every day."
+      "translation": "We called each other every day.",
+      "participle": "regular"
     },
     {
       "id": 108,
@@ -954,7 +1067,8 @@
       "aux": "être",
       "fem": true,
       "fullPhrase": "Je me suis reposée.",
-      "translation": "I rested."
+      "translation": "I rested.",
+      "participle": "regular"
     },
     {
       "id": 109,
@@ -962,7 +1076,8 @@
       "phrase": "J'____ un petit problème.",
       "answer": "ai eu",
       "fullPhrase": "J'ai eu un petit problème.",
-      "translation": "I had a small problem."
+      "translation": "I had a small problem.",
+      "participle": "irregular"
     },
     {
       "id": 110,
@@ -970,7 +1085,8 @@
       "phrase": "Nous ____ une heure.",
       "answer": "avons attendu",
       "fullPhrase": "Nous avons attendu une heure.",
-      "translation": "We waited for an hour."
+      "translation": "We waited for an hour.",
+      "participle": "dre"
     },
     {
       "id": 111,
@@ -978,7 +1094,8 @@
       "phrase": "Vous ____ dans l'avion ?",
       "answer": "avez dormi",
       "fullPhrase": "Vous avez dormi dans l'avion ?",
-      "translation": "Did you sleep on the plane?"
+      "translation": "Did you sleep on the plane?",
+      "participle": "ir"
     },
     {
       "id": 112,
@@ -986,7 +1103,8 @@
       "phrase": "Vous ____ trouver l'hôtel ?",
       "answer": "avez pu",
       "fullPhrase": "Vous avez pu trouver l'hôtel ?",
-      "translation": "Were you able to find the hotel?"
+      "translation": "Were you able to find the hotel?",
+      "participle": "irregular"
     },
     {
       "id": 113,
@@ -994,7 +1112,8 @@
       "phrase": "On ____ deux heures.",
       "answer": "a perdu",
       "fullPhrase": "On a perdu deux heures.",
-      "translation": "We lost two hours."
+      "translation": "We lost two hours.",
+      "participle": "dre"
     },
     {
       "id": 114,
@@ -1002,7 +1121,8 @@
       "phrase": "Vous ____ ce film ?",
       "answer": "avez vu",
       "fullPhrase": "Vous avez vu ce film ?",
-      "translation": "Did you see this movie?"
+      "translation": "Did you see this movie?",
+      "participle": "irregular"
     },
     {
       "id": 115,
@@ -1010,7 +1130,8 @@
       "phrase": "On n'____ pas ____ le temps.",
       "answer": "a eu",
       "fullPhrase": "On n'a pas eu le temps.",
-      "translation": "We didn't have time."
+      "translation": "We didn't have time.",
+      "participle": "irregular"
     },
     {
       "id": 116,
@@ -1018,7 +1139,8 @@
       "phrase": "J'____ retourner aux États-Unis.",
       "answer": "ai dû",
       "fullPhrase": "J'ai dû retourner aux États-Unis.",
-      "translation": "I had to go back to the United States."
+      "translation": "I had to go back to the United States.",
+      "participle": "irregular"
     },
     {
       "id": 117,
@@ -1026,7 +1148,8 @@
       "phrase": "Tu ____ Guillaume ?",
       "answer": "as vu",
       "fullPhrase": "Tu as vu Guillaume ?",
-      "translation": "Did you see Guillaume?"
+      "translation": "Did you see Guillaume?",
+      "participle": "irregular"
     },
     {
       "id": 118,
@@ -1034,7 +1157,8 @@
       "phrase": "J'____ dîner avec elle mercredi soir.",
       "answer": "ai pu",
       "fullPhrase": "J'ai pu dîner avec elle mercredi soir.",
-      "translation": "I was able to have dinner with her on Wednesday evening."
+      "translation": "I was able to have dinner with her on Wednesday evening.",
+      "participle": "irregular"
     },
     {
       "id": 119,
@@ -1042,7 +1166,8 @@
       "phrase": "Vous ____ de la bière.",
       "answer": "avez bu",
       "fullPhrase": "Vous avez bu de la bière.",
-      "translation": "Did you drink beer?"
+      "translation": "Did you drink beer?",
+      "participle": "irregular"
     },
     {
       "id": 120,
@@ -1050,7 +1175,8 @@
       "phrase": "Nous ____ l'occasion de déguster des sushis délicieux !",
       "answer": "avons eu",
       "fullPhrase": "Nous avons eu l'occasion de déguster des sushis délicieux !",
-      "translation": "We had the opportunity to taste delicious sushi!"
+      "translation": "We had the opportunity to taste delicious sushi!",
+      "participle": "irregular"
     },
     {
       "id": 121,
@@ -1058,7 +1184,8 @@
       "phrase": "Tu ____ la nouvelle ?",
       "answer": "as entendu",
       "fullPhrase": "Tu as entendu la nouvelle ?",
-      "translation": "Did you hear the news?"
+      "translation": "Did you hear the news?",
+      "participle": "dre"
     },
     {
       "id": 122,
@@ -1066,7 +1193,8 @@
       "phrase": "J'____ un mail ce matin.",
       "answer": "ai reçu",
       "fullPhrase": "J'ai reçu un mail ce matin.",
-      "translation": "I received an email this morning."
+      "translation": "I received an email this morning.",
+      "participle": "irregular"
     },
     {
       "id": 123,
@@ -1074,7 +1202,8 @@
       "phrase": "Je n'____ pas encore ____.",
       "answer": "ai répondu",
       "fullPhrase": "Je n'ai pas encore répondu.",
-      "translation": "I haven't replied yet."
+      "translation": "I haven't replied yet.",
+      "participle": "dre"
     },
     {
       "id": 124,
@@ -1082,7 +1211,8 @@
       "phrase": "Elle ____ sa maison.",
       "answer": "a vendu",
       "fullPhrase": "Elle a vendu sa maison.",
-      "translation": "She sold her house."
+      "translation": "She sold her house.",
+      "participle": "dre"
     },
     {
       "id": 125,
@@ -1090,7 +1220,8 @@
       "phrase": "J'____ mes clés.",
       "answer": "ai trouvé",
       "fullPhrase": "J'ai trouvé mes clés.",
-      "translation": "I've found my keys."
+      "translation": "I've found my keys.",
+      "participle": "regular"
     },
     {
       "id": 126,
@@ -1098,7 +1229,8 @@
       "phrase": "Tu ____ ?",
       "answer": "as dîné",
       "fullPhrase": "Tu as dîné ?",
-      "translation": "Did you have dinner?"
+      "translation": "Did you have dinner?",
+      "participle": "regular"
     },
     {
       "id": 127,
@@ -1106,7 +1238,8 @@
       "phrase": "J'____ à huit heures.",
       "answer": "ai dîné",
       "fullPhrase": "J'ai dîné à huit heures.",
-      "translation": "I had dinner at eight o'clock."
+      "translation": "I had dinner at eight o'clock.",
+      "participle": "regular"
     },
     {
       "id": 128,
@@ -1114,7 +1247,8 @@
       "phrase": "Qu'est-ce que tu _____ ?",
       "answer": "as mangé",
       "fullPhrase": "Qu'est-ce que tu as mangé ?",
-      "translation": "What did you eat?"
+      "translation": "What did you eat?",
+      "participle": "regular"
     },
     {
       "id": 129,
@@ -1122,7 +1256,8 @@
       "phrase": "J'____ une banane.",
       "answer": "ai mangé",
       "fullPhrase": "J'ai mangé une banane.",
-      "translation": "I ate a banana."
+      "translation": "I ate a banana.",
+      "participle": "regular"
     },
     {
       "id": 130,
@@ -1130,7 +1265,8 @@
       "phrase": "J'_____ le dîner.",
       "answer": "ai préparé",
       "fullPhrase": "J'ai préparé le dîner.",
-      "translation": "I prepared dinner."
+      "translation": "I prepared dinner.",
+      "participle": "regular"
     },
     {
       "id": 131,
@@ -1138,7 +1274,8 @@
       "phrase": "Tu ____ les infos ?",
       "answer": "as regardé",
       "fullPhrase": "Tu as regardé les infos ?",
-      "translation": "Did you watch the news?"
+      "translation": "Did you watch the news?",
+      "participle": "regular"
     },
     {
       "id": 132,
@@ -1146,7 +1283,8 @@
       "phrase": "Je n'____ pas ____ la télé.",
       "answer": "ai regardé",
       "fullPhrase": "Je n'ai pas regardé la télé.",
-      "translation": "I didn't watch TV."
+      "translation": "I didn't watch TV.",
+      "participle": "regular"
     },
     {
       "id": 133,
@@ -1154,7 +1292,8 @@
       "phrase": "J'____ de la musique.",
       "answer": "ai écouté",
       "fullPhrase": "J'ai écouté de la musique.",
-      "translation": "I listened to music."
+      "translation": "I listened to music.",
+      "participle": "regular"
     },
     {
       "id": 134,
@@ -1162,7 +1301,8 @@
       "phrase": "J'____ toute la journée.",
       "answer": "ai travaillé",
       "fullPhrase": "J'ai travaillé toute la journée.",
-      "translation": "I worked all day."
+      "translation": "I worked all day.",
+      "participle": "regular"
     },
     {
       "id": 135,
@@ -1170,7 +1310,8 @@
       "phrase": "J'____ avec elle.",
       "answer": "ai déjeuné",
       "fullPhrase": "J'ai déjeuné avec elle.",
-      "translation": "I had lunch with her."
+      "translation": "I had lunch with her.",
+      "participle": "regular"
     },
     {
       "id": 136,
@@ -1178,7 +1319,8 @@
       "phrase": "Nous ____ assez longtemps.",
       "answer": "avons parlé",
       "fullPhrase": "Nous avons parlé assez longtemps.",
-      "translation": "We talked for quite a long time."
+      "translation": "We talked for quite a long time.",
+      "participle": "regular"
     },
     {
       "id": 137,
@@ -1186,7 +1328,8 @@
       "phrase": "Elle ____ de partir.",
       "answer": "a décidé",
       "fullPhrase": "Elle a décidé de partir.",
-      "translation": "She decided to leave."
+      "translation": "She decided to leave.",
+      "participle": "regular"
     },
     {
       "id": 138,
@@ -1194,7 +1337,8 @@
       "phrase": "Elle m'____ ses projets.",
       "answer": "a expliqué",
       "fullPhrase": "Elle m'a expliqué ses projets.",
-      "translation": "She explained her plans to me."
+      "translation": "She explained her plans to me.",
+      "participle": "regular"
     },
     {
       "id": 139,
@@ -1202,7 +1346,8 @@
       "phrase": "Nous ____ dans un restaurant.",
       "answer": "avons déjeuné",
       "fullPhrase": "Nous avons déjeuné dans un restaurant.",
-      "translation": "We had lunch in a restaurant."
+      "translation": "We had lunch in a restaurant.",
+      "participle": "regular"
     },
     {
       "id": 140,
@@ -1210,7 +1355,8 @@
       "phrase": "Elle ____ à apprendre le chinois.",
       "answer": "a commencé",
       "fullPhrase": "Elle a commencé à apprendre le chinois.",
-      "translation": "She started learning Chinese."
+      "translation": "She started learning Chinese.",
+      "participle": "regular"
     },
     {
       "id": 141,
@@ -1218,7 +1364,8 @@
       "phrase": "Vous ____ chinois ?",
       "answer": "avez parlé",
       "fullPhrase": "Vous avez parlé chinois ?",
-      "translation": "Did you speak Chinese?"
+      "translation": "Did you speak Chinese?",
+      "participle": "regular"
     },
     {
       "id": 142,
@@ -1226,7 +1373,8 @@
       "phrase": "J'____ Sophie à dîner.",
       "answer": "ai invité",
       "fullPhrase": "J'ai invité Sophie à dîner.",
-      "translation": "I invited Sophie to dinner."
+      "translation": "I invited Sophie to dinner.",
+      "participle": "regular"
     },
     {
       "id": 143,
@@ -1234,7 +1382,17 @@
       "phrase": "J'____ à Margot ce matin.",
       "answer": "ai téléphoné",
       "fullPhrase": "J'ai téléphoné à Margot ce matin.",
-      "translation": "I called Margot this morning."
+      "translation": "I called Margot this morning.",
+      "participle": "regular"
+    },
+    {
+      "id": 144,
+      "verb": "éteindre",
+      "phrase": "Nous ____ la lumière.",
+      "answer": "avons éteint",
+      "fullPhrase": "Nous avons éteint la lumière",
+      "translation": "We turned off the light.",
+      "participle": "rejoindre"
     }
   ]
 }

@@ -286,6 +286,7 @@ export function setSpecialBtns() {
 }
 
 export function showResultPage(score, phraseStats, stats, userId) {
+  const main = document.querySelector("main");
   const mainSection = document.querySelector(".mainSection");
   mainSection.innerHTML = "";
 
@@ -341,6 +342,18 @@ export function showResultPage(score, phraseStats, stats, userId) {
       restartSection.removeChild(showSummaryBtn);
     }
 
+    let summaryCloseBtn = document.querySelector(".summaryCloseBtn");
+    //Close summary
+    if (summaryCloseBtn) {
+      summaryCloseBtn.addEventListener("click", () => {
+        summary = document.querySelector(".summary");
+        if (summary) {
+          main.removeChild(summary);
+          summary = null;
+        }
+      });
+    }
+
     if (chart) {
       contentArea.removeChild(chart);
       chart = null;
@@ -350,10 +363,8 @@ export function showResultPage(score, phraseStats, stats, userId) {
   restartBtn.addEventListener("click", () => {
     mainSection.innerHTML = "";
 
-    console.log(summary);
-
     if (summary) {
-      contentArea.removeChild(summary);
+      main.removeChild(summary);
       summary = null;
     }
 
@@ -367,6 +378,7 @@ export function showResultPage(score, phraseStats, stats, userId) {
 }
 
 export function showNoMorePhrasesPage(score, phraseStats) {
+  const main = document.querySelector("main");
   const mainSection = document.querySelector(".mainSection");
   mainSection.innerHTML = "";
 
@@ -429,7 +441,7 @@ export function showNoMorePhrasesPage(score, phraseStats) {
   restartBtn.addEventListener("click", () => {
     mainSection.innerHTML = "";
     if (summary) {
-      contentArea.removeChild(summary);
+      main.removeChild(summary);
       summary = null;
     }
 
@@ -443,14 +455,18 @@ export function showNoMorePhrasesPage(score, phraseStats) {
 }
 
 function showSummary(phraseStats) {
-  const contentArea = document.querySelector(".content-area");
+  //const contentArea = document.querySelector(".content-area");
+  const main = document.querySelector("main");
   let summary = document.querySelector(".summary");
 
   if (!summary) {
     summary = document.createElement("div");
     summary.classList.add("summary");
-    contentArea.appendChild(summary);
+    main.appendChild(summary);
   }
+  const summaryCloseBtn = document.createElement("i");
+  summaryCloseBtn.classList.add("fa-solid", "fa-xmark", "summaryCloseBtn");
+  summary.appendChild(summaryCloseBtn);
 
   const summaryH = document.createElement("h1");
   summary.appendChild(summaryH);

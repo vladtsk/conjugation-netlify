@@ -520,6 +520,32 @@
         "6": "ils/elles voyageaient"
       }
     },
+    "préparer": {
+      "present": {
+        "1": "je prépare",
+        "2": "tu prépares",
+        "3": "il/elle/on prépare",
+        "4": "nous préparons",
+        "5": "vous préparez",
+        "6": "ils/elles préparent"
+      },
+      "pastcomp": {
+        "1": "j'ai préparé",
+        "2": "tu as préparé",
+        "3": "il/elle/on a préparé",
+        "4": "nous avons préparé",
+        "5": "vous avez préparé",
+        "6": "ils/elles ont préparé"
+      },
+      "pastimp": {
+        "1": "je préparais",
+        "2": "tu préparais",
+        "3": "il/elle/on préparait",
+        "4": "nous préparions",
+        "5": "vous prépariez",
+        "6": "ils/elles préparaient"
+      }
+    },
     "vivre": {
       "present": {
         "1": "je vis",

@@ -38,6 +38,7 @@ const logInButtonMenu = document.getElementById("logInButtonMenu");
 
 const logOutButton = document.getElementById("logOutButton");
 //const logOutSection = document.querySelector(".logOutSection");
+const main = document.querySelector("main");
 let mainSection = document.querySelector(".mainSection");
 const contentArea = document.querySelector(".content-area");
 let summary = document.querySelector(".summary");
@@ -209,7 +210,7 @@ if (logOutButton) {
     event.preventDefault();
     summary = document.querySelector(".summary");
     if (summary) {
-      contentArea.removeChild(summary);
+      main.removeChild(summary);
       summary = null;
     }
     chart = document.querySelector(".chart");
@@ -235,7 +236,7 @@ if (logInButtonMenu) {
 
     summary = document.querySelector(".summary");
     if (summary) {
-      contentArea.removeChild(summary);
+      main.removeChild(summary);
       summary = null;
     }
     chart = document.querySelector(".chart");

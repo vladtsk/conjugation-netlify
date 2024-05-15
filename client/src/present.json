@@ -29,7 +29,8 @@
       "answer": "disent",
       "fullPhrase": "Ils disent tout !",
       "translation": "They say everything!",
-      "group": 3
+      "group": 3,
+      "pattern": "lire"
     },
     {
       "id": 4,

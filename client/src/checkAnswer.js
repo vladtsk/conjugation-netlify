@@ -118,14 +118,13 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       inputArea.style.color = "#d96e38";
       inputArea.classList.add("bold");
 
-      if (data.data[k].fem) {
-        msgArea.innerHTML =
-          "<p class='almost'>Almost correct.</p> <p class='reminder'>Don't forget to add an 'e' to match feminine singular subjects (elle, Anna, etc.) when a verb in conjugated with 'être' in the 'passé composé'.</p> <p class='reminder'> For the subjects 'je' and 'tu', pay attention to hints like '(masc.)' and '(fem.)'.</p> ";
-      }
-      if (data.data[k].plural) {
-        msgArea.innerHTML =
-          "<p class='almost'>Almost correct.</p> <p class='reminder'>Don't forget to add an 's' to match plural subjects (ils, les enfants, etc.) when a verb is conjugated with 'être' in the 'passé composé'.</p>";
-      }
+      answerType = "almostPastComp";
+
+      msgArea.innerHTML = "<p class='almost'>Almost correct.</p>";
+
+      learnMoreSection.style.display = "block";
+
+      showInfoPopup(data.data[k], data.data[0].tenseShort, answerType);
 
       phraseStatObject.almostCorrectCorrect = true;
 
@@ -162,7 +161,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
 
       answerType = "almostWoAccent";
 
-      showInfoPopup(data.data[k], answerType);
+      showInfoPopup(data.data[k], data.data[0].tenseShort, answerType);
 
       phraseStatObject.almostCorrectCorrect = true;
 
@@ -214,7 +213,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       showConjugations(data.data[k], data.data[0], conjugSection);
 
       learnMoreSection.style.display = "block";
-      showInfoPopup(data.data[k]);
+      showInfoPopup(data.data[k], data.data[0].tenseShort);
       /*if (data.data[k].group && data.data[k].group === 1) {
         learnMoreSection.innerHTML = `<i class="fa-solid fa-circle-info"></i> <a href="./present-group1.html" target="_blank" rel="noreferrer noopener">Learn more</a>`;
       }

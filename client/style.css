@@ -119,6 +119,11 @@ main {
   display: block;
 }
 
+.sidebarTablet,
+.sidebarMobile {
+  display: none;
+}
+
 .practice,
 .learn {
   font-size: 20px;
@@ -530,7 +535,27 @@ button[disabled] {
   bottom: 0%;
 
   margin: 0;
-  box-sizing: border-box;
+}
+
+.fa-bolt,
+.fa-exclamation-triangle {
+  color: var(--color-tertiary);
+}
+
+.fa-arrow-right {
+  font-size: 14px;
+}
+
+.infoPopupSection p {
+  margin-top: 8px;
+}
+
+.twoAuxMessage {
+  margin-top: 5px;
+}
+
+.red {
+  color: red;
 }
 
 .popupInfo-close {
@@ -658,7 +683,7 @@ button[disabled] {
   display: none;
 }
 
-.summary {
+/*.summary {
   min-width: 280px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -675,6 +700,28 @@ button[disabled] {
 
   border: solid var(--color-primary) 4px;
   border-radius: 10px;
+}*/
+
+.summary {
+  margin: auto;
+  max-width: 320px;
+  max-height: 80vh;
+  padding-block: 20px;
+  padding-inline: 15px;
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  border: solid 3px var(--color-primary);
+
+  border-radius: 5px;
+  text-align: center;
+  position: fixed;
+  z-index: 2;
+
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  overflow-y: scroll;
 }
 
 .summary h1 {
@@ -683,6 +730,21 @@ button[disabled] {
 
 .summary li {
   margin-top: 20px;
+  list-style-type: none;
+}
+
+.summary p {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.summaryCloseBtn {
+  position: absolute;
+  right: 15px;
+}
+
+.summary .correctCheck {
+  color: #11c080;
 }
 
 /* Styling the restart section */
@@ -835,13 +897,26 @@ button[disabled] {
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
+
   .mainSection {
-    margin-top: 10px;
+    margin-top: 0px;
     padding-top: 10px;
     padding-bottom: 20px;
     padding-left: 25px;
     padding-right: 25px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .sidebarTablet {
+    display: block;
   }
 
   .type-section input::placeholder {
@@ -857,9 +932,14 @@ button[disabled] {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   header {
     border: none;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .tense-display-section,
@@ -868,10 +948,22 @@ button[disabled] {
   }
 
   .mainSection {
-    margin-top: 10px;
+    margin-top: 0px;
     padding-top: 10px;
     padding-left: 25px;
     padding-right: 25px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .sidebarTablet {
+    display: none;
+  }
+
+  .sidebarMobile {
+    display: block;
   }
 
   .rulesSection {
