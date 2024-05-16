@@ -29,6 +29,12 @@ export async function launchFirstPage() {
   const selectPhrNb = document.getElementById("phraseNb");
   const startBtn = document.getElementById("start-btn");
 
+  const sidebarContainer = document.querySelector(".sidebarContainer");
+  const sidebarTabletContainer = document.querySelector(
+    ".sidebarTabletContainer"
+  );
+  const footer = document.querySelector("footer");
+
   // Adding an event listener in case the user changes the tense
   if (selectElement) {
     selectElement.addEventListener("change", async () => {
@@ -48,6 +54,10 @@ export async function launchFirstPage() {
   if (startBtn) {
     startBtn.addEventListener("click", () => {
       launchApp(jsonData, phraseNumber);
+
+      sidebarContainer.style.display = "none";
+      sidebarTabletContainer.style.display = "none";
+      footer.style.display = "none";
     });
   }
 }

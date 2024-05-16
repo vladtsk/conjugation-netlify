@@ -71,6 +71,7 @@
 .present-subcontainer,
 .past-subcontainer {
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .fa-plane-departure {
@@ -203,7 +204,6 @@ th {
   color: var(--color-tertiary);
 }
 
-
 .color3 {
   color: var(--color-tertiary);
 }
@@ -276,4 +276,22 @@ th {
   display: inline-block;
   padding-right: 5px;
   color: var(--color-tertiary);
+}
+
+/* Responsive design */
+
+@media screen and (min-width: 600px) and (max-width: 850px) {
+  table {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .content-area {
+    padding-bottom: 100px;
+    padding-inline: 20px;
+  }
+
+  table {
+    width: 80%;
+  }
 }

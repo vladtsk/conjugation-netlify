@@ -51,15 +51,23 @@ header {
   border-bottom: 2px solid gray;
 }
 
+.logo {
+  width: 50%;
+  margin-inline: auto;
+}
+
 .logo img {
-  display: block;
-  margin: 0 auto;
+  /*display: block;
+  margin-inline: auto;*/
+  width: 100%;
+  max-width: 444px;
+  height: auto;
 }
 
 nav {
   display: flex;
   align-items: center;
-  margin-right: 8%;
+  margin-right: 20px;
 }
 
 .menu {
@@ -108,42 +116,51 @@ main {
 .sidebar {
   /*margin-top: 0.8rem;*/
   margin-top: 20px;
+}
 
+.sidebarContainer {
   margin-inline: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 5px;
 }
 
 .sidebar a {
   display: block;
+  margin-bottom: 5px;
 }
 
 .sidebarTablet,
-.sidebarMobile {
+.mobileMenu {
   display: none;
 }
 
 .practice,
-.learn {
-  font-size: 20px;
+.learn,
+.stats {
+  font-size: 18px;
   margin-bottom: 2px;
   padding-block: 15px;
   border-radius: 10px;
   border: solid #b5afae 1px;
+  background-color: var(--color-secondary);
+  text-align: center;
 }
 
 .practice {
   padding-inline: 18px;
 }
 
-.learn {
+.learn,
+.stats {
   padding-inline: 30px;
   border-radius: 10px;
 }
 
 .practice:hover,
-.learn:hover {
+.learn:hover,
+.stats:hover {
   background-color: var(--color-tertiary);
   color: var(--color-secondary);
 }
@@ -158,6 +175,7 @@ main {
 .content-area {
   margin-top: 20px;
   margin-bottom: 20px;
+  text-align: justify;
 }
 .mainSection {
   color: var(--color-secondary);
@@ -486,7 +504,7 @@ button[disabled] {
   border: solid 1px var(--color-primary);
   border-radius: 5px;
   min-width: 150px;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   right: 15%;
   top: 18%;
@@ -704,7 +722,7 @@ button[disabled] {
 
 .summary {
   margin: auto;
-  max-width: 320px;
+  min-width: 380px;
   max-height: 80vh;
   padding-block: 20px;
   padding-inline: 15px;
@@ -882,12 +900,20 @@ button[disabled] {
 }
 
 /* Responsive design */
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 851px) and (max-width: 1200px) {
   .mainSection {
-    padding-top: 10px;
+    padding-top: 15px;
     padding-bottom: 20px;
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  .logo img {
+    max-width: 300px;
   }
 }
 
@@ -897,28 +923,81 @@ button[disabled] {
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 768px) {
+@media screen and (min-width: 600px) and (max-width: 850px) {
   main {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding-top: 0;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .logo {
+    width: 60%;
+  }
+
+  .logo img {
+    max-width: 200px;
+  }
+
+  .content-area {
+    margin: 0;
   }
 
   .mainSection {
     margin-top: 0px;
-    padding-top: 10px;
+    padding-top: 15px;
     padding-bottom: 20px;
     padding-left: 25px;
     padding-right: 25px;
   }
 
-  .sidebar {
+  .sidebar,
+  .mobileMenu {
     display: none;
   }
 
   .sidebarTablet {
-    display: block;
+    display: flex;
   }
 
+  .sidebarTabletContainer {
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    gap: 10px;
+  }
+
+  .practice,
+  .learn,
+  .stats {
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    font-size: 25px;
+    margin-bottom: 2px;
+    padding-block: 10px;
+    border-radius: 10px;
+    padding-inline: 15px;
+    text-align: center;
+  }
+  /*
+  .practice {
+    padding-inline: 15px;
+  }
+
+  .learn {
+    padding-inline: 20px;
+    border-radius: 10px;
+  }
+
+  .stats {
+    padding-inline: 15px;
+  }
+*/
   .type-section input::placeholder {
     font-size: 16px;
   }
@@ -932,14 +1011,35 @@ button[disabled] {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 599px) {
   header {
     border: none;
+    margin-block: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
   }
 
   main {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  .logo {
+    width: 20%;
+    margin: 0;
+    padding-left: 20px;
+    padding-block: 10px;
+  }
+
+  .logo img {
+    min-width: 100px;
+  }
+
+  .content-area {
+    margin: 0;
   }
 
   .tense-display-section,
@@ -948,7 +1048,7 @@ button[disabled] {
   }
 
   .mainSection {
-    margin-top: 0px;
+    margin-top: 10px;
     padding-top: 10px;
     padding-left: 25px;
     padding-right: 25px;
@@ -962,8 +1062,32 @@ button[disabled] {
     display: none;
   }
 
-  .sidebarMobile {
-    display: block;
+  footer {
+    padding-block: 5px;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid gray;
+    width: 100%;
+    background-color: var(--color-secondary);
+  }
+
+  .mobileMenu {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 20px;
+  }
+
+  .practice,
+  .learn,
+  .stats {
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    font-size: 25px;
+    margin-bottom: 2px;
+    padding-block: 10px;
+    border-radius: 10px;
+    padding-inline: 15px;
   }
 
   .rulesSection {
@@ -971,15 +1095,6 @@ button[disabled] {
     min-width: 300px;
     width: 90%;
   }
-
-  /*
-  h1 {
-    font-size: 32px;
-  }
-  h2 {
-    font-size: 22px;
-  }
-  */
 
   .nb-phrases {
     flex-direction: column;

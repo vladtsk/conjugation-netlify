@@ -292,6 +292,12 @@ export function showResultPage(score, phraseStats, stats, userId) {
 
   const contentArea = document.querySelector(".content-area");
 
+  const sidebarContainer = document.querySelector(".sidebarContainer");
+  const sidebarTabletContainer = document.querySelector(
+    ".sidebarTabletContainer"
+  );
+  const footer = document.querySelector("footer");
+
   const resultDiv = document.createElement("div");
   resultDiv.classList.add("result");
   mainSection.appendChild(resultDiv);
@@ -374,6 +380,9 @@ export function showResultPage(score, phraseStats, stats, userId) {
     }
 
     launchFirstPage();
+    sidebarContainer.style.display = "block";
+    sidebarTabletContainer.style.display = "block";
+    footer.style.display = "block";
   });
 }
 
