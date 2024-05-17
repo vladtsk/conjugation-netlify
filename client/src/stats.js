@@ -1,7 +1,47 @@
-// Showing statistics about the student's performance
+import { buildGraph } from "./graphs.js";
+import { getUser, readStatsFromDb } from "./readDbData.js";
 
-export function generateGraph() {
+import { ref, app, getDatabase } from "./config.js";
+
+const database = getDatabase(app);
+
+async function showStats() {
+  const userId = await getUser();
+  if (userId) {
+    const statsRef = ref(database, "users/" + userId + "/data/" + "/stats");
+    const stats = await readStatsFromDb(statsRef);
+
+    generateGraph();
+    buildGraph(stats);
+  } else {
+    const contentArea = document.querySelector(".content-area");
+    contentArea.innerHTML = "";
+    const premiumStatsH1 = document.createElement("h1");
+    contentArea.appendChild(premiumStatsH1);
+    premiumStatsH1.innerHTML =
+      "<i class='fa-regular fa-gem'></i> This is a premium feature";
+
+    const premiumStatsMessage = document.createElement("div");
+    contentArea.appendChild(premiumStatsMessage);
+    premiumStatsMessage.classList.add("premiumStatsMessage");
+    premiumStatsMessage.innerHTML = `<p>Subscribe to follow your progress, practise more verbs and take advantage of our Smart Repetition 
+      System!</p><p>Log in if you already have an account.</p>`;
+  }
+}
+
+const statsBtn = document.querySelector(".stats");
+const practiceBtn = document.querySelector(".practice");
+
+statsBtn.addEventListener("click", () => {
+  console.log(statsBtn);
+  showStats();
+  practiceBtn.classList.remove("select");
+  statsBtn.classList.add("select");
+});
+
+function generateGraph() {
   const contentArea = document.querySelector(".content-area");
+  contentArea.innerHTML = "";
   const graphDiv = document.createElement("div");
   contentArea.appendChild(graphDiv);
   graphDiv.classList.add("chart");
@@ -14,99 +54,3 @@ export function generateGraph() {
   graphDiv.appendChild(canvasEl);
   canvasEl.setAttribute("id", "myChart");
 }
-
-export function buildGraph(stats) {
-  const ctx = document.getElementById("myChart");
-
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-
-  let practisedPhrData = [];
-  let correctPhrasesData = [];
-
-  for (let i = 6; i >= 0; i--) {
-    const foundElement = stats.find(({ timestamp }) => {
-      const pastDate = new Date(today);
-      pastDate.setDate(today.getDate() - i);
-      const date = new Date(timestamp);
-
-      return (
-        date.getDate() === pastDate.getDate() &&
-        date.getMonth() === pastDate.getMonth() &&
-        date.getFullYear() === pastDate.getFullYear()
-      );
-    });
-
-    if (foundElement) {
-      practisedPhrData.push(foundElement.nbOfPhrPractised);
-      correctPhrasesData.push(foundElement.nbOfCorrectPhr);
-    } else {
-      practisedPhrData.push(0);
-      correctPhrasesData.push(0);
-    }
-  }
-
-  console.log(practisedPhrData, correctPhrasesData);
-  const correctPhrasesDataNormalized = [];
-  for (let i = 0; i < correctPhrasesData.length; i++) {
-    const el = (correctPhrasesData[i] / practisedPhrData[i]) * 100;
-    correctPhrasesDataNormalized.push(el);
-  }
-  /*
-  const practisedPhrDataNormalized = [];
-  for (let i = 0; i < practisedPhrData.length; i++) {
-    const el = (practisedPhrData[i] / practisedPhrData[i]) * 100;
-    practisedPhrDataNormalized.push(el);
-  }
-*/
-  const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  const todaysDayofWeek = today.getDay();
-
-  const rearrangedDayNames = [];
-
-  for (let i = todaysDayofWeek + 1; i < 7; i++) {
-    rearrangedDayNames.push(dayNames[i]);
-  }
-
-  for (let i = 0; i <= todaysDayofWeek; i++) {
-    rearrangedDayNames.push(dayNames[i]);
-  }
-
-  new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels: rearrangedDayNames,
-      datasets: [
-        /*{
-          label: "# of practised phrases",
-          //data: practisedPhrData,
-          data: practisedPhrDataNormalized,
-          borderWidth: 1,
-          backgroundColor: "#4677c7",
-        },*/
-        {
-          label: "% of correct answers",
-          //data: correctPhrasesData,
-          data: correctPhrasesDataNormalized,
-          borderWidth: 1,
-          barThickness: 30,
-          backgroundColor: "#2bc48c",
-        },
-      ],
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-        },
-      },
-    },
-  });
-}
-
-/*
-
-const statsBtn = document.querySelector(".fa-square-poll-vertical");
-statsBtn.addEventListener("click", () => {
-  
-}); */

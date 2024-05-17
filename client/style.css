@@ -39,7 +39,7 @@ a {
 }
 
 header {
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 20px;
   padding-block: 10px;
   color: var(--color-primary);
@@ -52,7 +52,7 @@ header {
 }
 
 .logo {
-  width: 50%;
+  width: 40%;
   margin-inline: auto;
 }
 
@@ -156,6 +156,17 @@ main {
 .stats {
   padding-inline: 30px;
   border-radius: 10px;
+}
+
+.practice:active,
+.practice:focus,
+.learn:active,
+.learn:focus,
+.stats:active,
+.learn:focus {
+  border: solid #b5afae 1px;
+  background-color: var(--color-secondary);
+  color: black;
 }
 
 .practice:hover,
@@ -1024,7 +1035,8 @@ button[disabled] {
 
   main {
     display: flex;
-    flex-direction: column-reverse;
+    margin: 0;
+    padding: 0;
   }
 
   .logo {
@@ -1039,7 +1051,17 @@ button[disabled] {
   }
 
   .content-area {
+    margin: 0 auto;
+    padding-inline: 20px;
+  }
+
+  .menu {
+    padding: 0;
     margin: 0;
+  }
+
+  .content-nav {
+    margin-left: 0;
   }
 
   .tense-display-section,
@@ -1113,4 +1135,13 @@ button[disabled] {
   .conjugSection {
     right: 8%;
   }
+}
+
+.premiumStatsMessage {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.premiumStatsMessage p {
+  padding-bottom: 10px;
 }

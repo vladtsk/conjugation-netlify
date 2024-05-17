@@ -100,10 +100,10 @@ function readDataFromDb(timeRef, boxes) {
   });
 }
 
-function readStatsFromDb(timeRef) {
+export function readStatsFromDb(statsRef) {
   return new Promise((resolve) => {
     onValue(
-      timeRef,
+      statsRef,
       (snapshot) => {
         const dbRefData = snapshot.val();
 
@@ -141,7 +141,7 @@ function readSubsDataFromDb(ref) {
 }
 
 // Getting information from the database about the user's performance and copying the database information to dbArray
-async function getUser() {
+export function getUser() {
   return new Promise((resolve) => {
     onAuthStateChanged(auth, (user) => {
       if (user) {

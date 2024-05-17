@@ -17,12 +17,19 @@
   margin-right: 5px;
 }
 
+h1,
+h2,
+h3 {
+  text-align: left;
+}
+
 /* Styling the menu on the Learn page */
 
+/*
 .menu,
 .page-content {
   margin-left: 2rem;
-}
+} */
 
 .menu a {
   display: block;
@@ -148,8 +155,7 @@ p {
 }
 
 .content-nav {
-  margin-bottom: 1.2rem;
-  margin-left: 2rem;
+  margin-bottom: 25px;
 }
 
 table {
@@ -283,6 +289,16 @@ th {
 @media screen and (min-width: 600px) and (max-width: 850px) {
   table {
     width: 90%;
+  }
+
+  .menu {
+    padding: 0;
+    margin: 0;
+  }
+
+  .page-content {
+    padding: 0;
+    margin: 0;
   }
 }
 @media screen and (max-width: 599px) {

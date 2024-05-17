@@ -1,3 +1,4 @@
+/*
 const subscribeBtn = document.getElementById("subscribeBtn");
 subscribeBtn.addEventListener("click", () => {
   fetch("http://localhost:3000/create-checkout-session", {
@@ -14,3 +15,4 @@ subscribeBtn.addEventListener("click", () => {
       console.error(e.error);
     });
 });
+*/
