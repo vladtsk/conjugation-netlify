@@ -23,6 +23,10 @@ h3 {
   text-align: left;
 }
 
+.page-content, .menu {
+  margin-top: 20px;
+}
+
 /* Styling the menu on the Learn page */
 
 /*
@@ -100,6 +104,9 @@ h3 {
   justify-content: space-between;
   align-items: center;
 }
+
+
+
 
 .present-menu i,
 .past-menu i {
@@ -268,8 +275,8 @@ th {
 }
 
 .list-no-bullet {
-  padding-top: 10px;
-  padding-bottom: 15px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .tip {
@@ -298,7 +305,7 @@ th {
 
   .page-content {
     padding: 0;
-    margin: 0;
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 599px) {

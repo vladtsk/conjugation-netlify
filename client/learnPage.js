@@ -1,3 +1,8 @@
+import { manageLearnMenu } from "./learn-menu.js";
+import { generateIntroPage } from "./introPage.js";
+import { generatePresentPage } from "./presentPage.js";
+import { generatePresentGroup1Page } from "./present-group1-page.js";
+
 export function generateLearnPage() {
   const contentArea = document.querySelector(".content-area");
   contentArea.innerHTML = "";
@@ -53,7 +58,12 @@ verb conjugation`;
   presentMenu.appendChild(presentLine);
 
   presentLine.innerHTML = `<i class='fa-regular fa-calendar-check'></i>
-  The Present Tense</div> <i class='fa-solid fa-square-plus'></i>`;
+  The Present Tense</div>`;
+
+  const plusIcon = document.createElement("i");
+  plusIcon.classList.add("fa-solid", "fa-square-plus");
+
+  presentMenu.appendChild(plusIcon);
 
   const presentSubContainer = document.createElement("div");
   presentSubContainer.classList.add("present-subcontainer");
@@ -105,7 +115,12 @@ verb conjugation`;
   pastMenu.appendChild(pastLine);
 
   pastLine.innerHTML = `<i class='fas fa-compass'></i>
-  The Past Tense "Passé composé"</div> <i class="fa-solid fa-square-plus"></i>`;
+  The Past Tense "Passé composé"</div>`;
+
+  const plusIcon2 = document.createElement("i");
+  plusIcon2.classList.add("fa-solid", "fa-square-plus");
+
+  pastMenu.appendChild(plusIcon2);
 
   const pastSubContainer = document.createElement("div");
   pastSubContainer.classList.add("past-subcontainer");
@@ -127,9 +142,23 @@ verb conjugation`;
   pastSubParticiple.innerHTML = `<i
   class="fa-solid fa-circle-chevron-right"></i>The past participle`;
 
-  presentSubContainer.appendChild(presentSubIntro);
-  presentSubContainer.appendChild(presentSubGroup1);
-  presentSubContainer.appendChild(presentSubGroup2);
-  presentSubContainer.appendChild(presentSubGroup3);
-  presentSubContainer.appendChild(presentSubIrregular);
+  pastSubContainer.appendChild(pastSubIntro);
+  pastSubContainer.appendChild(pastSubAux);
+  pastSubContainer.appendChild(pastSubParticiple);
+
+  manageLearnMenu();
+
+  introMenuLink.addEventListener("click", ()=> {
+    generateIntroPage();
+  })
+
+  presentSubIntro.addEventListener("click", () => {
+    console.log("click");
+    generatePresentPage();
+  });
+
+  presentSubGroup1.addEventListener("click", ()=> {
+    generatePresentGroup1Page();
+  })
+
 }

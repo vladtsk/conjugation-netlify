@@ -23,8 +23,6 @@ export function generatePresentPage() {
   contentNav.appendChild(iconSpan);
   contentNav.appendChild(presentTenseLink);
 
-  /* Change below */
-
   // Create page-content div
   const pageContent = document.createElement("div");
   pageContent.classList.add("page-content");
@@ -40,7 +38,8 @@ export function generatePresentPage() {
 
   const definitionParagraph = document.createElement("p");
   definitionParagraph.innerHTML =
-    '<i class="fa-solid fa-lightbulb"></i> In French, <span class="tense-name">the simple present tense</span> (le présent de l\'indicatif) is often used to describe an action that is happening now, a habit, a general fact/truth or a future plan.';
+    `<i class="fa-solid fa-lightbulb"></i> In French, <span class="tense-name">the simple present tense</span> (le présent de 
+      l'indicatif) is often used to describe an action that is happening now, a habit, a general fact/truth or a future plan.`;
 
   definitionDiv.appendChild(definitionParagraph);
 
@@ -77,5 +76,6 @@ export function generatePresentPage() {
   pageContent.appendChild(definitionDiv);
   pageContent.appendChild(examplesDiv);
 
-  document.body.appendChild(pageContent);
+  contentArea.appendChild(pageContent);
+
 }

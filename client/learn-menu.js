@@ -1,3 +1,6 @@
+export function manageLearnMenu() {
+
+
 const presentMenu = document.querySelector(".present-menu");
 const presentSubcontainer = document.querySelector(".present-subcontainer");
 
@@ -22,6 +25,7 @@ const menuItemsInfo = [
 
 const calendar = document.querySelector(".fa-calendar-check");
 for (let i = 0; i < menuItemsInfo.length; i++) {
+  
   menuItemsInfo[i].menu.addEventListener("click", () => {
     if (menuItemsInfo[i].subContainer.style.display === "none") {
       menuItemsInfo[i].subContainer.style.display = "flex";
@@ -42,6 +46,12 @@ for (let i = 0; i < menuItemsInfo.length; i++) {
     }
   });
 }
+
+
+
+
+}
+
 /*
 presentMenu.addEventListener("click", () => {
   if (presentSubcontainer.style.display === "none") {
