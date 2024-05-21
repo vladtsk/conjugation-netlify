@@ -29,7 +29,7 @@ export function generatePresentGroup2Page() {
     iconSpan1.appendChild(iconI1);
 
     const presentGroup1Link = document.createElement("a");
-    presentGroup1Link.textContent = "Group 1";
+    presentGroup1Link.textContent = "Group 2";
 
     contentNav.appendChild(iconSpan1);
     contentNav.appendChild(presentGroup1Link);
@@ -41,11 +41,10 @@ export function generatePresentGroup2Page() {
     pageContent.classList.add("page-content");
   
     const mainHeading = document.createElement("h1");
-    mainHeading.textContent = "Examples of Verbs Conjugated in the Present Tense (group 1)";
+    mainHeading.textContent = "Examples of Verbs Conjugated in the Present Tense (group 2)";
   
     const exampleP = document.createElement("p");
-    exampleP.innerHTML = `<i class="fa-solid fa-bolt"></i> Let's look at a few examples of verbs conjugated in the present
-    tense in French:`;
+    exampleP.innerHTML = `<i class="fa-solid fa-bolt"></i> Let's look at another pattern commonly referred to as 2nd group verbs.`;
   
     const exampleDiv = document.createElement("div");
     exampleDiv.classList.add("examples-list");
@@ -54,83 +53,93 @@ export function generatePresentGroup2Page() {
     pageContent.appendChild(exampleP);
     pageContent.appendChild(exampleDiv);
 
-    const examplesGroup1  = [
+    const examplesGroup2  = [
         [
-            `<i>J'<b>aime</b> la musique.</i> (I like music.)`,
-            `<i>Je <b>cherche</b> du travail.</i> (I'm looking for a job.)`,
-            `<i>Je <b>parle</b> anglais.</i> (I speak English.)`,
+            `<i>Je <b>chois<span class='red'>is</span></b> un film.</i> (I choose a movie.)`,
+            `<i>Je <b>fin<span class='red'>is</span></b> mes études.</i> (I finish my studies.)`,
         ],
 
         [
-            `<i>Tu <b>aimes</b> la musique.</i> (You like music.)`,
-            `<i>Tu <b>cherches</b> du travail.</i> (You're looking for a job.)`,
-            `<i>Tu <b>parles</b> anglais.</i> (You speak English.)`,
+            `<i>Tu <b>chois<span class='red'>is</span></b> un film.</i> (You choose a movie.)`,
+            `<i>Tu <b>fin<span class='red'>is</span></b> tes études.</i> (You finish your studies.)`,
         ],
 
         [
-            `<i>Il / elle / on <b>aime</b> la musique.</i> (He / she / one likes music.)`,
-            `<i>Il / elle / on <b>cherche</b> du travail.</i> (He / she / one is looking for a job.)`,
-            `<i>Il / elle / on <b>parle</b> anglais.</i> (He / she / one speaks English.)`,
+            `<i>Il / elle <b>chois<span class='red'>it</span></b> un film.</i> (He / She chooses a
+            movie.)`,
+            `<i>Il / elle <b>fin<span class='red'>it</span></b> ses études.</i> (He / She finishes his /
+            her studies.)`,
         ],
 
         [
-            `<i>Nous <b>aimons</b> la musique.</i> (We like music.)`,
-            `<i>Nous <b>cherchons</b> du travail.</i> (We're looking for a job.)`,
-            `<i>Nous <b>parlons</b> anglais.</i> (We speak English.)`,
+            `<i>Nous <b>chois<span class='red'>issons</span></b> un film.</i> (We choose a movie.)`,
+            `<i>Nous <b>fin<span class='red'>issons</span></b> nos études.</i> (We finish our studies.)`,
         ],
 
         [
-            `<i>Vous <b>aimez</b> la musique.</i> (You like music.)`,
-            `<i>Vous <b>cherchez</b> du travail.</i> (You're looking for a job.)`,
-            `<i>Vous <b>parlez</b> anglais.</i> (You speak English.)`,
+            `<i>Vous <b>chois<span class='red'>issez</span></b> un film.</i> (You choose a movie.)`,
+            `<i>Vous <b>fin<span class='red'>issez</span></b> vos études.</i> (You finish your studies.)`,
         ],
 
         [
-            `<i>Ils/elles <b>aiment</b> la musique.</i> (They like music.)`,
-            `<i>Ils/elles <b>cherchent</b> du travail.</i> (They're looking for a job.)`,
-            `<i>Ils/elles <b>parlent</b> anglais.</i> (They speak English.)`,
+            `<i>Ils/elles <b>chois<span class='red'>issent</span></b> un film.</i> (They choose a movie.)`,
+            `<i>Ils/elles <b>fin<span class='red'>issent</span></b> leurs études.</i> (They finish their studies.)`,
         ]
     ]
 
-    for (let i = 0; i < examplesGroup1.length; i++) {
+    for (let i = 0; i < examplesGroup2.length; i++) {
         const exampleUl = document.createElement("ul");
-        for (let k = 0; k < examplesGroup1[i].length; k++) {
+        for (let k = 0; k < examplesGroup2[i].length; k++) {
             const exampleUlLi = document.createElement("li");
-            exampleUlLi.innerHTML = examplesGroup1[i][k];
+            exampleUlLi.innerHTML = examplesGroup2[i][k];
             exampleUl.appendChild(exampleUlLi);
         }
         exampleDiv.appendChild(exampleUl);
     }
     
     const moreVerbsP = document.createElement("p");
-    moreVerbsP.innerHTML = `<i class="fa-solid fa-bolt"></i> More verbs that follow the same pattern:`;
+    moreVerbsP.innerHTML = `<i class="fa-solid fa-bolt"></i> Some common verbs that follow this pattern:`;
 
 
     const moreVerbsP1 = document.createElement("p");
-    moreVerbsP1.innerHTML = `<i><b>chanter</b></i> (to sing), <i><b>marcher</b></i> (to walk), <i><b>regarder</b></i> (to
-        watch), <i><b>demander</b></i> (to ask),
-        <i><b>commencer</b></i> (to start), <i><b>manger</b></i> (to eat),
-        <i><b>travailler</b></i> (to work), <i><b>habiter</b></i> (to live), <i><b>écouter</b></i> (to
-        listen).`;
-
-    const group1P = document.createElement("p");
-    group1P.innerHTML = "Most verbs with an infinitive ending in '-er' are commonly known as first-group verbs.";
+    moreVerbsP1.innerHTML = `<i><b>finir</b></i> (to
+        finish), <i><b>choisir</b></i>
+        (to choose),
+        <i><b>réfléchir</b></i> (to think), <i><b>grandir</b></i> (to grow),
+        <i><b>réussir</b></i> (to succeed), <i><b>grossir</b></i> (to gain weight), <i><b>investir</b></i>
+        (to invest),
+        <i><b>remplir</b></i> (to fill (in)), <i><b>atterrir</b></i> (to land).`;
     
-    const group1h2 = document.createElement("h2");
-    group1h2.innerHTML = "To conjugate a first-group verb in the present tense, follow these steps:";
+    const group2h2 = document.createElement("h2");
+    group2h2.innerHTML = "More examples";
 
-    const verbsRuleP = document.createElement("p");
-    verbsRuleP.innerHTML = `Remove the infinitive ending (-er) to get the stem.
-    Example: "parler" becomes "parl-". Add the appropriate ending to the stem. You'll find the
-    endings in the table below.`;
+    const group2more = document.createElement("div");
+    group2more.classList.add ("list-no-bullet");
 
-
-  
     pageContent.appendChild(moreVerbsP);
     pageContent.appendChild(moreVerbsP1);
-    pageContent.appendChild(group1P);
-    pageContent.appendChild(group1h2);
-    pageContent.appendChild(verbsRuleP);
+    pageContent.appendChild(group2h2);
+    pageContent.appendChild(group2more); 
+
+    const group2List = document.createElement("li");
+    const group2ListEl1 = document.createElement("li");
+    group2ListEl1.innerHTML = "<i>Tu finis à quelle heure ?</i> (What time do you finish?)";
+
+    const group2ListEl2 = document.createElement("li");
+    group2ListEl2.innerHTML = "<i>Je finis tard.</i> (I finish late. / I'm finishing late.)";
+
+    const group2ListEl3 = document.createElement("li");
+    group2ListEl3.innerHTML = "<i>Il réussit toujours.</i> (He always succeeds.)";
+
+    group2more.appendChild(group2ListEl1);
+    group2more.appendChild(group2ListEl2);
+    group2more.appendChild(group2ListEl3);
+
+
+
+    const verbsRuleh3 = document.createElement("h3");
+    verbsRuleh3.innerHTML = "Here is a table explaining how to conjugate a 2nd group verb";
+    pageContent.appendChild(verbsRuleh3);
 
     // Create a table
     const table = document.createElement('table');
@@ -149,12 +158,12 @@ export function generatePresentGroup2Page() {
 
     const tbody = document.createElement("tbody");
     const rowsData = [
-        ['je', '-e', 'parle'],
-        ['tu', '-es', 'parles'],
-        ['il/elle/on', '-e', 'parle'],
-        ['nous', '-ons', 'parlons'],
-        ['vous', '-ez', 'parlez'],
-        ['ils/elles', '-ent', 'parlent']
+        ['je', '-is', 'choisis'],
+        ['tu', '-is', 'choisis'],
+        ['il/elle/on', '-it', 'choisit'],
+        ['nous', '-issons', 'choisissons'],
+        ['vous', '-issez', 'choisissez'],
+        ['ils/elles', '-issent', 'choisissent']
     ];
 
     rowsData.forEach(rowData => {
@@ -172,4 +181,10 @@ export function generatePresentGroup2Page() {
 
     pageContent.appendChild(table);
 
+    const noteP = document.createElement("p");
+    noteP.innerHTML = `<i class="fa-solid fa-exclamation-triangle"></i> Note that not all verbs that end in "-ir" are
+    conjugated like this. You'll see examples in the next chapter.`
+    pageContent.appendChild(noteP);
+
+    contentArea.appendChild(pageContent);
 }

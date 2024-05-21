@@ -352,6 +352,7 @@ select {
   gap: 20px;
   margin-top: 30px;
   margin-bottom: 20px;
+   
 }
 
 .tense-display {
@@ -366,6 +367,7 @@ select {
   min-height: 30px;
   font-size: 0.8em;
 }
+
 
 .verb-display-section {
   display: flex;

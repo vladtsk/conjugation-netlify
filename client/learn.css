@@ -175,6 +175,7 @@ table {
 .table-title {
   background-color: var(--color-secondary);
   color: black;
+  text-align: center;
 }
 
 th,

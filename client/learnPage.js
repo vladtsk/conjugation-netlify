@@ -2,6 +2,14 @@ import { manageLearnMenu } from "./learn-menu.js";
 import { generateIntroPage } from "./introPage.js";
 import { generatePresentPage } from "./presentPage.js";
 import { generatePresentGroup1Page } from "./present-group1-page.js";
+import { generatePresentGroup2Page } from "./present-group2-page.js";
+import { generatePresentGroup3Page } from "./present-group3-page.js";
+import { generatePresentIrregularPage } from "./present-irregular.js";
+import { generatePastCompPage } from "./pastcompPage.js";
+import { generatePastCompAuxPage } from "./pastcompaux.js";
+import { generatePastCompParticPage } from "./pastparticiple.js";
+
+
 
 export function generateLearnPage() {
   const contentArea = document.querySelector(".content-area");
@@ -153,7 +161,6 @@ verb conjugation`;
   })
 
   presentSubIntro.addEventListener("click", () => {
-    console.log("click");
     generatePresentPage();
   });
 
@@ -161,4 +168,28 @@ verb conjugation`;
     generatePresentGroup1Page();
   })
 
+  presentSubGroup2.addEventListener("click", ()=>{
+    generatePresentGroup2Page();
+  })
+
+  presentSubGroup3.addEventListener("click", ()=> {
+    generatePresentGroup3Page();
+  })
+  presentSubIrregular.addEventListener("click", ()=> {
+    generatePresentIrregularPage();
+  })
+
+  pastSubIntro.addEventListener("click", ()=> {
+    generatePastCompPage();
+
+  })
+
+  pastSubAux.addEventListener("click", ()=> {
+    generatePastCompAuxPage();
+
+    })
+  
+    pastSubParticiple.addEventListener("click", ()=> {
+      generatePastCompParticPage();
+    })
 }

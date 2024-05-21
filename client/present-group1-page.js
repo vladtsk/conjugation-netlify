@@ -342,9 +342,6 @@ export function generatePresentGroup1Page() {
             exampleUl.appendChild(exampleUlLi);
         }
         pattern3.appendChild(exampleUl);
-
-
-  
     
   
     contentArea.appendChild(pageContent);

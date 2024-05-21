@@ -3,7 +3,19 @@ import { generatePresentPage } from "./presentPage.js";
 
 const learnBtn = document.querySelector(".learn");
 learnBtn.addEventListener("click", () => {
-  console.log("click");
+  const learnBtn = document.querySelectorAll(".learn");
+  const practiceBtn = document.querySelectorAll(".practice");
+
+  practiceBtn.forEach(btn => {
+    btn.classList.remove("select");
+
+  })
+
+  learnBtn.forEach(btn => {
+    btn.classList.add("select");
+     
+  })
+
   generateLearnPage();
 });
 

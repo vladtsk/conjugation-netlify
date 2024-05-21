@@ -29,15 +29,26 @@ async function showStats() {
   }
 }
 
-const statsBtn = document.querySelector(".stats");
-const practiceBtn = document.querySelector(".practice");
+const statsBtn = document.querySelectorAll(".stats");
+const learnBtn = document.querySelectorAll(".learn");
+const practiceBtn = document.querySelectorAll(".practice");
 
-statsBtn.addEventListener("click", () => {
-  console.log(statsBtn);
+
+statsBtn.forEach(btn => {btn.addEventListener("click", () => {
   showStats();
-  practiceBtn.classList.remove("select");
-  statsBtn.classList.add("select");
+  practiceBtn.forEach(btn => {
+    btn.classList.remove("select");
+  })
+
+  learnBtn.forEach(btn => {
+    btn.classList.remove("select"); 
+  })
+
+  statsBtn.forEach(btn => {
+    btn.classList.add("select"); 
+  })
 });
+})
 
 function generateGraph() {
   const contentArea = document.querySelector(".content-area");
