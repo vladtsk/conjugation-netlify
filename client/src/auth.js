@@ -8,7 +8,6 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
-  sendPasswordResetEmail,
 } from "./config.js";
 
 import {
@@ -21,19 +20,17 @@ import { launchFirstPage } from "./readDbData.js";
 
 import { showErrorMsg } from "./authErrorMsg.js";
 
+import { resetPassword } from "./passReset.js";
+
+import { selectPracticeBtn } from "./selectMenuItem.js";
+
 const auth = getAuth(app);
 const database = getDatabase(app);
 
-generateLogInForm();
-generateSignUpForm();
-generatePassResetForm();
+let signUpForm = document.querySelector(".signUpForm");
+let logInForm = document.querySelector(".logInForm");
+//const passResetForm = document.querySelector(".passResetForm");
 
-const signUpForm = document.querySelector(".signUpForm");
-const logInForm = document.querySelector(".logInForm");
-const passResetForm = document.querySelector(".passResetForm");
-
-const signUpButton = document.getElementById("signUpButton");
-const logInButton = document.getElementById("logInButton");
 const logInButtonMenu = document.getElementById("logInButtonMenu");
 
 const logOutButton = document.getElementById("logOutButton");
@@ -43,7 +40,14 @@ let mainSection = document.querySelector(".mainSection");
 const contentArea = document.querySelector(".content-area");
 let summary = document.querySelector(".summary");
 let chart = document.querySelector(".chart");
-const signUpErrorMsgP = document.querySelector(".signUpErrorMsg");
+
+const sidebarContainer = document.querySelector(".sidebarContainer");
+const sidebarTabletContainer = document.querySelector(
+  ".sidebarTabletContainer"
+);
+const header = document.querySelector("header");
+const footer = document.querySelector("footer");
+
 
 function userSignUp() {
   const userEmail = document.getElementById("signUpEmail");
@@ -76,6 +80,7 @@ function userSignUp() {
       const errorMessage = error.message;
       console.log(errorCode + errorMessage);
 
+      const signUpErrorMsgP = document.querySelector(".signUpErrorMsg");
       if (signUpErrorMsgP) {
         showErrorMsg(signUpErrorMsgP, errorCode);
       }
@@ -87,11 +92,20 @@ function userLogIn() {
   const userPassword = document.getElementById("logInPassword");
   const logInEmail = userEmail.value;
   const logInPassword = userPassword.value;
-  const logInErrorMsgP = document.querySelector(".logInErrorMsg");
+
 
   signInWithEmailAndPassword(auth, logInEmail, logInPassword)
     .then((userCredential) => {
+      contentArea.innerHTML = "";
       launchFirstPage();
+      selectPracticeBtn();
+
+      
+
+      sidebarContainer.style.display = "flex";
+      sidebarTabletContainer.style.display = "flex";
+      footer.style.display = "block";
+
       const user = userCredential.user;
       alert("Your have logged in!");
 
@@ -113,6 +127,8 @@ function userLogIn() {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log(errorCode + errorMessage);
+
+      const logInErrorMsgP = document.querySelector(".logInErrorMsg");
       if (logInErrorMsgP) {
         showErrorMsg(logInErrorMsgP, errorCode);
       }
@@ -124,20 +140,30 @@ function userLogIn() {
 async function userLogOut() {
   await signOut(auth);
   mainSection.innerHTML = "";
-
+  contentArea.innerHTML = "";
   launchFirstPage();
+  selectPracticeBtn();
+  
+
+  sidebarContainer.style.display = "flex";
+  sidebarTabletContainer.style.display = "flex";
+  footer.style.display = "block";
   alert("Your have logged out");
 }
 
 function checkAuthState() {
   onAuthStateChanged(auth, (user) => {
+    signUpForm = document.querySelector(".signUpForm");
+    logInForm = document.querySelector(".logInForm");
     if (user) {
       if (logInForm) {
-        logInForm.style.display = "none";
+        contentArea.removeChild(logInForm);
+        clearFormFields();
       }
 
       if (signUpForm) {
-        signUpForm.style.display = "none";
+        contentArea.removeChild(signUpForm);
+        clearFormFields();
       }
 
       logInButtonMenu.style.display = "none";
@@ -153,174 +179,85 @@ function checkAuthState() {
 
 checkAuthState();
 
-//Signup / login forms switch
-const logInSwitch = document.getElementById("logInSwitch");
+//Handling different click events 
 
-if (logInSwitch) {
-  logInSwitch.addEventListener("click", () => {
-    signUpForm.style.display = "none";
-
-    //logInButtonMenu.style.display = "none";
-    logInForm.style.display = "block";
-
-    clearFormFields();
-  });
-}
-
-const signUpSwitch = document.getElementById("signUpSwitch");
-if (signUpSwitch) {
-  signUpSwitch.addEventListener("click", () => {
-    logInForm.style.display = "none";
-
-    //logInButtonMenu.style.display = "none";
-    signUpForm.style.display = "block";
-
-    clearFormFields();
-  });
-}
-
-if (signUpButton) {
-  signUpButton.addEventListener("click", (event) => {
+contentArea.addEventListener("click", (event) => {
+  if(event.target){
     event.preventDefault();
-
-    userSignUp();
-  });
-}
-
-if (logInButton) {
-  logInButton.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    const logInErrorMsgP = document.querySelector(".logInErrorMsg");
-    if (logInErrorMsgP) {
-      logInErrorMsgP.innerHTML = "";
+    switch(event.target.id) {
+      case "signUpSwitch":
+        generateSignUpForm();
+        break;
+      case "logInSwitch":
+        generateLogInForm();
+        break;
+        case "signUpButton":
+          userSignUp();
+          break;
+        case "logInButton":
+          const logInErrorMsgP = document.querySelector(".logInErrorMsg");
+          if (logInErrorMsgP) {
+          logInErrorMsgP.innerHTML = "";
+          }
+          const signUpErrorMsgP = document.querySelector(".signUpErrorMsg");
+          if (signUpErrorMsgP) {
+          signUpErrorMsgP.innerHTML = "";
+          }
+          userLogIn();
+          break;
+        
     }
+  }
+})
+    
 
-    const signUpErrorMsgP = document.querySelector(".signUpErrorMsg");
-    if (signUpErrorMsgP) {
-      signUpErrorMsgP.innerHTML = "";
-    }
-
-    userLogIn();
-  });
-}
-
-if (logOutButton) {
-  logOutButton.addEventListener("click", (event) => {
+  
+  // Handling header click events
+header.addEventListener("click", (event) => {
     event.preventDefault();
+    clearFormFields();
     summary = document.querySelector(".summary");
-    if (summary) {
-      main.removeChild(summary);
-      summary = null;
-    }
-    chart = document.querySelector(".chart");
-    if (chart) {
-      contentArea.removeChild(chart);
-      chart = null;
-    }
+        if (summary) {
+          main.removeChild(summary);
+          summary = null;
+        }
+        chart = document.querySelector(".chart");
+        if (chart) {
+          contentArea.removeChild(chart);
+          chart = null;
+        }
+    
+        const conjugSection = document.querySelector(".conjugSection");
+    
+        if (conjugSection) {
+          contentArea.removeChild(conjugSection);
+        }
 
-    const conjugSection = document.querySelector(".conjugSection");
-
-    if (conjugSection) {
-      contentArea.removeChild(conjugSection);
-    }
-    userLogOut();
+    if(event.target && event.target.id === "logInButtonMenu") {
+      generateLogInForm();
+    } else if(event.target && event.target.id === "logOutButton")
+      userLogOut();
   });
-}
 
-if (logInButtonMenu) {
-  logInButtonMenu.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    clearFormFields();
-
-    summary = document.querySelector(".summary");
-    if (summary) {
-      main.removeChild(summary);
-      summary = null;
-    }
-    chart = document.querySelector(".chart");
-    if (chart) {
-      contentArea.removeChild(chart);
-      chart = null;
-    }
-
-    const conjugSection = document.querySelector(".conjugSection");
-
-    if (conjugSection) {
-      contentArea.removeChild(conjugSection);
-    }
-    mainSection = document.querySelector(".mainSection");
-    mainSection.style.display = "none";
-    passResetForm.style.display = "none";
-    logInForm.style.display = "block";
-    signUpForm.style.display = "none";
-  });
-}
 
 // Password reset
 
-const forgotPass = document.getElementById("forgotPass");
+//const forgotPass = document.getElementById("forgotPass");
 //const userInfoSection = document.getElementById("userInfo");
 
-let resetEmail;
 
-let passResetBtn;
-
-if (forgotPass) {
-  forgotPass.addEventListener("click", (event) => {
-    event.preventDefault();
-    //main.innerHTML = "";
-
-    mainSection = document.querySelector(".mainSection");
-
-    passResetForm.style.display = "block";
-    logInForm.style.display = "none";
-    signUpForm.style.display = "none";
-
-    if (mainSection) {
-      mainSection.style.display = "none";
+  contentArea.addEventListener("click", (event) => {
+    if(event.target && event.target.id === "forgotPass") {
+      event.preventDefault();
+      generatePassResetForm();
+      resetPassword();
     }
-
-    passResetBtn = document.getElementById("passResetButton");
-    console.log(passResetForm);
+    
   });
-}
 
-console.log(passResetForm);
 
-passResetForm.addEventListener("submit", (event) => {
-  event.preventDefault();
 
-  const resetEmailEl = document.getElementById("resetEmail");
-  const passResetErrorMsg = document.querySelector(".passResetErrorMsg");
-  if (resetEmailEl) {
-    resetEmail = resetEmailEl.value;
-  }
 
-  event.preventDefault();
-  sendPasswordResetEmail(auth, resetEmail)
-    .then(() => {
-      console.log("Password reset email sent");
-      alert("Password reset email sent. Please check your email.");
-
-      passResetForm.style.display = "none";
-      logInForm.style.display = "block";
-
-      signUpForm.style.display = "none";
-
-      //forgotPass.style.display = "none";
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.error(errorCode + errorMessage);
-
-      if (passResetErrorMsg) {
-        showErrorMsg(passResetErrorMsg, errorCode);
-      }
-    });
-});
 
 function clearFormFields() {
   const resetEmail = document.getElementById("resetEmail");

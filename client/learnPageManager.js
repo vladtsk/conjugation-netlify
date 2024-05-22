@@ -1,12 +1,18 @@
 import { generateLearnPage } from "./learnPage.js";
-import { generatePresentPage } from "./presentPage.js";
 
-const learnBtn = document.querySelector(".learn");
-learnBtn.addEventListener("click", () => {
+
   const learnBtn = document.querySelectorAll(".learn");
   const practiceBtn = document.querySelectorAll(".practice");
+  const stats = document.querySelectorAll(".stats");
+
+learnBtn.forEach(btn => btn.addEventListener("click", () => {
 
   practiceBtn.forEach(btn => {
+    btn.classList.remove("select");
+
+  })
+
+  stats.forEach(btn => {
     btn.classList.remove("select");
 
   })
@@ -17,15 +23,5 @@ learnBtn.addEventListener("click", () => {
   })
 
   generateLearnPage();
-});
-
-/*
-const presentIntroBtn = document.querySelector(".present-intro");
-if(presentIntroBtn) {
-  presentIntroBtn.addEventListener("click", () => {
-  console.log("click");
-  generatePresentPage();
-});
-
-}
-*/
+})
+);

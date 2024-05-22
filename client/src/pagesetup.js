@@ -291,6 +291,17 @@ export function showResultPage(score, phraseStats, stats, userId) {
   mainSection.innerHTML = "";
 
   const contentArea = document.querySelector(".content-area");
+  const infoPopupSection = document.querySelector(".infoPopupSection");
+  if(infoPopupSection) {
+    main.removeChild(infoPopupSection);
+  }
+
+
+  const conjugSection = document.querySelector(".conjugSection");
+  if (conjugSection) {
+    contentArea.removeChild(conjugSection);
+  }
+
 
   const sidebarContainer = document.querySelector(".sidebarContainer");
   const sidebarTabletContainer = document.querySelector(
@@ -331,6 +342,7 @@ export function showResultPage(score, phraseStats, stats, userId) {
   showSummaryBtn.id = "showSummary-btn";
   showSummaryBtn.innerText = "show summary";
   restartSection.appendChild(showSummaryBtn);
+  const blurContainer = document.querySelector(".blurContainer");
 
   if (userId) {
     generateGraph();
@@ -343,7 +355,11 @@ export function showResultPage(score, phraseStats, stats, userId) {
   showSummaryBtn.addEventListener("click", () => {
     if (phraseStats.length != 0) {
       showSummary(phraseStats);
-      summary = document.querySelector(".summary");
+
+      if(blurContainer) {
+        blurContainer.style.display = "block";
+      }
+        //summary = document.querySelector(".summary");
       showSummaryBtn = document.getElementById("showSummary-btn");
       restartSection.removeChild(showSummaryBtn);
     }
@@ -356,6 +372,9 @@ export function showResultPage(score, phraseStats, stats, userId) {
         if (summary) {
           main.removeChild(summary);
           summary = null;
+        }
+        if(blurContainer) {
+          blurContainer.style.display = "none";
         }
       });
     }
@@ -380,8 +399,8 @@ export function showResultPage(score, phraseStats, stats, userId) {
     }
 
     launchFirstPage();
-    sidebarContainer.style.display = "block";
-    sidebarTabletContainer.style.display = "block";
+    sidebarContainer.style.display = "flex";
+    sidebarTabletContainer.style.display = "flex";
     footer.style.display = "block";
   });
 }
@@ -516,10 +535,11 @@ function showSummary(phraseStats) {
 
 export function generateSignUpForm() {
   const contentArea = document.querySelector(".content-area");
+  contentArea.innerHTML = "";
 
   const signUpForm = document.createElement("form");
   signUpForm.classList.add("signUpForm");
-  signUpForm.style.display = "none";
+  //signUpForm.style.display = "none";
   contentArea.appendChild(signUpForm);
 
   const signUpH1 = document.createElement("h1");
@@ -593,95 +613,14 @@ export function generateSignUpForm() {
   logInSwitchPElement.appendChild(logInSwitchLink);
 }
 
-/*
-export function generatePaymentForm() {
-  const contentArea = document.querySelector(".content-area");
-
-  const paymentForm = document.createElement("form");
-  paymentForm.classList.add("paymentForm");
-  //paymentForm.style.display = "none";
-  contentArea.appendChild(paymentForm);
-
-  const checkoutH1 = document.createElement("h1");
-  checkoutH1.innerText = "Checkout";
-  signUpForm.appendChild(checkoutH1);
-
-  const userInfoSection = document.createElement("section");
-  paymentForm.appendChild(userInfoSection);
-  const namePElement = document.createElement("p");
-  userInfoSection.appendChild(namePElement);
-  const nameLabel = document.createElement("label");
-  namePElement.appendChild(nameLabel);
-  nameLabel.htmlFor = "name";
-  nameLabel.innerText = "Name:";
-  const nameInput = document.createElement("input");
-  nameInput.setAttribute("type", "text");
-  nameInput.setAttribute("id", "name");
-  nameInput.setAttribute("required", true);
-  namePElement.appendChild(nameInput);
-
-  const emailPElement = document.createElement("p");
-  userInfoSection.appendChild(emailPElement);
-  const emailLabel = document.createElement("label");
-  emailPElement.appendChild(emailLabel);
-  emailLabel.htmlFor = "signUpEmail";
-  emailLabel.innerText = "Email:";
-  const emailInput = document.createElement("input");
-  emailInput.setAttribute("type", "email");
-  emailInput.setAttribute("id", "paymentEmail");
-  emailInput.setAttribute("required", true);
-  emailPElement.appendChild(emailInput);
-
-  // Creating a card section
-  //<label for="card-element">Card</label> <div id="card-element"></div>
-  const cardSection = document.createElement("section");
-  paymentForm.appendChild(cardSection);
-  const cardLabel = document.createElement("label");
-  cardSection.appendChild(cardLabel);
-  cardLabel.htmlFor = "card-element";
-  cardLabel.innerText("Card");
-
-  const cardElementDiv = document.createElement("div");
-  cardSection.appendChild(cardElementDiv);
-  cardElementDiv.setAttribute("id", "card-element");
-
-  
-  const passwordPElement = document.createElement("p");
-  userInfoSection.appendChild(passwordPElement);
-  const passwordLabel = document.createElement("label");
-  passwordPElement.appendChild(passwordLabel);
-  passwordLabel.htmlFor = "signUpPassword";
-  passwordLabel.innerText = "Password:";
-  const passwordInput = document.createElement("input");
-  passwordInput.setAttribute("type", "password");
-  passwordInput.setAttribute("id", "signUpPassword");
-  passwordInput.setAttribute("required", true);
-  passwordPElement.appendChild(passwordInput);
-  
-
-  const errorMsg = document.createElement("p");
-  userInfoSection.appendChild(errorMsg);
-  errorMsg.classList.add("signUpErrorMsg");
-
-  const btnSection = document.createElement("section");
-  paymentForm.appendChild(btnSection);
-  btnSection.classList.add("btn-section");
-  const btnSectionPElement = document.createElement("p");
-  btnSection.appendChild(btnSectionPElement);
-  const signUpBtn = document.createElement("button");
-  signUpBtn.setAttribute("type", "submit");
-  signUpBtn.setAttribute("id", "signUpButton");
-  signUpBtn.innerText = "Sign Up";
-  btnSectionPElement.appendChild(signUpBtn);
-} */
 
 export function generateLogInForm() {
   const contentArea = document.querySelector(".content-area");
-  //main.innerHTML = "";
+  contentArea.innerHTML = "";
 
   const logInForm = document.createElement("form");
   logInForm.classList.add("logInForm");
-  logInForm.style.display = "none";
+  //logInForm.style.display = "none";
   contentArea.appendChild(logInForm);
 
   const logInH1 = document.createElement("h1");
@@ -753,10 +692,11 @@ export function generateLogInForm() {
 
 export function generatePassResetForm() {
   const contentArea = document.querySelector(".content-area");
-  //main.innerHTML = "";
+  contentArea.innerHTML = "";
+
   const passResetForm = document.createElement("form");
   passResetForm.classList.add("passResetForm");
-  passResetForm.style.display = "none";
+  //passResetForm.style.display = "none";
   contentArea.appendChild(passResetForm);
 
   const passResetH1 = document.createElement("h1");

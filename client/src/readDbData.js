@@ -18,6 +18,8 @@ const database = getDatabase(app);
 
 export async function launchFirstPage() {
   showFirstPage(); // Building the first page structure
+
+  
   let phraseNumber = 5; // Making sure the phrase number is back to its default value
 
   // Fetching the present tense data by default

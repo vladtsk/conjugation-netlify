@@ -74,30 +74,67 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
   let answerType;
   const learnMoreSection = document.querySelector(".learnMore");
 
+  const phraseDivCorrect = document.createElement("div");
+  phraseDivCorrect.innerHTML = `<i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low" id="speaker"></i>
+  <p class="translation">${data.data[k].translation}</p>`;
+
+  const phraseDiv = document.createElement("div");
+  phraseDiv.innerHTML = `${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low" id="speaker"></i>
+  <p class="translation">${data.data[k].translation}</p>`;
+
+  if(inputText.trim().toLowerCase() !== "") {
+    inputArea.classList.add("bold");
+    phraseDisplay.innerHTML = "";
+
+    specialBtns.forEach((button) => {
+      button.setAttribute("disabled", "");
+      inputArea.setAttribute("disabled", "");
+    });
+  }
+
   switch (inputText.trim().toLowerCase()) {
     case "":
-      msgArea.innerText = "Please type a valid verb";
-      break;
-    case data.data[k].answer || data.data[k].alternativeAnswer:
-      phraseDisplay.innerHTML = `<div><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low" id="speaker"></i><p class="translation">${data.data[k].translation}</p></div>`;
-      /*phraseDisplay.style.color = "#228b22";*/
-      inputArea.style.color = "#228b22";
-      inputArea.classList.add("bold");
-      msgArea.innerText = "Correct!";
-      playCorrect();
+    msgArea.innerText = "Please type a valid verb";
+    break;
 
-      //underlineWord(data, k, phraseDisplay);
+    case data.data[k].answer:
+      phraseDisplay.appendChild(phraseDivCorrect);
+      speaker = document.getElementById("speaker");
+      playCorrect();
+    
+      inputArea.style.color = "#228b22";
+      
+      msgArea.innerText = "Correct!";
+
 
       phraseStatObject.isCorrect = true;
+      
+      if (speaker) {
+        speaker.addEventListener("click", () => {
+          playAudio(data.data[k].fullPhrase);
+        });
+      }
 
-      inputArea.setAttribute("disabled", "");
+      score++;
 
-      specialBtns.forEach((button) => {
-        button.setAttribute("disabled", "");
-      });
+      if (userId) {
+        movePhraseForward(k, boxes);
+      }
+      phraseStats.push(phraseStatObject);
+      break;
 
+      case data.data[k].alternativeAnswer:
+      phraseDisplay.appendChild(phraseDivCorrect);
       speaker = document.getElementById("speaker");
+      playCorrect();
+    
+      inputArea.style.color = "#228b22";
+      
+      msgArea.innerText = "Correct!";
 
+
+      phraseStatObject.isCorrect = true;
+      
       if (speaker) {
         speaker.addEventListener("click", () => {
           playAudio(data.data[k].fullPhrase);
@@ -113,28 +150,20 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       break;
 
     case data.data[k]?.answerWoS:
-      phraseDisplay.innerHTML = `<div><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low" id="speaker"></i><p class="translation">${data.data[k].translation}</p></div>`;
-      /*phraseDisplay.style.color = "#fa8950";*/
+      phraseDisplay.appendChild(phraseDivCorrect);
+      speaker = document.getElementById("speaker");
+      playCorrect();
       inputArea.style.color = "#d96e38";
-      inputArea.classList.add("bold");
 
       answerType = "almostPastComp";
 
       msgArea.innerHTML = "<p class='almost'>Almost correct.</p>";
-
+      
       learnMoreSection.style.display = "block";
 
       showInfoPopup(data.data[k], data.data[0].tenseShort, answerType);
 
       phraseStatObject.almostCorrectCorrect = true;
-
-      inputArea.setAttribute("disabled", "");
-
-      specialBtns.forEach((button) => {
-        button.setAttribute("disabled", "");
-      });
-
-      speaker = document.getElementById("speaker");
 
       if (speaker) {
         speaker.addEventListener("click", () => {
@@ -151,27 +180,21 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       break;
 
     case data.data[k]?.answerWoAccent:
-      phraseDisplay.innerHTML = `<div><i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low" id="speaker"></i><p class="translation">${data.data[k].translation}</p></div>`;
+      phraseDisplay.appendChild(phraseDivCorrect);
+      speaker = document.getElementById("speaker");
+      playCorrect();
       inputArea.style.color = "#d96e38";
-      inputArea.classList.add("bold");
 
       learnMoreSection.style.display = "block";
 
       msgArea.innerHTML = "<p class='almost'>Almost correct.</p>";
+      playCorrect();
 
       answerType = "almostWoAccent";
 
       showInfoPopup(data.data[k], data.data[0].tenseShort, answerType);
 
       phraseStatObject.almostCorrectCorrect = true;
-
-      inputArea.setAttribute("disabled", "");
-
-      specialBtns.forEach((button) => {
-        button.setAttribute("disabled", "");
-      });
-
-      speaker = document.getElementById("speaker");
 
       if (speaker) {
         speaker.addEventListener("click", () => {
@@ -188,9 +211,10 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       break;
 
     default:
-      phraseDisplay.innerHTML = `<div>${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low" id="speaker"></i>`;
-      //underlineWord(data, k, phraseDisplay);
+      phraseDisplay.appendChild(phraseDiv);
       speaker = document.getElementById("speaker");
+      playIncorrect();
+
 
       if (speaker) {
         speaker.addEventListener("click", () => {
@@ -199,12 +223,6 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       }
       inputArea.style.color = "#ef233c";
       msgArea.innerText = `Incorrect. The correct answer is: "${data.data[k].answer}"`;
-      playIncorrect();
-      inputArea.setAttribute("disabled", "");
-      inputArea.classList.add("bold");
-      specialBtns.forEach((button) => {
-        button.setAttribute("disabled", "");
-      });
 
       if (userId) {
         movePhraseBackward(k, boxes);
@@ -214,42 +232,10 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
 
       learnMoreSection.style.display = "block";
       showInfoPopup(data.data[k], data.data[0].tenseShort);
-      /*if (data.data[k].group && data.data[k].group === 1) {
-        learnMoreSection.innerHTML = `<i class="fa-solid fa-circle-info"></i> <a href="./present-group1.html" target="_blank" rel="noreferrer noopener">Learn more</a>`;
-      }
-      if (data.data[k].group && data.data[k].group === 2) {
-        learnMoreSection.innerHTML = `<i class="fa-solid fa-circle-info"></i> <a href="./present-group2.html" target="_blank" rel="noreferrer noopener">Learn more</a>`;
-      }
-      if (data.data[k].group && data.data[k].group === 3) {
-        learnMoreSection.innerHTML = `<i class="fa-solid fa-circle-info"></i> <a href="./present-group3.html" target="_blank" rel="noreferrer noopener">Learn more</a>`;
-      }
-      if (data.data[k].group && data.data[k].group === "irregular") {
-        learnMoreSection.innerHTML = `<i class="fa-solid fa-circle-info"></i> <a href="./present-irregular.html" target="_blank" rel="noreferrer noopener">Learn more</a>`;
-      }*/
 
       phraseStats.push(phraseStatObject);
   }
 
-  /*
-  function underlineWord(data, k, phrase) {
-    const answerSplit = data.data[k].answer.split(" ");
-    console.log(answerSplit);
-    console.log(phrase.innerHTML);
-
-    let underlinedPhrase = phrase.innerHTML;
-    answerSplit.forEach((el) => {
-      const regex = new RegExp("([\\s']|^)(" + el + ")([\\s.,!?]|$)", "g");
-      console.log(el);
-      underlinedPhrase = underlinedPhrase.replace(regex, function (match) {
-        return "<u>" + match + "</u>";
-      });
-    });
-
-    console.log(underlinedPhrase);
-    phrase.innerHTML = underlinedPhrase;
-  }
-
-  */
 
   // Popup close icon
   const popupCloseBtn = document.querySelector(".popup-icons .popup-close");

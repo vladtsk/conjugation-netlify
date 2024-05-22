@@ -117,16 +117,15 @@ export async function launchApp(data, phraseNumber) {
     nextBtn.addEventListener("click", () => {
       conjugSection.innerHTML = "";
       infoPopupSection.innerHTML = "";
-      console.log(infoPopupSection);
       conjugSection.style.display = "none";
       infoPopupSection.style.display = "none";
       learnMoreSection.style.display = "none";
-      console.log(infoPopupSection);
+    
       phraseDisplay.style.color = "black";
       inputArea.style.color = "black";
       k = displayNext(data, indexArray, k, score, phraseStats);
       phraseCount++;
-      //learnMoreSection.innerHTML = "";
+    
     });
   }
 
@@ -135,12 +134,7 @@ export async function launchApp(data, phraseNumber) {
   if (finishBtn) {
     finishBtn.addEventListener("click", () => {
       infoPopupSection.style.display = "none";
-      /*conjugSection.innerHTML = "";
-      conjugSection.style.display = "none"; */
-
-      if (conjugSection) {
-        contentArea.removeChild(conjugSection);
-      }
+      conjugSection.style.display = "none";
 
       // Adding data to the database and updating the statistics
 

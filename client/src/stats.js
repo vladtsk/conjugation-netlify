@@ -57,9 +57,9 @@ function generateGraph() {
   contentArea.appendChild(graphDiv);
   graphDiv.classList.add("chart");
 
-  const graphTitle = document.createElement("h2");
+  const graphTitle = document.createElement("h1");
   graphDiv.appendChild(graphTitle);
-  graphTitle.innerText = "Your weekly performance";
+  graphTitle.innerHTML = "<i class='fa-solid fa-square-poll-vertical'></i> Your weekly performance";
 
   const canvasEl = document.createElement("canvas");
   graphDiv.appendChild(canvasEl);
