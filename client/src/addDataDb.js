@@ -1,6 +1,6 @@
 // Functions used in the final part
 
-import { set, ref, update } from "./config.js";
+import { set, ref } from "./firebaseConfig.js";
 
 export function addBoxToDb(data, boxes, userId, database) {
   let tense;
@@ -69,6 +69,7 @@ export function addStatsToDb(userId, database, stats, phraseStats) {
     });
 }
 
+/*
 export function addStripeCustomerIdToDb(userId, stripeCustomerId) {
   const stripeCustomerIdRef = ref(
     database,
@@ -103,3 +104,4 @@ export function updateStripeStatus(userId, stripeStatus) {
       console.error("Error updating status in the database:", error);
     });
 }
+*/

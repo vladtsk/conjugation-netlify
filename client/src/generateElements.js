@@ -61,14 +61,20 @@ export function displayNext(data, indexArray, k, score, phraseStats) {
   const msgArea = document.querySelector(".msg-section");
   // Select the input element
   const inputArea = document.querySelector(".type-section input");
-  inputArea.removeAttribute("disabled");
-  inputArea.classList.remove("bold");
+  if(indexArray) {
+    inputArea.removeAttribute("disabled");
+    inputArea.classList.remove("bold");
+  }
+  
 
   // Selecting the special character buttons
   const specialBtns = document.querySelectorAll(".letters-section button");
-  specialBtns.forEach((button) => {
-    button.removeAttribute("disabled");
-  });
+  if(specialBtns) {
+    specialBtns.forEach((button) => {
+      button.removeAttribute("disabled");
+    });
+  }
+  
 
   msgArea.innerHTML = "";
   inputArea.value = "";

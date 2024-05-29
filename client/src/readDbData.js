@@ -6,15 +6,24 @@ import {
   ref,
   onValue,
   onAuthStateChanged,
-  app,
   getAuth,
   getDatabase,
-} from "./config.js";
+  fetchFirebaseConfig
+  
+} from "./firebaseConfig.js";
 
-import { launchApp } from "./script.js";
+import { launchApp } from "./index.js";
 
-const auth = getAuth(app);
-const database = getDatabase(app);
+let auth, database;
+
+async function getAuthDatabase() {
+  const { app } = await fetchFirebaseConfig();
+  auth = getAuth(app);
+  database = getDatabase(app);
+}
+
+getAuthDatabase();
+
 
 export async function launchFirstPage() {
   showFirstPage(); // Building the first page structure
@@ -24,7 +33,7 @@ export async function launchFirstPage() {
 
   // Fetching the present tense data by default
 
-  let response = await fetch("./src/present.json");
+  let response = await fetch("./client/src/present.json");
   let jsonData = await response.json();
 
   const selectElement = document.getElementById("tense");
@@ -40,7 +49,7 @@ export async function launchFirstPage() {
   // Adding an event listener in case the user changes the tense
   if (selectElement) {
     selectElement.addEventListener("change", async () => {
-      response = await fetch(`../client/src/${selectElement.value}.json`);
+      response = await fetch(`./client/src/${selectElement.value}.json`);
       jsonData = await response.json();
     });
   }
@@ -54,7 +63,9 @@ export async function launchFirstPage() {
 
   // Adding an event listener on the start button
   if (startBtn) {
+
     startBtn.addEventListener("click", () => {
+      console.log("startBtn clicked");
       launchApp(jsonData, phraseNumber);
 
       sidebarContainer.style.display = "none";

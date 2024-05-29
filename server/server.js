@@ -1,4 +1,4 @@
-import { set, ref } from "../client/src/config.js";
+/*import { set, ref } from "../client/src/firebaseConfig.js";
 
 import {
   handleSubscriptionDeleted,
@@ -13,9 +13,7 @@ import {
   updateStripeStatus,
 } from "../client/src/readDbData.js";
 
-/*require("dotenv").config();
-const express = require("express");
-const cors = require("cors");*/
+*/
 
 import dotenv from "dotenv";
 import express from "express";
@@ -27,15 +25,36 @@ const app = express();
 
 app.use(express.json());
 app.use(
+  cors()
+);
+
+/*
+app.use(
   cors({
     origin: "http://localhost:5500",
   })
 );
+*/
+
 
 //origin: "http://conjug.netlify.app",
 
-//const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
-import Stripe from "stripe";
+
+app.get('/config', (req, res)=> {
+  res.json({
+    apiKey: process.env.FIREBASE_API_KEY,
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.FIREBASE_DATABASE_URL,
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.FIREBASE_APP_ID,
+    measurementId: process.env.FIREBASE_MEASUREMENT_ID
+  })
+})
+
+
+/*import Stripe from "stripe";
 const stripe = new Stripe(process.env.STRIPE_PRIVATE_KEY);
 
 const quantity = 1;
@@ -146,14 +165,7 @@ app.post(
         updateStripeStatus(userId, status);
 
         break;
-      /*case "customer.subscription.trial_will_end":
-        subscription = event.data.object;
-        status = subscription.status;
-        console.log(`Subscription status is ${status}.`);
-        // Then define and call a method to handle the subscription trial ending.
-        // handleSubscriptionTrialEnding(subscription);
-        break;
-        */
+      
       default:
         // Unexpected event type
         console.log(`Unhandled event type ${event.type}.`);
@@ -162,5 +174,8 @@ app.post(
     response.send();
   }
 );
+*/
 
-app.listen(3000);
+app.listen(3000,  () => {
+  console.log("Server is running on 3000");
+});

@@ -1,4 +1,4 @@
-import { set, ref } from "../client/src/config.js";
+/*import { set, ref } from "../client/src/firebaseConfig.js";
 
 import { updateStripeStatus } from "../client/src/addDataDb.js";
 

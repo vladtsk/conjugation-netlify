@@ -262,9 +262,13 @@ export function buildPageStructure(data) {
   nextSection.appendChild(nextBtn);
 
   // Finish section
+  let oldFinish = document.querySelector(".finish-section");
+  console.log(oldFinish)
+
   const finishSection = document.createElement("div");
   finishSection.classList.add("finish-section");
   mainSection.appendChild(finishSection);
+  finishSection.style.display = "none";
 
   const finishBtn = document.createElement("button");
   finishBtn.id = "finish-btn";
@@ -342,7 +346,7 @@ export function showResultPage(score, phraseStats, stats, userId) {
   showSummaryBtn.id = "showSummary-btn";
   showSummaryBtn.innerText = "show summary";
   restartSection.appendChild(showSummaryBtn);
-  const blurContainer = document.querySelector(".blurContainer");
+  
 
   if (userId) {
     generateGraph();
@@ -353,6 +357,9 @@ export function showResultPage(score, phraseStats, stats, userId) {
   let chart = document.querySelector(".chart");
 
   showSummaryBtn.addEventListener("click", () => {
+
+    const blurContainer = document.querySelector(".blurContainer");
+
     if (phraseStats.length != 0) {
       showSummary(phraseStats);
 
@@ -365,6 +372,7 @@ export function showResultPage(score, phraseStats, stats, userId) {
     }
 
     let summaryCloseBtn = document.querySelector(".summaryCloseBtn");
+    console.log(summaryCloseBtn);
     //Close summary
     if (summaryCloseBtn) {
       summaryCloseBtn.addEventListener("click", () => {
@@ -458,12 +466,42 @@ export function showNoMorePhrasesPage(score, phraseStats) {
   let chart = document.querySelector(".chart");
 
   showSummaryBtn.addEventListener("click", () => {
+  
+    const  blurContainer = document.querySelector(".blurContainer");
+
     if (phraseStats.length != 0) {
       showSummary(phraseStats);
+
+      if(blurContainer) {
+        blurContainer.style.display = "block";
+      }
+
       summary = document.querySelector(".summary");
       showSummaryBtn = document.getElementById("showSummary-btn");
       restartSection.removeChild(showSummaryBtn);
     }
+
+    let summaryCloseBtn = document.querySelector(".summaryCloseBtn");
+    console.log(summaryCloseBtn);
+    //Close summary
+    if (summaryCloseBtn) {
+      summaryCloseBtn.addEventListener("click", () => {
+        summary = document.querySelector(".summary");
+        if (summary) {
+          main.removeChild(summary);
+          summary = null;
+        }
+        if(blurContainer) {
+          blurContainer.style.display = "none";
+        }
+      });
+    }
+
+    if (chart) {
+      contentArea.removeChild(chart);
+      chart = null;
+    }
+
   });
 
   restartBtn.addEventListener("click", () => {

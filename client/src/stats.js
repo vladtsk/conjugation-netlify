@@ -1,9 +1,17 @@
 import { buildGraph } from "./graphs.js";
 import { getUser, readStatsFromDb } from "./readDbData.js";
 
-import { ref, app, getDatabase } from "./config.js";
+import { ref, fetchFirebaseConfig, getAuth, getDatabase } from "./firebaseConfig.js";
 
-const database = getDatabase(app);
+let auth, database;
+
+async function getAuthDatabase() {
+  const { app } = await fetchFirebaseConfig();
+  auth = getAuth(app);
+  database = getDatabase(app);
+}
+
+getAuthDatabase();
 
 async function showStats() {
   const userId = await getUser();
@@ -29,26 +37,29 @@ async function showStats() {
   }
 }
 
-const statsBtn = document.querySelectorAll(".stats");
-const learnBtn = document.querySelectorAll(".learn");
-const practiceBtn = document.querySelectorAll(".practice");
+export function openStatsPage() {
+  const statsBtn = document.querySelectorAll(".stats");
+  const learnBtn = document.querySelectorAll(".learn");
+  const practiceBtn = document.querySelectorAll(".practice");
 
 
-statsBtn.forEach(btn => {btn.addEventListener("click", () => {
-  showStats();
-  practiceBtn.forEach(btn => {
-    btn.classList.remove("select");
+  statsBtn.forEach(btn => {btn.addEventListener("click", () => {
+    showStats();
+    practiceBtn.forEach(btn => {
+      btn.classList.remove("select");
+    })
+
+    learnBtn.forEach(btn => {
+      btn.classList.remove("select"); 
+    })
+
+    statsBtn.forEach(btn => {
+      btn.classList.add("select"); 
+    })
+  });
   })
+}
 
-  learnBtn.forEach(btn => {
-    btn.classList.remove("select"); 
-  })
-
-  statsBtn.forEach(btn => {
-    btn.classList.add("select"); 
-  })
-});
-})
 
 function generateGraph() {
   const contentArea = document.querySelector(".content-area");

@@ -10,12 +10,12 @@ export function playAudio(text) {
 
 //Correct answer sound effect
 export function playCorrect() {
-  const correctSound = new Audio("./src/correct.mp3");
+  const correctSound = new Audio("client/src/correct.mp3");
   correctSound.play();
 }
 
 //Incorrect answer sound effect
 export function playIncorrect() {
-  const incorrectSound = new Audio("./src/incorrect.mp3");
+  const incorrectSound = new Audio("client/src/incorrect.mp3");
   incorrectSound.play();
 }

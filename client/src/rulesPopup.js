@@ -2,7 +2,9 @@
 
 // Building the popup structure
 
-const main = document.querySelector("main");
+export function generateRulesPopupSection() {
+
+  const main = document.querySelector("main");
 
 const blurContainer = document.createElement("div");
 blurContainer.classList.add("blurContainer");
@@ -91,3 +93,6 @@ closeBtn.addEventListener("click", () => {
   rulesSection.style.display = "none";
   blurContainer.style.display = "none";
 });
+
+}
+

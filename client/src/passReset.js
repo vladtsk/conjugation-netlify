@@ -1,8 +1,8 @@
 import {
-    app,
     getAuth,
+    fetchFirebaseConfig,
     sendPasswordResetEmail,
-  } from "./config.js";
+  } from "./firebaseConfig.js";
 
   import {
     generateLogInForm,
@@ -10,8 +10,9 @@ import {
 
   import { showErrorMsg } from "./authErrorMsg.js";
 
-  const auth = getAuth(app);
+ 
   let resetEmail;
+  const {auth, database } = fetchFirebaseConfig();
 
 export function resetPassword() {
     const passResetForm = document.querySelector(".passResetForm");

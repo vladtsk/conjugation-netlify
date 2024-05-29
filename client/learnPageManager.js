@@ -1,6 +1,6 @@
 import { generateLearnPage } from "./learnPage.js";
 
-
+export function openLearnPage() {
   const learnBtn = document.querySelectorAll(".learn");
   const practiceBtn = document.querySelectorAll(".practice");
   const stats = document.querySelectorAll(".stats");
@@ -25,3 +25,6 @@ learnBtn.forEach(btn => btn.addEventListener("click", () => {
   generateLearnPage();
 })
 );
+
+}
+  

@@ -4,25 +4,44 @@ import { movePhraseForward, movePhraseBackward } from "./spacedRepetition.js";
 
 import { playAudio, playCorrect, playIncorrect } from "./playAudio.js";
 
-import { onAuthStateChanged, app, getAuth } from "./config.js";
-import { showInfoPopup } from "./infoPopup.js";
+import { fetchFirebaseConfig, onAuthStateChanged, getAuth } from "./firebaseConfig.js";
 
-const auth = getAuth(app);
+import { getUser } from "./readDbData.js";
+ import { showInfoPopup } from "./infoPopup.js";
+
+//const auth = getAuth(app);
 
 // Fetching verb conjugation tables
-const responseConjug = await fetch("./src/conjugation.json");
+const responseConjug = await fetch("client/src/conjugation.json");
 const jsonConjug = await responseConjug.json();
 
-// Getting the user ID
+
 let userId;
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    userId = auth.currentUser.uid;
-  }
-});
+
+// Getting the user ID
+async function getuserId() {
+  const { app } = await fetchFirebaseConfig();
+  const auth = getAuth(app);
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      userId = auth.currentUser.uid;
+    }
+  });
+  //return userId;
+}
+
+getuserId();
+
+
+
+
+ //const userId = getUser();
 
 // A function that reads the user input and compares it to the correct answer
 export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
+
+
   let phraseCount = phraseInfo[0];
   let phraseNumber = phraseInfo[1];
   //let phraseStats = [];
@@ -34,7 +53,6 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
     almostCorrect: false,
   };
 
-  let scoreBoxes;
 
   // Select "p" element for a message to display
   const msgArea = document.querySelector(".msg-section");
@@ -61,11 +79,18 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
   const inputText = inputArea.value;
   let displaySection;
 
+  console.log(phraseCount, phraseNumber);
+  console.log(score)
+
+
   if (phraseCount < phraseNumber) {
     displaySection = nextSection;
   } else {
     displaySection = finishSection;
   }
+
+  let oldFinish = document.querySelector(".finish-section");
+  console.log(oldFinish)
 
   phraseStatObject.phrase = data.data[k].phrase;
   phraseStatObject.input = inputText;
@@ -234,6 +259,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       showInfoPopup(data.data[k], data.data[0].tenseShort);
 
       phraseStats.push(phraseStatObject);
+
   }
 
 
@@ -251,8 +277,8 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
     submitSection.style.display = "none";
     displaySection.style.display = "flex";
   }
-  scoreBoxes = [score, boxes];
-  return scoreBoxes;
+
+  return { score, boxes };
 }
 
 // A function showing a table of conjugations
