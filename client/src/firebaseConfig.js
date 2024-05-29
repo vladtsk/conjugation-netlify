@@ -18,6 +18,10 @@ import {
   update,
 } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
 
+/*import dotenv from "dotenv";
+
+dotenv.config();*/
+
 export {
   getAuth,
   getDatabase,
@@ -32,33 +36,18 @@ export {
   update,
 };
 
-/*
-// Our web app's Firebase configuration
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBZ1QOvcAhKxmwB1nePN-PHM0ICT5CZgBU",
-  authDomain: "conjugation-app-18572.firebaseapp.com",
-  databaseURL:
-    "https://conjugation-app-18572-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "conjugation-app-18572",
-  storageBucket: "conjugation-app-18572.appspot.com",
-  messagingSenderId: "5598733131",
-  appId: "1:5598733131:web:24e88341326430868c3ece",
-  measurementId: "G-S8228N5HBV",
-};
-
-// Initialize Firebase
-export const app = initializeApp(firebaseConfig);
-
-*/
 
 let app, auth, database;
+
+//let url = "https://app.lingway.net/config";
+const url = "http://localhost:8080/config";
 
 // Fetching the app's Firebase configuration from the server
 export async function fetchFirebaseConfig() {
 
   try {
-    const response = await fetch("http://localhost:3000/config");
+    //const response = await fetch("http://localhost:3000/config");
+    const response = await fetch(url);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }

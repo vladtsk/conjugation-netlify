@@ -242,12 +242,12 @@ if(contentArea) {
     header.addEventListener("click", (event) => {
       event.preventDefault();
       clearFormFields();
-      const summary = document.querySelector(".summary");
+      let summary = document.querySelector(".summary");
           if (summary) {
             main.removeChild(summary);
             summary = null;
           }
-          const chart = document.querySelector(".chart");
+          let chart = document.querySelector(".chart");
           if (chart) {
             contentArea.removeChild(chart);
             chart = null;

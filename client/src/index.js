@@ -14,7 +14,7 @@ import {
   displayNext,
 } from "./generateElements.js";
 
-import { openLearnPage } from "../learnPageManager.js";
+import { openLearnPage } from "../public/learnPageManager.js";
 import { openStatsPage } from "./stats.js";
 
 

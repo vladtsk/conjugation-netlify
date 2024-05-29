@@ -33,7 +33,7 @@ export async function launchFirstPage() {
 
   // Fetching the present tense data by default
 
-  let response = await fetch("./client/src/present.json");
+  let response = await fetch("src/present.json");
   let jsonData = await response.json();
 
   const selectElement = document.getElementById("tense");
@@ -49,7 +49,7 @@ export async function launchFirstPage() {
   // Adding an event listener in case the user changes the tense
   if (selectElement) {
     selectElement.addEventListener("change", async () => {
-      response = await fetch(`./client/src/${selectElement.value}.json`);
+      response = await fetch(`src/${selectElement.value}.json`);
       jsonData = await response.json();
     });
   }
