@@ -67,8 +67,10 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
   const nextSection = document.querySelector(".next-section");
   // Select the finish section
   const finishSection = document.querySelector(".finish-section");
-  // Selecting the special character buttons
-  const specialBtns = document.querySelectorAll(".letters-section button");
+  // Selecting the special character section
+  //const specialBtns = document.querySelectorAll(".letters-section button");
+  const lettersSection = document.querySelector(".letters-section");
+
 
   // The phrase display section
   const phraseDisplay = document.querySelector(".phrase-section p");
@@ -79,8 +81,6 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
   const inputText = inputArea.value;
   let displaySection;
 
-  console.log(phraseCount, phraseNumber);
-  console.log(score)
 
 
   if (phraseCount < phraseNumber) {
@@ -111,10 +111,18 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
     inputArea.classList.add("bold");
     phraseDisplay.innerHTML = "";
 
-    specialBtns.forEach((button) => {
+
+    // Hide the special characters section
+
+    if(lettersSection) {
+      lettersSection.style.display = "none";
+    }
+    
+
+    /*specialBtns.forEach((button) => {
       button.setAttribute("disabled", "");
       inputArea.setAttribute("disabled", "");
-    });
+    });*/
   }
 
   switch (inputText.trim().toLowerCase()) {

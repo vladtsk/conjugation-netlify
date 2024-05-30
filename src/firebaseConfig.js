@@ -69,7 +69,7 @@ export async function fetchFirebaseConfig() {
     app = initializeApp(firebaseConfig);
     auth = getAuth(app);
     database = getDatabase(app);
-    console.log(app)
+  
 
 
   } catch (error) {

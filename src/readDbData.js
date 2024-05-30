@@ -65,7 +65,6 @@ export async function launchFirstPage() {
   if (startBtn) {
 
     startBtn.addEventListener("click", () => {
-      console.log("startBtn clicked");
       launchApp(jsonData, phraseNumber);
 
       sidebarContainer.style.display = "none";

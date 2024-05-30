@@ -192,7 +192,7 @@ main {
   color: var(--color-secondary);
   background-color: var(--color-primary);
 
-  min-width: 280px;
+  min-width: 360px;
   width: fit-content;
   max-width: 100%;
   margin-left: auto;
@@ -1065,7 +1065,7 @@ button[disabled] {
 
   .content-area {
     margin: 0 auto;
-    padding-inline: 20px;
+    padding-inline: 0px;
   }
 
   .menu {

@@ -67,12 +67,17 @@ export function displayNext(data, indexArray, k, score, phraseStats) {
   }
   
 
-  // Selecting the special character buttons
-  const specialBtns = document.querySelectorAll(".letters-section button");
+  // Selecting the special character section
+  /*const specialBtns = document.querySelectorAll(".letters-section button");
   if(specialBtns) {
     specialBtns.forEach((button) => {
       button.removeAttribute("disabled");
     });
+  }*/
+
+  const lettersSection = document.querySelector(".letters-section");
+  if(lettersSection) {
+    lettersSection.style.display = "flex";
   }
   
 

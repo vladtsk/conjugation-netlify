@@ -310,7 +310,7 @@ th {
   }
 }
 @media screen and (max-width: 599px) {
-  .content-area {
+  .page-content {
     padding-bottom: 100px;
     padding-inline: 20px;
   }
