@@ -445,7 +445,7 @@ select {
   background-color: var(--color-secondary);
   color: black;
   border-radius: 6px;
-  width: fit-content;
+  max-width: 60%;
   height: 40px;
 }
 
@@ -1065,17 +1065,10 @@ button[disabled] {
 
   .content-area {
     margin: 0 auto;
-    padding-inline: 0px;
+    /*padding-inline: 0px;*/
   }
 
-  .menu {
-    padding: 0;
-    margin: 0;
-  }
-
-  .content-nav {
-    margin-left: 0;
-  }
+  
 
   .tense-display-section,
   .verb-display-section {

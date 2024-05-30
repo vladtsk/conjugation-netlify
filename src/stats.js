@@ -25,6 +25,7 @@ async function showStats() {
     const contentArea = document.querySelector(".content-area");
     contentArea.innerHTML = "";
     const premiumStatsH1 = document.createElement("h1");
+    premiumStatsH1.classList.add("premiumStatsH1");
     contentArea.appendChild(premiumStatsH1);
     premiumStatsH1.innerHTML =
       "<i class='fa-regular fa-gem'></i> This is a premium feature";

@@ -292,6 +292,11 @@ th {
   color: var(--color-tertiary);
 }
 
+
+.premiumStatsH1, .premiumStatsMessage {
+  padding-inline: 20px;
+}
+
 /* Responsive design */
 
 @media screen and (min-width: 600px) and (max-width: 850px) {
@@ -312,6 +317,15 @@ th {
 @media screen and (max-width: 599px) {
   .page-content {
     padding-bottom: 100px;
+    padding-inline: 20px;
+  }
+
+  .menu {
+    padding-inline: 20px;
+    
+  }
+
+  .contentNav {
     padding-inline: 20px;
   }
 
