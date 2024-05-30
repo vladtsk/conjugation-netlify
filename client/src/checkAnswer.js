@@ -12,7 +12,7 @@ import { getUser } from "./readDbData.js";
 //const auth = getAuth(app);
 
 // Fetching verb conjugation tables
-const responseConjug = await fetch("src/conjugation.json");
+const responseConjug = await fetch("client/src/conjugation.json");
 const jsonConjug = await responseConjug.json();
 
 
