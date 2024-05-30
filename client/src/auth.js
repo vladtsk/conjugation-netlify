@@ -36,7 +36,7 @@ export async function checkAuthState() {
   const logInForm = document.querySelector(".logInForm");
   const logInButtonMenu = document.getElementById("logInButtonMenu");
   const logOutButton = document.getElementById("logOutButton");
-  const mainSection = document.querySelector(".mainSection");
+  //const mainSection = document.querySelector(".mainSection");
   const contentArea = document.querySelector(".content-area");
 
   onAuthStateChanged(auth, (user) => {
@@ -55,7 +55,7 @@ export async function checkAuthState() {
       logInButtonMenu.style.display = "none";
       logOutButton.style.display = "inline-block";
 
-      mainSection.style.display = "block";
+      //mainSection.style.display = "block";
     } else {
       logOutButton.style.display = "none";
       logInButtonMenu.style.display = "inline-block";
