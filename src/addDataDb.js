@@ -69,7 +69,7 @@ export function addStatsToDb(userId, database, stats, phraseStats) {
     });
 }
 
-/*
+
 export function addStripeCustomerIdToDb(userId, stripeCustomerId) {
   const stripeCustomerIdRef = ref(
     database,
@@ -104,4 +104,3 @@ export function updateStripeStatus(userId, stripeStatus) {
       console.error("Error updating status in the database:", error);
     });
 }
-*/

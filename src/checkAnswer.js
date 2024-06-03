@@ -12,8 +12,27 @@ import { getUser } from "./readDbData.js";
 //const auth = getAuth(app);
 
 // Fetching verb conjugation tables
-const responseConjug = await fetch("../src/conjugation.json");
-const jsonConjug = await responseConjug.json();
+
+let jsonConjug;
+
+async function fetchConjugations() {
+  const responseConjug = await fetch("../src/conjugation.json");
+  const conjugations = await responseConjug.json();
+  return conjugations;
+}
+
+fetchConjugations()
+  .then(conjugations => {
+    jsonConjug = conjugations;
+    console.log(jsonConjug);
+  })
+  .catch(error => {
+    console.error('Error fetching conjugations:', error);
+  });
+
+
+/*const responseConjug = await fetch("../src/conjugation.json");
+const jsonConjug = await responseConjug.json();*/
 
 
 let userId;
@@ -89,8 +108,6 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
     displaySection = finishSection;
   }
 
-  let oldFinish = document.querySelector(".finish-section");
-  console.log(oldFinish)
 
   phraseStatObject.phrase = data.data[k].phrase;
   phraseStatObject.input = inputText;
