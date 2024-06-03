@@ -118,10 +118,10 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
       lettersSection.style.display = "none";
     }
     
+    inputArea.setAttribute("disabled", "");
 
     /*specialBtns.forEach((button) => {
       button.setAttribute("disabled", "");
-      inputArea.setAttribute("disabled", "");
     });*/
   }
 

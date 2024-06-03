@@ -8,6 +8,7 @@ import { generatePresentIrregularPage } from "./present-irregular.js";
 import { generatePastCompPage } from "./pastcompPage.js";
 import { generatePastCompAuxPage } from "./pastcompaux.js";
 import { generatePastCompParticPage } from "./pastparticiple.js";
+import { generateImparfaitPage } from "./imparfait-page.js";
 
 
 
@@ -15,7 +16,7 @@ export function generateLearnPage() {
   const contentArea = document.querySelector(".content-area");
   contentArea.innerHTML = "";
 
-  const contentNav = document.createElement("div");
+  /*const contentNav = document.createElement("div");
   contentNav.classList.add("contentNav");
   contentArea.appendChild(contentNav);
 
@@ -33,7 +34,7 @@ export function generateLearnPage() {
 
   contentNav.appendChild(verbConjugationLink);
   contentNav.appendChild(iconSpan);
-  contentNav.appendChild(introLink);
+  contentNav.appendChild(introLink);*/
 
   // Create menu div
   const menu = document.createElement("div");
@@ -43,9 +44,9 @@ export function generateLearnPage() {
   const menuTitle = document.createElement("h1");
   menuTitle.textContent = "Learn the fundamentals of verb conjugation";
 
-  const introMenuLink = document.createElement("a");
+  const introMenuLink = document.createElement("div");
   introMenuLink.classList.add("intro-menu");
-  introMenuLink.innerHTML = `<i class='fa-solid fa-plane-departure'></i> Introduction to
+  introMenuLink.innerHTML = `<i class='fa-solid fa-plane-departure'></i>Introduction to
 verb conjugation`;
 
   menu.appendChild(menuTitle);
@@ -65,8 +66,7 @@ verb conjugation`;
   presentLine.classList.add("present-line");
   presentMenu.appendChild(presentLine);
 
-  presentLine.innerHTML = `<i class='fa-regular fa-calendar-check'></i>
-  The Present Tense</div>`;
+  presentLine.innerHTML = `<i class='fa-regular fa-calendar-check'></i>The Present Tense</div>`;
 
   const plusIcon = document.createElement("i");
   plusIcon.classList.add("fa-solid", "fa-square-plus");
@@ -122,8 +122,7 @@ verb conjugation`;
   pastLine.classList.add("past-line");
   pastMenu.appendChild(pastLine);
 
-  pastLine.innerHTML = `<i class='fas fa-compass'></i>
-  The Past Tense "Passé composé"</div>`;
+  pastLine.innerHTML = `<i class='fas fa-compass'></i>The Past Tense "Passé composé"</div>`;
 
   const plusIcon2 = document.createElement("i");
   plusIcon2.classList.add("fa-solid", "fa-square-plus");
@@ -153,6 +152,12 @@ verb conjugation`;
   pastSubContainer.appendChild(pastSubIntro);
   pastSubContainer.appendChild(pastSubAux);
   pastSubContainer.appendChild(pastSubParticiple);
+
+  const imperfectLink = document.createElement("a");
+  imperfectLink.classList.add("imperfect-menu");
+  imperfectLink.innerHTML = `<i class='fa-solid fa-house'></i>The imperfect past tense`;
+
+  menu.appendChild(imperfectLink);
 
   manageLearnMenu();
 
@@ -191,5 +196,9 @@ verb conjugation`;
   
     pastSubParticiple.addEventListener("click", ()=> {
       generatePastCompParticPage();
+    })
+
+    imperfectLink.addEventListener("click", ()=> {
+      generateImparfaitPage();
     })
 }

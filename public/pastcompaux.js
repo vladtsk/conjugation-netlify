@@ -67,7 +67,7 @@ export function generatePastCompAuxPage() {
     pageContent.appendChild(paragraph2);
 
 
-    const examplesUl = document.createElement("div");
+    const examplesUl = document.createElement("ul");
     examplesUl.classList.add("list-no-bullet");
 
     examplesUl.innerHTML = `<li><i class="fa-solid fa-arrow-right"></i> all reflexive verbs (verbs with 'se' in the

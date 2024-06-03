@@ -31,16 +31,14 @@ for (let i = 0; i < menuItemsInfo.length; i++) {
       menuItemsInfo[i].subContainer.style.display = "flex";
       menuItemsInfo[
         i
-      ].menu.innerHTML = `<div class='present-line'><i class='fa-regular ${menuItemsInfo[i].icon}'></i>
-    ${menuItemsInfo[i].tense}</div> <i class='fa-solid fa-circle-chevron-up'></i>
+      ].menu.innerHTML = `<div class='present-line'><i class='fa-regular ${menuItemsInfo[i].icon}'></i>${menuItemsInfo[i].tense}</div> <i class='fa-solid fa-circle-chevron-up'></i>
 </div>`;
       menuItemsInfo[i].menu.classList.add("learn-select");
     } else {
       menuItemsInfo[i].subContainer.style.display = "none";
       menuItemsInfo[
         i
-      ].menu.innerHTML = `<div class="present-line"><i class="fa-regular ${menuItemsInfo[i].icon}"></i>
-    ${menuItemsInfo[i].tense}</div> <i class="fa-solid fa-square-plus"></i>
+      ].menu.innerHTML = `<div class="present-line"><i class="fa-regular ${menuItemsInfo[i].icon}"></i>${menuItemsInfo[i].tense}</div> <i class="fa-solid fa-square-plus"></i>
 </div>`;
       menuItemsInfo[i].menu.classList.remove("learn-select");
     }

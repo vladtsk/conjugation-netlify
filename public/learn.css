@@ -7,6 +7,10 @@
   color: var(--color-tertiary);
 }
 
+.fa-house {
+  color: var(--color-primary);
+}
+
 .learn-select .fa-compass {
   color: var(--color-secondary);
 }
@@ -24,7 +28,7 @@ h3 {
 }
 
 .page-content, .menu {
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 /* Styling the menu on the Learn page */
@@ -43,14 +47,16 @@ h3 {
 .present-menu,
 .past-menu,
 .present-submenu,
-.past-submenu {
+.past-submenu,
+.imperfect-menu {
   padding-inline: 20px;
   border-radius: 5px;
 }
 
 .intro-menu,
 .present-menu,
-.past-menu {
+.past-menu,
+.imperfect-menu {
   /*background-color: var(--color-primary);
   color: var(--color-secondary);*/
   border: solid 2px var(--color-primary);
@@ -63,10 +69,12 @@ h3 {
 
 .intro-menu,
 .present-menu,
-.past-menu {
+.past-menu,
+.imperfect-menu {
   font-size: 18px;
   margin-top: 20px;
   padding-block: 20px;
+  text-align: left;
 }
 
 .present-submenu,
@@ -119,7 +127,7 @@ h3 {
 }
 
 .fa-calendar-check,
-.fa-compass {
+.fa-compass, .fa-house {
   margin-right: 10px;
 }
 
@@ -149,6 +157,12 @@ h3 {
   font-size: 1.1rem;
 }
 
+.page-content div,
+  .page-content p,
+  .page-content ul {
+    line-height: 1.4;
+  }
+
 .page-content p {
   font-size: 18px;
   margin-top: 1rem;
@@ -161,7 +175,7 @@ h3 {
   margin-right: 0.4rem;
 }
 
-.content-nav {
+.contentNav {
   margin-bottom: 25px;
 }
 
@@ -313,6 +327,7 @@ th {
     padding: 0;
     margin-top: 0;
   }
+
 }
 @media screen and (max-width: 599px) {
   .page-content {
