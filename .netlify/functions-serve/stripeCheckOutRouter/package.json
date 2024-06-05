@@ -1,0 +1,33 @@
+{
+  "name": "conjugation",
+  "version": "1.0.0",
+  "description": "Conjugation App",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js --mode production",
+    
+    "netlify:dev": "npm run build && netlify dev",
+    "start": "webpack serve --config webpack.config.js --mode development",
+    "deploy": "netlify deploy --prod",
+    "build-and-deploy": "npm run build && npm run deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "firebase": "^10.12.2",
+    "firebase-admin": "^12.1.1",
+    "serverless-http": "^3.2.0",
+    "stripe": "^15.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.6",
+    "@babel/preset-env": "^7.24.6",
+    "babel-loader": "^9.1.3",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
