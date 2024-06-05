@@ -24,7 +24,6 @@ async function fetchConjugations() {
 fetchConjugations()
   .then(conjugations => {
     jsonConjug = conjugations;
-    console.log(jsonConjug);
   })
   .catch(error => {
     console.error('Error fetching conjugations:', error);

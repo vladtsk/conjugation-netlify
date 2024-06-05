@@ -4,7 +4,7 @@
   publish = '.'
 
 [functions]
-  external_node_modules = ["express"]
+  external_node_modules = ["express", "serverless-http", "dotenv"]
   node_bundler = "esbuild"
   
 [[redirects]]

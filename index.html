@@ -23,7 +23,11 @@
     <link rel="manifest" href="src/site.webmanifest">
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
 
-    <script src="src/index.js" type="module" defer></script>
+    <!--<script src="src/index.js" type="module" defer></script> -->
+
+    <script src="./dist/bundle.js" type="module" defer></script>
+
+    
 
     <!--
 
@@ -63,6 +67,11 @@
             <button type="submit" id="logOutButton">Logout</button>
             <!--
             <button type="submit" id="subscribeBtn">Subscribe</button>-->
+            <form action="/create-checkout-session" method="POST">
+                         
+                <!--<input type="hidden" name="priceId" value="price_G0FvDp6vZvdwRZ" />-->
+                <button type="submit" id="subscribeBtn">Checkout</button>
+              </form>
         </nav>
     </header>
     <main>

@@ -1,5 +1,7 @@
 //import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-analytics.js";
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+//import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+
+import { initializeApp } from "firebase/app";
 
 import {
   getAuth,
@@ -8,7 +10,9 @@ import {
   onAuthStateChanged,
   signOut,
   sendPasswordResetEmail,
-} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+} from "firebase/auth"
+
+//"https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
 
 import {
   getDatabase,
@@ -16,7 +20,9 @@ import {
   set,
   onValue,
   update,
-} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
+} from "firebase/database"
+
+//"https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
 
 /*import dotenv from "dotenv";
 
@@ -47,6 +53,7 @@ export async function fetchFirebaseConfig() {
 
   try {
     //const response = await fetch("http://localhost:3000/config");
+    // const response = await fetch("../.netlify/functions-build/config.js");
     const response = await fetch("/.netlify/functions/config");
     //const response = await fetch(url);
     if (!response.ok) {

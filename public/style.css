@@ -96,6 +96,10 @@ nav .fa-circle-question,
   font-size: 0.9em;
 }
 
+nav form {
+  background-color: none;
+}
+
 /*
 main {
   display: flex;
