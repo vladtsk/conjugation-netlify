@@ -46,7 +46,6 @@ export function buildGraph(stats) {
     }
   }
 
-  console.log(practisedPhrData, correctPhrasesData);
   const correctPhrasesDataNormalized = [];
   for (let i = 0; i < correctPhrasesData.length; i++) {
     const el = (correctPhrasesData[i] / practisedPhrData[i]) * 100;

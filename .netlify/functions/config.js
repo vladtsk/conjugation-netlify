@@ -20,15 +20,6 @@ export async function handler(event, context) {
 
   const responseBody = JSON.stringify(firebaseConfig);
 
-  /*
-  const response = new Response(responseBody, {
-      status: 200,
-      headers: {
-        "Content-Type": "application/json"
-      }
-    });
-
-    return response;*/
     return {
       statusCode: 200,
       headers: {
@@ -50,16 +41,3 @@ export async function handler(event, context) {
   };
 }
   
-  /*catch (error) {
-    console.error("Error fetching Firebase config:", error);
-    const errorResponse = new Response(JSON.stringify({ error: "Internal Server Error" }), {
-      status: 500,
-      headers: {
-        "Content-Type": "application/json"
-      }
-    });
-
-    return errorResponse;
-  }
-
-}*/

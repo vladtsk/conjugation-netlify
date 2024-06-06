@@ -45,15 +45,11 @@ export {
 
 let app, auth, database;
 
-//let url = "https://app.lingway.net/config";
-//const url = "http://localhost:8080/config";
 
 // Fetching the app's Firebase configuration from the server
 export async function fetchFirebaseConfig() {
 
   try {
-    //const response = await fetch("http://localhost:3000/config");
-    // const response = await fetch("../.netlify/functions-build/config.js");
     const response = await fetch("/.netlify/functions/config");
     //const response = await fetch(url);
     if (!response.ok) {

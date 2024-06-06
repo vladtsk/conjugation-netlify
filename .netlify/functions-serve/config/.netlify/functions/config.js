@@ -32,7 +32,7 @@ __export(config_exports, {
   handler: () => handler
 });
 module.exports = __toCommonJS(config_exports);
-var import_dotenv = __toESM(require("dotenv"));
+var import_dotenv = __toESM(require("dotenv"), 1);
 import_dotenv.default.config();
 async function handler(event, context) {
   try {

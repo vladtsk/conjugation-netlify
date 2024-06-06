@@ -166,6 +166,7 @@ export function getUser() {
   });
 }
 
+/*
 export async function getStripeCustomerId(userId) {
   try {
     // Reference to the 'Stripe customer ID' node
@@ -198,7 +199,7 @@ export async function getSubscriptionData() {
   } catch (error) {
     console.error(error.message);
   }
-}
+}*/
 
 export async function getData(data, boxes, stats, indexArray, userId) {
   try {

@@ -27,6 +27,8 @@ import { checkAnswer } from "./checkAnswer.js";
 
 import { generateRulesPopupSection } from "./rulesPopup.js";
 
+import { handleCheckoutClick } from "./subscribe.js";
+
 
 /*export {
   getAuth,
@@ -68,6 +70,7 @@ launchFirstPage();
 openLearnPage();
 openStatsPage();
 generateRulesPopupSection();
+handleCheckoutClick();
 
 // A function launching the app
 export async function launchApp(data, phraseNumber) {
@@ -118,7 +121,6 @@ export async function launchApp(data, phraseNumber) {
 
   let phraseStats = [];
 
-  console.log(score);
 
   // Generating a unique index and displaying a verb and a phrase
   k = generateElements(data, indexArray, k, score, phraseStats);

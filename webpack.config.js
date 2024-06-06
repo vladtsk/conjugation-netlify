@@ -1,13 +1,19 @@
-const path = require('path');
+/*const path = require('path');
 
-const nodeExternals = require('webpack-node-externals');
+const nodeExternals = require('webpack-node-externals');*/
+
+import path from 'path';
+
+import { fileURLToPath } from 'url';
 
 
+// Convert the URL to a file path
+const __filename = fileURLToPath(import.meta.url);
+// Get the directory name from the file path
+const __dirname = path.dirname(__filename);
 
 
-//the latest export version below
-
-module.exports = {
+export default {
   entry: './src/index.js', // Entry point for the app
   output: {
     filename: 'bundle.js', // Output bundle file name
