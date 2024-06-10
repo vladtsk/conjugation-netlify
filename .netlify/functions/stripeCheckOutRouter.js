@@ -52,6 +52,7 @@ const quantity = 1;
 
 checkoutRouter.post("/create-checkout-session", async (req, res) => {
     try {
+      const { email } = req.body;
       const session = await stripe.checkout.sessions.create({
         line_items: [
           {
@@ -60,21 +61,39 @@ checkoutRouter.post("/create-checkout-session", async (req, res) => {
           },
         ],
         mode: "subscription",
-        success_url: `${process.env.CLIENT_URL}/success.html?session_id={CHECKOUT_SESSION_ID}`, 
+        customer_email: email,
+        success_url: `${process.env.CLIENT_URL}/success.html`, 
         cancel_url: `${process.env.CLIENT_URL}/cancel.html`,
+        //customer_creation: 'always',
       });
   
       //const userId = await getUser();
+      console.log(email);
       const sessionId = session.id;
       console.log("session id: ", sessionId);
 
       //Get the reference to Firebase DB
-      const ref = database.ref('subscription');
+      const subscriptionRef = database.ref('subscription');
+      /*subscriptionRef.set({
+        email: {
+          date_of_birth: 'June 23, 1912',
+          full_name: 'Alan Turing'
+        }
+    });*/
+
+      // Saving the session ID in the DB
+      /*const customerId = session.customer;
+      console.log("customer ID: ", customerId);*/
+
+      //Replace the dots with commas to use it as a key in Firebase
+      const emailWithoutDots = email.replace(/\./g, ',');
+
+      subscriptionRef.child(`${emailWithoutDots}`).set({
+        userEmail: `${email}`
+      });
   
-      const customerId = session.customer;
-      console.log("customer ID: ", customerId);
+      
   
-      // Saving the customer ID in the DB
       //addStripeCustomerIdToDb(userId, customerId);
   
       //res.json({ url: session.url });

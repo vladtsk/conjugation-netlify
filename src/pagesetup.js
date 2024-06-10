@@ -58,9 +58,19 @@ export async function showFirstPage() {
   optionPastImp.value = "pastimp";
   optionPastImp.innerText = "imperfect past (l'imparfait)";
 
+  const optionFuture = document.createElement("option");
+  optionFuture.value = "future";
+  optionFuture.innerText = "future (le futur simple)";
+
+  const optionSubjunctive = document.createElement("option");
+  optionSubjunctive.value = "subjunctive";
+  optionSubjunctive.innerText = "present subjunctive (le subjonctif présent)";
+
   selectElement.appendChild(optionPresent);
   selectElement.appendChild(optionPastComp);
   selectElement.appendChild(optionPastImp);
+  selectElement.appendChild(optionFuture);
+  selectElement.appendChild(optionSubjunctive);
 
   // The "number of phrases" section
   const phrNbSection = document.createElement("div");

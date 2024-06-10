@@ -927,6 +927,90 @@ button[disabled] {
   gap: 4px;
 }
 
+/* The checkout page*/
+
+.checkout-page {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  margin-left:30px;
+  margin-inline: auto;
+  width: 60%;
+  gap: 0px;
+}
+
+.carousel {
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.carousel-slide img {
+  width:60%;
+  height:auto;
+}
+
+.carousel-slide {
+  min-width:100%;
+ 
+}
+
+.carousel-container {
+  display:flex;
+
+}
+
+
+.checkout-form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid black 2px;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-radius: 10px;
+  min-width: 300px;
+  max-width: 400px;
+  height: fit-content;
+  margin-inline: auto;
+  padding-inline: 40px;
+  padding-block: 20px;
+}
+
+.checkout-form h3,
+.checkout-form h5{
+  margin-bottom: 15px; 
+}
+
+.checkout-form label {
+  margin-bottom: 10px; 
+}
+
+.checkout-form input {
+  margin-bottom: 10px;
+}
+
+.checkout-form button {
+  padding-inline: 12px;
+  padding-block: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+}
+
+.checkout-product {
+  text-align: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Responsive design */
 @media screen and (min-width: 851px) and (max-width: 1200px) {
   .mainSection {
