@@ -41,6 +41,8 @@ export async function showFirstPage() {
   selectDiv.classList.add("selectDiv");
   tenseSelect.appendChild(selectDiv);
 
+  //
+  
   const selectElement = document.createElement("select");
   selectElement.name = "tense";
   selectElement.id = "tense";
@@ -70,7 +72,9 @@ export async function showFirstPage() {
   selectElement.appendChild(optionPastComp);
   selectElement.appendChild(optionPastImp);
   selectElement.appendChild(optionFuture);
-  selectElement.appendChild(optionSubjunctive);
+  selectElement.appendChild(optionSubjunctive); 
+
+  //
 
   // The "number of phrases" section
   const phrNbSection = document.createElement("div");
@@ -117,7 +121,37 @@ export async function showFirstPage() {
   startBtn.id = "start-btn";
   startBtn.innerText = "Start now!";
   startSection.appendChild(startBtn);
+
+  selectDiv.addEventListener("click", ()=>{
+    showTenseSelectPopup();
+  })
 }
+
+
+
+// Tense select popup
+/*function showTenseSelectPopup() {
+
+  const mainSection = document.querySelector(".mainSection");
+  
+  const container = document.createElement("div");
+  mainSection.appendChild(container);
+  container.classList.add("tenseSelectPopupContainer");
+
+  const labelPresent = document.createElement("label");
+  labelPresent.textContent = "present (le présent de l'indicatif)"
+
+
+  const radioPresent = document.createElement("input");
+  radioPresent.setAttribute("type", "radio");
+  radioPresent.setAttribute("id", "present");
+  radioPresent.setAttribute("name", "present");
+  radioPresent.setAttribute("value", "present");
+
+  container.appendChild(radioPresent);
+  container.appendChild(labelPresent);
+
+}*/
 
 // Building the main page structure
 export function buildPageStructure(data) {
@@ -781,6 +815,7 @@ export function generatePassResetForm() {
   passResetButton.setAttribute("id", "passResetButton");
   passResetButton.innerText = "Submit";
   btnSectionPElement.appendChild(passResetButton);
+  
 
   /*
   const switchSection = document.createElement("section");

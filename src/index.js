@@ -21,13 +21,14 @@ import { openStatsPage } from "./stats.js";
 import { addBoxToDb, addStatsToDb } from "./addDataDb.js";
 
 
-import { checkAuthState, handleAuthClicks, handleLogInLogOutClicks, handlePasswordReset } from "./auth.js";
+import { checkAuthState, handleAuthClicks, handleLogInLogOutClicks } from "./auth.js";
 
 import { checkAnswer } from "./checkAnswer.js";
 
 import { generateRulesPopupSection } from "./rulesPopup.js";
 
 import { handleCheckoutClick } from "./subscribe.js";
+
 
 
 /*export {
@@ -62,7 +63,7 @@ checkAuthState();
 
 handleAuthClicks();
 handleLogInLogOutClicks();
-handlePasswordReset();
+//handlePasswordReset();
 
 
 launchFirstPage();
@@ -71,6 +72,7 @@ openLearnPage();
 openStatsPage();
 generateRulesPopupSection();
 handleCheckoutClick();
+
 
 // A function launching the app
 export async function launchApp(data, phraseNumber) {

@@ -52,19 +52,27 @@ const quantity = 1;
 
 checkoutRouter.post("/create-checkout-session", async (req, res) => {
     try {
+
+      const prices = await stripe.prices.list({
+        lookup_keys: [req.body.lookup_key],
+        expand: ['data.product'],
+      });
+
+      console.log(prices)
+
       const { email } = req.body;
       const session = await stripe.checkout.sessions.create({
         line_items: [
           {
-            price: process.env.STRIPE_PRICE_ID,
+            //price: process.env.STRIPE_PRICE_ID,
+            price: prices.data[0].id,
             quantity: quantity,
           },
         ],
         mode: "subscription",
         customer_email: email,
         success_url: `${process.env.CLIENT_URL}/success.html`, 
-        cancel_url: `${process.env.CLIENT_URL}/cancel.html`,
-        //customer_creation: 'always',
+        cancel_url: `${process.env.CLIENT_URL}/checkout.html`,
       });
   
       //const userId = await getUser();

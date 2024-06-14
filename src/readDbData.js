@@ -26,7 +26,17 @@ getAuthDatabase();
 
 
 export async function launchFirstPage() {
-  showFirstPage(); // Building the first page structure
+
+  await getAuthDatabase();
+
+  const { subStatus, userId } = await getSubscriptionStatus();
+
+    
+ 
+  if(userId && subStatus === "active") {
+    showFirstPage(); // Building the first page structure
+  }
+  
 
   
   let phraseNumber = 5; // Making sure the phrase number is back to its default value
@@ -166,6 +176,55 @@ export function getUser() {
   });
 }
 
+function getUserEmail(userId) {
+  const emailRef = ref(database, "users/" + userId + "/info/email")
+  return new Promise((resolve) => {
+    onValue(
+      emailRef,
+      (snapshot) => {
+        const userEmail = snapshot.val();
+
+        if (userEmail) {
+          resolve(userEmail);
+        } 
+      },
+      {
+        onlyOnce: true,
+      }
+    );
+  });
+} 
+
+export async function getSubscriptionStatus() {
+  let subStatus = "";
+  let userId;
+  try {
+    userId = await getUser();
+   
+    if (userId) {
+
+      const userEmail = await getUserEmail(userId);
+
+      const userEmailWoDots = userEmail.replace(/\./g, ',');
+    
+
+      // Reference to the 'subscription' status node
+      const subStatusRef = ref(database, "subscription/" + userEmailWoDots + "/status");
+
+      if (subStatusRef) {
+        subStatus = await readSubsDataFromDb(subStatusRef);
+      } 
+      
+    } else {
+      console.log("User is signed out");
+    }
+
+    return { subStatus, userId };
+  } catch (error) {
+    console.error("error line 215", error.message);
+  }
+}
+
 /*
 export async function getStripeCustomerId(userId) {
   try {
@@ -183,23 +242,7 @@ export async function getStripeCustomerId(userId) {
   }
 }
 
-export async function getSubscriptionData() {
-  try {
-    userId = await getUser();
-    if (userId) {
-      // Reference to the 'subscription' node
-      const subsRef = ref(database, "users/" + userId + "/subscription");
-
-      const subsData = await readSubsDataFromDb(subsRef);
-    } else {
-      console.log("User is signed out");
-    }
-
-    return { subsData, userId };
-  } catch (error) {
-    console.error(error.message);
-  }
-}*/
+*/
 
 export async function getData(data, boxes, stats, indexArray, userId) {
   try {

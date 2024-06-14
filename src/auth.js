@@ -3,6 +3,7 @@ import {
   getDatabase,
   ref,
   set,
+  update,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
@@ -37,18 +38,18 @@ export async function checkAuthState() {
   const logInButtonMenu = document.getElementById("logInButtonMenu");
   const logOutButton = document.getElementById("logOutButton");
   //const mainSection = document.querySelector(".mainSection");
-  const contentArea = document.querySelector(".content-area");
+  
 
   onAuthStateChanged(auth, (user) => {
-
+    
     if (user) {
       if (logInForm) {
-        contentArea.removeChild(logInForm);
+        //contentArea.removeChild(logInForm);
         clearFormFields();
       }
 
       if (signUpForm) {
-        contentArea.removeChild(signUpForm);
+        //contentArea.removeChild(signUpForm);
         clearFormFields();
       }
 
@@ -65,11 +66,17 @@ export async function checkAuthState() {
 
 export async function userSignUp() {
   const { app } = await fetchFirebaseConfig();
-  auth = getAuth(app);
-  database = getDatabase(app);
+  const auth = getAuth(app);
+  const database = getDatabase(app);
 
   const userEmail = document.getElementById("signUpEmail");
   const userPassword = document.getElementById("signUpPassword");
+  const userName = document.getElementById("name");
+
+  const contentArea = document.querySelector(".content-area");
+  const sidebarContainer = document.querySelector(".sidebarContainer");
+  const sidebarTabletContainer = document.querySelector(".sidebarTabletContainer");
+  const footer = document.querySelector("footer");
 
   const signUpEmail = userEmail.value;
   const signUpPassword = userPassword.value;
@@ -78,6 +85,11 @@ export async function userSignUp() {
       const user = userCredential.user;
 
       alert("Your account has been created!");
+      
+      if(contentArea) {
+        contentArea.innerHTML = "";
+      }
+      
 
       // Add the user to out Database
 
@@ -86,17 +98,25 @@ export async function userSignUp() {
 
       // User data
       let userData = {
+        name: userName.value,
         email: user.email,
         last_login: Date.now(),
       };
 
       // Adding the data to the Database
       set(userRef, userData);
+
+      launchFirstPage();
+      selectPracticeBtn();
+
+      sidebarContainer.style.display = "flex";
+      sidebarTabletContainer.style.display = "flex";
+      footer.style.display = "block";
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log(errorCode + errorMessage);
+      console.log("error code: ", errorCode, "errorMsg: ", errorMessage);
 
       const signUpErrorMsgP = document.querySelector(".signUpErrorMsg");
       if (signUpErrorMsgP) {
@@ -138,22 +158,22 @@ async function userLogIn() {
 
       // User data
       let userData = {
-        email: user.email,
         last_login: Date.now(),
       };
+      //const lastLogin = Date.now();
 
       // Reference to the 'user' node
 
       const userRef = ref(database, "users/" + user.uid + "/info");
 
       // Adding the data to the Database
-      set(userRef, userData);
+      update(userRef, userData);
     })
 
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log(errorCode + errorMessage);
+      console.log("error message: ", errorCode + errorMessage);
 
       const logInErrorMsgP = document.querySelector(".logInErrorMsg");
       if (logInErrorMsgP) {
@@ -208,9 +228,11 @@ if(contentArea) {
           generateLogInForm();
           break;
           case "signUpButton":
+            console.log("signUpButton");
             userSignUp();
             break;
           case "logInButton":
+            console.log("loginButton");
             const logInErrorMsgP = document.querySelector(".logInErrorMsg");
             if (logInErrorMsgP) {
             logInErrorMsgP.innerHTML = "";
@@ -221,6 +243,25 @@ if(contentArea) {
             }
             userLogIn();
             break;
+          case "forgotPass":
+            generatePassResetForm();
+            /*const passResetForm = document.querySelector(".passResetForm");
+            console.log(passResetForm);
+
+            if(passResetForm) {
+              passResetForm.addEventListener("submit", (event) => {
+                console.log("reset password submit", event.target.id)
+                event.preventDefault();
+                
+              });
+            }*/
+            break;
+          case "passResetButton":
+            resetPassword();
+
+
+            default:
+              console.log("Unknown event:", event.target.id);
       }
     }
   })
@@ -271,17 +312,16 @@ if(contentArea) {
 
 
 // Password reset
-export function handlePasswordReset() {
+/*export function handlePasswordReset() {
   const contentArea = document.querySelector(".content-area");
   contentArea.addEventListener("click", (event) => {
     if(event.target && event.target.id === "forgotPass") {
       event.preventDefault();
-      generatePassResetForm();
-      resetPassword();
+      
     }
     
   });
-}
+} */
 
 //handlePasswordReset();
 
