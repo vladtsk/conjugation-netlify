@@ -1,0 +1,63 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "verb": "dire",
+        "phrase": "Elle veut que je ____ la vérité.",
+        "answer": "dise",
+        "fullPhrase": "Elle veut que je dise la vérité.",
+        "tense": "present subjunctive (le subjonctif présent)",
+        "tenseShort": "subjunctive",
+        "translation": "She wants me to tell the truth."
+      },
+      {
+        "id": 2,
+        "verb": "dire",
+        "phrase": "Je voudrais qu'ils ____ tout.",
+        "answer": "disent",
+        "fullPhrase": "Je voudrais qu'ils disent tout.",
+        "translation": "I would like them to say everything."
+      },
+      {
+        "id": 3,
+        "verb": "aller",
+        "phrase": "Il faut que tu ____ à l'université.",
+        "answer": "ailles",
+        "fullPhrase": "Il faut que tu ailles à l'université.",
+        "translation": "You must go to the university."
+      },
+      {
+        "id": 4,
+        "verb": "connaître",
+        "phrase": "Je ne crois pas qu'elle ____ Paris.",
+        "answer": "connaisse",
+        "fullPhrase": "Je ne crois pas qu'elle connaisse Paris.",
+        "translation": "I don't think she knows Paris."
+      },
+      {
+        "id": 5,
+        "verb": "choisir",
+        "phrase": "Il faut que tu ____ ce livre.",
+        "answer": "choisisses",
+        "fullPhrase": "Il faut que tu choisisses ce livre.",
+        "translation": "You must choose this book."
+      },
+      {
+        "id": 6,
+        "verb": "prendre",
+        "phrase": "Il faut qu'elle ____ ses affaires.",
+        "answer": "prenne",
+        "fullPhrase": "Il faut qu'elle prenne ses affaires.",
+        "translation": "She must take her things."
+      },
+      {
+        "id": 7,
+        "verb": "être",
+        "phrase": "Il faudra que tu ____ en avance.",
+        "answer": "sois",
+        "fullPhrase": "Il faudra que tu sois en avance.",
+        "translation": "You will have to be early."
+      }
+    ]
+  }
+  

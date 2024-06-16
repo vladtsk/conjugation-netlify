@@ -3,8 +3,9 @@
 import { set, ref } from "./firebaseConfig.js";
 
 export function addBoxToDb(data, boxes, userId, database) {
-  let tense;
-
+  let tense = data.data[0].tenseShort;
+  console.log(tense)
+/*
   switch (data.data[0].tense) {
     case "present (le présent de l'indicatif)":
       tense = "/present/";
@@ -16,7 +17,17 @@ export function addBoxToDb(data, boxes, userId, database) {
     case "imperfect past (l'imparfait)":
       tense = "/pastimp/";
       break;
-  }
+    
+    case "future (le futur simple)":
+      tense = "/future/";
+      break;
+
+    case "present subjunctive (le subjonctif présent)":
+      tense = "/subjunctive/";
+      break;
+    }
+      */
+     
   for (let i = 0; i < boxes.length; i++) {
     let boxName = "box" + (i + 1);
     let boxRef = ref(database, "users/" + userId + "/data" + tense + boxName);

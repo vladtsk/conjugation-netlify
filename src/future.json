@@ -1,0 +1,79 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "verb": "être",
+        "phrase": "Il ____ à Paris cette semaine.",
+        "answer": "sera",
+        "fullPhrase": "Il sera à Paris cette semaine.",
+        "tense": "future (le futur simple)",
+        "tenseShort": "future",
+        "translation": "He will be in Paris this week."
+      },
+      {
+        "id": 2,
+        "verb": "avoir",
+        "phrase": "J' ____ plusieurs choses à vous dire.",
+        "answer": "aurai",
+        "fullPhrase": "J'aurai plusieurs choses à vous dire.",
+        "translation": "I will have several things to tell you."
+      },
+      {
+        "id": 3,
+        "verb": "faire",
+        "phrase": "Vous ____ des exercices.",
+        "answer": "ferez",
+        "fullPhrase": "Vous ferez des exercices.",
+        "translation": "You will do exercises."
+      },
+      {
+        "id": 4,
+        "verb": "dire",
+        "phrase": "Tu ____ des choses intéressantes.",
+        "answer": "diras",
+        "fullPhrase": "Tu diras des choses intéressantes.",
+        "translation": "You will say interesting things."
+      },
+      {
+        "id": 5,
+        "verb": "mettre",
+        "phrase": "Je ____ de l'argent de côté.",
+        "answer": "mettrai",
+        "fullPhrase": "Je mettrai de l'argent de côté.",
+        "translation": "I will set aside some money."
+      },
+      {
+        "id": 6,
+        "verb": "appeler",
+        "phrase": "On t' ____ demain.",
+        "answer": "appellera",
+        "fullPhrase": "On t'appellera demain.",
+        "translation": "We will call you tomorrow."
+      },
+      {
+        "id": 7,
+        "verb": "venir",
+        "phrase": "Tu ____ me voir.",
+        "answer": "viendras",
+        "fullPhrase": "Tu viendras me voir.",
+        "translation": "You will come to see me."
+      },
+      {
+        "id": 8,
+        "verb": "avoir",
+        "phrase": "Il y____ des choses à faire.",
+        "answer": "aura",
+        "fullPhrase": "Il y aura des choses à faire.",
+        "translation": "There will be things to do."
+      },
+      {
+        "id": 9,
+        "verb": "devoir",
+        "phrase": "Tu ____ te reposer.",
+        "answer": "devras",
+        "fullPhrase": "Tu devras te reposer.",
+        "translation": "You will have to rest."
+      }
+    ]
+  }
+  

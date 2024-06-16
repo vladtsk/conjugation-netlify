@@ -33,20 +33,32 @@ export async function launchFirstPage() {
 
     
  
-  if(userId && subStatus === "active") {
-    showFirstPage(); // Building the first page structure
-  }
+  /*if(userId && subStatus === "active") {
+    showFirstPage(userId); // Building the first page structure for premiumm users
+  }*/
+  
+  if(userId && subStatus !== "active") {
+    showNoSubMessage(); // to add!
+  } else (showFirstPage(userId));
+
   
 
   
   let phraseNumber = 5; // Making sure the phrase number is back to its default value
 
   // Fetching the present tense data by default
+  let jsonData;
+  try {
+    let response = await fetch("../src/present.json");
+    jsonData = await response.json();
+    
+  } catch(error) {
+    console.error("Couldn't fetch Present tense data ", error);
+  }
+  
 
-  let response = await fetch("../src/present.json");
-  let jsonData = await response.json();
-
-  const selectElement = document.getElementById("tense");
+  //const selectElement = document.getElementById("tense");
+  const selectElement = document.querySelector(".selectDiv");
   const selectPhrNb = document.getElementById("phraseNb");
   const startBtn = document.getElementById("start-btn");
 
@@ -57,25 +69,48 @@ export async function launchFirstPage() {
   const footer = document.querySelector("footer");
 
   // Adding an event listener in case the user changes the tense
-  if (selectElement) {
+  /*if (selectElement) {
     selectElement.addEventListener("change", async () => {
-      response = await fetch(`../src/${selectElement.value}.json`);
-      jsonData = await response.json();
+      const tenseValue = getTenseFromSelectElement();
+      try {
+        response = await fetch(`../src/${tenseValue}.json`);
+        jsonData = await response.json();
+      } catch(error) {
+        console.error("Couldn't fetch tense data ", error);
+      }
+      
     });
-  }
+  }*/
 
-  // Customer selecting the number of phrases
+   
+
+  /* Customer selecting the number of phrases
   if (selectPhrNb) {
     selectPhrNb.addEventListener("change", () => {
       phraseNumber = selectPhrNb.value;
     });
-  }
+  }*/
 
   // Adding an event listener on the start button
+ 
   if (startBtn) {
 
-    startBtn.addEventListener("click", () => {
-      launchApp(jsonData, phraseNumber);
+    startBtn.addEventListener("click", async() => {
+
+      phraseNumber = parseInt(phraseNb.textContent);
+      console.log(phraseNumber);
+      
+      const tenseValue = getTenseFromSelectElement();
+      
+      if (tenseValue !== "present") {
+        jsonData = await getJsonData(tenseValue);
+        launchApp(jsonData, phraseNumber);
+      } else {
+        launchApp(jsonData, phraseNumber);
+      }
+      
+      
+      
 
       sidebarContainer.style.display = "none";
       sidebarTabletContainer.style.display = "none";
@@ -83,6 +118,51 @@ export async function launchFirstPage() {
     });
   }
 }
+
+function getTenseFromSelectElement() {
+  let tenseValue;
+  const currentTenseEl = document.querySelector(".currentTense");
+  const currentTense = currentTenseEl.textContent;
+  switch (currentTense) {
+    case "present (le présent de l'indicatif)":  
+    tenseValue = "present";
+    break;
+
+    case "past (le passé composé)":
+      tenseValue = "pastComp";
+      break;
+    
+    case "imperfect past (l'imparfait)":
+    tenseValue = "pastImp";
+    break;
+
+    case "future (le futur simple)":
+    tenseValue = "future";
+    break;
+
+    case "present subjunctive (le subjonctif présent)":
+    tenseValue = "subjunctive";
+    break;
+
+    default:
+      console.log("unkown tense");
+  }
+  return tenseValue;
+}
+
+async function getJsonData(tenseValue) {
+  let jsonData;
+    try {
+      const response = await fetch(`../src/${tenseValue}.json`);
+      jsonData = await response.json();
+     
+    } catch(error) {
+      console.error("Couldn't fetch tense data ", error);
+    }
+  return jsonData;
+  
+}
+
 
 function readDataFromDb(timeRef, boxes) {
   return new Promise((resolve) => {

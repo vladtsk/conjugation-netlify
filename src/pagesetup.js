@@ -4,7 +4,7 @@ import { launchFirstPage } from "./readDbData.js";
 import { generateGraph, buildGraph } from "./graphs.js";
 
 // Showing the first page
-export async function showFirstPage() {
+export async function showFirstPage(userId) {
   //const main = document.querySelector("main");
   const contentArea = document.querySelector(".content-area");
 
@@ -41,48 +41,23 @@ export async function showFirstPage() {
   selectDiv.classList.add("selectDiv");
   tenseSelect.appendChild(selectDiv);
 
-  //
+  const currentTense = document.createElement("p");
+  currentTense.classList.add("currentTense");
+  selectDiv.appendChild(currentTense);
+
+  const caretIcon = document.createElement("i");
+  caretIcon.classList.add("fa-solid", "fa-caret-down");
+  selectDiv.appendChild(caretIcon);
+  currentTense.textContent = "present (le présent de l'indicatif)";
+
   
-  const selectElement = document.createElement("select");
-  selectElement.name = "tense";
-  selectElement.id = "tense";
-  selectDiv.appendChild(selectElement);
-
-  const optionPresent = document.createElement("option");
-  optionPresent.value = "present";
-  optionPresent.innerText = "present (le présent de l'indicatif)";
-
-  const optionPastComp = document.createElement("option");
-  optionPastComp.value = "pastcomp";
-  optionPastComp.innerText = "past (le passé composé)";
-
-  const optionPastImp = document.createElement("option");
-  optionPastImp.value = "pastimp";
-  optionPastImp.innerText = "imperfect past (l'imparfait)";
-
-  const optionFuture = document.createElement("option");
-  optionFuture.value = "future";
-  optionFuture.innerText = "future (le futur simple)";
-
-  const optionSubjunctive = document.createElement("option");
-  optionSubjunctive.value = "subjunctive";
-  optionSubjunctive.innerText = "present subjunctive (le subjonctif présent)";
-
-  selectElement.appendChild(optionPresent);
-  selectElement.appendChild(optionPastComp);
-  selectElement.appendChild(optionPastImp);
-  selectElement.appendChild(optionFuture);
-  selectElement.appendChild(optionSubjunctive); 
-
-  //
 
   // The "number of phrases" section
   const phrNbSection = document.createElement("div");
   phrNbSection.classList.add("nb-phrases");
   mainSection.appendChild(phrNbSection);
 
-  const phrNbLabel = document.createElement("label");
-  phrNbLabel.htmlFor = "phraseNb";
+  const phrNbLabel = document.createElement("div");
   phrNbLabel.innerText = "How many phrases would you like to practise?";
   phrNbSection.appendChild(phrNbLabel);
 
@@ -90,7 +65,57 @@ export async function showFirstPage() {
   selectNbPhrasesDiv.classList.add("selectNbPhrasesDiv");
   phrNbSection.appendChild(selectNbPhrasesDiv);
 
-  const selectPhrNb = document.createElement("select");
+
+  const selectPhrNb = document.createElement("p");
+  selectPhrNb.id = "phraseNb";
+  selectNbPhrasesDiv.appendChild(selectPhrNb);
+  selectPhrNb.textContent = "5";
+
+  const caretIcon1 = document.createElement("i");
+  caretIcon1.classList.add("fa-solid", "fa-caret-down");
+  selectNbPhrasesDiv.appendChild(caretIcon1);
+
+  buildPhraseNbSelectPopup();
+
+  selectNbPhrasesDiv.addEventListener("click", ()=>{
+    
+    if(selectNbPhrasesContainer) {
+      selectNbPhrasesContainer.style.display = "block";
+    }
+
+  })
+
+  const nbOptions = document.querySelectorAll(".selectNbPhrasesContainer div");
+  const selectNbPhrasesContainer = document.querySelector(".selectNbPhrasesContainer");
+
+  nbOptions.forEach(nb => {
+    nb.addEventListener("click", (event)=> {
+      event.stopPropagation(); 
+      selectPhrNb.textContent = nb.textContent;
+      console.log(selectNbPhrasesContainer);
+      selectNbPhrasesContainer.style.display = "none";
+    })
+  })
+
+  
+
+  /*const phrNb5 = document.createElement("option");
+  phrNb5.value = 5;
+  phrNb5.innerText = "5";
+
+  const phrNb10 = document.createElement("option");
+  phrNb10.value = 10;
+  phrNb10.innerText = "10";
+
+  const phrNb15 = document.createElement("option");
+  phrNb15.value = 15;
+  phrNb15.innerText = "15";
+
+  selectPhrNb.appendChild(phrNb5);
+  selectPhrNb.appendChild(phrNb10);
+  selectPhrNb.appendChild(phrNb15);
+*/
+  /*const selectPhrNb = document.createElement("select");
   selectPhrNb.name = "phraseNb";
   selectPhrNb.id = "phraseNb";
   selectNbPhrasesDiv.appendChild(selectPhrNb);
@@ -109,7 +134,7 @@ export async function showFirstPage() {
 
   selectPhrNb.appendChild(phrNb5);
   selectPhrNb.appendChild(phrNb10);
-  selectPhrNb.appendChild(phrNb15);
+  selectPhrNb.appendChild(phrNb15); */
 
   // Start button
 
@@ -122,36 +147,157 @@ export async function showFirstPage() {
   startBtn.innerText = "Start now!";
   startSection.appendChild(startBtn);
 
+  buildTenseSelectPopup(userId);
+
   selectDiv.addEventListener("click", ()=>{
-    showTenseSelectPopup();
+
+    const tenseSelectPopupContainer = document.querySelector(".tenseSelectPopupContainer");
+    if(tenseSelectPopupContainer) {
+      tenseSelectPopupContainer.style.display = "block";
+    }
+
+    const blurContainer = document.querySelector(".blurContainer");
+
+    if(blurContainer) {
+      blurContainer.style.display = "block";
+    }
+
+    
+    
   })
+
+  let tenseName, tensePEl, selectedIcon;
+    
+    const tensePopup = document.querySelector(".tenseSelectPopupContainer");
+
+    const iconListCircle = document.querySelectorAll(".fa-circle");
+
+    let tensesNotLocked = [];
+    iconListCircle.forEach((icon)=> {
+      const parentEl = icon.parentNode;
+      tensesNotLocked.push(parentEl);
+    });
+
+
+    tensesNotLocked.forEach((tense) => {
+      const blurContainer = document.querySelector(".blurContainer");
+      tense.addEventListener("click", ()=> {
+
+        iconListCircle.forEach((icon) => {
+          icon.classList.remove("fa-solid");
+          icon.classList.add("fa-regular");
+        })
+        tensePEl = tense.querySelector("p");
+        selectedIcon = tense.querySelector("i");
+        selectedIcon.classList.remove("fa-regular");
+        selectedIcon.classList.add("fa-solid");
+
+        tenseName = tensePEl.textContent;
+        currentTense.textContent = tenseName;
+        blurContainer.style.display = "none";
+        tensePopup.style.display = "none";
+      })
+
+    })
 }
 
+/*function handleClickOutsideTensePopup(event) {
+  
+  const tenseSelectPopupContainer = document.querySelector(".tenseSelectPopupContainer");
+  const blurContainer = document.querySelector(".blurContainer");
+
+ 
+    if(!tenseSelectPopupContainer.contains(event.target)) {
+      if(blurContainer) {
+        blurContainer.style.display = "none";
+      }
+      if(tenseSelectPopupContainer) {
+        tenseSelectPopupContainer.style.display = "none";
+      }
+    }
+
+
+}*/
 
 
 // Tense select popup
-/*function showTenseSelectPopup() {
+function buildTenseSelectPopup(userId) {
 
   const mainSection = document.querySelector(".mainSection");
   
   const container = document.createElement("div");
+
   mainSection.appendChild(container);
   container.classList.add("tenseSelectPopupContainer");
+  container.style.display = "none";
 
-  const labelPresent = document.createElement("label");
-  labelPresent.textContent = "present (le présent de l'indicatif)"
+  
+    createPopupOption("present", "present (le présent de l'indicatif)", "fa-solid", "fa-circle", "radio-present");
+    createPopupOption("pastComp", "past (le passé composé)", "fa-regular", "fa-circle", "radio-pastcomp");
 
+    if(userId) {
+    createPopupOption("pastImp", "imperfect past (l'imparfait)", "fa-regular", "fa-circle", "radio-pastimp");
+    createPopupOption("future", "future (le futur simple)", "fa-regular", "fa-circle", "radio-future");
+    createPopupOption("subjunctive", "present subjunctive (le subjonctif présent)", "fa-regular", "fa-circle", "radio-pastcomp");
+  } else {
+    createPopupOption("pastImp", "imperfect past (l'imparfait)", "fa-solid", "fa-lock", "lock-pastimp");
+    createPopupOption("future", "future (le futur simple)", "fa-solid", "fa-lock", "lock-future");
+    createPopupOption("subjunctive", "present subjunctive (le subjonctif présent)", "fa-solid", "fa-lock", "lock-pastcomp");
+  }
+  
+  
 
-  const radioPresent = document.createElement("input");
-  radioPresent.setAttribute("type", "radio");
-  radioPresent.setAttribute("id", "present");
-  radioPresent.setAttribute("name", "present");
-  radioPresent.setAttribute("value", "present");
+}
 
-  container.appendChild(radioPresent);
-  container.appendChild(labelPresent);
+function createPopupOption(divClass, tense, radioClass1, radioClass2, radioClass3) {
+  const container = document.querySelector(".tenseSelectPopupContainer");
 
-}*/
+  const div = document.createElement("div");
+  div.classList.add(divClass);
+
+  const label = document.createElement("p");
+
+  label.textContent = tense;
+  
+  const radioBtn = document.createElement("i");
+  radioBtn.classList.add(radioClass1, radioClass2, radioClass3);
+
+  div.appendChild(label);
+  div.appendChild(radioBtn);
+  container.appendChild(div);
+}
+
+function buildPhraseNbSelectPopup() {
+
+  const selectNbPhrasesDiv = document.querySelector(".selectNbPhrasesDiv");
+  
+  const container = document.createElement("div");
+
+  selectNbPhrasesDiv.appendChild(container);
+  container.classList.add("selectNbPhrasesContainer");
+  container.style.display = "none";
+
+  createPhraseNbPopupOption("phrNb5", "5");
+  createPhraseNbPopupOption("phrNb10", "10");
+  createPhraseNbPopupOption("phrNb15", "15");
+
+}
+
+function createPhraseNbPopupOption(divClass, number) {
+  const container = document.querySelector(".selectNbPhrasesContainer");
+
+  const div = document.createElement("div");
+  div.classList.add(divClass);
+
+  const label = document.createElement("p");
+
+  label.textContent = number;
+  
+  
+
+  div.appendChild(label);
+  container.appendChild(div);
+}
 
 // Building the main page structure
 export function buildPageStructure(data) {
