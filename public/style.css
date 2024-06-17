@@ -310,7 +310,7 @@ select {
   min-height: 40px;
   font-family: "Poppins", sans-serif;
   font-size: 0.9em;
-  padding-inline: 30px;
+  padding-inline: 20px;
   padding-block: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -405,8 +405,8 @@ select {
 
 
   width: fit-content;
-  padding-inline: 18px;
-  padding-block: 8px;
+  padding-inline: 20px;
+  padding-block: 4px;
 
   border-radius: 6px;
   border: solid black 1px;
@@ -414,7 +414,11 @@ select {
   color: var(--color-primary);
   background-color: var(--color-secondary);
 
-  z-index: 2;
+  z-index: 1;
+}
+
+.phrNb5, .phrNb10 {
+  border-bottom: solid gray 1px;
 }
 
 
@@ -1046,7 +1050,7 @@ button[disabled] {
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 850px) {
+@media screen and (min-width: 581px) and (max-width: 850px) {
   main {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -1121,7 +1125,7 @@ button[disabled] {
   }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 580px) {
   header {
     border: none;
     margin-block: 10px;

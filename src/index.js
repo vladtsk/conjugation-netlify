@@ -29,6 +29,8 @@ import { generateRulesPopupSection } from "./rulesPopup.js";
 
 import { handleCheckoutClick } from "./subscribe.js";
 
+import { reloadAppOnLogoClick } from "./logoClick.js";
+
 
 
 /*export {
@@ -72,6 +74,7 @@ openLearnPage();
 openStatsPage();
 generateRulesPopupSection();
 handleCheckoutClick();
+reloadAppOnLogoClick();
 
 
 // A function launching the app

@@ -1,6 +1,6 @@
 // Functions used in the first part of the application
 
-import { showFirstPage } from "./pagesetup.js";
+import { buildFirstPage } from "./firstPage.js";
 
 import {
   ref,
@@ -39,7 +39,7 @@ export async function launchFirstPage() {
   
   if(userId && subStatus !== "active") {
     showNoSubMessage(); // to add!
-  } else (showFirstPage(userId));
+  } else (buildFirstPage(userId));
 
   
 

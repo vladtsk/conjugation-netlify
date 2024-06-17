@@ -13,7 +13,8 @@ blurContainer.style.display = "none";
 
 const rulesSection = document.createElement("div");
 rulesSection.classList.add("rulesSection");
-blurContainer.appendChild(rulesSection);
+
+main.appendChild(rulesSection);
 rulesSection.style.display = "none";
 
 const closeBtn = document.createElement("i");
@@ -84,14 +85,16 @@ rulesPronuncP2.innerHTML =
 // Adding an event listener
 
 const rulesBtn = document.querySelector(".rules-button");
-rulesBtn.addEventListener("click", () => {
+rulesBtn.addEventListener("click", (event) => {
   rulesSection.style.display = "block";
   blurContainer.style.display = "block";
+  event.stopPropagation();
 });
 
-closeBtn.addEventListener("click", () => {
+closeBtn.addEventListener("click", (event) => {
   rulesSection.style.display = "none";
   blurContainer.style.display = "none";
+  event.stopPropagation();
 });
 
 }
