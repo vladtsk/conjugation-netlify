@@ -30,7 +30,7 @@ export function addBoxToDb(data, boxes, userId, database) {
      
   for (let i = 0; i < boxes.length; i++) {
     let boxName = "box" + (i + 1);
-    let boxRef = ref(database, "users/" + userId + "/data" + tense + boxName);
+    let boxRef = ref(database, "users/" + userId + "/data/"  + tense + "/" + boxName);
     set(boxRef, boxes[i])
       .then(() => {
         console.log("Box " + boxName + " added successfully do DB");

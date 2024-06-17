@@ -103,7 +103,7 @@ export async function launchApp(data, phraseNumber) {
   const result = await getData(data, boxes, stats, indexArray);
   userId = result.userId;
   stats = result.stats;
-
+  console.log(boxes);
 
   // Initializing the array box1 if there is no previous history (all the phrases go to box1)
   if (data && data.data.length > 0 && boxes.every((box) => box.length === 0)) {

@@ -14,7 +14,11 @@ export function generateElements(data, indexArray, k, score, phraseStats) {
     displayPhrase(data, k);
   } else {
     console.log("No more phrases to practise!");
-    showNoMorePhrasesPage(score, phraseStats);
+    showNoMorePhrasesPage(score, phraseStats); // the data is not added to DB here
+    /*if (userId) {
+      addBoxToDb(data, boxes, userId, database);
+      addStatsToDb(userId, database, stats, phraseStats);
+    }*/
   }
 
   return k;

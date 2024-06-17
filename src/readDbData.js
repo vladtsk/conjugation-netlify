@@ -98,7 +98,6 @@ export async function launchFirstPage() {
     startBtn.addEventListener("click", async() => {
 
       phraseNumber = parseInt(phraseNb.textContent);
-      console.log(phraseNumber);
       
       const tenseValue = getTenseFromSelectElement();
       
@@ -340,6 +339,14 @@ export async function getData(data, boxes, stats, indexArray, userId) {
         database,
         "users/" + userId + "/data/" + "/pastimp"
       );
+      const futureRef = ref(
+        database,
+        "users/" + userId + "/data/" + "/future"
+      );
+      const subjunctiveRef = ref(
+        database,
+        "users/" + userId + "/data/" + "/subjunctive"
+      );
 
       const statsRef = ref(database, "users/" + userId + "/data/" + "/stats");
 
@@ -357,6 +364,16 @@ export async function getData(data, boxes, stats, indexArray, userId) {
         case "imperfect past (l'imparfait)":
           boxes = await readDataFromDb(pastimpRef, boxes);
           break;
+        case "future (le futur simple)":
+          boxes = await readDataFromDb(futureRef, boxes);
+          break;
+        
+        case "present subjunctive (le subjonctif présent)":
+          boxes = await readDataFromDb(subjunctiveRef, boxes);
+          break;
+        
+          default:
+          console.log("unkown tense");
       }
 
       // Checking the first 5 boxes for the repetition date (the last one is not shown by default)
