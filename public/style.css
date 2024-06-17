@@ -762,7 +762,65 @@ button[disabled] {
   font-size: 0.9em;
 }
 
-#finish-btn:hover {
+.subscribeSection {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  margin-inline: auto;
+}
+
+.noSubDiv {
+  display: flex;
+  justify-content: center;
+
+  
+}
+
+.noSubDiv, .premiumStatsContainer {
+  margin-bottom: 40px;
+  font-size: 24px;
+  max-width: 400px;
+  margin-inline: auto;
+
+  padding-inline: 20px;
+  padding-block: 14px;
+
+  border: solid 2px var(--color-primary);
+  border-radius: 6px;
+}
+
+.premiumStatsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+
+.noSubDiv h1, .premiumStatsContainer h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.premiumStatsContainer p {
+
+  margin-top: 10px;
+}
+
+#noSubsubscribeBtn {
+  margin: auto;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 6px;
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+  font-size: 16px;
+}
+
+#finish-btn:hover, #noSubsubscribeBtn:hover {
   background-color: #d90429;
 }
 
@@ -775,7 +833,7 @@ button[disabled] {
   font-size: 24px;
 }
 
-.noMorePhrDiv {
+.noMorePhrDiv, .noSubDiv {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -784,7 +842,7 @@ button[disabled] {
   font-size: 24px;
 }
 
-.noMorePhrExpl {
+.noMorePhrExpl, .noSubExpl {
   font-size: 16px;
   margin-top: 20px;
   max-width: 280px;
@@ -1070,9 +1128,6 @@ button[disabled] {
     max-width: 200px;
   }
 
-  .content-area {
-    margin: 0;
-  }
 
   .mainSection {
     margin-top: 0px;

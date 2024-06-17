@@ -1,7 +1,7 @@
 import { buildTenseSelectPopup, buildPhraseNbSelectPopup  } from "./firstPageSelectPopups.js";
 // Building the first page
 export async function buildFirstPage(userId) {
-    //const main = document.querySelector("main");
+    
     const contentArea = document.querySelector(".content-area");
   
     // Section containing the main element

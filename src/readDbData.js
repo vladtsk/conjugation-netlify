@@ -14,6 +14,8 @@ import {
 
 import { launchApp } from "./index.js";
 
+import { showNoSubMessage } from "./noSubPageMessage.js";
+
 let auth, database;
 
 async function getAuthDatabase() {
@@ -38,7 +40,7 @@ export async function launchFirstPage() {
   }*/
   
   if(userId && subStatus !== "active") {
-    showNoSubMessage(); // to add!
+    showNoSubMessage(); 
   } else (buildFirstPage(userId));
 
   

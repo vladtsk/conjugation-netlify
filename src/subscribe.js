@@ -9,5 +9,14 @@ export function handleCheckoutClick() {
 }
 }
 
-
+export function handleCheckoutClickNoSub() {
+  const noSubsubscribeBtn = document.getElementById("noSubsubscribeBtn");
+  if(noSubsubscribeBtn) {
+    noSubsubscribeBtn.addEventListener("click", () => {
+    
+  window.location = "../checkout.html";
+     
+  });
+}
+}
 
