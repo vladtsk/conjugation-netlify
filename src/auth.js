@@ -37,6 +37,7 @@ export async function checkAuthState() {
   const logInForm = document.querySelector(".logInForm");
   const logInButtonMenu = document.getElementById("logInButtonMenu");
   const logOutButton = document.getElementById("logOutButton");
+  const subscribeBtn = document.getElementById("subscribeBtn");
   //const mainSection = document.querySelector(".mainSection");
   
 
@@ -55,11 +56,13 @@ export async function checkAuthState() {
 
       logInButtonMenu.style.display = "none";
       logOutButton.style.display = "inline-block";
+      subscribeBtn.style.display = "none";
 
       //mainSection.style.display = "block";
     } else {
       logOutButton.style.display = "none";
       logInButtonMenu.style.display = "inline-block";
+      subscribeBtn.style.display = "inline-block";
     }
   });
 }

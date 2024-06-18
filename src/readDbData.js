@@ -70,28 +70,6 @@ export async function launchFirstPage() {
   );
   const footer = document.querySelector("footer");
 
-  // Adding an event listener in case the user changes the tense
-  /*if (selectElement) {
-    selectElement.addEventListener("change", async () => {
-      const tenseValue = getTenseFromSelectElement();
-      try {
-        response = await fetch(`../src/${tenseValue}.json`);
-        jsonData = await response.json();
-      } catch(error) {
-        console.error("Couldn't fetch tense data ", error);
-      }
-      
-    });
-  }*/
-
-   
-
-  /* Customer selecting the number of phrases
-  if (selectPhrNb) {
-    selectPhrNb.addEventListener("change", () => {
-      phraseNumber = selectPhrNb.value;
-    });
-  }*/
 
   // Adding an event listener on the start button
  
@@ -166,6 +144,7 @@ async function getJsonData(tenseValue) {
 
 
 function readDataFromDb(timeRef, boxes) {
+
   return new Promise((resolve) => {
     onValue(
       timeRef,
@@ -279,6 +258,8 @@ function getUserEmail(userId) {
 export async function getSubscriptionStatus() {
   let subStatus = "";
   let userId;
+  await getAuthDatabase();
+  
   try {
     userId = await getUser();
    

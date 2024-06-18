@@ -31,6 +31,8 @@ import { handleCheckoutClick } from "./subscribe.js";
 
 import { reloadAppOnLogoClick } from "./logoClick.js";
 
+import { getSubscriptionStatus } from "./readDbData.js";
+
 
 
 /*export {
@@ -70,7 +72,12 @@ handleLogInLogOutClicks();
 
 launchFirstPage();
 
-openLearnPage();
+
+const { subStatus, userId } = await getSubscriptionStatus();
+
+openLearnPage(userId, subStatus);
+
+
 openStatsPage();
 generateRulesPopupSection();
 handleCheckoutClick();

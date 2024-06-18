@@ -12,29 +12,9 @@ import { generateImparfaitPage } from "./imparfait-page.js";
 
 
 
-export function generateLearnPage() {
+export function generateLearnPage(userId, subStatus) {
   const contentArea = document.querySelector(".content-area");
   contentArea.innerHTML = "";
-
-  /*const contentNav = document.createElement("div");
-  contentNav.classList.add("contentNav");
-  contentArea.appendChild(contentNav);
-
-  const verbConjugationLink = document.createElement("a");
-  verbConjugationLink.textContent = "Verb conjugation";
-
-  const iconSpan = document.createElement("span");
-  iconSpan.classList.add("icon");
-  const iconI = document.createElement("i");
-  iconI.classList.add("fas", "fa-chevron-right");
-  iconSpan.appendChild(iconI);
-
-  const introLink = document.createElement("a");
-  introLink.textContent = "Intro";
-
-  contentNav.appendChild(verbConjugationLink);
-  contentNav.appendChild(iconSpan);
-  contentNav.appendChild(introLink);*/
 
   // Create menu div
   const menu = document.createElement("div");
@@ -95,13 +75,24 @@ verb conjugation`;
 
   const presentSubGroup3 = document.createElement("a");
   presentSubGroup3.classList.add("present-submenu", "present-group3");
-  presentSubGroup3.innerHTML = `<i
-  class="fa-solid fa-circle-chevron-right"></i>Group 3`;
+  
+  console.log(userId, subStatus)
+  if(userId && subStatus === "active") {
+    console.log("no lock")
+      presentSubGroup3.innerHTML = `<i class="fa-solid fa-circle-chevron-right"></i>Group 3`;
+    } else { 
+      presentSubGroup3.innerHTML = `<i class="fa-solid fa-lock"></i>Group 3`;
+     }
+  
 
   const presentSubIrregular = document.createElement("a");
   presentSubIrregular.classList.add("present-submenu", "present-irregular");
-  presentSubIrregular.innerHTML = `<i
-  class="fa-solid fa-circle-chevron-right"></i>Irregular Verbs`;
+  
+  if(userId && subStatus === "active") {
+    presentSubIrregular.innerHTML = `<i class="fa-solid fa-circle-chevron-right"></i>Irregular Verbs`;
+  } else {
+    presentSubIrregular.innerHTML = `<i class="fa-solid fa-lock"></i>Irregular Verbs`;
+  }
 
   presentSubContainer.appendChild(presentSubIntro);
   presentSubContainer.appendChild(presentSubGroup1);
@@ -122,12 +113,18 @@ verb conjugation`;
   pastLine.classList.add("past-line");
   pastMenu.appendChild(pastLine);
 
-  pastLine.innerHTML = `<i class='fas fa-compass'></i>The Past Tense "Passé composé"</div>`;
+  if(userId && subStatus === "active") {
+    pastLine.innerHTML = `<i class='fas fa-compass'></i>The Past Tense "Passé composé"</div>`;
 
-  const plusIcon2 = document.createElement("i");
-  plusIcon2.classList.add("fa-solid", "fa-square-plus");
+    const plusIcon2 = document.createElement("i");
+    plusIcon2.classList.add("fa-solid", "fa-square-plus");
 
   pastMenu.appendChild(plusIcon2);
+  } else {
+    pastLine.innerHTML = `<i class='fa-solid fa-lock'></i>The Past Tense "Passé composé"</div>`;
+  }
+
+  
 
   const pastSubContainer = document.createElement("div");
   pastSubContainer.classList.add("past-subcontainer");
@@ -155,11 +152,16 @@ verb conjugation`;
 
   const imperfectLink = document.createElement("a");
   imperfectLink.classList.add("imperfect-menu");
-  imperfectLink.innerHTML = `<i class='fa-solid fa-house'></i>The imperfect past tense`;
+
+  if(userId && subStatus === "active") {
+    imperfectLink.innerHTML = `<i class='fa-solid fa-house'></i>The imperfect past tense`;
+  } else {
+    imperfectLink.innerHTML = `<i class='fa-solid fa-lock'></i>The imperfect past tense`;
+  }
 
   menu.appendChild(imperfectLink);
 
-  manageLearnMenu();
+  manageLearnMenu(userId, subStatus);
 
   introMenuLink.addEventListener("click", ()=> {
     generateIntroPage();
@@ -177,17 +179,23 @@ verb conjugation`;
     generatePresentGroup2Page();
   })
 
-  presentSubGroup3.addEventListener("click", ()=> {
-    generatePresentGroup3Page();
-  })
-  presentSubIrregular.addEventListener("click", ()=> {
+  if(userId && subStatus === "active") {
+    presentSubGroup3.addEventListener("click", ()=> {
+      generatePresentGroup3Page();
+    })
+  }
+  
+  if(userId && subStatus === "active") {
+    presentSubIrregular.addEventListener("click", ()=> {
     generatePresentIrregularPage();
   })
+}
 
-  pastSubIntro.addEventListener("click", ()=> {
-    generatePastCompPage();
-
+  if(userId && subStatus === "active") {
+    pastSubIntro.addEventListener("click", ()=> {
+      generatePastCompPage();
   })
+  }
 
   pastSubAux.addEventListener("click", ()=> {
     generatePastCompAuxPage();
@@ -198,7 +206,9 @@ verb conjugation`;
       generatePastCompParticPage();
     })
 
-    imperfectLink.addEventListener("click", ()=> {
-      generateImparfaitPage();
+    if(userId && subStatus === "active") {
+      imperfectLink.addEventListener("click", ()=> {
+        generateImparfaitPage();
     })
+  }
 }

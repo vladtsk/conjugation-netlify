@@ -99,12 +99,14 @@ h3 {
   color: var(--color-tertiary);
 }
 
-.fa-circle-chevron-right {
+.fa-circle-chevron-right, .fa-lock {
   display: inline-block;
   margin-right: 10px;
   font-size: 16px;
   color: var(--color-tertiary);
 }
+
+ 
 
 .present-menu,
 .past-menu {

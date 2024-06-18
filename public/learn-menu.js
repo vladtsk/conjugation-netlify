@@ -1,4 +1,4 @@
-export function manageLearnMenu() {
+export function manageLearnMenu(userId, subStatus) {
 
 
 const presentMenu = document.querySelector(".present-menu");
@@ -6,9 +6,43 @@ const presentSubcontainer = document.querySelector(".present-subcontainer");
 
 const pastMenu = document.querySelector(".past-menu");
 const pastSubcontainer = document.querySelector(".past-subcontainer");
-console.log(pastSubcontainer);
 
-const menuItemsInfo = [
+
+presentMenu.addEventListener("click", () => {
+  if (presentSubcontainer.style.display === "none") {
+    presentSubcontainer.style.display = "block";
+    presentMenu.innerHTML = `<div class='present-line'><i class='fa-regular fa-calendar-check'></i>
+    The Present Tense</div> <i class='fa-solid fa-circle-chevron-up'></i>
+</div>`;
+  } else {
+    presentSubcontainer.style.display = "none";
+    presentMenu.innerHTML = `<div class="present-line"><i class="fa-regular fa-calendar-check"></i>
+    The Present Tense</div> <i class="fa-solid fa-square-plus"></i>
+</div>`;
+  }
+});
+
+if(userId && subStatus === "active") {
+  pastMenu.addEventListener("click", () => {
+    if (pastSubcontainer.style.display === "none") {
+      pastSubcontainer.style.display = "block";
+      pastMenu.innerHTML = `<div class='present-line'><i class='fa-regular fa-compass'></i>
+      The Past Tense "Passé composé"</div> <i class='fa-solid fa-circle-chevron-up'></i>
+  </div>`;
+    } else {
+      pastSubcontainer.style.display = "none";
+      pastMenu.innerHTML = `<div class="present-line"><i class="fa-regular fa-compass"></i>
+      The Past Tense "Passé composé"</div> <i class="fa-solid fa-square-plus"></i>
+  </div>`;
+    }
+  });
+}
+
+//if(userId && subStatus === "active") {
+
+}
+
+/*const menuItemsInfo = [
   {
     tense: "The Present Tense",
     menu: presentMenu,
@@ -20,13 +54,15 @@ const menuItemsInfo = [
     menu: pastMenu,
     subContainer: pastSubcontainer,
     icon: "fa-compass",
+    iconLock: "fa-lock"
   },
 ];
 
-const calendar = document.querySelector(".fa-calendar-check");
+
 for (let i = 0; i < menuItemsInfo.length; i++) {
   
   menuItemsInfo[i].menu.addEventListener("click", () => {
+    
     if (menuItemsInfo[i].subContainer.style.display === "none") {
       menuItemsInfo[i].subContainer.style.display = "flex";
       menuItemsInfo[
@@ -44,24 +80,4 @@ for (let i = 0; i < menuItemsInfo.length; i++) {
     }
   });
 }
-
-
-
-
-}
-
-/*
-presentMenu.addEventListener("click", () => {
-  if (presentSubcontainer.style.display === "none") {
-    presentSubcontainer.style.display = "block";
-    presentMenu.innerHTML = `<div class='present-line'><i class='fa-regular fa-calendar-check'></i>
-    The Present Tense</div> <i class='fa-solid fa-circle-chevron-up'></i>
-</div>`;
-  } else {
-    presentSubcontainer.style.display = "none";
-    presentMenu.innerHTML = `<div class="present-line"><i class="fa-regular fa-calendar-check"></i>
-    The Present Tense</div> <i class="fa-solid fa-square-plus"></i>
-</div>`;
-  }
-});
 */
