@@ -44,7 +44,7 @@ header {
   padding-block: 10px;
   color: var(--color-primary);
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 4fr;
 
   font-family: "Poppins", sans-serif;
 
@@ -67,7 +67,8 @@ header {
 nav {
   display: flex;
   align-items: center;
-  margin-right: 20px;
+  justify-content: flex-end;
+  margin-right: 60px;
 }
 
 .menu {
@@ -1117,7 +1118,11 @@ button[disabled] {
 
   header {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  nav {
+    margin-right: 25px;
   }
 
   .logo {
@@ -1191,6 +1196,10 @@ button[disabled] {
     padding: 0;
   }
 
+  nav {
+    margin-right: 10px;
+  }
+
   main {
     display: flex;
     margin: 0;
@@ -1200,7 +1209,7 @@ button[disabled] {
   .logo {
     width: 20%;
     margin: 0;
-    padding-left: 20px;
+    padding-left: 10px;
     padding-block: 10px;
   }
 

@@ -2,33 +2,57 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanks for your order!</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./public/checkout.css">
+    
     <script src="client.js" defer></script>
 </head>
 
 <body>
     <section>
-        <div class="product Box-root">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px"
-                height="16px" viewBox="0 0 14 16" version="1.1">
-                <defs />
-                <g id="Flow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g id="0-Default" transform="translate(-121.000000, -40.000000)" fill="#E184DF">
-                        <path
-                            d="M127,50 L126,50 C123.238576,50 121,47.7614237 121,45 C121,42.2385763 123.238576,40 126,40 L135,40 L135,56 L133,56 L133,42 L129,42 L129,56 L127,56 L127,50 Z M127,48 L127,42 L126,42 C124.343146,42 123,43.3431458 123,45 C123,46.6568542 124.343146,48 126,48 L127,48 Z"
-                            id="Pilcrow" />
-                    </g>
-                </g>
-            </svg>
-            <div class="description Box-root">
-                <h3>Subscription to Starter plan successful!</h3>
+            <div class="sub-success">
+                <h2>Congratulations! You have successfully subscribed to a premium plan.</h2>
+                
+                <div>
+                <p>You can now create an account or log in to an existing account and use all the features of the app!</p>
+                <p>Click the <b>'Login/signup'</b> button at the top of the main page and enter your email and password <u>if you already have an account</u>. 
+                </p> 
+                <p>Click on <b>'Sign up'</b> if you don't have an account yet. Make sure you use the same email you used during the payment process. </p>
+                </div>
+
+                <h3>You can follow the video tutorial below.</h3>
+                <video src="./public/signup.mp4" autoplay muted loop playsinline></video>
+                <div>
+                    <p>Click the button below to open the main page.</p>
+
+                </div>
+
+                <div class="main-page-btn"><a href="./index">Main page</a></div>
             </div>
         </div>
-        <form action="/create-portal-session" method="POST">
+        <!--<form class="signUpForm">
+            <h1>Sign up</h1>
+            <section>
+                <p><label for="name">Name:</label><input type="text" id="name" required="true"></p>
+                <p><label for="signUpEmail">Email:</label><input type="email" id="signUpEmail" required="true"></p>
+                <p><label for="signUpPassword">Password:</label>
+                    <input type="password" id="signUpPassword" required="true"></p>
+                    <p class="signUpErrorMsg"></p>
+                </section>
+                <section class="btn-section">
+                    <p>
+                        <button type="submit" id="signUpButton">Sign Up</button>
+                    </p></section><section class="switch-section">
+                        <p>Already have an account?</p>
+                        <p><a id="logInSwitch">Log in</a></p>
+                    </section>
+                </form>-->
+        <!--<form action="/create-portal-session" method="POST">
             <input type="hidden" id="session-id" name="session_id" value="" />
             <button id="checkout-and-portal-button" type="submit">Manage your billing information</button>
-        </form>
+        </form> -->
     </section>
 </body>
 
