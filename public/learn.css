@@ -103,9 +103,15 @@ h3 {
   display: inline-block;
   margin-right: 10px;
   font-size: 16px;
-  color: var(--color-tertiary);
 }
 
+.fa-circle-chevron-right {
+  color: var(--color-primary);
+}
+
+.fa-lock {
+  color: var(--color-tertiary);
+}
  
 
 .present-menu,

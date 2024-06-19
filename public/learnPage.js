@@ -76,7 +76,7 @@ verb conjugation`;
   const presentSubGroup3 = document.createElement("a");
   presentSubGroup3.classList.add("present-submenu", "present-group3");
   
-  console.log(userId, subStatus)
+  console.log("line 79", userId, subStatus);
   if(userId && subStatus === "active") {
     console.log("no lock")
       presentSubGroup3.innerHTML = `<i class="fa-solid fa-circle-chevron-right"></i>Group 3`;

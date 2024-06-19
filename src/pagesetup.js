@@ -302,10 +302,11 @@ export function showResultPage(score, phraseStats, stats, userId) {
       chart = null;
     }
 
-    launchFirstPage();
     sidebarContainer.style.display = "flex";
     sidebarTabletContainer.style.display = "flex";
     footer.style.display = "block";
+    launchFirstPage();
+  
   });
 }
 
@@ -345,6 +346,12 @@ export function showNoMorePhrasesPage(score, phraseStats) {
     scoreDiv.appendChild(scoreMsg);
   }
 
+  const sidebarContainer = document.querySelector(".sidebarContainer");
+  const sidebarTabletContainer = document.querySelector(
+    ".sidebarTabletContainer"
+  );
+  const footer = document.querySelector("footer");
+  
   const restartSection = document.createElement("div");
   restartSection.classList.add("restart");
   mainSection.appendChild(restartSection);
@@ -363,7 +370,7 @@ export function showNoMorePhrasesPage(score, phraseStats) {
 
   showSummaryBtn.addEventListener("click", () => {
   
-    const  blurContainer = document.querySelector(".blurContainer");
+    const blurContainer = document.querySelector(".blurContainer");
 
     if (phraseStats.length != 0) {
       showSummary(phraseStats);
@@ -412,6 +419,9 @@ export function showNoMorePhrasesPage(score, phraseStats) {
       chart = null;
     }
 
+    sidebarContainer.style.display = "flex";
+    sidebarTabletContainer.style.display = "flex";
+    footer.style.display = "block";
     launchFirstPage();
   });
 }
