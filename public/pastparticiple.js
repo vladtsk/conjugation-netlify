@@ -1,3 +1,5 @@
+import { handleContentNavClicks } from "./contentNav.js";
+
 export function generatePastCompParticPage() {
     const contentArea = document.querySelector(".content-area");
     contentArea.innerHTML = "";
@@ -8,6 +10,7 @@ export function generatePastCompParticPage() {
   
     const verbConjugationLink = document.createElement("a");
     verbConjugationLink.textContent = "Verb conjugation";
+    verbConjugationLink.classList.add("verbConjugationLink");
   
     const iconSpan = document.createElement("span");
     iconSpan.classList.add("icon");
@@ -16,8 +19,8 @@ export function generatePastCompParticPage() {
     iconSpan.appendChild(iconI);
   
     const pastTenseLink = document.createElement("a");
-  
     pastTenseLink.textContent = "Passé Composé";
+    pastTenseLink.classList.add("pastTenseLink");
 
     const iconSpan2 = document.createElement("span");
     iconSpan.classList.add("icon");
@@ -499,6 +502,7 @@ pageContent.appendChild(tableIrreg);
 
 
     
-    contentArea.appendChild(pageContent);
-  
+contentArea.appendChild(pageContent);
+
+handleContentNavClicks();
   }

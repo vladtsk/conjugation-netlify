@@ -7,6 +7,9 @@ const presentSubcontainer = document.querySelector(".present-subcontainer");
 const pastMenu = document.querySelector(".past-menu");
 const pastSubcontainer = document.querySelector(".past-subcontainer");
 
+const futureMenu = document.querySelector(".future-menu");
+const futureSubcontainer = document.querySelector(".future-subcontainer");
+
 
 presentMenu.addEventListener("click", () => {
   if (presentSubcontainer.style.display === "none") {
@@ -33,6 +36,22 @@ if(userId && subStatus === "active") {
       pastSubcontainer.style.display = "none";
       pastMenu.innerHTML = `<div class="present-line"><i class="fa-regular fa-compass"></i>
       The Past Tense "Passé composé"</div> <i class="fa-solid fa-square-plus"></i>
+  </div>`;
+    }
+  });
+}
+
+if(userId && subStatus === "active") {
+  futureMenu.addEventListener("click", () => {
+    if (futureSubcontainer.style.display === "none") {
+      futureSubcontainer.style.display = "block";
+      futureMenu.innerHTML = `<div class='future-line'><i class='fa-regular fa-compass'></i>
+      The simple future tense (le futur simple)</div> <i class='fa-solid fa-circle-chevron-up'></i>
+  </div>`;
+    } else {
+      futureSubcontainer.style.display = "none";
+      futureMenu.innerHTML = `<div class="present-line"><i class="fa-regular fa-compass"></i>
+      The simple future tense (le futur simple)</div> <i class="fa-solid fa-square-plus"></i>
   </div>`;
     }
   });

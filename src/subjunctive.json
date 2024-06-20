@@ -57,7 +57,248 @@
         "answer": "sois",
         "fullPhrase": "Il faudra que tu sois en avance.",
         "translation": "You will have to be early."
+      },
+      {
+        "id": 8,
+        "verb": "faire",
+        "phrase": "Il faut que nous ____ des exercices.",
+        "answer": "fassions",
+        "fullPhrase": "Il faut que nous fassions des exercices.",
+        "translation": "We must do exercises."
+      },
+      {
+        "id": 9,
+        "verb": "savoir",
+        "phrase": "Il est possible qu'elle ____ tout.",
+        "answer": "sache",
+        "fullPhrase": "Il est possible qu'elle sache tout.",
+        "translation": "It's possible that she knows everything."
+      },
+      {
+        "id": 10,
+        "verb": "partir",
+        "phrase": "Il est possible que nous ____ lundi.",
+        "answer": "partions",
+        "fullPhrase": "Il est possible que nous partions lundi.",
+        "translation": "It's possible that we will leave on Monday."
+      },
+      {
+        "id": 11,
+        "verb": "être",
+        "phrase": "Il faut que tu ____ à l'heure.",
+        "answer": "sois",
+        "fullPhrase": "Il faut que tu sois à l'heure.",
+        "translation": "You must be on time."
+      },
+      {
+        "id": 12,
+        "verb": "venir",
+        "phrase": "J'aimerais que tu ____ avec moi ce soir.",
+        "answer": "viennes",
+        "fullPhrase": "J'aimerais que tu viennes avec moi ce soir.",
+        "translation": "I would like you to come with me tonight."
+      },
+      {
+        "id": 13,
+        "verb": "pouvoir",
+        "phrase": "Je doute qu'elle ____ accepter cela.",
+        "answer": "puisse",
+        "fullPhrase": "Je doute qu'elle puisse accepter cela.",
+        "translation": "I doubt that she can accept that."
+      },
+      {
+        "id": 14,
+        "verb": "être",
+        "phrase": "Je suis content que tu ____ là.",
+        "answer": "sois",
+        "fullPhrase": "Je suis content que tu sois là.",
+        "translation": "I'm glad that you are here."
+      },
+      {
+        "id": 15,
+        "verb": "pouvoir",
+        "phrase": "C'est dommage que tu ne ____ pas venir demain!",
+        "answer": "puisses",
+        "fullPhrase": "C'est dommage que tu ne puisses pas venir demain!",
+        "translation": "It's a shame that you can't come tomorrow!"
+      },
+      {
+        "id": 16,
+        "verb": "pouvoir",
+        "phrase": "Je ne crois pas que tu ____ réussir.",
+        "answer": "puisses",
+        "fullPhrase": "Je ne crois pas que tu puisses réussir.",
+        "translation": "I don't believe you can succeed."
+      },
+      {
+        "id": 17,
+        "verb": "finir",
+        "phrase": "Il ne faut pas que tu ____ trop tard.",
+        "answer": "finisses",
+        "fullPhrase": "Il ne faut pas que tu finisses trop tard.",
+        "translation": "You must not finish too late."
+      },
+      {
+        "id": 18,
+        "verb": "mettre",
+        "phrase": "J'ai peur qu'ils ____ trop de temps.",
+        "answer": "mettent",
+        "fullPhrase": "J'ai peur qu'ils mettent trop de temps.",
+        "translation": "I'm afraid they will take too long."
+      },
+      {
+        "id": 19,
+        "verb": "revenir",
+        "phrase": "Il est possible que tu ____ dans quelques jours.",
+        "answer": "reviennes",
+        "fullPhrase": "Il est possible que tu reviennes dans quelques jours.",
+        "translation": "It's possible that you will come back in a few days."
+      },
+      {
+        "id": 20,
+        "verb": "prendre",
+        "phrase": "Il faut qu'elle ____ ses affaires.",
+        "answer": "prenne",
+        "fullPhrase": "Il faut qu'elle prenne ses affaires.",
+        "translation": "She must take her things."
+      },
+      {
+        "id": 21,
+        "verb": "partir",
+        "phrase": "Il est possible que le train ____ en retard.",
+        "answer": "parte",
+        "fullPhrase": "Il est possible que le train parte en retard.",
+        "translation": "It's possible that the train will leave late."
+      },
+      {
+        "id": 22,
+        "verb": "être",
+        "phrase": "Je ne crois pas que ce ____ possible.",
+        "answer": "soit",
+        "fullPhrase": "Je ne crois pas que ce soit possible.",
+        "translation": "I don't believe that's possible."
+      },
+      {
+        "id": 23,
+        "verb": "avoir",
+        "phrase": "Je ne pense pas qu'il y ____ une autre solution.",
+        "answer": "ait",
+        "fullPhrase": "Je ne pense pas qu'il y ait une autre solution.",
+        "translation": "I don't think there is another solution."
+      },
+      {
+        "id": 24,
+        "verb": "aller",
+        "phrase": "Il faut que j'y ____.",
+        "answer": "aille",
+        "fullPhrase": "Il faut que j'y aille.",
+        "translation": "I have to go."
+      },
+      {
+        "id": 25,
+        "verb": "dormir",
+        "phrase": "Il est nécessaire que tu ____.",
+        "answer": "dormes",
+        "fullPhrase": "Il est nécessaire que tu dormes.",
+        "translation": "You need to sleep."
+      },
+      {
+        "id": 26,
+        "verb": "partir",
+        "phrase": "Il est indispensable que cette lettre ____ avant 18 heures.",
+        "answer": "parte",
+        "fullPhrase": "Il est indispensable que cette lettre parte avant 18 heures.",
+        "translation": "It is essential that this letter leaves before 6 p.m."
+      },
+      {
+        "id": 27,
+        "verb": "être",
+        "phrase": "Elle est fâchée que je ne ____ pas d'accord avec elle.",
+        "answer": "sois",
+        "fullPhrase": "Elle est fâchée que je ne sois pas d'accord avec elle.",
+        "translation": "She is angry that I do not agree with her."
+      },
+      {
+        "id": 28,
+        "verb": "vouloir",
+        "phrase": "Je comprends que tu ____ y aller.",
+        "answer": "veuilles",
+        "fullPhrase": "Je comprends que tu veuilles y aller.",
+        "translation": "I understand that you want to go."
+      },
+      {
+        "id": 29,
+        "verb": "écrire",
+        "phrase": "C'est bien que tu lui ____.",
+        "answer": "écrives",
+        "fullPhrase": "C'est bien que tu lui écrives.",
+        "translation": "It's good that you write to him/her."
+      },
+      {
+        "id": 30,
+        "verb": "faire",
+        "phrase": "On préfère qu'il ____ chaud.",
+        "answer": "fasse",
+        "fullPhrase": "On préfère qu'il fasse chaud.",
+        "translation": "We prefer the weather to be hot."
+      },
+      {
+        "id": 31,
+        "verb": "aller",
+        "phrase": "Elle voudrait que tu ____ l'attendre.",
+        "answer": "ailles",
+        "fullPhrase": "Elle voudrait que tu ailles l'attendre.",
+        "translation": "She would like you to go wait for him/her."
+      },
+      {
+        "id": 32,
+        "verb": "connaître",
+        "phrase": "Je cherche un traducteur qui ____ l'anglais, le français et le japonais.",
+        "answer": "connaisse",
+        "fullPhrase": "Je cherche un traducteur qui connaisse l'anglais, le français et le japonais.",
+        "translation": "I'm looking for a translator who knows English, French, and Japanese."
+      },
+      {
+        "id": 33,
+        "verb": "pouvoir",
+        "phrase": "J'aimerais trouver un assistant sur qui je ____ compter.",
+        "answer": "puisse",
+        "fullPhrase": "J'aimerais trouver un assistant sur qui je puisse compter.",
+        "translation": "I would like to find an assistant I can rely on."
+      },
+      {
+        "id": 34,
+        "verb": "revenir",
+        "phrase": "On attendra jusqu'à ce que tu ____.",
+        "answer": "reviennes",
+        "fullPhrase": "On attendra jusqu'à ce que tu reviennes.",
+        "translation": "We will wait until you come back."
+      },
+      {
+        "id": 35,
+        "verb": "apprendre",
+        "phrase": "Il a préféré leur dire la vérité avant qu'ils l'____ par quelqu'un d'autre.",
+        "answer": "apprennent",
+        "fullPhrase": "Il a préféré leur dire la vérité avant qu'ils l'apprennent par quelqu'un d'autre.",
+        "translation": "He preferred to tell them the truth before they learned it from someone else."
+      },
+      {
+        "id": 36,
+        "verb": "pouvoir",
+        "phrase": "Nous lui avons donné des adresses pour qu'il ____ trouver un hôtel facilement.",
+        "answer": "puisse",
+        "fullPhrase": "Nous lui avons donné des adresses pour qu'il puisse trouver un hôtel facilement.",
+        "translation": "We gave him addresses so he can find a hotel easily."
+      },
+      {
+        "id": 37,
+        "verb": "avoir",
+        "phrase": "Nous partirons à condition qu'il y ____ de la place dans l'avion.",
+        "answer": "ait",
+        "fullPhrase": "Nous partirons à condition qu'il y ait de la place dans l'avion.",
+        "translation": "We will leave provided there is space on the plane."
       }
+      
     ]
   }
   

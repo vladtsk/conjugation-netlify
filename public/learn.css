@@ -27,8 +27,8 @@ h3 {
   text-align: left;
 }
 
-.page-content, .menu {
-  margin-top: 0px;
+.menu, .contentNav {
+  margin-top: 20px;
 }
 
 /* Styling the menu on the Learn page */
@@ -48,7 +48,9 @@ h3 {
 .past-menu,
 .present-submenu,
 .past-submenu,
-.imperfect-menu {
+.imperfect-menu,
+.future-menu,
+.future-submenu {
   padding-inline: 20px;
   border-radius: 5px;
 }
@@ -56,21 +58,24 @@ h3 {
 .intro-menu,
 .present-menu,
 .past-menu,
-.imperfect-menu {
+.imperfect-menu,
+.future-menu {
   /*background-color: var(--color-primary);
   color: var(--color-secondary);*/
   border: solid 2px var(--color-primary);
 }
 
 .present-submenu,
-.past-submenu {
+.past-submenu,
+.future-submenu {
   border: solid var(--color-primary) 2px;
 }
 
 .intro-menu,
 .present-menu,
 .past-menu,
-.imperfect-menu {
+.imperfect-menu,
+.future-menu {
   font-size: 18px;
   margin-top: 20px;
   padding-block: 20px;
@@ -78,7 +83,8 @@ h3 {
 }
 
 .present-submenu,
-.past-submenu {
+.past-submenu,
+.future-submenu {
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -115,7 +121,8 @@ h3 {
  
 
 .present-menu,
-.past-menu {
+.past-menu,
+.future-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -125,7 +132,8 @@ h3 {
 
 
 .present-menu i,
-.past-menu i {
+.past-menu i,
+.future-menu i {
   display: inline-block;
 }
 
@@ -319,6 +327,18 @@ th {
   padding-inline: 20px;
 }
 
+
+.premium {
+  border: solid gray 1px;
+  text-align: center;
+
+}
+
+.locked {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Responsive design */
 
 @media screen and (min-width: 600px) and (max-width: 850px) {
@@ -345,6 +365,7 @@ th {
 
   .menu {
     padding-inline: 20px;
+    padding-bottom: 100px;
     
   }
 

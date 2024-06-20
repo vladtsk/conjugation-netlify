@@ -169,8 +169,7 @@ export async function buildFirstPage(userId) {
     const blurContainer = document.querySelector(".blurContainer");
     const selectDiv = document.querySelector(".selectDiv");
     const selectNbPhrasesContainer = document.querySelector(".selectNbPhrasesContainer");
-  
-    console.log(event.target)
+
    
       if(tenseSelectPopupContainer && tenseSelectPopupContainer.style.display !== "none" && !tenseSelectPopupContainer.contains(event.target) && event.target !== selectDiv) {
         if(blurContainer) {

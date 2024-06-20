@@ -1,3 +1,5 @@
+import { handleContentNavClicks } from "./contentNav.js";
+
 export function generateImparfaitPage() {
     const contentArea = document.querySelector(".content-area");
     contentArea.innerHTML = "";
@@ -8,6 +10,7 @@ export function generateImparfaitPage() {
   
     const verbConjugationLink = document.createElement("a");
     verbConjugationLink.textContent = "Verb conjugation";
+    verbConjugationLink.classList.add("verbConjugationLink");
   
     const iconSpan = document.createElement("span");
     iconSpan.classList.add("icon");
@@ -148,5 +151,7 @@ const pronouncTipDiv = document.createElement("div");
 
 
 contentArea.appendChild(pageContent);
+
+handleContentNavClicks();
   
   }

@@ -1,7 +1,7 @@
 import { generateLearnPage } from "./learnPage.js";
 import { getSubscriptionStatus } from "../src/readDbData.js";
 
-export function openLearnPage(userId, subStatus) {
+export function openLearnPage() {
   const learnBtn = document.querySelectorAll(".learn");
   const practiceBtn = document.querySelectorAll(".practice");
   const stats = document.querySelectorAll(".stats");
@@ -26,7 +26,6 @@ learnBtn.forEach(btn => btn.addEventListener("click", async () => {
      
   })
 
-  console.log("line 26 in LearnPage Manager", userId, subStatus)
   generateLearnPage(userId, subStatus);
 })
 );

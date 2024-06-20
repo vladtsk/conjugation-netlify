@@ -176,7 +176,7 @@ async function userLogIn() {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log("error message: ", errorCode + errorMessage);
+      console.error("error message: ", errorCode + errorMessage);
 
       const logInErrorMsgP = document.querySelector(".logInErrorMsg");
       if (logInErrorMsgP) {
@@ -231,11 +231,9 @@ if(contentArea) {
           generateLogInForm();
           break;
           case "signUpButton":
-            console.log("signUpButton");
             userSignUp();
             break;
           case "logInButton":
-            console.log("loginButton");
             const logInErrorMsgP = document.querySelector(".logInErrorMsg");
             if (logInErrorMsgP) {
             logInErrorMsgP.innerHTML = "";
@@ -248,23 +246,13 @@ if(contentArea) {
             break;
           case "forgotPass":
             generatePassResetForm();
-            /*const passResetForm = document.querySelector(".passResetForm");
-            console.log(passResetForm);
-
-            if(passResetForm) {
-              passResetForm.addEventListener("submit", (event) => {
-                console.log("reset password submit", event.target.id)
-                event.preventDefault();
-                
-              });
-            }*/
             break;
           case "passResetButton":
             resetPassword();
 
 
             default:
-              console.log("Unknown event:", event.target.id);
+              break;
       }
     }
   })
@@ -354,7 +342,6 @@ function clearFormFields() {
   }
 
   if (logInEmail) {
-    console.log(logInEmail);
     logInEmail.value = "";
   }
 

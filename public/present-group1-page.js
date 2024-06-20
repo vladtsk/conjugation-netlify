@@ -1,3 +1,5 @@
+import { handleContentNavClicks } from "./contentNav.js";
+
 export function generatePresentGroup1Page() {
     const contentArea = document.querySelector(".content-area");
     contentArea.innerHTML = "";
@@ -8,6 +10,7 @@ export function generatePresentGroup1Page() {
   
     const verbConjugationLink = document.createElement("a");
     verbConjugationLink.textContent = "Verb conjugation";
+    verbConjugationLink.classList.add("verbConjugationLink");
   
     const iconSpan = document.createElement("span");
     iconSpan.classList.add("icon");
@@ -17,6 +20,7 @@ export function generatePresentGroup1Page() {
   
     const presentTenseLink = document.createElement("a");
     presentTenseLink.textContent = "The present tense";
+    presentTenseLink.classList.add("presentTenseLink");
   
     contentNav.appendChild(verbConjugationLink);
     contentNav.appendChild(iconSpan);
@@ -346,5 +350,6 @@ export function generatePresentGroup1Page() {
   
     contentArea.appendChild(pageContent);
   
+    handleContentNavClicks();
   }
   

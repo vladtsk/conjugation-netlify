@@ -118,8 +118,7 @@ main {
 
 /* Styling the sidebar */
 
-.sidebar {
-  /*margin-top: 0.8rem;*/
+.sidebar, .sidebarTablet {
   margin-top: 20px;
 }
 
@@ -778,6 +777,7 @@ button[disabled] {
 }
 
 .noSubDiv, .premiumStatsContainer {
+  margin-top: 20px;
   margin-bottom: 40px;
   font-size: 24px;
   max-width: 400px;
@@ -799,13 +799,13 @@ button[disabled] {
 
 
 .noSubDiv h1, .premiumStatsContainer h1 {
-  font-size: 32px;
+  font-size: 28px;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .premiumStatsContainer p {
-
+  font-size: 18px;
   margin-top: 10px;
 }
 
@@ -1117,9 +1117,7 @@ button[disabled] {
     padding-top: 0;
   }
 
-  .mainSection {
-    margin-top: 0px;
-  }
+  
 
   header {
     display: grid;
@@ -1140,7 +1138,7 @@ button[disabled] {
 
 
   .mainSection {
-    margin-top: 0px;
+    margin-top: 20px;
     padding-top: 15px;
     padding-bottom: 20px;
     padding-left: 25px;
@@ -1219,7 +1217,7 @@ button[disabled] {
   }
 
   .logo img {
-    min-width: 100px;
+    min-width: 80px;
   }
 
   .content-area {

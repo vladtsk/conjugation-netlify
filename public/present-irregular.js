@@ -1,3 +1,5 @@
+import { handleContentNavClicks } from "./contentNav.js";
+
 export function generatePresentIrregularPage() {
     const contentArea = document.querySelector(".content-area");
     contentArea.innerHTML = "";
@@ -8,6 +10,7 @@ export function generatePresentIrregularPage() {
   
     const verbConjugationLink = document.createElement("a");
     verbConjugationLink.textContent = "Verb conjugation";
+    verbConjugationLink.classList.add("verbConjugationLink");
   
     const iconSpan = document.createElement("span");
     iconSpan.classList.add("icon");
@@ -17,6 +20,7 @@ export function generatePresentIrregularPage() {
   
     const presentTenseLink = document.createElement("a");
     presentTenseLink.textContent = "The present tense";
+    presentTenseLink.classList.add("presentTenseLink");
   
     contentNav.appendChild(verbConjugationLink);
     contentNav.appendChild(iconSpan);
@@ -121,4 +125,5 @@ export function generatePresentIrregularPage() {
 
     contentArea.appendChild(pageContent);
 
+    handleContentNavClicks();
 }

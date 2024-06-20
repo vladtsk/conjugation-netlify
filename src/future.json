@@ -73,7 +73,144 @@
         "answer": "devras",
         "fullPhrase": "Tu devras te reposer.",
         "translation": "You will have to rest."
+      },
+      {
+        "id": 10,
+        "verb": "expliquer",
+        "phrase": "Nous vous ____ ce qu’il faut faire.",
+        "answer": "expliquerons",
+        "fullPhrase": "Nous vous expliquerons ce qu’il faut faire.",
+        "translation": "We will explain to you what needs to be done."
+      },
+      {
+        "id": 11,
+        "verb": "pouvoir",
+        "phrase": "Je ____ venir ce soir.",
+        "answer": "pourrai",
+        "fullPhrase": "Je pourrai venir ce soir.",
+        "translation": "I will be able to come tonight."
+      },
+      {
+        "id": 12,
+        "verb": "devoir",
+        "phrase": "Ils ____ retourner aux États-Unis.",
+        "answer": "devront",
+        "fullPhrase": "Ils devront retourner aux États-Unis.",
+        "translation": "They will have to return to the United States."
+      },
+      {
+        "id": 13,
+        "verb": "se marier",
+        "phrase": "On ____ l'année prochaine.",
+        "answer": "se mariera",
+        "fullPhrase": "On se mariera l'année prochaine.",
+        "translation": "We will get married next year."
+      },
+      {
+        "id": 14,
+        "verb": "finir",
+        "phrase": "Tu ____ cet exercice avant ce soir.",
+        "answer": "finiras",
+        "fullPhrase": "Tu finiras cet exercice avant ce soir.",
+        "translation": "You will finish this exercise before tonight."
+      },
+      {
+        "id": 15,
+        "verb": "continuer",
+        "phrase": "Je ____ à apprendre le français.",
+        "answer": "continuerai",
+        "fullPhrase": "Je continuerai à apprendre le français.",
+        "translation": "I will continue to learn French."
+      },
+      {
+        "id": 16,
+        "verb": "revoir",
+        "phrase": "Nous ____ nos amis bientôt.",
+        "answer": "reverrons",
+        "fullPhrase": "Nous reverrons nos amis bientôt.",
+        "translation": "We will see our friends again soon."
+      },
+      {
+        "id": 17,
+        "verb": "prendre",
+        "phrase": "Je ____ le bus.",
+        "answer": "prendrai",
+        "fullPhrase": "Je prendrai le bus.",
+        "translation": "I will take the bus."
+      },
+      {
+        "id": 18,
+        "verb": "revenir",
+        "phrase": "Elles ____ dans 3 jours.",
+        "answer": "reviendront",
+        "fullPhrase": "Elles reviendront dans 3 jours.",
+        "translation": "They will come back in 3 days."
+      },
+      {
+        "id": 19,
+        "verb": "pouvoir",
+        "phrase": "Vous ____ les aider.",
+        "answer": "pourrez",
+        "fullPhrase": "Vous pourrez les aider.",
+        "translation": "You will be able to help them."
+      },
+      {
+        "id": 20,
+        "verb": "aller",
+        "phrase": "J'____ à Londres l'année prochaine.",
+        "answer": "irai",
+        "fullPhrase": "J'irai à Londres l'année prochaine.",
+        "translation": "I will go to London next year."
+      },
+      {
+        "id": 21,
+        "verb": "pouvoir",
+        "phrase": "Elle ne ____ pas y aller.",
+        "answer": "pourra",
+        "fullPhrase": "Elle ne pourra pas y aller.",
+        "translation": "She will not be able to go."
+      },
+      {
+        "id": 22,
+        "verb": "partir",
+        "phrase": "Tu ____ à quelle heure ?",
+        "answer": "partiras",
+        "fullPhrase": "Tu partiras à quelle heure ?",
+        "translation": "What time will you leave?"
+      },
+      {
+        "id": 23,
+        "verb": "vouloir",
+        "phrase": "On ____ jouer avec toi.",
+        "answer": "voudra",
+        "fullPhrase": "On voudra jouer avec toi.",
+        "translation": "We will want to play with you."
+      },
+      {
+        "id": 24,
+        "verb": "devoir",
+        "phrase": "Il ____ s'occuper de sa famille.",
+        "answer": "devra",
+        "fullPhrase": "Il devra s'occuper de sa famille.",
+        "translation": "He will have to take care of his family."
+      },
+      {
+        "id": 25,
+        "verb": "vouloir",
+        "phrase": "Tu ____ le faire pour moi ?",
+        "answer": "voudras",
+        "fullPhrase": "Tu voudras le faire pour moi ?",
+        "translation": "Will you want to do it for me?"
+      },
+      {
+        "id": 26,
+        "verb": "envoyer",
+        "phrase": "Je vous ____ un e-mail demain.",
+        "answer": "enverrai",
+        "fullPhrase": "Je vous enverrai un e-mail demain.",
+        "translation": "I will send you an email tomorrow."
       }
+      
     ]
   }
   

@@ -1,3 +1,5 @@
+import { handleContentNavClicks } from "./contentNav.js";
+
 export function generateIntroPage() {
     const contentArea = document.querySelector(".content-area");
     contentArea.innerHTML = "";
@@ -8,6 +10,7 @@ export function generateIntroPage() {
   
     const verbConjugationLink = document.createElement("a");
     verbConjugationLink.textContent = "Verb conjugation";
+    verbConjugationLink.classList.add("verbConjugationLink");
   
     const iconSpan = document.createElement("span");
     iconSpan.classList.add("icon");
@@ -17,7 +20,8 @@ export function generateIntroPage() {
   
     const introLink = document.createElement("a");
   
-    introLink.textContent = "The present tense";
+    introLink.textContent = "Intro";
+    introLink.classList.add("introLink");
   
     contentNav.appendChild(verbConjugationLink);
     contentNav.appendChild(iconSpan);
@@ -84,6 +88,8 @@ pageContent.appendChild(infinitiveP);
 pageContent.appendChild(infinitiveP2);
 
 contentArea.appendChild(pageContent);
+
+handleContentNavClicks();
   
   }
   
