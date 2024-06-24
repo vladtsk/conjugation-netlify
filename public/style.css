@@ -44,7 +44,7 @@ header {
   padding-block: 10px;
   color: var(--color-primary);
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1.5fr 4fr 1.5fr;
 
   font-family: "Poppins", sans-serif;
 
@@ -67,8 +67,8 @@ header {
 nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  margin-right: 60px;
+  gap: 15px;
+  margin-right: 40px;
 }
 
 .menu {
@@ -86,10 +86,16 @@ nav a:hover {
   color: var(--color-tertiary);
 }
 
-nav .fa-circle-question,
+nav .fa-circle-question, .fa-circle-user,
 .fa-square-poll-vertical {
   font-size: 25px;
-  margin-right: 15px;
+  margin-right: 0px;
+  color: var(--color-primary);
+}
+
+.fa-gem {
+  font-size: 25px;
+  margin-right: 0px;
   color: var(--color-primary);
 }
 
@@ -100,6 +106,62 @@ nav .fa-circle-question,
 nav form {
   background-color: none;
 }
+
+.lives {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-element.account {
+  position: relative;
+}
+
+
+.account-popup {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  padding-inline: 10px;
+  padding-block: 8px;
+  width: 120px;
+
+  border-radius: 8px;
+  border: solid var(--color-primary) 1px;
+
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+
+  z-index: 1;
+
+  text-align: center;
+}
+
+.account-popup p {
+  padding-bottom: 2px;
+}
+
+.account-popup .arrow {
+  position: absolute;
+  top: -15%;
+  left: 42%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--color-primary);
+
+}
+
 
 /*
 main {
@@ -334,7 +396,7 @@ select {
   color: var(--color-primary);
   background-color: var(--color-secondary);
 
-  z-index: 2;
+  z-index: 3;
 }
 
 .tenseSelectPopupContainer div {
@@ -1023,7 +1085,7 @@ button[disabled] {
   -webkit-backdrop-filter: blur(2px);
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
 }
 
 .rulesSection {
@@ -1121,7 +1183,7 @@ button[disabled] {
 
   header {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 3fr 1fr;
   }
 
   nav {

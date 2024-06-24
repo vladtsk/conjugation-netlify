@@ -37,15 +37,36 @@
         <div class="logo">
             <a href="/index.html"><img src="public/logo.png" alt="logo"></a>
         </div>
-         <!--<div></div>-->
+        <div class="lives"></div>
+        <!--<i class="fa-regular fa-heart"></i><i class="fa-regular fa-heart"></i><i class="fa-regular fa-heart"></i>-->
         <nav>
 
-            <div class="rules-button"><i class="fa-solid fa-circle-question"></i></div>
-            <button type="submit" id="logInButtonMenu">Login / Signup</button>
-            <button type="submit" id="logOutButton">Logout</button>
-       
+            <div class="menu-element help">
+                <div class="rules-button"><i class="fa-solid fa-circle-question"></i></div>
+                <p>help</p>
+            </div>
+            <div class="menu-element account">
+                <div><i class="fa-regular fa-circle-user"></i></div>
+                <p>account</p>
+                <div class="account-popup">
+                    <div class="arrow"></div>
+                    <div>
+                        <p id="logInButtonMenu">Log in</p>
+                        <p id="signUpButtonMenu">Sign up</p>
+                        <p id="logOutButton">Log out</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-element premiumBtn">
+                <div><i class="fa-regular fa-gem"></i></div>
+                <p>premium</p>
+            </div>
             
-            <button type="submit" id="subscribeBtn">Subscribe</button>
+            
+       
+            <!--<button type="submit" id="logInButtonMenu">Login / Signup</button>
+                <button type="submit" id="logOutButton">Logout</button>
+            <button type="submit" id="subscribeBtn">Subscribe</button>-->
         
         </nav>
     </header>

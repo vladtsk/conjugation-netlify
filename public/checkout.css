@@ -23,6 +23,18 @@
     -ms-user-select: none;
     user-select: none;
   }
+
+  .logo {
+    width: 20%;
+    margin-left: 60px;
+    padding-left: 10px;
+    padding-block: 10px;
+  }
+
+  .logo img {
+    min-width: 80px;
+    max-width: 100px;
+  }
   
   .content-area input,
   .content-area button {
@@ -244,6 +256,10 @@
         
     }
 
+    .logo {
+      margin-left: 20px;
+    }
+
     .carousel {
         margin-inline:auto;
     }
@@ -258,6 +274,10 @@
         margin-top: 20px;
         flex-direction: column;
         width: 80%;
+    }
+
+    .logo {
+      margin-left: 20px;
     }
 
   }

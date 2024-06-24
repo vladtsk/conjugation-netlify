@@ -42,7 +42,7 @@ export function generateFuturePage() {
     const definitionParagraph = document.createElement("p");
     definitionParagraph.innerHTML =
       `<i class="fa-solid fa-lightbulb"></i> In French, <span class="tense-name">the simple future tense</span> (le futur simple) is used to describe future actions. 
-      It is often translated into English using 'will' (or its contracted form "'ll") and sometimes other structures used to talk about 
+      It is often translated into English using 'will' (or its contracted form <i>'ll</i>) and sometimes other structures used to talk about 
       the future, like 'to be going to' or the present tense.`;
   
     definitionDiv.appendChild(definitionParagraph);
@@ -131,6 +131,26 @@ export function generateFuturePage() {
     table.appendChild(tbody);
 
     pageContent.appendChild(table);
+
+    const moreExamplesDiv = document.createElement("div");
+    moreExamplesDiv.classList.add("examples");
+  
+    const moreExamplesIntro = document.createElement("p");
+    moreExamplesIntro.textContent = "Here are some more examples:";
+  
+    const moreExample1 = document.createElement("p");
+    moreExample1.innerHTML =
+      "<i>S'il ne pleut pas, nous <b>irons</b> dehors.</i> (If it doesn't rain, we'<b>ll go</b> outside.)";
+  
+    const moreExample2 = document.createElement("p");
+    moreExample2.innerHTML =
+      "<i>Le cours <b>finira</b> à onze heures.</i> (The lesson <b>will finish</b> at eleven o'clock.)";
+
+
+    pageContent.appendChild(moreExamplesDiv);
+    moreExamplesDiv.appendChild(moreExamplesIntro);
+    moreExamplesDiv.appendChild(moreExample1);
+    moreExamplesDiv.appendChild(moreExample2);
 
     contentArea.appendChild(pageContent);
   

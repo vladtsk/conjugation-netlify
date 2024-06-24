@@ -84,8 +84,9 @@ rulesPronuncP2.innerHTML =
 
 // Adding an event listener
 
-const rulesBtn = document.querySelector(".rules-button");
-rulesBtn.addEventListener("click", (event) => {
+//const rulesBtn = document.querySelector(".rules-button");
+const helpBtn = document.querySelector(".menu-element.help");
+helpBtn.addEventListener("click", (event) => {
   rulesSection.style.display = "block";
   blurContainer.style.display = "block";
   event.stopPropagation();

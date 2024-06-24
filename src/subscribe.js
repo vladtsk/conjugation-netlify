@@ -1,7 +1,9 @@
 export function handleCheckoutClick() {
-  const subscribeBtn = document.getElementById("subscribeBtn");
-  if(subscribeBtn) {
-  subscribeBtn.addEventListener("click", () => {
+  //const subscribeBtn = document.getElementById("subscribeBtn");
+  //const subscribeBtn = document.querySelector(".fa-gem"); 
+  const premiumBtn = document.querySelector(".menu-element.premiumBtn");
+  if(premiumBtn) {
+  premiumBtn.addEventListener("click", () => {
     
   window.location = "../checkout.html";
      

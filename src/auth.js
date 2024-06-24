@@ -270,9 +270,11 @@ if(contentArea) {
     const main = document.querySelector("main");
     const contentArea = document.querySelector(".content-area");
     const header = document.querySelector("header");
+    const accountPopup = document.querySelector(".account-popup");
 
     header.addEventListener("click", (event) => {
       event.preventDefault();
+      event.stopPropagation();
       clearFormFields();
       let summary = document.querySelector(".summary");
           if (summary) {
@@ -291,10 +293,35 @@ if(contentArea) {
             contentArea.removeChild(conjugSection);
           }
   
-      if(event.target && event.target.id === "logInButtonMenu") {
-        generateLogInForm();
+      /*if(event.target && event.target.id === "logInButtonMenu") {
+        
       } else if(event.target && event.target.id === "logOutButton")
-        userLogOut();
+        userLogOut();*/
+
+        if(event.target) {
+          switch(event.target.id) {
+            case "logInButtonMenu":
+              if(accountPopup && accountPopup.style.display === "block"){
+                accountPopup.style.display = "none";
+              }
+              generateLogInForm();
+              break;
+            case "signUpButtonMenu":
+              if(accountPopup && accountPopup.style.display === "block"){
+                accountPopup.style.display = "none";
+              }
+              generateSignUpForm();
+              break;
+            case "logOutButton":
+              if(accountPopup && accountPopup.style.display === "block"){
+                accountPopup.style.display = "none";
+              }
+              userLogOut();
+              break;
+            default:
+              break;
+          }
+        }
     });
 
   }

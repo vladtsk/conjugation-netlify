@@ -10,7 +10,7 @@ import { generatePastCompAuxPage } from "./pastcompaux.js";
 import { generatePastCompParticPage } from "./pastparticiple.js";
 import { generateImparfaitPage } from "./imparfait-page.js";
 import { generateFuturePage } from "./futurePage.js";
-import { handleContentNavClicks } from "./contentNav.js";
+import { generateFutureSpellingPage } from "./futureSpellingPage.js";
 
 
 
@@ -199,19 +199,19 @@ verb conjugation`;
   futureSubIntro.innerHTML = `<i
   class="fa-solid fa-circle-chevron-right"></i>Introduction`;
 
-  /*const pastSubAux = document.createElement("div");
-  pastSubAux.classList.add("past-submenu", "past-aux");
-  pastSubAux.innerHTML = `<i
-  class="fa-solid fa-circle-chevron-right"></i>'Avoir' VS 'être'`;
-
+  const futureSpelling = document.createElement("div");
+  futureSpelling.classList.add("future-submenu", "furure-spelling");
+  futureSpelling.innerHTML = `<i
+  class="fa-solid fa-circle-chevron-right"></i> Spelling changes`;
+/*
   const pastSubParticiple = document.createElement("div");
   pastSubParticiple.classList.add("past-submenu", "past-participle");
   pastSubParticiple.innerHTML = `<i
   class="fa-solid fa-circle-chevron-right"></i>The past participle`;
 */
   futureSubContainer.appendChild(futureSubIntro);
-  /*pastSubContainer.appendChild(pastSubAux);
-  pastSubContainer.appendChild(pastSubParticiple);*/
+  futureSubContainer.appendChild(futureSpelling);
+ 
   //
 
   manageLearnMenu(userId, subStatus);
@@ -235,47 +235,41 @@ verb conjugation`;
   if(userId && subStatus === "active") {
     presentSubGroup3.addEventListener("click", ()=> {
       generatePresentGroup3Page();
-      handleContentNavClicks();
     })
   }
   
   if(userId && subStatus === "active") {
     presentSubIrregular.addEventListener("click", ()=> {
     generatePresentIrregularPage();
-    handleContentNavClicks();
   })
 }
 
   if(userId && subStatus === "active") {
     pastSubIntro.addEventListener("click", ()=> {
       generatePastCompPage();
-      handleContentNavClicks();
   })
   }
 
   pastSubAux.addEventListener("click", ()=> {
     generatePastCompAuxPage();
-    handleContentNavClicks();
-
     })
   
     pastSubParticiple.addEventListener("click", ()=> {
       generatePastCompParticPage();
-      handleContentNavClicks();
     })
 
     if(userId && subStatus === "active") {
       imperfectLink.addEventListener("click", ()=> {
         generateImparfaitPage();
-        handleContentNavClicks();
     })
   }
 
-  if(userId && subStatus === "active") {
   futureSubIntro.addEventListener("click", ()=> {
     generateFuturePage();
-    handleContentNavClicks();
 })
-  }
+  
+  futureSpelling.addEventListener("click", ()=> {
+    generateFutureSpellingPage();
+})
 
 }

@@ -31,6 +31,10 @@ import { handleCheckoutClick } from "./subscribe.js";
 
 import { reloadAppOnLogoClick } from "./logoClick.js";
 
+import { handleMenuAccountClick } from "../public/account-popup.js";
+
+import { handleClickOutsidePopup } from "./clickOutSidePopup.js";
+
 
 
 /*export {
@@ -70,7 +74,7 @@ handleLogInLogOutClicks();
 
 launchFirstPage();
 
-
+handleMenuAccountClick();
 
 
 openLearnPage();
@@ -81,6 +85,8 @@ openStatsPage();
 generateRulesPopupSection();
 handleCheckoutClick();
 reloadAppOnLogoClick();
+
+document.addEventListener("click", handleClickOutsidePopup);
 
 
 // A function launching the app
