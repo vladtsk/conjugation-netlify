@@ -41,6 +41,7 @@ a {
 header {
   margin-top: 0px;
   margin-bottom: 20px;
+  
   padding-block: 10px;
   color: var(--color-primary);
   display: grid;
@@ -65,10 +66,11 @@ header {
 }
 
 nav {
+  padding-right: 60px;
   display: flex;
+  justify-content: end;
   align-items: center;
-  gap: 15px;
-  margin-right: 40px;
+  gap: 20px;
 }
 
 .menu {
@@ -78,13 +80,13 @@ nav {
   align-items: center;
 }
 
-nav button {
+/*nav button {
   display: inline-block;
 }
 
 nav a:hover {
   color: var(--color-tertiary);
-}
+}*/
 
 nav .fa-circle-question, .fa-circle-user,
 .fa-square-poll-vertical {
@@ -103,64 +105,28 @@ nav .fa-circle-question, .fa-circle-user,
   font-size: 0.9em;
 }
 
-nav form {
+/*nav form {
   background-color: none;
+}*/
+
+.lives-container {
+  display: flex;
+  justify-content: center;
+  
 }
 
 .lives {
-  display: flex;
+  display: none;
+  font-size: 22px;
   align-items: center;
   justify-content: center;
+  gap: 6px;
+  
+}
+.lives i {
+  display: inline-block;
 }
 
-.menu-element {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.menu-element.account {
-  position: relative;
-}
-
-
-.account-popup {
-  display: none;
-  position: absolute;
-  top: 120%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-
-  padding-inline: 10px;
-  padding-block: 8px;
-  width: 120px;
-
-  border-radius: 8px;
-  border: solid var(--color-primary) 1px;
-
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
-
-  z-index: 1;
-
-  text-align: center;
-}
-
-.account-popup p {
-  padding-bottom: 2px;
-}
-
-.account-popup .arrow {
-  position: absolute;
-  top: -15%;
-  left: 42%;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid var(--color-primary);
-
-}
 
 
 /*
@@ -1184,10 +1150,12 @@ button[disabled] {
   header {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
+    /*padding-right: 25px;*/
   }
 
   nav {
-    margin-right: 25px;
+    gap: 15px;
+    padding-right: 20px;
   }
 
   .logo {
@@ -1254,15 +1222,22 @@ button[disabled] {
   header {
     border: none;
     margin-block: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    padding-block: 0px;
 
     display: flex;
     justify-content: space-between;
-    margin: 0;
-    padding: 0;
+    
   }
 
   nav {
-    margin-right: 10px;
+    gap: 10px;
+    padding-right: 10px;
+  }
+
+  .lives-container {
+    padding-right: 10px;
   }
 
   main {

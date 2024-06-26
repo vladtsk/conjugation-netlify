@@ -4,29 +4,6 @@ import { set, ref } from "./firebaseConfig.js";
 
 export function addBoxToDb(data, boxes, userId, database) {
   let tense = data.data[0].tenseShort;
-  console.log(tense)
-/*
-  switch (data.data[0].tense) {
-    case "present (le présent de l'indicatif)":
-      tense = "/present/";
-      break;
-    case "past (le passé composé)":
-      tense = "/pastcomp/";
-      break;
-
-    case "imperfect past (l'imparfait)":
-      tense = "/pastimp/";
-      break;
-    
-    case "future (le futur simple)":
-      tense = "/future/";
-      break;
-
-    case "present subjunctive (le subjonctif présent)":
-      tense = "/subjunctive/";
-      break;
-    }
-      */
      
   for (let i = 0; i < boxes.length; i++) {
     let boxName = "box" + (i + 1);
@@ -103,9 +80,6 @@ export function updateStripeStatus(userId, stripeStatus) {
     "users/" + userId + "/subscription/status"
   );
 
-  //let updates = {};
-  //updates["status"] = newStripeStatus;
-  //update(subsRef, updates)
 
   set(subStatusRef, stripeStatus)
     .then(() => {

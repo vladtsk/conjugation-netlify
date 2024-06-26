@@ -208,6 +208,8 @@ export function showResultPage(score, phraseStats, stats, userId) {
     ".sidebarTabletContainer"
   );
   const footer = document.querySelector("footer");
+  const nav = document.querySelector("nav");
+  const livesEl = document.querySelector(".lives");
 
   const resultDiv = document.createElement("div");
   resultDiv.classList.add("result");
@@ -248,6 +250,9 @@ export function showResultPage(score, phraseStats, stats, userId) {
     generateGraph();
     buildGraph(stats);
   }
+
+  nav.style.display = "flex";
+  livesEl.style.display = "none";
 
   let summary;
   let chart = document.querySelector(".chart");
@@ -351,6 +356,8 @@ export function showNoMorePhrasesPage(score, phraseStats) {
     ".sidebarTabletContainer"
   );
   const footer = document.querySelector("footer");
+  const nav = document.querySelector("nav");
+  const livesEl = document.querySelector(".lives");
   
   const restartSection = document.createElement("div");
   restartSection.classList.add("restart");
@@ -384,8 +391,11 @@ export function showNoMorePhrasesPage(score, phraseStats) {
       restartSection.removeChild(showSummaryBtn);
     }
 
+    nav.style.display = "flex";
+    livesEl.style.display = "none";
+
     let summaryCloseBtn = document.querySelector(".summaryCloseBtn");
-    console.log(summaryCloseBtn);
+  
     //Close summary
     if (summaryCloseBtn) {
       summaryCloseBtn.addEventListener("click", () => {

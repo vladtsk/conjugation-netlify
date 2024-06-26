@@ -36,8 +36,10 @@ export async function checkAuthState() {
   const signUpForm = document.querySelector(".signUpForm");
   const logInForm = document.querySelector(".logInForm");
   const logInButtonMenu = document.getElementById("logInButtonMenu");
+  const signUpButtonMenu = document.getElementById("signUpButtonMenu");
   const logOutButton = document.getElementById("logOutButton");
-  const subscribeBtn = document.getElementById("subscribeBtn");
+  const premiumBtn = document.querySelector(".menu-element.premiumBtn");
+  //const subscribeBtn = document.getElementById("subscribeBtn");
   //const mainSection = document.querySelector(".mainSection");
   
 
@@ -55,14 +57,16 @@ export async function checkAuthState() {
       }
 
       logInButtonMenu.style.display = "none";
-      logOutButton.style.display = "inline-block";
-      subscribeBtn.style.display = "none";
+      signUpButtonMenu.style.display = "none";
+      logOutButton.style.display = "block";
+      premiumBtn.style.display = "none";
 
       //mainSection.style.display = "block";
     } else {
       logOutButton.style.display = "none";
-      logInButtonMenu.style.display = "inline-block";
-      subscribeBtn.style.display = "inline-block";
+      logInButtonMenu.style.display = "block";
+      signUpButtonMenu.style.display = "block";
+      premiumBtn.style.display = "flex";
     }
   });
 }
@@ -281,11 +285,11 @@ if(contentArea) {
             main.removeChild(summary);
             summary = null;
           }
-          let chart = document.querySelector(".chart");
+          /*let chart = document.querySelector(".chart");
           if (chart) {
             contentArea.removeChild(chart);
             chart = null;
-          }
+          }*/
       
           const conjugSection = document.querySelector(".conjugSection");
       
@@ -301,19 +305,19 @@ if(contentArea) {
         if(event.target) {
           switch(event.target.id) {
             case "logInButtonMenu":
-              if(accountPopup && accountPopup.style.display === "block"){
+              if(accountPopup && accountPopup.style.display === "flex"){
                 accountPopup.style.display = "none";
               }
               generateLogInForm();
               break;
             case "signUpButtonMenu":
-              if(accountPopup && accountPopup.style.display === "block"){
+              if(accountPopup && accountPopup.style.display === "flex"){
                 accountPopup.style.display = "none";
               }
               generateSignUpForm();
               break;
             case "logOutButton":
-              if(accountPopup && accountPopup.style.display === "block"){
+              if(accountPopup && accountPopup.style.display === "flex"){
                 accountPopup.style.display = "none";
               }
               userLogOut();

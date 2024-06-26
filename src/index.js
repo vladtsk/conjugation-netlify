@@ -35,44 +35,19 @@ import { handleMenuAccountClick } from "../public/account-popup.js";
 
 import { handleClickOutsidePopup } from "./clickOutSidePopup.js";
 
+import { managePracticeBtnClick } from "./menuPracticeBtnClick.js";
 
 
-/*export {
-  getAuth,
-  getDatabase,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  onAuthStateChanged,
-  signOut,
-  sendPasswordResetEmail,
-  ref,
-  set,
-  onValue,
-  update,
-};
-
-
-
-
-
-
-const firebaseConfig = fetchFirebaseConfig();
-export const app = initializeApp(firebaseConfig);
-
-export const auth = getAuth(app);
-export const database = getDatabase(app);*/
-
-// Handling user authentification
 
 
 checkAuthState();
 
 handleAuthClicks();
 handleLogInLogOutClicks();
-//handlePasswordReset();
-
 
 launchFirstPage();
+
+managePracticeBtnClick();
 
 handleMenuAccountClick();
 
@@ -118,6 +93,19 @@ export async function launchApp(data, phraseNumber) {
   const result = await getData(data, boxes, stats, indexArray);
   userId = result.userId;
   stats = result.stats;
+
+  // A "lives" system for non-authenticated users
+  const livesString = window.localStorage.getItem("lives");
+  let lives;
+
+  if(livesString) {
+    lives = parseInt(livesString);
+  } else {
+    lives = 7;
+  }
+
+  const livesPElement = document.querySelector(".lives p");
+  livesPElement.innerHTML = `${lives}`;
   
 
   // Initializing the array box1 if there is no previous history (all the phrases go to box1)
@@ -133,8 +121,6 @@ export async function launchApp(data, phraseNumber) {
 
   setSpecialBtns();
 
-  // An array containing the score variable and the boxes array
-  //let scoreBoxes;
 
   let phraseStats = [];
 
@@ -150,7 +136,7 @@ export async function launchApp(data, phraseNumber) {
   // The input area
   const inputArea = document.querySelector(".type-section input");
 
-  const contentArea = document.querySelector(".content-area");
+  //const contentArea = document.querySelector(".content-area");
   const learnMoreSection = document.querySelector(".learnMore");
 
   const infoPopupSection = document.querySelector(".infoPopupSection");
@@ -164,8 +150,9 @@ export async function launchApp(data, phraseNumber) {
 
   submitBtn.addEventListener("click", ()=> {
     let phraseInfo = [phraseCount, phraseNumber];
-    let result = checkAnswer(data, k, phraseInfo, score, boxes, phraseStats);
-    ({ score, boxes } = result);
+    let result = checkAnswer({ data, k, phraseInfo, score, boxes, phraseStats, lives });
+    ({ score, boxes, lives } = result);
+   
   })
 
   nextBtn.addEventListener("click", ()=> {
@@ -192,6 +179,7 @@ export async function launchApp(data, phraseNumber) {
         addBoxToDb(data, boxes, userId, database);
         addStatsToDb(userId, database, stats, phraseStats);
       } else {
+        window.localStorage.setItem("lives", lives);
         console.log("User is signed out");
       }
 

@@ -16,6 +16,10 @@ import { launchApp } from "./index.js";
 
 import { showNoSubMessage } from "./noSubPageMessage.js";
 
+import { checkTimeDifference } from "./livesManager.js";
+
+import { showNoMoreLivesMessage } from "./noLivesPageMessage.js";
+
 let auth, database;
 
 async function getAuthDatabase() {
@@ -28,20 +32,43 @@ getAuthDatabase();
 
 
 export async function launchFirstPage() {
+  const contentArea = document.querySelector(".content-area");
+  contentArea.innerHTML = "";
 
   await getAuthDatabase();
 
   const { subStatus, userId } = await getSubscriptionStatus();
 
-    
- 
-  /*if(userId && subStatus === "active") {
-    showFirstPage(userId); // Building the first page structure for premiumm users
-  }*/
+  let livesString = window.localStorage.getItem("lives");
+  let lives;
   
-  if(userId && subStatus !== "active") {
-    showNoSubMessage(); 
-  } else (buildFirstPage(userId));
+  if(livesString) {
+    lives = parseInt(livesString);
+  } else {
+    lives = 7;
+    window.localStorage.setItem("lives", 7);
+  }
+
+  let timeDifferenceMnts = checkTimeDifference(); // the time difference between the last time the user used the app and now (in minutes)
+
+
+  console.log("lives=", lives, "timeDiff=", timeDifferenceMnts);
+
+  if(userId) {
+    if(subStatus === "active") {
+      buildFirstPage(userId);
+    } else {
+      showNoSubMessage(); 
+    }
+  } else if(lives > 0) {
+    buildFirstPage(userId);
+  } else if (lives === 0 && timeDifferenceMnts >= 60) {
+    lives = 7;
+    window.localStorage.setItem("lives", 7);
+    buildFirstPage(userId);
+  } else {
+    showNoMoreLivesMessage(); 
+  }
 
   
 
@@ -60,8 +87,8 @@ export async function launchFirstPage() {
   
 
   //const selectElement = document.getElementById("tense");
-  const selectElement = document.querySelector(".selectDiv");
-  const selectPhrNb = document.getElementById("phraseNb");
+  //const selectElement = document.querySelector(".selectDiv");
+  //const selectPhrNb = document.getElementById("phraseNb");
   const startBtn = document.getElementById("start-btn");
 
   const sidebarContainer = document.querySelector(".sidebarContainer");
@@ -69,13 +96,15 @@ export async function launchFirstPage() {
     ".sidebarTabletContainer"
   );
   const footer = document.querySelector("footer");
-
+  const nav = document.querySelector("nav");
+  const livesEl = document.querySelector(".lives");
 
   // Adding an event listener on the start button
  
   if (startBtn) {
 
     startBtn.addEventListener("click", async() => {
+      
 
       phraseNumber = parseInt(phraseNb.textContent);
       
@@ -89,11 +118,14 @@ export async function launchFirstPage() {
       }
       
       
-      
-
+      nav.style.display = "none";
       sidebarContainer.style.display = "none";
       sidebarTabletContainer.style.display = "none";
       footer.style.display = "none";
+      if(!userId && livesEl) {
+        livesEl.style.display = "flex";
+        livesEl.style.color = "#2b2d42";
+      }
     });
   }
 }
@@ -287,24 +319,6 @@ export async function getSubscriptionStatus() {
   }
 }
 
-/*
-export async function getStripeCustomerId(userId) {
-  try {
-    // Reference to the 'Stripe customer ID' node
-    const stripeCustomerIdRef = ref(
-      database,
-      "users/" + userId + "/subscription/stripeCustomerId"
-    );
-
-    const stripeCustomerId = await readSubsDataFromDb(stripeCustomerIdRef);
-
-    return stripeCustomerId;
-  } catch (error) {
-    console.error(error.message);
-  }
-}
-
-*/
 
 export async function getData(data, boxes, stats, indexArray, userId) {
   try {

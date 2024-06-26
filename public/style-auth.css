@@ -1,3 +1,65 @@
+.menu-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-element.account {
+  position: relative;
+}
+
+
+.account-popup {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  padding-inline: 10px;
+  padding-block: 8px;
+  width: 100px;
+  height: 80px;
+
+  border-radius: 8px;
+  border: solid var(--color-primary) 1px;
+
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+
+  z-index: 1;
+
+  text-align: center;
+}
+
+.account-popup p {
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+nav p {
+  font-size: 14px;
+}
+
+.account-popup .arrow {
+  position: absolute;
+  top: -16%;
+  left: 42%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--color-primary);
+
+}
+
+.menu-element.help {
+  padding-left: 10px;
+}
+
 form h1 {
   text-align: center;
   font-size: 28px;
@@ -114,34 +176,32 @@ input {
   justify-content: center;
 }
 
-/*#logOutButton,
+#logOutButton,
 #logInButtonMenu,
-#subscribeBtn {
-  padding-inline: 12px;
-  padding-block: 8px;
+#signUpButtonMenu {
+  padding-inline: 6px;
+  padding-block: 4px;
 
-  border-radius: 6px;
+  /*border-radius: 6px;*/
   background-color: var(--color-secondary);
   color: black;
-  font-weight: 600;
+
+  border-bottom: solid 1px gray;
   border-color: #b5afae;
 }
 
-#subscribeBtn {
-  margin-left: 10px;
-}*/
 
 #logOutButton {
   display: none;
 }
 
-/*#logOutButton:hover,
+#logOutButton:hover,
 #logInButtonMenu:hover,
-#subscribeBtn:hover {
-  background-color: var(--color-primary);
+#signUpButtonMenu:hover {
+  background-color: var(--color-tertiary);
   color: var(--color-secondary);
   border: none;
-}*/
+}
 
 /* Responsive design */
 @media screen and (min-width: 480px) and (max-width: 768px) {

@@ -2,14 +2,15 @@
 
 import { movePhraseForward, movePhraseBackward } from "./spacedRepetition.js";
 
-import { playAudio, playCorrect, playIncorrect } from "./playAudio.js";
+//import { playAudio, playCorrect, playIncorrect } from "./playAudio.js";
 
 import { fetchFirebaseConfig, onAuthStateChanged, getAuth } from "./firebaseConfig.js";
 
-import { getUser } from "./readDbData.js";
- import { showInfoPopup } from "./infoPopup.js";
+import { showConjugations } from "./conjugationTablePopup.js";
 
-//const auth = getAuth(app);
+import { showInfoPopup } from "./infoPopup.js";
+
+import { handleCorrectAnswer, handleAlmostCorrectAnswer, handleIncorrectAnswer } from "./checkAnswerFunctions.js";
 
 // Fetching verb conjugation tables
 
@@ -57,8 +58,7 @@ getuserId();
  //const userId = getUser();
 
 // A function that reads the user input and compares it to the correct answer
-export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
-
+export function checkAnswer({ data, k, phraseInfo, score, boxes, phraseStats, lives }) {
 
   let phraseCount = phraseInfo[0];
   let phraseNumber = phraseInfo[1];
@@ -88,13 +88,13 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
   // Selecting the special character section
   //const specialBtns = document.querySelectorAll(".letters-section button");
   const lettersSection = document.querySelector(".letters-section");
+  // "Lives" element
+  const livesEl = document.querySelector(".lives");
 
 
   // The phrase display section
   const phraseDisplay = document.querySelector(".phrase-section p");
 
-  // The speaker icon
-  let speaker;
 
   const inputText = inputArea.value;
   let displaySection;
@@ -113,7 +113,6 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
   phraseStatObject.correctAnswer = data.data[k].answer;
 
   let answerType;
-  const learnMoreSection = document.querySelector(".learnMore");
 
   const phraseDivCorrect = document.createElement("div");
   phraseDivCorrect.innerHTML = `<i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low" id="speaker"></i>
@@ -136,9 +135,6 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
     
     inputArea.setAttribute("disabled", "");
 
-    /*specialBtns.forEach((button) => {
-      button.setAttribute("disabled", "");
-    });*/
   }
 
   switch (inputText.trim().toLowerCase()) {
@@ -147,151 +143,85 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
     break;
 
     case data.data[k].answer:
-      phraseDisplay.appendChild(phraseDivCorrect);
-      speaker = document.getElementById("speaker");
-      playCorrect();
-    
-      inputArea.style.color = "#228b22";
-      
-      msgArea.innerText = "Correct!";
-
-
-      phraseStatObject.isCorrect = true;
-      
-      if (speaker) {
-        speaker.addEventListener("click", () => {
-          playAudio(data.data[k].fullPhrase);
-        });
-      }
-
-      score++;
-
+      handleCorrectAnswer(phraseDivCorrect, data.data[k].fullPhrase);
       if (userId) {
         movePhraseForward(k, boxes);
       }
+      score++;
+      phraseStatObject.isCorrect = true;
       phraseStats.push(phraseStatObject);
       break;
 
       case data.data[k].alternativeAnswer:
-      phraseDisplay.appendChild(phraseDivCorrect);
-      speaker = document.getElementById("speaker");
-      playCorrect();
-    
-      inputArea.style.color = "#228b22";
-      
-      msgArea.innerText = "Correct!";
-
-
-      phraseStatObject.isCorrect = true;
-      
-      if (speaker) {
-        speaker.addEventListener("click", () => {
-          playAudio(data.data[k].fullPhrase);
-        });
-      }
-
-      score++;
-
-      if (userId) {
-        movePhraseForward(k, boxes);
-      }
-      phraseStats.push(phraseStatObject);
+        handleCorrectAnswer(phraseDivCorrect, data.data[k].fullPhrase);
+        if (userId) {
+          movePhraseForward(k, boxes);
+        }
+        score++;
+        phraseStatObject.isCorrect = true;
+        phraseStats.push(phraseStatObject);
       break;
 
     case data.data[k]?.answerWoS:
-      phraseDisplay.appendChild(phraseDivCorrect);
-      speaker = document.getElementById("speaker");
-      playCorrect();
-      inputArea.style.color = "#d96e38";
-
       answerType = "almostPastComp";
-
-      msgArea.innerHTML = "<p class='almost'>Almost correct.</p>";
-      
-      learnMoreSection.style.display = "block";
-
       showInfoPopup(data.data[k], data.data[0].tenseShort, answerType);
-
-      phraseStatObject.almostCorrectCorrect = true;
-
-      if (speaker) {
-        speaker.addEventListener("click", () => {
-          playAudio(data.data[k].fullPhrase);
-        });
-      }
-
-      score++;
-
+      
+      handleAlmostCorrectAnswer(phraseDivCorrect, data.data[k].fullPhrase);
+      
       if (userId) {
         movePhraseForward(k, boxes);
       }
+      score++;
+      phraseStatObject.almostCorrectCorrect = true;
       phraseStats.push(phraseStatObject);
       break;
 
     case data.data[k]?.answerWoAccent:
-      phraseDisplay.appendChild(phraseDivCorrect);
-      speaker = document.getElementById("speaker");
-      playCorrect();
-      inputArea.style.color = "#d96e38";
-
-      learnMoreSection.style.display = "block";
-
-      msgArea.innerHTML = "<p class='almost'>Almost correct.</p>";
-      playCorrect();
-
       answerType = "almostWoAccent";
-
       showInfoPopup(data.data[k], data.data[0].tenseShort, answerType);
 
-      phraseStatObject.almostCorrectCorrect = true;
-
-      if (speaker) {
-        speaker.addEventListener("click", () => {
-          playAudio(data.data[k].fullPhrase);
-        });
-      }
-
-      score++;
+      handleAlmostCorrectAnswer(phraseDivCorrect, data.data[k].fullPhrase);
 
       if (userId) {
         movePhraseForward(k, boxes);
       }
+      score++;
+      phraseStatObject.almostCorrectCorrect = true;
       phraseStats.push(phraseStatObject);
       break;
 
     default:
-      phraseDisplay.appendChild(phraseDiv);
-      speaker = document.getElementById("speaker");
-      playIncorrect();
-
-
-      if (speaker) {
-        speaker.addEventListener("click", () => {
-          playAudio(data.data[k].fullPhrase);
-        });
+      if(!userId && lives > 0) {
+        lives--;
+        if(lives === 0) {
+          window.localStorage.setItem("lastUseTime", Date.now());
+          if(livesEl) {
+            livesEl.style.color = "#ef233c";
+          }
+        }
+       
       }
-      inputArea.style.color = "#ef233c";
-      msgArea.innerText = `Incorrect. The correct answer is: "${data.data[k].answer}"`;
-
+      
+      handleIncorrectAnswer(phraseDiv, data.data[k].fullPhrase, data.data[k].answer, lives);
+      
       if (userId) {
         movePhraseBackward(k, boxes);
       }
-
-      showConjugations(data.data[k], data.data[0], conjugSection);
-
-      learnMoreSection.style.display = "block";
+      
+      showConjugations(data.data[k], data.data[0], conjugSection, jsonConjug);
       showInfoPopup(data.data[k], data.data[0].tenseShort);
 
       phraseStats.push(phraseStatObject);
 
   }
 
+  
 
   // Popup close icon
   const popupCloseBtn = document.querySelector(".popup-icons .popup-close");
   if (popupCloseBtn) {
     popupCloseBtn.addEventListener("click", () => {
-      console.log(popupCloseBtn);
+      
       conjugSection.innerHTML = "";
       conjugSection.style.display = "none";
     });
@@ -302,27 +232,7 @@ export function checkAnswer(data, k, phraseInfo, score, boxes, phraseStats) {
     displaySection.style.display = "flex";
   }
 
-  return { score, boxes };
+  return { score, boxes, lives };
 }
 
-// A function showing a table of conjugations
-function showConjugations(verbObj, verb0, conjugSection) {
-  console.log(conjugSection);
-  try {
-    let popupMsg = jsonConjug.verbs[`${verbObj.verb}`][`${verb0.tenseShort}`];
-    if (verbObj.aux && verbObj.aux === "être" && verbObj.twoAux) {
-      popupMsg = jsonConjug.verbs[`${verbObj.verb}`]["pastcompEtre"];
-    }
 
-    let popupMsgValues = Object.values(popupMsg);
-    conjugSection.innerHTML = `<div class="popup-icons"><i class="fa-regular fa-lightbulb bulb-animation" 
-  style="color: #ef233c;"></i><i class="fa-solid fa-xmark popup-close"></i></div>`;
-
-    for (let i = 0; i < popupMsgValues.length; i++) {
-      conjugSection.innerHTML += `<p>${popupMsgValues[i]}</p>`;
-    }
-    conjugSection.style.display = "block";
-  } catch {
-    console.log("Verb " + verbObj.verb + " is not found in database ");
-  }
-}
