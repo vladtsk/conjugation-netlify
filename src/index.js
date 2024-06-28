@@ -25,7 +25,7 @@ import { checkAuthState, handleAuthClicks, handleLogInLogOutClicks } from "./aut
 
 import { checkAnswer } from "./checkAnswer.js";
 
-import { generateRulesPopupSection } from "./rulesPopup.js";
+import { generateRulesPopupSection, generateBlurContainer } from "./rulesPopup.js";
 
 import { handleCheckoutClick } from "./subscribe.js";
 
@@ -37,7 +37,7 @@ import { handleClickOutsidePopup } from "./clickOutSidePopup.js";
 
 import { managePracticeBtnClick } from "./menuPracticeBtnClick.js";
 
-
+import { handleRulesPopup } from "./rulesPopup.js";
 
 
 checkAuthState();
@@ -51,15 +51,15 @@ managePracticeBtnClick();
 
 handleMenuAccountClick();
 
-
 openLearnPage();
-  
-
 
 openStatsPage();
+generateBlurContainer()
 generateRulesPopupSection();
 handleCheckoutClick();
 reloadAppOnLogoClick();
+
+handleRulesPopup();
 
 document.addEventListener("click", handleClickOutsidePopup);
 

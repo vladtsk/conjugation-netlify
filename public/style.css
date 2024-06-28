@@ -230,7 +230,7 @@ main {
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   padding-left: 50px;
   padding-right: 50px;
   font-family: "Poppins", sans-serif;
@@ -383,6 +383,10 @@ select {
   color: var(--color-tertiary);
 }
 
+.tenseSelectPopupContainer .fa-circle {
+  margin-right: 10px;
+}
+
 
 /* Styling the 'number of phrases' section */
 .nb-phrases {
@@ -471,6 +475,16 @@ select {
 
 #start-btn:hover {
   background-color: #d90429;
+}
+
+.firstTimeDiv {
+  margin: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.firstTimeBtn {
+  text-decoration: underline;
 }
 
 /* Styling the sections displaying a tense and a verb to conjugate */
@@ -725,6 +739,44 @@ button[disabled] {
   position: absolute;
   right: 15px;
   top: 10px;
+}
+
+.photosDiv {
+  max-width: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-inline: auto;
+  
+}
+
+.photoDiv {
+  margin-top: 8px;
+  max-width: 180px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-inline: auto;
+}
+
+.photoDiv img {
+  width:100%;
+  height:auto;
+}
+
+.carouselContainer {
+  display:flex;
+
+}
+
+.carouselContainer .slide img {
+  width:100%;
+  height:auto;
+}
+
+.carouselContainer .slide {
+  min-width:100%;
+ 
 }
 
 /* Styling the submit section */
@@ -1089,8 +1141,10 @@ button[disabled] {
 }
 
 .rulesStartDiv,
-.rulesGoalDiv,
-.rulesPronuncDiv {
+.rulesQuestDiv,
+.rulesAnswerDiv,
+.rulesPronuncDiv,
+.rulesLearnMoreDiv {
   margin-top: 20px;
 }
 
@@ -1103,13 +1157,31 @@ button[disabled] {
   font-size: 18px;
 }
 
-.rulesStartDiv,
+
+/*.rulesStartDiv,
 .rulesGoalDiv,
 .rulesPronuncDiv {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 4px;
+}*/
+
+.rulesH {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px; 
+}
+
+.buttons {
+  display: flex;
+  gap: 10px; 
+  justify-content: flex-end;
+
+  margin-top: 20px;
+
+  font-size: 18px;
 }
 
 
@@ -1117,8 +1189,8 @@ button[disabled] {
 @media screen and (min-width: 851px) and (max-width: 1200px) {
   .mainSection {
     margin-top: 20px;
-    padding-top: 15px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -1169,8 +1241,8 @@ button[disabled] {
 
   .mainSection {
     margin-top: 20px;
-    padding-top: 15px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 25px;
     padding-right: 25px;
   }
@@ -1272,6 +1344,7 @@ button[disabled] {
   .mainSection {
     margin-top: 10px;
     padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 25px;
     padding-right: 25px;
   }

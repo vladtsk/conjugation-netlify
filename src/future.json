@@ -168,7 +168,7 @@
         "phrase": "Elle ne ____ pas y aller.",
         "answer": "pourra",
         "fullPhrase": "Elle ne pourra pas y aller.",
-        "translation": "She will not be able to go."
+        "translation": "She will not be able to go (there)."
       },
       {
         "id": 22,
@@ -209,7 +209,161 @@
         "answer": "enverrai",
         "fullPhrase": "Je vous enverrai un e-mail demain.",
         "translation": "I will send you an email tomorrow."
+      },
+      {
+        "id": 27,
+        "verb": "étudier",
+        "phrase": "J' ____ à Grenoble l'année prochaine.",
+        "answer": "étudierai",
+        "fullPhrase": "J'étudierai à Grenoble l'année prochaine.",
+        "translation": "I will study in Grenoble next year."
+      },
+      {
+        "id": 28,
+        "verb": "rencontrer",
+        "phrase": "Le patron ____ les salariés le 6 mai.",
+        "answer": "rencontrera",
+        "fullPhrase": "Le patron rencontrera les salariés le 6 mai.",
+        "translation": "The boss will meet the employees on May 6."
+      },
+      {
+        "id": 29,
+        "verb": "rentrer",
+        "phrase": "Nous ____ à minuit.",
+        "answer": "rentrerons",
+        "fullPhrase": "Nous rentrerons à minuit.",
+        "translation": "We will come (back) home at midnight."
+      },
+      {
+        "id": 30,
+        "verb": "briller",
+        "phrase": "Le soleil ____ sur toute la France.",
+        "answer": "brillera",
+        "fullPhrase": "Le soleil brillera sur toute la France.",
+        "translation": "The sun will shine all over France."
+      },
+      {
+        "id": 31,
+        "verb": "voyager",
+        "phrase": "On ____ en Europe.",
+        "answer": "voyagera",
+        "fullPhrase": "On voyagera en Europe.",
+        "translation": "We will travel in Europe."
+      },
+      {
+        "id": 32,
+        "verb": "visiter",
+        "phrase": "Il ____ le Portugal.",
+        "answer": "visitera",
+        "fullPhrase": "Il visitera le Portugal.",
+        "translation": "He will visit Portugal."
+      },
+      {
+        "id": 33,
+        "verb": "commencer",
+        "phrase": "Les travaux ____ le 15 mars.",
+        "answer": "commenceront",
+        "fullPhrase": "Les travaux commenceront le 15 mars.",
+        "translation": "The work will start on March 15."
+      },
+      {
+        "id": 34,
+        "verb": "réussir",
+        "phrase": "Je ____ mes examens.",
+        "answer": "réussirai",
+        "fullPhrase": "Je réussirai mes examens.",
+        "translation": "I will pass my exams."
+      },
+      {
+        "id": 35,
+        "verb": "apporter",
+        "phrase": "Nous ____ du chocolat.",
+        "answer": "apporterons",
+        "fullPhrase": "Nous apporterons du chocolat.",
+        "translation": "We will bring chocolate."
+      },
+      {
+        "id": 36,
+        "verb": "signer",
+        "phrase": "Vous ____ le document.",
+        "answer": "signerez",
+        "fullPhrase": "Vous signerez le document.",
+        "translation": "You will sign the document."
+      },
+      {
+        "id": 37,
+        "verb": "offrir",
+        "phrase": "Tu lui ____ des fleurs ?",
+        "answer": "offriras",
+        "fullPhrase": "Tu lui offriras des fleurs ?",
+        "translation": "Will you give her/him flowers?"
+      },
+      {
+        "id": 38,
+        "verb": "fermer",
+        "phrase": "Tu ____ la porte avant de partir.",
+        "answer": "fermeras",
+        "fullPhrase": "Tu fermeras la porte avant de partir.",
+        "translation": "You will close the door before leaving."
+      },
+      {
+        "id": 39,
+        "verb": "arriver",
+        "phrase": "On ____ le 11 avril.",
+        "answer": "arrivera",
+        "fullPhrase": "On arrivera le 11 avril.",
+        "translation": "We will arrive on April 11th."
+      },
+      {
+        "id": 40,
+        "verb": "dîner",
+        "phrase": "Nous ____ ensemble.",
+        "answer": "dînerons",
+        "fullPhrase": "Nous dînerons ensemble.",
+        "translation": "We will have dinner together."
+      },
+      {
+        "id": 41,
+        "verb": "déjeuner",
+        "phrase": "Je ____ plus tard.",
+        "answer": "déjeunerai",
+        "fullPhrase": "Je déjeunerai plus tard.",
+        "translation": "I will have lunch later."
+      },
+      {
+        "id": 42,
+        "verb": "essayer",
+        "phrase": "Ils ____ de terminer avant 18 h.",
+        "answer": "essayeront",
+        "alternativeAnswer": "essaierons",
+        "fullPhrase": "Ils essayeront/essaierons de terminer avant 18 h.",
+        "translation": "They will try to finish before 6 p.m."
+      },
+      {
+        "id": 43,
+        "verb": "rencontrer",
+        "phrase": "Vous ____ votre beau-père.",
+        "answer": "rencontrerez",
+        "fullPhrase": "Vous rencontrerez votre beau-père.",
+        "translation": "You will meet your father-in-law."
+      },
+      {
+        "id": 44,
+        "verb": "commencer",
+        "phrase": "Tu ____ ton entraînement en juillet ?",
+        "answer": "commenceras",
+        "fullPhrase": "Tu commenceras ton entraînement en juillet ?",
+        "translation": "Will you start your training in July?"
+      },
+      {
+        "id": 45,
+        "verb": "retrouver",
+        "phrase": "Elle nous ____ en ville.",
+        "answer": "retrouvera",
+        "fullPhrase": "Elle nous retrouvera en ville.",
+        "translation": "She will meet us in town."
       }
+      
       
     ]
   }

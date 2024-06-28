@@ -57,7 +57,7 @@ export function buildTenseSelectPopup(userId) {
   
     createPhraseNbPopupOption("phrNb5", "5");
     createPhraseNbPopupOption("phrNb10", "10");
-    createPhraseNbPopupOption("phrNb15", "15");
+    //createPhraseNbPopupOption("phrNb15", "15");
   
   }
   

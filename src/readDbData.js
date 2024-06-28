@@ -51,7 +51,6 @@ export async function launchFirstPage() {
 
   let timeDifferenceMnts = checkTimeDifference(); // the time difference between the last time the user used the app and now (in minutes)
 
-
   console.log("lives=", lives, "timeDiff=", timeDifferenceMnts);
 
   if(userId) {

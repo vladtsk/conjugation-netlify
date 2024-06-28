@@ -106,6 +106,28 @@ export async function buildFirstPage(userId) {
     startBtn.id = "start-btn";
     startBtn.innerText = "Start now!";
     startSection.appendChild(startBtn);
+
+    // 'First time here button'
+    const firstTimeDiv = document.createElement("div");
+    firstTimeDiv.classList.add("firstTimeDiv");
+    firstTimeDiv.innerHTML = "First time here? <p><span class='firstTimeBtn'>Click here</span> to learn how to use the app!</p>";
+    mainSection.appendChild(firstTimeDiv);
+
+    const rulesSection = document.querySelector(".rulesSection");
+    const blurContainer = document.querySelector(".blurContainer"); 
+
+    // Showing rules 
+    const firstTimeBtn = document.querySelector(".firstTimeBtn");
+    if(firstTimeBtn) {
+      firstTimeBtn.addEventListener("click", (event) => {
+        rulesSection.style.display = "block";
+        blurContainer.style.display = "block";
+        event.stopPropagation();
+      
+      });
+    }
+    
+  
   
     buildTenseSelectPopup(userId);
   
