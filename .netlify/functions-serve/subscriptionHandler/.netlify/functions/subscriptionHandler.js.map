@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": [".netlify/functions/subscriptionHandler.js"],
-  "sourceRoot": "C:/Users/user/AppData/Local/Temp/tmp-14740-3jF3UZDChbCN",
+  "sourceRoot": "C:/Users/user/AppData/Local/Temp/tmp-2704-6kv05tgVpy8m",
   "sourcesContent": ["//import { set, ref } from \"../../src/firebaseConfig.js\";\r\n\r\n//import { updateStripeStatus } from \"../../src/addDataDb.js\";\r\n\r\nexport function handleSubscriptionDeleted() {}\r\n\r\nexport function handleSubscriptionCreated() {}\r\n\r\nexport function handleSubscriptionUpdated() {}\r\n"],
   "mappings": ";;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAIO,SAAS,4BAA4B;AAAC;AAEtC,SAAS,4BAA4B;AAAC;AAEtC,SAAS,4BAA4B;AAAC;",
   "names": []

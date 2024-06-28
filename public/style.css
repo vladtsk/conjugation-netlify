@@ -431,7 +431,7 @@ select {
 .selectNbPhrasesContainer {
   position: absolute;
 
-  top: 120%;
+  top: 87%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -1128,8 +1128,13 @@ button[disabled] {
   border-radius: 6px;
   z-index: 1000;
 
-  max-height: 90%;
+  /*max-height: 90%;*/
+  height: 80vh;
   overflow-y: auto;
+}
+
+.rulesContainer {
+  position: relative;
 }
 
 .rulesSection h1 {
@@ -1176,13 +1181,27 @@ button[disabled] {
 
 .buttons {
   display: flex;
-  gap: 10px; 
-  justify-content: flex-end;
+  /*gap: 10px; */
+  justify-content: space-between;
 
-  margin-top: 20px;
+  /*margin-top: 20px;*/
 
-  font-size: 18px;
+  font-size: 22px;
+
+  position: absolute;
+  top: 50%;
+  left:5%;
+  width: 90%;
 }
+
+.fa-circle-arrow-right {
+  margin-left: auto;
+}
+
+.buttons i {
+  display:inline-block;
+}
+
 
 
 /* Responsive design */
@@ -1315,7 +1334,8 @@ button[disabled] {
   main {
     display: flex;
     margin: 0;
-    padding: 0;
+    padding-bottom: 70px;
+    overflow-y: scroll;
   }
 
   .logo {
@@ -1389,6 +1409,7 @@ button[disabled] {
     padding-inline: 25px;
     min-width: 300px;
     width: 90%;
+
   }
 
   .nb-phrases {

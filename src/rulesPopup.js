@@ -19,8 +19,10 @@ export function generateRulesPopupSection() {
   const rulesSection = document.createElement("div");
   rulesSection.classList.add("rulesSection");
 
+
   main.appendChild(rulesSection);
   rulesSection.style.display = "none";
+  
 
   const closeBtn = document.createElement("i");
   closeBtn.classList.add("fa-solid", "fa-xmark", "popup-close");
@@ -31,28 +33,84 @@ export function generateRulesPopupSection() {
   rulesDiv1.innerHTML = "<h1>How to use the app</h1>";
 
   generateRulesStart();
-  moveSlides();
+  generateRulesQuestion();
+  generateRulesAnswer();
+  generateRulesPronunciation();
+  generateRulesLearnMore();
   
+  const buttons = document.createElement("div");
+  buttons.classList.add("buttons");
+  rulesSection.appendChild(buttons);
 
+  const previousBtn = document.createElement("i");
+  previousBtn.classList.add("fa-solid", "fa-circle-arrow-left");
+  previousBtn.style.display = "none";
+  buttons.appendChild(previousBtn);
+
+  const nextBtn = document.createElement("i");
+  nextBtn.classList.add("fa-solid", "fa-circle-arrow-right");
+  buttons.appendChild(nextBtn);
+
+  const rulesStartDiv = document.querySelector(".rulesStartDiv");
+  const rulesQuestDiv = document.querySelector(".rulesQuestDiv");
+  const rulesAnswerDiv = document.querySelector(".rulesAnswerDiv");
+  const rulesPronuncDiv = document.querySelector(".rulesPronuncDiv");
+  const rulesLearnMoreDiv = document.querySelector(".rulesLearnMoreDiv");
+
+  const rulesDivArrow = [rulesStartDiv, rulesQuestDiv, rulesAnswerDiv, rulesPronuncDiv, rulesLearnMoreDiv];
+
+  nextBtn.addEventListener("click", ()=>{
+    for(let i=0; i<rulesDivArrow.length-1; i++){
+      if(rulesDivArrow[i].style.display !== "none"){
+        rulesDivArrow[i].style.display = "none";
+        rulesDivArrow[i+1].style.display = "block";
+        if(i === 3){
+          nextBtn.style.display = "none";
+        };
+        previousBtn.style.display = "block"; 
+        break;
+      }
+    }
+  })
+
+  previousBtn.addEventListener("click", ()=>{
+    for(let i=1; i<rulesDivArrow.length; i++){
+      if(rulesDivArrow[i].style.display !== "none"){
+        rulesDivArrow[i].style.display = "none";
+        rulesDivArrow[i-1].style.display = "block";
+        if(i === 1){
+          previousBtn.style.display = "none";
+        } 
+        nextBtn.style.display = "block";
+        break;
+      }
+    }
+  })
+
+
+  /*rulesStartDiv.style.display = "none";
+  rulesQuestDiv.style.display = "none";
+  rulesAnswerDiv.style.display = "none";
+  rulesPronuncDiv.style.display = "none";
+  rulesLearnMoreDiv.style.display = "none";
+*/
 }
 
 
 function generateRulesStart() {
   const rulesSection = document.querySelector(".rulesSection");
 
-  const rulesQuestDiv = document.querySelector(".rulesQuestDiv");
+  /*const rulesQuestDiv = document.querySelector(".rulesQuestDiv");
   //const rulesPronuncDiv = document.querySelector(".rulesPronuncDiv");
 
   if(rulesQuestDiv) {
     rulesSection.removeChild(rulesQuestDiv);
   }
-
-  /*if(rulesPronuncDiv) {
-    rulesSection.removeChild(rulesPronuncDiv);
-  }*/
- 
+ */
 
   const rulesStartDiv = document.createElement("div");
+  //rulesStartDiv.style.display = "none";
+
   rulesSection.appendChild(rulesStartDiv);
   rulesStartDiv.classList.add("rulesStartDiv");
 
@@ -107,21 +165,24 @@ function generateRulesStart() {
   carouselContainer.appendChild(slide2);
   carouselContainer.appendChild(slide3);
 
-  const buttons = document.createElement("div");
+  moveSlides();
+
+  /*const buttons = document.createElement("div");
   buttons.classList.add("buttons");
   rulesStartDiv.appendChild(buttons);
+
 
   const nextBtn = document.createElement("i");
   nextBtn.classList.add("fa-solid", "fa-circle-arrow-right");
   buttons.appendChild(nextBtn);
 
   nextBtn.addEventListener("click", generateRulesQuestion);
-    
+    */
   } 
 
   function generateRulesQuestion() {
     const rulesSection = document.querySelector(".rulesSection");
-    const rulesStartDiv = document.querySelector(".rulesStartDiv");
+    /*const rulesStartDiv = document.querySelector(".rulesStartDiv");
     const rulesAnswerDiv = document.querySelector(".rulesAnswerDiv");
 
     if(rulesStartDiv) {
@@ -131,9 +192,11 @@ function generateRulesStart() {
     if(rulesAnswerDiv) {
       rulesSection.removeChild(rulesAnswerDiv);
     }
-    
+    */
 
     const rulesQuestDiv = document.createElement("div");
+    rulesQuestDiv.style.display = "none";
+
     rulesSection.appendChild(rulesQuestDiv);
     rulesQuestDiv.classList.add("rulesQuestDiv");
 
@@ -161,7 +224,7 @@ function generateRulesStart() {
    
     photoDiv.appendChild(exampleImage);
 
-    const buttons = document.createElement("div");
+    /*const buttons = document.createElement("div");
     buttons.classList.add("buttons");
     rulesExplanation.appendChild(buttons);
 
@@ -179,13 +242,13 @@ function generateRulesStart() {
     });
     previousBtn.addEventListener("click", ()=>{
       generateRulesStart();
-      moveSlides();
     });
+    */
 } 
 
 function generateRulesAnswer() {
   const rulesSection = document.querySelector(".rulesSection");
-  const rulesQuestDiv = document.querySelector(".rulesQuestDiv");
+  /*const rulesQuestDiv = document.querySelector(".rulesQuestDiv");
   const rulesPronuncDiv = document.querySelector(".rulesPronuncDiv");
 
   if(rulesQuestDiv) {
@@ -195,9 +258,12 @@ function generateRulesAnswer() {
   if(rulesPronuncDiv) {
     rulesSection.removeChild(rulesPronuncDiv);
   }
+    */
   
 
   const rulesAnswerDiv = document.createElement("div");
+  rulesAnswerDiv.style.display = "none";
+
   rulesSection.appendChild(rulesAnswerDiv);
   rulesAnswerDiv.classList.add("rulesAnswerDiv");
 
@@ -230,7 +296,7 @@ So we should type <b>'prends'</b> to complete the sentence.`;
  
   photoDiv.appendChild(exampleImage);
 
-  const buttons = document.createElement("div");
+  /*const buttons = document.createElement("div");
   buttons.classList.add("buttons");
   rulesExplanation.appendChild(buttons);
 
@@ -244,12 +310,13 @@ So we should type <b>'prends'</b> to complete the sentence.`;
 
   nextBtn.addEventListener("click", generateRulesPronunciation);
   previousBtn.addEventListener("click", generateRulesQuestion);
+  */
 } 
 
   function generateRulesPronunciation(){
     const rulesSection = document.querySelector(".rulesSection");
 
-    const rulesAnswerDiv = document.querySelector(".rulesAnswerDiv");
+    /*const rulesAnswerDiv = document.querySelector(".rulesAnswerDiv");
     const rulesLearnMoreDiv = document.querySelector(".rulesLearnMoreDiv");
 
     if(rulesAnswerDiv){
@@ -259,7 +326,10 @@ So we should type <b>'prends'</b> to complete the sentence.`;
     if(rulesLearnMoreDiv) {
       rulesSection.removeChild(rulesLearnMoreDiv);
     }
+      */
     const rulesPronuncDiv = document.createElement("div");
+    rulesPronuncDiv.style.display = "none";
+
     rulesSection.appendChild(rulesPronuncDiv);
     rulesPronuncDiv.classList.add("rulesPronuncDiv");
     
@@ -294,7 +364,7 @@ So we should type <b>'prends'</b> to complete the sentence.`;
      
     photoDiv.appendChild(exampleImage);
     
-    const buttons = document.createElement("div");
+    /*const buttons = document.createElement("div");
     buttons.classList.add("buttons");
     rulesPronuncDiv.appendChild(buttons);
   
@@ -308,24 +378,22 @@ So we should type <b>'prends'</b> to complete the sentence.`;
 
     previousBtn.addEventListener("click", generateRulesAnswer);
     nextBtn.addEventListener("click", generateRulesLearnMore);
-
+    */
 }
 
 function generateRulesLearnMore() {
   const rulesSection = document.querySelector(".rulesSection");
-  //const rulesQuestDiv = document.querySelector(".rulesQuestDiv");
+  
+/*
   const rulesPronuncDiv = document.querySelector(".rulesPronuncDiv");
-
-  /*if(rulesQuestDiv) {
-    rulesSection.removeChild(rulesQuestDiv);
-  }*/
 
   if(rulesPronuncDiv) {
     rulesSection.removeChild(rulesPronuncDiv);
   }
-  
+  */
 
   const rulesLearnMoreDiv = document.createElement("div");
+  rulesLearnMoreDiv.style.display = "none";
   rulesSection.appendChild(rulesLearnMoreDiv);
   rulesLearnMoreDiv.classList.add("rulesLearnMoreDiv");
 
@@ -343,10 +411,6 @@ function generateRulesLearnMore() {
   rulesP1.innerHTML =
     `If the answer you've typed is incorrect, you can click on 'learn more' to see additional information to help you master French conjugation.`;
   
-  /*const rulesP2 = document.createElement("p");
-  rulesExplanation.appendChild(rulesP2);
-  rulesP2.innerHTML = "Use <u>the keyboard on your device</u> to type your answers. You can also use the buttons with <u>special characters</u> such as 'é' or 'ç' to type faster."
-  */
 
   const photoDiv = document.createElement("div");
   photoDiv.classList.add("photoDiv");
@@ -357,6 +421,7 @@ function generateRulesLearnMore() {
  
   photoDiv.appendChild(exampleImage);
 
+  /*
   const buttons = document.createElement("div");
   buttons.classList.add("buttons");
   rulesExplanation.appendChild(buttons);
@@ -365,12 +430,9 @@ function generateRulesLearnMore() {
   previousBtn.classList.add("fa-solid", "fa-circle-arrow-left");
   buttons.appendChild(previousBtn);
 
-  /*const nextBtn = document.createElement("i");
-  nextBtn.classList.add("fa-solid", "fa-circle-arrow-right");
-  buttons.appendChild(nextBtn);
-*/
-  //nextBtn.addEventListener("click", generateRulesPronunciation);
+
   previousBtn.addEventListener("click", generateRulesPronunciation);
+  */
 } 
 
 
