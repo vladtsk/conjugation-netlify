@@ -225,7 +225,7 @@ main {
 
   min-width: 360px;
   width: fit-content;
-  max-width: 100%;
+  max-width: 550px;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -1186,7 +1186,7 @@ button[disabled] {
 
   /*margin-top: 20px;*/
 
-  font-size: 22px;
+  font-size: 26px;
 
   position: absolute;
   top: 50%;
