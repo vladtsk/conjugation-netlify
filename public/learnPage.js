@@ -11,6 +11,7 @@ import { generatePastCompParticPage } from "./pastparticiple.js";
 import { generateImparfaitPage } from "./imparfait-page.js";
 import { generateFuturePage } from "./futurePage.js";
 import { generateFutureSpellingPage } from "./futureSpellingPage.js";
+import { generateFutureExceptionsPage } from "./futureExceptions.js";
 
 
 
@@ -203,73 +204,51 @@ verb conjugation`;
   futureSpelling.classList.add("future-submenu", "furure-spelling");
   futureSpelling.innerHTML = `<i
   class="fa-solid fa-circle-chevron-right"></i> Spelling changes`;
-/*
-  const pastSubParticiple = document.createElement("div");
-  pastSubParticiple.classList.add("past-submenu", "past-participle");
-  pastSubParticiple.innerHTML = `<i
-  class="fa-solid fa-circle-chevron-right"></i>The past participle`;
-*/
+
+  const futureExceptions = document.createElement("div");
+  futureExceptions.classList.add("future-submenu", "furure-exceptions");
+  futureExceptions.innerHTML = `<i
+  class="fa-solid fa-circle-chevron-right"></i> Exceptions`;
+
   futureSubContainer.appendChild(futureSubIntro);
   futureSubContainer.appendChild(futureSpelling);
+  futureSubContainer.appendChild(futureExceptions);
  
   //
 
   manageLearnMenu(userId, subStatus);
 
-  introMenuLink.addEventListener("click", ()=> {
-    generateIntroPage();
-  })
+  introMenuLink.addEventListener("click", generateIntroPage);
 
-  presentSubIntro.addEventListener("click", () => {
-    generatePresentPage();
-  });
+  presentSubIntro.addEventListener("click", generatePresentPage);
 
-  presentSubGroup1.addEventListener("click", ()=> {
-    generatePresentGroup1Page();
-  })
+  presentSubGroup1.addEventListener("click", generatePresentGroup1Page);
 
-  presentSubGroup2.addEventListener("click", ()=>{
-    generatePresentGroup2Page();
-  })
+  presentSubGroup2.addEventListener("click", generatePresentGroup2Page);
 
   if(userId && subStatus === "active") {
-    presentSubGroup3.addEventListener("click", ()=> {
-      generatePresentGroup3Page();
-    })
+    presentSubGroup3.addEventListener("click", generatePresentGroup3Page)
   }
   
   if(userId && subStatus === "active") {
-    presentSubIrregular.addEventListener("click", ()=> {
-    generatePresentIrregularPage();
-  })
+    presentSubIrregular.addEventListener("click", generatePresentIrregularPage)
 }
 
   if(userId && subStatus === "active") {
-    pastSubIntro.addEventListener("click", ()=> {
-      generatePastCompPage();
-  })
+    pastSubIntro.addEventListener("click", generatePastCompPage)
   }
 
-  pastSubAux.addEventListener("click", ()=> {
-    generatePastCompAuxPage();
-    })
+  pastSubAux.addEventListener("click", generatePastCompAuxPage)
   
-    pastSubParticiple.addEventListener("click", ()=> {
-      generatePastCompParticPage();
-    })
+    pastSubParticiple.addEventListener("click", generatePastCompParticPage)
 
     if(userId && subStatus === "active") {
-      imperfectLink.addEventListener("click", ()=> {
-        generateImparfaitPage();
-    })
+      imperfectLink.addEventListener("click", generateImparfaitPage)
   }
 
-  futureSubIntro.addEventListener("click", ()=> {
-    generateFuturePage();
-})
+  futureSubIntro.addEventListener("click", generateFuturePage)
   
-  futureSpelling.addEventListener("click", ()=> {
-    generateFutureSpellingPage();
-})
+  futureSpelling.addEventListener("click", generateFutureSpellingPage)
 
+futureExceptions.addEventListener("click", generateFutureExceptionsPage)
 }

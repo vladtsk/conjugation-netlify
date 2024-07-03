@@ -2,6 +2,7 @@
 
 import { launchFirstPage } from "./readDbData.js";
 import { selectPracticeBtn } from "./selectMenuItem.js";
+//import { generateLoader } from "./loader.js";
 
 export function managePracticeBtnClick() {
     const practiceBtn = document.querySelectorAll(".practice");

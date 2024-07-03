@@ -40,12 +40,15 @@ import { managePracticeBtnClick } from "./menuPracticeBtnClick.js";
 import { handleRulesPopup } from "./rulesPopup.js";
 
 
+
 checkAuthState();
 
 handleAuthClicks();
 handleLogInLogOutClicks();
 
+
 launchFirstPage();
+
 
 managePracticeBtnClick();
 

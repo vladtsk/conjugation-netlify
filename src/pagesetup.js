@@ -432,6 +432,7 @@ export function showNoMorePhrasesPage(score, phraseStats) {
     sidebarContainer.style.display = "flex";
     sidebarTabletContainer.style.display = "flex";
     footer.style.display = "block";
+    
     launchFirstPage();
   });
 }

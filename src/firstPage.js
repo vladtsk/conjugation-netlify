@@ -1,7 +1,10 @@
 import { buildTenseSelectPopup, buildPhraseNbSelectPopup  } from "./firstPageSelectPopups.js";
+//import { hideLoader } from "./loader.js";
+
 // Building the first page
 export async function buildFirstPage(userId) {
     
+
     const contentArea = document.querySelector(".content-area");
   
     // Section containing the main element
@@ -115,6 +118,7 @@ export async function buildFirstPage(userId) {
 
     const rulesSection = document.querySelector(".rulesSection");
     const blurContainer = document.querySelector(".blurContainer"); 
+
 
     // Showing rules 
     const firstTimeBtn = document.querySelector(".firstTimeBtn");

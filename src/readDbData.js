@@ -20,6 +20,10 @@ import { checkTimeDifference } from "./livesManager.js";
 
 import { showNoMoreLivesMessage } from "./noLivesPageMessage.js";
 
+import { generateLoader, hideLoader } from "./loader.js";
+
+
+
 let auth, database;
 
 async function getAuthDatabase() {
@@ -34,6 +38,8 @@ getAuthDatabase();
 export async function launchFirstPage() {
   const contentArea = document.querySelector(".content-area");
   contentArea.innerHTML = "";
+  
+  generateLoader();
 
   await getAuthDatabase();
 
@@ -52,25 +58,25 @@ export async function launchFirstPage() {
   let timeDifferenceMnts = checkTimeDifference(); // the time difference between the last time the user used the app and now (in minutes)
 
   console.log("lives=", lives, "timeDiff=", timeDifferenceMnts);
+ 
 
   if(userId) {
     if(subStatus === "active") {
-      buildFirstPage(userId);
+      await buildFirstPage(userId);
     } else {
       showNoSubMessage(); 
     }
   } else if(lives > 0) {
-    buildFirstPage(userId);
+    await buildFirstPage(userId);
   } else if (lives === 0 && timeDifferenceMnts >= 60) {
     lives = 7;
     window.localStorage.setItem("lives", 7);
-    buildFirstPage(userId);
+    await buildFirstPage(userId);
   } else {
     showNoMoreLivesMessage(); 
   }
 
-  
-
+  hideLoader();
   
   let phraseNumber = 5; // Making sure the phrase number is back to its default value
 
@@ -127,6 +133,8 @@ export async function launchFirstPage() {
       }
     });
   }
+
+
 }
 
 function getTenseFromSelectElement() {

@@ -1016,6 +1016,7 @@ button[disabled] {
 .summaryCloseBtn {
   position: absolute;
   right: 15px;
+  font-size: 22px;
 }
 
 .summary .correctCheck {
@@ -1066,6 +1067,48 @@ button[disabled] {
 
 #showSummary-btn:hover {
   background-color: #faeeeb;
+}
+
+/* Styling the loader (spinner) */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  background-color: var(--color-secondary);
+  /*transition: opacity 0.75s visibility 0.75s;*/
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddd;
+  border-top-color: var(--color-tertiary);
+  border-bottom-color: var(--color-primary);
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+  
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn)
+  }
+  to {
+    transform: rotate(1turn)
+  }
 }
 
 /* Styling the chart */
@@ -1159,7 +1202,7 @@ button[disabled] {
 
 .rulesSection .popup-close {
   margin-left: 95%;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 
