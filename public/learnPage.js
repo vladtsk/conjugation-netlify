@@ -12,6 +12,11 @@ import { generateImparfaitPage } from "./imparfait-page.js";
 import { generateFuturePage } from "./futurePage.js";
 import { generateFutureSpellingPage } from "./futureSpellingPage.js";
 import { generateFutureExceptionsPage } from "./futureExceptions.js";
+import { generateSubjunctivePage } from "./subjunctive-page.js";
+import { generateSubjunctiveStructurePage } from "./subjunctive-structure-page.js";
+import { generateSubjunctiveIrregularPage } from "./subjunctive-irregular-page.js";
+
+
 
 
 
@@ -102,6 +107,17 @@ verb conjugation`;
   presentSubContainer.appendChild(presentSubGroup3);
   presentSubContainer.appendChild(presentSubIrregular);
 
+  const imperfectLink = document.createElement("div");
+  imperfectLink.classList.add("imperfect-menu");
+
+  if(userId && subStatus === "active") {
+    imperfectLink.innerHTML = `<i class='fa-solid fa-house'></i>The imperfect past tense`;
+  } else {
+    imperfectLink.innerHTML = `<i class='fa-solid fa-lock'></i>The imperfect past tense`;
+  }
+
+  menu.appendChild(imperfectLink);
+
   const pastContainer = document.createElement("div");
   pastContainer.classList.add("past-container");
 
@@ -152,18 +168,7 @@ verb conjugation`;
   pastSubContainer.appendChild(pastSubAux);
   pastSubContainer.appendChild(pastSubParticiple);
 
-  const imperfectLink = document.createElement("div");
-  imperfectLink.classList.add("imperfect-menu");
 
-  if(userId && subStatus === "active") {
-    imperfectLink.innerHTML = `<i class='fa-solid fa-house'></i>The imperfect past tense`;
-  } else {
-    imperfectLink.innerHTML = `<i class='fa-solid fa-lock'></i>The imperfect past tense`;
-  }
-
-  menu.appendChild(imperfectLink);
-
-  //
   const futureContainer = document.createElement("div");
   futureContainer.classList.add("future-container");
 
@@ -178,7 +183,7 @@ verb conjugation`;
   futureMenu.appendChild(futureLine);
 
   if(userId && subStatus === "active") {
-    futureLine.innerHTML = `<i class='fas fa-compass'></i>The simple future tense (le futur simple)</div>`;
+    futureLine.innerHTML = `<i class="fa-solid fa-chess-rook"></i>The simple future tense (le futur simple)</div>`;
 
     const plusIcon3 = document.createElement("i");
     plusIcon3.classList.add("fa-solid", "fa-square-plus");
@@ -213,6 +218,54 @@ verb conjugation`;
   futureSubContainer.appendChild(futureSubIntro);
   futureSubContainer.appendChild(futureSpelling);
   futureSubContainer.appendChild(futureExceptions);
+
+  const subjunctiveContainer = document.createElement("div");
+  subjunctiveContainer.classList.add("sunjunctive-container");
+
+  menu.appendChild(subjunctiveContainer);
+
+  const subjunctiveMenu = document.createElement("div");
+  subjunctiveMenu.classList.add("subjunctive-menu");
+  subjunctiveContainer.appendChild(subjunctiveMenu);
+
+  const subjunctiveLine = document.createElement("div");
+  subjunctiveLine.classList.add("subjunctive-line");
+  subjunctiveMenu.appendChild(subjunctiveLine);
+
+  if(userId && subStatus === "active") {
+    subjunctiveLine.innerHTML = `<i class="fa-solid fa-mountain"></i>The French subjunctive (le subjonctif)</div>`;
+
+    const plusIcon3 = document.createElement("i");
+    plusIcon3.classList.add("fa-solid", "fa-square-plus");
+
+  subjunctiveMenu.appendChild(plusIcon3);
+  } else {
+    subjunctiveLine.innerHTML = `<i class="fa-solid fa-lock"></i>The French subjunctive (le subjonctif)</div>`;
+  }
+
+  const subjunctiveSubContainer = document.createElement("div");
+  subjunctiveSubContainer.classList.add("subjunctive-subcontainer");
+  subjunctiveSubContainer.style.display = "none";
+  subjunctiveContainer.appendChild(subjunctiveSubContainer);
+
+  const subjunctiveSubIntro = document.createElement("div");
+  subjunctiveSubIntro.classList.add("subjunctive-submenu", "subjunctive-intro");
+  subjunctiveSubIntro.innerHTML = `<i
+  class="fa-solid fa-circle-chevron-right"></i>Introduction`;
+
+  const subjunctiveStructure = document.createElement("div");
+  subjunctiveStructure.classList.add("subjunctive-submenu", "subjunctive-structure");
+  subjunctiveStructure.innerHTML = `<i
+  class="fa-solid fa-circle-chevron-right"></i> The structure`;
+
+  const subjunctiveExceptions = document.createElement("div");
+  subjunctiveExceptions.classList.add("subjunctive-submenu", "subjunctive-exceptions");
+  subjunctiveExceptions.innerHTML = `<i
+  class="fa-solid fa-circle-chevron-right"></i> Exceptions`;
+
+  subjunctiveSubContainer.appendChild(subjunctiveSubIntro);
+  subjunctiveSubContainer.appendChild(subjunctiveStructure);
+  subjunctiveSubContainer.appendChild(subjunctiveExceptions);
  
   //
 
@@ -227,28 +280,35 @@ verb conjugation`;
   presentSubGroup2.addEventListener("click", generatePresentGroup2Page);
 
   if(userId && subStatus === "active") {
-    presentSubGroup3.addEventListener("click", generatePresentGroup3Page)
+    presentSubGroup3.addEventListener("click", generatePresentGroup3Page);
   }
   
   if(userId && subStatus === "active") {
-    presentSubIrregular.addEventListener("click", generatePresentIrregularPage)
+    presentSubIrregular.addEventListener("click", generatePresentIrregularPage);
 }
 
   if(userId && subStatus === "active") {
-    pastSubIntro.addEventListener("click", generatePastCompPage)
+    pastSubIntro.addEventListener("click", generatePastCompPage);
   }
 
-  pastSubAux.addEventListener("click", generatePastCompAuxPage)
+  pastSubAux.addEventListener("click", generatePastCompAuxPage);
   
-    pastSubParticiple.addEventListener("click", generatePastCompParticPage)
+    pastSubParticiple.addEventListener("click", generatePastCompParticPage);
 
     if(userId && subStatus === "active") {
-      imperfectLink.addEventListener("click", generateImparfaitPage)
+      imperfectLink.addEventListener("click", generateImparfaitPage);
   }
 
-  futureSubIntro.addEventListener("click", generateFuturePage)
+  futureSubIntro.addEventListener("click", generateFuturePage);
   
-  futureSpelling.addEventListener("click", generateFutureSpellingPage)
+  futureSpelling.addEventListener("click", generateFutureSpellingPage);
 
-futureExceptions.addEventListener("click", generateFutureExceptionsPage)
+  futureExceptions.addEventListener("click", generateFutureExceptionsPage);
+
+  subjunctiveSubIntro.addEventListener("click", generateSubjunctivePage);
+
+  subjunctiveStructure.addEventListener("click", generateSubjunctiveStructurePage);
+
+  subjunctiveExceptions.addEventListener("click", generateSubjunctiveIrregularPage)
+  
 }

@@ -4260,6 +4260,221 @@
       "5": "que vous brilliez",
       "6": "qu'ils/elles brillent"
     }
+    },
+
+    "nager": {
+    "present": {
+      "1": "je nage",
+      "2": "tu nages",
+      "3": "il/elle/on nage",
+      "4": "nous nageons",
+      "5": "vous nagez",
+      "6": "ils/elles nagent"
+    },
+    "pastcomp": {
+      "1": "j'ai nagé",
+      "2": "tu as nagé",
+      "3": "il/elle/on a nagé",
+      "4": "nous avons nagé",
+      "5": "vous avez nagé",
+      "6": "ils/elles ont nagé"
+    },
+    "pastimp": {
+      "1": "je nageais",
+      "2": "tu nageais",
+      "3": "il/elle/on nageait",
+      "4": "nous nagions",
+      "5": "vous nagiez",
+      "6": "ils/elles nageaient"
+    },
+    "future": {
+      "1": "je nagerai",
+      "2": "tu nageras",
+      "3": "il/elle/on nagera",
+      "4": "nous nagerons",
+      "5": "vous nagerez",
+      "6": "ils/elles nageront"
+    },
+    "subjunctive": {
+      "1": "que je nage",
+      "2": "que tu nages",
+      "3": "qu'il/elle/on nage",
+      "4": "que nous nagions",
+      "5": "que vous nagiez",
+      "6": "qu'ils/elles nagent"
     }
+  },
+  "signer": {
+  "present": {
+    "1": "je signe",
+    "2": "tu signes",
+    "3": "il/elle/on signe",
+    "4": "nous signons",
+    "5": "vous signez",
+    "6": "ils/elles signent"
+  },
+  "pastcomp": {
+    "1": "j'ai signé",
+    "2": "tu as signé",
+    "3": "il/elle/on a signé",
+    "4": "nous avons signé",
+    "5": "vous avez signé",
+    "6": "ils/elles ont signé"
+  },
+  "pastimp": {
+    "1": "je signais",
+    "2": "tu signais",
+    "3": "il/elle/on signait",
+    "4": "nous signions",
+    "5": "vous signiez",
+    "6": "ils/elles signaient"
+  },
+  "future": {
+    "1": "je signerai",
+    "2": "tu signeras",
+    "3": "il/elle/on signera",
+    "4": "nous signerons",
+    "5": "vous signerez",
+    "6": "ils/elles signeront"
+  },
+  "subjunctive": {
+    "1": "que je signe",
+    "2": "que tu signes",
+    "3": "qu'il/elle/on signe",
+    "4": "que nous signions",
+    "5": "que vous signiez",
+    "6": "qu'ils/elles signent"
+  }
+},
+"se marier": {
+  "present": {
+    "1": "je me marie",
+    "2": "tu te maries",
+    "3": "il/elle/on se marie",
+    "4": "nous nous marions",
+    "5": "vous vous mariez",
+    "6": "ils/elles se marient"
+  },
+  "pastcomp": {
+    "1": "je me suis marié(e)",
+    "2": "tu t'es marié(e)",
+    "3": "il/elle/on s'est marié(e)(s)",
+    "4": "nous nous sommes marié(e)s",
+    "5": "vous vous êtes marié(e)(s)",
+    "6": "ils/elles se sont marié(e)s"
+  },
+  "pastimp": {
+    "1": "je me mariais",
+    "2": "tu te mariais",
+    "3": "il/elle/on se mariait",
+    "4": "nous nous mariions",
+    "5": "vous vous mariiez",
+    "6": "ils/elles se mariaient"
+  },
+  "future": {
+    "1": "je me marierai",
+    "2": "tu te marieras",
+    "3": "il/elle/on se mariera",
+    "4": "nous nous marierons",
+    "5": "vous vous marierez",
+    "6": "ils/elles se marieront"
+  },
+  "subjunctive": {
+    "1": "que je me marie",
+    "2": "que tu te maries",
+    "3": "qu'il/elle/on se marie",
+    "4": "que nous nous mariions",
+    "5": "que vous vous mariiez",
+    "6": "qu'ils/elles se marient"
+  }
+},
+"retrouver": {
+  "present": {
+    "1": "je retrouve",
+    "2": "tu retrouves",
+    "3": "il/elle/on retrouve",
+    "4": "nous retrouvons",
+    "5": "vous retrouvez",
+    "6": "ils/elles retrouvent"
+  },
+  "pastcomp": {
+    "1": "j'ai retrouvé",
+    "2": "tu as retrouvé",
+    "3": "il/elle/on a retrouvé",
+    "4": "nous avons retrouvé",
+    "5": "vous avez retrouvé",
+    "6": "ils/elles ont retrouvé"
+  },
+  "pastimp": {
+    "1": "je retrouvais",
+    "2": "tu retrouvais",
+    "3": "il/elle/on retrouvait",
+    "4": "nous retrouvions",
+    "5": "vous retrouviez",
+    "6": "ils/elles retrouvaient"
+  },
+  "future": {
+    "1": "je retrouverai",
+    "2": "tu retrouveras",
+    "3": "il/elle/on retrouvera",
+    "4": "nous retrouverons",
+    "5": "vous retrouverez",
+    "6": "ils/elles retrouveront"
+  },
+  "subjunctive": {
+    "1": "que je retrouve",
+    "2": "que tu retrouves",
+    "3": "qu'il/elle/on retrouve",
+    "4": "que nous retrouvions",
+    "5": "que vous retrouviez",
+    "6": "qu'ils/elles retrouvent"
+  }
+},
+"offrir": {
+  "present": {
+    "1": "j'offre",
+    "2": "tu offres",
+    "3": "il/elle/on offre",
+    "4": "nous offrons",
+    "5": "vous offrez",
+    "6": "ils/elles offrent"
+  },
+  "pastcomp": {
+    "1": "j'ai offert",
+    "2": "tu as offert",
+    "3": "il/elle/on a offert",
+    "4": "nous avons offert",
+    "5": "vous avez offert",
+    "6": "ils/elles ont offert"
+  },
+  "pastimp": {
+    "1": "j'offrais",
+    "2": "tu offrais",
+    "3": "il/elle/on offrait",
+    "4": "nous offrions",
+    "5": "vous offriez",
+    "6": "ils/elles offraient"
+  },
+  "future": {
+    "1": "j'offrirai",
+    "2": "tu offriras",
+    "3": "il/elle/on offrira",
+    "4": "nous offrirons",
+    "5": "vous offrirez",
+    "6": "ils/elles offriront"
+  },
+  "subjunctive": {
+    "1": "que j'offre",
+    "2": "que tu offres",
+    "3": "qu'il/elle/on offre",
+    "4": "que nous offrions",
+    "5": "que vous offriez",
+    "6": "qu'ils/elles offrent"
+  }
+}
+
+
+
+
   }
 }

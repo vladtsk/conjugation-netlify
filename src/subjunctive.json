@@ -24,7 +24,8 @@
         "phrase": "Il faut que tu ____ à l'université.",
         "answer": "ailles",
         "fullPhrase": "Il faut que tu ailles à l'université.",
-        "translation": "You must go to the university."
+        "translation": "You must go to the university.",
+        "irregular": true
       },
       {
         "id": 4,
@@ -56,7 +57,8 @@
         "phrase": "Il faudra que tu ____ en avance.",
         "answer": "sois",
         "fullPhrase": "Il faudra que tu sois en avance.",
-        "translation": "You will have to be early."
+        "translation": "You will have to be early.",
+        "irregular": true
       },
       {
         "id": 8,
@@ -64,7 +66,8 @@
         "phrase": "Il faut que nous ____ des exercices.",
         "answer": "fassions",
         "fullPhrase": "Il faut que nous fassions des exercices.",
-        "translation": "We must do exercises."
+        "translation": "We must do exercises.",
+        "irregular": true
       },
       {
         "id": 9,
@@ -72,7 +75,8 @@
         "phrase": "Il est possible qu'elle ____ tout.",
         "answer": "sache",
         "fullPhrase": "Il est possible qu'elle sache tout.",
-        "translation": "It's possible that she knows everything."
+        "translation": "It's possible that she knows everything.",
+        "irregular": true
       },
       {
         "id": 10,
@@ -88,7 +92,8 @@
         "phrase": "Il faut que tu ____ à l'heure.",
         "answer": "sois",
         "fullPhrase": "Il faut que tu sois à l'heure.",
-        "translation": "You must be on time."
+        "translation": "You must be on time.",
+        "irregular": true
       },
       {
         "id": 12,
@@ -104,7 +109,8 @@
         "phrase": "Je doute qu'elle ____ accepter cela.",
         "answer": "puisse",
         "fullPhrase": "Je doute qu'elle puisse accepter cela.",
-        "translation": "I doubt that she can accept that."
+        "translation": "I doubt that she can accept that.",
+        "irregular": true
       },
       {
         "id": 14,
@@ -112,7 +118,8 @@
         "phrase": "Je suis content que tu ____ là.",
         "answer": "sois",
         "fullPhrase": "Je suis content que tu sois là.",
-        "translation": "I'm glad that you are here."
+        "translation": "I'm glad that you are here.",
+        "irregular": true
       },
       {
         "id": 15,
@@ -120,7 +127,8 @@
         "phrase": "C'est dommage que tu ne ____ pas venir demain!",
         "answer": "puisses",
         "fullPhrase": "C'est dommage que tu ne puisses pas venir demain!",
-        "translation": "It's a shame that you can't come tomorrow!"
+        "translation": "It's a shame that you can't come tomorrow!",
+        "irregular": true
       },
       {
         "id": 16,
@@ -128,7 +136,8 @@
         "phrase": "Je ne crois pas que tu ____ réussir.",
         "answer": "puisses",
         "fullPhrase": "Je ne crois pas que tu puisses réussir.",
-        "translation": "I don't believe you can succeed."
+        "translation": "I don't believe you can succeed.",
+        "irregular": true
       },
       {
         "id": 17,
@@ -176,7 +185,8 @@
         "phrase": "Je ne crois pas que ce ____ possible.",
         "answer": "soit",
         "fullPhrase": "Je ne crois pas que ce soit possible.",
-        "translation": "I don't believe that's possible."
+        "translation": "I don't believe that's possible.",
+        "irregular": true
       },
       {
         "id": 23,
@@ -184,7 +194,8 @@
         "phrase": "Je ne pense pas qu'il y ____ une autre solution.",
         "answer": "ait",
         "fullPhrase": "Je ne pense pas qu'il y ait une autre solution.",
-        "translation": "I don't think there is another solution."
+        "translation": "I don't think there is another solution.",
+        "irregular": true
       },
       {
         "id": 24,
@@ -192,7 +203,8 @@
         "phrase": "Il faut que j'y ____.",
         "answer": "aille",
         "fullPhrase": "Il faut que j'y aille.",
-        "translation": "I have to go."
+        "translation": "I have to go.",
+        "irregular": true
       },
       {
         "id": 25,
@@ -216,7 +228,8 @@
         "phrase": "Elle est fâchée que je ne ____ pas d'accord avec elle.",
         "answer": "sois",
         "fullPhrase": "Elle est fâchée que je ne sois pas d'accord avec elle.",
-        "translation": "She is angry that I do not agree with her."
+        "translation": "She is angry that I do not agree with her.",
+        "irregular": true
       },
       {
         "id": 28,
@@ -224,7 +237,8 @@
         "phrase": "Je comprends que tu ____ y aller.",
         "answer": "veuilles",
         "fullPhrase": "Je comprends que tu veuilles y aller.",
-        "translation": "I understand that you want to go."
+        "translation": "I understand that you want to go.",
+        "irregular": true
       },
       {
         "id": 29,
@@ -240,7 +254,8 @@
         "phrase": "On préfère qu'il ____ chaud.",
         "answer": "fasse",
         "fullPhrase": "On préfère qu'il fasse chaud.",
-        "translation": "We prefer the weather to be hot."
+        "translation": "We prefer the weather to be hot.",
+        "irregular": true
       },
       {
         "id": 31,
@@ -248,7 +263,8 @@
         "phrase": "Elle voudrait que tu ____ l'attendre.",
         "answer": "ailles",
         "fullPhrase": "Elle voudrait que tu ailles l'attendre.",
-        "translation": "She would like you to go wait for him/her."
+        "translation": "She would like you to go wait for him/her.",
+        "irregular": true
       },
       {
         "id": 32,
@@ -264,7 +280,8 @@
         "phrase": "J'aimerais trouver un assistant sur qui je ____ compter.",
         "answer": "puisse",
         "fullPhrase": "J'aimerais trouver un assistant sur qui je puisse compter.",
-        "translation": "I would like to find an assistant I can rely on."
+        "translation": "I would like to find an assistant I can rely on.",
+        "irregular": true
       },
       {
         "id": 34,
@@ -288,7 +305,8 @@
         "phrase": "Nous lui avons donné des adresses pour qu'il ____ trouver un hôtel facilement.",
         "answer": "puisse",
         "fullPhrase": "Nous lui avons donné des adresses pour qu'il puisse trouver un hôtel facilement.",
-        "translation": "We gave him addresses so he can find a hotel easily."
+        "translation": "We gave him addresses so he can find a hotel easily.",
+        "irregular": true
       },
       {
         "id": 37,
@@ -296,7 +314,8 @@
         "phrase": "Nous partirons à condition qu'il y ____ de la place dans l'avion.",
         "answer": "ait",
         "fullPhrase": "Nous partirons à condition qu'il y ait de la place dans l'avion.",
-        "translation": "We will leave provided there is space on the plane."
+        "translation": "We will leave provided there is space on the plane.",
+        "irregular": true
       }
       
     ]

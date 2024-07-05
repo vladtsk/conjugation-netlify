@@ -135,7 +135,7 @@ export function generateFutureExceptionsPage() {
     //const moreExampleDiv = document.createElement("div");
     //moreExampleDiv.classList.add("examples");
 
-    const intro2 = document.createElement("h2");
+    const intro2 = document.createElement("h3");
     intro2.innerHTML = "Here are some more common verbs that change their stem in the future tense with 3 forms (<i>je</i>, <i>tu</i>, and <i>il</i>) as examples.";
     //moreExampleDiv.appendChild(intro2);
     pageContent.appendChild(intro2);

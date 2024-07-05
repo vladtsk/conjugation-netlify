@@ -243,8 +243,62 @@ export function getPastcompMessages(verb) {
   return messages;
 }
 
-export function getPastimpMessages(verb) {
-  const messages = {};
+export function getPastimpMessages() {
+  const messages = {
+    pattern: {
+      je: `<p><i class="fa-solid fa-bolt"></i> 'Je' and 'tu' conjugations in the imperfect tense end in '<b>-ais</b>': 
+      <i>je parlais</i>, <i>tu parlais</i>.</p>`,
+      tu: `<p><i class="fa-solid fa-bolt"></i> 'Je' and 'tu' conjugations in the imperfect tense end in '<b>-ais</b>': 
+      <i>je parlais</i>, <i>tu parlais</i>.</p>`,
+      il: `<p><i class="fa-solid fa-bolt"></i> 'Il', 'elle', and 'on' conjugations in the imperfect tense end in '<b>-ait</b>': 
+      <i>il parlait</i>, <i>elle parlait,</i> <i>on parlait</i>.</p>`,
+      nous: `<p><i class="fa-solid fa-bolt"></i> 'Nous' conjugations in the imperfect tense end in '<b>-ions</b>':
+      <i>nous parlions</i>.</p>`,
+      vous: `<p><i class="fa-solid fa-bolt"></i> 'Vous' conjugations in the imperfect tense end in '<b>-iez</b>':
+      <i>vous parliez</i>.</p>`,
+      ils: `<p><i class="fa-solid fa-bolt"></i> 'Ils' and 'elles' conjugations in the imperfect tense end in '<b>-aient</b>':
+      <i>ils parlaient</i>, <i>elles finissaient</i>.</p>`,
+    },
+    etre: `<p><i class="fa-solid fa-exclamation-triangle"></i> The verb <b>'être'</b> uses the stem <b>ét-</b> 
+  instead of the "nous" form from the present tense to form the imperfect tense conjugations: <i>j'<b>ét</b>ais</i>, <i>tu <b>ét</b>ais</i>, 
+  <i>il/elle/on <b>ét</b>ait</i>...</p>`,
+    ier: `<p><i class="fa-solid fa-exclamation-triangle"></i> Verbs ending in <b>-ier</b> have a double 'i' ('ii') in the 'nous' and 'vous' forms.</p>`,
+    pleuvoir: `<p>The imperfect conjugation of 'pleuvoir' is 'il <b>pleuvait</b>'.</p>`,
+    ger: `<p><i class="fa-solid fa-exclamation-triangle"></i> Verbs ending in <b>-ger</b> have an "e" (to preserve the soft "g" sound) in 
+    their imperfect conjugations, except for the 'nous' and 'vous' forms: <i>je/tu mang<u>e</u>ais</i>, but <i>nous <b>mangions</i>.</p>`
+  };
+
+  return messages;
+}
+
+export function getFutureMessages(verb) {
+  const messages = {
+    regular: `<p><i class="fa-solid fa-bolt"></i> The verb <b>${verb}</b> follows the regular conjugation pattern in the future tense.</p>`,
+    irregular: {
+      simple: `<p><i class="fa-solid fa-bolt"></i> The verb <b>${verb}</b> changes its stem in the future simple tense while using 
+      the same set of endings as regular verbs.</p>`,
+      spelling: {
+        eler: `<p><i class="fa-solid fa-bolt"></i> The verb <b>${verb}</b> like some other verbs verbs ending in <b>-eler</b>
+        double the <b><i>l</i></b> in their simple future conjugations.</p>`,
+        eter: `<p><i class="fa-solid fa-bolt"></i> The verb <b>${verb}</b> like some other verbs verbs ending in <b>-eter</b> 
+        double the <b><i>t</i></b> in their simple future conjugations.</p>`,
+        eChange: `<p><i class="fa-solid fa-bolt"></i> In some verbs like <b>lever</b>, <b>acheter</b>, 
+        and <b>peser</b>, the first 'e' changes to <b>'è'</b>.</p>`
+      }
+    }
+    
+  };
+
+  return messages;
+}
+
+export function getSubjunctiveMessages(verb) {
+  const messages = {
+    regular: `<p><i class="fa-solid fa-bolt"></i> The verb <b>${verb}</b> follows the regular conjugation pattern in the present
+    subjunctive tense.</p>`,
+    irregular: `<p><i class="fa-solid fa-bolt"></i> The verb <b>${verb}</b> is irregular in the present subjunctive tense.</p>`
+    
+  };
 
   return messages;
 }

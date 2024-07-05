@@ -26,7 +26,7 @@ export function generatePastCompAuxPage() {
     iconSpan.classList.add("icon");
     const iconI2 = document.createElement("i");
     iconI2.classList.add("fas", "fa-chevron-right");
-    iconSpan2.appendChild(iconI2)
+    iconSpan2.appendChild(iconI2);
 
     const pastAux = document.createElement("a");
   

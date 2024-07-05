@@ -8,7 +8,8 @@
       "fullPhrase": "Il y avait beaucoup de monde.",
       "tense": "imperfect past (l'imparfait)",
       "tenseShort": "pastimp",
-      "translation": "There was a lot of people."
+      "translation": "There was a lot of people.",
+      "pattern": "il"
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "phrase": "Elles ____ à la mer.",
       "answer": "allaient",
       "fullPhrase": "Elles allaient à la mer.",
-      "translation": "They used to go to the seaside."
+      "translation": "They used to go to the seaside.",
+      "pattern": "ils"
     },
     {
       "id": 3,
@@ -24,7 +26,8 @@
       "phrase": "Tu ____ calme.",
       "answer": "étais",
       "fullPhrase": "Tu étais calme.",
-      "translation": "You were calm."
+      "translation": "You were calm.",
+      "pattern": "tu"
     },
     {
       "id": 4,
@@ -32,7 +35,8 @@
       "phrase": "Vous ____ bien ?",
       "answer": "dormiez",
       "fullPhrase": "Vous dormiez bien ?",
-      "translation": "Were you sleeping / did you sleep well?"
+      "translation": "Were you sleeping / did you sleep well?",
+      "pattern": "vous"
     },
     {
       "id": 5,
@@ -40,7 +44,8 @@
       "phrase": "Je ____ du thé.",
       "answer": "buvais",
       "fullPhrase": "Je buvais du thé.",
-      "translation": "I was drinking tea."
+      "translation": "I was drinking tea.",
+      "pattern": "je"
     },
     {
       "id": 6,
@@ -48,7 +53,8 @@
       "phrase": "On ____ un bain le dimanche.",
       "answer": "prenait",
       "fullPhrase": "On prenait un bain le dimanche.",
-      "translation": "We used to take a bath on Sundays."
+      "translation": "We used to take a bath on Sundays.",
+      "pattern": "il"
     },
     {
       "id": 7,
@@ -56,7 +62,8 @@
       "phrase": "Tu ____ beaucoup.",
       "answer": "te promenais",
       "fullPhrase": "Tu te promenais beaucoup.",
-      "translation": "You used to walk a lot."
+      "translation": "You used to walk a lot.",
+      "pattern": "il"
     },
     {
       "id": 8,
@@ -64,7 +71,8 @@
       "phrase": "Elle ____ tous les jours.",
       "answer": "lisait",
       "fullPhrase": "Elle lisait tous les jours.",
-      "translation": "She used to read every day."
+      "translation": "She used to read every day.",
+      "pattern": "il"
     },
     {
       "id": 9,
@@ -72,7 +80,9 @@
       "phrase": "Vous ____ chez vous.",
       "answer": "étudiiez",
       "fullPhrase": "Vous étudiiez chez vous.",
-      "translation": "You were studying at home."
+      "translation": "You were studying at home.",
+      "pattern": "vous",
+      "exception": "ier" 
     },
     {
       "id": 10,
@@ -80,7 +90,8 @@
       "phrase": "Nous ____ beaucoup de bruit.",
       "answer": "faisions",
       "fullPhrase": "Nous faisions beaucoup de bruit.",
-      "translation": "We were making a lot of noise."
+      "translation": "We were making a lot of noise.",
+      "pattern": "noun"
     },
     {
       "id": 11,
@@ -88,7 +99,8 @@
       "phrase": "Avant, on ____ des lettres.",
       "answer": "envoyait",
       "fullPhrase": "Avant, on envoyait des lettres.",
-      "translation": "In the past, people used to send letters."
+      "translation": "In the past, people used to send letters.",
+      "pattern": "il"
     },
     {
       "id": 12,
@@ -96,7 +108,8 @@
       "phrase": "Avant, tout le monde ____ une radio.",
       "answer": "avait",
       "fullPhrase": "Avant, tout le monde avait une radio.",
-      "translation": "Everyone used to have a radio."
+      "translation": "Everyone used to have a radio.",
+      "pattern": "il"
     },
     {
       "id": 13,
@@ -104,7 +117,8 @@
       "phrase": "Avant, on ____ son linge à la main.",
       "answer": "lavait",
       "fullPhrase": "Avant, on lavait son linge à la main.",
-      "translation": "In the past, people used to wash their clothes by hand."
+      "translation": "In the past, people used to wash their clothes by hand.",
+      "pattern": "il"
     },
     {
       "id": 14,
@@ -112,7 +126,8 @@
       "phrase": "Avant, les Français ____ 45 h par semaine.",
       "answer": "travaillaient",
       "fullPhrase": "Avant, les Français travaillaient 45 h par semaine.",
-      "translation": "The French used to work 45 hours per week."
+      "translation": "The French used to work 45 hours per week.",
+      "pattern": "ils"
     },
     {
       "id": 15,
@@ -120,7 +135,8 @@
       "phrase": "Avant, on ____ le lait à la ferme.",
       "answer": "achetait",
       "fullPhrase": "Avant, on achetait le lait à la ferme.",
-      "translation": "People used to buy milk from the farm."
+      "translation": "People used to buy milk from the farm.",
+      "pattern": "il"
     },
     {
       "id": 16,
@@ -128,7 +144,8 @@
       "phrase": "On ne ____ pas le train.",
       "answer": "prenait",
       "fullPhrase": "On ne prenait pas le train.",
-      "translation": "We didn't take the train."
+      "translation": "We didn't take the train.",
+      "pattern": "il"
     },
     {
       "id": 17,
@@ -136,7 +153,8 @@
       "phrase": "On ____ des voitures.",
       "answer": "conduisait",
       "fullPhrase": "On conduisait des voitures.",
-      "translation": "We/people used to drive cars."
+      "translation": "We/people used to drive cars.",
+      "pattern": "il"
     },
     {
       "id": 18,
@@ -144,7 +162,8 @@
       "phrase": "Les gens ____ des lettres.",
       "answer": "écrivaient",
       "fullPhrase": "Les gens écrivaient des lettres.",
-      "translation": "People used to write letters."
+      "translation": "People used to write letters.",
+      "pattern": "ils"
     },
     {
       "id": 19,
@@ -152,7 +171,8 @@
       "phrase": "Ils n'____ pas la télévision.",
       "answer": "avaient",
       "fullPhrase": "Ils n'avaient pas la télévision.",
-      "translation": "They didn't have a television."
+      "translation": "They didn't have a television.",
+      "pattern": "ils"
     },
     {
       "id": 20,
@@ -160,7 +180,8 @@
       "phrase": "Ils ____ le journal.",
       "answer": "lisaient",
       "fullPhrase": "Ils lisaient le journal.",
-      "translation": "They used to read the newspaper."
+      "translation": "They used to read the newspaper.",
+      "pattern": "ils"
     },
     {
       "id": 21,
@@ -168,7 +189,8 @@
       "phrase": "Les femmes ____ des enfants.",
       "answer": "s'occupaient",
       "fullPhrase": "Les femmes s'occupaient des enfants.",
-      "translation": "Women used to take care of children."
+      "translation": "Women used to take care of children.",
+      "pattern": "ils"
     },
     {
       "id": 22,
@@ -176,7 +198,8 @@
       "phrase": "On ne ____ pas à l'étranger.",
       "answer": "voyageait",
       "fullPhrase": "On ne voyageait pas à l'étranger.",
-      "translation": "We/people didn't travel abroad."
+      "translation": "We/people didn't travel abroad.",
+      "pattern": "il"
     },
     {
       "id": 23,
@@ -184,7 +207,8 @@
       "phrase": "On ____ avec nos voisins.",
       "answer": "parlait",
       "fullPhrase": "On parlait avec nos voisins.",
-      "translation": "We used to talk to our neighbours."
+      "translation": "We used to talk to our neighbours.",
+      "pattern": "il"
     },
     {
       "id": 24,
@@ -192,7 +216,8 @@
       "phrase": "Les enfants n'____ pas à l'école le jeudi.",
       "answer": "allaient",
       "fullPhrase": "Les enfants n'allaient pas à l'école le jeudi.",
-      "translation": "Children didn't go to school on Thursdays."
+      "translation": "Children didn't go to school on Thursdays.",
+      "pattern": "ils"
     },
     {
       "id": 25,
@@ -200,7 +225,8 @@
       "phrase": "Quand j'étais petite, je ____ à la poupée.",
       "answer": "jouais",
       "fullPhrase": "Quand j'étais petite, je jouais à la poupée.",
-      "translation": "When I was little, I used to play with dolls."
+      "translation": "When I was little, I used to play with dolls.",
+      "pattern": "je"
     },
     {
       "id": 26,
@@ -208,7 +234,8 @@
       "phrase": "Je ____ des livres.",
       "answer": "lisais",
       "fullPhrase": "Je lisais des livres.",
-      "translation": "I used to read books."
+      "translation": "I used to read books.",
+      "pattern": "je"
     },
     {
       "id": 27,
@@ -216,7 +243,8 @@
       "phrase": "J'____ mes parents à la maison.",
       "answer": "aidais",
       "fullPhrase": "J'aidais mes parents à la maison.",
-      "translation": "I used to help my parents at home."
+      "translation": "I used to help my parents at home.",
+      "pattern": "je"
     },
     {
       "id": 28,
@@ -224,7 +252,8 @@
       "phrase": "Je ____ à 21 h.",
       "answer": "me couchais",
       "fullPhrase": "Je me couchais à 21 h.",
-      "translation": "I used to go to bed at 9 p.m."
+      "translation": "I used to go to bed at 9 p.m.",
+      "pattern": "je"
     },
     {
       "id": 29,
@@ -232,7 +261,8 @@
       "phrase": "Je ____ à mes grands-parents tous les week-ends.",
       "answer": "rendais visite",
       "fullPhrase": "Je rendais visite à mes grands-parents tous les week-ends.",
-      "translation": "I used to visit my grandparents every weekend."
+      "translation": "I used to visit my grandparents every weekend.",
+      "pattern": "je"
     },
     {
       "id": 30,
@@ -240,7 +270,8 @@
       "phrase": "Ils ____ à la campagne.",
       "answer": "habitaient",
       "fullPhrase": "Ils habitaient à la campagne.",
-      "translation": "They used to live in the countryside."
+      "translation": "They used to live in the countryside.",
+      "pattern": "ils"
     },
     {
       "id": 31,
@@ -248,7 +279,8 @@
       "phrase": "Je ____ avec ma grand-mère.",
       "answer": "cuisinais",
       "fullPhrase": "Je cuisinais avec ma grand-mère.",
-      "translation": "I used to cook with my grandmother."
+      "translation": "I used to cook with my grandmother.",
+      "pattern": "je"
     },
     {
       "id": 32,
@@ -256,7 +288,8 @@
       "phrase": "On ____ dans le parc.",
       "answer": "se promenait",
       "fullPhrase": "On se promenait dans le parc.",
-      "translation": "We used to walk in the park."
+      "translation": "We used to walk in the park.",
+      "pattern": "il"
     },
     {
       "id": 33,
@@ -264,7 +297,8 @@
       "phrase": "Je ne ____ jamais la télé.",
       "answer": "regardais",
       "fullPhrase": "Je ne regardais jamais la télé.",
-      "translation": "I never watched TV."
+      "translation": "I never watched TV.",
+      "pattern": "je"
     },
     {
       "id": 34,
@@ -272,7 +306,8 @@
       "phrase": "Il ____ quand les enfants sont sortis.",
       "answer": "pleuvait",
       "fullPhrase": "Il pleuvait quand les enfants sont sortis.",
-      "translation": "It was raining when the children went out."
+      "translation": "It was raining when the children went out.",
+      "pattern": "il"
     },
     {
       "id": 35,
@@ -280,7 +315,8 @@
       "phrase": "On ____ les courses.",
       "answer": "faisait",
       "fullPhrase": "On faisait les courses.",
-      "translation": "We were shopping."
+      "translation": "We were shopping.",
+      "pattern": "il"
     },
     {
       "id": 36,
@@ -288,7 +324,8 @@
       "phrase": "Nous ____ dehors.",
       "answer": "étions",
       "fullPhrase": "Nous étions dehors.",
-      "translation": "We were outside."
+      "translation": "We were outside.",
+      "pattern": "nous"
     },
     {
       "id": 37,
@@ -296,7 +333,8 @@
       "phrase": "Ils ____ 10 ans quand on a pris cette photo.",
       "answer": "avaient",
       "fullPhrase": "Ils avaient 10 ans quand on a pris cette photo.",
-      "translation": "They were 10 years old when this photo was taken."
+      "translation": "They were 10 years old when this photo was taken.",
+      "pattern": "ils"
     },
     {
       "id": 38,
@@ -304,7 +342,8 @@
       "phrase": "Je ____ une douche.",
       "answer": "prenais",
       "fullPhrase": "Je prenais une douche.",
-      "translation": "I was taking a shower."
+      "translation": "I was taking a shower.",
+      "pattern": "je"
     },
     {
       "id": 39,
@@ -312,7 +351,8 @@
       "phrase": "Il ____ froid.",
       "answer": "faisait",
       "fullPhrase": "Il faisait froid.",
-      "translation": "It was cold."
+      "translation": "It was cold.",
+      "pattern": "il"
     },
     {
       "id": 40,
@@ -320,7 +360,8 @@
       "phrase": "J'____ beaucoup la musique.",
       "answer": "aimais",
       "fullPhrase": "J'aimais beaucoup la musique.",
-      "translation": "I used to like music a lot."
+      "translation": "I used to like music a lot.",
+      "pattern": "je"
     },
     {
       "id": 41,
@@ -328,7 +369,8 @@
       "phrase": "J'____ une boîte de sardines.",
       "answer": "ouvrais",
       "fullPhrase": "J'ouvrais une boîte de sardines.",
-      "translation": "I was opening a tin of sardines."
+      "translation": "I was opening a tin of sardines.",
+      "pattern": "je"
     },
     {
       "id": 42,
@@ -336,7 +378,8 @@
       "phrase": "Il ____ du ski.",
       "answer": "faisait",
       "fullPhrase": "Il faisait du ski.",
-      "translation": "He used to ski."
+      "translation": "He used to ski.",
+      "pattern": "il"
     },
     {
       "id": 43,
@@ -344,7 +387,8 @@
       "phrase": "Je ne ____ pas.",
       "answer": "comprenais",
       "fullPhrase": "Je ne comprenais pas.",
-      "translation": "I didn't understand."
+      "translation": "I didn't understand.",
+      "pattern": "je"
     },
     {
       "id": 44,
@@ -352,7 +396,8 @@
       "phrase": "Il ____ malade.",
       "answer": "était",
       "fullPhrase": "Il était malade.",
-      "translation": "He was sick."
+      "translation": "He was sick.",
+      "pattern": "il"
     },
     {
       "id": 45,
@@ -360,7 +405,8 @@
       "phrase": "Je ne ____ pas la ville.",
       "answer": "connaissais",
       "fullPhrase": "Je ne connaissais pas la ville.",
-      "translation": "I didn't know the city."
+      "translation": "I didn't know the city.",
+      "pattern": "je"
     },
     {
       "id": 46,
@@ -368,7 +414,8 @@
       "phrase": "Tu te souviens quand nous ____ dans le petit studio ?",
       "answer": "habitions",
       "fullPhrase": "Tu te souviens quand nous habitions dans le petit studio ?",
-      "translation": "Do you remember when we used to live in the small studio?"
+      "translation": "Do you remember when we used to live in the small studio?",
+      "pattern": "nous"
     },
     {
       "id": 47,
@@ -376,7 +423,8 @@
       "phrase": "On ____ la cuisine.",
       "answer": "faisait",
       "fullPhrase": "On faisait la cuisine.",
-      "translation": "We were cooking."
+      "translation": "We were cooking.",
+      "pattern": "il"
     },
     {
       "id": 48,
@@ -384,7 +432,8 @@
       "phrase": "Nous ____ un chat.",
       "answer": "avions",
       "fullPhrase": "Nous avions un chat.",
-      "translation": "We had a cat."
+      "translation": "We had a cat.",
+      "pattern": "nous"
     },
     {
       "id": 49,
@@ -392,7 +441,8 @@
       "phrase": "Nous ____ du café.",
       "answer": "buvions",
       "fullPhrase": "Nous buvions du café.",
-      "translation": "We used to drink coffee."
+      "translation": "We used to drink coffee.",
+      "pattern": "nous"
     },
     {
       "id": 50,
@@ -400,7 +450,8 @@
       "phrase": "Tu ____ un téléphone quand tu étais petite ?",
       "answer": "avais",
       "fullPhrase": "Tu avais un téléphone quand tu étais petite ?",
-      "translation": "Did you have a phone when you were little?"
+      "translation": "Did you have a phone when you were little?",
+      "pattern": "tu"
     },
     {
       "id": 51,
@@ -408,7 +459,8 @@
       "phrase": "Je n'____ pas de téléphone.",
       "answer": "avais",
       "fullPhrase": "Je n'avais pas de téléphone.",
-      "translation": "I didn't have a phone."
+      "translation": "I didn't have a phone.",
+      "pattern": "je"
     },
     {
       "id": 52,
@@ -416,7 +468,8 @@
       "phrase": "Les gens n'____ pas la même vie que maintenant.",
       "answer": "avaient",
       "fullPhrase": "Les gens n'avaient pas la même vie que maintenant.",
-      "translation": "People didn't have the same life as now."
+      "translation": "People didn't have the same life as now.",
+      "pattern": "ils"
     },
     {
       "id": 53,
@@ -424,7 +477,8 @@
       "phrase": "On ____ moins de vacances.",
       "answer": "avait",
       "fullPhrase": "On avait moins de vacances.",
-      "translation": "We had fewer holidays."
+      "translation": "We had fewer holidays.",
+      "pattern": "il"
     },
     {
       "id": 54,
@@ -432,7 +486,8 @@
       "phrase": "Tu ____ la télévision ?",
       "answer": "regardais",
       "fullPhrase": "Tu regardais la télévision ?",
-      "translation": "Did you used to watch TV?"
+      "translation": "Did you used to watch TV?",
+      "pattern": "tu"
     },
     {
       "id": 55,
@@ -440,7 +495,8 @@
       "phrase": "Mes parents n'____ pas la télévision.",
       "answer": "avaient",
       "fullPhrase": "Mes parents n'avaient pas la télévision.",
-      "translation": "My parents didn't have a television."
+      "translation": "My parents didn't have a television.",
+      "pattern": "ils"
     },
     {
       "id": 56,
@@ -448,7 +504,8 @@
       "phrase": "On ____ la radio.",
       "answer": "écoutait",
       "fullPhrase": "On écoutait la radio.",
-      "translation": "We used to listen to the radio."
+      "translation": "We used to listen to the radio.",
+      "pattern": "il"
     },
     {
       "id": 57,
@@ -456,7 +513,8 @@
       "phrase": "J'____ petite.",
       "answer": "étais",
       "fullPhrase": "J'étais petite.",
-      "translation": "I was little."
+      "translation": "I was little.",
+      "pattern": "je"
     },
     {
       "id": 58,
@@ -464,7 +522,8 @@
       "phrase": "Avant on ____ plus que maintenant.",
       "answer": "lisait",
       "fullPhrase": "Avant on lisait plus que maintenant.",
-      "translation": "We used to read more than now."
+      "translation": "We used to read more than now.",
+      "pattern": "il"
     },
     {
       "id": 59,
@@ -472,7 +531,8 @@
       "phrase": "J'____ beaucoup d'amis.",
       "answer": "avais",
       "fullPhrase": "J'avais beaucoup d'amis.",
-      "translation": "I had many friends."
+      "translation": "I had many friends.",
+      "pattern": "je"
     },
     {
       "id": 60,
@@ -480,7 +540,8 @@
       "phrase": "On ____ bien.",
       "answer": "s'amusait",
       "fullPhrase": "On s'amusait bien.",
-      "translation": "We had fun."
+      "translation": "We had fun.",
+      "pattern": "il"
     },
     {
       "id": 61,
@@ -488,7 +549,8 @@
       "phrase": "On ____ dehors.",
       "answer": "jouait",
       "fullPhrase": "On jouait dehors.",
-      "translation": "We used to play outside."
+      "translation": "We used to play outside.",
+      "pattern": "il"
     },
     {
       "id": 62,
@@ -496,7 +558,8 @@
       "phrase": "On ____ tous les jours.",
       "answer": "courait",
       "fullPhrase": "On courait tous les jours.",
-      "translation": "We used to run every day."
+      "translation": "We used to run every day.",
+      "pattern": "il"
     },
     {
       "id": 63,
@@ -504,7 +567,8 @@
       "phrase": "Elle ne ____ plus.",
       "answer": "sortait",
       "fullPhrase": "Elle ne sortait plus.",
-      "translation": "She didn't go out anymore."
+      "translation": "She didn't go out anymore.",
+      "pattern": "il"
     },
     {
       "id": 64,
@@ -512,7 +576,8 @@
       "phrase": " Tu ____ au football ?",
       "answer": "jouais",
       "fullPhrase": "Tu jouais au football ?",
-      "translation": "Did you (use to) play football?"
+      "translation": "Did you (use to) play football?",
+      "pattern": "tu"
     },
     {
       "id": 65,
@@ -520,7 +585,8 @@
       "phrase": "Ils ____ tout le temps.",
       "answer": "parlaient",
       "fullPhrase": "Ils parlaient tout le temps.",
-      "translation": "They used to talk all the time."
+      "translation": "They used to talk all the time.",
+      "pattern": "ils"
     },
     {
       "id": 66,
@@ -528,7 +594,8 @@
       "phrase": "On ____ des conversations.",
       "answer": "entendait",
       "fullPhrase": "On entendait des conversations.",
-      "translation": "We used to hear conversations."
+      "translation": "We used to hear conversations.",
+      "pattern": "il"
     },
     {
       "id": 67,
@@ -536,7 +603,8 @@
       "phrase": "Je ____ que j'avais oublié quelque chose.",
       "answer": "savais",
       "fullPhrase": "Je savais que j'avais oublié quelque chose.",
-      "translation": "I knew I had forgotten something."
+      "translation": "I knew I had forgotten something.",
+      "pattern": "je"
     },
     {
       "id": 68,
@@ -544,7 +612,8 @@
       "phrase": "Il ____ tout ce que je disais.",
       "answer": "écrivait",
       "fullPhrase": "Il écrivait tout ce que je disais.",
-      "translation": "He wrote down everything I was saying."
+      "translation": "He wrote down everything I was saying.",
+      "pattern": "il"
     },
     {
       "id": 69,
@@ -552,7 +621,8 @@
       "phrase": "Les gens ____ fort.",
       "answer": "parlaient",
       "fullPhrase": "Les gens parlaient fort.",
-      "translation": "People were talking loudly."
+      "translation": "People were talking loudly.",
+      "pattern": "ils"
     },
     {
       "id": 70,
@@ -560,7 +630,8 @@
       "phrase": "Quand j'étais jeune, je n'____ pas de voiture.",
       "answer": "avais",
       "fullPhrase": "Quand j'étais jeune, je n'avais pas de voiture.",
-      "translation": "When I was young, I didn't have a car."
+      "translation": "When I was young, I didn't have a car.",
+      "pattern": "je"
     },
     {
       "id": 71,
@@ -568,7 +639,8 @@
       "phrase": "J'____ chaque année en vacances dans les Alpes.",
       "answer": "allais",
       "fullPhrase": "J'allais chaque année en vacances dans les Alpes.",
-      "translation": "I used to go on holiday to the Alps every year."
+      "translation": "I used to go on holiday to the Alps every year.",
+      "pattern": "je"
     },
     {
       "id": 72,
@@ -576,7 +648,8 @@
       "phrase": "Il ____ toujours au football avec ses copains.",
       "answer": "jouait",
       "fullPhrase": "Il jouait toujours au football avec ses copains.",
-      "translation": "He used to play football with his friends all the time."
+      "translation": "He used to play football with his friends all the time.",
+      "pattern": "il"
     },
     {
       "id": 73,
@@ -584,7 +657,8 @@
       "phrase": "Je ____ qu'il était malade.",
       "answer": "pensais",
       "fullPhrase": "Je pensais qu'il était malade.",
-      "translation": "I thought he was sick."
+      "translation": "I thought he was sick.",
+      "pattern": "je"
     },
     {
       "id": 74,
@@ -592,7 +666,8 @@
       "phrase": "Je ____ qu'elle avait des enfants.",
       "answer": "croyais",
       "fullPhrase": "Je croyais qu'elle avait des enfants.",
-      "translation": "I thought she had children."
+      "translation": "I thought she had children.",
+      "pattern": "je"
     },
     {
       "id": 75,
@@ -600,7 +675,8 @@
       "phrase": "Je n'écoutais plus ce qu'elle me ____.",
       "answer": "disait",
       "fullPhrase": "Je n'écoutais plus ce qu'elle me disait.",
-      "translation": "I didn't listen to what she was saying to me anymore."
+      "translation": "I didn't listen to what she was saying to me anymore.",
+      "pattern": "il"
     },
     {
       "id": 76,
@@ -608,7 +684,8 @@
       "phrase": "Elle ne ____ pas bien.",
       "answer": "se sentait",
       "fullPhrase": "Elle ne se sentait pas bien.",
-      "translation": "She didn't feel well."
+      "translation": "She didn't feel well.",
+      "pattern": "il"
     },
     {
       "id": 77,
@@ -616,7 +693,8 @@
       "phrase": "Je ____ de la maison quand tu as appelé.",
       "answer": "sortais",
       "fullPhrase": "Je sortais de la maison quand tu as appelé.",
-      "translation": "I was leaving the house when you called."
+      "translation": "I was leaving the house when you called.",
+      "pattern": "je"
     },
     {
       "id": 78,
@@ -624,7 +702,8 @@
       "phrase": "Je ne ____ pas bien quand je ne portais pas de lunettes.",
       "answer": "voyais",
       "fullPhrase": "Je ne voyais pas bien quand je ne portais pas de lunettes.",
-      "translation": "I couldn't see well when I wasn't wearing glasses."
+      "translation": "I couldn't see well when I wasn't wearing glasses.",
+      "pattern": "je"
     },
     {
       "id": 79,
@@ -632,7 +711,8 @@
       "phrase": "On ne ____ rien.",
       "answer": "voyait",
       "fullPhrase": "On ne voyait rien.",
-      "translation": "We couldn't see anything."
+      "translation": "We couldn't see anything.",
+      "pattern": "il"
     },
     {
       "id": 80,
@@ -640,7 +720,8 @@
       "phrase": "Elle n'____ pas.",
       "answer": "entendait",
       "fullPhrase": "Elle n'entendait pas.",
-      "translation": "She couldn't hear."
+      "translation": "She couldn't hear.",
+      "pattern": "il"
     },
     {
       "id": 81,
@@ -648,7 +729,8 @@
       "phrase": "Je ____ l'aider.",
       "answer": "voulais",
       "fullPhrase": "Je voulais l'aider.",
-      "translation": "I wanted to help her."
+      "translation": "I wanted to help her.",
+      "pattern": "je"
     },
     {
       "id": 82,
@@ -656,7 +738,8 @@
       "phrase": "Ma sœur ne ____ pas partir.",
       "answer": "voulait",
       "fullPhrase": "Ma sœur ne voulait pas partir.",
-      "translation": "My sister didn't want to leave."
+      "translation": "My sister didn't want to leave.",
+      "pattern": "il"
     },
     {
       "id": 83,
@@ -664,7 +747,8 @@
       "phrase": "On ____ aller à Amsterdam.",
       "answer": "voulait",
       "fullPhrase": "On voulait aller à Amsterdam.",
-      "translation": "We wanted to go to Amsterdam."
+      "translation": "We wanted to go to Amsterdam.",
+      "pattern": "il"
     },
     {
       "id": 84,
@@ -672,7 +756,8 @@
       "phrase": "J'ai fait ce que tu ____.",
       "answer": "voulais",
       "fullPhrase": "J'ai fait ce que tu voulais.",
-      "translation": "I did what you wanted."
+      "translation": "I did what you wanted.",
+      "pattern": "tu"
     },
     {
       "id": 85,
@@ -680,7 +765,8 @@
       "phrase": "Je ____ beaucoup mieux quand j'étais enfant.",
       "answer": "dormais",
       "fullPhrase": "Je dormais beaucoup mieux quand j'étais enfant.",
-      "translation": "I used to sleep much better when I was a child."
+      "translation": "I used to sleep much better when I was a child.",
+      "pattern": "je"
     },
     {
       "id": 86,
@@ -688,7 +774,8 @@
       "phrase": "Il ne t'a pas dit que je ____.",
       "answer": "venais",
       "fullPhrase": "Il ne t'a pas dit que je venais.",
-      "translation": "He didn't tell you that I was coming."
+      "translation": "He didn't tell you that I was coming.",
+      "pattern": "je"
     },
     {
       "id": 87,
@@ -696,7 +783,8 @@
       "phrase": "Je ne ____ pas rester.",
       "answer": "pouvais",
       "fullPhrase": "Je ne pouvais pas rester.",
-      "translation": "I couldn't stay."
+      "translation": "I couldn't stay.",
+      "pattern": "je"
     },
     {
       "id": 88,
@@ -704,7 +792,8 @@
       "phrase": "Il ____ me rappeler, mais il a oublié.",
       "answer": "devait",
       "fullPhrase": "Il devait me rappeler, mais il a oublié.",
-      "translation": "He was supposed to call me back, but he forgot."
+      "translation": "He was supposed to call me back, but he forgot.",
+      "pattern": "il"
     },
     {
       "id": 89,
@@ -712,7 +801,8 @@
       "phrase": "Je ____ rester à la maison avec mon petit frère.",
       "answer": "devais",
       "fullPhrase": "Je devais rester à la maison avec mon petit frère.",
-      "translation": "I had to stay home with my little brother."
+      "translation": "I had to stay home with my little brother.",
+      "pattern": "je"
     },
     {
       "id": 90,
@@ -720,7 +810,8 @@
       "phrase": "Ils ____ rester éveillés toute la nuit.",
       "answer": "pouvaient",
       "fullPhrase": "Ils pouvaient rester éveillés toute la nuit.",
-      "translation": "They could stay awake all night."
+      "translation": "They could stay awake all night.",
+      "pattern": "ils"
     },
     {
       "id": 91,
@@ -728,7 +819,8 @@
       "phrase": "Elles ____ rentrer tôt.",
       "answer": "devaient",
       "fullPhrase": "Elles devaient rentrer tôt.",
-      "translation": "They had to come back early."
+      "translation": "They had to come back early.",
+      "pattern": "ils"
     },
     {
       "id": 92,
@@ -736,7 +828,8 @@
       "phrase": "Nous ____ notre voiture.",
       "answer": "conduisions",
       "fullPhrase": "Nous conduisions notre voiture.",
-      "translation": "We were driving our car."
+      "translation": "We were driving our car.",
+      "pattern": "nous"
     },
     {
       "id": 93,
@@ -744,7 +837,8 @@
       "phrase": "Ils ____ pouvoir le faire.",
       "answer": "pensaient",
       "fullPhrase": "Ils pensaient pouvoir le faire.",
-      "translation": "They thought they could do it."
+      "translation": "They thought they could do it.",
+      "pattern": "ils"
     },
     {
       "id": 94,
@@ -752,7 +846,8 @@
       "phrase": "Ils ____ des plats trop chauds.",
       "answer": "servaient",
       "fullPhrase": "Ils servaient des plats trop chauds.",
-      "translation": "They were serving dishes that were too hot."
+      "translation": "They were serving dishes that were too hot.",
+      "pattern": "ils"
     },
     {
       "id": 95,
@@ -760,7 +855,8 @@
       "phrase": "Tu ____ toujours un peu tard.",
       "answer": "finissais",
       "fullPhrase": "Tu finissais toujours un peu tard.",
-      "translation": "You always finished a bit late."
+      "translation": "You always finished a bit late.",
+      "pattern": "tu"
     },
     {
       "id": 96,
@@ -768,7 +864,8 @@
       "phrase": "Je ____ ma route.",
       "answer": "continuais",
       "fullPhrase": "Je continuais ma route.",
-      "translation": "I continued my way."
+      "translation": "I continued my way.",
+      "pattern": "je"
     },
     {
       "id": 97,
@@ -776,7 +873,8 @@
       "phrase": "Ils ____ toute la nuit.",
       "answer": "dansaient",
       "fullPhrase": "Ils dansaient toute la nuit.",
-      "translation": "They were dancing all night."
+      "translation": "They were dancing all night.",
+      "pattern": "ils"
     },
     {
       "id": 98,
@@ -784,7 +882,8 @@
       "phrase": "Je ____ les transports en commun.",
       "answer": "prenais",
       "fullPhrase": "Je prenais les transports en commun.",
-      "translation": "I used to take public transport."
+      "translation": "I used to take public transport.",
+      "pattern": "je"
     },
     {
       "id": 99,
@@ -792,7 +891,8 @@
       "phrase": "Nous ____ changer nos habitudes.",
       "answer": "voulions",
       "fullPhrase": "Nous voulions changer nos habitudes.",
-      "translation": "We wanted to change our habits."
+      "translation": "We wanted to change our habits.",
+      "pattern": "nous"
     },
     {
       "id": 100,
@@ -800,7 +900,8 @@
       "phrase": "Ils ____ plusieurs fois.",
       "answer": "revenaient",
       "fullPhrase": "Ils revenaient plusieurs fois.",
-      "translation": "They came back several times."
+      "translation": "They came back several times.",
+      "pattern": "ils"
     },
     {
       "id": 101,
@@ -808,7 +909,8 @@
       "phrase": "Ils ____ des romans chaque soir avant de dormir.",
       "answer": "lisaient",
       "fullPhrase": "Ils lisaient des romans chaque soir avant de dormir.",
-      "translation": "They used to read novels every night before sleeping."
+      "translation": "They used to read novels every night before sleeping.",
+      "pattern": "ils"
     },
     {
       "id": 102,
@@ -816,7 +918,8 @@
       "phrase": "Tu ____ du sucre dans ton café.",
       "answer": "mettais",
       "fullPhrase": "Tu mettais du sucre dans ton café.",
-      "translation": "You used to put sugar in your coffee."
+      "translation": "You used to put sugar in your coffee.",
+      "pattern": "tu"
     },
     {
       "id": 103,
@@ -824,7 +927,8 @@
       "phrase": "Vous ____ faire beaucoup de choses.",
       "answer": "pouviez",
       "fullPhrase": "Vous pouviez faire beaucoup de choses.",
-      "translation": "You could do a lot of things."
+      "translation": "You could do a lot of things.",
+      "pattern": "vous"
     },
     {
       "id": 104,
@@ -832,7 +936,8 @@
       "phrase": "Je ne ____ pas y aller.",
       "answer": "pouvais",
       "fullPhrase": "Je ne pouvais pas y aller.",
-      "translation": "I couldn't go there."
+      "translation": "I couldn't go there.",
+      "pattern": "je"
     },
     {
       "id": 105,
@@ -840,7 +945,8 @@
       "phrase": "Tu ____ bien le professeur.",
       "answer": "entendais",
       "fullPhrase": "Tu entendais bien le professeur.",
-      "translation": "You could hear the teacher well."
+      "translation": "You could hear the teacher well.",
+      "pattern": "tu"
     },
     {
       "id": 106,
@@ -848,7 +954,8 @@
       "phrase": "On ____ faire plus d'activités sportives.",
       "answer": "voulait",
       "fullPhrase": "On voulait faire plus d'activités sportives.",
-      "translation": "We wanted to do more sports activities."
+      "translation": "We wanted to do more sports activities.",
+      "pattern": "il"
     },
     {
       "id": 107,
@@ -856,7 +963,8 @@
       "phrase": "Je ____ cet endroit pour la première fois.",
       "answer": "voyais",
       "fullPhrase": "Je voyais cet endroit pour la première fois.",
-      "translation": "I saw this place for the first time."
+      "translation": "I saw this place for the first time.",
+      "pattern": "je"
     },
     {
       "id": 108,
@@ -864,7 +972,8 @@
       "phrase": "Tu ____ le faire pour moi ?",
       "answer": "voulais",
       "fullPhrase": "Tu voulais le faire pour moi ?",
-      "translation": "Did you want to do this for me?"
+      "translation": "Did you want to do this for me?",
+      "pattern": "tu"
     },
     {
       "id": 109,
@@ -872,7 +981,18 @@
       "phrase": "Tu ____ rarement nous voir.",
       "answer": "venais",
       "fullPhrase": "Tu venais rarement nous voir.",
-      "translation": "You rarely came to see us."
+      "translation": "You rarely came to see us.",
+      "pattern": "tu"
+    },
+    {
+      "id": 110,
+      "verb": "nager",
+      "phrase": "Je ____ tous les vendredis soir.",
+      "answer": "nageais",
+      "fullPhrase": "Je nageais tous les vendredis soir.",
+      "translation": "I used to swim every Friday evening.",
+      "exception": "ger"
     }
+    
   ]
 }

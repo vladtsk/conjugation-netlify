@@ -18,13 +18,13 @@ export function generateSubjunctivePage() {
     iconI.classList.add("fas", "fa-chevron-right");
     iconSpan.appendChild(iconI);
   
-    const introLink = document.createElement("a");
-  
-    introLink.textContent = "The French subjunctive";
+    const subjunctiveLink = document.createElement("a");
+    subjunctiveLink.textContent = "The French subjunctive";
+    subjunctiveLink.classList.add("subjunctiveLink");
   
     contentNav.appendChild(verbConjugationLink);
     contentNav.appendChild(iconSpan);
-    contentNav.appendChild(introLink);
+    contentNav.appendChild(subjunctiveLink);
   
     // Create page-content div
     const pageContent = document.createElement("div");
@@ -32,127 +32,147 @@ export function generateSubjunctivePage() {
   
     const mainHeading = document.createElement("h1");
     mainHeading.textContent = `The French subjunctive (Le subjonctif)`;
-  
-    const subHeading = document.createElement("h2");
-    subHeading.textContent = "When do you use the imperfect past tense?";
-  
+    pageContent.appendChild(mainHeading);
+
     const definitionDiv = document.createElement("div");
     definitionDiv.classList.add("definition");
-  
+
     const definitionParagraph = document.createElement("p");
     definitionParagraph.innerHTML =
-      `<i class="fa-solid fa-book-open"></i> <b>The French subjunctive (le subjonctif)</b>
-      is a grammatical mood (a verb form or category such as "imperative" or "conditional") 
-       used after certain verbs and phases expressing emotions, desires, doubts, necessity, etc.`;
-  
+    `<i class="fa-solid fa-book-open"></i> <b>The French subjunctive (le subjonctif)</b> 
+    is a grammatical mood (a verb form or a category such as "imperative" or "conditional") 
+    used after certain verbs and phrases expressing emotions, desires, doubts, necessity, etc.`;
+
     definitionDiv.appendChild(definitionParagraph);
-
-    pageContent.appendChild(mainHeading);
-    pageContent.appendChild(subHeading);
     pageContent.appendChild(definitionDiv);
-
-
-
+  //
   
-    const exampleH3 = document.createElement("h3");
-    exampleH3.textContent = "Take a look at these examples:";
+    const explanation = document.createElement("div");
+    explanation.classList.add("explanation");
+    pageContent.appendChild(explanation);
 
-    const examplesUl = document.createElement("ul");
-    examplesUl.classList.add("list-no-bullet");
+    const explanationParagraph = document.createElement("p");
+    explanationParagraph.innerHTML = 
+      `It may seem complicated, but it comes down to knowing whether a verb or expression 
+      takes the subjunctive mood (or, in contrast, the indicative mood). Look at this example:`;
 
-    examplesUl.innerHTML = `<li><i>Je <b>lisais</b> tous les jours.</i> (I used to read every day.)</li>
-    <li><i>Avant, je <b>sortais</b> tous les soirs.</i> (I used to go out every evening.)</li>
-    <li><i>Il <b>faisait</b> froid et il y avait beaucoup de vent.</i> (It was cold and very windy.)</li>
-    <li><i>J'<b>avais</b> les cheveux courts.</i> (I used to have short hair. / I had short hair.)</li>
-    <li><i>Quelqu'un est venu pendant que je <b>dormais</b>.</i> (Someone came while I was sleeping.)</li>`
+    const exampleParagraph = document.createElement("p");
+    exampleParagraph.innerHTML = 
+      `<i><b>Il faut que tu sois là à 18h.</b> ("You need to be here at 6pm." / 
+      "You must be here at 6pm." or more literally "It is necessary that you be here…")</i>`;
 
-    pageContent.appendChild(exampleH3);
-    pageContent.appendChild(examplesUl);
+    const incorrectExampleParagraph = document.createElement("p");
+    incorrectExampleParagraph.innerHTML = 
+      `In this case, it's not correct to say "<i>Il faut que tu <span class="wrong">es</span> là</i>", 
+      because "<b>il faut que</b>" (it's necessary that) is always used with a subjunctive, 
+      and the present subjunctive form of 'être' for 'tu' is '<b>tu sois</b>'.`;
 
+    const contrastParagraph = document.createElement("p");
+    contrastParagraph.innerHTML = 
+      `In contrast, "<i>espérer que</i>" does not use the subjunctive, so you should say 
+      "<i>J'espère que tu <b>pourras</b> m'aider.</i>" and not "<i>J'espère que tu 
+      <span class="wrong">puisses</span> m'aider.</i>"`;
 
-
-const subHeading2 = document.createElement("h2");
-subHeading2.textContent = "To form the imperfect tense of regular verbs, follow these steps: ";
-
-pageContent.appendChild(subHeading2);
-
-const stepsP = document.createElement("p");
-stepsP.innerHTML = `Use the 'nous' form of the verb in the present tense, 
-remove the '-ons' ending, and add the appropriate ending (-<b>ais</b>, -<b>ais</b>, -<b>ait</b>, -<b>ions</b>, -<b>iez</b>, -<b>aient</b>.). `
-
-const stepP2 = document.createElement("p");
-stepP2.innerHTML = `For example, the verbs <b>'parler'</b> and <b>'finir'</b> have the following 'nous' forms:  
-'nous parlons' and 'nous finissons'. So in order to conjugate them with 'je' in the imperfect tense, you 
-need to remove the '-ons' ending and add '-ais', which gives: <b>'je parlais'</b> and <b>'je finissais'</b>. 
-You'll find more details in the table below.`;
+    explanation.append(explanationParagraph, exampleParagraph, incorrectExampleParagraph, contrastParagraph);
 
 
 
-pageContent.appendChild(stepsP);
-pageContent.appendChild(stepP2);
+    const commonVerbsHeading = document.createElement("h3");
+commonVerbsHeading.textContent = "Here are some common verbs and expressions after which the subjunctive is used:";
+pageContent.appendChild(commonVerbsHeading);
+
+const verbsList = document.createElement("ul");
+verbsList.classList.add("list-no-bullet");
+
+const desiresLi = document.createElement("li");
+desiresLi.classList.add("list-paragraph");
+desiresLi.innerHTML = `<i class="fa-solid fa-arrow-right"></i> <b>Vouloir, souhaiter, aimer, demander</b> (que)</b><ul>
+    <li>- <i><u>Je souhaite que</u> tu <b>viennes</b> me voir.</i> (I'd like you to come and see me.)</li>
+    <li>- <i><u>Il voudrait que</u> vous <b>finissiez</b> le rapport avant samedi.</i> (He'd like you to finish the report by Saturday.)</li>
+  </ul>`;
+
+const feelingsLi = document.createElement("li");
+feelingsLi.classList.add("list-paragraph");
+feelingsLi.innerHTML = `<i class="fa-solid fa-arrow-right"></i> Je suis, tu es... + <b>content, ravi, furieux, déçu, triste, désolé</b> ... (que)<ul>
+    <li>- <i><u>Ils sont contents que</u> nous <b>partions</b> avec eux.</i> (They're happy we're going with them.)</li>
+    <li>- <i><u>Je suis désolé que</u> vous ne <b>puissiez</b> pas venir.</i> (I'm sorry you can't come.)</li>
+  </ul>`;
+
+const importanceLi = document.createElement("li");
+importanceLi.classList.add("list-paragraph");
+importanceLi.innerHTML = `<i class="fa-solid fa-arrow-right"></i> C'est/Il est + <b>bien, important, intéressant, bizarre, étonnant</b>... (que)<ul>
+    <li>- <i><u>C'est bien que</u> les habitants <b>prennent</b> soin de leur ville.</i> (It's good that residents are taking care of their town.)</li>
+    <li>- <i><u>Il est important que</u> tu <b>sois</b> là.</i> (It's important that you're here.)</li>
+  </ul>`;
+
+const doubtLi = document.createElement("li");
+doubtLi.classList.add("list-paragraph");
+doubtLi.innerHTML = `<i class="fa-solid fa-arrow-right"></i> <b>Je ne pense pas</b> (que), <b>je ne crois pas</b> (que), <b>je ne suis pas sûr</b> (que), <b>je doute</b> (que)*… (phrases expressing doubt or uncertainty)<ul>
+    <li>- <i><u>Je ne suis pas sûr qu</u>'il <b>fasse</b> beau demain.</i> (I'm not sure if the weather will be good tomorrow.)</li>
+    <li>- <i>Il <u>doute que</u> Jade <b>vienne</b> voir le match.</i> (He doubts that Jade will come to watch the match.)</li>
+  </ul>`;
+
+const necessityLi = document.createElement("li");
+necessityLi.classList.add("list-paragraph");
+necessityLi.innerHTML = `<i class="fa-solid fa-arrow-right"></i> <b>Il faut</b> (que), <b>il est nécessaire</b> (que)…<ul>
+    <li>- <i><u>Il faut que</u> j'<b>aille</b> à la poste.</i> (I need to go to the post office.)</li>
+  </ul>`;
+
+const connectorsLi = document.createElement("li");
+connectorsLi.classList.add("list-paragraph");
+connectorsLi.innerHTML = `<i class="fa-solid fa-arrow-right"></i> Various connectors like "<b>pour que</b>" (so that), 
+"<b>avant que</b>" (before), "<b>bien que</b>" (although), "<b>en attendant que</b>" (until), etc.<ul>
+    <li>- <i>Je vais regarder ma série <u>en attendant que</u> tu <b>finisses</b> ton travail.</i> (I'm going to watch my series until you finish your work.)</li>
+  </ul>`;
+
+verbsList.append(desiresLi, feelingsLi, importanceLi, doubtLi, necessityLi, connectorsLi);
+pageContent.appendChild(verbsList);
 
 
-const table = document.createElement('table');
+const noteDiv = document.createElement("div");
+noteDiv.classList.add("explanation");
+const noteP = document.createElement("p");
+noteDiv.appendChild(noteP);
 
-const thead = document.createElement('thead');
-const headerRow = document.createElement('tr');
+noteP.innerHTML = `* In affirmative sentences such as <i>"Je suis sûr que"</i>, <i>"je pense que…"</i>, we <u>do not</u> use the subjunctive: 
+<i>"Je suis sûr qu'il <u>fera</u> beau demain"</i> (I'm sure the weather will be good tomorrow).`
+    
+pageContent.appendChild(noteDiv);
 
-const headers = ['SUBJECT', 'ENDING', 'EXAMPLES'];
-headers.forEach(headerEl => {
-    const th = document.createElement('th');
-    th.textContent = headerEl;
-    headerRow.appendChild(th);
-});
+    const subjunctiveTipExplanation = document.createElement("div");
+    subjunctiveTipExplanation.classList.add("explanation");
+    
+    const subjunctiveTipParagraph = document.createElement("p");
 
-thead.appendChild(headerRow);
+    subjunctiveTipParagraph.innerHTML = 
+      `<i class="fa-regular fa-lightbulb"></i> As you can see, the subjunctive always follows "<b>que</b>" (or sometimes "<b>qui</b>"), 
+      but the presence of "<b>que</b>" or "<b>qui</b>" does not mean that you should use the subjunctive. 
+      We recommend that you learn the expressions that require the subjunctive and you can do this by 
+      practising the sentences using this app in the "practice mode" (just click the "practice" button and select the subjunctive).`;
+      
+    subjunctiveTipExplanation.appendChild(subjunctiveTipParagraph);
+    
+    
+    const subjunctiveNoteDiv = document.createElement("div");
+    subjunctiveNoteDiv.classList.add("explanation");
 
-const tbody = document.createElement('tbody');
-const rowsData = [
-    ['Je', '-ais', 'parlais, finissais'],
-    ['Tu', '-ais', 'parlais, finissais'],
-    ['Il/elle/on', '-ait', 'parlait, finissait'],
-    ['Nous', '-ions', 'parlions, finissions'],
-    ['Vous', '-iez', 'parliez, finissiez'],
-    ['Ils/elles', '-aient', 'parlaient, finissaient']
-];
-
-
-rowsData.forEach(rowData => {
-    const row = document.createElement('tr');
-    rowData.forEach(cellData => {
-        const td = document.createElement('td');
-        td.textContent = cellData;
-        row.appendChild(td);
-    });
-    tbody.appendChild(row);
-});
-
-table.appendChild(thead);
-table.appendChild(tbody);
-
-pageContent.appendChild(table);
-
-const pronouncTipDiv = document.createElement("div");
-    pronouncTipDiv.classList.add("definition");
-    pageContent.appendChild(pronouncTipDiv);
-
-    const pronouncTipP = document.createElement("p");
-    pronouncTipP.innerHTML = '<i class="fa-solid fa-comment"></i> <b>Pronunciation tip</b>';
-
-    const pronouncTipP1 = document.createElement("p");
-    pronouncTipP1.classList.add("tip");
-    pronouncTipP1.innerHTML = `The 'je', 'tu', 'il/elle/on' and 'ils/elles' forms have the same pronunciation, 
-    so 'parlais', 'parlait', 'parlaient' are pronounced the same way.`;
-
-    pronouncTipDiv.appendChild(pronouncTipP);
-    pronouncTipDiv.appendChild(pronouncTipP1);
+    const subjunctiveNoteParagraph = document.createElement("p");
+    subjunctiveNoteParagraph.innerHTML = 
+      `<i class="fa-solid fa-triangle-exclamation"></i> Note that the subjunctive is usually used when there are <u>2 different subjects</u> in the sentence. 
+      In other words, you can't have the same subject twice when using the subjunctive. 
+      To avoid repeating the subject, we use the infinitive:`;
+    
+    const subjunctiveNoteParagraph2 = document.createElement("p");
+    subjunctiveNoteParagraph2.innerHTML = `We don't say "<u>Je</u> veux que <u>je</u> <span class="wrong">vienne</span>.", we say "Je veux <b>venir</b>."`
 
 
+    subjunctiveNoteDiv.appendChild(subjunctiveNoteParagraph);
+    subjunctiveNoteDiv.appendChild(subjunctiveNoteParagraph2);
 
+    pageContent.appendChild(subjunctiveTipExplanation);
+    pageContent.appendChild(subjunctiveNoteDiv);
 
+    contentArea.appendChild(pageContent);
 
-contentArea.appendChild(pageContent);
-
-handleContentNavClicks();
-  
-  }
+    handleContentNavClicks();
+}

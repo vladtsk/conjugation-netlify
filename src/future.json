@@ -8,7 +8,8 @@
         "fullPhrase": "Il sera à Paris cette semaine.",
         "tense": "future (le futur simple)",
         "tenseShort": "future",
-        "translation": "He will be in Paris this week."
+        "translation": "He will be in Paris this week.",
+        "irregular": true
       },
       {
         "id": 2,
@@ -16,7 +17,8 @@
         "phrase": "J' ____ plusieurs choses à vous dire.",
         "answer": "aurai",
         "fullPhrase": "J'aurai plusieurs choses à vous dire.",
-        "translation": "I will have several things to tell you."
+        "translation": "I will have several things to tell you.",
+        "irregular": true
       },
       {
         "id": 3,
@@ -24,7 +26,8 @@
         "phrase": "Vous ____ des exercices.",
         "answer": "ferez",
         "fullPhrase": "Vous ferez des exercices.",
-        "translation": "You will do exercises."
+        "translation": "You will do exercises.",
+        "irregular": true
       },
       {
         "id": 4,
@@ -48,7 +51,8 @@
         "phrase": "On t' ____ demain.",
         "answer": "appellera",
         "fullPhrase": "On t'appellera demain.",
-        "translation": "We will call you tomorrow."
+        "translation": "We will call you tomorrow.",
+        "spelling": "eler"
       },
       {
         "id": 7,
@@ -56,7 +60,8 @@
         "phrase": "Tu ____ me voir.",
         "answer": "viendras",
         "fullPhrase": "Tu viendras me voir.",
-        "translation": "You will come to see me."
+        "translation": "You will come to see me.",
+        "irregular": true
       },
       {
         "id": 8,
@@ -64,7 +69,8 @@
         "phrase": "Il y____ des choses à faire.",
         "answer": "aura",
         "fullPhrase": "Il y aura des choses à faire.",
-        "translation": "There will be things to do."
+        "translation": "There will be things to do.",
+        "irregular": true
       },
       {
         "id": 9,
@@ -72,14 +78,15 @@
         "phrase": "Tu ____ te reposer.",
         "answer": "devras",
         "fullPhrase": "Tu devras te reposer.",
-        "translation": "You will have to rest."
+        "translation": "You will have to rest.",
+        "irregular": true
       },
       {
         "id": 10,
         "verb": "expliquer",
-        "phrase": "Nous vous ____ ce qu’il faut faire.",
+        "phrase": "Nous vous ____ ce qu'il faut faire.",
         "answer": "expliquerons",
-        "fullPhrase": "Nous vous expliquerons ce qu’il faut faire.",
+        "fullPhrase": "Nous vous expliquerons ce qu'il faut faire.",
         "translation": "We will explain to you what needs to be done."
       },
       {
@@ -88,7 +95,8 @@
         "phrase": "Je ____ venir ce soir.",
         "answer": "pourrai",
         "fullPhrase": "Je pourrai venir ce soir.",
-        "translation": "I will be able to come tonight."
+        "translation": "I will be able to come tonight.",
+        "irregular": true
       },
       {
         "id": 12,
@@ -96,7 +104,8 @@
         "phrase": "Ils ____ retourner aux États-Unis.",
         "answer": "devront",
         "fullPhrase": "Ils devront retourner aux États-Unis.",
-        "translation": "They will have to return to the United States."
+        "translation": "They will have to return to the United States.",
+        "irregular": true
       },
       {
         "id": 13,
@@ -128,7 +137,8 @@
         "phrase": "Nous ____ nos amis bientôt.",
         "answer": "reverrons",
         "fullPhrase": "Nous reverrons nos amis bientôt.",
-        "translation": "We will see our friends again soon."
+        "translation": "We will see our friends again soon.",
+        "irregular": true
       },
       {
         "id": 17,
@@ -144,7 +154,8 @@
         "phrase": "Elles ____ dans 3 jours.",
         "answer": "reviendront",
         "fullPhrase": "Elles reviendront dans 3 jours.",
-        "translation": "They will come back in 3 days."
+        "translation": "They will come back in 3 days.",
+        "irregular": true
       },
       {
         "id": 19,
@@ -152,7 +163,8 @@
         "phrase": "Vous ____ les aider.",
         "answer": "pourrez",
         "fullPhrase": "Vous pourrez les aider.",
-        "translation": "You will be able to help them."
+        "translation": "You will be able to help them.",
+        "irregular": true
       },
       {
         "id": 20,
@@ -160,7 +172,8 @@
         "phrase": "J'____ à Londres l'année prochaine.",
         "answer": "irai",
         "fullPhrase": "J'irai à Londres l'année prochaine.",
-        "translation": "I will go to London next year."
+        "translation": "I will go to London next year.",
+        "irregular": true
       },
       {
         "id": 21,
@@ -168,7 +181,8 @@
         "phrase": "Elle ne ____ pas y aller.",
         "answer": "pourra",
         "fullPhrase": "Elle ne pourra pas y aller.",
-        "translation": "She will not be able to go (there)."
+        "translation": "She will not be able to go (there).",
+        "irregular": true
       },
       {
         "id": 22,
@@ -184,7 +198,8 @@
         "phrase": "On ____ jouer avec toi.",
         "answer": "voudra",
         "fullPhrase": "On voudra jouer avec toi.",
-        "translation": "We will want to play with you."
+        "translation": "We will want to play with you.",
+        "irregular": true
       },
       {
         "id": 24,
@@ -192,7 +207,8 @@
         "phrase": "Il ____ s'occuper de sa famille.",
         "answer": "devra",
         "fullPhrase": "Il devra s'occuper de sa famille.",
-        "translation": "He will have to take care of his family."
+        "translation": "He will have to take care of his family.",
+        "irregular": true
       },
       {
         "id": 25,
@@ -200,7 +216,8 @@
         "phrase": "Tu ____ le faire pour moi ?",
         "answer": "voudras",
         "fullPhrase": "Tu voudras le faire pour moi ?",
-        "translation": "Will you want to do it for me?"
+        "translation": "Will you want to do it for me?",
+        "irregular": true
       },
       {
         "id": 26,
@@ -208,7 +225,8 @@
         "phrase": "Je vous ____ un e-mail demain.",
         "answer": "enverrai",
         "fullPhrase": "Je vous enverrai un e-mail demain.",
-        "translation": "I will send you an email tomorrow."
+        "translation": "I will send you an email tomorrow.",
+        "irregular": true
       },
       {
         "id": 27,
@@ -362,7 +380,27 @@
         "answer": "retrouvera",
         "fullPhrase": "Elle nous retrouvera en ville.",
         "translation": "She will meet us in town."
+      },
+      {
+        "id": 46,
+        "verb": "se lever",
+        "phrase": "Je me ____ à 6 heures.",
+        "answer": "lèverai",
+        "alternativeAnswer": "me lèverai",
+        "fullPhrase": "Je me lèverai à 6 heures.",
+        "translation": "I will get up at 6 o'clock",
+        "spelling": "eChange"
+      },
+      {
+        "id": 47,
+        "verb": "acheter",
+        "phrase": "J' ____ une belle maison.",
+        "answer": "achèterai",
+        "fullPhrase": "J'achèterai une belle maison.",
+        "translation": "I will buy a beautiful house.",
+        "spelling": "eChange"
       }
+      
       
       
     ]

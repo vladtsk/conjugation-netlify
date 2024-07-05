@@ -4,11 +4,16 @@ import {
   getPresentMessages,
   getPastcompMessages,
   getPastimpMessages,
+  getFutureMessages,
+  getSubjunctiveMessages
 } from "./messages.js";
 
 import {
   showPresentTenseMessage,
   showPastCompMessage,
+  showPastImpTenseMessage,
+  showFutureTenseMessage,
+  showSubjunctiveMessage
 } from "./selectMessages.js";
 
 export function showInfoPopup(verbObj, tenseShort, answerType) {
@@ -47,8 +52,26 @@ export function showInfoPopup(verbObj, tenseShort, answerType) {
         break;
 
       case "pastimp":
-        messages = getPastimpMessages(verb);
+        messages = getPastimpMessages();
+
+         //Show a message for the imperfect tense
+         showPastImpTenseMessage(verbObj, messages);
         break;
+
+      case "future":
+        messages = getFutureMessages(verb);
+
+        //Show a message for the future tense
+        showFutureTenseMessage(verbObj, messages);
+        break;
+
+      case "subjunctive":
+        messages = getSubjunctiveMessages(verb);
+
+         //Show a message for the present subjunctive tense
+         showSubjunctiveMessage(verbObj, messages);
+         break;
+
     }
 
     if (popupClose) {

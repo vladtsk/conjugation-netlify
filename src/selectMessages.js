@@ -189,3 +189,108 @@ export function showPresentTenseMessage(verbObj, answerType, messages) {
       infoPopupSection.style.display = "block";
     }
   }
+
+  export function showPastImpTenseMessage(verbObj, messages) {
+    const infoPopupSection = document.querySelector(".infoPopupSection");
+    const messageDiv = document.querySelector(".messageDiv");
+
+    if(verbObj.pattern) {
+      switch (verbObj.pattern) {
+        case "je":
+          messageDiv.innerHTML = messages.pattern.je;
+          infoPopupSection.style.display = "block";
+          break;
+        case "tu":
+          messageDiv.innerHTML = messages.pattern.tu;
+          infoPopupSection.style.display = "block";
+          break;
+          case "il":
+            messageDiv.innerHTML = messages.pattern.il;
+            infoPopupSection.style.display = "block";
+            break;
+          case "nous":
+            messageDiv.innerHTML = messages.pattern.nous;
+            infoPopupSection.style.display = "block";
+            break;
+          case "vous":
+            messageDiv.innerHTML = messages.pattern.vous;
+            infoPopupSection.style.display = "block";
+            break;
+          case "ils":
+            messageDiv.innerHTML = messages.pattern.ils;
+            infoPopupSection.style.display = "block";
+            break;
+      }
+    }
+
+
+    if(verbObj.verb === "être" && messages.etre) {
+      const etreMsgEl = document.createElement("div");
+      etreMsgEl.innerHTML = messages.etre;
+      messageDiv.appendChild(etreMsgEl);
+    }
+
+    if(verbObj.verb === "pleuvoir" && messages.pleuvoir) {
+      const pleuvoirMsgEl = document.createElement("div");
+      pleuvoirMsgEl.innerHTML = messages.pleuvoir;
+      messageDiv.appendChild(pleuvoirMsgEl);
+    }
+
+    if(verbObj.exception && verbObj.exception === "ier" && messages.ier) {
+      const ierMsgEl = document.createElement("div");
+      ierMsgEl.innerHTML = messages.ier;
+      messageDiv.appendChild(ierMsgEl);
+    }
+
+    if(verbObj.exception && verbObj.exception === "ger" && messages.ger) {
+      const gerMsgEl = document.createElement("div");
+      gerMsgEl.innerHTML = messages.ger;
+      messageDiv.appendChild(gerMsgEl);
+    }
+  }
+
+  export function showFutureTenseMessage(verbObj, messages) {
+    const infoPopupSection = document.querySelector(".infoPopupSection");
+    const messageDiv = document.querySelector(".messageDiv");
+
+  
+
+    if(verbObj.irregular && !verbObj.spelling && messages.irregular.simple) {
+      messageDiv.innerHTML = messages.irregular.simple;
+      infoPopupSection.style.display = "block";
+    } else if(verbObj.spelling) {
+      console.log(verbObj.spelling)
+      if(verbObj.spelling === "eler" && messages.irregular.spelling.eler){
+        messageDiv.innerHTML = messages.irregular.spelling.eler;
+        infoPopupSection.style.display = "block";
+      } else if(verbObj.spelling === "eter" && messages.irregular.spelling.eter){
+        messageDiv.innerHTML = messages.irregular.spelling.eter;
+        infoPopupSection.style.display = "block";
+      } else if(verbObj.spelling === "eChange" && messages.irregular.spelling.eChange){
+        messageDiv.innerHTML = messages.irregular.spelling.eChange;
+        infoPopupSection.style.display = "block";
+      }
+    } else {
+      console.log("else", verbObj.spelling)
+      messageDiv.innerHTML = messages.regular;
+      infoPopupSection.style.display = "block";
+    }
+
+  }
+
+  export function showSubjunctiveMessage(verbObj, messages) {
+    const infoPopupSection = document.querySelector(".infoPopupSection");
+    const messageDiv = document.querySelector(".messageDiv");
+
+    if(verbObj.irregular && messages.irregular) {
+      messageDiv.innerHTML = messages.irregular;
+      infoPopupSection.style.display = "block";
+    } 
+    
+    else {
+      messageDiv.innerHTML = messages.regular;
+      infoPopupSection.style.display = "block";
+    }
+
+  }
+  

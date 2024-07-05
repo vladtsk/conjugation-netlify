@@ -11,16 +11,19 @@ export function buildTenseSelectPopup(userId) {
   
     
       createPopupOption("present", "present (le présent de l'indicatif)", "fa-solid", "fa-circle", "radio-present");
-      createPopupOption("pastComp", "past (le passé composé)", "fa-regular", "fa-circle", "radio-pastcomp");
+      createPopupOption("pastImp", "imperfect past (l'imparfait)", "fa-regular", "fa-circle", "radio-pastimp");
+      //createPopupOption("pastComp", "past (le passé composé)", "fa-regular", "fa-circle", "radio-pastcomp");
   
       if(userId) {
-      createPopupOption("pastImp", "imperfect past (l'imparfait)", "fa-regular", "fa-circle", "radio-pastimp");
+      //createPopupOption("pastImp", "imperfect past (l'imparfait)", "fa-regular", "fa-circle", "radio-pastimp");
+      createPopupOption("pastComp", "past (le passé composé)", "fa-regular", "fa-circle", "radio-pastcomp");
       createPopupOption("future", "future (le futur simple)", "fa-regular", "fa-circle", "radio-future");
       createPopupOption("subjunctive", "present subjunctive (le subjonctif présent)", "fa-regular", "fa-circle", "radio-pastcomp");
     } else {
-      createPopupOption("pastImp", "imperfect past (l'imparfait)", "fa-solid", "fa-lock", "lock-pastimp");
+      //createPopupOption("pastImp", "imperfect past (l'imparfait)", "fa-solid", "fa-lock", "lock-pastimp");
+      createPopupOption("pastComp", "past (le passé composé)", "fa-solid", "fa-lock", "lock-pastcomp");
       createPopupOption("future", "future (le futur simple)", "fa-solid", "fa-lock", "lock-future");
-      createPopupOption("subjunctive", "present subjunctive (le subjonctif présent)", "fa-solid", "fa-lock", "lock-pastcomp");
+      createPopupOption("subjunctive", "present subjunctive (le subjonctif présent)", "fa-solid", "fa-lock", "lock-subjunctive");
     }
     
     
