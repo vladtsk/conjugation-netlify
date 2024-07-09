@@ -1,13 +1,46 @@
 import { showNoMorePhrasesPage } from "./pagesetup.js";
 
+import { filterVerbs } from "./verbFilter.js";
+
 // A function generating a unique index and displaying a verb and a phrase corresponding to the index
-export function generateElements(data, indexArray, k, score, phraseStats) {
+export function generateElements({data, indexArray, k, score, phraseStats, phraseType}) {
+  
+  let filteredVerbsIndexArray = [];
+
+  filterVerbs(data, phraseType, filteredVerbsIndexArray);
+  console.log(filteredVerbsIndexArray);
+
+  // Generate a random and unique index
   if (indexArray.length !== data.data.length) {
-    // Generate a random and unique index
-    k = Math.floor(Math.random() * data.data.length);
-    do {
-      k = Math.floor(Math.random() * data.data.length);
-    } while (indexArray.includes(k));
+    
+    let loopAttempts = 0;
+    
+    if (filteredVerbsIndexArray.length !== 0) {
+
+      
+        do {
+          k = Math.floor(Math.random() * data.data.length);
+          loopAttempts ++;
+          if(loopAttempts > data.data.length) {
+            throw new Error("Exceeded maximum attempts to find a valid index.");
+          }
+          
+          console.log("loopAttempts", loopAttempts);
+    
+        } while (indexArray.includes(k) || !filteredVerbsIndexArray.includes(k));
+  
+         
+    
+      } else {
+       do {
+       k = Math.floor(Math.random() * data.data.length);
+        } while (indexArray.includes(k));
+    }
+
+    console.log("filteredVerbsIndexArray.includes(k)", filteredVerbsIndexArray.includes(k))
+    console.log("obj", data.data[k]);
+    console.log("k", k);
+    console.log("indexArray", indexArray)
     indexArray.push(k);
 
     displayVerb(data, k);
@@ -15,10 +48,7 @@ export function generateElements(data, indexArray, k, score, phraseStats) {
   } else {
     console.log("No more phrases to practise!");
     showNoMorePhrasesPage(score, phraseStats); // the data is not added to DB here
-    /*if (userId) {
-      addBoxToDb(data, boxes, userId, database);
-      addStatsToDb(userId, database, stats, phraseStats);
-    }*/
+    
   }
 
   return k;
@@ -54,7 +84,7 @@ export function displayTense(data) {
 }
 
 // Display the next element
-export function displayNext(data, indexArray, k, score, phraseStats) {
+export function displayNext({data, indexArray, k, score, phraseStats, phraseType}) {
   // Select the 'next' section
   const nextSection = document.querySelector(".next-section");
 
@@ -88,7 +118,13 @@ export function displayNext(data, indexArray, k, score, phraseStats) {
   msgArea.innerHTML = "";
   inputArea.value = "";
 
-  k = generateElements(data, indexArray, k, score, phraseStats);
+
+  try {
+    k = generateElements({data, indexArray, k, score, phraseStats, phraseType});
+  } catch (error) {
+    console.error(error.message);
+    showNoMorePhrasesPage(score, phraseStats); 
+  }
   nextSection.style.display = "none";
   submitSection.style.display = "flex";
   return k;

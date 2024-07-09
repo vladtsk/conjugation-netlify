@@ -316,7 +316,44 @@
         "fullPhrase": "Nous partirons à condition qu'il y ait de la place dans l'avion.",
         "translation": "We will leave provided there is space on the plane.",
         "irregular": true
+      },
+      {
+        "id": 38,
+        "verb": "aider",
+        "phrase": "Vous aimeriez qu'on vous ____ ?",
+        "answer": "aide",
+        "fullPhrase": "Vous aimeriez qu'on vous aide ?",
+        "translation": "Would you like us to help you?",
+        "irregular": false
+      },
+      {
+        "id": 39,
+        "verb": "pouvoir",
+        "phrase": "On est tristes que vous ne ____ pas rester.",
+        "answer": "puissiez",
+        "fullPhrase": "On est tristes que vous ne puissiez pas rester.",
+        "translation": "We are sad that you cannot stay.",
+        "irregular": true
+      },
+      {
+        "id": 40,
+        "verb": "dire",
+        "phrase": "Je serai là à moins qu'il me ____ de ne pas venir.",
+        "answer": "dise",
+        "fullPhrase": "Je serai là à moins qu'il me dise de ne pas venir.",
+        "translation": "I will be there unless he tells me not to come.",
+        "irregular": false
+      },
+      {
+        "id": 41,
+        "verb": "finir",
+        "phrase": "Je vais regarder ma série en attendant que tu ____ ton travail.",
+        "answer": "finisses",
+        "fullPhrase": "Je vais regarder ma série en attendant que tu finisses ton travail.",
+        "translation": "I am going to watch my show while waiting for you to finish your work.",
+        "irregular": false
       }
+      
       
     ]
   }

@@ -1,4 +1,4 @@
-import { buildTenseSelectPopup, buildPhraseNbSelectPopup  } from "./firstPageSelectPopups.js";
+import { buildTenseSelectPopup, buildPhraseTypeSelectPopup  } from "./firstPageSelectPopups.js";
 //import { hideLoader } from "./loader.js";
 
 // Building the first page
@@ -33,7 +33,7 @@ export async function buildFirstPage(userId) {
   
     const labelTense = document.createElement("label");
     labelTense.htmlFor = "tense";
-    labelTense.innerText = "Choose a tense you'd like practise:";
+    labelTense.innerText = "Choose a tense you'd like to practise:";
     tenseSelect.appendChild(labelTense);
   
     const selectDiv = document.createElement("div");
@@ -47,52 +47,54 @@ export async function buildFirstPage(userId) {
     const caretIcon = document.createElement("i");
     caretIcon.classList.add("fa-solid", "fa-caret-down");
     selectDiv.appendChild(caretIcon);
-    currentTense.textContent = "present (le présent de l'indicatif)";
-  
-    
-  
-    // The "number of phrases" section
-    const phrNbSection = document.createElement("div");
-    phrNbSection.classList.add("nb-phrases");
-    mainSection.appendChild(phrNbSection);
-  
-    const phrNbLabel = document.createElement("div");
-    phrNbLabel.innerText = "How many phrases would you like to practise?";
-    phrNbSection.appendChild(phrNbLabel);
-  
-    const selectNbPhrasesDiv = document.createElement("div");
-    selectNbPhrasesDiv.classList.add("selectNbPhrasesDiv");
-    phrNbSection.appendChild(selectNbPhrasesDiv);
+    currentTense.textContent = localStorage.getItem("selectedTense") || "present (le présent de l'indicatif)";
   
   
-    const selectPhrNb = document.createElement("p");
-    selectPhrNb.id = "phraseNb";
-    selectNbPhrasesDiv.appendChild(selectPhrNb);
-    selectPhrNb.textContent = "5";
+    // The "level of difficulty (type of phrases)" section
+    const selectPhrTypeSection = document.createElement("div");
+    selectPhrTypeSection.classList.add("phrase-type");
+    mainSection.appendChild(selectPhrTypeSection);
+  
+    const selectPhrTypeLabel = document.createElement("div");
+    selectPhrTypeLabel.innerText = "Choose the level of difficulty:";
+    selectPhrTypeSection.appendChild(selectPhrTypeLabel);
+  
+    const selectPhrTypeDiv = document.createElement("div");
+    selectPhrTypeDiv.classList.add("selectPhrTypeDiv");
+    selectPhrTypeSection.appendChild(selectPhrTypeDiv);
+  
+  
+    const selectPhrType = document.createElement("p");
+    selectPhrType.id = "phraseType";
+    selectPhrTypeDiv.appendChild(selectPhrType);
+    selectPhrType.textContent = localStorage.getItem("phraseType") || "medium";
   
     const caretIcon1 = document.createElement("i");
     caretIcon1.classList.add("fa-solid", "fa-caret-down");
-    selectNbPhrasesDiv.appendChild(caretIcon1);
+    selectPhrTypeDiv.appendChild(caretIcon1);
   
-    buildPhraseNbSelectPopup();
+    buildPhraseTypeSelectPopup();
+    const selectPhrTypeContainer = document.querySelector(".selectPhrTypeContainer");
   
-    selectNbPhrasesDiv.addEventListener("click", (event)=>{
+    selectPhrTypeDiv.addEventListener("click", (event)=>{
+
+      //const selectPhrTypeContainer = document.querySelector(".selectPhrTypeContainer");
       
-      if(selectNbPhrasesContainer) {
-        selectNbPhrasesContainer.style.display = "block";
+      if(selectPhrTypeContainer) {
+        selectPhrTypeContainer.style.display = "block";
       }
       event.stopPropagation();
     })
   
-    const nbOptions = document.querySelectorAll(".selectNbPhrasesContainer div");
-    const selectNbPhrasesContainer = document.querySelector(".selectNbPhrasesContainer");
+    const typeOptions = document.querySelectorAll(".selectPhrTypeContainer div");
+    
   
-    nbOptions.forEach(nb => {
+    typeOptions.forEach(nb => {
       nb.addEventListener("click", (event)=> {
         event.stopPropagation(); 
-        selectPhrNb.textContent = nb.textContent;
+        selectPhrType.textContent = nb.textContent;
         
-        selectNbPhrasesContainer.style.display = "none";
+        selectPhrTypeContainer.style.display = "none";
       })
     })
   

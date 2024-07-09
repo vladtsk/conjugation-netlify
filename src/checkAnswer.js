@@ -58,11 +58,11 @@ getuserId();
  //const userId = getUser();
 
 // A function that reads the user input and compares it to the correct answer
-export function checkAnswer({ data, k, phraseInfo, score, boxes, phraseStats, lives }) {
+export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, lives }) {
 
-  let phraseCount = phraseInfo[0];
-  let phraseNumber = phraseInfo[1];
-  //let phraseStats = [];
+  /*let phraseCount = phraseInfo[0];
+  let phraseNumber = phraseInfo[1];*/
+ 
   let phraseStatObject = {
     phrase: "",
     input: "",
@@ -101,7 +101,7 @@ export function checkAnswer({ data, k, phraseInfo, score, boxes, phraseStats, li
 
 
 
-  if (phraseCount < phraseNumber) {
+  if (phraseCount < 5) {
     displaySection = nextSection;
   } else {
     displaySection = finishSection;

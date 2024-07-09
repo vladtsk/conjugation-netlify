@@ -68,7 +68,7 @@ document.addEventListener("click", handleClickOutsidePopup);
 
 
 // A function launching the app
-export async function launchApp(data, phraseNumber) {
+export async function launchApp(data, phraseType) {
  
   const { app } = fetchFirebaseConfig();
   const database = getDatabase(app);
@@ -119,6 +119,34 @@ export async function launchApp(data, phraseNumber) {
     }
   }
 
+  //Check if there are any new objects that don't exist in the DB yet
+  /*let numOfBoxEl = 0;
+  boxes.forEach((box)=> numOfBoxEl = numOfBoxEl + box.length);
+  console.log("numOfBoxEl", numOfBoxEl);
+  if(data && data.data.length > 0 && numOfBoxEl !== data.data.length) {
+    for(let i = data.data.length-1; i >= 0; i--) {
+      let foundElement = null; 
+      console.log("obj id", data.data[i].id);
+      
+      boxes.some((box)=> {
+        foundElement = box.find((el)=> el.id === data.data[i].id);
+        return foundElement !== undefined;
+      });
+
+      console.log("foundElement", foundElement);
+
+      if(!foundElement) {
+        let object = { id: data.data[i].id, repetDate: 0 };
+        boxes[0].push(object);
+      } else {
+        break;
+      }
+      
+    }
+  }*/
+
+
+
   buildPageStructure(data);
   displayTense(data);
 
@@ -129,8 +157,14 @@ export async function launchApp(data, phraseNumber) {
 
 
   // Generating a unique index and displaying a verb and a phrase
-  k = generateElements(data, indexArray, k, score, phraseStats);
-  phraseCount++;
+  try {
+    k = generateElements({data, indexArray, k, score, phraseStats, phraseType});
+     phraseCount++;
+  } catch (error) {
+    console.error(error.message);
+    showNoMorePhrasesPage(score, phraseStats); 
+  }
+  
 
 
   const conjugSection = document.querySelector(".conjugSection");
@@ -152,8 +186,8 @@ export async function launchApp(data, phraseNumber) {
   const finishBtn = document.getElementById("finish-btn");
 
   submitBtn.addEventListener("click", ()=> {
-    let phraseInfo = [phraseCount, phraseNumber];
-    let result = checkAnswer({ data, k, phraseInfo, score, boxes, phraseStats, lives });
+    //let phraseInfo = [phraseCount, phraseNumber];
+    let result = checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, lives });
     ({ score, boxes, lives } = result);
    
   })
@@ -167,7 +201,7 @@ export async function launchApp(data, phraseNumber) {
       
         phraseDisplay.style.color = "black";
         inputArea.style.color = "black";
-        k = displayNext(data, indexArray, k, score, phraseStats);
+        k = displayNext({data, indexArray, k, score, phraseStats, phraseType});
         phraseCount++;
   })
 

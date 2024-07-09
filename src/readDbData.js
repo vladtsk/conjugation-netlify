@@ -57,7 +57,6 @@ export async function launchFirstPage() {
 
   let timeDifferenceMnts = checkTimeDifference(); // the time difference between the last time the user used the app and now (in minutes)
 
-  console.log("lives=", lives, "timeDiff=", timeDifferenceMnts);
  
 
   if(userId) {
@@ -78,7 +77,10 @@ export async function launchFirstPage() {
 
   hideLoader();
   
-  let phraseNumber = 5; // Making sure the phrase number is back to its default value
+  //let phraseNumber = 5; // Making sure the phrase number is back to its default value
+
+  let phraseType = "mixed"; // Choosing the default type of phrases (verbs) to practise
+
 
   // Fetching the present tense data by default
   let jsonData;
@@ -91,9 +93,7 @@ export async function launchFirstPage() {
   }
   
 
-  //const selectElement = document.getElementById("tense");
-  //const selectElement = document.querySelector(".selectDiv");
-  //const selectPhrNb = document.getElementById("phraseNb");
+ 
   const startBtn = document.getElementById("start-btn");
 
   const sidebarContainer = document.querySelector(".sidebarContainer");
@@ -109,19 +109,24 @@ export async function launchFirstPage() {
   if (startBtn) {
 
     startBtn.addEventListener("click", async() => {
-      
+      const phraseTypeEl = document.getElementById("phraseType");
 
-      phraseNumber = parseInt(phraseNb.textContent);
-      
-      const tenseValue = getTenseFromSelectElement();
+      //phraseNumber = parseInt(phraseNb.textContent);
+      phraseType = phraseTypeEl.innerText;
+
+      const {selectedTense, tenseValue} = getTenseFromSelectElement();
+
+      // Remember the choice in the browser
+      localStorage.setItem("phraseType", phraseType);
+      localStorage.setItem("selectedTense", selectedTense);
       
       if (tenseValue !== "present") {
         jsonData = await getJsonData(tenseValue);
-        launchApp(jsonData, phraseNumber);
+        launchApp(jsonData, phraseType);
       } else {
-        launchApp(jsonData, phraseNumber);
+        launchApp(jsonData, phraseType);
       }
-      
+      console.log(jsonData);
       
       nav.style.display = "none";
       sidebarContainer.style.display = "none";
@@ -140,15 +145,15 @@ export async function launchFirstPage() {
 function getTenseFromSelectElement() {
   let tenseValue;
   const currentTenseEl = document.querySelector(".currentTense");
-  const currentTense = currentTenseEl.textContent;
-  switch (currentTense) {
+  const selectedTense = currentTenseEl.textContent;
+  switch (selectedTense) {
     case "present (le présent de l'indicatif)":  
     tenseValue = "present";
     break;
 
     case "past (le passé composé)":
-      tenseValue = "pastComp";
-      break;
+    tenseValue = "pastComp";
+    break;
     
     case "imperfect past (l'imparfait)":
     tenseValue = "pastImp";
@@ -165,7 +170,7 @@ function getTenseFromSelectElement() {
     default:
       console.log("unkown tense");
   }
-  return tenseValue;
+  return {selectedTense, tenseValue};
 }
 
 async function getJsonData(tenseValue) {

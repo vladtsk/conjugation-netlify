@@ -10,7 +10,7 @@ export function handleCorrectAnswer(phraseDivCorrect, fullPhrase) {
     const speaker = document.getElementById("speaker"); // the speaker icon
       playCorrect();
     
-      inputArea.style.color = "#228b22";
+      inputArea.style.color = "#169c47";
       
       msgArea.innerText = "Correct!";
       

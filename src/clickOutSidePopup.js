@@ -5,7 +5,7 @@ export function handleClickOutsidePopup(event) {
     const tenseSelectPopupContainer = document.querySelector(".tenseSelectPopupContainer");
     const blurContainer = document.querySelector(".blurContainer");
     const selectDiv = document.querySelector(".selectDiv");
-    const selectNbPhrasesContainer = document.querySelector(".selectNbPhrasesContainer");
+    const selectPhrTypeContainer = document.querySelector(".selectPhrTypeContainer");
     const accountPopup = document.querySelector(".account-popup");
     //menu-element account
 
@@ -19,9 +19,10 @@ export function handleClickOutsidePopup(event) {
       
       }
       
-      if(selectNbPhrasesContainer && selectNbPhrasesContainer.style.display !== "none" && !selectNbPhrasesContainer.contains(event.target)) {
+    
+      if(selectPhrTypeContainer && selectPhrTypeContainer.style.display !== "none" && !selectPhrTypeContainer.contains(event.target)) {
               
-        selectNbPhrasesContainer.style.display = "none";
+        selectPhrTypeContainer.style.display = "none";
       
       }
 

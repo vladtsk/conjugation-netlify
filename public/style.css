@@ -282,7 +282,7 @@ select {
 }*/
 
 .selectDiv,
-.selectNbPhrasesDiv {
+.selectPhrTypeDiv {
   position: relative;
 }
 
@@ -389,7 +389,7 @@ select {
 
 
 /* Styling the 'number of phrases' section */
-.nb-phrases {
+.phrase-type {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -399,7 +399,7 @@ select {
   gap: 10px;
 }
 
-#phraseNb {
+#phraseType {
   color: black;
   font-family: "Poppins", sans-serif;
   font-size: 0.8em;
@@ -407,7 +407,7 @@ select {
 
 }
 
-.selectNbPhrasesDiv {
+.selectPhrTypeDiv {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -423,12 +423,12 @@ select {
   border-radius: 6px;
 }
 
-.selectNbPhrasesDiv i {
+.selectPhrTypeDiv i {
   display: inline-block;
   color: var(--color-primary);
 }
 
-.selectNbPhrasesContainer {
+.selectPhrTypeContainer {
   position: absolute;
 
   top: 87%;
@@ -437,7 +437,7 @@ select {
 
 
   width: fit-content;
-  padding-inline: 20px;
+  padding-inline: 28px;
   padding-block: 4px;
 
   border-radius: 6px;
@@ -447,11 +447,15 @@ select {
   background-color: var(--color-secondary);
 
   z-index: 1;
+
+  font-size: 0.8em;
 }
 
-.phrNb5, .phrNb10 {
+.easy, .medium {
   border-bottom: solid gray 1px;
+  margin-bottom: 5px;
 }
+
 
 
 /* Styling the start section */
@@ -681,6 +685,10 @@ button[disabled] {
   justify-content: space-between;
 }
 
+.popup-icons .popup-close {
+  font-size: 22px;
+}
+
 @keyframes colorChange {
   from {
     color: var(--color-primary);
@@ -737,8 +745,9 @@ button[disabled] {
 
 .popupInfo-close {
   position: absolute;
-  right: 15px;
+  right: 20px;
   top: 10px;
+  font-size: 22px;
 }
 
 .photosDiv {
@@ -1343,11 +1352,11 @@ button[disabled] {
     font-size: 16px;
   }
 
-  .nb-phrases label {
+  .phrase-type label {
     font-size: 0.9em;
   }
 
-  #phraseNb {
+  #phraseType {
     font-size: 0.7em;
   }
 }
@@ -1455,15 +1464,14 @@ button[disabled] {
 
   }
 
-  .nb-phrases {
+  .phrase-type {
     flex-direction: column;
     align-items: center;
   }
 
-  .nb-phrases select {
-    /*width: 20%;*/
+  /* .nb-phrases select {
     text-align: center;
-  }
+  }*/
 
   .type-section input::placeholder {
     font-size: 12px;

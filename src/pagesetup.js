@@ -333,7 +333,7 @@ export function showNoMorePhrasesPage(score, phraseStats) {
   const noMorePhrExpl = document.createElement("p");
   noMorePhrExpl.classList.add("noMorePhrExpl");
   noMorePhrExpl.innerText =
-    "Try another tense or come back later. Our smart repetition system shows you phrases at specific intervals, enhancing your ability to memorize them efficiently.";
+    "Please try another tense, change the level, or come back later. Our smart repetition system shows you phrases at specific intervals, enhancing your ability to memorize them efficiently.";
   noMorePhrDiv.appendChild(noMorePhrExpl);
 
   const scoreDiv = document.createElement("div");

@@ -48,24 +48,24 @@ export function buildTenseSelectPopup(userId) {
     container.appendChild(div);
   }
   
-  export function buildPhraseNbSelectPopup() {
+  export function buildPhraseTypeSelectPopup() {
   
-    const selectNbPhrasesDiv = document.querySelector(".selectNbPhrasesDiv");
+    const selectPhrTypeDiv = document.querySelector(".selectPhrTypeDiv");
     
     const container = document.createElement("div");
   
-    selectNbPhrasesDiv.appendChild(container);
-    container.classList.add("selectNbPhrasesContainer");
+    selectPhrTypeDiv.appendChild(container);
+    container.classList.add("selectPhrTypeContainer");
     container.style.display = "none";
   
-    createPhraseNbPopupOption("phrNb5", "5");
-    createPhraseNbPopupOption("phrNb10", "10");
-    //createPhraseNbPopupOption("phrNb15", "15");
+    createPhraseNbPopupOption("easy", "easy");
+    createPhraseNbPopupOption("medium", "medium");
+    createPhraseNbPopupOption("hard", "hard");
   
   }
   
 function createPhraseNbPopupOption(divClass, number) {
-    const container = document.querySelector(".selectNbPhrasesContainer");
+    const container = document.querySelector(".selectPhrTypeContainer");
   
     const div = document.createElement("div");
     div.classList.add(divClass);
