@@ -15,11 +15,6 @@
   color: var(--color-secondary);
 }
 
-.practice i,
-.learn i {
-  display: inline-block;
-  margin-right: 5px;
-}
 
 h1,
 h2,
@@ -27,7 +22,7 @@ h3 {
   text-align: left;
 }
 
-.menu, .contentNav {
+.menu, .contentNav, .bonus-menu {
   margin-top: 20px;
 }
 
@@ -52,7 +47,9 @@ h3 {
 .future-menu,
 .future-submenu,
 .subjunctive-menu,
-.subjunctive-submenu {
+.subjunctive-submenu,
+.bonus1Menu,
+.bonus-intro {
   padding-inline: 20px;
   border-radius: 5px;
 }
@@ -62,7 +59,8 @@ h3 {
 .past-menu,
 .imperfect-menu,
 .future-menu,
-.subjunctive-menu {
+.subjunctive-menu,
+.bonus1Menu {
   /*background-color: var(--color-primary);
   color: var(--color-secondary);*/
   border: solid 2px var(--color-primary);
@@ -71,7 +69,8 @@ h3 {
 .present-submenu,
 .past-submenu,
 .future-submenu,
-.subjunctive-submenu {
+.subjunctive-submenu,
+.bonus-intro {
   border: solid var(--color-primary) 2px;
 }
 
@@ -80,7 +79,8 @@ h3 {
 .past-menu,
 .imperfect-menu,
 .future-menu,
-.subjunctive-menu {
+.subjunctive-menu,
+.bonus1Menu {
   font-size: 18px;
   margin-top: 20px;
   padding-block: 20px;
@@ -99,13 +99,39 @@ h3 {
   padding-block: 15px;
 }
 
+.bonus-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+  padding-block: 15px;
+}
+
+.bonus1Btn {
+  padding-inline: 6px;
+  padding-block: 4px;
+  border: solid 2px var(--color-tertiary);
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  
+}
+
+.bonus1Btn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
 .present-subcontainer,
 .past-subcontainer {
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.fa-plane-departure {
+.fa-plane-departure,
+.fa-book {
   display: inline-block;
   margin-right: 10px;
   color: var(--color-tertiary);
@@ -129,7 +155,8 @@ h3 {
 .present-menu,
 .past-menu,
 .future-menu,
-.subjunctive-menu {
+.subjunctive-menu,
+.bonus1Menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -141,7 +168,8 @@ h3 {
 .present-menu i,
 .past-menu i,
 .future-menu i,
-.subjunctive-menu i {
+.subjunctive-menu i,
+.bonus1Menu i {
   display: inline-block;
 }
 
@@ -385,9 +413,10 @@ th {
     max-width: 90%;
   }
 
-  .menu {
+  .menu,
+  .bonus-menu {
     padding: 0;
-    margin: 0;
+    margin: 20px;
   }
 
   .page-content {
@@ -403,7 +432,8 @@ th {
     max-width: 100%;
   }
 
-  .menu {
+  .menu,
+  .bonus-menu {
     padding-inline: 20px;
     padding-bottom: 100px;
     
@@ -419,5 +449,10 @@ th {
 
   .table-container tr {
     font-size: 14px;
+  }
+
+  .bonus-intro {
+    width: 95%;
+    font-size: 0.9em;
   }
 }

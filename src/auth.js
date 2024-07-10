@@ -17,13 +17,13 @@ import {
   generatePassResetForm,
 } from "./pagesetup.js";
 
-import { launchFirstPage } from "./readDbData.js";
 
 import { showErrorMsg } from "./authErrorMsg.js";
 
 import { resetPassword } from "./passReset.js";
 
-import { selectPracticeBtn } from "./selectMenuItem.js";
+import { selectPracticeBtn } from "./menuPracticeBtnClick.js";
+import { launchFirstPage } from "./readDbData.js";
 
 /*const auth = getAuth(app);
 const database = getDatabase(app);*/
@@ -113,7 +113,6 @@ export async function userSignUp() {
       // Adding the data to the Database
       set(userRef, userData);
 
-      launchFirstPage();
       selectPracticeBtn();
 
       sidebarContainer.style.display = "flex";
@@ -151,8 +150,8 @@ async function userLogIn() {
   signInWithEmailAndPassword(auth, logInEmail, logInPassword)
     .then((userCredential) => {
       contentArea.innerHTML = "";
-      launchFirstPage();
       selectPracticeBtn();
+      launchFirstPage();
 
       
 
@@ -206,8 +205,8 @@ async function userLogOut() {
   }
  
   contentArea.innerHTML = "";
-  launchFirstPage();
   selectPracticeBtn();
+  launchFirstPage();
   
 
   sidebarContainer.style.display = "flex";

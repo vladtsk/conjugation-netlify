@@ -5,8 +5,8 @@ export function openLearnPage() {
   const learnBtn = document.querySelectorAll(".learn");
   const practiceBtn = document.querySelectorAll(".practice");
   const stats = document.querySelectorAll(".stats");
-
-  
+  const bonusBtn = document.querySelectorAll(".bonus");
+   
 learnBtn.forEach(btn => btn.addEventListener("click", async () => {
 
   let { subStatus, userId } = await getSubscriptionStatus();
@@ -17,6 +17,11 @@ learnBtn.forEach(btn => btn.addEventListener("click", async () => {
   })
 
   stats.forEach(btn => {
+    btn.classList.remove("select");
+
+  })
+
+  bonusBtn.forEach(btn => {
     btn.classList.remove("select");
 
   })

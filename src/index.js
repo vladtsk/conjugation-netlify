@@ -16,6 +16,8 @@ import {
 
 import { openLearnPage } from "../public/learnPageManager.js";
 import { openStatsPage } from "./stats.js";
+import { openBonusPage } from "./bonusPageManager.js";
+
 
 
 import { addBoxToDb, addStatsToDb } from "./addDataDb.js";
@@ -55,8 +57,9 @@ managePracticeBtnClick();
 handleMenuAccountClick();
 
 openLearnPage();
-
 openStatsPage();
+openBonusPage();
+
 generateBlurContainer()
 generateRulesPopupSection();
 handleCheckoutClick();

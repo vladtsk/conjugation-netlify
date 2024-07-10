@@ -54,7 +54,7 @@ verb conjugation`;
   presentLine.classList.add("present-line");
   presentMenu.appendChild(presentLine);
 
-  presentLine.innerHTML = `<i class='fa-regular fa-calendar-check'></i>The Present Tense</div>`;
+  presentLine.innerHTML = `<i class='fa-regular fa-calendar-check'></i>The Present Tense`;
 
   const plusIcon = document.createElement("i");
   plusIcon.classList.add("fa-solid", "fa-square-plus");
@@ -132,14 +132,14 @@ verb conjugation`;
   pastMenu.appendChild(pastLine);
 
   if(userId && subStatus === "active") {
-    pastLine.innerHTML = `<i class='fas fa-compass'></i>The Past Tense "Passé composé"</div>`;
+    pastLine.innerHTML = `<i class='fas fa-compass'></i>The Past Tense "Passé composé"`;
 
     const plusIcon2 = document.createElement("i");
     plusIcon2.classList.add("fa-solid", "fa-square-plus");
 
   pastMenu.appendChild(plusIcon2);
   } else {
-    pastLine.innerHTML = `<i class='fa-solid fa-lock'></i>The Past Tense "Passé composé"</div>`;
+    pastLine.innerHTML = `<i class='fa-solid fa-lock'></i>The Past Tense "Passé composé"`;
   }
 
   
@@ -183,14 +183,14 @@ verb conjugation`;
   futureMenu.appendChild(futureLine);
 
   if(userId && subStatus === "active") {
-    futureLine.innerHTML = `<i class="fa-solid fa-chess-rook"></i>The simple future tense (le futur simple)</div>`;
+    futureLine.innerHTML = `<i class="fa-solid fa-chess-rook"></i>The simple future tense (le futur simple)`;
 
     const plusIcon3 = document.createElement("i");
     plusIcon3.classList.add("fa-solid", "fa-square-plus");
 
   futureMenu.appendChild(plusIcon3);
   } else {
-    futureLine.innerHTML = `<i class='fa-solid fa-lock'></i>The simple future tense (le futur simple)</div>`;
+    futureLine.innerHTML = `<i class='fa-solid fa-lock'></i>The simple future tense (le futur simple)`;
   }
 
   
@@ -240,7 +240,7 @@ verb conjugation`;
 
   subjunctiveMenu.appendChild(plusIcon3);
   } else {
-    subjunctiveLine.innerHTML = `<i class="fa-solid fa-lock"></i>The French subjunctive (le subjonctif)</div>`;
+    subjunctiveLine.innerHTML = `<i class="fa-solid fa-lock"></i>The French subjunctive (le subjonctif)`;
   }
 
   const subjunctiveSubContainer = document.createElement("div");

@@ -62,6 +62,7 @@ export function openStatsPage() {
   const statsBtn = document.querySelectorAll(".stats");
   const learnBtn = document.querySelectorAll(".learn");
   const practiceBtn = document.querySelectorAll(".practice");
+  const bonusBtn = document.querySelectorAll(".bonus");
 
 
   statsBtn.forEach(btn => {btn.addEventListener("click", () => {
@@ -72,6 +73,11 @@ export function openStatsPage() {
 
     learnBtn.forEach(btn => {
       btn.classList.remove("select"); 
+    })
+
+    bonusBtn.forEach(btn => {
+      btn.classList.remove("select");
+  
     })
 
     statsBtn.forEach(btn => {

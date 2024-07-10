@@ -1,0 +1,21 @@
+// Manage menu clicks on the bonus page
+
+export function manageBonusMenuClicks(userId, subStatus) {
+    const bonus1Menu = document.querySelector(".bonus1Menu");
+    const bonus1SubContainer = document.querySelector(".bonus1-subcontainer");
+    
+    bonus1Menu.addEventListener("click", ()=>{
+      if(bonus1SubContainer.style.display === "none") {
+          bonus1SubContainer.style.display = "block";
+          bonus1Menu.innerHTML = `<div><i class="fa-solid fa-book"></i>Bonus 1: Conjugation guide</div>
+          <i class='fa-solid fa-circle-chevron-up'></i>`
+  
+          
+  
+      } else {
+          bonus1SubContainer.style.display = "none";
+          bonus1Menu.innerHTML = `<div><i class="fa-solid fa-book"></i>Bonus 1: Conjugation guide</div>
+          <i class="fa-solid fa-square-plus"></i>`
+      }
+  })
+  }

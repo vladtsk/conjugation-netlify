@@ -95,6 +95,9 @@ nav .fa-circle-question, .fa-circle-user,
   color: var(--color-primary);
 }
 
+.fa-gift {
+  font-size: 20px;
+}
 .fa-gem {
   font-size: 25px;
   margin-right: 0px;
@@ -170,7 +173,8 @@ main {
 
 .practice,
 .learn,
-.stats {
+.stats,
+.bonus {
   font-size: 18px;
   margin-bottom: 2px;
   padding-block: 15px;
@@ -184,12 +188,23 @@ main {
   padding-inline: 18px;
 }
 
+.practice i,
+.learn i {
+  display: inline-block;
+  margin-right: 5px;
+}
+
 .learn,
 .stats {
   padding-inline: 30px;
   border-radius: 10px;
 }
 
+.bonus {
+  padding-inline: 16px;
+}
+
+/*
 .practice:active,
 .practice:focus,
 .learn:active,
@@ -199,11 +214,12 @@ main {
   border: solid #b5afae 1px;
   background-color: var(--color-secondary);
   color: black;
-}
+}*/
 
 .practice:hover,
 .learn:hover,
-.stats:hover {
+.stats:hover,
+.bonus:hover {
   background-color: var(--color-tertiary);
   color: var(--color-secondary);
 }
@@ -1273,6 +1289,8 @@ button[disabled] {
   .logo img {
     max-width: 300px;
   }
+
+  
 }
 
 @media screen and (min-height: 1000px) {
@@ -1288,8 +1306,6 @@ button[disabled] {
     padding-top: 0;
   }
 
-  
-
   header {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -1299,6 +1315,11 @@ button[disabled] {
   nav {
     gap: 15px;
     padding-right: 20px;
+  }
+
+  .practice i,
+  .learn i {
+    margin-right: 0px;
   }
 
   .logo {
@@ -1336,7 +1357,8 @@ button[disabled] {
 
   .practice,
   .learn,
-  .stats {
+  .stats,
+  .bonus {
     display: flex;
     justify-content: center;
     margin-inline: auto;
@@ -1377,6 +1399,11 @@ button[disabled] {
   nav {
     gap: 10px;
     padding-right: 10px;
+  }
+
+  .practice i,
+  .learn i {
+    margin-right: 0px;
   }
 
   .lives-container {
@@ -1446,9 +1473,11 @@ button[disabled] {
 
   .practice,
   .learn,
-  .stats {
+  .stats,
+  .bonus {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-inline: auto;
     font-size: 25px;
     margin-bottom: 2px;
