@@ -79,7 +79,7 @@ export async function launchFirstPage() {
   
   //let phraseNumber = 5; // Making sure the phrase number is back to its default value
 
-  let phraseType = "mixed"; // Choosing the default type of phrases (verbs) to practise
+  //let phraseType = "mixed"; // Choosing the default type of phrases (verbs) to practise
 
 
   // Fetching the present tense data by default
@@ -112,7 +112,7 @@ export async function launchFirstPage() {
       const phraseTypeEl = document.getElementById("phraseType");
 
       //phraseNumber = parseInt(phraseNb.textContent);
-      phraseType = phraseTypeEl.innerText;
+      const phraseType = phraseTypeEl.innerText;
 
       const {selectedTense, tenseValue} = getTenseFromSelectElement();
 
@@ -126,7 +126,6 @@ export async function launchFirstPage() {
       } else {
         launchApp(jsonData, phraseType);
       }
-      console.log(jsonData);
       
       nav.style.display = "none";
       sidebarContainer.style.display = "none";

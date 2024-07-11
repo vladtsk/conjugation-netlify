@@ -6,12 +6,12 @@ import { launchFirstPage } from "./readDbData.js";
 export function managePracticeBtnClick() {
     const practiceBtn = document.querySelectorAll(".practice");
     
-    selectPracticeBtn();
 
     practiceBtn.forEach(btn => {
         
         btn.addEventListener("click", ()=> {
             launchFirstPage();
+            selectPracticeBtn();
         })
 
     })
@@ -73,6 +73,7 @@ export function selectPracticeBtn() {
       });
     
       learnBtn.forEach(btn => {
+        console.log("learn btn remove class")
         btn.classList.remove("select");
          
       });

@@ -166,7 +166,6 @@ async function userLogIn() {
       let userData = {
         last_login: Date.now(),
       };
-      //const lastLogin = Date.now();
 
       // Reference to the 'user' node
 

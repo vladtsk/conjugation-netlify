@@ -122,34 +122,7 @@ export async function launchApp(data, phraseType) {
     }
   }
 
-  //Check if there are any new objects that don't exist in the DB yet
-  /*let numOfBoxEl = 0;
-  boxes.forEach((box)=> numOfBoxEl = numOfBoxEl + box.length);
-  console.log("numOfBoxEl", numOfBoxEl);
-  if(data && data.data.length > 0 && numOfBoxEl !== data.data.length) {
-    for(let i = data.data.length-1; i >= 0; i--) {
-      let foundElement = null; 
-      console.log("obj id", data.data[i].id);
-      
-      boxes.some((box)=> {
-        foundElement = box.find((el)=> el.id === data.data[i].id);
-        return foundElement !== undefined;
-      });
-
-      console.log("foundElement", foundElement);
-
-      if(!foundElement) {
-        let object = { id: data.data[i].id, repetDate: 0 };
-        boxes[0].push(object);
-      } else {
-        break;
-      }
-      
-    }
-  }*/
-
-
-
+  
   buildPageStructure(data);
   displayTense(data);
 
@@ -189,7 +162,7 @@ export async function launchApp(data, phraseType) {
   const finishBtn = document.getElementById("finish-btn");
 
   submitBtn.addEventListener("click", ()=> {
-    //let phraseInfo = [phraseCount, phraseNumber];
+    
     let result = checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, lives });
     ({ score, boxes, lives } = result);
    
@@ -213,13 +186,67 @@ export async function launchApp(data, phraseType) {
     infoPopupSection.style.display = "none";
       conjugSection.style.display = "none";
 
+      let appLastUseDate;
+      let appLastUseTime;
+      let timeDifferenceH;
+      let streak; 
+      
+      const currenttimestamp = new Date().getTime();
+
+      
+
       // Adding data to the database and updating the statistics
 
       if (userId) {
+
+        const dateDb = new Date(stats[stats.length - 1]?.timestamp);
+        let streak = stats[stats.length - 1]?.streak || 1;
+        appLastUseTime = dateDb.getTime();
+
+        if(dateDb) {
+          timeDifferenceH = (currenttimestamp - appLastUseTime)/1000/60/60;
+          if(timeDifferenceH < 24) {
+         // no change withing 24 hours
+          } else if(timeDifferenceH < 48) {
+            streak++; // streak increases
+            }  
+          
+          else {
+          streak = 1;
+          }
+        }
+        
+
+          console.log("User: timeDifferenceH", timeDifferenceH);
+          console.log("User: streak", streak);
+
         addBoxToDb(data, boxes, userId, database);
-        addStatsToDb(userId, database, stats, phraseStats);
+        addStatsToDb(userId, database, stats, phraseStats, streak);
       } else {
-        window.localStorage.setItem("lives", lives);
+        
+        streak = localStorage.getItem("streak") || 1;
+        const storedTimeStamp = localStorage.getItem("appLastUseTime");
+        
+        if(storedTimeStamp) {
+          appLastUseDate = new Date(parseInt(storedTimeStamp));
+          appLastUseTime = appLastUseDate.getTime();
+
+          //const lastUseDate = new Date(appLastUseTime);
+          timeDifferenceH = (currenttimestamp - appLastUseTime)/1000/60/60;
+          if(timeDifferenceH < 24) {
+          streak++;
+          } else {
+          streak = 1;
+          }
+        } 
+
+        console.log("timeDifferenceH", timeDifferenceH);
+        console.log("streak", streak);
+
+
+        localStorage.setItem("lives", lives);
+        localStorage.setItem("appLastUseTime", currenttimestamp.toString());
+        localStorage.setItem("streak", streak);
         console.log("User is signed out");
       }
 

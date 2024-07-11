@@ -55,21 +55,23 @@ export function generateBonusPage(userId, subStatus) {
 
     const bonus1IntroLine = document.createElement("div");
     
+    const streak = localStorage.getItem("streak");
+    console.log("Bonus section, streak: ", streak)
     
 
-    if(userId && subStatus === "active") {
+    if((userId && subStatus === "active") || streak >= 3) {
       bonus1IntroLine.innerHTML = `<i class="fa-solid fa-circle-chevron-right"></i>
       Your bonus is ready now!`;
 
       const bonus1Btn = document.createElement("div");
       bonus1Btn.classList.add("bonus1Btn");
-      bonus1Btn.textContent = "bonus";
+      bonus1Btn.textContent = "download";
 
       bonus1Intro.appendChild(bonus1IntroLine);
       bonus1Intro.appendChild(bonus1Btn);
     } else {
       bonus1IntroLine.innerHTML = `<i
-      class="fa-solid fa-lock"></i>Use the app for 3 days in a row or become Premium to access it now`;
+      class="fa-solid fa-lock"></i>Get a 3-day streak or become Premium to access it now`;
       bonus1Intro.appendChild(bonus1IntroLine);
     }
     

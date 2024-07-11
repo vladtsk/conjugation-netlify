@@ -18,7 +18,7 @@ export function addBoxToDb(data, boxes, userId, database) {
   }
 }
 
-export function addStatsToDb(userId, database, stats, phraseStats) {
+export function addStatsToDb(userId, database, stats, phraseStats, streak) {
   const today = new Date();
 
   let nbPhrases = phraseStats.length;
@@ -41,6 +41,7 @@ export function addStatsToDb(userId, database, stats, phraseStats) {
       timestamp: today.getTime(),
       nbOfPhrPractised: nbPhrases,
       nbOfCorrectPhr: nbCorrect,
+      streak: streak,
     };
 
     stats.push(statObject);

@@ -6,6 +6,7 @@ export async function buildFirstPage(userId) {
     
 
     const contentArea = document.querySelector(".content-area");
+    contentArea.innerHTML = "";
   
     // Section containing the main element
   

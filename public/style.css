@@ -1138,7 +1138,7 @@ button[disabled] {
 
 /* Styling the chart */
 .chart {
-  max-width: 450px;
+  width: 450px;
   /*min-width: 280px;*/
   margin-inline: auto;
   margin-top: 20px;
@@ -1339,6 +1339,12 @@ button[disabled] {
     padding-right: 25px;
   }
 
+  .chart {
+    width: 400px;
+    margin-inline: 20px auto;
+  
+  }
+
   .sidebar,
   .mobileMenu {
     display: none;
@@ -1433,7 +1439,9 @@ button[disabled] {
     /*padding-inline: 0px;*/
   }
 
-  
+  .chart {
+    width: 350px;
+  }
 
   .tense-display-section,
   .verb-display-section {

@@ -2,6 +2,7 @@
 
 import { launchFirstPage } from "./readDbData.js";
 import { generateGraph, buildGraph } from "./graphs.js";
+import { selectPracticeBtn } from "./menuPracticeBtnClick.js";
 
 
 
@@ -311,6 +312,7 @@ export function showResultPage(score, phraseStats, stats, userId) {
     sidebarTabletContainer.style.display = "flex";
     footer.style.display = "block";
     launchFirstPage();
+    selectPracticeBtn();
   
   });
 }
