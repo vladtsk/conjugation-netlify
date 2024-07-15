@@ -191,10 +191,12 @@ export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, l
       break;
 
     default:
-      if(!userId && lives > 0) {
+      console.log("incorrect, lives", lives);
+      if(lives && lives > 0) {
         lives--;
+        console.log("incorrect, lives --", lives)
         if(lives === 0) {
-          window.localStorage.setItem("lastUseTime", Date.now());
+         
           if(livesEl) {
             livesEl.style.color = "#ef233c";
           }
@@ -202,6 +204,7 @@ export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, l
        
       }
       
+      console.log("incorrect, before HandleIncorrect", lives)
       handleIncorrectAnswer(phraseDiv, data.data[k].fullPhrase, data.data[k].answer, lives);
       
       if (userId) {

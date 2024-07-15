@@ -1,6 +1,6 @@
 // A function that moves a phrase to the next box and changes the next repetition date
 export function movePhraseForward(k, boxes) {
-  console.log(boxes)
+
   const today = new Date();
   const newRepetDate = new Date(today);
   let foundElement = null;
@@ -11,7 +11,6 @@ export function movePhraseForward(k, boxes) {
 
     if (foundElement) {
       const foundIndex = boxes[i].indexOf(foundElement);
-      console.log("foundIndex in movePhraseForward", foundIndex);
 
       newRepetDate.setDate(today.getDate() + repetDateArrow[i]);
       foundElement.repetDate = newRepetDate.getTime();
@@ -25,7 +24,6 @@ export function movePhraseForward(k, boxes) {
     }
   }
 
-  console.log("foundElement in movePhraseForward", foundElement);
 
   if (!foundElement) {
     let object = { id: k+1, repetDate: 0 };
@@ -40,7 +38,7 @@ export function movePhraseForward(k, boxes) {
 
 // A function that moves a phrase to the box below (when a user makes a mistake) and changes the next repetition date
 export function movePhraseBackward(k, boxes) {
-  console.log(boxes)
+
   const today = new Date();
   const newRepetDate = new Date(today);
   let foundElement = null;
@@ -52,7 +50,7 @@ export function movePhraseBackward(k, boxes) {
 
     if (foundElement) {
       const foundIndex = boxes[i].indexOf(foundElement);
-      console.log("ID in moveBack: ", k+1);
+      
       foundElement.repetDate = newRepetDate.getTime();
       if (i !== 0) {
         boxes[i - 1].push(foundElement); // the element goes one box down
@@ -65,7 +63,7 @@ export function movePhraseBackward(k, boxes) {
      }
   }
 
-  console.log("foundElement in movePhraseback", foundElement);
+  
 
     
   if (!foundElement) {

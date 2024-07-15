@@ -49,6 +49,7 @@ h3 {
 .subjunctive-menu,
 .subjunctive-submenu,
 .bonus1Menu,
+.bonus2Menu,
 .bonus-intro {
   padding-inline: 20px;
   border-radius: 5px;
@@ -60,7 +61,8 @@ h3 {
 .imperfect-menu,
 .future-menu,
 .subjunctive-menu,
-.bonus1Menu {
+.bonus1Menu,
+.bonus2Menu {
   /*background-color: var(--color-primary);
   color: var(--color-secondary);*/
   border: solid 2px var(--color-primary);
@@ -80,7 +82,8 @@ h3 {
 .imperfect-menu,
 .future-menu,
 .subjunctive-menu,
-.bonus1Menu {
+.bonus1Menu,
+.bonus2Menu {
   font-size: 18px;
   margin-top: 20px;
   padding-block: 20px;
@@ -108,7 +111,8 @@ h3 {
   padding-block: 15px;
 }
 
-.bonus1Btn {
+.bonus1Btn,
+.bonus2Btn  {
   padding-inline: 6px;
   padding-block: 4px;
   border: solid 2px var(--color-tertiary);
@@ -118,7 +122,8 @@ h3 {
   
 }
 
-.bonus1Btn:hover {
+.bonus1Btn:hover,
+.bonus2Btn:hover {
   background-color: var(--color-primary);
   color: var(--color-secondary);
   border-color: var(--color-secondary);
@@ -131,7 +136,8 @@ h3 {
 }
 
 .fa-plane-departure,
-.fa-book {
+.fa-book,
+.fa-chart-line {
   display: inline-block;
   margin-right: 10px;
   color: var(--color-tertiary);
@@ -156,7 +162,8 @@ h3 {
 .past-menu,
 .future-menu,
 .subjunctive-menu,
-.bonus1Menu {
+.bonus1Menu,
+.bonus2Menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -169,7 +176,8 @@ h3 {
 .past-menu i,
 .future-menu i,
 .subjunctive-menu i,
-.bonus1Menu i {
+.bonus1Menu i,
+.bonus2Menu i {
   display: inline-block;
 }
 

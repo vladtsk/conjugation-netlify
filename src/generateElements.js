@@ -8,7 +8,6 @@ export function generateElements({data, indexArray, k, score, phraseStats, phras
   let filteredVerbsIndexArray = [];
 
   filterVerbs(data, phraseType, filteredVerbsIndexArray);
-  console.log(filteredVerbsIndexArray);
 
   // Generate a random and unique index
   if (indexArray.length !== data.data.length) {
@@ -25,7 +24,6 @@ export function generateElements({data, indexArray, k, score, phraseStats, phras
             throw new Error("Exceeded maximum attempts to find a valid index.");
           }
           
-          console.log("loopAttempts", loopAttempts);
     
         } while (indexArray.includes(k) || !filteredVerbsIndexArray.includes(k));
   
@@ -37,10 +35,6 @@ export function generateElements({data, indexArray, k, score, phraseStats, phras
         } while (indexArray.includes(k));
     }
 
-    console.log("filteredVerbsIndexArray.includes(k)", filteredVerbsIndexArray.includes(k))
-    console.log("obj", data.data[k]);
-    console.log("k", k);
-    console.log("indexArray", indexArray)
     indexArray.push(k);
 
     displayVerb(data, k);

@@ -100,18 +100,54 @@ export async function launchApp(data, phraseType) {
   userId = result.userId;
   stats = result.stats;
 
-  // A "lives" system for non-authenticated users
-  const livesString = window.localStorage.getItem("lives");
   let lives;
+  let streak;
 
-  if(livesString) {
-    lives = parseInt(livesString);
-  } else {
-    lives = 7;
-  }
+  // A "lives" system for non-authenticated users
+  if(!userId) {
+    
+     // Retrieve lives from localStorage or set to default value
 
-  const livesPElement = document.querySelector(".lives p");
-  livesPElement.innerHTML = `${lives}`;
+    const livesString = localStorage.getItem("lives");
+    lives = livesString ? parseInt(livesString) : 7;
+
+    const livesPElement = document.querySelector(".lives p");
+    if(livesPElement) {
+      livesPElement.textContent = lives;
+    } else {
+      console.error("Lives element not found");
+    }
+    
+     // Retrieve streak from localStorage or set to default value
+    const streakString = localStorage.getItem("streak");
+
+    streak = streakString ? parseInt(streakString) : 0;
+
+    const streakEl = document.querySelector(".streak p");
+    if(streakEl) {
+      streakEl.textContent = streak;
+    } else {
+      console.error("Streak element not found");
+    }
+   
+
+    } else {
+     
+       // Retrieve streak from stats array or set to default value
+      const streakString = stats[stats.length - 1]?.streak;
+        
+      streak = streakString ? parseInt(streakString) : 0;
+
+      const streakEl = document.querySelector(".streak p");
+      if(streakEl) {
+        streakEl.textContent = streak;
+      } else {
+        console.error("Streak element not found");
+      }
+      
+
+    }
+  
   
 
   // Initializing the array box1 if there is no previous history (all the phrases go to box1)
@@ -161,6 +197,9 @@ export async function launchApp(data, phraseType) {
   const nextBtn = document.getElementById("next-btn");
   const finishBtn = document.getElementById("finish-btn");
 
+  const accountBtn = document.querySelector(".menu-element.account");
+   console.log("accountBtn", accountBtn)
+
   submitBtn.addEventListener("click", ()=> {
     
     let result = checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, lives });
@@ -179,19 +218,32 @@ export async function launchApp(data, phraseType) {
         inputArea.style.color = "black";
         k = displayNext({data, indexArray, k, score, phraseStats, phraseType});
         phraseCount++;
+        localStorage.setItem("lives", lives);
   })
 
 
   finishBtn.addEventListener("click", ()=> {
     infoPopupSection.style.display = "none";
       conjugSection.style.display = "none";
+      const statsContainer = document.querySelector(".stats-container");
+    
 
-      let appLastUseDate;
-      let appLastUseTime;
+      if(accountBtn) {
+        accountBtn.style.display = "none";
+      }
+
+      if(statsContainer) {
+        statsContainer.style.display = "none";
+      }
+  
+      
+
+      let streakLastChangeTime;
       let timeDifferenceH;
       let streak; 
       
-      const currenttimestamp = new Date().getTime();
+      const streakEl = document.querySelector(".streak p");
+      const currenttimestamp = Date.now();
 
       
 
@@ -199,21 +251,44 @@ export async function launchApp(data, phraseType) {
 
       if (userId) {
 
-        const dateDb = new Date(stats[stats.length - 1]?.timestamp);
-        let streak = stats[stats.length - 1]?.streak || 1;
-        appLastUseTime = dateDb.getTime();
+        const dateDb = stats[stats.length - 1].timestamp;
+
+        const streakString = stats[stats.length - 1].streak;
+        
+        // Retreieve streak from DB or assign 0
+        streak = streakString ? parseInt(streakString) : 0;
+
+       
 
         if(dateDb) {
-          timeDifferenceH = (currenttimestamp - appLastUseTime)/1000/60/60;
-          if(timeDifferenceH < 24) {
-         // no change withing 24 hours
+          streakLastChangeTime = parseInt(dateDb);
+          console.log("User last time app use", streakLastChangeTime);
+
+          timeDifferenceH = Math.floor((currenttimestamp - streakLastChangeTime)/1000/60/60);
+          if(timeDifferenceH < 16) {
+         // no change withing 16 hours
+         /*if(streak === 0) {
+          streak = 1;
+          streakEl.textContent = streak;
+          stats[stats.length - 1]?.timestamp = currenttimestamp;
+          stats[stats.length - 1]?.streak = streak;
+         }*/
           } else if(timeDifferenceH < 48) {
             streak++; // streak increases
-            }  
-          
-          else {
+            streakEl.textContent = streak;
+            stats[stats.length - 1].timestamp = currenttimestamp;
+            stats[stats.length - 1].streak = streak;
+            }  else {
           streak = 1;
+          streakEl.textContent = streak;
+          stats[stats.length - 1].timestamp = currenttimestamp;
+          stats[stats.length - 1].streak = streak;
           }
+        } else {
+          streak = 1;
+          streakEl.textContent = streak;
+          stats[stats.length - 1].timestamp = currenttimestamp;
+          stats[stats.length - 1].streak = streak;
         }
         
 
@@ -224,32 +299,47 @@ export async function launchApp(data, phraseType) {
         addStatsToDb(userId, database, stats, phraseStats, streak);
       } else {
         
-        streak = localStorage.getItem("streak") || 1;
-        const storedTimeStamp = localStorage.getItem("appLastUseTime");
+        streak = localStorage.getItem("streak") || 0;
+        const storedTimeStamp = localStorage.getItem("streakLastChangeTime");
         
         if(storedTimeStamp) {
-          appLastUseDate = new Date(parseInt(storedTimeStamp));
-          appLastUseTime = appLastUseDate.getTime();
+         
+          streakLastChangeTime = parseInt(storedTimeStamp);
 
-          //const lastUseDate = new Date(appLastUseTime);
-          timeDifferenceH = (currenttimestamp - appLastUseTime)/1000/60/60;
-          if(timeDifferenceH < 24) {
-          streak++;
-          } else {
+        
+          timeDifferenceH = Math.floor((currenttimestamp - streakLastChangeTime)/1000/60/60);
+          if(timeDifferenceH < 16) {
+            // no change withing 16 hours
+            
+             } else if(timeDifferenceH < 48) {
+              streak++; // streak increases
+              streakEl.textContent = streak;
+              localStorage.setItem("streakLastChangeTime", currenttimestamp.toString());
+              localStorage.setItem("streak", streak);
+               }  
+             
+             else {
+            streak = 1;
+            streakEl.textContent = streak;
+            localStorage.setItem("streakLastChangeTime", currenttimestamp.toString());
+            localStorage.setItem("streak", streak);
+             }
+        } else {
           streak = 1;
-          }
-        } 
+          streakEl.textContent = streak;
+          localStorage.setItem("streakLastChangeTime", currenttimestamp.toString());
+          localStorage.setItem("streak", streak);
+        }
 
         console.log("timeDifferenceH", timeDifferenceH);
         console.log("streak", streak);
 
 
         localStorage.setItem("lives", lives);
-        localStorage.setItem("appLastUseTime", currenttimestamp.toString());
-        localStorage.setItem("streak", streak);
         console.log("User is signed out");
       }
 
+      localStorage.setItem("appLastUseTime", currenttimestamp.toString());
       showResultPage(score, phraseStats, stats, userId);
   })
 

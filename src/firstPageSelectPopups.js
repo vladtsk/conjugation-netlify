@@ -9,18 +9,44 @@ export function buildTenseSelectPopup(userId) {
     container.classList.add("tenseSelectPopupContainer");
     container.style.display = "none";
   
-    
+    const currentTenseEl = document.querySelector(".currentTense");
+    const currentTense = currentTenseEl.textContent;
+
+    if(currentTense === "present (le présent de l'indicatif)") {
       createPopupOption("present", "present (le présent de l'indicatif)", "fa-solid", "fa-circle", "radio-present");
-      createPopupOption("pastImp", "imperfect past (l'imparfait)", "fa-regular", "fa-circle", "radio-pastimp");
-      //createPopupOption("pastComp", "past (le passé composé)", "fa-regular", "fa-circle", "radio-pastcomp");
-  
-      if(userId) {
-      //createPopupOption("pastImp", "imperfect past (l'imparfait)", "fa-regular", "fa-circle", "radio-pastimp");
-      createPopupOption("pastComp", "past (le passé composé)", "fa-regular", "fa-circle", "radio-pastcomp");
-      createPopupOption("future", "future (le futur simple)", "fa-regular", "fa-circle", "radio-future");
-      createPopupOption("subjunctive", "present subjunctive (le subjonctif présent)", "fa-regular", "fa-circle", "radio-pastcomp");
     } else {
-      //createPopupOption("pastImp", "imperfect past (l'imparfait)", "fa-solid", "fa-lock", "lock-pastimp");
+      createPopupOption("present", "present (le présent de l'indicatif)", "fa-regular", "fa-circle", "radio-present");
+    }
+    
+    if(currentTense === "imperfect past (l'imparfait)") {
+      createPopupOption("pastImp", "imperfect past (l'imparfait)", "fa-solid", "fa-circle", "radio-pastimp");
+    } else {
+      createPopupOption("pastImp", "imperfect past (l'imparfait)", "fa-regular", "fa-circle", "radio-pastimp");
+    }
+    
+    
+  
+    if(userId) {
+      if(currentTense === "past (le passé composé)") {
+        createPopupOption("pastComp", "past (le passé composé)", "fa-solid", "fa-circle", "radio-pastcomp");
+      } else {
+        createPopupOption("pastComp", "past (le passé composé)", "fa-regular", "fa-circle", "radio-pastcomp");
+      }
+      
+
+      if(currentTense === "future (le futur simple)") {
+        createPopupOption("future", "future (le futur simple)", "fa-solid", "fa-circle", "radio-future");
+      } else {
+        createPopupOption("future", "future (le futur simple)", "fa-regular", "fa-circle", "radio-future");
+      }
+      
+      if(currentTense=== "present subjunctive (le subjonctif présent)") {
+        createPopupOption("subjunctive", "present subjunctive (le subjonctif présent)", "fa-solid", "fa-circle", "radio-pastcomp");
+      } else {
+        createPopupOption("subjunctive", "present subjunctive (le subjonctif présent)", "fa-regular", "fa-circle", "radio-pastcomp");
+      }
+      
+    } else {
       createPopupOption("pastComp", "past (le passé composé)", "fa-solid", "fa-lock", "lock-pastcomp");
       createPopupOption("future", "future (le futur simple)", "fa-solid", "fa-lock", "lock-future");
       createPopupOption("subjunctive", "present subjunctive (le subjonctif présent)", "fa-solid", "fa-lock", "lock-subjunctive");

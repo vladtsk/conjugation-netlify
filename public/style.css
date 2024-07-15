@@ -46,6 +46,7 @@ header {
   color: var(--color-primary);
   display: grid;
   grid-template-columns: 1.5fr 4fr 1.5fr;
+  align-items: center;
 
   font-family: "Poppins", sans-serif;
 
@@ -108,18 +109,30 @@ nav .fa-circle-question, .fa-circle-user,
   font-size: 0.9em;
 }
 
-/*nav form {
-  background-color: none;
-}*/
 
-.lives-container {
+/*
+.menu-stats {
   display: flex;
   justify-content: center;
+}
+*/
+.stats-container {
+  display: none;
+  justify-content: center;
+  gap: 18px;
+
+  width: fit-content;
+  margin: auto;
+  padding-inline: 12px;
+  padding-block: 4px;
+  border: solid 1px gray;
+  border-radius: 8px;
+
   
 }
 
-.lives {
-  display: none;
+.lives, .streak {
+  display: flex;
   font-size: 22px;
   align-items: center;
   justify-content: center;
@@ -454,7 +467,7 @@ select {
 
   width: fit-content;
   padding-inline: 28px;
-  padding-block: 4px;
+  padding-block: 8px;
 
   border-radius: 6px;
   border: solid black 1px;
@@ -470,6 +483,7 @@ select {
 .easy, .medium {
   border-bottom: solid gray 1px;
   margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 
@@ -1309,7 +1323,6 @@ button[disabled] {
   header {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    /*padding-right: 25px;*/
   }
 
   nav {
@@ -1476,7 +1489,7 @@ button[disabled] {
   .mobileMenu {
     display: flex;
     justify-content: space-between;
-    margin-inline: 20px;
+    
   }
 
   .practice,

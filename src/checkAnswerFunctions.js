@@ -69,5 +69,11 @@ export function handleIncorrectAnswer(phraseDiv, fullPhrase, correctAnswer, live
       msgArea.innerText = `Incorrect. The correct answer is: "${correctAnswer}"`;
 
       learnMoreSection.style.display = "block";
-      livesPElement.innerHTML = `${lives}`;
-}
+
+      if(livesPElement) {
+        livesPElement.textContent = lives;
+      } else {
+        console.error("Lives element not found in HandleIncorrectAnswer");
+      }
+  }
+      

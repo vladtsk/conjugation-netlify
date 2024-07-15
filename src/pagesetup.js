@@ -159,8 +159,6 @@ export function buildPageStructure(data) {
   nextSection.appendChild(nextBtn);
 
   // Finish section
-  let oldFinish = document.querySelector(".finish-section");
-  console.log(oldFinish)
 
   const finishSection = document.createElement("div");
   finishSection.classList.add("finish-section");
@@ -210,7 +208,7 @@ export function showResultPage(score, phraseStats, stats, userId) {
   );
   const footer = document.querySelector("footer");
   const nav = document.querySelector("nav");
-  const livesEl = document.querySelector(".lives");
+  //const livesEl = document.querySelector(".lives");
 
   const resultDiv = document.createElement("div");
   resultDiv.classList.add("result");
@@ -253,7 +251,7 @@ export function showResultPage(score, phraseStats, stats, userId) {
   }
 
   nav.style.display = "flex";
-  livesEl.style.display = "none";
+  //livesEl.style.display = "none";
 
   let summary;
   let chart = document.querySelector(".chart");
@@ -274,7 +272,7 @@ export function showResultPage(score, phraseStats, stats, userId) {
     }
 
     let summaryCloseBtn = document.querySelector(".summaryCloseBtn");
-    console.log(summaryCloseBtn);
+   
     //Close summary
     if (summaryCloseBtn) {
       summaryCloseBtn.addEventListener("click", () => {
@@ -297,6 +295,13 @@ export function showResultPage(score, phraseStats, stats, userId) {
 
   restartBtn.addEventListener("click", () => {
     mainSection.innerHTML = "";
+    const statsContainer = document.querySelector(".stats-container");
+
+    const accountBtn = document.querySelector(".menu-element.account");
+    if(accountBtn) {
+      accountBtn.style.display = "flex";
+    }
+    
 
     if (summary) {
       main.removeChild(summary);
@@ -311,6 +316,7 @@ export function showResultPage(score, phraseStats, stats, userId) {
     sidebarContainer.style.display = "flex";
     sidebarTabletContainer.style.display = "flex";
     footer.style.display = "block";
+    statsContainer.style.display = "none";
     launchFirstPage();
     selectPracticeBtn();
   

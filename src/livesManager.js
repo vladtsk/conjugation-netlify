@@ -1,8 +1,9 @@
 // Managing the 'lives' for non-authenticated users: a systems that sets a limit of sessions a user without a subscrption can do on the app
 
 export function checkTimeDifference() {
-    const now = Date.now();
-    const lastUseTimeSting = window.localStorage.getItem("lastUseTime");
+    
+    const lastUseTimeSting = localStorage.getItem("appLastUseTime");
+
 
     let timeDifferenceMnts; // the time difference between the last time the user used the app and now (in minutes)
     

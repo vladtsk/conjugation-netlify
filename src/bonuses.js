@@ -16,16 +16,14 @@ export function generateBonusPage(userId, subStatus) {
     
     menu.appendChild(menuTitle);
     
-    /*const bonus1Link = document.createElement("div");
-    bonus1Link.classList.add("bonus1");
-    bonus1Link.innerHTML = `<i class="fa-solid fa-book"></i>Bonus 1: Conjugation guide`;
-  
-    
-    menu.appendChild(bonus1Link);*/
+    //Retrive streak from Local storage
 
+    const streak = localStorage.getItem("streak");
+    console.log("Bonus section, streak: ", streak)
+
+    //Generate bonus 1
 
     const bonus1Container = document.createElement("div");
-    //bonus1Container.classList.add("present-container");
   
     menu.appendChild(bonus1Container);
   
@@ -35,7 +33,6 @@ export function generateBonusPage(userId, subStatus) {
     bonus1Container.appendChild(bonus1Menu);
   
     const bonus1MenuLine = document.createElement("div");
-    //bonus1MenuLine.classList.add("present-line");
     bonus1Menu.appendChild(bonus1MenuLine);
   
     bonus1MenuLine.innerHTML = `<i class="fa-solid fa-book"></i>Bonus 1: Conjugation guide`;
@@ -55,9 +52,6 @@ export function generateBonusPage(userId, subStatus) {
 
     const bonus1IntroLine = document.createElement("div");
     
-    const streak = localStorage.getItem("streak");
-    console.log("Bonus section, streak: ", streak)
-    
 
     if((userId && subStatus === "active") || streak >= 3) {
       bonus1IntroLine.innerHTML = `<i class="fa-solid fa-circle-chevron-right"></i>
@@ -71,73 +65,68 @@ export function generateBonusPage(userId, subStatus) {
       bonus1Intro.appendChild(bonus1Btn);
     } else {
       bonus1IntroLine.innerHTML = `<i
-      class="fa-solid fa-lock"></i>Get a 3-day streak or become Premium to access it now`;
+      class="fa-solid fa-lock"></i>Achieve a 3-day streak or become Premium to access it now`;
       bonus1Intro.appendChild(bonus1IntroLine);
     }
     
     
     bonus1SubContainer.appendChild(bonus1Intro);
 
+    
+    // generate bonus 2
+    const bonus2Container = document.createElement("div");
+  
+    menu.appendChild(bonus2Container);
+  
+    const bonus2Menu = document.createElement("div");
+    bonus2Menu.classList.add("bonus2Menu");
+  
+    bonus2Container.appendChild(bonus2Menu);
+  
+    const bonus2MenuLine = document.createElement("div");
+    bonus2Menu.appendChild(bonus2MenuLine);
+  
+    bonus2MenuLine.innerHTML = `<i class='fa-solid fa-chart-line'></i>Bonus 2: "Top 50 most used French verbs"`;
+  
+    const plusIcon2 = document.createElement("i");
+    plusIcon2.classList.add("fa-solid", "fa-square-plus");
+  
+    bonus2Menu.appendChild(plusIcon2);
+  
+    const bonus2SubContainer = document.createElement("div");
+    bonus2SubContainer.classList.add("bonus-subcontainer", "bonus2-subcontainer");
+    bonus2SubContainer.style.display = "none";
+    bonus2Container.appendChild(bonus2SubContainer);
+  
+    const bonus2Intro = document.createElement("div");
+    bonus2Intro.classList.add("bonus-intro");
+
+    const bonus2IntroLine = document.createElement("div");
+    
+
+    if((userId && subStatus === "active") || streak >= 7) {
+      bonus2IntroLine.innerHTML = `<i class="fa-solid fa-circle-chevron-right"></i>
+      Your bonus is ready now!`;
+
+      const bonus2Btn = document.createElement("div");
+      bonus2Btn.classList.add("bonus2Btn");
+      bonus2Btn.textContent = "download";
+
+      bonus2Intro.appendChild(bonus2IntroLine);
+      bonus2Intro.appendChild(bonus2Btn);
+    } else {
+      bonus2IntroLine.innerHTML = `<i
+      class="fa-solid fa-lock"></i>Achieve a 7-day streak or become Premium to access it now`;
+      bonus2Intro.appendChild(bonus2IntroLine);
+    }
+    
+    
+    bonus2SubContainer.appendChild(bonus2Intro); 
+    
+    
+    
+    
     manageBonusMenuClicks(userId, subStatus);
     
     
-
-    /*
-    if(userId && subStatus === "active") {
-    
-        presentSubGroup3.innerHTML = `<i class="fa-solid fa-circle-chevron-right"></i>Group 3`;
-      } else { 
-        presentSubGroup3.innerHTML = `<i class="fa-solid fa-lock"></i>Group 3`;
-       } 
-
-  
-    
-  
-    const presentSubGroup1 = document.createElement("div");
-    presentSubGroup1.classList.add("present-submenu", "present-group1");
-    presentSubGroup1.innerHTML = `<i
-    class="fa-solid fa-circle-chevron-right"></i>Group 1`;
-  
-    const presentSubGroup2 = document.createElement("div");
-    presentSubGroup2.classList.add("present-submenu", "present-group2");
-    presentSubGroup2.innerHTML = `<i
-    class="fa-solid fa-circle-chevron-right"></i>Group 2`;
-  
-    const presentSubGroup3 = document.createElement("div");
-    presentSubGroup3.classList.add("present-submenu", "present-group3");
-    
-    if(userId && subStatus === "active") {
-    
-        presentSubGroup3.innerHTML = `<i class="fa-solid fa-circle-chevron-right"></i>Group 3`;
-      } else { 
-        presentSubGroup3.innerHTML = `<i class="fa-solid fa-lock"></i>Group 3`;
-       }
-    // <p class="premium">premium</p></div>
-  
-    const presentSubIrregular = document.createElement("div");
-    presentSubIrregular.classList.add("present-submenu", "present-irregular");
-    
-    if(userId && subStatus === "active") {
-      presentSubIrregular.innerHTML = `<i class="fa-solid fa-circle-chevron-right"></i>Irregular Verbs`;
-    } else {
-      presentSubIrregular.innerHTML = `<i class="fa-solid fa-lock"></i>Irregular Verbs`;
-    }
-  
-    presentSubContainer.appendChild(presentSubIntro);
-    presentSubContainer.appendChild(presentSubGroup1);
-    presentSubContainer.appendChild(presentSubGroup2);
-    presentSubContainer.appendChild(presentSubGroup3);
-    presentSubContainer.appendChild(presentSubIrregular);
-  
-    const imperfectLink = document.createElement("div");
-    imperfectLink.classList.add("imperfect-menu");
-  
-    if(userId && subStatus === "active") {
-      imperfectLink.innerHTML = `<i class='fa-solid fa-house'></i>The imperfect past tense`;
-    } else {
-      imperfectLink.innerHTML = `<i class='fa-solid fa-lock'></i>The imperfect past tense`;
-    }
-  
-    menu.appendChild(imperfectLink);
-*/
 }

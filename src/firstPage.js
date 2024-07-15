@@ -46,9 +46,10 @@ export async function buildFirstPage(userId) {
     selectDiv.appendChild(currentTense);
   
     const caretIcon = document.createElement("i");
+    const storedTense = localStorage.getItem("selectedTense");
     caretIcon.classList.add("fa-solid", "fa-caret-down");
     selectDiv.appendChild(caretIcon);
-    currentTense.textContent = localStorage.getItem("selectedTense") || "present (le présent de l'indicatif)";
+    currentTense.textContent = userId && storedTense ? storedTense : "present (le présent de l'indicatif)";
   
   
     // The "level of difficulty (type of phrases)" section

@@ -76,12 +76,6 @@ export function filterVerbs(data, phraseType, filteredVerbsIndexArray) {
         filteredVerbsIndexArray.length = 0;
     }
 
-
-
-
-
-
-    console.log(filteredVerbs, filteredVerbsIndexArray)
 }
 
 

@@ -45,14 +45,14 @@ export async function launchFirstPage() {
 
   const { subStatus, userId } = await getSubscriptionStatus();
 
-  let livesString = window.localStorage.getItem("lives");
+  let livesString = localStorage.getItem("lives");
   let lives;
   
   if(livesString) {
     lives = parseInt(livesString);
   } else {
     lives = 7;
-    window.localStorage.setItem("lives", 7);
+    localStorage.setItem("lives", 7);
   }
 
   let timeDifferenceMnts = checkTimeDifference(); // the time difference between the last time the user used the app and now (in minutes)
@@ -69,7 +69,7 @@ export async function launchFirstPage() {
     await buildFirstPage(userId);
   } else if (lives === 0 && timeDifferenceMnts >= 60) {
     lives = 7;
-    window.localStorage.setItem("lives", 7);
+    localStorage.setItem("lives", 7);
     await buildFirstPage(userId);
   } else {
     showNoMoreLivesMessage(); 
@@ -103,6 +103,7 @@ export async function launchFirstPage() {
   const footer = document.querySelector("footer");
   const nav = document.querySelector("nav");
   const livesEl = document.querySelector(".lives");
+  const statsContainer = document.querySelector(".stats-container");
 
   // Adding an event listener on the start button
  
@@ -131,10 +132,14 @@ export async function launchFirstPage() {
       sidebarContainer.style.display = "none";
       sidebarTabletContainer.style.display = "none";
       footer.style.display = "none";
-      if(!userId && livesEl) {
+      if(!userId) {
         livesEl.style.display = "flex";
         livesEl.style.color = "#2b2d42";
+      } else {
+        livesEl.style.display = "none";
       }
+
+      statsContainer.style.display = "flex";
     });
   }
 
