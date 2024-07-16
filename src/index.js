@@ -27,6 +27,8 @@ import { checkAuthState, handleAuthClicks, handleLogInLogOutClicks } from "./aut
 
 import { checkAnswer } from "./checkAnswer.js";
 
+//import { playEnd } from "./playAudio.js";
+
 import { generateRulesPopupSection, generateBlurContainer } from "./rulesPopup.js";
 
 import { handleCheckoutClick } from "./subscribe.js";
@@ -218,7 +220,10 @@ export async function launchApp(data, phraseType) {
         inputArea.style.color = "black";
         k = displayNext({data, indexArray, k, score, phraseStats, phraseType});
         phraseCount++;
-        localStorage.setItem("lives", lives);
+        if(!userId) {
+          localStorage.setItem("lives", lives);
+        }
+        
   })
 
 
@@ -226,7 +231,8 @@ export async function launchApp(data, phraseType) {
     infoPopupSection.style.display = "none";
       conjugSection.style.display = "none";
       const statsContainer = document.querySelector(".stats-container");
-    
+
+      //playEnd();
 
       if(accountBtn) {
         accountBtn.style.display = "none";
@@ -239,19 +245,20 @@ export async function launchApp(data, phraseType) {
       
 
       let streakLastChangeTime;
-      let timeDifferenceH;
+   
       let streak; 
       
       const streakEl = document.querySelector(".streak p");
-      const currenttimestamp = Date.now();
-
       
+      const today = new Date();
+
+      const currenttimestamp = Date.now();
 
       // Adding data to the database and updating the statistics
 
       if (userId) {
 
-        const dateDb = stats[stats.length - 1].timestamp;
+        const timestampDb = stats[stats.length - 1].timestamp; // new dateDb
 
         const streakString = stats[stats.length - 1].streak;
         
@@ -260,19 +267,43 @@ export async function launchApp(data, phraseType) {
 
        
 
-        if(dateDb) {
-          streakLastChangeTime = parseInt(dateDb);
-          console.log("User last time app use", streakLastChangeTime);
+        if(timestampDb) {
+          streakLastChangeTime = parseInt(timestampDb);
 
-          timeDifferenceH = Math.floor((currenttimestamp - streakLastChangeTime)/1000/60/60);
-          if(timeDifferenceH < 16) {
-         // no change withing 16 hours
-         /*if(streak === 0) {
+          const streakLastChangeDate = new Date(streakLastChangeTime);
+
+
+          console.log("streakLastChangeDate", streakLastChangeDate);
+
+          //timeDifferenceH = Math.floor((currenttimestamp - streakLastChangeTime)/1000/60/60);
+          
+
+          if(streakLastChangeDate.getDate() === today.getDate() &&
+          streakLastChangeDate.getMonth() === today.getMonth() &&
+          streakLastChangeDate.getFullYear() === today.getFullYear()
+        ) {
+          // no change if the date is the same
+          console.log("same date");
+        } else if(today.getDate() - streakLastChangeDate.getDate() < 2  &&
+          streakLastChangeDate.getMonth() === today.getMonth() &&
+          streakLastChangeDate.getFullYear() === today.getFullYear()) {
+          streak++; // streak increases
+          streakEl.textContent = streak;
+          stats[stats.length - 1].streak = streak;
+
+          console.log("1 day difference")
+        } else {
           streak = 1;
           streakEl.textContent = streak;
-          stats[stats.length - 1]?.timestamp = currenttimestamp;
-          stats[stats.length - 1]?.streak = streak;
-         }*/
+          stats[stats.length - 1].streak = streak;
+
+          console.log("more than 1 day difference")
+        }
+
+
+          /*if(timeDifferenceH < 16) {
+         // no change withing 16 hours
+         
           } else if(timeDifferenceH < 48) {
             streak++; // streak increases
             streakEl.textContent = streak;
@@ -284,30 +315,58 @@ export async function launchApp(data, phraseType) {
           stats[stats.length - 1].timestamp = currenttimestamp;
           stats[stats.length - 1].streak = streak;
           }
+*/          
+          
+
+
+
         } else {
           streak = 1;
           streakEl.textContent = streak;
-          stats[stats.length - 1].timestamp = currenttimestamp;
           stats[stats.length - 1].streak = streak;
         }
         
-
-          console.log("User: timeDifferenceH", timeDifferenceH);
           console.log("User: streak", streak);
 
         addBoxToDb(data, boxes, userId, database);
         addStatsToDb(userId, database, stats, phraseStats, streak);
+      
       } else {
         
+
         streak = localStorage.getItem("streak") || 0;
         const storedTimeStamp = localStorage.getItem("streakLastChangeTime");
         
         if(storedTimeStamp) {
          
           streakLastChangeTime = parseInt(storedTimeStamp);
-
+          const streakLastChangeDate = new Date(streakLastChangeTime);
         
-          timeDifferenceH = Math.floor((currenttimestamp - streakLastChangeTime)/1000/60/60);
+          if(streakLastChangeDate.getDate() === today.getDate() &&
+          streakLastChangeDate.getMonth() === today.getMonth() &&
+          streakLastChangeDate.getFullYear() === today.getFullYear()
+        ) {
+          // no change if the date is the same
+          console.log("same date");
+        } else if(today.getDate() - streakLastChangeDate.getDate() < 2  &&
+          streakLastChangeDate.getMonth() === today.getMonth() &&
+          streakLastChangeDate.getFullYear() === today.getFullYear()) {
+            streak++; // streak increases
+            streakEl.textContent = streak;
+            localStorage.setItem("streakLastChangeTime", currenttimestamp.toString());
+            localStorage.setItem("streak", streak);
+
+          console.log("1 day difference")
+        } else {
+          streak = 1;
+          streakEl.textContent = streak;
+          localStorage.setItem("streakLastChangeTime", currenttimestamp.toString());
+          localStorage.setItem("streak", streak);
+
+          console.log("more than 1 day difference")
+        }
+
+          /*
           if(timeDifferenceH < 16) {
             // no change withing 16 hours
             
@@ -324,6 +383,8 @@ export async function launchApp(data, phraseType) {
             localStorage.setItem("streakLastChangeTime", currenttimestamp.toString());
             localStorage.setItem("streak", streak);
              }
+             */
+
         } else {
           streak = 1;
           streakEl.textContent = streak;
@@ -331,7 +392,6 @@ export async function launchApp(data, phraseType) {
           localStorage.setItem("streak", streak);
         }
 
-        console.log("timeDifferenceH", timeDifferenceH);
         console.log("streak", streak);
 
 
@@ -340,7 +400,7 @@ export async function launchApp(data, phraseType) {
       }
 
       localStorage.setItem("appLastUseTime", currenttimestamp.toString());
-      showResultPage(score, phraseStats, stats, userId);
+      showResultPage({score, phraseStats, stats, userId, streak});
   })
 
 

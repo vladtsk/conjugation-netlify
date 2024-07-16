@@ -974,15 +974,31 @@ button[disabled] {
   gap: 10px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   font-size: 20px;
 }
+
 
 /* Styling the trophy icon */
 .fa-trophy {
   color: var(--color-secondary);
-  display: block;
+  display: inline-block;
 }
+
+.streak-section {
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.streak-section .fa-fire {
+  color: var(--color-secondary);
+  display: inline-block;
+  margin-left: 6px;
+  margin-right: 3px;
+}
+
 
 .fa-volume-low {
   color: var(--color-primary);

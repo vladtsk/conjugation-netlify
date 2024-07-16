@@ -184,7 +184,7 @@ export function setSpecialBtns() {
   });
 }
 
-export function showResultPage(score, phraseStats, stats, userId) {
+export function showResultPage({score, phraseStats, stats, userId, streak}) {
   const main = document.querySelector("main");
   const mainSection = document.querySelector(".mainSection");
   mainSection.innerHTML = "";
@@ -228,8 +228,16 @@ export function showResultPage(score, phraseStats, stats, userId) {
   scoreDiv.appendChild(trophyIcon);
 
   const scoreMsg = document.createElement("p");
-  scoreMsg.innerText = `Your score is: ${score}/${phraseStats.length}`;
+  scoreMsg.innerHTML = `Your score: ${score}/${phraseStats.length}`;
   scoreDiv.appendChild(scoreMsg);
+
+
+  const streakDiv = document.createElement("div");
+  streakDiv.classList.add("streak-section");
+  mainSection.appendChild(streakDiv);
+
+  streakDiv.innerHTML = `Your streak: <i class="fa-solid fa-fire"></i> ${streak}`;
+  
 
   const restartSection = document.createElement("div");
   restartSection.classList.add("restart");

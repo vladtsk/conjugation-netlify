@@ -33,7 +33,10 @@ export function addStatsToDb(userId, database, stats, phraseStats, streak) {
   // Checking if the last object's date is the same as today
   const dateDb = new Date(stats[stats.length - 1]?.timestamp);
 
-  if (dateDb.getDate() === today.getDate()) {
+  if (dateDb.getDate() === today.getDate() &&
+  dateDb.getMonth() === today.getMonth() &&
+  dateDb.getFullYear() === today.getFullYear()) {
+    console.log("the dates are equal")
     stats[stats.length - 1].nbOfPhrPractised += nbPhrases;
     stats[stats.length - 1].nbOfCorrectPhr += nbCorrect;
   } else {

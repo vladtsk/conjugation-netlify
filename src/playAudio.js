@@ -19,3 +19,9 @@ export function playIncorrect() {
   const incorrectSound = new Audio("src/incorrect.mp3");
   incorrectSound.play();
 }
+
+//End of exercise sound effect
+export function playEnd() {
+  const endSound = new Audio("src/positive-notification.mp3");
+  endSound.play();
+}

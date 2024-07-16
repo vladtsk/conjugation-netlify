@@ -47,17 +47,16 @@ export async function launchFirstPage() {
 
   let livesString = localStorage.getItem("lives");
   let lives;
-  
-  if(livesString) {
+
+  if(livesString && livesString !== "undefined") {
     lives = parseInt(livesString);
+
   } else {
     lives = 7;
     localStorage.setItem("lives", 7);
   }
 
   let timeDifferenceMnts = checkTimeDifference(); // the time difference between the last time the user used the app and now (in minutes)
-
- 
 
   if(userId) {
     if(subStatus === "active") {
@@ -68,10 +67,12 @@ export async function launchFirstPage() {
   } else if(lives > 0) {
     await buildFirstPage(userId);
   } else if (lives === 0 && timeDifferenceMnts >= 60) {
+    console.log("timeDifferenceMnts >= 60")
     lives = 7;
     localStorage.setItem("lives", 7);
     await buildFirstPage(userId);
   } else {
+    console.log("timeDifferenceMnts else")
     showNoMoreLivesMessage(); 
   }
 

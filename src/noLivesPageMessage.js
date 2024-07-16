@@ -16,13 +16,13 @@ export function showNoMoreLivesMessage() {
     contentArea.appendChild(noLivesDiv);
 
     const noLivesMsg = document.createElement("h1");
-    noLivesMsg.innerHTML = "<i class='fa-solid fa-hourglass-end'></i> Out of lives!";
+    noLivesMsg.innerHTML = "<i class='fa-solid fa-heart-crack'></i> Out of hearts!";
     noLivesDiv.appendChild(noLivesMsg);
 
     const noLivesExpl = document.createElement("p");
     noLivesExpl.classList.add("noSubExpl1");
     noLivesExpl.innerText =
-        "You have no more lives left! Come back in an hour to continue, or get a premium subscription to use the app with no limits.";
+        "You have no more hearts left! Come back in an hour to continue, or get a premium subscription to use the app with no limits.";
     noLivesDiv.appendChild(noLivesExpl);
 
     const subscribeSection = document.createElement("div");
