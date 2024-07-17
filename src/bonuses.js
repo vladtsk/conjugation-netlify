@@ -58,11 +58,28 @@ export function generateBonusPage(userId, subStatus) {
       Your bonus is ready now!`;
 
       const bonus1Btn = document.createElement("div");
-      bonus1Btn.classList.add("bonus1Btn");
-      bonus1Btn.textContent = "download";
+      bonus1Btn.classList.add("bonus1Btn"); 
+      bonus1Btn.textContent = "download"
 
       bonus1Intro.appendChild(bonus1IntroLine);
       bonus1Intro.appendChild(bonus1Btn);
+
+      bonus1Btn.addEventListener("click", (event)=>{
+        event.preventDefault();
+
+        const a = document.createElement("a");
+        a.href = "../public/conjugation-guide.pdf";
+        a.setAttribute("download", "");
+
+        document.body.appendChild(a);
+
+        a.click();
+
+        document.body.removeChild(a);
+
+        //window.open("../public/frcnjgd.pdf")
+      })
+
     } else {
       bonus1IntroLine.innerHTML = `<i
       class="fa-solid fa-lock"></i>Achieve a 3-day streak or become Premium to access it now`;
@@ -86,7 +103,7 @@ export function generateBonusPage(userId, subStatus) {
     const bonus2MenuLine = document.createElement("div");
     bonus2Menu.appendChild(bonus2MenuLine);
   
-    bonus2MenuLine.innerHTML = `<i class='fa-solid fa-chart-line'></i>Bonus 2: "Top 50 most used French verbs"`;
+    bonus2MenuLine.innerHTML = `<i class='fa-solid fa-chart-line'></i>Bonus 2: "15 of the most common French verbs."`;
   
     const plusIcon2 = document.createElement("i");
     plusIcon2.classList.add("fa-solid", "fa-square-plus");
@@ -114,6 +131,25 @@ export function generateBonusPage(userId, subStatus) {
 
       bonus2Intro.appendChild(bonus2IntroLine);
       bonus2Intro.appendChild(bonus2Btn);
+
+
+      bonus2Btn.addEventListener("click", (event)=>{
+        event.preventDefault();
+
+        const a = document.createElement("a");
+        a.href = "../public/15-verbs.pdf";
+        a.setAttribute("download", "");
+
+        document.body.appendChild(a);
+
+        a.click();
+
+        document.body.removeChild(a);
+
+       
+      })
+
+      
     } else {
       bonus2IntroLine.innerHTML = `<i
       class="fa-solid fa-lock"></i>Achieve a 7-day streak or become Premium to access it now`;
