@@ -4,24 +4,18 @@ export function handleStreakAuthUser(timestampDb, streak, stats) {
     const today = new Date();
     const streakEl = document.querySelector(".streak p");
 
+    let timeDiff;
+
     if(timestampDb) {
       const streakLastChangeTime = parseInt(timestampDb);
 
-      const streakLastChangeDate = new Date(streakLastChangeTime);
+      //const streakLastChangeDate = new Date(streakLastChangeTime);
+      timeDiff = today.getTime() - streakLastChangeTime;
 
-
-      console.log("streakLastChangeDate", streakLastChangeDate);
-      
-
-      if(streakLastChangeDate.getDate() === today.getDate() &&
-      streakLastChangeDate.getMonth() === today.getMonth() &&
-      streakLastChangeDate.getFullYear() === today.getFullYear()
-    ) {
+      if(timeDiff /(1000*60*60*24) < 1) {
       // no change if the date is the same
-      console.log("same date");
-    } else if(today.getDate() - streakLastChangeDate.getDate() < 2  &&
-      streakLastChangeDate.getMonth() === today.getMonth() &&
-      streakLastChangeDate.getFullYear() === today.getFullYear()) {
+      console.log("same date", "dayDiff: ", timeDiff /(1000*60*60*24));
+    } else if(timeDiff /(1000*60*60*24) < 2) {
       streak++; // streak increases
       streakEl.textContent = streak;
       stats[stats.length - 1].streak = streak;
@@ -58,21 +52,20 @@ export function handleStreakAuthUser(timestampDb, streak, stats) {
     const currenttimestamp = Date.now();
 
     const storedTimeStamp = localStorage.getItem("streakLastChangeTime");
+
+    let timeDiff;
         
         if(storedTimeStamp) {
          
           const streakLastChangeTime = parseInt(storedTimeStamp);
-          const streakLastChangeDate = new Date(streakLastChangeTime);
+          //const streakLastChangeDate = new Date(streakLastChangeTime);
+
+          timeDiff = today.getTime() - streakLastChangeTime;
         
-          if(streakLastChangeDate.getDate() === today.getDate() &&
-          streakLastChangeDate.getMonth() === today.getMonth() &&
-          streakLastChangeDate.getFullYear() === today.getFullYear()
-        ) {
+          if(timeDiff /(1000*60*60*24) < 1) {
           // no change if the date is the same
-          console.log("same date");
-        } else if(today.getDate() - streakLastChangeDate.getDate() < 2  &&
-          streakLastChangeDate.getMonth() === today.getMonth() &&
-          streakLastChangeDate.getFullYear() === today.getFullYear()) {
+          console.log("same date", "dayDiff: ", timeDiff /(1000*60*60*24));
+        } else if(timeDiff /(1000*60*60*24) < 2) {
             streak++; // streak increases
             streakEl.textContent = streak;
             localStorage.setItem("streakLastChangeTime", currenttimestamp.toString());

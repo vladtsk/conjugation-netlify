@@ -189,11 +189,10 @@ export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, l
       break;
 
     default:
-      console.log("userId, incorrect", userId)
-      console.log("incorrect, lives", lives);
+    
       if(!userId && lives && lives > 0) {
         lives--;
-        console.log("incorrect, lives --", lives)
+       
         if(lives === 0) {
          
           if(livesEl) {
@@ -203,7 +202,6 @@ export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, l
        
       }
       
-      console.log("incorrect, before HandleIncorrect", lives)
       handleIncorrectAnswer(phraseDiv, data.data[k].fullPhrase, data.data[k].answer, lives);
       
       if (userId) {

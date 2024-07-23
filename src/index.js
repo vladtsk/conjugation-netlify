@@ -112,10 +112,15 @@ export async function launchApp(data, phraseType) {
 
   let lives;
   let streak;
+  let timeDiff;
+
+  const today = new Date();
 
   // A "lives" system for non-authenticated users
   if(!userId) {
     
+    const storedTimeStamp = localStorage.getItem("streakLastChangeTime");
+
      // Retrieve lives from localStorage or set to default value
 
     const livesString = localStorage.getItem("lives");
@@ -133,6 +138,21 @@ export async function launchApp(data, phraseType) {
 
     streak = streakString ? parseInt(streakString) : 0;
 
+    // Check the last streak update date
+    if(storedTimeStamp) {
+         
+      const streakLastChangeTime = parseInt(storedTimeStamp);
+      //const streakLastChangeDate = new Date(streakLastChangeTime);
+
+      timeDiff = today.getTime() - streakLastChangeTime;
+
+      console.log("dayDiff", timeDiff/(1000*60*60*24));
+
+      if(timeDiff/(1000*60*60*24) >= 2 ) {
+        streak = 0;
+    }
+  }
+  
     const streakEl = document.querySelector(".streak p");
     if(streakEl) {
       streakEl.textContent = streak;
@@ -208,8 +228,7 @@ export async function launchApp(data, phraseType) {
   const finishBtn = document.getElementById("finish-btn");
 
   const accountBtn = document.querySelector(".menu-element.account");
-   console.log("accountBtn", accountBtn)
-
+  
   submitBtn.addEventListener("click", ()=> {
     
     let result = checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, lives, userId });

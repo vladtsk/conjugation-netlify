@@ -67,12 +67,12 @@ export async function launchFirstPage() {
   } else if(lives > 0) {
     await buildFirstPage(userId);
   } else if (lives === 0 && timeDifferenceMnts >= 60) {
-    console.log("timeDifferenceMnts >= 60")
+   
     lives = 7;
     localStorage.setItem("lives", 7);
     await buildFirstPage(userId);
   } else {
-    console.log("timeDifferenceMnts else")
+ 
     showNoMoreLivesMessage(); 
   }
 
