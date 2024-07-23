@@ -16,10 +16,14 @@ export function generateBonusPage(userId, subStatus) {
     
     menu.appendChild(menuTitle);
     
-    //Retrive streak from Local storage
+    //Retrive streak from Local storage if not authenticated
+    let streak;
 
-    const streak = localStorage.getItem("streak");
-    console.log("Bonus section, streak: ", streak)
+    if(!userId) {
+      streak = localStorage.getItem("streak");
+      console.log("Bonus section, streak: ", streak)
+    }
+    
 
     //Generate bonus 1
 
@@ -103,7 +107,7 @@ export function generateBonusPage(userId, subStatus) {
     const bonus2MenuLine = document.createElement("div");
     bonus2Menu.appendChild(bonus2MenuLine);
   
-    bonus2MenuLine.innerHTML = `<i class='fa-solid fa-chart-line'></i>Bonus 2: "15 of the most common French verbs."`;
+    bonus2MenuLine.innerHTML = `<i class='fa-solid fa-chart-line'></i>Bonus 2: 15 of the most common French verbs.`;
   
     const plusIcon2 = document.createElement("i");
     plusIcon2.classList.add("fa-solid", "fa-square-plus");

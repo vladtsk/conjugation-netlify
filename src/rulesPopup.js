@@ -126,14 +126,13 @@ function generateRulesStart() {
   const rulesP1 = document.createElement("p");
   rulesExplanation.appendChild(rulesP1);
   rulesP1.innerHTML =
-    "You can get started by simply selecting a tense and a number of phrases you'd like to practise and click <span class='bold'>'Start now'</span> on the main page (welcome page).";
+    "You can get started by simply choosing a tense and a level of difficulty and clicking <span class='bold'>'Start now'</span> on the main page (welcome page).";
 
-  /*const rulesStartP2 = document.createElement("p");
-  rulesStart.appendChild(rulesStartP2);
+  const rulesStartP2 = document.createElement("p");
+  rulesExplanation.appendChild(rulesStartP2);
   rulesStartP2.innerHTML =
-    `Premium users can access their accounts by clicking the <span class='bold'>'login'</span> button to <span class='bold'>track their progress</span>, practise additional verbs and tenses and take advantage of our <u>smart repetition system</u>. 
-    The system takes into account your mistakes and shows you phrases at specific intervals to help you remember information faster.`;
-*/
+    `If you choose <b>'easy'</b>, you can practice regular conjugations. Selecting <b>'medium'</b> includes regular and some irregular verbs, while <b>'hard'</b> covers all verbs, 
+    including the most irregular ones.`;
 
   const photosDiv = document.createElement("div");
   photosDiv.classList.add("photosDiv");
@@ -437,13 +436,13 @@ function generateRulesLearnMore() {
 
 
 export function handleRulesPopup() {
-  const helpBtn = document.querySelector(".menu-element.help");
+  const rulesBtn = document.querySelector(".rules-button");
   const rulesSection = document.querySelector(".rulesSection");
   const blurContainer = document.querySelector(".blurContainer");
   const closeBtn = document.querySelector(".popup-close"); 
 
-  if(helpBtn) {
-    helpBtn.addEventListener("click", (event) => {
+  if(rulesBtn) {
+    rulesBtn.addEventListener("click", (event) => {
       rulesSection.style.display = "block";
       blurContainer.style.display = "block";
       event.stopPropagation();

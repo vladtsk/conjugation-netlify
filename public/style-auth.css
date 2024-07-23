@@ -4,24 +4,22 @@
   align-items: center;
 }
 
-.menu-element.account {
+.menu-element.account,
+.menu-element.help {
   position: relative;
 }
 
 
-.account-popup {
+.account-popup,
+.help-popup {
   display: none;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 120%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-
+  
   padding-inline: 10px;
   padding-block: 8px;
-  width: 100px;
-  height: 80px;
+  
 
   border-radius: 8px;
   border: solid var(--color-primary) 1px;
@@ -34,7 +32,38 @@
   text-align: center;
 }
 
-.account-popup p {
+.account-popup {
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100px;
+  height: 80px;
+}
+
+
+.help-popup {
+  top: 122%;
+  right: 4%;
+  transform: translate(10%, 0%);
+  width: 120px;
+  height: 80px;
+}
+
+#contact-button {
+  border-bottom: solid 1px gray;
+}
+
+.contactErrorMsg {
+  margin-top: 20px;
+}
+
+.rules-button {
+  padding-top: 5px;
+  border-bottom: solid 1px gray;
+}
+
+.account-popup p,
+.help-popup p  {
   padding-bottom: 5px;
   font-size: 16px;
   font-weight: 600;
@@ -44,16 +73,26 @@ nav p {
   font-size: 14px;
 }
 
-.account-popup .arrow {
+.account-popup .arrow,
+.help-popup .arrow  {
   position: absolute;
-  top: -16%;
-  left: 42%;
+  
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 10px solid var(--color-primary);
 
+}
+
+.account-popup .arrow {
+  top: -16%;
+  left: 42%;
+}
+
+.help-popup .arrow {
+  top: -16%;
+  right: 12%;
 }
 
 .menu-element.help {
@@ -75,8 +114,7 @@ form {
   background-color: var(--color-primary);
   color: var(--color-secondary);
   border-radius: 10px;
-  min-width: 300px;
-  max-width: 400px;
+  width: 360px;
   margin-inline: auto;
   padding-inline: 40px;
   padding-block: 20px;
@@ -102,9 +140,22 @@ input {
   appearance: none;
 }
 
+#contact-text {
+  display: block;
+  width: 100%;
+  min-height: 60px;
+
+  margin-top: 10px;
+  padding-block: 6px;
+  padding-inline: 10px;
+
+  border-radius: 6px;
+}
+
 #logInButton,
 #signUpButton,
-#passResetButton {
+#passResetButton,
+#contactBtn {
   margin-top: 20px;
   padding-inline: 12px;
   padding-block: 8px;
@@ -118,7 +169,8 @@ input {
 
 #logInButton:hover,
 #signUpButton:hover,
-#passResetButton:hover {
+#passResetButton:hover,
+#contactBtn:hover {
   background-color: #d0142a;
 }
 

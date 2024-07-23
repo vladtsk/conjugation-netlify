@@ -73,7 +73,6 @@ export function selectPracticeBtn() {
       });
     
       learnBtn.forEach(btn => {
-        console.log("learn btn remove class")
         btn.classList.remove("select");
          
       });
@@ -83,4 +82,31 @@ export function selectPracticeBtn() {
          
       });
 
+}
+
+export function deselectAllMenuBtns() {
+  const learnBtn = document.querySelectorAll(".learn");
+    const practiceBtn = document.querySelectorAll(".practice");
+    const stats = document.querySelectorAll(".stats");
+    const bonusBtn = document.querySelectorAll(".bonus");
+
+    stats.forEach(btn => {
+        btn.classList.remove("select");
+    
+      });
+
+      bonusBtn.forEach(btn => {
+        btn.classList.remove("select");
+    
+      });
+    
+      learnBtn.forEach(btn => {
+        btn.classList.remove("select");
+         
+      });
+
+      practiceBtn.forEach(btn => {
+        btn.classList.remove("select");
+         
+      });
 }

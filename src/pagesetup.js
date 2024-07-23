@@ -504,220 +504,42 @@ function showSummary(phraseStats) {
   }
 }
 
-export function generateSignUpForm() {
+export function showContactSuccessMsg() {
   const contentArea = document.querySelector(".content-area");
-  contentArea.innerHTML = "";
+    contentArea.innerHTML = "";
 
-  const signUpForm = document.createElement("form");
-  signUpForm.classList.add("signUpForm");
-  //signUpForm.style.display = "none";
-  contentArea.appendChild(signUpForm);
+  const successDiv = document.createElement("div");
+  successDiv.classList.add("successDiv");
+  contentArea.appendChild(successDiv);
 
-  const signUpH1 = document.createElement("h1");
-  signUpH1.innerText = "Sign up";
-  signUpForm.appendChild(signUpH1);
+  const successMsg = document.createElement("h1");
+  successMsg.innerHTML = "<i class='fa-regular fa-envelope'></i> Thank you for your message!";
+  successDiv.appendChild(successMsg);
 
-  const userInfoSection = document.createElement("section");
-  signUpForm.appendChild(userInfoSection);
-  const namePElement = document.createElement("p");
-  userInfoSection.appendChild(namePElement);
-  const nameLabel = document.createElement("label");
-  namePElement.appendChild(nameLabel);
-  nameLabel.htmlFor = "name";
-  nameLabel.innerText = "Name:";
-  const nameInput = document.createElement("input");
-  nameInput.setAttribute("type", "text");
-  nameInput.setAttribute("id", "name");
-  nameInput.setAttribute("required", true);
-  namePElement.appendChild(nameInput);
+  const successMsgExpl = document.createElement("p");
+  successMsgExpl.classList.add("successMsgExpl");
+  successMsgExpl.innerText =
+    "Thank you for contacting us! We'll be in touch shortly.";
+    successDiv.appendChild(successMsgExpl);
 
-  const emailPElement = document.createElement("p");
-  userInfoSection.appendChild(emailPElement);
-  const emailLabel = document.createElement("label");
-  emailPElement.appendChild(emailLabel);
-  emailLabel.htmlFor = "signUpEmail";
-  emailLabel.innerText = "Email:";
-  const emailInput = document.createElement("input");
-  emailInput.setAttribute("type", "email");
-  emailInput.setAttribute("id", "signUpEmail");
-  emailInput.setAttribute("required", true);
-  emailPElement.appendChild(emailInput);
-
-  const passwordPElement = document.createElement("p");
-  userInfoSection.appendChild(passwordPElement);
-  const passwordLabel = document.createElement("label");
-  passwordPElement.appendChild(passwordLabel);
-  passwordLabel.htmlFor = "signUpPassword";
-  passwordLabel.innerText = "Password:";
-  const passwordInput = document.createElement("input");
-  passwordInput.setAttribute("type", "password");
-  passwordInput.setAttribute("id", "signUpPassword");
-  passwordInput.setAttribute("required", true);
-  passwordPElement.appendChild(passwordInput);
-
-  const errorMsg = document.createElement("p");
-  userInfoSection.appendChild(errorMsg);
-  errorMsg.classList.add("signUpErrorMsg");
-
-  const btnSection = document.createElement("section");
-  signUpForm.appendChild(btnSection);
-  btnSection.classList.add("btn-section");
-  const btnSectionPElement = document.createElement("p");
-  btnSection.appendChild(btnSectionPElement);
-  const signUpBtn = document.createElement("button");
-  signUpBtn.setAttribute("type", "submit");
-  signUpBtn.setAttribute("id", "signUpButton");
-  signUpBtn.innerText = "Sign Up";
-  btnSectionPElement.appendChild(signUpBtn);
-
-  const switchSection = document.createElement("section");
-  signUpForm.appendChild(switchSection);
-  switchSection.classList.add("switch-section");
-  const haveAccountPElement = document.createElement("p");
-  haveAccountPElement.innerText = "Already have an account?";
-  switchSection.appendChild(haveAccountPElement);
-  const logInSwitchPElement = document.createElement("p");
-  switchSection.appendChild(logInSwitchPElement);
-  const logInSwitchLink = document.createElement("a");
-  logInSwitchLink.setAttribute("id", "logInSwitch");
-  logInSwitchLink.innerText = "Log in";
-  logInSwitchPElement.appendChild(logInSwitchLink);
 }
 
-
-export function generateLogInForm() {
+export function showContactFailMsg() {
   const contentArea = document.querySelector(".content-area");
-  contentArea.innerHTML = "";
+    contentArea.innerHTML = "";
 
-  const logInForm = document.createElement("form");
-  logInForm.classList.add("logInForm");
-  //logInForm.style.display = "none";
-  contentArea.appendChild(logInForm);
+  const failDiv = document.createElement("div");
+  failDiv.classList.add("successDiv");
+  contentArea.appendChild(failDiv);
 
-  const logInH1 = document.createElement("h1");
-  logInH1.innerText = "Log in";
-  logInForm.appendChild(logInH1);
+  const failMsg = document.createElement("h1");
+  failMsg.innerText = "An error has occurred";
+  failDiv.appendChild(failMsg);
 
-  const userInfoSection = document.createElement("section");
-  userInfoSection.setAttribute("id", "userInfo");
-  logInForm.appendChild(userInfoSection);
+  const failMsgExpl = document.createElement("p");
+  failMsgExpl.classList.add("successMsgExpl");
+  failMsgExpl.innerText =
+    "An error has occurred. Please send an email to vladimir@lingway.net.";
+    failDiv.appendChild(failMsgExpl);
 
-  const emailPElement = document.createElement("p");
-  userInfoSection.appendChild(emailPElement);
-  const emailLabel = document.createElement("label");
-  emailPElement.appendChild(emailLabel);
-  emailLabel.htmlFor = "logInEmail";
-  emailLabel.innerText = "Email:";
-  const emailInput = document.createElement("input");
-  emailInput.setAttribute("type", "email");
-  emailInput.setAttribute("id", "logInEmail");
-  emailInput.setAttribute("required", true);
-  emailPElement.appendChild(emailInput);
-
-  const passwordPElement = document.createElement("p");
-  userInfoSection.appendChild(passwordPElement);
-  const passwordLabel = document.createElement("label");
-  passwordPElement.appendChild(passwordLabel);
-  passwordLabel.htmlFor = "logInPassword";
-  passwordLabel.innerText = "Password:";
-  const passwordInput = document.createElement("input");
-  passwordInput.setAttribute("type", "password");
-  passwordInput.setAttribute("id", "logInPassword");
-  passwordInput.setAttribute("required", true);
-  passwordPElement.appendChild(passwordInput);
-
-  const errorMsg = document.createElement("p");
-  userInfoSection.appendChild(errorMsg);
-  errorMsg.classList.add("logInErrorMsg");
-
-  const btnSection = document.createElement("section");
-  logInForm.appendChild(btnSection);
-  btnSection.classList.add("btn-section");
-  const btnSectionPElement = document.createElement("p");
-  btnSection.appendChild(btnSectionPElement);
-  const logInButton = document.createElement("button");
-  logInButton.setAttribute("type", "submit");
-  logInButton.setAttribute("id", "logInButton");
-  logInButton.innerText = "Log in";
-  btnSectionPElement.appendChild(logInButton);
-
-  const switchSection = document.createElement("section");
-  logInForm.appendChild(switchSection);
-  switchSection.classList.add("switch-section");
-
-  const dontHaveAccountPElement = document.createElement("p");
-  dontHaveAccountPElement.innerText = "Don't have an account yet?";
-  switchSection.appendChild(dontHaveAccountPElement);
-  const signUpSwitchPElement = document.createElement("p");
-  switchSection.appendChild(signUpSwitchPElement);
-  const signUpSwitchLink = document.createElement("a");
-  signUpSwitchLink.setAttribute("id", "signUpSwitch");
-  signUpSwitchLink.innerText = "Sign up";
-  signUpSwitchPElement.appendChild(signUpSwitchLink);
-
-  const forgotPass = document.createElement("a");
-  forgotPass.setAttribute("id", "forgotPass");
-  forgotPass.innerText = "Forgot your password?";
-  switchSection.appendChild(forgotPass);
-}
-
-export function generatePassResetForm() {
-  const contentArea = document.querySelector(".content-area");
-  contentArea.innerHTML = "";
-
-  const passResetForm = document.createElement("form");
-  passResetForm.classList.add("passResetForm");
-  //passResetForm.style.display = "none";
-  contentArea.appendChild(passResetForm);
-
-  const passResetH1 = document.createElement("h1");
-  passResetH1.innerText = "Reset your password";
-  passResetForm.appendChild(passResetH1);
-
-  const userInfoSection = document.createElement("section");
-  userInfoSection.setAttribute("id", "userInfo");
-  passResetForm.appendChild(userInfoSection);
-
-  const emailPElement = document.createElement("p");
-  userInfoSection.appendChild(emailPElement);
-  const emailLabel = document.createElement("label");
-  emailPElement.appendChild(emailLabel);
-  emailLabel.htmlFor = "logInEmail";
-  emailLabel.innerText = "Email:";
-  const emailInput = document.createElement("input");
-  emailInput.setAttribute("type", "email");
-  emailInput.setAttribute("id", "resetEmail");
-  emailInput.setAttribute("required", true);
-  emailPElement.appendChild(emailInput);
-
-  const errorMsg = document.createElement("p");
-  userInfoSection.appendChild(errorMsg);
-  errorMsg.classList.add("passResetErrorMsg");
-
-  const btnSection = document.createElement("section");
-  passResetForm.appendChild(btnSection);
-  btnSection.classList.add("btn-section");
-  const btnSectionPElement = document.createElement("p");
-  btnSection.appendChild(btnSectionPElement);
-  const passResetButton = document.createElement("button");
-  passResetButton.setAttribute("type", "submit");
-  passResetButton.setAttribute("id", "passResetButton");
-  passResetButton.innerText = "Submit";
-  btnSectionPElement.appendChild(passResetButton);
-  
-
-  /*
-  const switchSection = document.createElement("section");
-  passResetForm.appendChild(switchSection);
-  switchSection.classList.add("switch-section");
-
-  const dontHaveAccountPElement = document.createElement("p");
-  dontHaveAccountPElement.innerText = "Don't have an account yet?";
-  switchSection.appendChild(dontHaveAccountPElement);
-  const signUpSwitchPElement = document.createElement("p");
-  switchSection.appendChild(signUpSwitchPElement);
-  const signUpSwitchLink = document.createElement("a");
-  signUpSwitchLink.setAttribute("id", "signUpSwitch");
-  signUpSwitchLink.innerText = "Sign up";
-  signUpSwitchPElement.appendChild(signUpSwitchLink);*/
 }

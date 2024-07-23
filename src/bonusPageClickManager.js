@@ -25,14 +25,14 @@ export function manageBonusMenuClicks(userId, subStatus) {
   bonus2Menu.addEventListener("click", ()=>{
     if(bonus2SubContainer.style.display === "none") {
         bonus2SubContainer.style.display = "block";
-        bonus2Menu.innerHTML = `<div><i class='fa-solid fa-chart-line'></i>Bonus 2: "Top 50 most used French verbs"</div>
+        bonus2Menu.innerHTML = `<div><i class='fa-solid fa-chart-line'></i>Bonus 2: 15 of the most common French verbs.</div>
         <i class='fa-solid fa-circle-chevron-up'></i>`
 
         
 
     } else {
         bonus2SubContainer.style.display = "none";
-        bonus2Menu.innerHTML = `<div><i class='fa-solid fa-chart-line'></i>Bonus 2: "Top 50 most used French verbs"</div>
+        bonus2Menu.innerHTML = `<div><i class='fa-solid fa-chart-line'></i>Bonus 2: 15 of the most common French verbs.</div>
         <i class="fa-solid fa-square-plus"></i>`
     }
 })

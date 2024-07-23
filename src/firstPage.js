@@ -58,7 +58,7 @@ export async function buildFirstPage(userId) {
     mainSection.appendChild(selectPhrTypeSection);
   
     const selectPhrTypeLabel = document.createElement("div");
-    selectPhrTypeLabel.innerText = "Choose the level of difficulty:";
+    selectPhrTypeLabel.innerText = "Choose a level of difficulty:";
     selectPhrTypeSection.appendChild(selectPhrTypeLabel);
   
     const selectPhrTypeDiv = document.createElement("div");

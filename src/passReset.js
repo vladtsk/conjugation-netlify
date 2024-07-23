@@ -6,7 +6,7 @@ import {
 
   import {
     generateLogInForm,
-  } from "./pagesetup.js";
+  } from "./forms.js";
 
   import { showErrorMsg } from "./authErrorMsg.js";
 

@@ -18,6 +18,8 @@ import { openLearnPage } from "../public/learnPageManager.js";
 import { openStatsPage } from "./stats.js";
 import { openBonusPage } from "./bonusPageManager.js";
 
+import { handleStreakAuthUser, handleStreakNonAuthUser } from "./streak.js";
+
 
 
 import { addBoxToDb, addStatsToDb } from "./addDataDb.js";
@@ -27,6 +29,8 @@ import { checkAuthState, handleAuthClicks, handleLogInLogOutClicks } from "./aut
 
 import { checkAnswer } from "./checkAnswer.js";
 
+import emailjs from '@emailjs/browser';
+
 //import { playEnd } from "./playAudio.js";
 
 import { generateRulesPopupSection, generateBlurContainer } from "./rulesPopup.js";
@@ -35,7 +39,7 @@ import { handleCheckoutClick } from "./subscribe.js";
 
 import { reloadAppOnLogoClick } from "./logoClick.js";
 
-import { handleMenuAccountClick } from "../public/account-popup.js";
+import { handleMenuAccountClick, handleMenuHelpClick } from "./account-popup.js";
 
 import { handleClickOutsidePopup } from "./clickOutSidePopup.js";
 
@@ -43,7 +47,7 @@ import { managePracticeBtnClick } from "./menuPracticeBtnClick.js";
 
 import { handleRulesPopup } from "./rulesPopup.js";
 
-
+import { handleContactBtnClick } from "./account-popup.js";
 
 checkAuthState();
 
@@ -57,6 +61,7 @@ launchFirstPage();
 managePracticeBtnClick();
 
 handleMenuAccountClick();
+handleMenuHelpClick();
 
 openLearnPage();
 openStatsPage();
@@ -68,6 +73,8 @@ handleCheckoutClick();
 reloadAppOnLogoClick();
 
 handleRulesPopup();
+
+//handleContactBtnClick();
 
 document.addEventListener("click", handleClickOutsidePopup);
 
@@ -101,6 +108,7 @@ export async function launchApp(data, phraseType) {
   const result = await getData(data, boxes, stats, indexArray);
   userId = result.userId;
   stats = result.stats;
+
 
   let lives;
   let streak;
@@ -204,7 +212,7 @@ export async function launchApp(data, phraseType) {
 
   submitBtn.addEventListener("click", ()=> {
     
-    let result = checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, lives });
+    let result = checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, lives, userId });
     ({ score, boxes, lives } = result);
    
   })
@@ -244,13 +252,8 @@ export async function launchApp(data, phraseType) {
   
       
 
-      let streakLastChangeTime;
    
       let streak; 
-      
-      const streakEl = document.querySelector(".streak p");
-      
-      const today = new Date();
 
       const currenttimestamp = Date.now();
 
@@ -266,133 +269,26 @@ export async function launchApp(data, phraseType) {
         streak = streakString ? parseInt(streakString) : 0;
 
        
-
-        if(timestampDb) {
-          streakLastChangeTime = parseInt(timestampDb);
-
-          const streakLastChangeDate = new Date(streakLastChangeTime);
-
-
-          console.log("streakLastChangeDate", streakLastChangeDate);
-
-          //timeDifferenceH = Math.floor((currenttimestamp - streakLastChangeTime)/1000/60/60);
-          
-
-          if(streakLastChangeDate.getDate() === today.getDate() &&
-          streakLastChangeDate.getMonth() === today.getMonth() &&
-          streakLastChangeDate.getFullYear() === today.getFullYear()
-        ) {
-          // no change if the date is the same
-          console.log("same date");
-        } else if(today.getDate() - streakLastChangeDate.getDate() < 2  &&
-          streakLastChangeDate.getMonth() === today.getMonth() &&
-          streakLastChangeDate.getFullYear() === today.getFullYear()) {
-          streak++; // streak increases
-          streakEl.textContent = streak;
-          stats[stats.length - 1].streak = streak;
-
-          console.log("1 day difference")
-        } else {
-          streak = 1;
-          streakEl.textContent = streak;
-          stats[stats.length - 1].streak = streak;
-
-          console.log("more than 1 day difference")
-        }
-
-
-          /*if(timeDifferenceH < 16) {
-         // no change withing 16 hours
-         
-          } else if(timeDifferenceH < 48) {
-            streak++; // streak increases
-            streakEl.textContent = streak;
-            stats[stats.length - 1].timestamp = currenttimestamp;
-            stats[stats.length - 1].streak = streak;
-            }  else {
-          streak = 1;
-          streakEl.textContent = streak;
-          stats[stats.length - 1].timestamp = currenttimestamp;
-          stats[stats.length - 1].streak = streak;
-          }
-*/          
-          
-
-
-
-        } else {
-          streak = 1;
-          streakEl.textContent = streak;
-          stats[stats.length - 1].streak = streak;
-        }
+        // handle streak of an authenticated user
+        streak = handleStreakAuthUser(timestampDb, streak, stats); 
         
-          console.log("User: streak", streak);
+        
+        console.log("User: streak", streak);
 
         addBoxToDb(data, boxes, userId, database);
         addStatsToDb(userId, database, stats, phraseStats, streak);
       
       } else {
-        
 
         streak = localStorage.getItem("streak") || 0;
-        const storedTimeStamp = localStorage.getItem("streakLastChangeTime");
+        console.log("streak no user, before handleStreakNonAuthUser", streak)
         
-        if(storedTimeStamp) {
-         
-          streakLastChangeTime = parseInt(storedTimeStamp);
-          const streakLastChangeDate = new Date(streakLastChangeTime);
+        // handle streak of an unauthenticated user
+        streak = handleStreakNonAuthUser(streak); 
+
         
-          if(streakLastChangeDate.getDate() === today.getDate() &&
-          streakLastChangeDate.getMonth() === today.getMonth() &&
-          streakLastChangeDate.getFullYear() === today.getFullYear()
-        ) {
-          // no change if the date is the same
-          console.log("same date");
-        } else if(today.getDate() - streakLastChangeDate.getDate() < 2  &&
-          streakLastChangeDate.getMonth() === today.getMonth() &&
-          streakLastChangeDate.getFullYear() === today.getFullYear()) {
-            streak++; // streak increases
-            streakEl.textContent = streak;
-            localStorage.setItem("streakLastChangeTime", currenttimestamp.toString());
-            localStorage.setItem("streak", streak);
-
-          console.log("1 day difference")
-        } else {
-          streak = 1;
-          streakEl.textContent = streak;
-          localStorage.setItem("streakLastChangeTime", currenttimestamp.toString());
-          localStorage.setItem("streak", streak);
-
-          console.log("more than 1 day difference")
-        }
-
-          /*
-          if(timeDifferenceH < 16) {
-            // no change withing 16 hours
-            
-             } else if(timeDifferenceH < 48) {
-              streak++; // streak increases
-              streakEl.textContent = streak;
-              localStorage.setItem("streakLastChangeTime", currenttimestamp.toString());
-              localStorage.setItem("streak", streak);
-               }  
-             
-             else {
-            streak = 1;
-            streakEl.textContent = streak;
-            localStorage.setItem("streakLastChangeTime", currenttimestamp.toString());
-            localStorage.setItem("streak", streak);
-             }
-             */
-
-        } else {
-          streak = 1;
-          streakEl.textContent = streak;
-          localStorage.setItem("streakLastChangeTime", currenttimestamp.toString());
-          localStorage.setItem("streak", streak);
-        }
-
-        console.log("streak", streak);
+        
+        console.log("streak no user after handleStreakNonAuthUser", streak);
 
 
         localStorage.setItem("lives", lives);

@@ -7,6 +7,7 @@ export function handleClickOutsidePopup(event) {
     const selectDiv = document.querySelector(".selectDiv");
     const selectPhrTypeContainer = document.querySelector(".selectPhrTypeContainer");
     const accountPopup = document.querySelector(".account-popup");
+    const helpPopup = document.querySelector(".help-popup");
     //menu-element account
 
    
@@ -28,6 +29,10 @@ export function handleClickOutsidePopup(event) {
 
       if(accountPopup && accountPopup.style.display !== "none" && !accountPopup.contains(event.target)){
         accountPopup.style.display = "none";
+      }
+
+      if(helpPopup && helpPopup.style.display !== "none" && !helpPopup.contains(event.target)){
+        helpPopup.style.display = "none";
       }
   
   }

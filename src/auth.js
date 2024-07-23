@@ -15,18 +15,21 @@ import {
   generateSignUpForm,
   generateLogInForm,
   generatePassResetForm,
-} from "./pagesetup.js";
+  generateContactForm,
+  showContactEmail
+} from "./forms.js";
+
+import { sendEmail } from "./emailJS.js";
 
 
 import { showErrorMsg } from "./authErrorMsg.js";
 
 import { resetPassword } from "./passReset.js";
 
-import { selectPracticeBtn } from "./menuPracticeBtnClick.js";
-import { launchFirstPage } from "./readDbData.js";
+import { selectPracticeBtn, deselectAllMenuBtns } from "./menuPracticeBtnClick.js";
+import { launchFirstPage, getUser } from "./readDbData.js";
 
-/*const auth = getAuth(app);
-const database = getDatabase(app);*/
+import { validateContactForm } from "./authErrorMsg.js";
 
 
 export async function checkAuthState() {
@@ -251,9 +254,12 @@ if(contentArea) {
             break;
           case "passResetButton":
             resetPassword();
-
-
-            default:
+          case "contactBtn":
+          let valid = validateContactForm();
+          if(valid) {
+            sendEmail();
+          }
+              default:
               break;
       }
     }
@@ -273,8 +279,9 @@ if(contentArea) {
     const contentArea = document.querySelector(".content-area");
     const header = document.querySelector("header");
     const accountPopup = document.querySelector(".account-popup");
+    const helpPopup = document.querySelector(".help-popup");
 
-    header.addEventListener("click", (event) => {
+    header.addEventListener("click", async (event) => {
       event.preventDefault();
       event.stopPropagation();
       clearFormFields();
@@ -294,11 +301,6 @@ if(contentArea) {
           if (conjugSection) {
             contentArea.removeChild(conjugSection);
           }
-  
-      /*if(event.target && event.target.id === "logInButtonMenu") {
-        
-      } else if(event.target && event.target.id === "logOutButton")
-        userLogOut();*/
 
         if(event.target) {
           switch(event.target.id) {
@@ -320,6 +322,21 @@ if(contentArea) {
               }
               userLogOut();
               break;
+            case "contact-button":
+              let userId = await getUser();
+
+              if(helpPopup && helpPopup.style.display === "flex") {
+                helpPopup.style.display = "none";
+              }
+
+              deselectAllMenuBtns();
+
+              if(userId) {
+                generateContactForm();
+              } else {
+                showContactEmail();
+              }
+              
             default:
               break;
           }

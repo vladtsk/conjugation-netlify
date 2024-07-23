@@ -35,10 +35,10 @@ fetchConjugations()
 const jsonConjug = await responseConjug.json();*/
 
 
-let userId;
+//let userId;
 
 // Getting the user ID
-async function getuserId() {
+/*async function getuserId() {
   const { app } = await fetchFirebaseConfig();
   const auth = getAuth(app);
 
@@ -51,17 +51,15 @@ async function getuserId() {
 }
 
 getuserId();
+*/
 
 
 
-
- //const userId = getUser();
 
 // A function that reads the user input and compares it to the correct answer
-export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, lives }) {
+export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, lives, userId }) {
 
-  /*let phraseCount = phraseInfo[0];
-  let phraseNumber = phraseInfo[1];*/
+  console.log("userID in checkAnswer", userId)
  
   let phraseStatObject = {
     phrase: "",
@@ -191,8 +189,9 @@ export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, l
       break;
 
     default:
+      console.log("userId, incorrect", userId)
       console.log("incorrect, lives", lives);
-      if(lives && lives > 0) {
+      if(!userId && lives && lives > 0) {
         lives--;
         console.log("incorrect, lives --", lives)
         if(lives === 0) {

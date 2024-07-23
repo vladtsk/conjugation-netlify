@@ -962,6 +962,28 @@ button[disabled] {
   font-size: 24px;
 }
 
+.successDiv {
+ 
+  border: solid 1px var(--color-primary);
+  border-radius: 6px;
+  max-width: 400px;
+
+  margin-top: 20px;
+  margin-inline: auto;
+  text-align: center;
+  padding-inline: 20px;
+  padding-block: 20px;
+}
+
+.successDiv h1 {
+  text-align: center;
+}
+
+.successDiv p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
 .noMorePhrExpl, .noSubExpl {
   font-size: 16px;
   margin-top: 20px;
@@ -997,6 +1019,47 @@ button[disabled] {
   display: inline-block;
   margin-left: 6px;
   margin-right: 3px;
+  animation: flame 1s infinite;
+}
+
+/* Fire animation */
+@keyframes flame {
+  
+  /*0% {
+    transform: scale(1) translateY(0);
+  }
+
+  25% {
+    transform: scale(1.1) translateY(0px);
+  }
+
+  50% {
+    transform: scale(1.2) translateY(0px);
+  }
+
+  75% {
+    transform: scale(1.1) translateY(0px);
+  }
+
+  100% {
+    transform: scale(1) translateY(0px);
+  } */
+
+  0% {
+    transform: scale(1) skewX(0) skewY(0) rotate(0deg) translateY(0);
+}
+25% {
+    transform: scale(1.1) skewX(5deg) skewY(-5deg) rotate(3deg) translateY(-1px);
+}
+50% {
+    transform: scale(1.2) skewX(-5deg) skewY(5deg) rotate(-3deg) translateY(-2px);
+}
+75% {
+    transform: scale(1.1) skewX(5deg) skewY(-5deg) rotate(3deg) translateY(-1px);
+}
+100% {
+    transform: scale(1) skewX(0) skewY(0) rotate(0deg) translateY(0);
+}
 }
 
 
