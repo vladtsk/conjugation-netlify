@@ -115,6 +115,7 @@ export async function launchApp(data, phraseType) {
   let timeDiff;
 
   const today = new Date();
+  today.setHours(0, 0, 0, 0);
 
   // A "lives" system for non-authenticated users
   if(!userId) {
@@ -164,9 +165,19 @@ export async function launchApp(data, phraseType) {
     } else {
      
        // Retrieve streak from stats array or set to default value
-      const streakString = stats[stats.length - 1]?.streak;
+      const streakString = stats[stats.length - 1].streak;
+      const streakLastChangeTime = parseInt(stats[stats.length - 1].timestamp);
+
         
       streak = streakString ? parseInt(streakString) : 0;
+
+      timeDiff = today.getTime() - streakLastChangeTime;
+
+      console.log("dayDiff", timeDiff/(1000*60*60*24));
+
+      if(timeDiff/(1000*60*60*24) >= 2 ) {
+        streak = 0;
+    }
 
       const streakEl = document.querySelector(".streak p");
       if(streakEl) {
@@ -280,7 +291,7 @@ export async function launchApp(data, phraseType) {
 
       if (userId) {
 
-        const timestampDb = stats[stats.length - 1].timestamp; // new dateDb
+        const timestampDb = stats[stats.length - 1].timestamp; 
 
         const streakString = stats[stats.length - 1].streak;
         
@@ -288,7 +299,7 @@ export async function launchApp(data, phraseType) {
         streak = streakString ? parseInt(streakString) : 0;
 
        
-        // handle streak of an authenticated user
+        // Handle streak of an authenticated user
         streak = handleStreakAuthUser(timestampDb, streak, stats); 
         
         

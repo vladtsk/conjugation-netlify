@@ -2,6 +2,7 @@
 
 export function handleStreakAuthUser(timestampDb, streak, stats) {
     const today = new Date();
+    today.setHours(0, 0, 0, 0);
     const streakEl = document.querySelector(".streak p");
 
     let timeDiff;
@@ -19,12 +20,14 @@ export function handleStreakAuthUser(timestampDb, streak, stats) {
       streak++; // streak increases
       streakEl.textContent = streak;
       stats[stats.length - 1].streak = streak;
+      stats[stats.length - 1].timestamp = today.getTime();
 
       console.log("1 day difference")
     } else {
       streak = 1;
       streakEl.textContent = streak;
       stats[stats.length - 1].streak = streak;
+      stats[stats.length - 1].timestamp = today.getTime();
 
       console.log("more than 1 day difference")
     }
@@ -36,6 +39,7 @@ export function handleStreakAuthUser(timestampDb, streak, stats) {
       streak = 1;
       streakEl.textContent = streak;
       stats[stats.length - 1].streak = streak;
+      stats[stats.length - 1].timestamp = today.getTime();
     }
 
     console.log(streak);
@@ -47,9 +51,11 @@ export function handleStreakAuthUser(timestampDb, streak, stats) {
   export function handleStreakNonAuthUser(streak) {
 
     const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
     const streakEl = document.querySelector(".streak p");
 
-    const currenttimestamp = Date.now();
+    //const currenttimestamp = Date.now();
 
     const storedTimeStamp = localStorage.getItem("streakLastChangeTime");
 
@@ -68,14 +74,14 @@ export function handleStreakAuthUser(timestampDb, streak, stats) {
         } else if(timeDiff /(1000*60*60*24) < 2) {
             streak++; // streak increases
             streakEl.textContent = streak;
-            localStorage.setItem("streakLastChangeTime", currenttimestamp.toString());
+            localStorage.setItem("streakLastChangeTime", today.getTime().toString());
             localStorage.setItem("streak", streak);
 
           console.log("1 day difference")
         } else {
           streak = 1;
           streakEl.textContent = streak;
-          localStorage.setItem("streakLastChangeTime", currenttimestamp.toString());
+          localStorage.setItem("streakLastChangeTime", today.getTime().toString());
           localStorage.setItem("streak", streak);
 
           console.log("more than 1 day difference")
@@ -86,7 +92,7 @@ export function handleStreakAuthUser(timestampDb, streak, stats) {
         } else {
           streak = 1;
           streakEl.textContent = streak;
-          localStorage.setItem("streakLastChangeTime", currenttimestamp.toString());
+          localStorage.setItem("streakLastChangeTime", today.getTime().toString());
           localStorage.setItem("streak", streak);
         }
 

@@ -63,9 +63,7 @@ checkoutRouter.post("/create-checkout-session", async (req, res) => {
         cancel_url: `${process.env.CLIENT_URL}/checkout.html`,
       });
   
-      console.log(email);
-      const sessionId = session.id;
-      console.log("session id: ", sessionId);
+      //const sessionId = session.id;
 
       //Get the reference to Firebase DB
       const subscriptionRef = database.ref('subscription');
