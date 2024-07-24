@@ -16,6 +16,7 @@ import {
   generateLogInForm,
   generatePassResetForm,
   generateContactForm,
+  generateSubscriptionPage,
   showContactEmail
 } from "./forms.js";
 
@@ -42,8 +43,8 @@ export async function checkAuthState() {
   const signUpButtonMenu = document.getElementById("signUpButtonMenu");
   const logOutButton = document.getElementById("logOutButton");
   const premiumBtn = document.querySelector(".menu-element.premiumBtn");
-  //const subscribeBtn = document.getElementById("subscribeBtn");
-  //const mainSection = document.querySelector(".mainSection");
+  const subscriptionBtn = document.getElementById("subscription");
+
   
 
   onAuthStateChanged(auth, (user) => {
@@ -63,13 +64,14 @@ export async function checkAuthState() {
       signUpButtonMenu.style.display = "none";
       logOutButton.style.display = "block";
       premiumBtn.style.display = "none";
+      subscriptionBtn.style.display = "block";
 
-      //mainSection.style.display = "block";
     } else {
       logOutButton.style.display = "none";
       logInButtonMenu.style.display = "block";
       signUpButtonMenu.style.display = "block";
       premiumBtn.style.display = "flex";
+      subscriptionBtn.style.display = "none";
     }
   });
 }
@@ -227,18 +229,22 @@ export function handleAuthClicks() {
 if(contentArea) {
   contentArea.addEventListener("click", (event) => {
     if(event.target){
-      event.preventDefault();
+      
       switch(event.target.id) {
         case "signUpSwitch":
+          event.preventDefault();
           generateSignUpForm();
           break;
         case "logInSwitch":
+          event.preventDefault();
           generateLogInForm();
           break;
           case "signUpButton":
+            event.preventDefault();
             userSignUp();
             break;
           case "logInButton":
+            event.preventDefault();
             const logInErrorMsgP = document.querySelector(".logInErrorMsg");
             if (logInErrorMsgP) {
             logInErrorMsgP.innerHTML = "";
@@ -250,11 +256,14 @@ if(contentArea) {
             userLogIn();
             break;
           case "forgotPass":
+            event.preventDefault();
             generatePassResetForm();
             break;
           case "passResetButton":
+            event.preventDefault();
             resetPassword();
           case "contactBtn":
+            event.preventDefault();
           let valid = validateContactForm();
           if(valid) {
             sendEmail();
@@ -290,11 +299,7 @@ if(contentArea) {
             main.removeChild(summary);
             summary = null;
           }
-          /*let chart = document.querySelector(".chart");
-          if (chart) {
-            contentArea.removeChild(chart);
-            chart = null;
-          }*/
+         
       
           const conjugSection = document.querySelector(".conjugSection");
       
@@ -322,6 +327,14 @@ if(contentArea) {
               }
               userLogOut();
               break;
+
+            case "subscription":
+              if(accountPopup && accountPopup.style.display === "flex"){
+                accountPopup.style.display = "none";
+              }
+              generateSubscriptionPage();
+              break;
+
             case "contact-button":
               let userId = await getUser();
 
@@ -335,7 +348,9 @@ if(contentArea) {
                 generateContactForm();
               } else {
                 showContactEmail();
-              }
+              };
+
+              break;
               
             default:
               break;

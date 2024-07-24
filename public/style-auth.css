@@ -36,7 +36,7 @@
   top: 120%;
   left: 50%;
   transform: translate(-50%, 0%);
-  width: 100px;
+  width: 120px;
   height: 80px;
 }
 
@@ -116,6 +116,7 @@ form {
   border-radius: 10px;
   width: 360px;
   margin-inline: auto;
+  margin-top: 20px;
   padding-inline: 40px;
   padding-block: 20px;
 }
@@ -155,7 +156,8 @@ input {
 #logInButton,
 #signUpButton,
 #passResetButton,
-#contactBtn {
+#contactBtn,
+#portal-button {
   margin-top: 20px;
   padding-inline: 12px;
   padding-block: 8px;
@@ -230,11 +232,11 @@ input {
 
 #logOutButton,
 #logInButtonMenu,
-#signUpButtonMenu {
+#signUpButtonMenu,
+#subscription {
   padding-inline: 6px;
   padding-block: 4px;
 
-  /*border-radius: 6px;*/
   background-color: var(--color-secondary);
   color: black;
 
@@ -249,7 +251,8 @@ input {
 
 #logOutButton:hover,
 #logInButtonMenu:hover,
-#signUpButtonMenu:hover {
+#signUpButtonMenu:hover,
+#subscription:hover {
   background-color: var(--color-tertiary);
   color: var(--color-secondary);
   border: none;

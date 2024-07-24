@@ -63,20 +63,13 @@ checkoutRouter.post("/create-checkout-session", async (req, res) => {
         cancel_url: `${process.env.CLIENT_URL}/checkout.html`,
       });
   
-      //const userId = await getUser();
       console.log(email);
       const sessionId = session.id;
       console.log("session id: ", sessionId);
 
       //Get the reference to Firebase DB
       const subscriptionRef = database.ref('subscription');
-      /*subscriptionRef.set({
-        email: {
-          date_of_birth: 'June 23, 1912',
-          full_name: 'Alan Turing'
-        }
-    });*/
-
+      
     
 
       //Replace the dots with commas to use it as a key in Firebase
@@ -87,10 +80,6 @@ checkoutRouter.post("/create-checkout-session", async (req, res) => {
       });
   
       
-  
-      //addStripeCustomerIdToDb(userId, customerId);
-  
-      //res.json({ url: session.url });
       res.redirect(303, session.url);
 
     } catch (e) {

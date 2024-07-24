@@ -524,7 +524,7 @@ export function showContactSuccessMsg() {
 
 }
 
-export function showContactFailMsg() {
+export function showErrorMsg() {
   const contentArea = document.querySelector(".content-area");
     contentArea.innerHTML = "";
 

@@ -1,6 +1,6 @@
 import emailjs from '@emailjs/browser';
 
-import { showContactSuccessMsg, showContactFailMsg } from "./pagesetup.js";
+import { showContactSuccessMsg, showErrorMsg } from "./pagesetup.js";
 
 
 // Initialize EmailJS
@@ -20,7 +20,7 @@ emailjs.init({
 
           }, (error) => {
           console.log('FAILED...', error);
-          showContactFailMsg();
+          showErrorMsg();
           });
 
   }

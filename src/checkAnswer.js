@@ -4,7 +4,7 @@ import { movePhraseForward, movePhraseBackward } from "./spacedRepetition.js";
 
 //import { playAudio, playCorrect, playIncorrect } from "./playAudio.js";
 
-import { fetchFirebaseConfig, onAuthStateChanged, getAuth } from "./firebaseConfig.js";
+//import { fetchFirebaseConfig, onAuthStateChanged, getAuth } from "./firebaseConfig.js";
 
 import { showConjugations } from "./conjugationTablePopup.js";
 
@@ -31,27 +31,6 @@ fetchConjugations()
   });
 
 
-/*const responseConjug = await fetch("../src/conjugation.json");
-const jsonConjug = await responseConjug.json();*/
-
-
-//let userId;
-
-// Getting the user ID
-/*async function getuserId() {
-  const { app } = await fetchFirebaseConfig();
-  const auth = getAuth(app);
-
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      userId = auth.currentUser.uid;
-    }
-  });
-  //return userId;
-}
-
-getuserId();
-*/
 
 
 
@@ -59,7 +38,6 @@ getuserId();
 // A function that reads the user input and compares it to the correct answer
 export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, lives, userId }) {
 
-  console.log("userID in checkAnswer", userId)
  
   let phraseStatObject = {
     phrase: "",

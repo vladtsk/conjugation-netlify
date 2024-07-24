@@ -285,7 +285,7 @@ export function getUser() {
   });
 }
 
-function getUserEmail(userId) {
+export function getUserEmail(userId) {
   const emailRef = ref(database, "users/" + userId + "/info/email")
   return new Promise((resolve) => {
     onValue(
@@ -335,6 +335,42 @@ export async function getSubscriptionStatus() {
     console.error("error line 215", error.message);
   }
 }
+
+
+// Get Stripe Customer ID
+
+export async function getStripeCustomerID() {
+  let stripeCustomerID;
+  let userId;
+  await getAuthDatabase();
+  
+  try {
+    userId = await getUser();
+   
+    if (userId) {
+
+      const userEmail = await getUserEmail(userId);
+
+      const userEmailWoDots = userEmail.replace(/\./g, ',');
+    
+
+      // Reference to the 'stripe customer ID' node
+      const stripeIDRef = ref(database, "subscription/" + userEmailWoDots + "/customerId");
+
+      if (stripeIDRef) {
+        stripeCustomerID = await readSubsDataFromDb(stripeIDRef);
+      } 
+      
+    } else {
+      console.log("User is signed out");
+    }
+
+    return stripeCustomerID;
+  } catch (error) {
+    console.error("error line 370", error.message);
+  }
+}
+//
 
 
 export async function getData(data, boxes, stats, indexArray, userId) {

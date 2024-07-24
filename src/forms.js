@@ -1,5 +1,8 @@
 // Generate login, signup, password reset and other forms 
 
+import { getStripeCustomerID } from "./readDbData.js";
+
+import { showErrorMsg } from "./pagesetup.js";
 
 export function generateSignUpForm() {
     const contentArea = document.querySelector(".content-area");
@@ -315,4 +318,60 @@ export function generateSignUpForm() {
       "To report a problem or share your suggestions, please send an email to vladimir@lingway.net.";
       contactDiv.appendChild(contactMsgExpl);
   
+  }
+
+
+  export async function generateSubscriptionPage() {
+    
+    try {
+      const stripeCustomerID = await getStripeCustomerID();
+      console.log("stripeCustomerID", stripeCustomerID);
+
+      const contentArea = document.querySelector(".content-area");
+    contentArea.innerHTML = "";
+  
+    const portalForm = document.createElement("form");
+    portalForm.classList.add("subscription-portal-form");
+    portalForm.setAttribute("action", "/api/create-portal-session");
+    portalForm.setAttribute("method", "post");
+    contentArea.appendChild(portalForm);
+  
+    const contactH1 = document.createElement("h1");
+    contactH1.innerText = "Manage your subscription";
+    portalForm.appendChild(contactH1);
+  
+    const descriptionPEl = document.createElement("p");
+    portalForm.appendChild(descriptionPEl);
+
+    descriptionPEl.classList.add("portal-description");
+    descriptionPEl.textContent = "Click the button below to manage your subscription.";
+
+    const hiddenInput = document.createElement("input");
+    hiddenInput.setAttribute("type", "hidden");
+    hiddenInput.setAttribute("id", "stripeCustomerID");
+    hiddenInput.setAttribute("name", "stripeCustomerID");
+    hiddenInput.value = stripeCustomerID;
+    portalForm.appendChild(hiddenInput);
+
+
+    const btnSection = document.createElement("section");
+    portalForm.appendChild(btnSection);
+    btnSection.classList.add("btn-section");
+
+    const portalButton = document.createElement("button");
+    portalButton.setAttribute("type", "submit");
+    portalButton.setAttribute("id", "portal-button");
+    portalButton.innerText = "Start";
+    btnSection.appendChild(portalButton);
+    } catch(error) {
+      console.error("Error generating Subscription page ", error);
+
+      showErrorMsg();
+
+    }
+    
+
+
+    
+
   }
