@@ -52,7 +52,7 @@ export function showErrorMsg(errorMsgP, errorCode) {
 
     default:
       errorMsgP.innerHTML =
-        "<i class='fa-solid fa-circle-exclamation'></i> An error has occurred. Make sure that the email and the password are correct.";
+        "<i class='fa-solid fa-circle-exclamation'></i> An error has occurred. Make sure that the email (or the password) is correct.";
   }
 }
 

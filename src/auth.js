@@ -119,6 +119,7 @@ export async function userSignUp() {
       set(userRef, userData);
 
       selectPracticeBtn();
+      launchFirstPage();
 
       sidebarContainer.style.display = "flex";
       sidebarTabletContainer.style.display = "flex";

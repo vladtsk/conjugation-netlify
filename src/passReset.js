@@ -21,14 +21,17 @@ export async function resetPassword() {
 
   const resetEmailEl = document.getElementById("resetEmail");
   const passResetErrorMsg = document.querySelector(".passResetErrorMsg");
+
+  console.log(resetEmailEl.value)
   if (resetEmailEl) {
     resetEmail = resetEmailEl.value;
   }
+  
 
   sendPasswordResetEmail(auth, resetEmail)
     .then(() => {
       console.log("Password reset email sent");
-      alert("Password reset email sent. Please check your email.");
+      alert("Password reset email sent. Please check your email. If your email address is not registered on the app, you should sign up instead.");
 
       generateLogInForm();
 
