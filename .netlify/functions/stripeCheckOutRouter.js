@@ -73,10 +73,22 @@ checkoutRouter.post("/create-checkout-session", async (req, res) => {
       //Replace the dots with commas to use it as a key in Firebase
       const emailWithoutDots = email.replace(/\./g, ',');
 
-      subscriptionRef.child(`${emailWithoutDots}`).set({
-        userEmail: `${email}`
+      // Check if the email is already in DB
+
+      subscriptionRef.child(emailWithoutDots).once("value", (snapshot) => {
+        if (snapshot.exists()) {
+          //const data = snapshot.val();
+          console.log("User Email already in DB");
+        } else {
+          console.log("Email not in DB");
+          subscriptionRef.child(`${emailWithoutDots}`).set({
+            userEmail: `${email}`
+          });
+
+        }
+      }).catch((error) => {
+        console.error("Error checking email):", error);
       });
-  
       
       res.redirect(303, session.url);
 

@@ -159,6 +159,7 @@
     width: fit-content; 
   
     margin-inline: auto;
+    margin-bottom: 40px;
     padding-inline: 40px;
     padding-block: 20px;
   }
@@ -330,13 +331,22 @@
   @media screen and (max-width: 599px) {
 
     .checkout-page {
-        margin-top: 20px;
-        flex-direction: column-reverse;
-        width: 80%;
+        margin-top: 30px;
+        flex-direction: column;
+        width: 90%;
     }
 
     .checkout-headings {
-      width: 80%;
+      width: 90%;
+     
+    }
+
+    .checkout-headings h1{
+      font-size: 26px;
+    }
+
+    .checkout-headings h2{
+      font-size: 20px;
     }
 
     .checkout-product {
