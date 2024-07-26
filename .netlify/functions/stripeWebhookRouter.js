@@ -36,6 +36,7 @@ webhookRouter.post(
       let status;
       let subscriptionId;
       let stripeCustomerId;
+      let subType;
   
       // Handle the event
       switch (event.type) {
@@ -75,7 +76,7 @@ webhookRouter.post(
           status = subscription.status;
           const creationDate = subscription.created;
           subscriptionId = subscription.id;
-          const subType = subscription.items.data[0].plan.interval;
+          subType = subscription.items.data[0].plan.interval;
 
           // Get customer ID
           stripeCustomerId = subscription.customer;
@@ -97,9 +98,10 @@ webhookRouter.post(
 
             const subscriptionRef = database.ref('subscription');
             subscriptionRef.child(`${emailWithoutDots}`).update({
+              customerId: `${stripeCustomerId}`,
               status: `${status}`,
               subId: `${subscriptionId}`,
-              type: `${subType}` ,
+              type: `${subType}`,
               subDateCreated: `${creationDate}`
             });
 
@@ -142,6 +144,7 @@ webhookRouter.post(
           subscription = event.data.object;
           status = subscription.status;
           stripeCustomerId = subscription.customer;
+          subType = subscription.items.data[0].plan.interval;
           
           try {
             const customer = await stripe.customers.retrieve(stripeCustomerId);
@@ -159,6 +162,9 @@ webhookRouter.post(
             const subscriptionRef = database.ref('subscription');
             subscriptionRef.child(`${emailWithoutDots}`).update({
               status: `${status}`,
+              customerId: `${stripeCustomerId}`,
+              subId: `${subscriptionId}`,
+              type: `${subType}`,
             });
 
           } catch (error) {

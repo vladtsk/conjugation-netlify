@@ -46,7 +46,6 @@ checkoutRouter.post("/create-checkout-session", async (req, res) => {
         expand: ['data.product'],
       });
 
-      console.log(prices)
 
       const { email } = req.body;
       const session = await stripe.checkout.sessions.create({
@@ -63,7 +62,7 @@ checkoutRouter.post("/create-checkout-session", async (req, res) => {
         cancel_url: `${process.env.CLIENT_URL}/checkout.html`,
       });
   
-      //const sessionId = session.id;
+      console.log(email, "email check");
 
       //Get the reference to Firebase DB
       const subscriptionRef = database.ref('subscription');
@@ -73,8 +72,14 @@ checkoutRouter.post("/create-checkout-session", async (req, res) => {
       //Replace the dots with commas to use it as a key in Firebase
       const emailWithoutDots = email.replace(/\./g, ',');
 
-      // Check if the email is already in DB
 
+
+      await subscriptionRef.child(`${emailWithoutDots}`).update({
+        userEmail: `${email}`
+      });
+      console.log(email, "email updated");
+      
+/*
       subscriptionRef.child(emailWithoutDots).once("value", (snapshot) => {
         if (snapshot.exists()) {
           //const data = snapshot.val();
@@ -84,11 +89,11 @@ checkoutRouter.post("/create-checkout-session", async (req, res) => {
           subscriptionRef.child(`${emailWithoutDots}`).set({
             userEmail: `${email}`
           });
-
+          console.log(email, "email set")
         }
       }).catch((error) => {
         console.error("Error checking email):", error);
-      });
+      });*/
       
       res.redirect(303, session.url);
 

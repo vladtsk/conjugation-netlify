@@ -8,7 +8,7 @@ export function handleStreakAuthUser(timestampDb, streak, stats) {
     let timeDiff;
 
     if(timestampDb) {
-      const streakLastChangeTime = parseInt(timestampDb);
+      const streakLastChangeTime = parseInt(timestampDb) || 0;
 
       //const streakLastChangeDate = new Date(streakLastChangeTime);
       timeDiff = today.getTime() - streakLastChangeTime;
@@ -19,16 +19,40 @@ export function handleStreakAuthUser(timestampDb, streak, stats) {
     } else if(timeDiff /(1000*60*60*24) < 2) {
       streak++; // streak increases
       streakEl.textContent = streak;
-      stats[stats.length - 1].streak = streak;
-      stats[stats.length - 1].timestamp = today.getTime();
+
+      stats.push({
+        streak: streak,
+        timestamp: today.getTime()
+      })
+
+      console.log("today.getTime();", today.getTime())
+      console.log("stats after push", stats)
+
+      /*if(stats.length > 0) {
+        stats[stats.length - 1].streak = streak;
+        stats[stats.length - 1].timestamp = today.getTime();
+        
+      }*/
+      
 
       console.log("1 day difference")
     } else {
       streak = 1;
       streakEl.textContent = streak;
+
+      stats.push({
+        streak: streak,
+        timestamp: today.getTime()
+      })
+
+      /*
+
       stats[stats.length - 1].streak = streak;
       stats[stats.length - 1].timestamp = today.getTime();
+      */
 
+      console.log("today.getTime();", today.getTime())
+      console.log("stats after push", stats)
       console.log("more than 1 day difference")
     }
 
@@ -38,11 +62,19 @@ export function handleStreakAuthUser(timestampDb, streak, stats) {
     } else {
       streak = 1;
       streakEl.textContent = streak;
+
+      stats.push({
+        streak: streak,
+        timestamp: today.getTime()
+      })
+
+      /*
       stats[stats.length - 1].streak = streak;
       stats[stats.length - 1].timestamp = today.getTime();
+      */
     }
 
-    console.log(streak);
+    console.log("streak for auth user: ", streak);
     return streak;
   }
 
@@ -52,6 +84,8 @@ export function handleStreakAuthUser(timestampDb, streak, stats) {
 
     const today = new Date();
     today.setHours(0, 0, 0, 0);
+
+    console.log("today.gettime", today.getTime())
 
     const streakEl = document.querySelector(".streak p");
 
@@ -96,6 +130,6 @@ export function handleStreakAuthUser(timestampDb, streak, stats) {
           localStorage.setItem("streak", streak);
         }
 
-    console.log(streak);
+    console.log("streak non auth user", streak);
     return streak;
   }

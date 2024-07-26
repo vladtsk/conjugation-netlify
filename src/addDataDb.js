@@ -18,8 +18,9 @@ export function addBoxToDb(data, boxes, userId, database) {
   }
 }
 
-export function addStatsToDb(userId, database, stats, phraseStats, streak) {
+export function addStatsToDb(userId, database, stats, phraseStats) {
   const today = new Date();
+  today.setHours(0, 0, 0, 0);
 
   let nbPhrases = phraseStats.length;
   let nbCorrect = 0;
@@ -30,8 +31,47 @@ export function addStatsToDb(userId, database, stats, phraseStats, streak) {
     }
   }
 
-  // Checking if the last object's date is the same as today
-  const dateDb = new Date(stats[stats.length - 1]?.timestamp);
+  // Checking if the last timestamp corresponds to today
+
+  const timestampDb = stats[stats.length - 1]?.timestamp;
+
+    if(timestampDb) {
+      const lastTimeStamp = parseInt(timestampDb) || 0;
+
+      //const streakLastChangeDate = new Date(streakLastChangeTime);
+      if(today.getTime() === lastTimeStamp) {
+
+        // check if there is already data from the same date
+
+        if(stats[stats.length - 1].nbOfPhrPractised && stats[stats.length - 1].nbOfCorrectPhr) {
+          stats[stats.length - 1].nbOfPhrPractised += nbPhrases;
+          stats[stats.length - 1].nbOfCorrectPhr += nbCorrect;
+
+           console.log("there is already data from the same date", stats[stats.length - 1])
+        } else {
+          stats[stats.length - 1].nbOfPhrPractised = nbPhrases;
+          stats[stats.length - 1].nbOfCorrectPhr = nbCorrect;
+        }
+        
+      } else {
+        stats.push({
+          nbOfPhrPractised: nbPhrases,
+          nbOfCorrectPhr: nbCorrect,
+          timestamp: today.getTime(),
+        })
+      }
+
+    } else {
+      stats.push({
+        nbOfPhrPractised: nbPhrases,
+        nbOfCorrectPhr: nbCorrect,
+        timestamp: today.getTime(),
+      })
+    }
+
+
+
+  /*const dateDb = new Date(stats[stats.length - 1]?.timestamp);
 
   if (dateDb.getDate() === today.getDate() &&
   dateDb.getMonth() === today.getMonth() &&
@@ -44,11 +84,11 @@ export function addStatsToDb(userId, database, stats, phraseStats, streak) {
       timestamp: today.getTime(),
       nbOfPhrPractised: nbPhrases,
       nbOfCorrectPhr: nbCorrect,
-      streak: streak,
+      
     };
 
     stats.push(statObject);
-  }
+  }*/
 
   let statsRef = ref(database, "users/" + userId + "/data/" + "/stats");
 

@@ -109,6 +109,7 @@ export async function launchApp(data, phraseType) {
   userId = result.userId;
   stats = result.stats;
 
+  console.log("stats", stats)
 
   let lives;
   let streak;
@@ -164,9 +165,12 @@ export async function launchApp(data, phraseType) {
 
     } else {
      
+      console.log("stats[stats.length - 1]", stats[stats.length - 1])
+
        // Retrieve streak from stats array or set to default value
-      const streakString = stats[stats.length - 1].streak;
-      const streakLastChangeTime = parseInt(stats[stats.length - 1].timestamp);
+      const streakString = stats[stats.length - 1]?.streak;
+      
+      const streakLastChangeTime = parseInt(stats[stats.length - 1]?.timestamp) || 0;
 
         
       streak = streakString ? parseInt(streakString) : 0;
@@ -283,7 +287,8 @@ export async function launchApp(data, phraseType) {
       
 
    
-      let streak; 
+      //let streak; 
+      console.log("streak", streak)
 
       const currenttimestamp = Date.now();
 
@@ -291,9 +296,11 @@ export async function launchApp(data, phraseType) {
 
       if (userId) {
 
-        const timestampDb = stats[stats.length - 1].timestamp; 
+        const timestampDb = stats[stats.length - 1]?.timestamp; 
 
-        const streakString = stats[stats.length - 1].streak;
+        const streakString = stats[stats.length - 1]?.streak;
+
+        console.log("stats before handleStreak", stats)
         
         // Retreieve streak from DB or assign 0
         streak = streakString ? parseInt(streakString) : 0;
@@ -304,9 +311,10 @@ export async function launchApp(data, phraseType) {
         
         
         console.log("User: streak", streak);
+        console.log("stats after handleStreak", stats)
 
         addBoxToDb(data, boxes, userId, database);
-        addStatsToDb(userId, database, stats, phraseStats, streak);
+        addStatsToDb(userId, database, stats, phraseStats);
       
       } else {
 
