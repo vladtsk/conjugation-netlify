@@ -129,6 +129,7 @@ export async function launchFirstPage() {
         launchApp(jsonData, phraseType);
       }
       
+
       nav.style.display = "none";
       sidebarContainer.style.display = "none";
       sidebarTabletContainer.style.display = "none";

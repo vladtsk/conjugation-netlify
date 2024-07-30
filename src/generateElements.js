@@ -37,8 +37,12 @@ export function generateElements({data, indexArray, k, score, phraseStats, phras
 
     indexArray.push(k);
 
-    displayVerb(data, k);
+    console.log("phraseStats", phraseStats);
+
+    let questionN = phraseStats.length + 1;
+    displayVerb(data, k, questionN);
     displayPhrase(data, k);
+    displayOptions(data, k)
   } else {
     console.log("No more phrases to practise!");
     showNoMorePhrasesPage(score, phraseStats); // the data is not added to DB here
@@ -49,21 +53,75 @@ export function generateElements({data, indexArray, k, score, phraseStats, phras
 }
 
 // A function that displays a verb to conjugate
-function displayVerb(data, k) {
+function displayVerb(data, k, phraseCount) {
   // Selecting the verb display section
   const verbDisplay = document.querySelector(".verb-display p");
+  const questionSection = document.querySelector(".questionSection");
 
-  if (data && data.data.length > 0) {
+  if (data && data.data.length > 0 && verbDisplay) {
     verbDisplay.textContent = data.data[k].verb;
+  } else if (data && data.data.length > 0 && questionSection) {
+
+    questionSection.innerHTML = "";
+    const question = document.createElement("p");
+    question.innerHTML = `Question ${phraseCount} / 5`;
+    questionSection.appendChild(question);
+
+    const verbQ = document.createElement("div");
+    verbQ.innerHTML = `<p>Select the correct conjugation of&nbsp;the&nbsp;verb</p> <p class="verbP">${data.data[k].verb}</p>`;
+    questionSection.appendChild(verbQ);
+
   }
+
+
+
 }
 
 // A function that displays a phrase (the context)
 function displayPhrase(data, k) {
-  // Selecting the phrase display section (the "p" element)
-  const phraseDisplay = document.querySelector(".phrase-section p");
+  // Selecting the phrase section
+  const phraseDisplay = document.querySelector(".phrase-section");
   if (data && data.data.length > 0) {
     phraseDisplay.textContent = data.data[k].phrase;
+  }
+}
+
+// A function that displays options in the quiz mode
+function displayOptions(data, k) {
+  // Selecting the option elements
+  const option1 = document.querySelector(".option1");
+  const option2 = document.querySelector(".option2");
+  const option3 = document.querySelector(".option3");
+  const option4 = document.querySelector(".option4");
+
+  const optionsSection = document.querySelector(".options-section");
+
+  const options = [option1, option2, option3, option4];
+  let p; // index
+  let indices = [];
+
+  if (data && data.data.length > 0 && optionsSection) {
+    const optionAnswers = [data.data[k].answer, data.data[k].incorrect1, data.data[k].incorrect2, data.data[k].incorrect3];
+
+    for(let i = 0; i < options.length; i++) {
+
+    do {
+      p = Math.floor(Math.random() * options.length);
+    }  while (indices.includes(p));
+
+    console.log("k, p ", k, p);
+
+    indices.push(p);
+
+    options[p].textContent = optionAnswers[i];
+
+    if(i === 0) {
+      options[p].classList.add("correct-option");
+    }
+
+    
+  }
+    
   }
 }
 
@@ -72,7 +130,7 @@ export function displayTense(data) {
   // Selecting the tense display section
   const tenseDisplay = document.querySelector(".tense-display p");
   // Displaying the tense
-  if (data && data.data.length > 0) {
+  if (data && data.data.length > 0 && tenseDisplay) {
     tenseDisplay.textContent = data.data[0].tense;
   }
 }
@@ -89,7 +147,7 @@ export function displayNext({data, indexArray, k, score, phraseStats, phraseType
   const msgArea = document.querySelector(".msg-section");
   // Select the input element
   const inputArea = document.querySelector(".type-section input");
-  if(indexArray) {
+  if(indexArray && inputArea) {
     inputArea.removeAttribute("disabled");
     inputArea.classList.remove("bold");
   }
@@ -110,7 +168,11 @@ export function displayNext({data, indexArray, k, score, phraseStats, phraseType
   
 
   msgArea.innerHTML = "";
-  inputArea.value = "";
+
+  if(inputArea) {
+    inputArea.value = "";
+  }
+  
 
 
   try {
@@ -119,7 +181,17 @@ export function displayNext({data, indexArray, k, score, phraseStats, phraseType
     console.error(error.message);
     showNoMorePhrasesPage(score, phraseStats); 
   }
-  nextSection.style.display = "none";
-  submitSection.style.display = "flex";
+
+  if(nextSection) {
+    nextSection.style.display = "none";
+  }
+  
+
+  if(submitSection) {
+    submitSection.style.display = "flex";
+  }
+  
+  console.log("k", k)
   return k;
 }
+

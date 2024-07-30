@@ -2,15 +2,16 @@ import { playAudio, playCorrect, playIncorrect } from "./playAudio.js";
 
 export function handleCorrectAnswer(phraseDivCorrect, fullPhrase) {
     
-    const phraseDisplay = document.querySelector(".phrase-section p"); // the phrase display section
+    const phraseSection = document.querySelector(".phrase-section"); // the phrase display section
     const inputArea = document.querySelector(".type-section input"); // the input area
     const msgArea = document.querySelector(".msg-section"); // the message display area
 
-    phraseDisplay.appendChild(phraseDivCorrect);
+    phraseSection.textContent = "";
+    phraseSection.appendChild(phraseDivCorrect);
     const speaker = document.getElementById("speaker"); // the speaker icon
       playCorrect();
     
-      inputArea.style.color = "#169c47";
+      inputArea.style.color = "#269e52";
       
       msgArea.innerText = "Correct!";
       
@@ -24,12 +25,13 @@ export function handleCorrectAnswer(phraseDivCorrect, fullPhrase) {
 
 export function handleAlmostCorrectAnswer(phraseDivCorrect, fullPhrase) {
     
-    const phraseDisplay = document.querySelector(".phrase-section p"); // the phrase display section
+    const phraseSection = document.querySelector(".phrase-section"); // the phrase section
     const inputArea = document.querySelector(".type-section input"); // the input area
     const msgArea = document.querySelector(".msg-section"); // the message display area
     const learnMoreSection = document.querySelector(".learnMore"); // 'learn more' section
     
-    phraseDisplay.appendChild(phraseDivCorrect);
+    phraseSection.textContent = "";
+    phraseSection.appendChild(phraseDivCorrect);
       const speaker = document.getElementById("speaker");
       playCorrect();
 
@@ -49,13 +51,14 @@ export function handleAlmostCorrectAnswer(phraseDivCorrect, fullPhrase) {
 
 export function handleIncorrectAnswer(phraseDiv, fullPhrase, correctAnswer, lives) {
     
-    const phraseDisplay = document.querySelector(".phrase-section p"); // the phrase display section
+    const phraseSection = document.querySelector(".phrase-section"); // the phrase section
     const inputArea = document.querySelector(".type-section input"); // the input area
     const msgArea = document.querySelector(".msg-section"); // the message display area
     const learnMoreSection = document.querySelector(".learnMore"); // 'learn more' section
     const livesPElement = document.querySelector(".lives p");
     
-    phraseDisplay.appendChild(phraseDiv);
+    phraseSection.textContent = "";
+    phraseSection.appendChild(phraseDiv);
       const speaker = document.getElementById("speaker");
       playIncorrect();
 
@@ -77,3 +80,76 @@ export function handleIncorrectAnswer(phraseDiv, fullPhrase, correctAnswer, live
       }
   }
       
+
+
+  export function handleCorrectAnswerQuiz(phraseDivCorrect, fullPhrase) {
+    
+    const phraseSection = document.querySelector(".phrase-section"); // the phrase display section
+    const selectedOption = document.querySelector(".selectedOption"); // the selected option
+    const msgArea = document.querySelector(".msg-section"); // the message display area
+
+    phraseSection.textContent = "";
+    phraseSection.appendChild(phraseDivCorrect);
+    const speaker = document.getElementById("speaker"); // the speaker icon
+      playCorrect();
+    
+      if(selectedOption) {
+        selectedOption.style.color = "#269e52";
+      }
+      
+      
+      msgArea.innerText = "Correct!";
+      
+      if (speaker) {
+        speaker.addEventListener("click", () => {
+          playAudio(fullPhrase);
+        });
+      }
+
+}
+
+
+export function handleIncorrectAnswerQuiz(phraseDiv, fullPhrase, correctAnswer, lives) {
+    
+  const phraseSection = document.querySelector(".phrase-section"); // the phrase display section
+  
+  const selectedOption = document.querySelector(".selectedOption"); // the selected option
+  const msgArea = document.querySelector(".msg-section"); // the message display area
+  const correctOption = document.querySelector(".correct-option"); // the correct option
+  const livesPElement = document.querySelector(".lives p");
+  
+  phraseSection.textContent = "";
+  phraseSection.appendChild(phraseDiv);
+    const speaker = document.getElementById("speaker");
+    playIncorrect();
+
+
+    if (speaker) {
+      speaker.addEventListener("click", () => {
+        playAudio(fullPhrase);
+      });
+    }
+
+    if(selectedOption) {
+      selectedOption.style.color = "#ef233c";
+    }
+
+    if(correctOption) {
+      const correctTick = document.createElement("i");
+      correctTick.classList.add("fa-solid", "fa-circle-check");
+      correctOption.appendChild(correctTick);
+    }
+    
+    //The correct answer is: "${correctAnswer}"
+
+    msgArea.innerText = `Incorrect`;
+
+    //learnMoreSection.style.display = "block";
+
+    if(livesPElement) {
+      livesPElement.textContent = lives;
+    } else {
+      console.error("Lives element not found in HandleIncorrectAnswerQuiz");
+    }
+}
+

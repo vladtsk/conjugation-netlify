@@ -7,7 +7,7 @@ import { selectPracticeBtn } from "./menuPracticeBtnClick.js";
 
 
 // Building the main page structure
-export function buildPageStructure(data) {
+export function buildPageStructure() {
   // Deleting all the elements in the "main" section
   const contentArea = document.querySelector(".content-area");
   const mainSection = document.querySelector(".mainSection");
@@ -171,6 +171,154 @@ export function buildPageStructure(data) {
   finishSection.appendChild(finishBtn);
 }
 
+
+// Building the main page structure for the quiz mode
+export function buildPageStructureQuiz() {
+  // Deleting all the elements in the "main" section
+  const contentArea = document.querySelector(".content-area");
+  const mainSection = document.querySelector(".mainSection");
+
+  mainSection.innerHTML = "";
+
+  const quizH1 = document.createElement("h1");
+  quizH1.innerHTML = "<i class='fa-solid fa-bolt'></i> Quiz";
+
+  mainSection.appendChild(quizH1);
+  
+
+
+  // Question section
+  const questionSection = document.createElement("div");
+  questionSection.classList.add("questionSection");
+
+  const questionN = document.createElement("p");
+  questionN.classList.add("questionNumber");
+  questionSection.appendChild(questionN);
+
+  mainSection.appendChild(questionSection);
+
+
+  /*const questionSectionPElement = document.createElement("p");
+  questionSectionPElement.innerText = "";
+  questionSection.appendChild(questionSectionPElement);
+
+  const tenseDisplay = document.createElement("div");
+  tenseDisplay.classList.add("tense-display");
+  tenseDisplaySection.appendChild(tenseDisplay);
+
+  const tenseDisplayP = document.createElement("p");
+  tenseDisplay.appendChild(tenseDisplayP);
+
+  // Verb display section
+  const verbDisplaySection = document.createElement("div");
+  verbDisplaySection.classList.add("verb-display-section");
+  mainSection.appendChild(verbDisplaySection);
+
+  const verbPElement = document.createElement("p");
+  verbPElement.innerText = "The verb to conjugate:";
+  verbDisplaySection.appendChild(verbPElement);
+
+  const verbDisplay = document.createElement("div");
+  verbDisplay.classList.add("verb-display");
+  verbDisplaySection.appendChild(verbDisplay);
+
+  const verbDisplayP = document.createElement("p");
+  verbDisplay.appendChild(verbDisplayP);
+  */
+
+  // Phrase section
+  const phraseSection = document.createElement("div");
+  phraseSection.classList.add("phrase-section");
+  mainSection.appendChild(phraseSection);
+
+  /*const phraseSectionP = document.createElement("p");
+  phraseSection.appendChild(phraseSectionP);*/
+
+  
+
+  // Options section
+  const optionsSectionDiv = document.createElement("div");
+  optionsSectionDiv.classList.add("options-section");
+  mainSection.appendChild(optionsSectionDiv);
+
+  const option1 = document.createElement("div");
+  option1.classList.add("option1");
+  optionsSectionDiv.appendChild(option1);
+
+  const option2 = document.createElement("div");
+  option2.classList.add("option2");
+  optionsSectionDiv.appendChild(option2);
+
+  const option3 = document.createElement("div");
+  option3.classList.add("option3");
+  optionsSectionDiv.appendChild(option3);
+
+  const option4 = document.createElement("div");
+  option4.classList.add("option4");
+  optionsSectionDiv.appendChild(option4);
+
+
+  // Message section
+  const messageSection = document.createElement("div");
+  messageSection.classList.add("msg-section");
+  mainSection.appendChild(messageSection);
+
+  // 'Learn more' section
+  const learnMoreSection = document.createElement("div");
+  learnMoreSection.classList.add("learnMore");
+  mainSection.appendChild(learnMoreSection);
+
+  learnMoreSection.innerHTML = `<i class="fa-solid fa-circle-info"></i> Learn more`;
+  learnMoreSection.style.display = "none";
+
+  // Learn more info popup section
+  const main = document.querySelector("main");
+  const infoPopupSection = document.createElement("div");
+  infoPopupSection.classList.add("infoPopupSection");
+  main.appendChild(infoPopupSection);
+  infoPopupSection.style.display = "none";
+
+  // Conjugation popup section
+
+  const conjugSection = document.createElement("div");
+  conjugSection.classList.add("conjugSection");
+  contentArea.appendChild(conjugSection);
+  conjugSection.style.display = "none";
+
+  // Sibmit section
+  /*const submitSection = document.createElement("div");
+  submitSection.classList.add("submit-section");
+  mainSection.appendChild(submitSection);
+
+  const submitBtn = document.createElement("button");
+  submitBtn.id = "submit-btn";
+  submitBtn.innerText = "submit";
+  submitSection.appendChild(submitBtn); */
+
+  // Next section
+  const nextSection = document.createElement("div");
+  nextSection.classList.add("next-section");
+  mainSection.appendChild(nextSection);
+
+  const nextBtn = document.createElement("button");
+  nextBtn.id = "next-btn";
+  nextBtn.innerText = "next";
+  nextSection.appendChild(nextBtn);
+
+  // Finish section
+
+  const finishSection = document.createElement("div");
+  finishSection.classList.add("finish-section");
+  mainSection.appendChild(finishSection);
+  finishSection.style.display = "none";
+
+  const finishBtn = document.createElement("button");
+  finishBtn.id = "finish-btn";
+  finishBtn.innerText = "finish";
+  finishSection.appendChild(finishBtn);
+}
+//
+
 // Special characters buttons
 export function setSpecialBtns() {
   // Select the input element
@@ -222,10 +370,20 @@ export function showResultPage({score, phraseStats, stats, userId, streak}) {
   scoreDiv.classList.add("score-section");
   mainSection.appendChild(scoreDiv);
 
-  const trophyIcon = document.createElement("i");
+  /*const trophyIcon = document.createElement("i");
   trophyIcon.classList.add("fa-solid");
   trophyIcon.classList.add("fa-trophy");
-  scoreDiv.appendChild(trophyIcon);
+  scoreDiv.appendChild(trophyIcon);*/
+
+  const trophyImage = document.createElement("img");
+  
+  trophyImage.setAttribute("src", "../public/trophy.png");
+  trophyImage.setAttribute("alt", "Trophy");
+  trophyImage.classList.add("trophyImage");
+
+
+  scoreDiv.appendChild(trophyImage);
+
 
   const scoreMsg = document.createElement("p");
   scoreMsg.innerHTML = `Your score: ${score}/${phraseStats.length}`;
@@ -252,11 +410,12 @@ export function showResultPage({score, phraseStats, stats, userId, streak}) {
   showSummaryBtn.innerText = "show summary";
   restartSection.appendChild(showSummaryBtn);
   
-
+/*
   if (userId) {
     generateGraph();
     buildGraph(stats);
   }
+    */
 
   nav.style.display = "flex";
   //livesEl.style.display = "none";

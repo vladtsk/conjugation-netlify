@@ -160,7 +160,7 @@ webhookRouter.post(
             const emailWithoutDots = email.replace(/\./g, ',');
 
             const subscriptionRef = database.ref('subscription');
-            subscriptionRef.child(`${emailWithoutDots}`).update({
+            await subscriptionRef.child(`${emailWithoutDots}`).update({
               status: `${status}`,
               customerId: `${stripeCustomerId}`,
               subId: `${subscriptionId}`,
@@ -170,13 +170,6 @@ webhookRouter.post(
           } catch (error) {
             console.error("Error updating subscription", error)
           }
-
-
-         
-          // Then define and call a method to handle the subscription update.
-          // handleSubscriptionUpdated(subscription);
-  
-          //updateStripeStatus(userId, status);
   
           break;
         

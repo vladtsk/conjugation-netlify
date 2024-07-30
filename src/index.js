@@ -2,6 +2,7 @@ import { fetchFirebaseConfig, getDatabase } from "./firebaseConfig.js";
 
 import {
   buildPageStructure,
+  buildPageStructureQuiz,
   setSpecialBtns,
   showResultPage,
 } from "./pagesetup.js";
@@ -28,6 +29,8 @@ import { addBoxToDb, addStatsToDb } from "./addDataDb.js";
 import { checkAuthState, handleAuthClicks, handleLogInLogOutClicks } from "./auth.js";
 
 import { checkAnswer } from "./checkAnswer.js";
+import { handleQuizAnswerSubmit } from "./checkAnswerQuiz.js";
+
 
 import emailjs from '@emailjs/browser';
 
@@ -48,6 +51,8 @@ import { managePracticeBtnClick } from "./menuPracticeBtnClick.js";
 import { handleRulesPopup } from "./rulesPopup.js";
 
 import { handleContactBtnClick } from "./account-popup.js";
+
+import { showNoMorePhrasesPage } from "./pagesetup.js";
 
 checkAuthState();
 
@@ -109,7 +114,6 @@ export async function launchApp(data, phraseType) {
   userId = result.userId;
   stats = result.stats;
 
-  console.log("stats", stats)
 
   let lives;
   let streak;
@@ -204,7 +208,9 @@ export async function launchApp(data, phraseType) {
   }
 
   
-  buildPageStructure(data);
+
+  //buildPageStructure();
+  buildPageStructureQuiz();
   displayTense(data);
 
   setSpecialBtns();
@@ -216,7 +222,15 @@ export async function launchApp(data, phraseType) {
   // Generating a unique index and displaying a verb and a phrase
   try {
     k = generateElements({data, indexArray, k, score, phraseStats, phraseType});
-     phraseCount++;
+    console.log("k", k)
+
+    phraseCount++;
+  
+    let quizResult = await handleQuizAnswerSubmit({ data, k, phraseCount, score, boxes, phraseStats, lives, userId });
+    
+    ({ score, boxes, lives } = quizResult);
+
+     
   } catch (error) {
     console.error(error.message);
     showNoMorePhrasesPage(score, phraseStats); 
@@ -244,34 +258,86 @@ export async function launchApp(data, phraseType) {
 
   const accountBtn = document.querySelector(".menu-element.account");
   
-  submitBtn.addEventListener("click", ()=> {
+  // Submit button listener for the type mode
+  if(submitBtn) {
+    submitBtn.addEventListener("click", ()=> {
     
-    let result = checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, lives, userId });
-    ({ score, boxes, lives } = result);
-   
-  })
+      let result = checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, lives, userId });
+      ({ score, boxes, lives } = result);
+     
+    })
+  }
+  
 
-  nextBtn.addEventListener("click", ()=> {
-    conjugSection.innerHTML = "";
-        infoPopupSection.innerHTML = "";
-        conjugSection.style.display = "none";
-        infoPopupSection.style.display = "none";
-        learnMoreSection.style.display = "none";
-      
-        phraseDisplay.style.color = "black";
-        inputArea.style.color = "black";
-        k = displayNext({data, indexArray, k, score, phraseStats, phraseType});
-        phraseCount++;
+
+
+  nextBtn.addEventListener("click", async ()=> {
+
+    if(conjugSection) {
+      conjugSection.innerHTML = "";
+      conjugSection.style.display = "none";
+    }
+
+    if(infoPopupSection) {
+      infoPopupSection.innerHTML = "";
+      infoPopupSection.style.display = "none";
+    }
+    
+    if(learnMoreSection) {
+      learnMoreSection.style.display = "none";
+    }
+        
+    if(phraseDisplay) {
+      phraseDisplay.style.color = "black";
+    }
+    
+    if(inputArea) {
+      inputArea.style.color = "black";
+    }
+
+
+    const selectedOption = document.querySelector(".selectedOption"); 
+    const correctOption = document.querySelector(".correct-option");
+
+    if(selectedOption) {
+      selectedOption.style.color = "black";
+      selectedOption.classList.remove("selectedOption");
+    }
+
+    const correctTick = document.querySelector(".fa-circle-check");
+    if(correctOption && correctTick) {
+      correctOption.removeChild(correctTick);
+    }
+
+    if(correctOption) {
+      correctOption.classList.remove("correct-option");
+    }
+    
+    
+   
+    
+    k = displayNext({data, indexArray, k, score, phraseStats, phraseType});
+    phraseCount++;
+
+    let quizResult = await handleQuizAnswerSubmit({ data, k, phraseCount, score, boxes, phraseStats, lives, userId });
+    ({ score, boxes, lives } = quizResult);
+        
         if(!userId) {
           localStorage.setItem("lives", lives);
-        }
+        }   
         
   })
 
 
   finishBtn.addEventListener("click", ()=> {
-    infoPopupSection.style.display = "none";
+
+    if(infoPopupSection) {
+      infoPopupSection.style.display = "none";
+    }
+    
+    if(conjugSection) {
       conjugSection.style.display = "none";
+    }
       const statsContainer = document.querySelector(".stats-container");
 
       //playEnd();
