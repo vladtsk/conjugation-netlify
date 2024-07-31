@@ -22,6 +22,6 @@ export function playIncorrect() {
 
 //End of exercise sound effect
 export function playEnd() {
-  const endSound = new Audio("src/positive-notification.mp3");
+  const endSound = new Audio("src/success-fanfare.mp3");
   endSound.play();
 }

@@ -284,6 +284,7 @@ main {
   font-size: 24px;
 }
 
+
 /* Question section */
 .questionSection {
   
@@ -523,12 +524,14 @@ select {
 
 /* Styling the start section */
 
-.start-section {
+.start-section, .first-next-section {
   display: flex;
   margin-top: 50px;
 }
 
-#start-btn {
+
+
+#start-btn, #first-next-btn {
   margin: auto;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -554,15 +557,69 @@ select {
   text-decoration: underline;
 }
 
+/* The exercise mode section */
+
+.mode-div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.modeSection h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.type-mode img, .quiz-mode img {
+  width: 100px;
+}
+
+.type-mode h2, .quiz-mode h2 {
+  font-size: 22px;
+  text-align: center;
+}
+
+.modeH1 {
+  margin-top: 10px;
+  font-size: 26px;
+}
+
+/*
+.typeModeBox, .quizModeBox {
+  padding: 5px;
+
+}
+*/
+.quiz-mode, .type-mode {
+  border: solid 3px var(--color-secondary);
+  padding: 5px;
+}
+
+.typeModeBox p, .quizModeBox p {
+  font-size: 18px;
+  
+}
+
+ 
+
 /* Styling the sections displaying a tense and a verb to conjugate */
 .tense-display-section {
-  display: flex;
+  /*display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
+  gap: 20px;*/
+
+  font-size: 16px;
+  margin-top: 10px;
   margin-bottom: 20px;
+
+ 
    
 }
 
@@ -650,7 +707,7 @@ select {
 /* Styling the section where a user can type their answer */
 .type-section {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -709,7 +766,7 @@ button[disabled] {
   background-color: var(--color-secondary);
   font-weight: 600;
 
-  width: 40%;
+  min-width: 40%;
   border-radius: 6px;
 }
 

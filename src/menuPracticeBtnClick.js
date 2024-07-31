@@ -1,6 +1,6 @@
 // Open the first page when the practice button is clicked
 
-import { launchFirstPage } from "./readDbData.js";
+import { launchFirstPage } from "./firstPageLaunch.js";
 //import { generateLoader } from "./loader.js";
 
 export function managePracticeBtnClick() {

@@ -1,6 +1,6 @@
 // Functions that dinamically build the pages
 
-import { launchFirstPage } from "./readDbData.js";
+import { launchFirstPage } from "./firstPageLaunch.js";
 import { generateGraph, buildGraph } from "./graphs.js";
 import { selectPracticeBtn } from "./menuPracticeBtnClick.js";
 
@@ -19,7 +19,24 @@ export function buildPageStructure() {
   tenseDisplaySection.classList.add("tense-display-section");
   mainSection.appendChild(tenseDisplaySection);
 
-  const tensePElement = document.createElement("p");
+  const typeModeH1 = document.createElement("h1");
+  typeModeH1.classList.add("modeH1");
+  typeModeH1.innerHTML = "<i class='fa-solid fa-bolt'></i> Typing mode";
+
+  mainSection.appendChild(typeModeH1);
+
+
+  // Question section
+  const questionSection = document.createElement("div");
+  questionSection.classList.add("questionSection");
+
+  const questionN = document.createElement("p");
+  questionN.classList.add("questionNumber");
+  questionSection.appendChild(questionN);
+
+  mainSection.appendChild(questionSection);
+
+  /*const tensePElement = document.createElement("p");
   tensePElement.innerText = "The tense:";
   tenseDisplaySection.appendChild(tensePElement);
 
@@ -29,9 +46,9 @@ export function buildPageStructure() {
 
   const tenseDisplayP = document.createElement("p");
   tenseDisplay.appendChild(tenseDisplayP);
-
+*/
   // Verb display section
-  const verbDisplaySection = document.createElement("div");
+  /*const verbDisplaySection = document.createElement("div");
   verbDisplaySection.classList.add("verb-display-section");
   mainSection.appendChild(verbDisplaySection);
 
@@ -45,14 +62,14 @@ export function buildPageStructure() {
 
   const verbDisplayP = document.createElement("p");
   verbDisplay.appendChild(verbDisplayP);
-
+*/
   // Phrase section
   const phraseSection = document.createElement("div");
   phraseSection.classList.add("phrase-section");
   mainSection.appendChild(phraseSection);
 
-  const phraseSectionP = document.createElement("p");
-  phraseSection.appendChild(phraseSectionP);
+  /*const phraseSectionP = document.createElement("p");
+  phraseSection.appendChild(phraseSectionP);*/
 
   // Letters section
   const lettersSection = document.createElement("div");
@@ -181,6 +198,7 @@ export function buildPageStructureQuiz() {
   mainSection.innerHTML = "";
 
   const quizH1 = document.createElement("h1");
+  quizH1.classList.add("modeH1")
   quizH1.innerHTML = "<i class='fa-solid fa-bolt'></i> Quiz";
 
   mainSection.appendChild(quizH1);
@@ -198,33 +216,6 @@ export function buildPageStructureQuiz() {
   mainSection.appendChild(questionSection);
 
 
-  /*const questionSectionPElement = document.createElement("p");
-  questionSectionPElement.innerText = "";
-  questionSection.appendChild(questionSectionPElement);
-
-  const tenseDisplay = document.createElement("div");
-  tenseDisplay.classList.add("tense-display");
-  tenseDisplaySection.appendChild(tenseDisplay);
-
-  const tenseDisplayP = document.createElement("p");
-  tenseDisplay.appendChild(tenseDisplayP);
-
-  // Verb display section
-  const verbDisplaySection = document.createElement("div");
-  verbDisplaySection.classList.add("verb-display-section");
-  mainSection.appendChild(verbDisplaySection);
-
-  const verbPElement = document.createElement("p");
-  verbPElement.innerText = "The verb to conjugate:";
-  verbDisplaySection.appendChild(verbPElement);
-
-  const verbDisplay = document.createElement("div");
-  verbDisplay.classList.add("verb-display");
-  verbDisplaySection.appendChild(verbDisplay);
-
-  const verbDisplayP = document.createElement("p");
-  verbDisplay.appendChild(verbDisplayP);
-  */
 
   // Phrase section
   const phraseSection = document.createElement("div");
@@ -533,6 +524,7 @@ export function showNoMorePhrasesPage(score, phraseStats) {
   const footer = document.querySelector("footer");
   const nav = document.querySelector("nav");
   const livesEl = document.querySelector(".lives");
+  const statsContainer = document.querySelector(".stats-container");
   
   const restartSection = document.createElement("div");
   restartSection.classList.add("restart");
@@ -607,6 +599,11 @@ export function showNoMorePhrasesPage(score, phraseStats) {
     sidebarContainer.style.display = "flex";
     sidebarTabletContainer.style.display = "flex";
     footer.style.display = "block";
+
+    if(statsContainer) {
+      statsContainer.style.display = "none";
+    }
+    
     
     launchFirstPage();
   });

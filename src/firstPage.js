@@ -101,19 +101,16 @@ export async function buildFirstPage(userId) {
     })
   
     
+    // Next button on the first pqge
+    const firstNextSection = document.createElement("div");
+    firstNextSection.classList.add("first-next-section");
+    mainSection.appendChild(firstNextSection);
+    
+    const firstNextBtn = document.createElement("button");
+    firstNextBtn.id = "first-next-btn";
+    firstNextBtn.innerText = "Next";
+    firstNextSection.appendChild(firstNextBtn);
   
-  
-    // Start button
-  
-    const startSection = document.createElement("div");
-    startSection.classList.add("start-section");
-    mainSection.appendChild(startSection);
-  
-    const startBtn = document.createElement("button");
-    startBtn.id = "start-btn";
-    startBtn.innerText = "Start now!";
-    startSection.appendChild(startBtn);
-
     // 'First time here button'
     const firstTimeDiv = document.createElement("div");
     firstTimeDiv.classList.add("firstTimeDiv");
@@ -134,7 +131,21 @@ export async function buildFirstPage(userId) {
       
       });
     }
+  
+    // Start button
+  
+    /*const startSection = document.createElement("div");
+    startSection.classList.add("start-section");
+    mainSection.appendChild(startSection);
+  
+    const startBtn = document.createElement("button");
+    startBtn.id = "start-btn";
+    startBtn.innerText = "Start now!";
+    startSection.appendChild(startBtn);
+
     
+    }
+    */
   
   
     buildTenseSelectPopup(userId);

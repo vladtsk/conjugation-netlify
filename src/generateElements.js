@@ -3,7 +3,7 @@ import { showNoMorePhrasesPage } from "./pagesetup.js";
 import { filterVerbs } from "./verbFilter.js";
 
 // A function generating a unique index and displaying a verb and a phrase corresponding to the index
-export function generateElements({data, indexArray, k, score, phraseStats, phraseType}) {
+export function generateElements({data, indexArray, k, score, phraseStats, phraseType, mode}) {
   
   let filteredVerbsIndexArray = [];
 
@@ -37,12 +37,15 @@ export function generateElements({data, indexArray, k, score, phraseStats, phras
 
     indexArray.push(k);
 
-    console.log("phraseStats", phraseStats);
 
     let questionN = phraseStats.length + 1;
-    displayVerb(data, k, questionN);
+    displayVerb(data, k, questionN, mode);
     displayPhrase(data, k);
-    displayOptions(data, k)
+
+    if(mode === "quizMode") {
+      displayOptions(data, k);
+    }
+    
   } else {
     console.log("No more phrases to practise!");
     showNoMorePhrasesPage(score, phraseStats); // the data is not added to DB here
@@ -53,23 +56,32 @@ export function generateElements({data, indexArray, k, score, phraseStats, phras
 }
 
 // A function that displays a verb to conjugate
-function displayVerb(data, k, phraseCount) {
+function displayVerb(data, k, phraseCount, mode) {
   // Selecting the verb display section
   const verbDisplay = document.querySelector(".verb-display p");
   const questionSection = document.querySelector(".questionSection");
 
-  if (data && data.data.length > 0 && verbDisplay) {
+ /* if (data && data.data.length > 0 && verbDisplay) {
     verbDisplay.textContent = data.data[k].verb;
-  } else if (data && data.data.length > 0 && questionSection) {
-
+  } else */
+  
+  if (data && data.data.length > 0 && questionSection) {
+    
     questionSection.innerHTML = "";
     const question = document.createElement("p");
     question.innerHTML = `Question ${phraseCount} / 5`;
     questionSection.appendChild(question);
 
     const verbQ = document.createElement("div");
-    verbQ.innerHTML = `<p>Select the correct conjugation of&nbsp;the&nbsp;verb</p> <p class="verbP">${data.data[k].verb}</p>`;
-    questionSection.appendChild(verbQ);
+
+    if(mode === "quizMode") {
+      verbQ.innerHTML = `<p>Select the correct conjugation of&nbsp;the&nbsp;verb</p> <p class="verbP">${data.data[k].verb}</p>`;
+      questionSection.appendChild(verbQ);
+    } else {
+      verbQ.innerHTML = `<p>Type the correct conjugation of the verb <span class="verbP">${data.data[k].verb}</span> in the selected tense</p>`;
+      questionSection.appendChild(verbQ);
+    }
+    
 
   }
 
@@ -80,9 +92,9 @@ function displayVerb(data, k, phraseCount) {
 // A function that displays a phrase (the context)
 function displayPhrase(data, k) {
   // Selecting the phrase section
-  const phraseDisplay = document.querySelector(".phrase-section");
-  if (data && data.data.length > 0) {
-    phraseDisplay.textContent = data.data[k].phrase;
+  const phraseSection = document.querySelector(".phrase-section");
+  if (data && data.data.length > 0 && phraseSection) {
+    phraseSection.textContent = data.data[k].phrase;
   }
 }
 
@@ -128,15 +140,15 @@ function displayOptions(data, k) {
 // A function displaying the tense
 export function displayTense(data) {
   // Selecting the tense display section
-  const tenseDisplay = document.querySelector(".tense-display p");
+  const tenseDisplay = document.querySelector(".tense-display-section");
   // Displaying the tense
   if (data && data.data.length > 0 && tenseDisplay) {
-    tenseDisplay.textContent = data.data[0].tense;
+    tenseDisplay.innerHTML = `<i class="fa-regular fa-calendar"></i> ${data.data[0].tense}` ;
   }
 }
 
 // Display the next element
-export function displayNext({data, indexArray, k, score, phraseStats, phraseType}) {
+export function displayNext({data, indexArray, k, score, phraseStats, phraseType, mode}) {
   // Select the 'next' section
   const nextSection = document.querySelector(".next-section");
 
@@ -176,7 +188,7 @@ export function displayNext({data, indexArray, k, score, phraseStats, phraseType
 
 
   try {
-    k = generateElements({data, indexArray, k, score, phraseStats, phraseType});
+    k = generateElements({data, indexArray, k, score, phraseStats, phraseType, mode});
   } catch (error) {
     console.error(error.message);
     showNoMorePhrasesPage(score, phraseStats); 

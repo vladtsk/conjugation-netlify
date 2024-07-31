@@ -7,7 +7,9 @@ import {
   showResultPage,
 } from "./pagesetup.js";
 
-import { launchFirstPage, getData } from "./readDbData.js";
+import { getData } from "./readDbData.js";
+
+import { launchFirstPage } from "./firstPageLaunch.js";
 
 import {
   generateElements,
@@ -34,7 +36,7 @@ import { handleQuizAnswerSubmit } from "./checkAnswerQuiz.js";
 
 import emailjs from '@emailjs/browser';
 
-//import { playEnd } from "./playAudio.js";
+import { playEnd } from "./playAudio.js";
 
 import { generateRulesPopupSection, generateBlurContainer } from "./rulesPopup.js";
 
@@ -85,7 +87,7 @@ document.addEventListener("click", handleClickOutsidePopup);
 
 
 // A function launching the app
-export async function launchApp(data, phraseType) {
+export async function launchApp(data, phraseType, mode) {
  
   const { app } = fetchFirebaseConfig();
   const database = getDatabase(app);
@@ -208,9 +210,13 @@ export async function launchApp(data, phraseType) {
   }
 
   
-
-  //buildPageStructure();
-  buildPageStructureQuiz();
+  if(mode === "typeMode") {
+    buildPageStructure();
+  } else {
+    buildPageStructureQuiz();
+  }
+  
+  
   displayTense(data);
 
   setSpecialBtns();
@@ -221,15 +227,19 @@ export async function launchApp(data, phraseType) {
 
   // Generating a unique index and displaying a verb and a phrase
   try {
-    k = generateElements({data, indexArray, k, score, phraseStats, phraseType});
-    console.log("k", k)
+    k = generateElements({data, indexArray, k, score, phraseStats, phraseType, mode});
+    console.log("mode", mode)
 
     phraseCount++;
   
-    let quizResult = await handleQuizAnswerSubmit({ data, k, phraseCount, score, boxes, phraseStats, lives, userId });
-    
-    ({ score, boxes, lives } = quizResult);
 
+    let quizResult;
+    if(mode === "quizMode") {
+      console.log("quiz mode")
+      quizResult = await handleQuizAnswerSubmit({ data, k, phraseCount, score, boxes, phraseStats, lives, userId });
+      ({ score, boxes, lives } = quizResult);
+    }
+    
      
   } catch (error) {
     console.error(error.message);
@@ -259,7 +269,8 @@ export async function launchApp(data, phraseType) {
   const accountBtn = document.querySelector(".menu-element.account");
   
   // Submit button listener for the type mode
-  if(submitBtn) {
+  if(mode === "typeMode" && submitBtn) {
+    console.log("type mode")
     submitBtn.addEventListener("click", ()=> {
     
       let result = checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, lives, userId });
@@ -270,7 +281,7 @@ export async function launchApp(data, phraseType) {
   
 
 
-
+if(nextBtn) {
   nextBtn.addEventListener("click", async ()=> {
 
     if(conjugSection) {
@@ -316,17 +327,25 @@ export async function launchApp(data, phraseType) {
     
    
     
-    k = displayNext({data, indexArray, k, score, phraseStats, phraseType});
+    k = displayNext({data, indexArray, k, score, phraseStats, phraseType, mode});
     phraseCount++;
 
-    let quizResult = await handleQuizAnswerSubmit({ data, k, phraseCount, score, boxes, phraseStats, lives, userId });
-    ({ score, boxes, lives } = quizResult);
+    let quizNewResult;
+    if(mode === "quizMode") {
+      quizNewResult = await handleQuizAnswerSubmit({ data, k, phraseCount, score, boxes, phraseStats, lives, userId });
+      ({ score, boxes, lives } = quizNewResult);
+    }
+    
         
-        if(!userId) {
-          localStorage.setItem("lives", lives);
-        }   
+      if(!userId) {
+         localStorage.setItem("lives", lives);
+       }   
+
+      })
+}
+  
         
-  })
+  
 
 
   finishBtn.addEventListener("click", ()=> {
@@ -340,7 +359,7 @@ export async function launchApp(data, phraseType) {
     }
       const statsContainer = document.querySelector(".stats-container");
 
-      //playEnd();
+      playEnd();
 
       if(accountBtn) {
         accountBtn.style.display = "none";

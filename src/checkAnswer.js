@@ -69,7 +69,7 @@ export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, l
 
 
   // The phrase display section
-  const phraseDisplay = document.querySelector(".phrase-section p");
+  const phraseSection = document.querySelector(".phrase-section");
 
 
   const inputText = inputArea.value;
@@ -100,7 +100,7 @@ export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, l
 
   if(inputText.trim().toLowerCase() !== "") {
     inputArea.classList.add("bold");
-    phraseDisplay.innerHTML = "";
+    phraseSection.innerHTML = "";
 
 
     // Hide the special characters section

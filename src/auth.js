@@ -28,7 +28,9 @@ import { showErrorMsg } from "./authErrorMsg.js";
 import { resetPassword } from "./passReset.js";
 
 import { selectPracticeBtn, deselectAllMenuBtns } from "./menuPracticeBtnClick.js";
-import { launchFirstPage, getUser } from "./readDbData.js";
+import { getUser } from "./readDbData.js";
+
+import { launchFirstPage } from "./firstPageLaunch.js";
 
 import { validateContactForm } from "./authErrorMsg.js";
 

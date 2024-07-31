@@ -1,6 +1,6 @@
 // Functions used in the first part of the application
 
-import { buildFirstPage } from "./firstPage.js";
+
 
 import {
   ref,
@@ -12,21 +12,13 @@ import {
   
 } from "./firebaseConfig.js";
 
-import { launchApp } from "./index.js";
 
-import { showNoSubMessage } from "./noSubPageMessage.js";
-
-import { checkTimeDifference } from "./livesManager.js";
-
-import { showNoMoreLivesMessage } from "./noLivesPageMessage.js";
-
-import { generateLoader, hideLoader } from "./loader.js";
 
 
 
 let auth, database;
 
-async function getAuthDatabase() {
+export async function getAuthDatabase() {
   const { app } = await fetchFirebaseConfig();
   auth = getAuth(app);
   database = getDatabase(app);
@@ -35,151 +27,11 @@ async function getAuthDatabase() {
 getAuthDatabase();
 
 
-export async function launchFirstPage() {
-  const contentArea = document.querySelector(".content-area");
-  contentArea.innerHTML = "";
-  
-  generateLoader();
-
-  await getAuthDatabase();
-
-  const { subStatus, userId } = await getSubscriptionStatus();
-
-  let livesString = localStorage.getItem("lives");
-  let lives;
-
-  if(livesString && livesString !== "undefined") {
-    lives = parseInt(livesString);
-
-  } else {
-    lives = 7;
-    localStorage.setItem("lives", 7);
-  }
-
-  let timeDifferenceMnts = checkTimeDifference(); // the time difference between the last time the user used the app and now (in minutes)
-
-  if(userId) {
-    if(subStatus === "active") {
-      await buildFirstPage(userId);
-    } else {
-      showNoSubMessage(); 
-    }
-  } else if(lives > 0) {
-    await buildFirstPage(userId);
-  } else if (lives === 0 && timeDifferenceMnts >= 60) {
-   
-    lives = 7;
-    localStorage.setItem("lives", 7);
-    await buildFirstPage(userId);
-  } else {
- 
-    showNoMoreLivesMessage(); 
-  }
-
-  hideLoader();
-  
-  //let phraseNumber = 5; // Making sure the phrase number is back to its default value
-
-  //let phraseType = "mixed"; // Choosing the default type of phrases (verbs) to practise
 
 
-  // Fetching the present tense data by default
-  let jsonData;
-  try {
-    let response = await fetch("../src/present.json");
-    jsonData = await response.json();
-    
-  } catch(error) {
-    console.error("Couldn't fetch Present tense data ", error);
-  }
-  
-
- 
-  const startBtn = document.getElementById("start-btn");
-
-  const sidebarContainer = document.querySelector(".sidebarContainer");
-  const sidebarTabletContainer = document.querySelector(
-    ".sidebarTabletContainer"
-  );
-  const footer = document.querySelector("footer");
-  const nav = document.querySelector("nav");
-  const livesEl = document.querySelector(".lives");
-  const statsContainer = document.querySelector(".stats-container");
-
-  // Adding an event listener on the start button
- 
-  if (startBtn) {
-
-    startBtn.addEventListener("click", async() => {
-      const phraseTypeEl = document.getElementById("phraseType");
-
-      //phraseNumber = parseInt(phraseNb.textContent);
-      const phraseType = phraseTypeEl.innerText;
-
-      const {selectedTense, tenseValue} = getTenseFromSelectElement();
-
-      // Remember the choice in the browser
-      localStorage.setItem("phraseType", phraseType);
-      localStorage.setItem("selectedTense", selectedTense);
-      
-      if (tenseValue !== "present") {
-        jsonData = await getJsonData(tenseValue);
-        launchApp(jsonData, phraseType);
-      } else {
-        launchApp(jsonData, phraseType);
-      }
-      
-
-      nav.style.display = "none";
-      sidebarContainer.style.display = "none";
-      sidebarTabletContainer.style.display = "none";
-      footer.style.display = "none";
-      if(!userId) {
-        livesEl.style.display = "flex";
-        livesEl.style.color = "#2b2d42";
-      } else {
-        livesEl.style.display = "none";
-      }
-
-      statsContainer.style.display = "flex";
-    });
-  }
 
 
-}
-
-function getTenseFromSelectElement() {
-  let tenseValue;
-  const currentTenseEl = document.querySelector(".currentTense");
-  const selectedTense = currentTenseEl.textContent;
-  switch (selectedTense) {
-    case "present (le présent de l'indicatif)":  
-    tenseValue = "present";
-    break;
-
-    case "past (le passé composé)":
-    tenseValue = "pastComp";
-    break;
-    
-    case "imperfect past (l'imparfait)":
-    tenseValue = "pastImp";
-    break;
-
-    case "future (le futur simple)":
-    tenseValue = "future";
-    break;
-
-    case "present subjunctive (le subjonctif présent)":
-    tenseValue = "subjunctive";
-    break;
-
-    default:
-      console.log("unkown tense");
-  }
-  return {selectedTense, tenseValue};
-}
-
-async function getJsonData(tenseValue) {
+export async function getJsonData(tenseValue) {
   let jsonData;
     try {
       const response = await fetch(`../src/${tenseValue}.json`);
