@@ -5,6 +5,12 @@ import { launchApp } from "./index.js";
 
 export async function buildModePage(tenseValue, phraseType, userId) {
 
+  const img1 = new Image();
+  img1.src = "../public/typing.png";
+
+  const img2 = new Image();
+  img2.src = "../public/quiz.png";
+ 
   const livesEl = document.querySelector(".lives");
   const statsContainer = document.querySelector(".stats-container");
   
@@ -44,7 +50,7 @@ export async function buildModePage(tenseValue, phraseType, userId) {
   modeDiv.appendChild(typeMode);
   
   const typeModeImage = document.createElement("img");
-  typeModeImage.setAttribute("src", "../public/typing.png");
+  typeModeImage.src = img1.src;
   typeModeImage.setAttribute("alt", "Type mode image");
   typeModeImage.setAttribute('width', '100px');
   typeModeImage.classList.add("typeModeImage");
@@ -71,7 +77,7 @@ export async function buildModePage(tenseValue, phraseType, userId) {
   modeDiv.appendChild(quizMode);
   
   const quizModeImage = document.createElement("img");
-  quizModeImage.setAttribute("src", "../public/quiz.png");
+  quizModeImage.src = img2.src;
   quizModeImage.setAttribute("alt", "Type mode image");
   quizModeImage.setAttribute('width', '100px');
   quizModeImage.classList.add("quizModeImage");

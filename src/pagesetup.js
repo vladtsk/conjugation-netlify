@@ -324,6 +324,10 @@ export function setSpecialBtns() {
 }
 
 export function showResultPage({score, phraseStats, stats, userId, streak}) {
+
+  const img = new Image();
+  img.src = "../public/trophy.png";
+
   const main = document.querySelector("main");
   const mainSection = document.querySelector(".mainSection");
   mainSection.innerHTML = "";
@@ -365,7 +369,7 @@ export function showResultPage({score, phraseStats, stats, userId, streak}) {
 
   const trophyImage = document.createElement("img");
   
-  trophyImage.setAttribute("src", "../public/trophy.png");
+  trophyImage.src = img.src;
   trophyImage.setAttribute("alt", "Trophy");
   trophyImage.classList.add("trophyImage");
 
@@ -410,7 +414,10 @@ export function showResultPage({score, phraseStats, stats, userId, streak}) {
   showSummaryBtn.innerText = "show summary";
   restartSection.appendChild(showSummaryBtn);
 
-  mainSection.appendChild(resultSection);
+  img.onload = ()=>{
+    mainSection.appendChild(resultSection);
+  }
+  
   
 /*
   if (userId) {
