@@ -349,22 +349,19 @@ export function showResultPage({score, phraseStats, stats, userId, streak}) {
   const nav = document.querySelector("nav");
   //const livesEl = document.querySelector(".lives");
 
+  const resultSection = document.createElement("div");
+  resultSection.classList.add("resultSection");
+
+
   const resultDiv = document.createElement("div");
   resultDiv.classList.add("result");
-  mainSection.appendChild(resultDiv);
+  
 
   const resultMsg = document.createElement("p");
   resultMsg.innerText = "You have finished the exercise!";
   resultDiv.appendChild(resultMsg);
 
-  const scoreDiv = document.createElement("div");
-  scoreDiv.classList.add("score-section");
-  mainSection.appendChild(scoreDiv);
-
-  /*const trophyIcon = document.createElement("i");
-  trophyIcon.classList.add("fa-solid");
-  trophyIcon.classList.add("fa-trophy");
-  scoreDiv.appendChild(trophyIcon);*/
+  resultSection.appendChild(resultDiv);
 
   const trophyImage = document.createElement("img");
   
@@ -372,25 +369,37 @@ export function showResultPage({score, phraseStats, stats, userId, streak}) {
   trophyImage.setAttribute("alt", "Trophy");
   trophyImage.classList.add("trophyImage");
 
+  trophyImage.setAttribute('width', '180px');
+  trophyImage.setAttribute('loading', 'lazy');
 
-  scoreDiv.appendChild(trophyImage);
+  resultSection.appendChild(trophyImage);
 
+  const scoreDiv = document.createElement("div");
+  scoreDiv.classList.add("score-section");
+  resultSection.appendChild(scoreDiv);
+
+  /*const trophyIcon = document.createElement("i");
+  trophyIcon.classList.add("fa-solid");
+  trophyIcon.classList.add("fa-trophy");
+  scoreDiv.appendChild(trophyIcon);*/
 
   const scoreMsg = document.createElement("p");
   scoreMsg.innerHTML = `Your score: ${score}/${phraseStats.length}`;
   scoreDiv.appendChild(scoreMsg);
 
 
+
   const streakDiv = document.createElement("div");
   streakDiv.classList.add("streak-section");
-  mainSection.appendChild(streakDiv);
+  resultSection.appendChild(streakDiv);
 
   streakDiv.innerHTML = `Your streak: <i class="fa-solid fa-fire"></i> ${streak}`;
   
 
   const restartSection = document.createElement("div");
   restartSection.classList.add("restart");
-  mainSection.appendChild(restartSection);
+  resultSection.appendChild(restartSection);
+
   const restartBtn = document.createElement("button");
   restartBtn.id = "restart-btn";
   restartBtn.innerText = "restart";
@@ -400,6 +409,8 @@ export function showResultPage({score, phraseStats, stats, userId, streak}) {
   showSummaryBtn.id = "showSummary-btn";
   showSummaryBtn.innerText = "show summary";
   restartSection.appendChild(showSummaryBtn);
+
+  mainSection.appendChild(resultSection);
   
 /*
   if (userId) {

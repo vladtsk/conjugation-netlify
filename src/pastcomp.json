@@ -520,7 +520,7 @@
     {
       "id": 55,
       "verb": "aller",
-      "phrase": "Où est-ce que tu (féminine) ____ ?",
+      "phrase": "Où est-ce que tu (fem.) ____ ?",
       "answer": "es allée",
       "answerWoS": "es allé",
       "aux": "être",

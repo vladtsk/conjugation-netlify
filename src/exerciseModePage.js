@@ -24,7 +24,6 @@ export async function buildModePage(tenseValue, phraseType, userId) {
   
   const modeSection = document.createElement("div");
   modeSection.classList.add("modeSection");
-  mainSection.appendChild(modeSection);
 
   const modeH = document.createElement("h1");
   modeH.innerText = "Select an exercise type";
@@ -47,7 +46,9 @@ export async function buildModePage(tenseValue, phraseType, userId) {
   const typeModeImage = document.createElement("img");
   typeModeImage.setAttribute("src", "../public/typing.png");
   typeModeImage.setAttribute("alt", "Type mode image");
+  typeModeImage.setAttribute('width', '100px');
   typeModeImage.classList.add("typeModeImage");
+  typeModeImage.setAttribute('loading', 'lazy');
   
   typeMode.appendChild(typeModeImage);
 
@@ -72,7 +73,9 @@ export async function buildModePage(tenseValue, phraseType, userId) {
   const quizModeImage = document.createElement("img");
   quizModeImage.setAttribute("src", "../public/quiz.png");
   quizModeImage.setAttribute("alt", "Type mode image");
+  quizModeImage.setAttribute('width', '100px');
   quizModeImage.classList.add("quizModeImage");
+  typeModeImage.setAttribute('loading', 'lazy');
   
   quizMode.appendChild(quizModeImage);
 
@@ -88,6 +91,7 @@ export async function buildModePage(tenseValue, phraseType, userId) {
   quizModeDescrip.textContent = "Practise verb conjugation by selecting the correct verb form from multiple-choice options.";
   quizModeBox.appendChild(quizModeDescrip);
 
+  mainSection.appendChild(modeSection);
 
   let mode;
 
