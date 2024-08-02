@@ -197,6 +197,11 @@ export function buildPageStructureQuiz() {
 
   mainSection.innerHTML = "";
 
+  // Tense display section
+  const tenseDisplaySection = document.createElement("div");
+  tenseDisplaySection.classList.add("tense-display-section");
+  mainSection.appendChild(tenseDisplaySection);
+
   const quizH1 = document.createElement("h1");
   quizH1.classList.add("modeH1")
   quizH1.innerHTML = "<i class='fa-solid fa-bolt'></i> Quiz";
@@ -330,10 +335,9 @@ export function showResultPage({score, phraseStats, stats, userId, streak}) {
 
   const main = document.querySelector("main");
   const mainSection = document.querySelector(".mainSection");
-  mainSection.innerHTML = "";
-
   const contentArea = document.querySelector(".content-area");
   const infoPopupSection = document.querySelector(".infoPopupSection");
+
   if(infoPopupSection) {
     main.removeChild(infoPopupSection);
   }
@@ -414,8 +418,13 @@ export function showResultPage({score, phraseStats, stats, userId, streak}) {
   showSummaryBtn.innerText = "show summary";
   restartSection.appendChild(showSummaryBtn);
 
+  //resultSection.style.display = "none";
+
   img.onload = ()=>{
+    mainSection.innerHTML = "";
     mainSection.appendChild(resultSection);
+
+    //resultSection.style.display = "flex";
   }
   
   
@@ -620,6 +629,11 @@ export function showNoMorePhrasesPage(score, phraseStats) {
 
     if(statsContainer) {
       statsContainer.style.display = "none";
+    }
+
+    if(nav) {
+      console.log("nav")
+      nav.style.display = "flex";
     }
     
     

@@ -176,6 +176,8 @@ export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, l
           if(livesEl) {
             livesEl.style.color = "#ef233c";
           }
+
+          localStorage.setItem("appLastUseTime", Date.now().toString());
         }
        
       }

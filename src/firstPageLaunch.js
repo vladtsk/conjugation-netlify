@@ -36,10 +36,14 @@ export async function launchFirstPage() {
     } else {
       lives = 7;
       localStorage.setItem("lives", 7);
+      console.log("else")
     }
   
     let timeDifferenceMnts = checkTimeDifference(); // the time difference between the last time the user used the app and now (in minutes)
   
+    console.log("timeDifferenceMnts", timeDifferenceMnts);
+    console.log("lives First page launch", lives)
+
     if(userId) {
       if(subStatus === "active") {
         await buildFirstPage(userId);
@@ -52,6 +56,9 @@ export async function launchFirstPage() {
      
       lives = 7;
       localStorage.setItem("lives", 7);
+      console.log("lives = 0 & timedif > 60")
+
+
       await buildFirstPage(userId);
     } else {
    

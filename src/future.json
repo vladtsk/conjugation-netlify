@@ -5,6 +5,9 @@
         "verb": "être",
         "phrase": "Il ____ à Paris cette semaine.",
         "answer": "sera",
+        "incorrect1": "seras",
+        "incorrect2": "serez",
+        "incorrect3": "serai",
         "fullPhrase": "Il sera à Paris cette semaine.",
         "tense": "future (le futur simple)",
         "tenseShort": "future",
@@ -16,6 +19,9 @@
         "verb": "avoir",
         "phrase": "J' ____ plusieurs choses à vous dire.",
         "answer": "aurai",
+        "incorrect1": "auras",
+        "incorrect2": "aurez",
+        "incorrect3": "aura",
         "fullPhrase": "J'aurai plusieurs choses à vous dire.",
         "translation": "I will have several things to tell you.",
         "irregular": true
@@ -25,6 +31,9 @@
         "verb": "faire",
         "phrase": "Vous ____ des exercices.",
         "answer": "ferez",
+        "incorrect1": "ferai",
+        "incorrect2": "fairez",
+        "incorrect3": "ferrez",
         "fullPhrase": "Vous ferez des exercices.",
         "translation": "You will do exercises.",
         "irregular": true
@@ -34,6 +43,9 @@
         "verb": "dire",
         "phrase": "Tu ____ des choses intéressantes.",
         "answer": "diras",
+        "incorrect1": "dira",
+        "incorrect2": "direz",
+        "incorrect3": "dieras",
         "fullPhrase": "Tu diras des choses intéressantes.",
         "translation": "You will say interesting things."
       },
@@ -42,6 +54,9 @@
         "verb": "mettre",
         "phrase": "Je ____ de l'argent de côté.",
         "answer": "mettrai",
+        "incorrect1": "mettra",
+        "incorrect2": "mettras",
+        "incorrect3": "mettrons",
         "fullPhrase": "Je mettrai de l'argent de côté.",
         "translation": "I will set aside some money."
       },
@@ -50,6 +65,9 @@
         "verb": "appeler",
         "phrase": "On t' ____ demain.",
         "answer": "appellera",
+        "incorrect1": "appelerons",
+        "incorrect2": "appelerai",
+        "incorrect3": "appelleras",
         "fullPhrase": "On t'appellera demain.",
         "translation": "We will call you tomorrow.",
         "spelling": "eler"
@@ -59,6 +77,9 @@
         "verb": "venir",
         "phrase": "Tu ____ me voir.",
         "answer": "viendras",
+        "incorrect1": "viendra",
+        "incorrect2": "viendrez",
+        "incorrect3": "viendront",
         "fullPhrase": "Tu viendras me voir.",
         "translation": "You will come to see me.",
         "irregular": true
@@ -68,6 +89,9 @@
         "verb": "avoir",
         "phrase": "Il y____ des choses à faire.",
         "answer": "aura",
+        "incorrect1": "auront",
+        "incorrect2": "aurez",
+        "incorrect3": "aurai",
         "fullPhrase": "Il y aura des choses à faire.",
         "translation": "There will be things to do.",
         "irregular": true
@@ -77,6 +101,9 @@
         "verb": "devoir",
         "phrase": "Tu ____ te reposer.",
         "answer": "devras",
+        "incorrect1": "devra",
+        "incorrect2": "devrons",
+        "incorrect3": "devrez",
         "fullPhrase": "Tu devras te reposer.",
         "translation": "You will have to rest.",
         "irregular": true
@@ -86,6 +113,9 @@
         "verb": "expliquer",
         "phrase": "Nous vous ____ ce qu'il faut faire.",
         "answer": "expliquerons",
+        "incorrect1": "expliqueras",
+        "incorrect2": "expliquerai",
+        "incorrect3": "expliquerez",
         "fullPhrase": "Nous vous expliquerons ce qu'il faut faire.",
         "translation": "We will explain to you what needs to be done."
       },
@@ -94,6 +124,9 @@
         "verb": "pouvoir",
         "phrase": "Je ____ venir ce soir.",
         "answer": "pourrai",
+        "incorrect1": "pourra",
+        "incorrect2": "pourras",
+        "incorrect3": "pourrons",
         "fullPhrase": "Je pourrai venir ce soir.",
         "translation": "I will be able to come tonight.",
         "irregular": true
@@ -103,6 +136,9 @@
         "verb": "devoir",
         "phrase": "Ils ____ retourner aux États-Unis.",
         "answer": "devront",
+        "incorrect1": "devrons",
+        "incorrect2": "devrions",
+        "incorrect3": "devrez",
         "fullPhrase": "Ils devront retourner aux États-Unis.",
         "translation": "They will have to return to the United States.",
         "irregular": true
@@ -112,6 +148,9 @@
         "verb": "se marier",
         "phrase": "On ____ l'année prochaine.",
         "answer": "se mariera",
+        "incorrect1": "se marierons",
+        "incorrect2": "se marieras",
+        "incorrect3": "se marieront",
         "fullPhrase": "On se mariera l'année prochaine.",
         "translation": "We will get married next year."
       },
@@ -120,6 +159,9 @@
         "verb": "finir",
         "phrase": "Tu ____ cet exercice avant ce soir.",
         "answer": "finiras",
+        "incorrect1": "finira",
+        "incorrect2": "finirez",
+        "incorrect3": "finirons",
         "fullPhrase": "Tu finiras cet exercice avant ce soir.",
         "translation": "You will finish this exercise before tonight."
       },
@@ -128,6 +170,9 @@
         "verb": "continuer",
         "phrase": "Je ____ à apprendre le français.",
         "answer": "continuerai",
+        "incorrect1": "continueras",
+        "incorrect2": "continuerez",
+        "incorrect3": "continuerons",
         "fullPhrase": "Je continuerai à apprendre le français.",
         "translation": "I will continue to learn French."
       },
@@ -136,6 +181,9 @@
         "verb": "revoir",
         "phrase": "Nous ____ nos amis bientôt.",
         "answer": "reverrons",
+        "incorrect1": "reverra",
+        "incorrect2": "reverront",
+        "incorrect3": "reverrez",
         "fullPhrase": "Nous reverrons nos amis bientôt.",
         "translation": "We will see our friends again soon.",
         "irregular": true
@@ -145,6 +193,9 @@
         "verb": "prendre",
         "phrase": "Je ____ le bus.",
         "answer": "prendrai",
+        "incorrect1": "prendras",
+        "incorrect2": "prendra",
+        "incorrect3": "prendrez",
         "fullPhrase": "Je prendrai le bus.",
         "translation": "I will take the bus."
       },
@@ -153,6 +204,9 @@
         "verb": "revenir",
         "phrase": "Elles ____ dans 3 jours.",
         "answer": "reviendront",
+        "incorrect1": "reviendra",
+        "incorrect2": "reviendrez",
+        "incorrect3": "reviendrai",
         "fullPhrase": "Elles reviendront dans 3 jours.",
         "translation": "They will come back in 3 days.",
         "irregular": true
@@ -162,6 +216,9 @@
         "verb": "pouvoir",
         "phrase": "Vous ____ les aider.",
         "answer": "pourrez",
+        "incorrect1": "pourrons",
+        "incorrect2": "pourra",
+        "incorrect3": "pourras",
         "fullPhrase": "Vous pourrez les aider.",
         "translation": "You will be able to help them.",
         "irregular": true
@@ -171,6 +228,9 @@
         "verb": "aller",
         "phrase": "J'____ à Londres l'année prochaine.",
         "answer": "irai",
+        "incorrect1": "iras",
+        "incorrect2": "irons",
+        "incorrect3": "irez",
         "fullPhrase": "J'irai à Londres l'année prochaine.",
         "translation": "I will go to London next year.",
         "irregular": true
@@ -180,6 +240,9 @@
         "verb": "pouvoir",
         "phrase": "Elle ne ____ pas y aller.",
         "answer": "pourra",
+        "incorrect1": "pourrons",
+        "incorrect2": "pourrez",
+        "incorrect3": "pourras",
         "fullPhrase": "Elle ne pourra pas y aller.",
         "translation": "She will not be able to go (there).",
         "irregular": true
@@ -189,6 +252,9 @@
         "verb": "partir",
         "phrase": "Tu ____ à quelle heure ?",
         "answer": "partiras",
+        "incorrect1": "partira",
+        "incorrect2": "partirons",
+        "incorrect3": "partirez",
         "fullPhrase": "Tu partiras à quelle heure ?",
         "translation": "What time will you leave?"
       },
@@ -197,6 +263,9 @@
         "verb": "vouloir",
         "phrase": "On ____ jouer avec toi.",
         "answer": "voudra",
+        "incorrect1": "voudrons",
+        "incorrect2": "voudrez",
+        "incorrect3": "voudras",
         "fullPhrase": "On voudra jouer avec toi.",
         "translation": "We will want to play with you.",
         "irregular": true
@@ -206,6 +275,9 @@
         "verb": "devoir",
         "phrase": "Il ____ s'occuper de sa famille.",
         "answer": "devra",
+        "incorrect1": "devrez",
+        "incorrect2": "devrons",
+        "incorrect3": "devras",
         "fullPhrase": "Il devra s'occuper de sa famille.",
         "translation": "He will have to take care of his family.",
         "irregular": true
@@ -215,6 +287,9 @@
         "verb": "vouloir",
         "phrase": "Tu ____ le faire pour moi ?",
         "answer": "voudras",
+        "incorrect1": "voudra",
+        "incorrect2": "voudrez",
+        "incorrect3": "voudrons",
         "fullPhrase": "Tu voudras le faire pour moi ?",
         "translation": "Will you want to do it for me?",
         "irregular": true
@@ -224,6 +299,9 @@
         "verb": "envoyer",
         "phrase": "Je vous ____ un e-mail demain.",
         "answer": "enverrai",
+        "incorrect1": "enverra",
+        "incorrect2": "enverrez",
+        "incorrect3": "enverrons",
         "fullPhrase": "Je vous enverrai un e-mail demain.",
         "translation": "I will send you an email tomorrow.",
         "irregular": true
@@ -233,6 +311,9 @@
         "verb": "étudier",
         "phrase": "J' ____ à Grenoble l'année prochaine.",
         "answer": "étudierai",
+        "incorrect1": "étudieras",
+        "incorrect2": "étudiera",
+        "incorrect3": "étudierons",
         "fullPhrase": "J'étudierai à Grenoble l'année prochaine.",
         "translation": "I will study in Grenoble next year."
       },
@@ -241,6 +322,9 @@
         "verb": "rencontrer",
         "phrase": "Le patron ____ les salariés le 6 mai.",
         "answer": "rencontrera",
+        "incorrect1": "rencontrerons",
+        "incorrect2": "rencontrerez",
+        "incorrect3": "rencontreras",
         "fullPhrase": "Le patron rencontrera les salariés le 6 mai.",
         "translation": "The boss will meet the employees on May 6."
       },
@@ -249,6 +333,9 @@
         "verb": "rentrer",
         "phrase": "Nous ____ à minuit.",
         "answer": "rentrerons",
+        "incorrect1": "rentrera",
+        "incorrect2": "rentreras",
+        "incorrect3": "rentrerez",
         "fullPhrase": "Nous rentrerons à minuit.",
         "translation": "We will come (back) home at midnight."
       },
@@ -257,6 +344,9 @@
         "verb": "briller",
         "phrase": "Le soleil ____ sur toute la France.",
         "answer": "brillera",
+        "incorrect1": "brillerons",
+        "incorrect2": "brilleras",
+        "incorrect3": "brillerez",
         "fullPhrase": "Le soleil brillera sur toute la France.",
         "translation": "The sun will shine all over France."
       },
@@ -265,6 +355,9 @@
         "verb": "voyager",
         "phrase": "On ____ en Europe.",
         "answer": "voyagera",
+        "incorrect1": "voyagerons",
+        "incorrect2": "voyageras",
+        "incorrect3": "voyagerez",
         "fullPhrase": "On voyagera en Europe.",
         "translation": "We will travel in Europe."
       },
@@ -273,6 +366,9 @@
         "verb": "visiter",
         "phrase": "Il ____ le Portugal.",
         "answer": "visitera",
+        "incorrect1": "visiteras",
+        "incorrect2": "visiterons",
+        "incorrect3": "visiterez",
         "fullPhrase": "Il visitera le Portugal.",
         "translation": "He will visit Portugal."
       },
@@ -281,6 +377,9 @@
         "verb": "commencer",
         "phrase": "Les travaux ____ le 15 mars.",
         "answer": "commenceront",
+        "incorrect1": "commencerons",
+        "incorrect2": "commenceras",
+        "incorrect3": "commencerez",
         "fullPhrase": "Les travaux commenceront le 15 mars.",
         "translation": "The work will start on March 15."
       },
@@ -289,6 +388,9 @@
         "verb": "réussir",
         "phrase": "Je ____ mes examens.",
         "answer": "réussirai",
+        "incorrect1": "réussiras",
+        "incorrect2": "réussira",
+        "incorrect3": "réussirons",
         "fullPhrase": "Je réussirai mes examens.",
         "translation": "I will pass my exams."
       },
@@ -297,6 +399,9 @@
         "verb": "apporter",
         "phrase": "Nous ____ du chocolat.",
         "answer": "apporterons",
+        "incorrect1": "apportera",
+        "incorrect2": "apporteras",
+        "incorrect3": "apporterez",
         "fullPhrase": "Nous apporterons du chocolat.",
         "translation": "We will bring chocolate."
       },
@@ -305,6 +410,9 @@
         "verb": "signer",
         "phrase": "Vous ____ le document.",
         "answer": "signerez",
+        "incorrect1": "signerons",
+        "incorrect2": "signeras",
+        "incorrect3": "signera",
         "fullPhrase": "Vous signerez le document.",
         "translation": "You will sign the document."
       },
@@ -313,6 +421,9 @@
         "verb": "offrir",
         "phrase": "Tu lui ____ des fleurs ?",
         "answer": "offriras",
+        "incorrect1": "offrira",
+        "incorrect2": "offrirons",
+        "incorrect3": "offrirez",
         "fullPhrase": "Tu lui offriras des fleurs ?",
         "translation": "Will you give her/him flowers?"
       },
@@ -321,6 +432,9 @@
         "verb": "fermer",
         "phrase": "Tu ____ la porte avant de partir.",
         "answer": "fermeras",
+        "incorrect1": "fermera",
+        "incorrect2": "fermerons",
+        "incorrect3": "fermerez",
         "fullPhrase": "Tu fermeras la porte avant de partir.",
         "translation": "You will close the door before leaving."
       },
@@ -329,6 +443,9 @@
         "verb": "arriver",
         "phrase": "On ____ le 11 avril.",
         "answer": "arrivera",
+        "incorrect1": "arriverons",
+        "incorrect2": "arriveras",
+        "incorrect3": "arriverez",
         "fullPhrase": "On arrivera le 11 avril.",
         "translation": "We will arrive on April 11th."
       },
@@ -337,6 +454,9 @@
         "verb": "dîner",
         "phrase": "Nous ____ ensemble.",
         "answer": "dînerons",
+        "incorrect1": "dînera",
+        "incorrect2": "dîneras",
+        "incorrect3": "dînerez",
         "fullPhrase": "Nous dînerons ensemble.",
         "translation": "We will have dinner together."
       },
@@ -345,6 +465,9 @@
         "verb": "déjeuner",
         "phrase": "Je ____ plus tard.",
         "answer": "déjeunerai",
+        "incorrect1": "déjeunera",
+        "incorrect2": "déjeunerons",
+        "incorrect3": "déjeuneront",
         "fullPhrase": "Je déjeunerai plus tard.",
         "translation": "I will have lunch later."
       },
@@ -353,8 +476,11 @@
         "verb": "essayer",
         "phrase": "Ils ____ de terminer avant 18 h.",
         "answer": "essayeront",
-        "alternativeAnswer": "essaierons",
-        "fullPhrase": "Ils essayeront/essaierons de terminer avant 18 h.",
+        "alternativeAnswer": "essaieront",
+        "incorrect1": "essaieras",
+        "incorrect2": "essaierai",
+        "incorrect3": "essaiera",
+        "fullPhrase": "Ils essayeront/essaieront de terminer avant 18 h.",
         "translation": "They will try to finish before 6 p.m."
       },
       {
@@ -362,6 +488,9 @@
         "verb": "rencontrer",
         "phrase": "Vous ____ votre beau-père.",
         "answer": "rencontrerez",
+        "incorrect1": "rencontrerons",
+        "incorrect2": "rencontreras",
+        "incorrect3": "rencontrera",
         "fullPhrase": "Vous rencontrerez votre beau-père.",
         "translation": "You will meet your father-in-law."
       },
@@ -370,6 +499,9 @@
         "verb": "commencer",
         "phrase": "Tu ____ ton entraînement en juillet ?",
         "answer": "commenceras",
+        "incorrect1": "commencera",
+        "incorrect2": "commencerons",
+        "incorrect3": "commencerez",
         "fullPhrase": "Tu commenceras ton entraînement en juillet ?",
         "translation": "Will you start your training in July?"
       },
@@ -378,6 +510,9 @@
         "verb": "retrouver",
         "phrase": "Elle nous ____ en ville.",
         "answer": "retrouvera",
+        "incorrect1": "retrouveras",
+        "incorrect2": "retrouverons",
+        "incorrect3": "retrouverez",
         "fullPhrase": "Elle nous retrouvera en ville.",
         "translation": "She will meet us in town."
       },
@@ -387,8 +522,11 @@
         "phrase": "Je me ____ à 6 heures.",
         "answer": "lèverai",
         "alternativeAnswer": "me lèverai",
+        "incorrect1": "lèveras",
+        "incorrect2": "lèvera",
+        "incorrect3": "lèverons",
         "fullPhrase": "Je me lèverai à 6 heures.",
-        "translation": "I will get up at 6 o'clock",
+        "translation": "I will get up at 6 o'clock.",
         "spelling": "eChange"
       },
       {
@@ -396,6 +534,9 @@
         "verb": "acheter",
         "phrase": "J' ____ une belle maison.",
         "answer": "achèterai",
+        "incorrect1": "achèteras",
+        "incorrect2": "achèterons",
+        "incorrect3": "achèterez",
         "fullPhrase": "J'achèterai une belle maison.",
         "translation": "I will buy a beautiful house.",
         "spelling": "eChange"

@@ -124,7 +124,7 @@ export async function launchApp(data, phraseType, mode) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  // A "lives" system for non-authenticated users
+  // A "lives" qnd streak system for non-authenticated users
   if(!userId) {
     
     const storedTimeStamp = localStorage.getItem("streakLastChangeTime");
@@ -418,7 +418,10 @@ if(nextBtn) {
         console.log("User is signed out");
       }
 
-      localStorage.setItem("appLastUseTime", currenttimestamp.toString());
+      if(!userId) {
+        localStorage.setItem("appLastUseTime", currenttimestamp.toString());
+      }
+      
       showResultPage({score, phraseStats, stats, userId, streak});
   })
 

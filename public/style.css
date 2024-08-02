@@ -143,6 +143,9 @@ nav .fa-circle-question, .fa-circle-user,
   display: inline-block;
 }
 
+.streak .fa-fire {
+  color: var(--color-tertiary);
+}
 
 
 /*
@@ -567,6 +570,8 @@ select {
   gap: 10px;
   margin-bottom: 10px;
   font-size: 24px;
+
+  max-width: 440px;
 }
 
 .modeSection h1 {
@@ -1039,6 +1044,10 @@ button[disabled] {
   flex-direction: column;
   align-items: center;
  
+}
+
+.fa-heart-crack {
+  color: var(--color-tertiary);
 }
 
 
@@ -1571,6 +1580,12 @@ button[disabled] {
     padding-right: 25px;
   }
 
+  .mode-div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   .chart {
     width: 400px;
     margin-inline: 20px auto;
@@ -1637,6 +1652,12 @@ button[disabled] {
   nav {
     gap: 10px;
     padding-right: 10px;
+  }
+
+  .mode-div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .practice i,

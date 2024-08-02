@@ -5,6 +5,9 @@
       "verb": "avoir",
       "phrase": "Il y ____ beaucoup de monde.",
       "answer": "avait",
+      "incorrect1": "avais",
+      "incorrect2": "avaient",
+      "incorrect3": "aviait",
       "fullPhrase": "Il y avait beaucoup de monde.",
       "tense": "imperfect past (l'imparfait)",
       "tenseShort": "pastimp",
@@ -16,6 +19,9 @@
       "verb": "aller",
       "phrase": "Elles ____ à la mer.",
       "answer": "allaient",
+      "incorrect1": "allais",
+      "incorrect2": "allait",
+      "incorrect3": "alliai",
       "fullPhrase": "Elles allaient à la mer.",
       "translation": "They used to go to the seaside.",
       "pattern": "ils"
@@ -25,6 +31,9 @@
       "verb": "être",
       "phrase": "Tu ____ calme.",
       "answer": "étais",
+      "incorrect1": "était",
+      "incorrect2": "étaient",
+      "incorrect3": "étaie",
       "fullPhrase": "Tu étais calme.",
       "translation": "You were calm.",
       "pattern": "tu"
@@ -34,6 +43,9 @@
       "verb": "dormir",
       "phrase": "Vous ____ bien ?",
       "answer": "dormiez",
+      "incorrect1": "dormais",
+      "incorrect2": "dormait",
+      "incorrect3": "dormions",
       "fullPhrase": "Vous dormiez bien ?",
       "translation": "Were you sleeping / did you sleep well?",
       "pattern": "vous"
@@ -43,6 +55,9 @@
       "verb": "boire",
       "phrase": "Je ____ du thé.",
       "answer": "buvais",
+      "incorrect1": "buvait",
+      "incorrect2": "buvions",
+      "incorrect3": "buvaient",
       "fullPhrase": "Je buvais du thé.",
       "translation": "I was drinking tea.",
       "pattern": "je"
@@ -52,6 +67,9 @@
       "verb": "prendre",
       "phrase": "On ____ un bain le dimanche.",
       "answer": "prenait",
+      "incorrect1": "prenais",
+      "incorrect2": "prenions",
+      "incorrect3": "preniez",
       "fullPhrase": "On prenait un bain le dimanche.",
       "translation": "We used to take a bath on Sundays.",
       "pattern": "il"
@@ -61,15 +79,21 @@
       "verb": "se promener",
       "phrase": "Tu ____ beaucoup.",
       "answer": "te promenais",
+      "incorrect1": "te promenait",
+      "incorrect2": "te promenions",
+      "incorrect3": "te promenez",
       "fullPhrase": "Tu te promenais beaucoup.",
       "translation": "You used to walk a lot.",
-      "pattern": "il"
+      "pattern": "tu"
     },
     {
       "id": 8,
       "verb": "lire",
       "phrase": "Elle ____ tous les jours.",
       "answer": "lisait",
+      "incorrect1": "lisais",
+      "incorrect2": "lisions",
+      "incorrect3": "lisiez",
       "fullPhrase": "Elle lisait tous les jours.",
       "translation": "She used to read every day.",
       "pattern": "il"
@@ -79,6 +103,9 @@
       "verb": "étudier",
       "phrase": "Vous ____ chez vous.",
       "answer": "étudiiez",
+      "incorrect1": "étudiais",
+      "incorrect2": "étudiait",
+      "incorrect3": "étudiions",
       "fullPhrase": "Vous étudiiez chez vous.",
       "translation": "You were studying at home.",
       "pattern": "vous",
@@ -89,6 +116,9 @@
       "verb": "faire",
       "phrase": "Nous ____ beaucoup de bruit.",
       "answer": "faisions",
+      "incorrect1": "faisais",
+      "incorrect2": "faisait",
+      "incorrect3": "faisiez",
       "fullPhrase": "Nous faisions beaucoup de bruit.",
       "translation": "We were making a lot of noise.",
       "pattern": "noun"
@@ -98,6 +128,9 @@
       "verb": "envoyer",
       "phrase": "Avant, on ____ des lettres.",
       "answer": "envoyait",
+      "incorrect1": "envoyais",
+      "incorrect2": "envoyions",
+      "incorrect3": "envoyiez",
       "fullPhrase": "Avant, on envoyait des lettres.",
       "translation": "In the past, people used to send letters.",
       "pattern": "il"
@@ -107,6 +140,9 @@
       "verb": "avoir",
       "phrase": "Avant, tout le monde ____ une radio.",
       "answer": "avait",
+      "incorrect1": "avais",
+      "incorrect2": "avions",
+      "incorrect3": "aviez",
       "fullPhrase": "Avant, tout le monde avait une radio.",
       "translation": "Everyone used to have a radio.",
       "pattern": "il"
@@ -116,6 +152,9 @@
       "verb": "laver",
       "phrase": "Avant, on ____ son linge à la main.",
       "answer": "lavait",
+      "incorrect1": "lavais",
+      "incorrect2": "lavions",
+      "incorrect3": "lavez",
       "fullPhrase": "Avant, on lavait son linge à la main.",
       "translation": "In the past, people used to wash their clothes by hand.",
       "pattern": "il"
@@ -125,6 +164,9 @@
       "verb": "travailler",
       "phrase": "Avant, les Français ____ 45 h par semaine.",
       "answer": "travaillaient",
+      "incorrect1": "travaillait",
+      "incorrect2": "travaillons",
+      "incorrect3": "travailliez",
       "fullPhrase": "Avant, les Français travaillaient 45 h par semaine.",
       "translation": "The French used to work 45 hours per week.",
       "pattern": "ils"
@@ -134,6 +176,9 @@
       "verb": "acheter",
       "phrase": "Avant, on ____ le lait à la ferme.",
       "answer": "achetait",
+      "incorrect1": "achetais",
+      "incorrect2": "achetions",
+      "incorrect3": "achetiez",
       "fullPhrase": "Avant, on achetait le lait à la ferme.",
       "translation": "People used to buy milk from the farm.",
       "pattern": "il"
@@ -143,6 +188,9 @@
       "verb": "prendre",
       "phrase": "On ne ____ pas le train.",
       "answer": "prenait",
+      "incorrect1": "prenais",
+      "incorrect2": "prenions",
+      "incorrect3": "preniez",
       "fullPhrase": "On ne prenait pas le train.",
       "translation": "We didn't take the train.",
       "pattern": "il"
@@ -152,6 +200,9 @@
       "verb": "conduire",
       "phrase": "On ____ des voitures.",
       "answer": "conduisait",
+      "incorrect1": "conduisais",
+      "incorrect2": "conduisions",
+      "incorrect3": "conduisiez",
       "fullPhrase": "On conduisait des voitures.",
       "translation": "We/people used to drive cars.",
       "pattern": "il"
@@ -161,6 +212,9 @@
       "verb": "écrire",
       "phrase": "Les gens ____ des lettres.",
       "answer": "écrivaient",
+      "incorrect1": "écrivait",
+      "incorrect2": "écrivais",
+      "incorrect3": "écrivions",
       "fullPhrase": "Les gens écrivaient des lettres.",
       "translation": "People used to write letters.",
       "pattern": "ils"
@@ -170,6 +224,9 @@
       "verb": "avoir",
       "phrase": "Ils n'____ pas la télévision.",
       "answer": "avaient",
+      "incorrect1": "avais",
+      "incorrect2": "avait",
+      "incorrect3": "avions",
       "fullPhrase": "Ils n'avaient pas la télévision.",
       "translation": "They didn't have a television.",
       "pattern": "ils"
@@ -179,15 +236,22 @@
       "verb": "lire",
       "phrase": "Ils ____ le journal.",
       "answer": "lisaient",
+      "incorrect1": "lisait",
+      "incorrect2": "lisais",
+      "incorrect3": "lisions",
       "fullPhrase": "Ils lisaient le journal.",
       "translation": "They used to read the newspaper.",
       "pattern": "ils"
     },
+
     {
       "id": 21,
       "verb": "s'occuper",
-      "phrase": "Les femmes ____ des enfants.",
-      "answer": "s'occupaient",
+      "phrase": "Les femmes s'____ des enfants.",
+      "answer": "occupaient",
+      "incorrect1": "occupait",
+      "incorrect2": "occupais",
+      "incorrect3": "occupions",
       "fullPhrase": "Les femmes s'occupaient des enfants.",
       "translation": "Women used to take care of children.",
       "pattern": "ils"
@@ -197,6 +261,9 @@
       "verb": "voyager",
       "phrase": "On ne ____ pas à l'étranger.",
       "answer": "voyageait",
+      "incorrect1": "voyageais",
+      "incorrect2": "voyagions",
+      "incorrect3": "voyagiez",
       "fullPhrase": "On ne voyageait pas à l'étranger.",
       "translation": "We/people didn't travel abroad.",
       "pattern": "il"
@@ -206,6 +273,9 @@
       "verb": "parler",
       "phrase": "On ____ avec nos voisins.",
       "answer": "parlait",
+      "incorrect1": "parlais",
+      "incorrect2": "parlions",
+      "incorrect3": "parliez",
       "fullPhrase": "On parlait avec nos voisins.",
       "translation": "We used to talk to our neighbours.",
       "pattern": "il"
@@ -215,6 +285,9 @@
       "verb": "aller",
       "phrase": "Les enfants n'____ pas à l'école le jeudi.",
       "answer": "allaient",
+      "incorrect1": "allait",
+      "incorrect2": "allais",
+      "incorrect3": "allions",
       "fullPhrase": "Les enfants n'allaient pas à l'école le jeudi.",
       "translation": "Children didn't go to school on Thursdays.",
       "pattern": "ils"
@@ -224,6 +297,9 @@
       "verb": "jouer",
       "phrase": "Quand j'étais petite, je ____ à la poupée.",
       "answer": "jouais",
+      "incorrect1": "jouait",
+      "incorrect2": "jouions",
+      "incorrect3": "jouiez",
       "fullPhrase": "Quand j'étais petite, je jouais à la poupée.",
       "translation": "When I was little, I used to play with dolls.",
       "pattern": "je"
@@ -233,6 +309,9 @@
       "verb": "lire",
       "phrase": "Je ____ des livres.",
       "answer": "lisais",
+      "incorrect1": "lisait",
+      "incorrect2": "lisions",
+      "incorrect3": "lisiez",
       "fullPhrase": "Je lisais des livres.",
       "translation": "I used to read books.",
       "pattern": "je"
@@ -242,6 +321,9 @@
       "verb": "aider",
       "phrase": "J'____ mes parents à la maison.",
       "answer": "aidais",
+      "incorrect1": "aidait",
+      "incorrect2": "aidions",
+      "incorrect3": "aidiez",
       "fullPhrase": "J'aidais mes parents à la maison.",
       "translation": "I used to help my parents at home.",
       "pattern": "je"
@@ -251,6 +333,9 @@
       "verb": "se coucher",
       "phrase": "Je ____ à 21 h.",
       "answer": "me couchais",
+      "incorrect1": "me couchait",
+      "incorrect2": "me couchions",
+      "incorrect3": "me couchiez",
       "fullPhrase": "Je me couchais à 21 h.",
       "translation": "I used to go to bed at 9 p.m.",
       "pattern": "je"
@@ -260,6 +345,9 @@
       "verb": "rendre visite",
       "phrase": "Je ____ à mes grands-parents tous les week-ends.",
       "answer": "rendais visite",
+      "incorrect1": "rendait visite",
+      "incorrect2": "rendions visite",
+      "incorrect3": "rendiez visite",
       "fullPhrase": "Je rendais visite à mes grands-parents tous les week-ends.",
       "translation": "I used to visit my grandparents every weekend.",
       "pattern": "je"
@@ -269,6 +357,9 @@
       "verb": "habiter",
       "phrase": "Ils ____ à la campagne.",
       "answer": "habitaient",
+      "incorrect1": "habitait",
+      "incorrect2": "habitais",
+      "incorrect3": "habitions",
       "fullPhrase": "Ils habitaient à la campagne.",
       "translation": "They used to live in the countryside.",
       "pattern": "ils"
@@ -278,6 +369,9 @@
       "verb": "cuisiner",
       "phrase": "Je ____ avec ma grand-mère.",
       "answer": "cuisinais",
+      "incorrect1": "cuisinait",
+      "incorrect2": "cuisinions",
+      "incorrect3": "cuisiniez",
       "fullPhrase": "Je cuisinais avec ma grand-mère.",
       "translation": "I used to cook with my grandmother.",
       "pattern": "je"
@@ -287,6 +381,9 @@
       "verb": "se promener",
       "phrase": "On ____ dans le parc.",
       "answer": "se promenait",
+      "incorrect1": "se promenais",
+      "incorrect2": "se promenions",
+      "incorrect3": "se promeniez",
       "fullPhrase": "On se promenait dans le parc.",
       "translation": "We used to walk in the park.",
       "pattern": "il"
@@ -296,6 +393,9 @@
       "verb": "regarder",
       "phrase": "Je ne ____ jamais la télé.",
       "answer": "regardais",
+      "incorrect1": "regardait",
+      "incorrect2": "regardions",
+      "incorrect3": "regardiez",
       "fullPhrase": "Je ne regardais jamais la télé.",
       "translation": "I never watched TV.",
       "pattern": "je"
@@ -305,6 +405,9 @@
       "verb": "pleuvoir",
       "phrase": "Il ____ quand les enfants sont sortis.",
       "answer": "pleuvait",
+      "incorrect1": "pleuvais",
+      "incorrect2": "pleuvions",
+      "incorrect3": "pleuviez",
       "fullPhrase": "Il pleuvait quand les enfants sont sortis.",
       "translation": "It was raining when the children went out.",
       "pattern": "il"
@@ -314,6 +417,9 @@
       "verb": "faire",
       "phrase": "On ____ les courses.",
       "answer": "faisait",
+      "incorrect1": "faisais",
+      "incorrect2": "faisions",
+      "incorrect3": "faisiez",
       "fullPhrase": "On faisait les courses.",
       "translation": "We were shopping.",
       "pattern": "il"
@@ -323,6 +429,9 @@
       "verb": "être",
       "phrase": "Nous ____ dehors.",
       "answer": "étions",
+      "incorrect1": "étais",
+      "incorrect2": "était",
+      "incorrect3": "étiez",
       "fullPhrase": "Nous étions dehors.",
       "translation": "We were outside.",
       "pattern": "nous"
@@ -332,6 +441,9 @@
       "verb": "avoir",
       "phrase": "Ils ____ 10 ans quand on a pris cette photo.",
       "answer": "avaient",
+      "incorrect1": "avais",
+      "incorrect2": "avait",
+      "incorrect3": "avions",
       "fullPhrase": "Ils avaient 10 ans quand on a pris cette photo.",
       "translation": "They were 10 years old when this photo was taken.",
       "pattern": "ils"
@@ -341,6 +453,9 @@
       "verb": "prendre",
       "phrase": "Je ____ une douche.",
       "answer": "prenais",
+      "incorrect1": "prenait",
+      "incorrect2": "prenions",
+      "incorrect3": "preniez",
       "fullPhrase": "Je prenais une douche.",
       "translation": "I was taking a shower.",
       "pattern": "je"
@@ -350,6 +465,9 @@
       "verb": "faire",
       "phrase": "Il ____ froid.",
       "answer": "faisait",
+      "incorrect1": "faisais",
+      "incorrect2": "faisions",
+      "incorrect3": "faisiez",
       "fullPhrase": "Il faisait froid.",
       "translation": "It was cold.",
       "pattern": "il"
@@ -359,6 +477,9 @@
       "verb": "aimer",
       "phrase": "J'____ beaucoup la musique.",
       "answer": "aimais",
+      "incorrect1": "aimait",
+      "incorrect2": "aimions",
+      "incorrect3": "aimiez",
       "fullPhrase": "J'aimais beaucoup la musique.",
       "translation": "I used to like music a lot.",
       "pattern": "je"
@@ -368,6 +489,9 @@
       "verb": "ouvrir",
       "phrase": "J'____ une boîte de sardines.",
       "answer": "ouvrais",
+      "incorrect1": "ouvrait",
+      "incorrect2": "ouvrions",
+      "incorrect3": "ouvriez",
       "fullPhrase": "J'ouvrais une boîte de sardines.",
       "translation": "I was opening a tin of sardines.",
       "pattern": "je"
@@ -377,6 +501,9 @@
       "verb": "faire",
       "phrase": "Il ____ du ski.",
       "answer": "faisait",
+      "incorrect1": "faisais",
+      "incorrect2": "faisions",
+      "incorrect3": "faisiez",
       "fullPhrase": "Il faisait du ski.",
       "translation": "He used to ski.",
       "pattern": "il"
@@ -386,6 +513,9 @@
       "verb": "comprendre",
       "phrase": "Je ne ____ pas.",
       "answer": "comprenais",
+      "incorrect1": "comprenait",
+      "incorrect2": "comprenions",
+      "incorrect3": "compreniez",
       "fullPhrase": "Je ne comprenais pas.",
       "translation": "I didn't understand.",
       "pattern": "je"
@@ -395,6 +525,9 @@
       "verb": "être",
       "phrase": "Il ____ malade.",
       "answer": "était",
+      "incorrect1": "étais",
+      "incorrect2": "étions",
+      "incorrect3": "étiez",
       "fullPhrase": "Il était malade.",
       "translation": "He was sick.",
       "pattern": "il"
@@ -404,6 +537,9 @@
       "verb": "connaître",
       "phrase": "Je ne ____ pas la ville.",
       "answer": "connaissais",
+      "incorrect1": "connaissait",
+      "incorrect2": "connaissions",
+      "incorrect3": "connaissiez",
       "fullPhrase": "Je ne connaissais pas la ville.",
       "translation": "I didn't know the city.",
       "pattern": "je"
@@ -413,6 +549,9 @@
       "verb": "habiter",
       "phrase": "Tu te souviens quand nous ____ dans le petit studio ?",
       "answer": "habitions",
+      "incorrect1": "habitais",
+      "incorrect2": "habitait",
+      "incorrect3": "habitiez",
       "fullPhrase": "Tu te souviens quand nous habitions dans le petit studio ?",
       "translation": "Do you remember when we used to live in the small studio?",
       "pattern": "nous"
@@ -422,6 +561,9 @@
       "verb": "faire",
       "phrase": "On ____ la cuisine.",
       "answer": "faisait",
+      "incorrect1": "faisais",
+      "incorrect2": "faisions",
+      "incorrect3": "faisiez",
       "fullPhrase": "On faisait la cuisine.",
       "translation": "We were cooking.",
       "pattern": "il"
@@ -431,6 +573,9 @@
       "verb": "avoir",
       "phrase": "Nous ____ un chat.",
       "answer": "avions",
+      "incorrect1": "avais",
+      "incorrect2": "avait",
+      "incorrect3": "aviez",
       "fullPhrase": "Nous avions un chat.",
       "translation": "We had a cat.",
       "pattern": "nous"
@@ -440,6 +585,9 @@
       "verb": "boire",
       "phrase": "Nous ____ du café.",
       "answer": "buvions",
+      "incorrect1": "buvais",
+      "incorrect2": "buvait",
+      "incorrect3": "buviez",
       "fullPhrase": "Nous buvions du café.",
       "translation": "We used to drink coffee.",
       "pattern": "nous"
@@ -449,15 +597,22 @@
       "verb": "avoir",
       "phrase": "Tu ____ un téléphone quand tu étais petite ?",
       "answer": "avais",
+      "incorrect1": "avait",
+      "incorrect2": "avions",
+      "incorrect3": "aviez",
       "fullPhrase": "Tu avais un téléphone quand tu étais petite ?",
       "translation": "Did you have a phone when you were little?",
       "pattern": "tu"
     },
+    
     {
       "id": 51,
       "verb": "avoir",
       "phrase": "Je n'____ pas de téléphone.",
       "answer": "avais",
+      "incorrect1": "avait",
+      "incorrect2": "avions",
+      "incorrect3": "aviez",
       "fullPhrase": "Je n'avais pas de téléphone.",
       "translation": "I didn't have a phone.",
       "pattern": "je"
@@ -467,6 +622,9 @@
       "verb": "avoir",
       "phrase": "Les gens n'____ pas la même vie que maintenant.",
       "answer": "avaient",
+      "incorrect1": "avais",
+      "incorrect2": "avions",
+      "incorrect3": "aviez",
       "fullPhrase": "Les gens n'avaient pas la même vie que maintenant.",
       "translation": "People didn't have the same life as now.",
       "pattern": "ils"
@@ -476,6 +634,9 @@
       "verb": "avoir",
       "phrase": "On ____ moins de vacances.",
       "answer": "avait",
+      "incorrect1": "avais",
+      "incorrect2": "avions",
+      "incorrect3": "aviez",
       "fullPhrase": "On avait moins de vacances.",
       "translation": "We had fewer holidays.",
       "pattern": "il"
@@ -485,6 +646,9 @@
       "verb": "regarder",
       "phrase": "Tu ____ la télévision ?",
       "answer": "regardais",
+      "incorrect1": "regardait",
+      "incorrect2": "regardions",
+      "incorrect3": "regardiez",
       "fullPhrase": "Tu regardais la télévision ?",
       "translation": "Did you used to watch TV?",
       "pattern": "tu"
@@ -494,6 +658,9 @@
       "verb": "avoir",
       "phrase": "Mes parents n'____ pas la télévision.",
       "answer": "avaient",
+      "incorrect1": "avais",
+      "incorrect2": "avions",
+      "incorrect3": "aviez",
       "fullPhrase": "Mes parents n'avaient pas la télévision.",
       "translation": "My parents didn't have a television.",
       "pattern": "ils"
@@ -503,6 +670,9 @@
       "verb": "écouter",
       "phrase": "On ____ la radio.",
       "answer": "écoutait",
+      "incorrect1": "écoutais",
+      "incorrect2": "écoutions",
+      "incorrect3": "écoutiez",
       "fullPhrase": "On écoutait la radio.",
       "translation": "We used to listen to the radio.",
       "pattern": "il"
@@ -512,6 +682,9 @@
       "verb": "être",
       "phrase": "J'____ petite.",
       "answer": "étais",
+      "incorrect1": "était",
+      "incorrect2": "étions",
+      "incorrect3": "étiez",
       "fullPhrase": "J'étais petite.",
       "translation": "I was little.",
       "pattern": "je"
@@ -521,6 +694,9 @@
       "verb": "lire",
       "phrase": "Avant on ____ plus que maintenant.",
       "answer": "lisait",
+      "incorrect1": "lisais",
+      "incorrect2": "lisions",
+      "incorrect3": "lisiez",
       "fullPhrase": "Avant on lisait plus que maintenant.",
       "translation": "We used to read more than now.",
       "pattern": "il"
@@ -530,6 +706,9 @@
       "verb": "avoir",
       "phrase": "J'____ beaucoup d'amis.",
       "answer": "avais",
+      "incorrect1": "avait",
+      "incorrect2": "avions",
+      "incorrect3": "aviez",
       "fullPhrase": "J'avais beaucoup d'amis.",
       "translation": "I had many friends.",
       "pattern": "je"
@@ -539,6 +718,9 @@
       "verb": "s'amuser",
       "phrase": "On ____ bien.",
       "answer": "s'amusait",
+      "incorrect1": "s'amusais",
+      "incorrect2": "s'amusions",
+      "incorrect3": "s'amusiez",
       "fullPhrase": "On s'amusait bien.",
       "translation": "We had fun.",
       "pattern": "il"
@@ -548,6 +730,9 @@
       "verb": "jouer",
       "phrase": "On ____ dehors.",
       "answer": "jouait",
+      "incorrect1": "jouais",
+      "incorrect2": "jouions",
+      "incorrect3": "jouiez",
       "fullPhrase": "On jouait dehors.",
       "translation": "We used to play outside.",
       "pattern": "il"
@@ -557,6 +742,9 @@
       "verb": "courir",
       "phrase": "On ____ tous les jours.",
       "answer": "courait",
+      "incorrect1": "courais",
+      "incorrect2": "courions",
+      "incorrect3": "couriez",
       "fullPhrase": "On courait tous les jours.",
       "translation": "We used to run every day.",
       "pattern": "il"
@@ -566,6 +754,9 @@
       "verb": "sortir",
       "phrase": "Elle ne ____ plus.",
       "answer": "sortait",
+      "incorrect1": "sortais",
+      "incorrect2": "sortions",
+      "incorrect3": "sortiez",
       "fullPhrase": "Elle ne sortait plus.",
       "translation": "She didn't go out anymore.",
       "pattern": "il"
@@ -573,8 +764,11 @@
     {
       "id": 64,
       "verb": "jouer",
-      "phrase": " Tu ____ au football ?",
+      "phrase": "Tu ____ au football ?",
       "answer": "jouais",
+      "incorrect1": "jouait",
+      "incorrect2": "jouions",
+      "incorrect3": "jouiez",
       "fullPhrase": "Tu jouais au football ?",
       "translation": "Did you (use to) play football?",
       "pattern": "tu"
@@ -584,6 +778,9 @@
       "verb": "parler",
       "phrase": "Ils ____ tout le temps.",
       "answer": "parlaient",
+      "incorrect1": "parlais",
+      "incorrect2": "parlions",
+      "incorrect3": "parliez",
       "fullPhrase": "Ils parlaient tout le temps.",
       "translation": "They used to talk all the time.",
       "pattern": "ils"
@@ -593,6 +790,9 @@
       "verb": "entendre",
       "phrase": "On ____ des conversations.",
       "answer": "entendait",
+      "incorrect1": "entendais",
+      "incorrect2": "entendions",
+      "incorrect3": "entendiez",
       "fullPhrase": "On entendait des conversations.",
       "translation": "We used to hear conversations.",
       "pattern": "il"
@@ -602,6 +802,9 @@
       "verb": "savoir",
       "phrase": "Je ____ que j'avais oublié quelque chose.",
       "answer": "savais",
+      "incorrect1": "savait",
+      "incorrect2": "savions",
+      "incorrect3": "saviez",
       "fullPhrase": "Je savais que j'avais oublié quelque chose.",
       "translation": "I knew I had forgotten something.",
       "pattern": "je"
@@ -611,6 +814,9 @@
       "verb": "écrire",
       "phrase": "Il ____ tout ce que je disais.",
       "answer": "écrivait",
+      "incorrect1": "écrivais",
+      "incorrect2": "écrivions",
+      "incorrect3": "écriviez",
       "fullPhrase": "Il écrivait tout ce que je disais.",
       "translation": "He wrote down everything I was saying.",
       "pattern": "il"
@@ -620,6 +826,9 @@
       "verb": "parler",
       "phrase": "Les gens ____ fort.",
       "answer": "parlaient",
+      "incorrect1": "parlais",
+      "incorrect2": "parlions",
+      "incorrect3": "parliez",
       "fullPhrase": "Les gens parlaient fort.",
       "translation": "People were talking loudly.",
       "pattern": "ils"
@@ -629,15 +838,22 @@
       "verb": "avoir",
       "phrase": "Quand j'étais jeune, je n'____ pas de voiture.",
       "answer": "avais",
+      "incorrect1": "avait",
+      "incorrect2": "avions",
+      "incorrect3": "aviez",
       "fullPhrase": "Quand j'étais jeune, je n'avais pas de voiture.",
       "translation": "When I was young, I didn't have a car.",
       "pattern": "je"
     },
+
     {
       "id": 71,
       "verb": "aller",
       "phrase": "J'____ chaque année en vacances dans les Alpes.",
       "answer": "allais",
+      "incorrect1": "allait",
+      "incorrect2": "allions",
+      "incorrect3": "alliez",
       "fullPhrase": "J'allais chaque année en vacances dans les Alpes.",
       "translation": "I used to go on holiday to the Alps every year.",
       "pattern": "je"
@@ -647,6 +863,9 @@
       "verb": "jouer",
       "phrase": "Il ____ toujours au football avec ses copains.",
       "answer": "jouait",
+      "incorrect1": "jouais",
+      "incorrect2": "jouions",
+      "incorrect3": "jouiez",
       "fullPhrase": "Il jouait toujours au football avec ses copains.",
       "translation": "He used to play football with his friends all the time.",
       "pattern": "il"
@@ -656,6 +875,9 @@
       "verb": "penser",
       "phrase": "Je ____ qu'il était malade.",
       "answer": "pensais",
+      "incorrect1": "pensait",
+      "incorrect2": "pensions",
+      "incorrect3": "pensiez",
       "fullPhrase": "Je pensais qu'il était malade.",
       "translation": "I thought he was sick.",
       "pattern": "je"
@@ -665,6 +887,9 @@
       "verb": "croire",
       "phrase": "Je ____ qu'elle avait des enfants.",
       "answer": "croyais",
+      "incorrect1": "croyait",
+      "incorrect2": "croyions",
+      "incorrect3": "croyiez",
       "fullPhrase": "Je croyais qu'elle avait des enfants.",
       "translation": "I thought she had children.",
       "pattern": "je"
@@ -674,6 +899,9 @@
       "verb": "dire",
       "phrase": "Je n'écoutais plus ce qu'elle me ____.",
       "answer": "disait",
+      "incorrect1": "disais",
+      "incorrect2": "disions",
+      "incorrect3": "disiez",
       "fullPhrase": "Je n'écoutais plus ce qu'elle me disait.",
       "translation": "I didn't listen to what she was saying to me anymore.",
       "pattern": "il"
@@ -683,6 +911,9 @@
       "verb": "se sentir",
       "phrase": "Elle ne ____ pas bien.",
       "answer": "se sentait",
+      "incorrect1": "se sentais",
+      "incorrect2": "se sentions",
+      "incorrect3": "se sentiez",
       "fullPhrase": "Elle ne se sentait pas bien.",
       "translation": "She didn't feel well.",
       "pattern": "il"
@@ -692,6 +923,9 @@
       "verb": "sortir",
       "phrase": "Je ____ de la maison quand tu as appelé.",
       "answer": "sortais",
+      "incorrect1": "sortait",
+      "incorrect2": "sortions",
+      "incorrect3": "sortiez",
       "fullPhrase": "Je sortais de la maison quand tu as appelé.",
       "translation": "I was leaving the house when you called.",
       "pattern": "je"
@@ -701,6 +935,9 @@
       "verb": "voir",
       "phrase": "Je ne ____ pas bien quand je ne portais pas de lunettes.",
       "answer": "voyais",
+      "incorrect1": "voyait",
+      "incorrect2": "voyions",
+      "incorrect3": "voyiez",
       "fullPhrase": "Je ne voyais pas bien quand je ne portais pas de lunettes.",
       "translation": "I couldn't see well when I wasn't wearing glasses.",
       "pattern": "je"
@@ -710,6 +947,9 @@
       "verb": "voir",
       "phrase": "On ne ____ rien.",
       "answer": "voyait",
+      "incorrect1": "voyais",
+      "incorrect2": "voyons",
+      "incorrect3": "voyez",
       "fullPhrase": "On ne voyait rien.",
       "translation": "We couldn't see anything.",
       "pattern": "il"
@@ -719,6 +959,9 @@
       "verb": "entendre",
       "phrase": "Elle n'____ pas.",
       "answer": "entendait",
+      "incorrect1": "entendais",
+      "incorrect2": "entendions",
+      "incorrect3": "entendiez",
       "fullPhrase": "Elle n'entendait pas.",
       "translation": "She couldn't hear.",
       "pattern": "il"
@@ -728,6 +971,9 @@
       "verb": "vouloir",
       "phrase": "Je ____ l'aider.",
       "answer": "voulais",
+      "incorrect1": "voulait",
+      "incorrect2": "voulions",
+      "incorrect3": "vouliez",
       "fullPhrase": "Je voulais l'aider.",
       "translation": "I wanted to help her.",
       "pattern": "je"
@@ -737,6 +983,9 @@
       "verb": "vouloir",
       "phrase": "Ma sœur ne ____ pas partir.",
       "answer": "voulait",
+      "incorrect1": "voulais",
+      "incorrect2": "voulions",
+      "incorrect3": "vouliez",
       "fullPhrase": "Ma sœur ne voulait pas partir.",
       "translation": "My sister didn't want to leave.",
       "pattern": "il"
@@ -746,15 +995,22 @@
       "verb": "vouloir",
       "phrase": "On ____ aller à Amsterdam.",
       "answer": "voulait",
+      "incorrect1": "voulais",
+      "incorrect2": "voulions",
+      "incorrect3": "vouliez",
       "fullPhrase": "On voulait aller à Amsterdam.",
       "translation": "We wanted to go to Amsterdam.",
       "pattern": "il"
     },
+
     {
       "id": 84,
       "verb": "vouloir",
       "phrase": "J'ai fait ce que tu ____.",
       "answer": "voulais",
+      "incorrect1": "voulait",
+      "incorrect2": "voulions",
+      "incorrect3": "vouliez",
       "fullPhrase": "J'ai fait ce que tu voulais.",
       "translation": "I did what you wanted.",
       "pattern": "tu"
@@ -764,6 +1020,9 @@
       "verb": "dormir",
       "phrase": "Je ____ beaucoup mieux quand j'étais enfant.",
       "answer": "dormais",
+      "incorrect1": "dormait",
+      "incorrect2": "dormions",
+      "incorrect3": "dormez",
       "fullPhrase": "Je dormais beaucoup mieux quand j'étais enfant.",
       "translation": "I used to sleep much better when I was a child.",
       "pattern": "je"
@@ -773,6 +1032,9 @@
       "verb": "venir",
       "phrase": "Il ne t'a pas dit que je ____.",
       "answer": "venais",
+      "incorrect1": "venait",
+      "incorrect2": "venions",
+      "incorrect3": "venez",
       "fullPhrase": "Il ne t'a pas dit que je venais.",
       "translation": "He didn't tell you that I was coming.",
       "pattern": "je"
@@ -782,6 +1044,9 @@
       "verb": "pouvoir",
       "phrase": "Je ne ____ pas rester.",
       "answer": "pouvais",
+      "incorrect1": "pouvait",
+      "incorrect2": "pouvions",
+      "incorrect3": "pouvez",
       "fullPhrase": "Je ne pouvais pas rester.",
       "translation": "I couldn't stay.",
       "pattern": "je"
@@ -791,6 +1056,9 @@
       "verb": "devoir",
       "phrase": "Il ____ me rappeler, mais il a oublié.",
       "answer": "devait",
+      "incorrect1": "devais",
+      "incorrect2": "devions",
+      "incorrect3": "deviez",
       "fullPhrase": "Il devait me rappeler, mais il a oublié.",
       "translation": "He was supposed to call me back, but he forgot.",
       "pattern": "il"
@@ -800,6 +1068,9 @@
       "verb": "devoir",
       "phrase": "Je ____ rester à la maison avec mon petit frère.",
       "answer": "devais",
+      "incorrect1": "devait",
+      "incorrect2": "devions",
+      "incorrect3": "deviez",
       "fullPhrase": "Je devais rester à la maison avec mon petit frère.",
       "translation": "I had to stay home with my little brother.",
       "pattern": "je"
@@ -809,6 +1080,9 @@
       "verb": "pouvoir",
       "phrase": "Ils ____ rester éveillés toute la nuit.",
       "answer": "pouvaient",
+      "incorrect1": "pouvait",
+      "incorrect2": "pouvions",
+      "incorrect3": "pouvez",
       "fullPhrase": "Ils pouvaient rester éveillés toute la nuit.",
       "translation": "They could stay awake all night.",
       "pattern": "ils"
@@ -818,6 +1092,9 @@
       "verb": "devoir",
       "phrase": "Elles ____ rentrer tôt.",
       "answer": "devaient",
+      "incorrect1": "devait",
+      "incorrect2": "devions",
+      "incorrect3": "devriez",
       "fullPhrase": "Elles devaient rentrer tôt.",
       "translation": "They had to come back early.",
       "pattern": "ils"
@@ -827,6 +1104,9 @@
       "verb": "conduire",
       "phrase": "Nous ____ notre voiture.",
       "answer": "conduisions",
+      "incorrect1": "conduisait",
+      "incorrect2": "conduisais",
+      "incorrect3": "conduisez",
       "fullPhrase": "Nous conduisions notre voiture.",
       "translation": "We were driving our car.",
       "pattern": "nous"
@@ -836,6 +1116,9 @@
       "verb": "penser",
       "phrase": "Ils ____ pouvoir le faire.",
       "answer": "pensaient",
+      "incorrect1": "pensait",
+      "incorrect2": "pensions",
+      "incorrect3": "pensez",
       "fullPhrase": "Ils pensaient pouvoir le faire.",
       "translation": "They thought they could do it.",
       "pattern": "ils"
@@ -845,6 +1128,9 @@
       "verb": "servir",
       "phrase": "Ils ____ des plats trop chauds.",
       "answer": "servaient",
+      "incorrect1": "servait",
+      "incorrect2": "servions",
+      "incorrect3": "servez",
       "fullPhrase": "Ils servaient des plats trop chauds.",
       "translation": "They were serving dishes that were too hot.",
       "pattern": "ils"
@@ -854,6 +1140,9 @@
       "verb": "finir",
       "phrase": "Tu ____ toujours un peu tard.",
       "answer": "finissais",
+      "incorrect1": "finissait",
+      "incorrect2": "finissions",
+      "incorrect3": "finissez",
       "fullPhrase": "Tu finissais toujours un peu tard.",
       "translation": "You always finished a bit late.",
       "pattern": "tu"
@@ -863,6 +1152,9 @@
       "verb": "continuer",
       "phrase": "Je ____ ma route.",
       "answer": "continuais",
+      "incorrect1": "continuait",
+      "incorrect2": "continuions",
+      "incorrect3": "continuez",
       "fullPhrase": "Je continuais ma route.",
       "translation": "I continued my way.",
       "pattern": "je"
@@ -872,6 +1164,9 @@
       "verb": "danser",
       "phrase": "Ils ____ toute la nuit.",
       "answer": "dansaient",
+      "incorrect1": "dansait",
+      "incorrect2": "dansions",
+      "incorrect3": "dansez",
       "fullPhrase": "Ils dansaient toute la nuit.",
       "translation": "They were dancing all night.",
       "pattern": "ils"
@@ -881,6 +1176,9 @@
       "verb": "prendre",
       "phrase": "Je ____ les transports en commun.",
       "answer": "prenais",
+      "incorrect1": "prenait",
+      "incorrect2": "prenions",
+      "incorrect3": "prenez",
       "fullPhrase": "Je prenais les transports en commun.",
       "translation": "I used to take public transport.",
       "pattern": "je"
@@ -890,6 +1188,9 @@
       "verb": "vouloir",
       "phrase": "Nous ____ changer nos habitudes.",
       "answer": "voulions",
+      "incorrect1": "voulait",
+      "incorrect2": "voulais",
+      "incorrect3": "vouliez",
       "fullPhrase": "Nous voulions changer nos habitudes.",
       "translation": "We wanted to change our habits.",
       "pattern": "nous"
@@ -899,6 +1200,9 @@
       "verb": "revenir",
       "phrase": "Ils ____ plusieurs fois.",
       "answer": "revenaient",
+      "incorrect1": "revenait",
+      "incorrect2": "revenions",
+      "incorrect3": "revenez",
       "fullPhrase": "Ils revenaient plusieurs fois.",
       "translation": "They came back several times.",
       "pattern": "ils"
@@ -908,6 +1212,9 @@
       "verb": "lire",
       "phrase": "Ils ____ des romans chaque soir avant de dormir.",
       "answer": "lisaient",
+      "incorrect1": "lisait",
+      "incorrect2": "lisions",
+      "incorrect3": "lisez",
       "fullPhrase": "Ils lisaient des romans chaque soir avant de dormir.",
       "translation": "They used to read novels every night before sleeping.",
       "pattern": "ils"
@@ -917,6 +1224,9 @@
       "verb": "mettre",
       "phrase": "Tu ____ du sucre dans ton café.",
       "answer": "mettais",
+      "incorrect1": "mettait",
+      "incorrect2": "mettions",
+      "incorrect3": "mettez",
       "fullPhrase": "Tu mettais du sucre dans ton café.",
       "translation": "You used to put sugar in your coffee.",
       "pattern": "tu"
@@ -926,6 +1236,9 @@
       "verb": "pouvoir",
       "phrase": "Vous ____ faire beaucoup de choses.",
       "answer": "pouviez",
+      "incorrect1": "pouvait",
+      "incorrect2": "pouvions",
+      "incorrect3": "pouvais",
       "fullPhrase": "Vous pouviez faire beaucoup de choses.",
       "translation": "You could do a lot of things.",
       "pattern": "vous"
@@ -935,6 +1248,9 @@
       "verb": "pouvoir",
       "phrase": "Je ne ____ pas y aller.",
       "answer": "pouvais",
+      "incorrect1": "pouvait",
+      "incorrect2": "pouvions",
+      "incorrect3": "pouvez",
       "fullPhrase": "Je ne pouvais pas y aller.",
       "translation": "I couldn't go there.",
       "pattern": "je"
@@ -944,6 +1260,9 @@
       "verb": "entendre",
       "phrase": "Tu ____ bien le professeur.",
       "answer": "entendais",
+      "incorrect1": "entendait",
+      "incorrect2": "entendions",
+      "incorrect3": "entendez",
       "fullPhrase": "Tu entendais bien le professeur.",
       "translation": "You could hear the teacher well.",
       "pattern": "tu"
@@ -953,6 +1272,9 @@
       "verb": "vouloir",
       "phrase": "On ____ faire plus d'activités sportives.",
       "answer": "voulait",
+      "incorrect1": "voulions",
+      "incorrect2": "voulais",
+      "incorrect3": "voulaient",
       "fullPhrase": "On voulait faire plus d'activités sportives.",
       "translation": "We wanted to do more sports activities.",
       "pattern": "il"
@@ -962,6 +1284,9 @@
       "verb": "voir",
       "phrase": "Je ____ cet endroit pour la première fois.",
       "answer": "voyais",
+      "incorrect1": "voyait",
+      "incorrect2": "voyions",
+      "incorrect3": "voyez",
       "fullPhrase": "Je voyais cet endroit pour la première fois.",
       "translation": "I saw this place for the first time.",
       "pattern": "je"
@@ -971,6 +1296,9 @@
       "verb": "vouloir",
       "phrase": "Tu ____ le faire pour moi ?",
       "answer": "voulais",
+      "incorrect1": "voulait",
+      "incorrect2": "voulions",
+      "incorrect3": "voules",
       "fullPhrase": "Tu voulais le faire pour moi ?",
       "translation": "Did you want to do this for me?",
       "pattern": "tu"
@@ -980,6 +1308,9 @@
       "verb": "venir",
       "phrase": "Tu ____ rarement nous voir.",
       "answer": "venais",
+      "incorrect1": "venait",
+      "incorrect2": "venions",
+      "incorrect3": "venez",
       "fullPhrase": "Tu venais rarement nous voir.",
       "translation": "You rarely came to see us.",
       "pattern": "tu"
@@ -989,6 +1320,9 @@
       "verb": "nager",
       "phrase": "Je ____ tous les vendredis soir.",
       "answer": "nageais",
+      "incorrect1": "nageait",
+      "incorrect2": "nagerions",
+      "incorrect3": "nagez",
       "fullPhrase": "Je nageais tous les vendredis soir.",
       "translation": "I used to swim every Friday evening.",
       "exception": "ger"
