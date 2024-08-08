@@ -23,6 +23,11 @@ export function handleClickOutsidePopup(event) {
     
       if(selectPhrTypeContainer && selectPhrTypeContainer.style.display !== "none" && !selectPhrTypeContainer.contains(event.target)) {
               
+        
+        if(blurContainer) {
+          blurContainer.style.display = "none";
+        }
+        
         selectPhrTypeContainer.style.display = "none";
       
       }

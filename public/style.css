@@ -456,10 +456,7 @@ select {
 
 /* Styling the 'number of phrases' section */
 .phrase-type {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
+  
   text-align: center;
   margin-top: 30px;
   gap: 10px;
@@ -474,22 +471,21 @@ select {
 }
 
 .selectPhrTypeDiv {
+  width: fit-content;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  
   padding-inline: 12px;
   padding-block: 8px;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-
   gap: 8px;
-
   background-color: var(--color-secondary);
   border-radius: 6px;
 }
 
-.selectPhrTypeDiv i {
+.selectPhrTypeDiv .fa-caret-down {
   display: inline-block;
   color: var(--color-primary);
 }
@@ -497,13 +493,13 @@ select {
 .selectPhrTypeContainer {
   position: absolute;
 
-  top: 87%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
 
   width: fit-content;
-  padding-inline: 28px;
+  padding-inline: 50px;
   padding-block: 8px;
 
   border-radius: 6px;
@@ -512,24 +508,35 @@ select {
   color: var(--color-primary);
   background-color: var(--color-secondary);
 
-  z-index: 1;
+  z-index: 3;
 
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .easy, .medium {
+  padding-inline: 5px;
   border-bottom: solid gray 1px;
-  margin-bottom: 5px;
-  padding-bottom: 5px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
 }
 
+.fa-chess-pawn {
+  color: #269e52;
+}
 
+.fa-chess-knight {
+  color: #d96e38;
+}
+
+.fa-chess-queen {
+  color: var(--color-tertiary);
+}
 
 /* Styling the start section */
 
 .start-section, .first-next-section {
   display: flex;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 
@@ -738,11 +745,26 @@ select {
   font-size: 16px;
 }
 
-input[disabled] {
-  background-color: white;
-  opacity: 0.8;
-  /*color: #383642;*/
+
+.correct-answer {
+  color: #269e52;
+  -webkit-text-fill-color: #269e52;
+  opacity: 1; 
 }
+
+.almost-correct-answer {
+  color: #d96e38;
+  -webkit-text-fill-color: #d96e38;
+  opacity: 1; 
+}
+
+.incorrect-answer {
+  color: #ef233c;
+  -webkit-text-fill-color: #ef233c;
+  opacity: 1; 
+}
+
+
 button[disabled] {
   background-color: white;
   opacity: 0.8;

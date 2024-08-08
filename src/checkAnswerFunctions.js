@@ -11,7 +11,8 @@ export function handleCorrectAnswer(phraseDivCorrect, fullPhrase) {
     const speaker = document.getElementById("speaker"); // the speaker icon
       playCorrect();
     
-      inputArea.style.color = "#269e52";
+      //inputArea.style.color = "#269e52";
+      inputArea.classList.add("correct-answer");
       
       msgArea.innerText = "Correct!";
       
@@ -35,7 +36,8 @@ export function handleAlmostCorrectAnswer(phraseDivCorrect, fullPhrase) {
       const speaker = document.getElementById("speaker");
       playCorrect();
 
-      inputArea.style.color = "#d96e38";
+      //inputArea.style.color = "#d96e38";
+      inputArea.classList.add("almost-correct-answer");
 
       msgArea.innerHTML = "<p class='almost'>Almost correct.</p>";
       
@@ -68,7 +70,9 @@ export function handleIncorrectAnswer(phraseDiv, fullPhrase, correctAnswer, live
           playAudio(fullPhrase);
         });
       }
-      inputArea.style.color = "#ef233c";
+      //inputArea.style.color = "#ef233c";
+      inputArea.classList.add("incorrect-answer");
+
       msgArea.innerText = `Incorrect. The correct answer is: "${correctAnswer}"`;
 
       learnMoreSection.style.display = "block";

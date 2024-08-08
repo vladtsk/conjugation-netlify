@@ -70,7 +70,7 @@
 
   .checkout-headings h2 {
     margin-top: 20px;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 600;
   }
   
@@ -102,7 +102,6 @@
     color: var(--color-tertiary);
   }
   
-  
   .checkout-product {
     text-align: center;
     font-size: 20px;
@@ -113,7 +112,9 @@
   .checkout-product div {
     margin-bottom: 15px;
 
-    border: solid 2px var(--color-primary);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #FFF9D6;
+
     border-radius: 6px;
 
     padding-block: 15px;
@@ -145,6 +146,10 @@
     color: var(--color-tertiary);
   }
 
+  .fa-rocket {
+    color: var(--color-tertiary);
+  }
+
 /* Styling the checkout form */
   .checkout-form {
     margin-top: 40px;
@@ -152,11 +157,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: solid black 2px;
+    /*border: solid black 2px;
     background-color: var(--color-primary);
-    color: var(--color-secondary);
+    color: var(--color-secondary);*/
     border-radius: 10px;
-    width: fit-content; 
+    /*width: fit-content; */
   
     margin-inline: auto;
     margin-bottom: 40px;
@@ -170,14 +175,57 @@
   }
   
   .plans {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+    width: 40%;
     margin-top: 30px;
   }
   
   .plans p {
     margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .plans .fa-fire {
+    color: var(--color-tertiary);
+  }
+
+  .monthly {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline: 40px;
+    padding-block: 20px;
+    border: solid var(--color-primary) 4px;
+    border-radius: 8px;
+
+  }
+
+  .annual {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline: 40px;
+    padding-block: 20px;
+    margin-top: 25px;
+    border: solid var(--color-primary) 4px;
+    border-radius: 8px;
+    
+  }
+
+  .monthly p {
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  .annual p {
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  .monthly div {
+    font-size: 18px;
+  }
+
+  .annual div {
     font-size: 18px;
   }
   
@@ -218,7 +266,7 @@
   }
   
   .checkout-email {
-    margin-top: 20px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
   
@@ -315,6 +363,10 @@
       font-size: 18px;
     }
 
+    .plans {
+      width: 80%;
+    }
+
 
     .logo {
       margin-left: 20px;
@@ -360,5 +412,16 @@
     .carousel {
       width: 250px;
     }
+
+    .plans {
+      width: 100%;
+    }
+    .monthly, .annual {
+      flex-direction: column;
+      gap: 20px;
+      padding-inline: 20px;
+  
+    }
+  
 
   }

@@ -65,19 +65,25 @@
       <h2><i class='fa-regular fa-gem'></i> Choose a subscription</h2>
       <div class="plans">
         <div class="monthly">
-          <p>Monthly subscription</p>
-          <div class="radio">
-            <input type="radio" id="monthly" name="lookup_key" value="subs_monthly" required="true">
-            <label for="monthly"><span class="old-price">€4.99</span> €2.99 / month</label>
+          <div>
+            <p>Monthly subscription</p>
+            <div class="radio">
+              <input type="radio" id="monthly" name="lookup_key" value="subs_monthly" required="true">
+              <label for="monthly"><span class="old-price">€6.99</span> €2.99 / month</label>
+            </div>
           </div>
+          <p><i class="fa-solid fa-fire"></i> SAVE €4 / month </p>
          
         </div>
         <div class="annual">
-          <p>Annual subscription</p>
-          <div class="radio">
-            <input type="radio" id="yearly" name="lookup_key" value="subs_yearly" required="true">
-            <label for="yearly"><span class="old-price">€39.99</span> €24.99 / year</label>
+          <div>
+            <p>Annual subscription</p>
+            <div class="radio">
+              <input type="radio" id="yearly" name="lookup_key" value="subs_yearly" required="true">
+              <label for="yearly"><span class="old-price">€49.99</span> €24.99 / year</label>
+            </div>
           </div>
+          <p><i class="fa-solid fa-fire"></i> SAVE €25</p>
           
         </div>
         
@@ -85,7 +91,7 @@
       </div>
 
       <div class="checkout-email">
-        <label for="email">What's your email address?</label>
+        <label for="email"><i class="fa-solid fa-envelope"></i> What's your email address?</label>
         <input type="email" name="email" id="subscribeEmail" required="true">
         <button id="checkout-and-portal-button" type="submit">Start checkout</button>
       </div>

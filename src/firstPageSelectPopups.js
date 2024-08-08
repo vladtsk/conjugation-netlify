@@ -84,24 +84,26 @@ export function buildTenseSelectPopup(userId) {
     container.classList.add("selectPhrTypeContainer");
     container.style.display = "none";
   
-    createPhraseNbPopupOption("easy", "easy");
-    createPhraseNbPopupOption("medium", "medium");
-    createPhraseNbPopupOption("hard", "hard");
+    createPhraseNbPopupOption("easy", "easy", "fa-chess-pawn");
+    createPhraseNbPopupOption("medium", "medium", "fa-chess-knight");
+    createPhraseNbPopupOption("hard", "hard", "fa-chess-queen");
   
   }
   
-function createPhraseNbPopupOption(divClass, number) {
+function createPhraseNbPopupOption(divClass, level, chessIcon) {
     const container = document.querySelector(".selectPhrTypeContainer");
   
     const div = document.createElement("div");
     div.classList.add(divClass);
+
+    const icon = document.createElement("i");
+    icon.classList.add("fa-solid", chessIcon);
+    div.appendChild(icon);
   
     const label = document.createElement("p");
   
-    label.textContent = number;
+    label.textContent = level;
     
-    
-  
     div.appendChild(label);
     container.appendChild(div);
   }

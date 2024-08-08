@@ -85,6 +85,13 @@ export async function buildFirstPage(userId) {
       if(selectPhrTypeContainer) {
         selectPhrTypeContainer.style.display = "block";
       }
+
+      const blurContainer = document.querySelector(".blurContainer");
+  
+      if(blurContainer) {
+        blurContainer.style.display = "block";
+      }
+
       event.stopPropagation();
     })
   
@@ -97,6 +104,10 @@ export async function buildFirstPage(userId) {
         selectPhrType.textContent = nb.textContent;
         
         selectPhrTypeContainer.style.display = "none";
+
+        if(blurContainer) {
+          blurContainer.style.display = "none";
+        }
       })
     })
   

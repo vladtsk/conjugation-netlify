@@ -23,11 +23,6 @@ export function filterVerbs(data, phraseType, filteredVerbsIndexArray) {
             
             filteredVerbsIndexArray.length = 0;
             filteredVerbs.forEach((obj) => filteredVerbsIndexArray.push(obj.id-1));
-        } else if(tense === "pastimp") {
-            filteredVerbs = data.data.filter((obj) => (obj.pattern === "je" || obj.pattern === "tu" || obj.pattern === "il")  && !obj.exception);
-            
-            filteredVerbsIndexArray.length = 0;
-            filteredVerbs.forEach((obj) => filteredVerbsIndexArray.push(obj.id-1));
         } else if(tense === "future") {
             filteredVerbs = data.data.filter((obj) => !obj.spelling && !obj.irregular);
             
@@ -40,41 +35,38 @@ export function filterVerbs(data, phraseType, filteredVerbsIndexArray) {
             filteredVerbs.forEach((obj) => filteredVerbsIndexArray.push(obj.id-1));
         }
     } else if(phraseType === "medium") {
+        filteredVerbsIndexArray.length = 0;
+    
+    }   else if(phraseType === "hard") {
+        
         if(tense === "present") {
-            filteredVerbs = data.data.filter((obj) => obj.group === 1 || obj.group === 2);
+            filteredVerbs = data.data.filter((obj) => obj.group === 2 || obj.group === 3 || obj.group === "irregular");
             
             filteredVerbsIndexArray.length = 0;
             filteredVerbs.forEach((obj) => filteredVerbsIndexArray.push(obj.id-1));
           
         } else if(tense === "pastcomp") {
-            filteredVerbs = data.data.filter((obj) => !obj.aux);
+            filteredVerbs = data.data.filter((obj) => obj.aux || obj.participle !== "regular");
             
             filteredVerbsIndexArray.length = 0;
             filteredVerbs.forEach((obj) => filteredVerbsIndexArray.push(obj.id-1));
         } else if(tense === "pastimp") {
-            filteredVerbs = data.data.filter((obj) => (obj.pattern === "je" || obj.pattern === "tu" || obj.pattern === "il")  && !obj.exception);
-            
-            filteredVerbsIndexArray.length = 0;
-            filteredVerbs.forEach((obj) => filteredVerbsIndexArray.push(obj.id-1));
-        } else if(tense === "pastimp") {
-            filteredVerbs = data.data.filter((obj) => !obj.pattern === "ils"  && !obj.exception);
+            filteredVerbs = data.data.filter((obj) => obj.pattern === "ils"  && obj.exception);
             
             filteredVerbsIndexArray.length = 0;
             filteredVerbs.forEach((obj) => filteredVerbsIndexArray.push(obj.id-1));
         } else if(tense === "future") {
-            filteredVerbs = data.data.filter((obj) => !obj.irregular);
+            filteredVerbs = data.data.filter((obj) => obj.irregular);
             
             filteredVerbsIndexArray.length = 0;
             filteredVerbs.forEach((obj) => filteredVerbsIndexArray.push(obj.id-1));
         } else if(tense === "subjunctive") {
-            filteredVerbs = data.data.filter((obj) => obj.irregular || !obj.irregular);
+            filteredVerbs = data.data.filter((obj) => obj.irregular);
             
             filteredVerbsIndexArray.length = 0;
             filteredVerbs.forEach((obj) => filteredVerbsIndexArray.push(obj.id-1));
         }
-    } else if(phraseType === "hard") {
-        filteredVerbsIndexArray.length = 0;
-    }
+    } 
 
 }
 

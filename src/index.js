@@ -303,7 +303,8 @@ if(nextBtn) {
     }
     
     if(inputArea) {
-      inputArea.style.color = "black";
+      //inputArea.style.color = "black";
+      inputArea.classList.remove("almost-correct-answer", "correct-answer", "incorrect-answer");
     }
 
 
