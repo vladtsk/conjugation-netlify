@@ -1479,6 +1479,7 @@ button[disabled] {
 
 .rulesStartDiv,
 .rulesQuestDiv,
+.rulesQuizDiv,
 .rulesAnswerDiv,
 .rulesPronuncDiv,
 .rulesLearnMoreDiv {
@@ -1494,15 +1495,6 @@ button[disabled] {
   font-size: 22px;
 }
 
-
-/*.rulesStartDiv,
-.rulesGoalDiv,
-.rulesPronuncDiv {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 4px;
-}*/
 
 .rulesH {
   display: flex;
@@ -1521,7 +1513,7 @@ button[disabled] {
   font-size: 26px;
 
   position: absolute;
-  top: 50%;
+  top: 60%;
   left:5%;
   width: 90%;
 }

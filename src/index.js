@@ -34,7 +34,9 @@ import { checkAnswer } from "./checkAnswer.js";
 import { handleQuizAnswerSubmit } from "./checkAnswerQuiz.js";
 
 
-import emailjs from '@emailjs/browser';
+//import emailjs from '@emailjs/browser';
+
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 import { playEnd } from "./playAudio.js";
 
@@ -92,6 +94,9 @@ export async function launchApp(data, phraseType, mode) {
   const { app } = fetchFirebaseConfig();
   const database = getDatabase(app);
 
+  const analytics = getAnalytics(app);
+
+
   // An array containing 6 boxes used for spaced repetition
   let boxes = [[], [], [], [], [], []];
 
@@ -115,6 +120,18 @@ export async function launchApp(data, phraseType, mode) {
   const result = await getData(data, boxes, stats, indexArray);
   userId = result.userId;
   stats = result.stats;
+
+
+  const safeUserId = userId || 'guest';
+
+  if(analytics) {
+
+    logEvent(analytics, 'app_launch', {
+      appUserId: safeUserId,
+      exercise_mode: mode
+    });
+
+  }
 
 
   let lives;
@@ -424,6 +441,16 @@ if(nextBtn) {
       }
       
       showResultPage({score, phraseStats, stats, userId, streak});
+      
+      if(analytics) {
+
+        logEvent(analytics, 'app_finish', {
+          appUserId: safeUserId,
+          streak: streak,
+          score: score
+        });
+    
+      }
   })
 
 

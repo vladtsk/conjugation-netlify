@@ -3,6 +3,7 @@
 
 import { initializeApp } from "firebase/app";
 
+
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -23,6 +24,7 @@ import {
 } from "firebase/database"
 
 //"https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
+// https://firebase.google.com/docs/analytics/get-started?platform=web#web
 
 /*import dotenv from "dotenv";
 
@@ -72,7 +74,6 @@ export async function fetchFirebaseConfig() {
     app = initializeApp(firebaseConfig);
     auth = getAuth(app);
     database = getDatabase(app);
-  
 
 
   } catch (error) {

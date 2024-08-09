@@ -34,6 +34,7 @@ export function generateRulesPopupSection() {
 
   generateRulesStart();
   generateRulesQuestion();
+  generateRulesQuiz();
   generateRulesAnswer();
   generateRulesPronunciation();
   generateRulesLearnMore();
@@ -53,18 +54,19 @@ export function generateRulesPopupSection() {
 
   const rulesStartDiv = document.querySelector(".rulesStartDiv");
   const rulesQuestDiv = document.querySelector(".rulesQuestDiv");
+  const rulesQuizDiv = document.querySelector(".rulesQuizDiv");
   const rulesAnswerDiv = document.querySelector(".rulesAnswerDiv");
   const rulesPronuncDiv = document.querySelector(".rulesPronuncDiv");
   const rulesLearnMoreDiv = document.querySelector(".rulesLearnMoreDiv");
 
-  const rulesDivArrow = [rulesStartDiv, rulesQuestDiv, rulesAnswerDiv, rulesPronuncDiv, rulesLearnMoreDiv];
+  const rulesDivArrow = [rulesStartDiv, rulesQuestDiv, rulesQuizDiv, rulesAnswerDiv, rulesPronuncDiv, rulesLearnMoreDiv];
 
   nextBtn.addEventListener("click", ()=>{
     for(let i=0; i<rulesDivArrow.length-1; i++){
       if(rulesDivArrow[i].style.display !== "none"){
         rulesDivArrow[i].style.display = "none";
         rulesDivArrow[i+1].style.display = "block";
-        if(i === 3){
+        if(i === 4){
           nextBtn.style.display = "none";
         };
         previousBtn.style.display = "block"; 
@@ -88,28 +90,16 @@ export function generateRulesPopupSection() {
   })
 
 
-  /*rulesStartDiv.style.display = "none";
-  rulesQuestDiv.style.display = "none";
-  rulesAnswerDiv.style.display = "none";
-  rulesPronuncDiv.style.display = "none";
-  rulesLearnMoreDiv.style.display = "none";
-*/
+ 
 }
 
 
 function generateRulesStart() {
   const rulesSection = document.querySelector(".rulesSection");
 
-  /*const rulesQuestDiv = document.querySelector(".rulesQuestDiv");
-  //const rulesPronuncDiv = document.querySelector(".rulesPronuncDiv");
 
-  if(rulesQuestDiv) {
-    rulesSection.removeChild(rulesQuestDiv);
-  }
- */
 
   const rulesStartDiv = document.createElement("div");
-  //rulesStartDiv.style.display = "none";
 
   rulesSection.appendChild(rulesStartDiv);
   rulesStartDiv.classList.add("rulesStartDiv");
@@ -131,8 +121,13 @@ function generateRulesStart() {
   const rulesStartP2 = document.createElement("p");
   rulesExplanation.appendChild(rulesStartP2);
   rulesStartP2.innerHTML =
-    `If you choose <b>'easy'</b>, you can practice regular conjugations. Selecting <b>'medium'</b> includes regular and some irregular verbs, while <b>'hard'</b> covers all verbs, 
-    including the most irregular ones.`;
+    `If you choose <b>'easy'</b>, you can practice regular conjugations. Selecting <b>'medium'</b> includes regular and irregular verbs, while <b>'hard'</b> covers only 
+    irregular verbs.`;
+
+    const rulesP3 = document.createElement("p");
+  rulesExplanation.appendChild(rulesP3);
+  rulesP3.innerHTML =
+    "On the second page, choose a type of exercise: 'Quiz Mode' or 'Typing Mode'.";
 
   const photosDiv = document.createElement("div");
   photosDiv.classList.add("photosDiv");
@@ -166,33 +161,11 @@ function generateRulesStart() {
 
   moveSlides();
 
-  /*const buttons = document.createElement("div");
-  buttons.classList.add("buttons");
-  rulesStartDiv.appendChild(buttons);
-
-
-  const nextBtn = document.createElement("i");
-  nextBtn.classList.add("fa-solid", "fa-circle-arrow-right");
-  buttons.appendChild(nextBtn);
-
-  nextBtn.addEventListener("click", generateRulesQuestion);
-    */
   } 
 
   function generateRulesQuestion() {
     const rulesSection = document.querySelector(".rulesSection");
-    /*const rulesStartDiv = document.querySelector(".rulesStartDiv");
-    const rulesAnswerDiv = document.querySelector(".rulesAnswerDiv");
-
-    if(rulesStartDiv) {
-      rulesSection.removeChild(rulesStartDiv);
-    }
-
-    if(rulesAnswerDiv) {
-      rulesSection.removeChild(rulesAnswerDiv);
-    }
-    */
-
+    
     const rulesQuestDiv = document.createElement("div");
     rulesQuestDiv.style.display = "none";
 
@@ -211,7 +184,7 @@ function generateRulesStart() {
     const rulesP1 = document.createElement("p");
     rulesExplanation.appendChild(rulesP1);
     rulesP1.innerHTML =
-      `You'll see a verb you need to conjugate in the selected tense (e.g.: 'prendre'). 
+      `You'll see a verb you need to conjugate in the selected tense (e.g.: 'vouloir'). 
       Under the verb, you'll see a sentence with one or more spaces that you need to complete with the conjugated verb.`;
 
     const photoDiv = document.createElement("div");
@@ -223,41 +196,47 @@ function generateRulesStart() {
    
     photoDiv.appendChild(exampleImage);
 
-    /*const buttons = document.createElement("div");
-    buttons.classList.add("buttons");
-    rulesExplanation.appendChild(buttons);
+    
+} 
 
-    const previousBtn = document.createElement("i");
-    previousBtn.classList.add("fa-solid", "fa-circle-arrow-left");
-    buttons.appendChild(previousBtn);
+function generateRulesQuiz() {
+  const rulesSection = document.querySelector(".rulesSection");
+  
+  const rulesQuizDiv = document.createElement("div");
+  rulesQuizDiv.style.display = "none";
 
-    const nextBtn = document.createElement("i");
-    nextBtn.classList.add("fa-solid", "fa-circle-arrow-right");
-    buttons.appendChild(nextBtn);
+  rulesSection.appendChild(rulesQuizDiv);
+  rulesQuizDiv.classList.add("rulesQuizDiv");
 
-    nextBtn.addEventListener("click", ()=>{
-      generateRulesAnswer();
+  const quizsH = document.createElement("div");
+  quizsH.classList.add("rulesH");
+  rulesQuizDiv.appendChild(quizsH);
+  quizsH.innerHTML =
+    "<i class='fa-regular fa-circle-question'></i> <h2>Choose the correct answer (quiz mode)</h2>";
 
-    });
-    previousBtn.addEventListener("click", ()=>{
-      generateRulesStart();
-    });
-    */
+  const quizExplanation = document.createElement("div");
+  rulesQuizDiv.appendChild(quizExplanation);
+
+  const quizP1 = document.createElement("p");
+  quizExplanation.appendChild(quizP1);
+  quizP1.innerHTML =
+    `In quiz mode, simply choose the correct answer from 4 options.`;
+
+  const photoDiv = document.createElement("div");
+  photoDiv.classList.add("photoDiv");
+  quizExplanation.appendChild(photoDiv);
+
+  const exampleImage = document.createElement("img");
+  exampleImage.setAttribute("src", "./public/quiz-question.png");
+ 
+  photoDiv.appendChild(exampleImage);
+
+  
 } 
 
 function generateRulesAnswer() {
   const rulesSection = document.querySelector(".rulesSection");
-  /*const rulesQuestDiv = document.querySelector(".rulesQuestDiv");
-  const rulesPronuncDiv = document.querySelector(".rulesPronuncDiv");
-
-  if(rulesQuestDiv) {
-    rulesSection.removeChild(rulesQuestDiv);
-  }
-
-  if(rulesPronuncDiv) {
-    rulesSection.removeChild(rulesPronuncDiv);
-  }
-    */
+  
   
 
   const rulesAnswerDiv = document.createElement("div");
@@ -270,7 +249,7 @@ function generateRulesAnswer() {
   rulesH.classList.add("rulesH");
   rulesAnswerDiv.appendChild(rulesH);
   rulesH.innerHTML =
-    "<i class='fa-solid fa-keyboard'></i> <h2>Type your answer</h2>";
+    "<i class='fa-solid fa-keyboard'></i> <h2>Type your answer (typing mode)</h2>";
 
   const rulesExplanation = document.createElement("div");
   rulesAnswerDiv.appendChild(rulesExplanation);
@@ -278,8 +257,8 @@ function generateRulesAnswer() {
   const rulesP1 = document.createElement("p");
   rulesExplanation.appendChild(rulesP1);
   rulesP1.innerHTML =
-    `In the example below, you need to conjugate <b>'prendre'</b> in the present tense with the pronoun <b>'tu'</b>, which gives 'tu prends'.
-So we should type <b>'prends'</b> to complete the sentence.`;
+    `In the example below, you need to conjugate <b>'vouloir'</b> in the present tense with the pronoun <b>'tu'</b>, which gives 'tu veux'.
+So we should type <b>'veux'</b> to complete the sentence.`;
   
   const rulesP2 = document.createElement("p");
   rulesExplanation.appendChild(rulesP2);
@@ -295,37 +274,12 @@ So we should type <b>'prends'</b> to complete the sentence.`;
  
   photoDiv.appendChild(exampleImage);
 
-  /*const buttons = document.createElement("div");
-  buttons.classList.add("buttons");
-  rulesExplanation.appendChild(buttons);
-
-  const previousBtn = document.createElement("i");
-  previousBtn.classList.add("fa-solid", "fa-circle-arrow-left");
-  buttons.appendChild(previousBtn);
-
-  const nextBtn = document.createElement("i");
-  nextBtn.classList.add("fa-solid", "fa-circle-arrow-right");
-  buttons.appendChild(nextBtn);
-
-  nextBtn.addEventListener("click", generateRulesPronunciation);
-  previousBtn.addEventListener("click", generateRulesQuestion);
-  */
 } 
 
   function generateRulesPronunciation(){
     const rulesSection = document.querySelector(".rulesSection");
 
-    /*const rulesAnswerDiv = document.querySelector(".rulesAnswerDiv");
-    const rulesLearnMoreDiv = document.querySelector(".rulesLearnMoreDiv");
-
-    if(rulesAnswerDiv){
-      rulesSection.removeChild(rulesAnswerDiv);
-    }
-    
-    if(rulesLearnMoreDiv) {
-      rulesSection.removeChild(rulesLearnMoreDiv);
-    }
-      */
+  
     const rulesPronuncDiv = document.createElement("div");
     rulesPronuncDiv.style.display = "none";
 
@@ -363,33 +317,11 @@ So we should type <b>'prends'</b> to complete the sentence.`;
      
     photoDiv.appendChild(exampleImage);
     
-    /*const buttons = document.createElement("div");
-    buttons.classList.add("buttons");
-    rulesPronuncDiv.appendChild(buttons);
-  
-    const previousBtn = document.createElement("i");
-    previousBtn.classList.add("fa-solid", "fa-circle-arrow-left");
-    buttons.appendChild(previousBtn);
-
-    const nextBtn = document.createElement("i");
-    nextBtn.classList.add("fa-solid", "fa-circle-arrow-right");
-    buttons.appendChild(nextBtn);
-
-    previousBtn.addEventListener("click", generateRulesAnswer);
-    nextBtn.addEventListener("click", generateRulesLearnMore);
-    */
 }
 
 function generateRulesLearnMore() {
   const rulesSection = document.querySelector(".rulesSection");
   
-/*
-  const rulesPronuncDiv = document.querySelector(".rulesPronuncDiv");
-
-  if(rulesPronuncDiv) {
-    rulesSection.removeChild(rulesPronuncDiv);
-  }
-  */
 
   const rulesLearnMoreDiv = document.createElement("div");
   rulesLearnMoreDiv.style.display = "none";
@@ -420,18 +352,7 @@ function generateRulesLearnMore() {
  
   photoDiv.appendChild(exampleImage);
 
-  /*
-  const buttons = document.createElement("div");
-  buttons.classList.add("buttons");
-  rulesExplanation.appendChild(buttons);
-
-  const previousBtn = document.createElement("i");
-  previousBtn.classList.add("fa-solid", "fa-circle-arrow-left");
-  buttons.appendChild(previousBtn);
-
-
-  previousBtn.addEventListener("click", generateRulesPronunciation);
-  */
+ 
 } 
 
 
