@@ -3,53 +3,49 @@ import { showNoMorePhrasesPage } from "./pagesetup.js";
 import { filterVerbs } from "./verbFilter.js";
 
 // A function generating a unique index and displaying a verb and a phrase corresponding to the index
-export function generateElements({data, indexArray, k, score, phraseStats, phraseType, mode}) {
-  
+export function generateElements({
+  data,
+  indexArray,
+  k,
+  score,
+  phraseStats,
+  phraseType,
+  mode,
+}) {
   let filteredVerbsIndexArray = [];
 
   filterVerbs(data, phraseType, filteredVerbsIndexArray);
 
   // Generate a random and unique index
   if (indexArray.length !== data.data.length) {
-    
     let loopAttempts = 0;
-    
-    if (filteredVerbsIndexArray.length !== 0) {
 
-      
-        do {
-          k = Math.floor(Math.random() * data.data.length);
-          loopAttempts ++;
-          if(loopAttempts > data.data.length) {
-            throw new Error("Exceeded maximum attempts to find a valid index.");
-          }
-          
-    
-        } while (indexArray.includes(k) || !filteredVerbsIndexArray.includes(k));
-  
-         
-    
-      } else {
-       do {
-       k = Math.floor(Math.random() * data.data.length);
-        } while (indexArray.includes(k));
+    if (filteredVerbsIndexArray.length !== 0) {
+      do {
+        k = Math.floor(Math.random() * data.data.length);
+        loopAttempts++;
+        if (loopAttempts > data.data.length) {
+          throw new Error("Exceeded maximum attempts to find a valid index.");
+        }
+      } while (indexArray.includes(k) || !filteredVerbsIndexArray.includes(k));
+    } else {
+      do {
+        k = Math.floor(Math.random() * data.data.length);
+      } while (indexArray.includes(k));
     }
 
     indexArray.push(k);
-
 
     let questionN = phraseStats.length + 1;
     displayVerb(data, k, questionN, mode);
     displayPhrase(data, k);
 
-    if(mode === "quizMode") {
+    if (mode === "quizMode") {
       displayOptions(data, k);
     }
-    
   } else {
     console.log("No more phrases to practise!");
     showNoMorePhrasesPage(score, phraseStats); // the data is not added to DB here
-    
   }
 
   return k;
@@ -61,12 +57,11 @@ function displayVerb(data, k, phraseCount, mode) {
   const verbDisplay = document.querySelector(".verb-display p");
   const questionSection = document.querySelector(".questionSection");
 
- /* if (data && data.data.length > 0 && verbDisplay) {
+  /* if (data && data.data.length > 0 && verbDisplay) {
     verbDisplay.textContent = data.data[k].verb;
   } else */
-  
+
   if (data && data.data.length > 0 && questionSection) {
-    
     questionSection.innerHTML = "";
     const question = document.createElement("p");
     question.innerHTML = `Question ${phraseCount} / 5`;
@@ -74,19 +69,14 @@ function displayVerb(data, k, phraseCount, mode) {
 
     const verbQ = document.createElement("div");
 
-    if(mode === "quizMode") {
+    if (mode === "quizMode") {
       verbQ.innerHTML = `<p>Select the correct conjugation of&nbsp;the&nbsp;verb</p> <p class="verbP">${data.data[k].verb}</p>`;
       questionSection.appendChild(verbQ);
     } else {
       verbQ.innerHTML = `<p>Type the correct conjugation of the verb <span class="verbP">${data.data[k].verb}</span> in the selected tense</p>`;
       questionSection.appendChild(verbQ);
     }
-    
-
   }
-
-
-
 }
 
 // A function that displays a phrase (the context)
@@ -113,27 +103,26 @@ function displayOptions(data, k) {
   let indices = [];
 
   if (data && data.data.length > 0 && optionsSection) {
-    const optionAnswers = [data.data[k].answer, data.data[k].incorrect1, data.data[k].incorrect2, data.data[k].incorrect3];
+    const optionAnswers = [
+      data.data[k].answer,
+      data.data[k].incorrect1,
+      data.data[k].incorrect2,
+      data.data[k].incorrect3,
+    ];
 
-    for(let i = 0; i < options.length; i++) {
+    for (let i = 0; i < options.length; i++) {
+      do {
+        p = Math.floor(Math.random() * options.length);
+      } while (indices.includes(p));
 
-    do {
-      p = Math.floor(Math.random() * options.length);
-    }  while (indices.includes(p));
+      indices.push(p);
 
-    console.log("k, p ", k, p);
+      options[p].textContent = optionAnswers[i];
 
-    indices.push(p);
-
-    options[p].textContent = optionAnswers[i];
-
-    if(i === 0) {
-      options[p].classList.add("correct-option");
+      if (i === 0) {
+        options[p].classList.add("correct-option");
+      }
     }
-
-    
-  }
-    
   }
 }
 
@@ -143,12 +132,20 @@ export function displayTense(data) {
   const tenseDisplay = document.querySelector(".tense-display-section");
   // Displaying the tense
   if (data && data.data.length > 0 && tenseDisplay) {
-    tenseDisplay.innerHTML = `<i class="fa-regular fa-calendar"></i> ${data.data[0].tense}` ;
+    tenseDisplay.innerHTML = `<i class="fa-regular fa-calendar"></i> ${data.data[0].tense}`;
   }
 }
 
 // Display the next element
-export function displayNext({data, indexArray, k, score, phraseStats, phraseType, mode}) {
+export function displayNext({
+  data,
+  indexArray,
+  k,
+  score,
+  phraseStats,
+  phraseType,
+  mode,
+}) {
   // Select the 'next' section
   const nextSection = document.querySelector(".next-section");
 
@@ -159,11 +156,10 @@ export function displayNext({data, indexArray, k, score, phraseStats, phraseType
   const msgArea = document.querySelector(".msg-section");
   // Select the input element
   const inputArea = document.querySelector(".type-section input");
-  if(indexArray && inputArea) {
+  if (indexArray && inputArea) {
     inputArea.removeAttribute("disabled");
     inputArea.classList.remove("bold");
   }
-  
 
   // Selecting the special character section
   /*const specialBtns = document.querySelectorAll(".letters-section button");
@@ -174,36 +170,38 @@ export function displayNext({data, indexArray, k, score, phraseStats, phraseType
   }*/
 
   const lettersSection = document.querySelector(".letters-section");
-  if(lettersSection) {
+  if (lettersSection) {
     lettersSection.style.display = "flex";
   }
-  
 
   msgArea.innerHTML = "";
 
-  if(inputArea) {
+  if (inputArea) {
     inputArea.value = "";
   }
-  
-
 
   try {
-    k = generateElements({data, indexArray, k, score, phraseStats, phraseType, mode});
+    k = generateElements({
+      data,
+      indexArray,
+      k,
+      score,
+      phraseStats,
+      phraseType,
+      mode,
+    });
   } catch (error) {
     console.error(error.message);
-    showNoMorePhrasesPage(score, phraseStats); 
+    showNoMorePhrasesPage(score, phraseStats);
   }
 
-  if(nextSection) {
+  if (nextSection) {
     nextSection.style.display = "none";
   }
-  
 
-  if(submitSection) {
+  if (submitSection) {
     submitSection.style.display = "flex";
   }
-  
-  console.log("k", k)
+
   return k;
 }
-
