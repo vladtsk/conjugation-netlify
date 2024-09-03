@@ -10,7 +10,11 @@ import { showConjugations } from "./conjugationTablePopup.js";
 
 import { showInfoPopup } from "./infoPopup.js";
 
-import { handleCorrectAnswer, handleAlmostCorrectAnswer, handleIncorrectAnswer } from "./checkAnswerFunctions.js";
+import {
+  handleCorrectAnswer,
+  handleAlmostCorrectAnswer,
+  handleIncorrectAnswer,
+} from "./checkAnswerFunctions.js";
 
 // Fetching verb conjugation tables
 
@@ -23,22 +27,24 @@ async function fetchConjugations() {
 }
 
 fetchConjugations()
-  .then(conjugations => {
+  .then((conjugations) => {
     jsonConjug = conjugations;
   })
-  .catch(error => {
-    console.error('Error fetching conjugations:', error);
+  .catch((error) => {
+    console.error("Error fetching conjugations:", error);
   });
 
-
-
-
-
-
 // A function that reads the user input and compares it to the correct answer
-export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, lives, userId }) {
-
- 
+export function checkAnswer({
+  data,
+  k,
+  phraseCount,
+  score,
+  boxes,
+  phraseStats,
+  lives,
+  userId,
+}) {
   let phraseStatObject = {
     phrase: "",
     input: "",
@@ -46,7 +52,6 @@ export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, l
     isCorrect: false,
     almostCorrect: false,
   };
-
 
   // Select "p" element for a message to display
   const msgArea = document.querySelector(".msg-section");
@@ -67,22 +72,17 @@ export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, l
   // "Lives" element
   const livesEl = document.querySelector(".lives");
 
-
   // The phrase display section
   const phraseSection = document.querySelector(".phrase-section");
 
-
   const inputText = inputArea.value;
   let displaySection;
-
-
 
   if (phraseCount < 5) {
     displaySection = nextSection;
   } else {
     displaySection = finishSection;
   }
-
 
   phraseStatObject.phrase = data.data[k].phrase;
   phraseStatObject.input = inputText;
@@ -91,32 +91,30 @@ export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, l
   let answerType;
 
   const phraseDivCorrect = document.createElement("div");
-  phraseDivCorrect.innerHTML = `<i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low" id="speaker"></i>
+  phraseDivCorrect.innerHTML = `<i class="fa-solid fa-square-check"></i> ${data.data[k].fullPhrase} <i class="fa-solid fa-volume-high" id="speaker"></i>
   <p class="translation">${data.data[k].translation}</p>`;
 
   const phraseDiv = document.createElement("div");
-  phraseDiv.innerHTML = `${data.data[k].fullPhrase} <i class="fa-solid fa-volume-low" id="speaker"></i>
+  phraseDiv.innerHTML = `${data.data[k].fullPhrase} <i class="fa-solid fa-volume-high" id="speaker"></i>
   <p class="translation">${data.data[k].translation}</p>`;
 
-  if(inputText.trim().toLowerCase() !== "") {
+  if (inputText.trim().toLowerCase() !== "") {
     inputArea.classList.add("bold");
     phraseSection.innerHTML = "";
 
-
     // Hide the special characters section
 
-    if(lettersSection) {
+    if (lettersSection) {
       lettersSection.style.display = "none";
     }
-    
-    inputArea.setAttribute("disabled", "");
 
+    inputArea.setAttribute("disabled", "");
   }
 
   switch (inputText.trim().toLowerCase()) {
     case "":
-    msgArea.innerText = "Please type a valid verb";
-    break;
+      msgArea.innerText = "Please type a valid verb";
+      break;
 
     case data.data[k].answer:
       handleCorrectAnswer(phraseDivCorrect, data.data[k].fullPhrase);
@@ -128,22 +126,22 @@ export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, l
       phraseStats.push(phraseStatObject);
       break;
 
-      case data.data[k].alternativeAnswer:
-        handleCorrectAnswer(phraseDivCorrect, data.data[k].fullPhrase);
-        if (userId) {
-          movePhraseForward(k, boxes);
-        }
-        score++;
-        phraseStatObject.isCorrect = true;
-        phraseStats.push(phraseStatObject);
+    case data.data[k].alternativeAnswer:
+      handleCorrectAnswer(phraseDivCorrect, data.data[k].fullPhrase);
+      if (userId) {
+        movePhraseForward(k, boxes);
+      }
+      score++;
+      phraseStatObject.isCorrect = true;
+      phraseStats.push(phraseStatObject);
       break;
 
     case data.data[k]?.answerWoS:
       answerType = "almostPastComp";
       showInfoPopup(data.data[k], data.data[0].tenseShort, answerType);
-      
+
       handleAlmostCorrectAnswer(phraseDivCorrect, data.data[k].fullPhrase);
-      
+
       if (userId) {
         movePhraseForward(k, boxes);
       }
@@ -167,41 +165,39 @@ export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, l
       break;
 
     default:
-    
-      if(!userId && lives && lives > 0) {
+      if (!userId && lives && lives > 0) {
         lives--;
-       
-        if(lives === 0) {
-         
-          if(livesEl) {
+
+        if (lives === 0) {
+          if (livesEl) {
             livesEl.style.color = "#ef233c";
           }
 
           localStorage.setItem("appLastUseTime", Date.now().toString());
         }
-       
       }
-      
-      handleIncorrectAnswer(phraseDiv, data.data[k].fullPhrase, data.data[k].answer, lives);
-      
+
+      handleIncorrectAnswer(
+        phraseDiv,
+        data.data[k].fullPhrase,
+        data.data[k].answer,
+        lives
+      );
+
       if (userId) {
         movePhraseBackward(k, boxes);
       }
-      
+
       showConjugations(data.data[k], data.data[0], conjugSection, jsonConjug);
       showInfoPopup(data.data[k], data.data[0].tenseShort);
 
       phraseStats.push(phraseStatObject);
-
   }
-
-  
 
   // Popup close icon
   const popupCloseBtn = document.querySelector(".popup-icons .popup-close");
   if (popupCloseBtn) {
     popupCloseBtn.addEventListener("click", () => {
-      
       conjugSection.innerHTML = "";
       conjugSection.style.display = "none";
     });
@@ -214,5 +210,3 @@ export function checkAnswer({ data, k, phraseCount, score, boxes, phraseStats, l
 
   return { score, boxes, lives };
 }
-
-

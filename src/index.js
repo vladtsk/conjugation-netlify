@@ -64,6 +64,8 @@ import { handleContactBtnClick } from "./account-popup.js";
 
 import { showNoMorePhrasesPage } from "./pagesetup.js";
 
+import { displaySoundIcons, handleSoundIconClick } from "./sound.js";
+
 checkAuthState();
 
 handleAuthClicks();
@@ -212,6 +214,15 @@ export async function launchApp(data, phraseType, mode) {
   } else {
     buildPageStructureQuiz();
   }
+
+  displaySoundIcons();
+
+  const soundDiv = document.querySelector(".sound");
+  if (soundDiv) {
+    soundDiv.style.display = "block";
+  }
+
+  handleSoundIconClick();
 
   displayTense(data);
 
@@ -367,6 +378,10 @@ export async function launchApp(data, phraseType, mode) {
   }
 
   finishBtn.addEventListener("click", () => {
+    if (soundDiv) {
+      soundDiv.style.display = "none";
+    }
+
     if (infoPopupSection) {
       infoPopupSection.style.display = "none";
     }
@@ -376,7 +391,10 @@ export async function launchApp(data, phraseType, mode) {
     }
     const statsContainer = document.querySelector(".stats-container");
 
-    playEnd();
+    const soundOn = JSON.parse(localStorage.getItem("soundOn"));
+    if (soundOn) {
+      playEnd();
+    }
 
     if (accountBtn) {
       accountBtn.style.display = "none";
@@ -385,9 +403,6 @@ export async function launchApp(data, phraseType, mode) {
     if (statsContainer) {
       statsContainer.style.display = "none";
     }
-
-    //let streak;
-    console.log("streak", streak);
 
     const currenttimestamp = Date.now();
 
