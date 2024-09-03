@@ -11,9 +11,11 @@ export function displaySoundIcons() {
   if (soundOn && soundOnIcon) {
     soundOnIcon.style.display = "inline-block";
     soundOffIcon.style.display = "none";
+    localStorage.setItem("soundOn", JSON.stringify(true));
   } else if (soundOffIcon) {
     soundOffIcon.style.display = "inline-block";
     soundOnIcon.style.display = "none";
+    localStorage.setItem("soundOn", JSON.stringify(false));
   }
 }
 
