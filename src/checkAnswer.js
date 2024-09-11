@@ -109,6 +109,8 @@ export function checkAnswer({
     }
 
     inputArea.setAttribute("disabled", "");
+
+    showConjugations(data.data[k], data.data[0], conjugSection, jsonConjug);
   }
 
   switch (inputText.trim().toLowerCase()) {
@@ -188,7 +190,7 @@ export function checkAnswer({
         movePhraseBackward(k, boxes);
       }
 
-      showConjugations(data.data[k], data.data[0], conjugSection, jsonConjug);
+      //showConjugations(data.data[k], data.data[0], conjugSection, jsonConjug);
       showInfoPopup(data.data[k], data.data[0].tenseShort);
 
       phraseStats.push(phraseStatObject);

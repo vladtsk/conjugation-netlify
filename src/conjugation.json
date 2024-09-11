@@ -42,7 +42,7 @@
         "6": "qu'ils/elles se réveillent"
       }
     },
-    
+
     "entendre": {
       "present": {
         "1": "j'entends",
@@ -297,2687 +297,2683 @@
     },
 
     "se retrouver": {
-    "present": {
-      "1": "je me retrouve",
-      "2": "tu te retrouves",
-      "3": "il/elle/on se retrouve",
-      "4": "nous nous retrouvons",
-      "5": "vous vous retrouvez",
-      "6": "ils/elles se retrouvent"
+      "present": {
+        "1": "je me retrouve",
+        "2": "tu te retrouves",
+        "3": "il/elle/on se retrouve",
+        "4": "nous nous retrouvons",
+        "5": "vous vous retrouvez",
+        "6": "ils/elles se retrouvent"
+      },
+      "pastcomp": {
+        "1": "je me suis retrouvé(e)",
+        "2": "tu t'es retrouvé(e)",
+        "3": "il/elle/on s'est retrouvé(e)(s)",
+        "4": "nous nous sommes retrouvé(e)s",
+        "5": "vous vous êtes retrouvé(e)(s)",
+        "6": "ils/elles se sont retrouvé(e)s"
+      },
+      "pastimp": {
+        "1": "je me retrouvais",
+        "2": "tu te retrouvais",
+        "3": "il/elle/on se retrouvait",
+        "4": "nous nous retrouvions",
+        "5": "vous vous retrouviez",
+        "6": "ils/elles se retrouvaient"
+      },
+      "future": {
+        "1": "je me retrouverai",
+        "2": "tu te retrouveras",
+        "3": "il/elle/on se retrouvera",
+        "4": "nous nous retrouverons",
+        "5": "vous vous retrouverez",
+        "6": "ils/elles se retrouveront"
+      },
+      "subjunctive": {
+        "1": "que je me retrouve",
+        "2": "que tu te retrouves",
+        "3": "qu'il/elle/on se retrouve",
+        "4": "que nous nous retrouvions",
+        "5": "que vous vous retrouviez",
+        "6": "qu'ils/elles se retrouvent"
+      }
     },
-    "pastcomp": {
-      "1": "je me suis retrouvé(e)",
-      "2": "tu t'es retrouvé(e)",
-      "3": "il/elle/on s'est retrouvé(e)(s)",
-      "4": "nous nous sommes retrouvé(e)s",
-      "5": "vous vous êtes retrouvé(e)(s)",
-      "6": "ils/elles se sont retrouvé(e)s"
+    "boire": {
+      "present": {
+        "1": "je bois",
+        "2": "tu bois",
+        "3": "il/elle/on boit",
+        "4": "nous buvons",
+        "5": "vous buvez",
+        "6": "ils/elles boivent"
+      },
+      "pastcomp": {
+        "1": "j'ai bu",
+        "2": "tu as bu",
+        "3": "il/elle/on a bu",
+        "4": "nous avons bu",
+        "5": "vous avez bu",
+        "6": "ils/elles ont bu"
+      },
+      "pastimp": {
+        "1": "je buvais",
+        "2": "tu buvais",
+        "3": "il/elle/on buvait",
+        "4": "nous buvions",
+        "5": "vous buviez",
+        "6": "ils/elles buvaient"
+      },
+      "future": {
+        "1": "je boirai",
+        "2": "tu boiras",
+        "3": "il/elle/on boira",
+        "4": "nous boirons",
+        "5": "vous boirez",
+        "6": "ils/elles boiront"
+      },
+      "subjunctive": {
+        "1": "que je boive",
+        "2": "que tu boives",
+        "3": "qu'il/elle/on boive",
+        "4": "que nous buvions",
+        "5": "que vous buviez",
+        "6": "qu'ils/elles boivent"
+      }
     },
-    "pastimp": {
-      "1": "je me retrouvais",
-      "2": "tu te retrouvais",
-      "3": "il/elle/on se retrouvait",
-      "4": "nous nous retrouvions",
-      "5": "vous vous retrouviez",
-      "6": "ils/elles se retrouvaient"
+    "se coucher": {
+      "present": {
+        "1": "je me couche",
+        "2": "tu te couches",
+        "3": "il/elle/on se couche",
+        "4": "nous nous couchons",
+        "5": "vous vous couchez",
+        "6": "ils/elles se couchent"
+      },
+      "pastcomp": {
+        "1": "je me suis couché(e)",
+        "2": "tu t'es couché(e)",
+        "3": "il/elle/on s'est couché(e)(s)",
+        "4": "nous nous sommes couché(e)s",
+        "5": "vous vous êtes couché(e)(s)",
+        "6": "ils/elles se sont couché(e)s"
+      },
+      "pastimp": {
+        "1": "je me couchais",
+        "2": "tu te couchais",
+        "3": "il/elle/on se couchait",
+        "4": "nous nous couchions",
+        "5": "vous vous couchiez",
+        "6": "ils/elles se couchaient"
+      },
+      "future": {
+        "1": "je me coucherai",
+        "2": "tu te coucheras",
+        "3": "il/elle/on se couchera",
+        "4": "nous nous coucherons",
+        "5": "vous vous coucherez",
+        "6": "ils/elles se coucheront"
+      },
+      "subjunctive": {
+        "1": "que je me couche",
+        "2": "que tu te couches",
+        "3": "qu'il/elle/on se couche",
+        "4": "que nous nous couchions",
+        "5": "que vous vous couchiez",
+        "6": "qu'ils/elles se couchent"
+      }
     },
-    "future": {
-      "1": "je me retrouverai",
-      "2": "tu te retrouveras",
-      "3": "il/elle/on se retrouvera",
-      "4": "nous nous retrouverons",
-      "5": "vous vous retrouverez",
-      "6": "ils/elles se retrouveront"
+    "partir": {
+      "present": {
+        "1": "je pars",
+        "2": "tu pars",
+        "3": "il/elle/on part",
+        "4": "nous partons",
+        "5": "vous partez",
+        "6": "ils/elles partent"
+      },
+      "pastcomp": {
+        "1": "je suis parti(e)",
+        "2": "tu es parti(e)",
+        "3": "il/elle/on est parti(e)(s)",
+        "4": "nous sommes parti(e)s",
+        "5": "vous êtes parti(e)(s)",
+        "6": "ils/elles sont parti(e)s"
+      },
+      "pastimp": {
+        "1": "je partais",
+        "2": "tu partais",
+        "3": "il/elle/on partait",
+        "4": "nous partions",
+        "5": "vous partiez",
+        "6": "ils/elles partaient"
+      },
+      "future": {
+        "1": "je partirai",
+        "2": "tu partiras",
+        "3": "il/elle/on partira",
+        "4": "nous partirons",
+        "5": "vous partirez",
+        "6": "ils/elles partiront"
+      },
+      "subjunctive": {
+        "1": "que je parte",
+        "2": "que tu partes",
+        "3": "qu'il/elle/on parte",
+        "4": "que nous partions",
+        "5": "que vous partiez",
+        "6": "qu'ils/elles partent"
+      }
     },
-    "subjunctive": {
-      "1": "que je me retrouve",
-      "2": "que tu te retrouves",
-      "3": "qu'il/elle/on se retrouve",
-      "4": "que nous nous retrouvions",
-      "5": "que vous vous retrouviez",
-      "6": "qu'ils/elles se retrouvent"
-    }
-  },
-  "boire": {
-    "present": {
-      "1": "je bois",
-      "2": "tu bois",
-      "3": "il/elle/on boit",
-      "4": "nous buvons",
-      "5": "vous buvez",
-      "6": "ils/elles boivent"
+    "rentrer": {
+      "present": {
+        "1": "je rentre",
+        "2": "tu rentres",
+        "3": "il/elle/on rentre",
+        "4": "nous rentrons",
+        "5": "vous rentrez",
+        "6": "ils/elles rentrent"
+      },
+      "pastcomp": {
+        "1": "je suis rentré(e)",
+        "2": "tu es rentré(e)",
+        "3": "il/elle/on est rentré(e)(s)",
+        "4": "nous sommes rentré(e)s",
+        "5": "vous êtes rentré(e)(s)",
+        "6": "ils/elles sont rentré(e)s"
+      },
+      "pastimp": {
+        "1": "je rentrais",
+        "2": "tu rentrais",
+        "3": "il/elle/on rentrait",
+        "4": "nous rentrions",
+        "5": "vous rentriez",
+        "6": "ils/elles rentraient"
+      },
+      "future": {
+        "1": "je rentrerai",
+        "2": "tu rentreras",
+        "3": "il/elle/on rentrera",
+        "4": "nous rentrerons",
+        "5": "vous rentrerez",
+        "6": "ils/elles rentreront"
+      },
+      "subjunctive": {
+        "1": "que je rentre",
+        "2": "que tu rentres",
+        "3": "qu'il/elle/on rentre",
+        "4": "que nous rentrions",
+        "5": "que vous rentriez",
+        "6": "qu'ils/elles rentrent"
+      }
     },
-    "pastcomp": {
-      "1": "j'ai bu",
-      "2": "tu as bu",
-      "3": "il/elle/on a bu",
-      "4": "nous avons bu",
-      "5": "vous avez bu",
-      "6": "ils/elles ont bu"
+    "commencer": {
+      "present": {
+        "1": "je commence",
+        "2": "tu commences",
+        "3": "il/elle/on commence",
+        "4": "nous commençons",
+        "5": "vous commencez",
+        "6": "ils/elles commencent"
+      },
+      "pastcomp": {
+        "1": "j'ai commencé",
+        "2": "tu as commencé",
+        "3": "il/elle/on a commencé",
+        "4": "nous avons commencé",
+        "5": "vous avez commencé",
+        "6": "ils/elles ont commencé"
+      },
+      "pastimp": {
+        "1": "je commençais",
+        "2": "tu commençais",
+        "3": "il/elle/on commençait",
+        "4": "nous commencions",
+        "5": "vous commenciez",
+        "6": "ils/elles commençaient"
+      },
+      "future": {
+        "1": "je commencerai",
+        "2": "tu commenceras",
+        "3": "il/elle/on commencera",
+        "4": "nous commencerons",
+        "5": "vous commencerez",
+        "6": "ils/elles commenceront"
+      },
+      "subjunctive": {
+        "1": "que je commence",
+        "2": "que tu commences",
+        "3": "qu'il/elle/on commence",
+        "4": "que nous commencions",
+        "5": "que vous commenciez",
+        "6": "qu'ils/elles commencent"
+      }
     },
-    "pastimp": {
-      "1": "je buvais",
-      "2": "tu buvais",
-      "3": "il/elle/on buvait",
-      "4": "nous buvions",
-      "5": "vous buviez",
-      "6": "ils/elles buvaient"
+    "finir": {
+      "present": {
+        "1": "je finis",
+        "2": "tu finis",
+        "3": "il/elle/on finit",
+        "4": "nous finissons",
+        "5": "vous finissez",
+        "6": "ils/elles finissent"
+      },
+      "pastcomp": {
+        "1": "j'ai fini",
+        "2": "tu as fini",
+        "3": "il/elle/on a fini",
+        "4": "nous avons fini",
+        "5": "vous avez fini",
+        "6": "ils/elles ont fini"
+      },
+      "pastimp": {
+        "1": "je finissais",
+        "2": "tu finissais",
+        "3": "il/elle/on finissait",
+        "4": "nous finissions",
+        "5": "vous finissiez",
+        "6": "ils/elles finissaient"
+      },
+      "future": {
+        "1": "je finirai",
+        "2": "tu finiras",
+        "3": "il/elle/on finira",
+        "4": "nous finirons",
+        "5": "vous finirez",
+        "6": "ils/elles finiront"
+      },
+      "subjunctive": {
+        "1": "que je finisse",
+        "2": "que tu finisses",
+        "3": "qu'il/elle/on finisse",
+        "4": "que nous finissions",
+        "5": "que vous finissiez",
+        "6": "qu'ils/elles finissent"
+      }
     },
-    "future": {
-      "1": "je boirai",
-      "2": "tu boiras",
-      "3": "il/elle/on boira",
-      "4": "nous boirons",
-      "5": "vous boirez",
-      "6": "ils/elles boiront"
+    "se reposer": {
+      "present": {
+        "1": "je me repose",
+        "2": "tu te reposes",
+        "3": "il/elle/on se repose",
+        "4": "nous nous reposons",
+        "5": "vous vous reposez",
+        "6": "ils/elles se reposent"
+      },
+      "pastcomp": {
+        "1": "je me suis reposé(e)",
+        "2": "tu t'es reposé(e)",
+        "3": "il/elle/on s'est reposé(e)(s)",
+        "4": "nous nous sommes reposé(e)s",
+        "5": "vous vous êtes reposé(e)(s)",
+        "6": "ils/elles se sont reposé(e)s"
+      },
+      "pastimp": {
+        "1": "je me reposais",
+        "2": "tu te reposais",
+        "3": "il/elle/on se reposait",
+        "4": "nous nous reposions",
+        "5": "vous vous reposiez",
+        "6": "ils/elles se reposaient"
+      },
+      "future": {
+        "1": "je me reposerai",
+        "2": "tu te reposeras",
+        "3": "il/elle/on se reposera",
+        "4": "nous nous reposerons",
+        "5": "vous vous reposerez",
+        "6": "ils/elles se reposeront"
+      },
+      "subjunctive": {
+        "1": "que je me repose",
+        "2": "que tu te reposes",
+        "3": "qu'il/elle/on se repose",
+        "4": "que nous nous reposions",
+        "5": "que vous vous reposiez",
+        "6": "qu'ils/elles se reposent"
+      }
     },
-    "subjunctive": {
-      "1": "que je boive",
-      "2": "que tu boives",
-      "3": "qu'il/elle/on boive",
-      "4": "que nous buvions",
-      "5": "que vous buviez",
-      "6": "qu'ils/elles boivent"
-    }
-  },
-  "se coucher": {
-    "present": {
-      "1": "je me couche",
-      "2": "tu te couches",
-      "3": "il/elle/on se couche",
-      "4": "nous nous couchons",
-      "5": "vous vous couchez",
-      "6": "ils/elles se couchent"
+    "acheter": {
+      "present": {
+        "1": "j'achète",
+        "2": "tu achètes",
+        "3": "il/elle/on achète",
+        "4": "nous achetons",
+        "5": "vous achetez",
+        "6": "ils/elles achètent"
+      },
+      "pastcomp": {
+        "1": "j'ai acheté",
+        "2": "tu as acheté",
+        "3": "il/elle/on a acheté",
+        "4": "nous avons acheté",
+        "5": "vous avez acheté",
+        "6": "ils/elles ont acheté"
+      },
+      "pastimp": {
+        "1": "j'achetais",
+        "2": "tu achetais",
+        "3": "il/elle/on achetait",
+        "4": "nous achetions",
+        "5": "vous achetiez",
+        "6": "ils/elles achetaient"
+      },
+      "future": {
+        "1": "j'achèterai",
+        "2": "tu achèteras",
+        "3": "il/elle/on achètera",
+        "4": "nous achèterons",
+        "5": "vous achèterez",
+        "6": "ils/elles achèteront"
+      },
+      "subjunctive": {
+        "1": "que j'achète",
+        "2": "que tu achètes",
+        "3": "qu'il/elle/on achète",
+        "4": "que nous achetions",
+        "5": "que vous achetiez",
+        "6": "qu'ils/elles achètent"
+      }
     },
-    "pastcomp": {
-      "1": "je me suis couché(e)",
-      "2": "tu t'es couché(e)",
-      "3": "il/elle/on s'est couché(e)(s)",
-      "4": "nous nous sommes couché(e)s",
-      "5": "vous vous êtes couché(e)(s)",
-      "6": "ils/elles se sont couché(e)s"
+    "penser": {
+      "present": {
+        "1": "je pense",
+        "2": "tu penses",
+        "3": "il/elle/on pense",
+        "4": "nous pensons",
+        "5": "vous pensez",
+        "6": "ils/elles pensent"
+      },
+      "pastcomp": {
+        "1": "j'ai pensé",
+        "2": "tu as pensé",
+        "3": "il/elle/on a pensé",
+        "4": "nous avons pensé",
+        "5": "vous avez pensé",
+        "6": "ils/elles ont pensé"
+      },
+      "pastimp": {
+        "1": "je pensais",
+        "2": "tu pensais",
+        "3": "il/elle/on pensait",
+        "4": "nous pensions",
+        "5": "vous pensiez",
+        "6": "ils/elles pensaient"
+      },
+      "future": {
+        "1": "je penserai",
+        "2": "tu penseras",
+        "3": "il/elle/on pensera",
+        "4": "nous penserons",
+        "5": "vous penserez",
+        "6": "ils/elles penseront"
+      },
+      "subjunctive": {
+        "1": "que je pense",
+        "2": "que tu penses",
+        "3": "qu'il/elle/on pense",
+        "4": "que nous pensions",
+        "5": "que vous pensiez",
+        "6": "qu'ils/elles pensent"
+      }
     },
-    "pastimp": {
-      "1": "je me couchais",
-      "2": "tu te couchais",
-      "3": "il/elle/on se couchait",
-      "4": "nous nous couchions",
-      "5": "vous vous couchiez",
-      "6": "ils/elles se couchaient"
+    "porter": {
+      "present": {
+        "1": "je porte",
+        "2": "tu portes",
+        "3": "il/elle/on porte",
+        "4": "nous portons",
+        "5": "vous portez",
+        "6": "ils/elles portent"
+      },
+      "pastcomp": {
+        "1": "j'ai porté",
+        "2": "tu as porté",
+        "3": "il/elle/on a porté",
+        "4": "nous avons porté",
+        "5": "vous avez porté",
+        "6": "ils/elles ont porté"
+      },
+      "pastimp": {
+        "1": "je portais",
+        "2": "tu portais",
+        "3": "il/elle/on portait",
+        "4": "nous portions",
+        "5": "vous portiez",
+        "6": "ils/elles portaient"
+      },
+      "future": {
+        "1": "je porterai",
+        "2": "tu porteras",
+        "3": "il/elle/on portera",
+        "4": "nous porterons",
+        "5": "vous porterez",
+        "6": "ils/elles porteront"
+      },
+      "subjunctive": {
+        "1": "que je porte",
+        "2": "que tu portes",
+        "3": "qu'il/elle/on porte",
+        "4": "que nous portions",
+        "5": "que vous portiez",
+        "6": "qu'ils/elles portent"
+      }
     },
-    "future": {
-      "1": "je me coucherai",
-      "2": "tu te coucheras",
-      "3": "il/elle/on se couchera",
-      "4": "nous nous coucherons",
-      "5": "vous vous coucherez",
-      "6": "ils/elles se coucheront"
+    "croire": {
+      "present": {
+        "1": "je crois",
+        "2": "tu crois",
+        "3": "il/elle/on croit",
+        "4": "nous croyons",
+        "5": "vous croyez",
+        "6": "ils/elles croient"
+      },
+      "pastcomp": {
+        "1": "j'ai cru",
+        "2": "tu as cru",
+        "3": "il/elle/on a cru",
+        "4": "nous avons cru",
+        "5": "vous avez cru",
+        "6": "ils/elles ont cru"
+      },
+      "pastimp": {
+        "1": "je croyais",
+        "2": "tu croyais",
+        "3": "il/elle/on croyait",
+        "4": "nous croyions",
+        "5": "vous croyiez",
+        "6": "ils/elles croyaient"
+      },
+      "future": {
+        "1": "je croirai",
+        "2": "tu croiras",
+        "3": "il/elle/on croira",
+        "4": "nous croirons",
+        "5": "vous croirez",
+        "6": "ils/elles croiront"
+      },
+      "subjunctive": {
+        "1": "que je croie",
+        "2": "que tu croies",
+        "3": "qu'il/elle/on croie",
+        "4": "que nous croyions",
+        "5": "que vous croyiez",
+        "6": "qu'ils/elles croient"
+      }
     },
-    "subjunctive": {
-      "1": "que je me couche",
-      "2": "que tu te couches",
-      "3": "qu'il/elle/on se couche",
-      "4": "que nous nous couchions",
-      "5": "que vous vous couchiez",
-      "6": "qu'ils/elles se couchent"
-    }
-  },
-  "partir": {
-    "present": {
-      "1": "je pars",
-      "2": "tu pars",
-      "3": "il/elle/on part",
-      "4": "nous partons",
-      "5": "vous partez",
-      "6": "ils/elles partent"
-    },
-    "pastcomp": {
-      "1": "je suis parti(e)",
-      "2": "tu es parti(e)",
-      "3": "il/elle/on est parti(e)(s)",
-      "4": "nous sommes parti(e)s",
-      "5": "vous êtes parti(e)(s)",
-      "6": "ils/elles sont parti(e)s"
-    },
-    "pastimp": {
-      "1": "je partais",
-      "2": "tu partais",
-      "3": "il/elle/on partait",
-      "4": "nous partions",
-      "5": "vous partiez",
-      "6": "ils/elles partaient"
-    },
-    "future": {
-      "1": "je partirai",
-      "2": "tu partiras",
-      "3": "il/elle/on partira",
-      "4": "nous partirons",
-      "5": "vous partirez",
-      "6": "ils/elles partiront"
-    },
-    "subjunctive": {
-      "1": "que je parte",
-      "2": "que tu partes",
-      "3": "qu'il/elle/on parte",
-      "4": "que nous partions",
-      "5": "que vous partiez",
-      "6": "qu'ils/elles partent"
-    }
-  },
-  "rentrer": {
-    "present": {
-      "1": "je rentre",
-      "2": "tu rentres",
-      "3": "il/elle/on rentre",
-      "4": "nous rentrons",
-      "5": "vous rentrez",
-      "6": "ils/elles rentrent"
-    },
-    "pastcomp": {
-      "1": "je suis rentré(e)",
-      "2": "tu es rentré(e)",
-      "3": "il/elle/on est rentré(e)(s)",
-      "4": "nous sommes rentré(e)s",
-      "5": "vous êtes rentré(e)(s)",
-      "6": "ils/elles sont rentré(e)s"
-    },
-    "pastimp": {
-      "1": "je rentrais",
-      "2": "tu rentrais",
-      "3": "il/elle/on rentrait",
-      "4": "nous rentrions",
-      "5": "vous rentriez",
-      "6": "ils/elles rentraient"
-    },
-    "future": {
-      "1": "je rentrerai",
-      "2": "tu rentreras",
-      "3": "il/elle/on rentrera",
-      "4": "nous rentrerons",
-      "5": "vous rentrerez",
-      "6": "ils/elles rentreront"
-    },
-    "subjunctive": {
-      "1": "que je rentre",
-      "2": "que tu rentres",
-      "3": "qu'il/elle/on rentre",
-      "4": "que nous rentrions",
-      "5": "que vous rentriez",
-      "6": "qu'ils/elles rentrent"
-    }
-  },
-  "commencer": {
-    "present": {
-      "1": "je commence",
-      "2": "tu commences",
-      "3": "il/elle/on commence",
-      "4": "nous commençons",
-      "5": "vous commencez",
-      "6": "ils/elles commencent"
-    },
-    "pastcomp": {
-      "1": "j'ai commencé",
-      "2": "tu as commencé",
-      "3": "il/elle/on a commencé",
-      "4": "nous avons commencé",
-      "5": "vous avez commencé",
-      "6": "ils/elles ont commencé"
-    },
-    "pastimp": {
-      "1": "je commençais",
-      "2": "tu commençais",
-      "3": "il/elle/on commençait",
-      "4": "nous commencions",
-      "5": "vous commenciez",
-      "6": "ils/elles commençaient"
-    },
-    "future": {
-      "1": "je commencerai",
-      "2": "tu commenceras",
-      "3": "il/elle/on commencera",
-      "4": "nous commencerons",
-      "5": "vous commencerez",
-      "6": "ils/elles commenceront"
-    },
-    "subjunctive": {
-      "1": "que je commence",
-      "2": "que tu commences",
-      "3": "qu'il/elle/on commence",
-      "4": "que nous commencions",
-      "5": "que vous commenciez",
-      "6": "qu'ils/elles commencent"
-    }
-  },
-  "finir": {
-    "present": {
-      "1": "je finis",
-      "2": "tu finis",
-      "3": "il/elle/on finit",
-      "4": "nous finissons",
-      "5": "vous finissez",
-      "6": "ils/elles finissent"
-    },
-    "pastcomp": {
-      "1": "j'ai fini",
-      "2": "tu as fini",
-      "3": "il/elle/on a fini",
-      "4": "nous avons fini",
-      "5": "vous avez fini",
-      "6": "ils/elles ont fini"
-    },
-    "pastimp": {
-      "1": "je finissais",
-      "2": "tu finissais",
-      "3": "il/elle/on finissait",
-      "4": "nous finissions",
-      "5": "vous finissiez",
-      "6": "ils/elles finissaient"
-    },
-    "future": {
-      "1": "je finirai",
-      "2": "tu finiras",
-      "3": "il/elle/on finira",
-      "4": "nous finirons",
-      "5": "vous finirez",
-      "6": "ils/elles finiront"
-    },
-    "subjunctive": {
-      "1": "que je finisse",
-      "2": "que tu finisses",
-      "3": "qu'il/elle/on finisse",
-      "4": "que nous finissions",
-      "5": "que vous finissiez",
-      "6": "qu'ils/elles finissent"
-    }
-},
-"se reposer": {
-  "present": {
-    "1": "je me repose",
-    "2": "tu te reposes",
-    "3": "il/elle/on se repose",
-    "4": "nous nous reposons",
-    "5": "vous vous reposez",
-    "6": "ils/elles se reposent"
-  },
-  "pastcomp": {
-    "1": "je me suis reposé(e)",
-    "2": "tu t'es reposé(e)",
-    "3": "il/elle/on s'est reposé(e)(s)",
-    "4": "nous nous sommes reposé(e)s",
-    "5": "vous vous êtes reposé(e)(s)",
-    "6": "ils/elles se sont reposé(e)s"
-  },
-  "pastimp": {
-    "1": "je me reposais",
-    "2": "tu te reposais",
-    "3": "il/elle/on se reposait",
-    "4": "nous nous reposions",
-    "5": "vous vous reposiez",
-    "6": "ils/elles se reposaient"
-  },
-  "future": {
-    "1": "je me reposerai",
-    "2": "tu te reposeras",
-    "3": "il/elle/on se reposera",
-    "4": "nous nous reposerons",
-    "5": "vous vous reposerez",
-    "6": "ils/elles se reposeront"
-  },
-  "subjunctive": {
-    "1": "que je me repose",
-    "2": "que tu te reposes",
-    "3": "qu'il/elle/on se repose",
-    "4": "que nous nous reposions",
-    "5": "que vous vous reposiez",
-    "6": "qu'ils/elles se reposent"
-  }
-},
-  "acheter": {
-    "present": {
-      "1": "j'achète",
-      "2": "tu achètes",
-      "3": "il/elle/on achète",
-      "4": "nous achetons",
-      "5": "vous achetez",
-      "6": "ils/elles achètent"
-    },
-    "pastcomp": {
-      "1": "j'ai acheté",
-      "2": "tu as acheté",
-      "3": "il/elle/on a acheté",
-      "4": "nous avons acheté",
-      "5": "vous avez acheté",
-      "6": "ils/elles ont acheté"
-    },
-    "pastimp": {
-      "1": "j'achetais",
-      "2": "tu achetais",
-      "3": "il/elle/on achetait",
-      "4": "nous achetions",
-      "5": "vous achetiez",
-      "6": "ils/elles achetaient"
-    },
-    "future": {
-      "1": "j'achèterai",
-      "2": "tu achèteras",
-      "3": "il/elle/on achètera",
-      "4": "nous achèterons",
-      "5": "vous achèterez",
-      "6": "ils/elles achèteront"
-    },
-    "subjunctive": {
-      "1": "que j'achète",
-      "2": "que tu achètes",
-      "3": "qu'il/elle/on achète",
-      "4": "que nous achetions",
-      "5": "que vous achetiez",
-      "6": "qu'ils/elles achètent"
-    }
-  },
-  "penser": {
-    "present": {
-      "1": "je pense",
-      "2": "tu penses",
-      "3": "il/elle/on pense",
-      "4": "nous pensons",
-      "5": "vous pensez",
-      "6": "ils/elles pensent"
-    },
-    "pastcomp": {
-      "1": "j'ai pensé",
-      "2": "tu as pensé",
-      "3": "il/elle/on a pensé",
-      "4": "nous avons pensé",
-      "5": "vous avez pensé",
-      "6": "ils/elles ont pensé"
-    },
-    "pastimp": {
-      "1": "je pensais",
-      "2": "tu pensais",
-      "3": "il/elle/on pensait",
-      "4": "nous pensions",
-      "5": "vous pensiez",
-      "6": "ils/elles pensaient"
-    },
-    "future": {
-      "1": "je penserai",
-      "2": "tu penseras",
-      "3": "il/elle/on pensera",
-      "4": "nous penserons",
-      "5": "vous penserez",
-      "6": "ils/elles penseront"
-    },
-    "subjunctive": {
-      "1": "que je pense",
-      "2": "que tu penses",
-      "3": "qu'il/elle/on pense",
-      "4": "que nous pensions",
-      "5": "que vous pensiez",
-      "6": "qu'ils/elles pensent"
-    }
-  },
-  "porter": {
-    "present": {
-      "1": "je porte",
-      "2": "tu portes",
-      "3": "il/elle/on porte",
-      "4": "nous portons",
-      "5": "vous portez",
-      "6": "ils/elles portent"
-    },
-    "pastcomp": {
-      "1": "j'ai porté",
-      "2": "tu as porté",
-      "3": "il/elle/on a porté",
-      "4": "nous avons porté",
-      "5": "vous avez porté",
-      "6": "ils/elles ont porté"
-    },
-    "pastimp": {
-      "1": "je portais",
-      "2": "tu portais",
-      "3": "il/elle/on portait",
-      "4": "nous portions",
-      "5": "vous portiez",
-      "6": "ils/elles portaient"
-    },
-    "future": {
-      "1": "je porterai",
-      "2": "tu porteras",
-      "3": "il/elle/on portera",
-      "4": "nous porterons",
-      "5": "vous porterez",
-      "6": "ils/elles porteront"
-    },
-    "subjunctive": {
-      "1": "que je porte",
-      "2": "que tu portes",
-      "3": "qu'il/elle/on porte",
-      "4": "que nous portions",
-      "5": "que vous portiez",
-      "6": "qu'ils/elles portent"
-    }
-  },
-  "croire": {
-    "present": {
-      "1": "je crois",
-      "2": "tu crois",
-      "3": "il/elle/on croit",
-      "4": "nous croyons",
-      "5": "vous croyez",
-      "6": "ils/elles croient"
-    },
-    "pastcomp": {
-      "1": "j'ai cru",
-      "2": "tu as cru",
-      "3": "il/elle/on a cru",
-      "4": "nous avons cru",
-      "5": "vous avez cru",
-      "6": "ils/elles ont cru"
-    },
-    "pastimp": {
-      "1": "je croyais",
-      "2": "tu croyais",
-      "3": "il/elle/on croyait",
-      "4": "nous croyions",
-      "5": "vous croyiez",
-      "6": "ils/elles croyaient"
-    },
-    "future": {
-      "1": "je croirai",
-      "2": "tu croiras",
-      "3": "il/elle/on croira",
-      "4": "nous croirons",
-      "5": "vous croirez",
-      "6": "ils/elles croiront"
-    },
-    "subjunctive": {
-      "1": "que je croie",
-      "2": "que tu croies",
-      "3": "qu'il/elle/on croie",
-      "4": "que nous croyions",
-      "5": "que vous croyiez",
-      "6": "qu'ils/elles croient"
-    }
-  },
 
+    "voyager": {
+      "present": {
+        "1": "je voyage",
+        "2": "tu voyages",
+        "3": "il/elle/on voyage",
+        "4": "nous voyageons",
+        "5": "vous voyagez",
+        "6": "ils/elles voyagent"
+      },
+      "pastcomp": {
+        "1": "j'ai voyagé",
+        "2": "tu as voyagé",
+        "3": "il/elle/on a voyagé",
+        "4": "nous avons voyagé",
+        "5": "vous avez voyagé",
+        "6": "ils/elles ont voyagé"
+      },
+      "pastimp": {
+        "1": "je voyageais",
+        "2": "tu voyageais",
+        "3": "il/elle/on voyageait",
+        "4": "nous voyagions",
+        "5": "vous voyagiez",
+        "6": "ils/elles voyageaient"
+      },
+      "future": {
+        "1": "je voyagerai",
+        "2": "tu voyageras",
+        "3": "il/elle/on voyagera",
+        "4": "nous voyagerons",
+        "5": "vous voyagerez",
+        "6": "ils/elles voyageront"
+      },
+      "subjunctive": {
+        "1": "que je voyage",
+        "2": "que tu voyages",
+        "3": "qu'il/elle/on voyage",
+        "4": "que nous voyagions",
+        "5": "que vous voyagiez",
+        "6": "qu'ils/elles voyagent"
+      }
+    },
+    "préparer": {
+      "present": {
+        "1": "je prépare",
+        "2": "tu prépares",
+        "3": "il/elle/on prépare",
+        "4": "nous préparons",
+        "5": "vous préparez",
+        "6": "ils/elles préparent"
+      },
+      "pastcomp": {
+        "1": "j'ai préparé",
+        "2": "tu as préparé",
+        "3": "il/elle/on a préparé",
+        "4": "nous avons préparé",
+        "5": "vous avez préparé",
+        "6": "ils/elles ont préparé"
+      },
+      "pastimp": {
+        "1": "je préparais",
+        "2": "tu préparais",
+        "3": "il/elle/on préparait",
+        "4": "nous préparions",
+        "5": "vous prépariez",
+        "6": "ils/elles préparaient"
+      },
+      "future": {
+        "1": "je préparerai",
+        "2": "tu prépareras",
+        "3": "il/elle/on préparera",
+        "4": "nous préparerons",
+        "5": "vous préparerez",
+        "6": "ils/elles prépareront"
+      },
+      "subjunctive": {
+        "1": "que je prépare",
+        "2": "que tu prépares",
+        "3": "qu'il/elle/on prépare",
+        "4": "que nous préparions",
+        "5": "que vous prépariez",
+        "6": "qu'ils/elles préparent"
+      }
+    },
+    "vivre": {
+      "present": {
+        "1": "je vis",
+        "2": "tu vis",
+        "3": "il/elle/on vit",
+        "4": "nous vivons",
+        "5": "vous vivez",
+        "6": "ils/elles vivent"
+      },
+      "pastcomp": {
+        "1": "j'ai vécu",
+        "2": "tu as vécu",
+        "3": "il/elle/on a vécu",
+        "4": "nous avons vécu",
+        "5": "vous avez vécu",
+        "6": "ils/elles ont vécu"
+      },
+      "pastimp": {
+        "1": "je vivais",
+        "2": "tu vivais",
+        "3": "il/elle/on vivait",
+        "4": "nous vivions",
+        "5": "vous viviez",
+        "6": "ils/elles vivaient"
+      },
+      "future": {
+        "1": "je vivrai",
+        "2": "tu vivras",
+        "3": "il/elle/on vivra",
+        "4": "nous vivrons",
+        "5": "vous vivrez",
+        "6": "ils/elles vivront"
+      },
+      "subjunctive": {
+        "1": "que je vive",
+        "2": "que tu vives",
+        "3": "qu'il/elle/on vive",
+        "4": "que nous vivions",
+        "5": "que vous viviez",
+        "6": "qu'ils/elles vivent"
+      }
+    },
+    "se passer": {
+      "present": {
+        "3": "il/elle/ça se passe"
+      },
+      "pastcomp": {
+        "3": "il/elle/ça s'est passé(e)"
+      },
+      "pastimp": {
+        "3": "il/elle/ça se passait"
+      },
+      "future": {
+        "3": "il/elle/ça se passera"
+      },
+      "subjunctive": {
+        "3": "qu'il/elle/ça se passe"
+      }
+    },
+    "s'inquiéter": {
+      "present": {
+        "1": "je m'inquiète",
+        "2": "tu t'inquiètes",
+        "3": "il/elle/on s'inquiète",
+        "4": "nous nous inquiétons",
+        "5": "vous vous inquiétez",
+        "6": "ils/elles s'inquiètent"
+      },
+      "pastcomp": {
+        "1": "je me suis inquiété(e)",
+        "2": "tu t'es inquiété(e)",
+        "3": "il/elle/on s'est inquiété(e)(s)",
+        "4": "nous nous sommes inquiété(e)s",
+        "5": "vous vous êtes inquiété(e)(s)",
+        "6": "ils/elles se sont inquiété(e)s"
+      },
+      "pastimp": {
+        "1": "je m'inquiétais",
+        "2": "tu t'inquiétais",
+        "3": "il/elle/on s'inquiétait",
+        "4": "nous nous inquiétions",
+        "5": "vous vous inquiétiez",
+        "6": "ils/elles s'inquiétaient"
+      },
+      "future": {
+        "1": "je m'inquiéterai",
+        "2": "tu t'inquiéteras",
+        "3": "il/elle/on s'inquiétera",
+        "4": "nous nous inquiéterons",
+        "5": "vous vous inquiéterez",
+        "6": "ils/elles s'inquiéteront"
+      },
+      "subjunctive": {
+        "1": "que je m'inquiète",
+        "2": "que tu t'inquiètes",
+        "3": "qu'il/elle/on s'inquiète",
+        "4": "que nous nous inquiétions",
+        "5": "que vous vous inquiétiez",
+        "6": "qu'ils/elles s'inquiètent"
+      }
+    },
+    "venir": {
+      "present": {
+        "1": "je viens",
+        "2": "tu viens",
+        "3": "il/elle/on vient",
+        "4": "nous venons",
+        "5": "vous venez",
+        "6": "ils/elles viennent"
+      },
+      "pastcomp": {
+        "1": "je suis venu(e)",
+        "2": "tu es venu(e)",
+        "3": "il/elle/on est venu(e)(s)",
+        "4": "nous sommes venu(e)s",
+        "5": "vous êtes venu(e)(s)",
+        "6": "ils/elles sont venu(e)s"
+      },
+      "pastimp": {
+        "1": "je venais",
+        "2": "tu venais",
+        "3": "il/elle/on venait",
+        "4": "nous venions",
+        "5": "vous veniez",
+        "6": "ils/elles venaient"
+      },
+      "future": {
+        "1": "je viendrai",
+        "2": "tu viendras",
+        "3": "il/elle/on viendra",
+        "4": "nous viendrons",
+        "5": "vous viendrez",
+        "6": "ils/elles viendront"
+      },
+      "subjunctive": {
+        "1": "que je vienne",
+        "2": "que tu viennes",
+        "3": "qu'il/elle/on vienne",
+        "4": "que nous venions",
+        "5": "que vous veniez",
+        "6": "qu'ils/elles viennent"
+      }
+    },
+    "lire": {
+      "present": {
+        "1": "je lis",
+        "2": "tu lis",
+        "3": "il/elle/on lit",
+        "4": "nous lisons",
+        "5": "vous lisez",
+        "6": "ils/elles lisent"
+      },
+      "pastcomp": {
+        "1": "j'ai lu",
+        "2": "tu as lu",
+        "3": "il/elle/on a lu",
+        "4": "nous avons lu",
+        "5": "vous avez lu",
+        "6": "ils/elles ont lu"
+      },
+      "pastimp": {
+        "1": "je lisais",
+        "2": "tu lisais",
+        "3": "il/elle/on lisait",
+        "4": "nous lisions",
+        "5": "vous lisiez",
+        "6": "ils/elles lisaient"
+      },
+      "future": {
+        "1": "je lirai",
+        "2": "tu liras",
+        "3": "il/elle/on lira",
+        "4": "nous lirons",
+        "5": "vous lirez",
+        "6": "ils/elles liront"
+      },
+      "subjunctive": {
+        "1": "que je lise",
+        "2": "que tu lises",
+        "3": "qu'il/elle/on lise",
+        "4": "que nous lisions",
+        "5": "que vous lisiez",
+        "6": "qu'ils/elles lisent"
+      }
+    },
 
-  "voyager": {
-    "present": {
-      "1": "je voyage",
-      "2": "tu voyages",
-      "3": "il/elle/on voyage",
-      "4": "nous voyageons",
-      "5": "vous voyagez",
-      "6": "ils/elles voyagent"
+    "sortir": {
+      "present": {
+        "1": "je sors",
+        "2": "tu sors",
+        "3": "il/elle/on sort",
+        "4": "nous sortons",
+        "5": "vous sortez",
+        "6": "ils/elles sortent"
+      },
+      "pastcompEtre": {
+        "1": "je suis sorti(e)",
+        "2": "tu es sorti(e)",
+        "3": "il/elle/on est sorti(e)(s)",
+        "4": "nous sommes sorti(e)s",
+        "5": "vous êtes sorti(e)(s)",
+        "6": "ils/elles sont sorti(e)s"
+      },
+      "pastimp": {
+        "1": "je sortais",
+        "2": "tu sortais",
+        "3": "il/elle/on sortait",
+        "4": "nous sortions",
+        "5": "vous sortiez",
+        "6": "ils/elles sortaient"
+      },
+      "future": {
+        "1": "je sortirai",
+        "2": "tu sortiras",
+        "3": "il/elle/on sortira",
+        "4": "nous sortirons",
+        "5": "vous sortirez",
+        "6": "ils/elles sortiront"
+      },
+      "subjunctive": {
+        "1": "que je sorte",
+        "2": "que tu sortes",
+        "3": "qu'il/elle/on sorte",
+        "4": "que nous sortions",
+        "5": "que vous sortiez",
+        "6": "qu'ils/elles sortent"
+      }
     },
-    "pastcomp": {
-      "1": "j'ai voyagé",
-      "2": "tu as voyagé",
-      "3": "il/elle/on a voyagé",
-      "4": "nous avons voyagé",
-      "5": "vous avez voyagé",
-      "6": "ils/elles ont voyagé"
+    "gagner": {
+      "present": {
+        "1": "je gagne",
+        "2": "tu gagnes",
+        "3": "il/elle/on gagne",
+        "4": "nous gagnons",
+        "5": "vous gagnez",
+        "6": "ils/elles gagnent"
+      },
+      "pastcomp": {
+        "1": "j'ai gagné",
+        "2": "tu as gagné",
+        "3": "il/elle/on a gagné",
+        "4": "nous avons gagné",
+        "5": "vous avez gagné",
+        "6": "ils/elles ont gagné"
+      },
+      "pastimp": {
+        "1": "je gagnais",
+        "2": "tu gagnais",
+        "3": "il/elle/on gagnait",
+        "4": "nous gagnions",
+        "5": "vous gagniez",
+        "6": "ils/elles gagnaient"
+      },
+      "future": {
+        "1": "je gagnerai",
+        "2": "tu gagneras",
+        "3": "il/elle/on gagnera",
+        "4": "nous gagnerons",
+        "5": "vous gagnerez",
+        "6": "ils/elles gagneront"
+      },
+      "subjunctive": {
+        "1": "que je gagne",
+        "2": "que tu gagnes",
+        "3": "qu'il/elle/on gagne",
+        "4": "que nous gagnions",
+        "5": "que vous gagniez",
+        "6": "qu'ils/elles gagnent"
+      }
     },
-    "pastimp": {
-      "1": "je voyageais",
-      "2": "tu voyageais",
-      "3": "il/elle/on voyageait",
-      "4": "nous voyagions",
-      "5": "vous voyagiez",
-      "6": "ils/elles voyageaient"
+    "avoir": {
+      "present": {
+        "1": "j'ai",
+        "2": "tu as",
+        "3": "il/elle/on a",
+        "4": "nous avons",
+        "5": "vous avez",
+        "6": "ils/elles ont"
+      },
+      "pastcomp": {
+        "1": "j'ai eu",
+        "2": "tu as eu",
+        "3": "il/elle/on a eu",
+        "4": "nous avons eu",
+        "5": "vous avez eu",
+        "6": "ils/elles ont eu"
+      },
+      "pastimp": {
+        "1": "j'avais",
+        "2": "tu avais",
+        "3": "il/elle/on avait",
+        "4": "nous avions",
+        "5": "vous aviez",
+        "6": "ils/elles avaient"
+      },
+      "future": {
+        "1": "j'aurai",
+        "2": "tu auras",
+        "3": "il/elle/on aura",
+        "4": "nous aurons",
+        "5": "vous aurez",
+        "6": "ils/elles auront"
+      },
+      "subjunctive": {
+        "1": "que j'aie",
+        "2": "que tu aies",
+        "3": "qu'il/elle/on ait",
+        "4": "que nous ayons",
+        "5": "que vous ayez",
+        "6": "qu'ils/elles aient"
+      }
     },
-    "future": {
-      "1": "je voyagerai",
-      "2": "tu voyageras",
-      "3": "il/elle/on voyagera",
-      "4": "nous voyagerons",
-      "5": "vous voyagerez",
-      "6": "ils/elles voyageront"
+    "rencontrer": {
+      "present": {
+        "1": "je rencontre",
+        "2": "tu rencontres",
+        "3": "il/elle/on rencontre",
+        "4": "nous rencontrons",
+        "5": "vous rencontrez",
+        "6": "ils/elles rencontrent"
+      },
+      "pastcomp": {
+        "1": "j'ai rencontré",
+        "2": "tu as rencontré",
+        "3": "il/elle/on a rencontré",
+        "4": "nous avons rencontré",
+        "5": "vous avez rencontré",
+        "6": "ils/elles ont rencontré"
+      },
+      "pastimp": {
+        "1": "je rencontrais",
+        "2": "tu rencontrais",
+        "3": "il/elle/on rencontrait",
+        "4": "nous rencontrions",
+        "5": "vous rencontriez",
+        "6": "ils/elles rencontraient"
+      },
+      "future": {
+        "1": "je rencontrerai",
+        "2": "tu rencontreras",
+        "3": "il/elle/on rencontrera",
+        "4": "nous rencontrerons",
+        "5": "vous rencontrerez",
+        "6": "ils/elles rencontreront"
+      },
+      "subjunctive": {
+        "1": "que je rencontre",
+        "2": "que tu rencontres",
+        "3": "qu'il/elle/on rencontre",
+        "4": "que nous rencontrions",
+        "5": "que vous rencontriez",
+        "6": "qu'ils/elles rencontrent"
+      }
     },
-    "subjunctive": {
-      "1": "que je voyage",
-      "2": "que tu voyages",
-      "3": "qu'il/elle/on voyage",
-      "4": "que nous voyagions",
-      "5": "que vous voyagiez",
-      "6": "qu'ils/elles voyagent"
-    }
-  },
-  "préparer": {
-    "present": {
-      "1": "je prépare",
-      "2": "tu prépares",
-      "3": "il/elle/on prépare",
-      "4": "nous préparons",
-      "5": "vous préparez",
-      "6": "ils/elles préparent"
+    "poser": {
+      "present": {
+        "1": "je pose",
+        "2": "tu poses",
+        "3": "il/elle/on pose",
+        "4": "nous posons",
+        "5": "vous posez",
+        "6": "ils/elles posent"
+      },
+      "pastcomp": {
+        "1": "j'ai posé",
+        "2": "tu as posé",
+        "3": "il/elle/on a posé",
+        "4": "nous avons posé",
+        "5": "vous avez posé",
+        "6": "ils/elles ont posé"
+      },
+      "pastimp": {
+        "1": "je posais",
+        "2": "tu posais",
+        "3": "il/elle/on posait",
+        "4": "nous posions",
+        "5": "vous posiez",
+        "6": "ils/elles posaient"
+      },
+      "future": {
+        "1": "je poserai",
+        "2": "tu poseras",
+        "3": "il/elle/on posera",
+        "4": "nous poserons",
+        "5": "vous poserez",
+        "6": "ils/elles poseront"
+      },
+      "subjunctive": {
+        "1": "que je pose",
+        "2": "que tu poses",
+        "3": "qu'il/elle/on pose",
+        "4": "que nous posions",
+        "5": "que vous posiez",
+        "6": "qu'ils/elles posent"
+      }
     },
-    "pastcomp": {
-      "1": "j'ai préparé",
-      "2": "tu as préparé",
-      "3": "il/elle/on a préparé",
-      "4": "nous avons préparé",
-      "5": "vous avez préparé",
-      "6": "ils/elles ont préparé"
+    "répondre": {
+      "present": {
+        "1": "je réponds",
+        "2": "tu réponds",
+        "3": "il/elle/on répond",
+        "4": "nous répondons",
+        "5": "vous répondez",
+        "6": "ils/elles répondent"
+      },
+      "pastcomp": {
+        "1": "j'ai répondu",
+        "2": "tu as répondu",
+        "3": "il/elle/on a répondu",
+        "4": "nous avons répondu",
+        "5": "vous avez répondu",
+        "6": "ils/elles ont répondu"
+      },
+      "pastimp": {
+        "1": "je répondais",
+        "2": "tu répondais",
+        "3": "il/elle/on répondait",
+        "4": "nous répondions",
+        "5": "vous répondiez",
+        "6": "ils/elles répondaient"
+      },
+      "future": {
+        "1": "je répondrai",
+        "2": "tu répondras",
+        "3": "il/elle/on répondra",
+        "4": "nous répondrons",
+        "5": "vous répondrez",
+        "6": "ils/elles répondront"
+      },
+      "subjunctive": {
+        "1": "que je réponde",
+        "2": "que tu répondes",
+        "3": "qu'il/elle/on réponde",
+        "4": "que nous répondions",
+        "5": "que vous répondiez",
+        "6": "qu'ils/elles répondent"
+      }
     },
-    "pastimp": {
-      "1": "je préparais",
-      "2": "tu préparais",
-      "3": "il/elle/on préparait",
-      "4": "nous préparions",
-      "5": "vous prépariez",
-      "6": "ils/elles préparaient"
+    "réussir": {
+      "present": {
+        "1": "je réussis",
+        "2": "tu réussis",
+        "3": "il/elle/on réussit",
+        "4": "nous réussissons",
+        "5": "vous réussissez",
+        "6": "ils/elles réussissent"
+      },
+      "pastcomp": {
+        "1": "j'ai réussi",
+        "2": "tu as réussi",
+        "3": "il/elle/on a réussi",
+        "4": "nous avons réussi",
+        "5": "vous avez réussi",
+        "6": "ils/elles ont réussi"
+      },
+      "pastimp": {
+        "1": "je réussissais",
+        "2": "tu réussissais",
+        "3": "il/elle/on réussissait",
+        "4": "nous réussissions",
+        "5": "vous réussissiez",
+        "6": "ils/elles réussissaient"
+      },
+      "future": {
+        "1": "je réussirai",
+        "2": "tu réussiras",
+        "3": "il/elle/on réussira",
+        "4": "nous réussirons",
+        "5": "vous réussirez",
+        "6": "ils/elles réussiront"
+      },
+      "subjunctive": {
+        "1": "que je réussisse",
+        "2": "que tu réussisses",
+        "3": "qu'il/elle/on réussisse",
+        "4": "que nous réussissions",
+        "5": "que vous réussissiez",
+        "6": "qu'ils/elles réussissent"
+      }
     },
-    "future": {
-      "1": "je préparerai",
-      "2": "tu prépareras",
-      "3": "il/elle/on préparera",
-      "4": "nous préparerons",
-      "5": "vous préparerez",
-      "6": "ils/elles prépareront"
+    "écrire": {
+      "present": {
+        "1": "j'écris",
+        "2": "tu écris",
+        "3": "il/elle/on écrit",
+        "4": "nous écrivons",
+        "5": "vous écrivez",
+        "6": "ils/elles écrivent"
+      },
+      "pastcomp": {
+        "1": "j'ai écrit",
+        "2": "tu as écrit",
+        "3": "il/elle/on a écrit",
+        "4": "nous avons écrit",
+        "5": "vous avez écrit",
+        "6": "ils/elles ont écrit"
+      },
+      "pastimp": {
+        "1": "j'écrivais",
+        "2": "tu écrivais",
+        "3": "il/elle/on écrivait",
+        "4": "nous écrivions",
+        "5": "vous écriviez",
+        "6": "ils/elles écrivaient"
+      },
+      "future": {
+        "1": "j'écrirai",
+        "2": "tu écriras",
+        "3": "il/elle/on écrira",
+        "4": "nous écrirons",
+        "5": "vous écrirez",
+        "6": "ils/elles écriront"
+      },
+      "subjunctive": {
+        "1": "que j'écrive",
+        "2": "que tu écrives",
+        "3": "qu'il/elle/on écrive",
+        "4": "que nous écrivions",
+        "5": "que vous écriviez",
+        "6": "qu'ils/elles écrivent"
+      }
     },
-    "subjunctive": {
-      "1": "que je prépare",
-      "2": "que tu prépares",
-      "3": "qu'il/elle/on prépare",
-      "4": "que nous préparions",
-      "5": "que vous prépariez",
-      "6": "qu'ils/elles préparent"
-    }
-  },
-  "vivre": {
-    "present": {
-      "1": "je vis",
-      "2": "tu vis",
-      "3": "il/elle/on vit",
-      "4": "nous vivons",
-      "5": "vous vivez",
-      "6": "ils/elles vivent"
+    "choisir": {
+      "present": {
+        "1": "je choisis",
+        "2": "tu choisis",
+        "3": "il/elle/on choisit",
+        "4": "nous choisissons",
+        "5": "vous choisissez",
+        "6": "ils/elles choisissent"
+      },
+      "pastcomp": {
+        "1": "j'ai choisi",
+        "2": "tu as choisi",
+        "3": "il/elle/on a choisi",
+        "4": "nous avons choisi",
+        "5": "vous avez choisi",
+        "6": "ils/elles ont choisi"
+      },
+      "pastimp": {
+        "1": "je choisissais",
+        "2": "tu choisissais",
+        "3": "il/elle/on choisissait",
+        "4": "nous choisissions",
+        "5": "vous choisissiez",
+        "6": "ils/elles choisissaient"
+      },
+      "future": {
+        "1": "je choisirai",
+        "2": "tu choisiras",
+        "3": "il/elle/on choisira",
+        "4": "nous choisirons",
+        "5": "vous choisirez",
+        "6": "ils/elles choisiront"
+      },
+      "subjunctive": {
+        "1": "que je choisisse",
+        "2": "que tu choisisses",
+        "3": "qu'il/elle/on choisisse",
+        "4": "que nous choisissions",
+        "5": "que vous choisissiez",
+        "6": "qu'ils/elles choisissent"
+      }
     },
-    "pastcomp": {
-      "1": "j'ai vécu",
-      "2": "tu as vécu",
-      "3": "il/elle/on a vécu",
-      "4": "nous avons vécu",
-      "5": "vous avez vécu",
-      "6": "ils/elles ont vécu"
+    "dire": {
+      "present": {
+        "1": "je dis",
+        "2": "tu dis",
+        "3": "il/elle/on dit",
+        "4": "nous disons",
+        "5": "vous dites",
+        "6": "ils/elles disent"
+      },
+      "pastcomp": {
+        "1": "j'ai dit",
+        "2": "tu as dit",
+        "3": "il/elle/on a dit",
+        "4": "nous avons dit",
+        "5": "vous avez dit",
+        "6": "ils/elles ont dit"
+      },
+      "pastimp": {
+        "1": "je disais",
+        "2": "tu disais",
+        "3": "il/elle/on disait",
+        "4": "nous disions",
+        "5": "vous disiez",
+        "6": "ils/elles disaient"
+      },
+      "future": {
+        "1": "je dirai",
+        "2": "tu diras",
+        "3": "il/elle/on dira",
+        "4": "nous dirons",
+        "5": "vous direz",
+        "6": "ils/elles diront"
+      },
+      "subjunctive": {
+        "1": "que je dise",
+        "2": "que tu dises",
+        "3": "qu'il/elle/on dise",
+        "4": "que nous disions",
+        "5": "que vous disiez",
+        "6": "qu'ils/elles disent"
+      }
     },
-    "pastimp": {
-      "1": "je vivais",
-      "2": "tu vivais",
-      "3": "il/elle/on vivait",
-      "4": "nous vivions",
-      "5": "vous viviez",
-      "6": "ils/elles vivaient"
+    "voir": {
+      "present": {
+        "1": "je vois",
+        "2": "tu vois",
+        "3": "il/elle/on voit",
+        "4": "nous voyons",
+        "5": "vous voyez",
+        "6": "ils/elles voient"
+      },
+      "pastcomp": {
+        "1": "j'ai vu",
+        "2": "tu as vu",
+        "3": "il/elle/on a vu",
+        "4": "nous avons vu",
+        "5": "vous avez vu",
+        "6": "ils/elles ont vu"
+      },
+      "pastimp": {
+        "1": "je voyais",
+        "2": "tu voyais",
+        "3": "il/elle/on voyait",
+        "4": "nous voyions",
+        "5": "vous voyiez",
+        "6": "ils/elles voyaient"
+      },
+      "future": {
+        "1": "je verrai",
+        "2": "tu verras",
+        "3": "il/elle/on verra",
+        "4": "nous verrons",
+        "5": "vous verrez",
+        "6": "ils/elles verront"
+      },
+      "subjunctive": {
+        "1": "que je voie",
+        "2": "que tu voies",
+        "3": "qu'il/elle/on voie",
+        "4": "que nous voyions",
+        "5": "que vous voyiez",
+        "6": "qu'ils/elles voient"
+      }
     },
-    "future": {
-      "1": "je vivrai",
-      "2": "tu vivras",
-      "3": "il/elle/on vivra",
-      "4": "nous vivrons",
-      "5": "vous vivrez",
-      "6": "ils/elles vivront"
+    "accepter": {
+      "present": {
+        "1": "j'accepte",
+        "2": "tu acceptes",
+        "3": "il/elle/on accepte",
+        "4": "nous acceptons",
+        "5": "vous acceptez",
+        "6": "ils/elles acceptent"
+      },
+      "pastcomp": {
+        "1": "j'ai accepté",
+        "2": "tu as accepté",
+        "3": "il/elle/on a accepté",
+        "4": "nous avons accepté",
+        "5": "vous avez accepté",
+        "6": "ils/elles ont accepté"
+      },
+      "pastimp": {
+        "1": "j'acceptais",
+        "2": "tu acceptais",
+        "3": "il/elle/on acceptait",
+        "4": "nous acceptions",
+        "5": "vous acceptiez",
+        "6": "ils/elles acceptaient"
+      },
+      "future": {
+        "1": "j'accepterai",
+        "2": "tu accepteras",
+        "3": "il/elle/on acceptera",
+        "4": "nous accepterons",
+        "5": "vous accepterez",
+        "6": "ils/elles accepteront"
+      },
+      "subjunctive": {
+        "1": "que j'accepte",
+        "2": "que tu acceptes",
+        "3": "qu'il/elle/on accepte",
+        "4": "que nous acceptions",
+        "5": "que vous acceptiez",
+        "6": "qu'ils/elles acceptent"
+      }
     },
-    "subjunctive": {
-      "1": "que je vive",
-      "2": "que tu vives",
-      "3": "qu'il/elle/on vive",
-      "4": "que nous vivions",
-      "5": "que vous viviez",
-      "6": "qu'ils/elles vivent"
-    }
-  },
-  "se passer": {
-    "present": {
-      "3": "il/elle/ça se passe"
+    "visiter": {
+      "present": {
+        "1": "je visite",
+        "2": "tu visites",
+        "3": "il/elle/on visite",
+        "4": "nous visitons",
+        "5": "vous visitez",
+        "6": "ils/elles visitent"
+      },
+      "pastcomp": {
+        "1": "j'ai visité",
+        "2": "tu as visité",
+        "3": "il/elle/on a visité",
+        "4": "nous avons visité",
+        "5": "vous avez visité",
+        "6": "ils/elles ont visité"
+      },
+      "pastimp": {
+        "1": "je visitais",
+        "2": "tu visitais",
+        "3": "il/elle/on visitait",
+        "4": "nous visitions",
+        "5": "vous visitiez",
+        "6": "ils/elles visitaient"
+      },
+      "future": {
+        "1": "je visiterai",
+        "2": "tu visiteras",
+        "3": "il/elle/on visitera",
+        "4": "nous visiterons",
+        "5": "vous visiterez",
+        "6": "ils/elles visiteront"
+      },
+      "subjunctive": {
+        "1": "que je visite",
+        "2": "que tu visites",
+        "3": "qu'il/elle/on visite",
+        "4": "que nous visitions",
+        "5": "que vous visitiez",
+        "6": "qu'ils/elles visitent"
+      }
     },
-    "pastcomp": {
-      "3": "il/elle/ça s'est passé(e)"
-    },
-    "pastimp": {
-      "3": "il/elle/ça se passait"
-    },
-    "future": {
-      "3": "il/elle/ça se passera"
-    },
-    "subjunctive": {
-      "3": "qu'il/elle/ça se passe"
-    }
-  },
-  "s'inquiéter": {
-    "present": {
-      "1": "je m'inquiète",
-      "2": "tu t'inquiètes",
-      "3": "il/elle/on s'inquiète",
-      "4": "nous nous inquiétons",
-      "5": "vous vous inquiétez",
-      "6": "ils/elles s'inquiètent"
-    },
-    "pastcomp": {
-      "1": "je me suis inquiété(e)",
-      "2": "tu t'es inquiété(e)",
-      "3": "il/elle/on s'est inquiété(e)(s)",
-      "4": "nous nous sommes inquiété(e)s",
-      "5": "vous vous êtes inquiété(e)(s)",
-      "6": "ils/elles se sont inquiété(e)s"
-    },
-    "pastimp": {
-      "1": "je m'inquiétais",
-      "2": "tu t'inquiétais",
-      "3": "il/elle/on s'inquiétait",
-      "4": "nous nous inquiétions",
-      "5": "vous vous inquiétiez",
-      "6": "ils/elles s'inquiétaient"
-    },
-    "future": {
-      "1": "je m'inquiéterai",
-      "2": "tu t'inquiéteras",
-      "3": "il/elle/on s'inquiétera",
-      "4": "nous nous inquiéterons",
-      "5": "vous vous inquiéterez",
-      "6": "ils/elles s'inquiéteront"
-    },
-    "subjunctive": {
-      "1": "que je m'inquiète",
-      "2": "que tu t'inquiètes",
-      "3": "qu'il/elle/on s'inquiète",
-      "4": "que nous nous inquiétions",
-      "5": "que vous vous inquiétiez",
-      "6": "qu'ils/elles s'inquiètent"
-    }
-  },
-  "venir": {
-    "present": {
-      "1": "je viens",
-      "2": "tu viens",
-      "3": "il/elle/on vient",
-      "4": "nous venons",
-      "5": "vous venez",
-      "6": "ils/elles viennent"
-    },
-    "pastcomp": {
-      "1": "je suis venu(e)",
-      "2": "tu es venu(e)",
-      "3": "il/elle/on est venu(e)(s)",
-      "4": "nous sommes venu(e)s",
-      "5": "vous êtes venu(e)(s)",
-      "6": "ils/elles sont venu(e)s"
-    },
-    "pastimp": {
-      "1": "je venais",
-      "2": "tu venais",
-      "3": "il/elle/on venait",
-      "4": "nous venions",
-      "5": "vous veniez",
-      "6": "ils/elles venaient"
-    },
-    "future": {
-      "1": "je viendrai",
-      "2": "tu viendras",
-      "3": "il/elle/on viendra",
-      "4": "nous viendrons",
-      "5": "vous viendrez",
-      "6": "ils/elles viendront"
-    },
-    "subjunctive": {
-      "1": "que je vienne",
-      "2": "que tu viennes",
-      "3": "qu'il/elle/on vienne",
-      "4": "que nous venions",
-      "5": "que vous veniez",
-      "6": "qu'ils/elles viennent"
-    }
-  },
-  "lire": {
-    "present": {
-      "1": "je lis",
-      "2": "tu lis",
-      "3": "il/elle/on lit",
-      "4": "nous lisons",
-      "5": "vous lisez",
-      "6": "ils/elles lisent"
-    },
-    "pastcomp": {
-      "1": "j'ai lu",
-      "2": "tu as lu",
-      "3": "il/elle/on a lu",
-      "4": "nous avons lu",
-      "5": "vous avez lu",
-      "6": "ils/elles ont lu"
-    },
-    "pastimp": {
-      "1": "je lisais",
-      "2": "tu lisais",
-      "3": "il/elle/on lisait",
-      "4": "nous lisions",
-      "5": "vous lisiez",
-      "6": "ils/elles lisaient"
-    },
-    "future": {
-      "1": "je lirai",
-      "2": "tu liras",
-      "3": "il/elle/on lira",
-      "4": "nous lirons",
-      "5": "vous lirez",
-      "6": "ils/elles liront"
-    },
-    "subjunctive": {
-      "1": "que je lise",
-      "2": "que tu lises",
-      "3": "qu'il/elle/on lise",
-      "4": "que nous lisions",
-      "5": "que vous lisiez",
-      "6": "qu'ils/elles lisent"
-    }
-  },
 
-  "sortir": {
-    "present": {
-      "1": "je sors",
-      "2": "tu sors",
-      "3": "il/elle/on sort",
-      "4": "nous sortons",
-      "5": "vous sortez",
-      "6": "ils/elles sortent"
+    "manger": {
+      "present": {
+        "1": "je mange",
+        "2": "tu manges",
+        "3": "il/elle/on mange",
+        "4": "nous mangeons",
+        "5": "vous mangez",
+        "6": "ils/elles mangent"
+      },
+      "pastcomp": {
+        "1": "j'ai mangé",
+        "2": "tu as mangé",
+        "3": "il/elle/on a mangé",
+        "4": "nous avons mangé",
+        "5": "vous avez mangé",
+        "6": "ils/elles ont mangé"
+      },
+      "pastimp": {
+        "1": "je mangeais",
+        "2": "tu mangeais",
+        "3": "il/elle/on mangeait",
+        "4": "nous mangions",
+        "5": "vous mangiez",
+        "6": "ils/elles mangeaient"
+      },
+      "future": {
+        "1": "je mangerai",
+        "2": "tu mangeras",
+        "3": "il/elle/on mangera",
+        "4": "nous mangerons",
+        "5": "vous mangerez",
+        "6": "ils/elles mangeront"
+      },
+      "subjunctive": {
+        "1": "que je mange",
+        "2": "que tu manges",
+        "3": "qu'il/elle/on mange",
+        "4": "que nous mangions",
+        "5": "que vous mangiez",
+        "6": "qu'ils/elles mangent"
+      }
     },
-    "pastcomp": {
-      "1": "je suis sorti(e)",
-      "2": "tu es sorti(e)",
-      "3": "il/elle/on est sorti(e)(s)",
-      "4": "nous sommes sorti(e)s",
-      "5": "vous êtes sorti(e)(s)",
-      "6": "ils/elles sont sorti(e)s"
+    "recevoir": {
+      "present": {
+        "1": "je reçois",
+        "2": "tu reçois",
+        "3": "il/elle/on reçoit",
+        "4": "nous recevons",
+        "5": "vous recevez",
+        "6": "ils/elles reçoivent"
+      },
+      "pastcomp": {
+        "1": "j'ai reçu",
+        "2": "tu as reçu",
+        "3": "il/elle/on a reçu",
+        "4": "nous avons reçu",
+        "5": "vous avez reçu",
+        "6": "ils/elles ont reçu"
+      },
+      "pastimp": {
+        "1": "je recevais",
+        "2": "tu recevais",
+        "3": "il/elle/on recevait",
+        "4": "nous recevions",
+        "5": "vous receviez",
+        "6": "ils/elles recevaient"
+      },
+      "future": {
+        "1": "je recevrai",
+        "2": "tu recevras",
+        "3": "il/elle/on recevra",
+        "4": "nous recevrons",
+        "5": "vous recevrez",
+        "6": "ils/elles recevront"
+      },
+      "subjunctive": {
+        "1": "que je reçoive",
+        "2": "que tu reçoives",
+        "3": "qu'il/elle/on reçoive",
+        "4": "que nous recevions",
+        "5": "que vous receviez",
+        "6": "qu'ils/elles reçoivent"
+      }
     },
-    "pastimp": {
-      "1": "je sortais",
-      "2": "tu sortais",
-      "3": "il/elle/on sortait",
-      "4": "nous sortions",
-      "5": "vous sortiez",
-      "6": "ils/elles sortaient"
+    "envoyer": {
+      "present": {
+        "1": "j'envoie",
+        "2": "tu envoies",
+        "3": "il/elle/on envoie",
+        "4": "nous envoyons",
+        "5": "vous envoyez",
+        "6": "ils/elles envoient"
+      },
+      "pastcomp": {
+        "1": "j'ai envoyé",
+        "2": "tu as envoyé",
+        "3": "il/elle/on a envoyé",
+        "4": "nous avons envoyé",
+        "5": "vous avez envoyé",
+        "6": "ils/elles ont envoyé"
+      },
+      "pastimp": {
+        "1": "j'envoyais",
+        "2": "tu envoyais",
+        "3": "il/elle/on envoyait",
+        "4": "nous envoyions",
+        "5": "vous envoyiez",
+        "6": "ils/elles envoyaient"
+      },
+      "future": {
+        "1": "j'enverrai",
+        "2": "tu enverras",
+        "3": "il/elle/on enverra",
+        "4": "nous enverrons",
+        "5": "vous enverrez",
+        "6": "ils/elles enverront"
+      },
+      "subjunctive": {
+        "1": "que j'envoie",
+        "2": "que tu envoies",
+        "3": "qu'il/elle/on envoie",
+        "4": "que nous envoyions",
+        "5": "que vous envoyiez",
+        "6": "qu'ils/elles envoient"
+      }
     },
-    "future": {
-      "1": "je sortirai",
-      "2": "tu sortiras",
-      "3": "il/elle/on sortira",
-      "4": "nous sortirons",
-      "5": "vous sortirez",
-      "6": "ils/elles sortiront"
+    "parler": {
+      "present": {
+        "1": "je parle",
+        "2": "tu parles",
+        "3": "il/elle/on parle",
+        "4": "nous parlons",
+        "5": "vous parlez",
+        "6": "ils/elles parlent"
+      },
+      "pastcomp": {
+        "1": "j'ai parlé",
+        "2": "tu as parlé",
+        "3": "il/elle/on a parlé",
+        "4": "nous avons parlé",
+        "5": "vous avez parlé",
+        "6": "ils/elles ont parlé"
+      },
+      "pastimp": {
+        "1": "je parlais",
+        "2": "tu parlais",
+        "3": "il/elle/on parlait",
+        "4": "nous parlions",
+        "5": "vous parliez",
+        "6": "ils/elles parlaient"
+      },
+      "future": {
+        "1": "je parlerai",
+        "2": "tu parleras",
+        "3": "il/elle/on parlera",
+        "4": "nous parlerons",
+        "5": "vous parlerez",
+        "6": "ils/elles parleront"
+      },
+      "subjunctive": {
+        "1": "que je parle",
+        "2": "que tu parles",
+        "3": "qu'il/elle/on parle",
+        "4": "que nous parlions",
+        "5": "que vous parliez",
+        "6": "qu'ils/elles parlent"
+      }
     },
-    "subjunctive": {
-      "1": "que je sorte",
-      "2": "que tu sortes",
-      "3": "qu'il/elle/on sorte",
-      "4": "que nous sortions",
-      "5": "que vous sortiez",
-      "6": "qu'ils/elles sortent"
-    }
-  },
-  "gagner": {
-    "present": {
-      "1": "je gagne",
-      "2": "tu gagnes",
-      "3": "il/elle/on gagne",
-      "4": "nous gagnons",
-      "5": "vous gagnez",
-      "6": "ils/elles gagnent"
+    "arriver": {
+      "present": {
+        "1": "j'arrive",
+        "2": "tu arrives",
+        "3": "il/elle/on arrive",
+        "4": "nous arrivons",
+        "5": "vous arrivez",
+        "6": "ils/elles arrivent"
+      },
+      "pastcomp": {
+        "1": "je suis arrivé(e)",
+        "2": "tu es arrivé(e)",
+        "3": "il/elle/on est arrivé(e)(e)",
+        "4": "nous sommes arrivé(e)s",
+        "5": "vous êtes arrivé(e)(s)",
+        "6": "ils/elles sont arrivé(e)s"
+      },
+      "pastimp": {
+        "1": "j'arrivais",
+        "2": "tu arrivais",
+        "3": "il/elle/on arrivait",
+        "4": "nous arrivions",
+        "5": "vous arriviez",
+        "6": "ils/elles arrivaient"
+      },
+      "future": {
+        "1": "j'arriverai",
+        "2": "tu arriveras",
+        "3": "il/elle/on arrivera",
+        "4": "nous arriverons",
+        "5": "vous arriverez",
+        "6": "ils/elles arriveront"
+      },
+      "subjunctive": {
+        "1": "que j'arrive",
+        "2": "que tu arrives",
+        "3": "qu'il/elle/on arrive",
+        "4": "que nous arrivions",
+        "5": "que vous arriviez",
+        "6": "qu'ils/elles arrivent"
+      }
     },
-    "pastcomp": {
-      "1": "j'ai gagné",
-      "2": "tu as gagné",
-      "3": "il/elle/on a gagné",
-      "4": "nous avons gagné",
-      "5": "vous avez gagné",
-      "6": "ils/elles ont gagné"
+    "retourner": {
+      "present": {
+        "1": "je retourne",
+        "2": "tu retournes",
+        "3": "il/elle/on retourne",
+        "4": "nous retournons",
+        "5": "vous retournez",
+        "6": "ils/elles retournent"
+      },
+      "pastcompEtre": {
+        "1": "je suis retourné(e)",
+        "2": "tu es retourné(e)",
+        "3": "il/elle/on est retourné(e)(s)",
+        "4": "nous sommes retourné(e)s",
+        "5": "vous êtes retourné(e)(s)",
+        "6": "ils/elles sont retourné(e)s"
+      },
+      "pastimp": {
+        "1": "je retournais",
+        "2": "tu retournais",
+        "3": "il/elle/on retournait",
+        "4": "nous retournions",
+        "5": "vous retourniez",
+        "6": "ils/elles retournaient"
+      },
+      "future": {
+        "1": "je retournerai",
+        "2": "tu retourneras",
+        "3": "il/elle/on retournera",
+        "4": "nous retournerons",
+        "5": "vous retournerez",
+        "6": "ils/elles retourneront"
+      },
+      "subjunctive": {
+        "1": "que je retourne",
+        "2": "que tu retournes",
+        "3": "qu'il/elle/on retourne",
+        "4": "que nous retournions",
+        "5": "que vous retourniez",
+        "6": "qu'ils/elles retournent"
+      }
     },
-    "pastimp": {
-      "1": "je gagnais",
-      "2": "tu gagnais",
-      "3": "il/elle/on gagnait",
-      "4": "nous gagnions",
-      "5": "vous gagniez",
-      "6": "ils/elles gagnaient"
-    },
-    "future": {
-      "1": "je gagnerai",
-      "2": "tu gagneras",
-      "3": "il/elle/on gagnera",
-      "4": "nous gagnerons",
-      "5": "vous gagnerez",
-      "6": "ils/elles gagneront"
-    },
-    "subjunctive": {
-      "1": "que je gagne",
-      "2": "que tu gagnes",
-      "3": "qu'il/elle/on gagne",
-      "4": "que nous gagnions",
-      "5": "que vous gagniez",
-      "6": "qu'ils/elles gagnent"
-    }
-  },
-  "avoir": {
-    "present": {
-      "1": "j'ai",
-      "2": "tu as",
-      "3": "il/elle/on a",
-      "4": "nous avons",
-      "5": "vous avez",
-      "6": "ils/elles ont"
-    },
-    "pastcomp": {
-      "1": "j'ai eu",
-      "2": "tu as eu",
-      "3": "il/elle/on a eu",
-      "4": "nous avons eu",
-      "5": "vous avez eu",
-      "6": "ils/elles ont eu"
-    },
-    "pastimp": {
-      "1": "j'avais",
-      "2": "tu avais",
-      "3": "il/elle/on avait",
-      "4": "nous avions",
-      "5": "vous aviez",
-      "6": "ils/elles avaient"
-    },
-    "future": {
-      "1": "j'aurai",
-      "2": "tu auras",
-      "3": "il/elle/on aura",
-      "4": "nous aurons",
-      "5": "vous aurez",
-      "6": "ils/elles auront"
-    },
-    "subjunctive": {
-      "1": "que j'aie",
-      "2": "que tu aies",
-      "3": "qu'il/elle/on ait",
-      "4": "que nous ayons",
-      "5": "que vous ayez",
-      "6": "qu'ils/elles aient"
-    }
-  },
-  "rencontrer": {
-    "present": {
-      "1": "je rencontre",
-      "2": "tu rencontres",
-      "3": "il/elle/on rencontre",
-      "4": "nous rencontrons",
-      "5": "vous rencontrez",
-      "6": "ils/elles rencontrent"
-    },
-    "pastcomp": {
-      "1": "j'ai rencontré",
-      "2": "tu as rencontré",
-      "3": "il/elle/on a rencontré",
-      "4": "nous avons rencontré",
-      "5": "vous avez rencontré",
-      "6": "ils/elles ont rencontré"
-    },
-    "pastimp": {
-      "1": "je rencontrais",
-      "2": "tu rencontrais",
-      "3": "il/elle/on rencontrait",
-      "4": "nous rencontrions",
-      "5": "vous rencontriez",
-      "6": "ils/elles rencontraient"
-    },
-    "future": {
-      "1": "je rencontrerai",
-      "2": "tu rencontreras",
-      "3": "il/elle/on rencontrera",
-      "4": "nous rencontrerons",
-      "5": "vous rencontrerez",
-      "6": "ils/elles rencontreront"
-    },
-    "subjunctive": {
-      "1": "que je rencontre",
-      "2": "que tu rencontres",
-      "3": "qu'il/elle/on rencontre",
-      "4": "que nous rencontrions",
-      "5": "que vous rencontriez",
-      "6": "qu'ils/elles rencontrent"
-    }
-  },
-  "poser": {
-    "present": {
-      "1": "je pose",
-      "2": "tu poses",
-      "3": "il/elle/on pose",
-      "4": "nous posons",
-      "5": "vous posez",
-      "6": "ils/elles posent"
-    },
-    "pastcomp": {
-      "1": "j'ai posé",
-      "2": "tu as posé",
-      "3": "il/elle/on a posé",
-      "4": "nous avons posé",
-      "5": "vous avez posé",
-      "6": "ils/elles ont posé"
-    },
-    "pastimp": {
-      "1": "je posais",
-      "2": "tu posais",
-      "3": "il/elle/on posait",
-      "4": "nous posions",
-      "5": "vous posiez",
-      "6": "ils/elles posaient"
-    },
-    "future": {
-      "1": "je poserai",
-      "2": "tu poseras",
-      "3": "il/elle/on posera",
-      "4": "nous poserons",
-      "5": "vous poserez",
-      "6": "ils/elles poseront"
-    },
-    "subjunctive": {
-      "1": "que je pose",
-      "2": "que tu poses",
-      "3": "qu'il/elle/on pose",
-      "4": "que nous posions",
-      "5": "que vous posiez",
-      "6": "qu'ils/elles posent"
-    }
-  },
-  "répondre": {
-    "present": {
-      "1": "je réponds",
-      "2": "tu réponds",
-      "3": "il/elle/on répond",
-      "4": "nous répondons",
-      "5": "vous répondez",
-      "6": "ils/elles répondent"
-    },
-    "pastcomp": {
-      "1": "j'ai répondu",
-      "2": "tu as répondu",
-      "3": "il/elle/on a répondu",
-      "4": "nous avons répondu",
-      "5": "vous avez répondu",
-      "6": "ils/elles ont répondu"
-    },
-    "pastimp": {
-      "1": "je répondais",
-      "2": "tu répondais",
-      "3": "il/elle/on répondait",
-      "4": "nous répondions",
-      "5": "vous répondiez",
-      "6": "ils/elles répondaient"
-    },
-    "future": {
-      "1": "je répondrai",
-      "2": "tu répondras",
-      "3": "il/elle/on répondra",
-      "4": "nous répondrons",
-      "5": "vous répondrez",
-      "6": "ils/elles répondront"
-    },
-    "subjunctive": {
-      "1": "que je réponde",
-      "2": "que tu répondes",
-      "3": "qu'il/elle/on réponde",
-      "4": "que nous répondions",
-      "5": "que vous répondiez",
-      "6": "qu'ils/elles répondent"
-    }
-  },
-  "réussir": {
-    "present": {
-      "1": "je réussis",
-      "2": "tu réussis",
-      "3": "il/elle/on réussit",
-      "4": "nous réussissons",
-      "5": "vous réussissez",
-      "6": "ils/elles réussissent"
-    },
-    "pastcomp": {
-      "1": "j'ai réussi",
-      "2": "tu as réussi",
-      "3": "il/elle/on a réussi",
-      "4": "nous avons réussi",
-      "5": "vous avez réussi",
-      "6": "ils/elles ont réussi"
-    },
-    "pastimp": {
-      "1": "je réussissais",
-      "2": "tu réussissais",
-      "3": "il/elle/on réussissait",
-      "4": "nous réussissions",
-      "5": "vous réussissiez",
-      "6": "ils/elles réussissaient"
-    },
-    "future": {
-      "1": "je réussirai",
-      "2": "tu réussiras",
-      "3": "il/elle/on réussira",
-      "4": "nous réussirons",
-      "5": "vous réussirez",
-      "6": "ils/elles réussiront"
-    },
-    "subjunctive": {
-      "1": "que je réussisse",
-      "2": "que tu réussisses",
-      "3": "qu'il/elle/on réussisse",
-      "4": "que nous réussissions",
-      "5": "que vous réussissiez",
-      "6": "qu'ils/elles réussissent"
-    }
-  },
-  "écrire": {
-    "present": {
-      "1": "j'écris",
-      "2": "tu écris",
-      "3": "il/elle/on écrit",
-      "4": "nous écrivons",
-      "5": "vous écrivez",
-      "6": "ils/elles écrivent"
-    },
-    "pastcomp": {
-      "1": "j'ai écrit",
-      "2": "tu as écrit",
-      "3": "il/elle/on a écrit",
-      "4": "nous avons écrit",
-      "5": "vous avez écrit",
-      "6": "ils/elles ont écrit"
-    },
-    "pastimp": {
-      "1": "j'écrivais",
-      "2": "tu écrivais",
-      "3": "il/elle/on écrivait",
-      "4": "nous écrivions",
-      "5": "vous écriviez",
-      "6": "ils/elles écrivaient"
-    },
-    "future": {
-      "1": "j'écrirai",
-      "2": "tu écriras",
-      "3": "il/elle/on écrira",
-      "4": "nous écrirons",
-      "5": "vous écrirez",
-      "6": "ils/elles écriront"
-    },
-    "subjunctive": {
-      "1": "que j'écrive",
-      "2": "que tu écrives",
-      "3": "qu'il/elle/on écrive",
-      "4": "que nous écrivions",
-      "5": "que vous écriviez",
-      "6": "qu'ils/elles écrivent"
-    }
-  },
-  "choisir": {
-    "present": {
-      "1": "je choisis",
-      "2": "tu choisis",
-      "3": "il/elle/on choisit",
-      "4": "nous choisissons",
-      "5": "vous choisissez",
-      "6": "ils/elles choisissent"
-    },
-    "pastcomp": {
-      "1": "j'ai choisi",
-      "2": "tu as choisi",
-      "3": "il/elle/on a choisi",
-      "4": "nous avons choisi",
-      "5": "vous avez choisi",
-      "6": "ils/elles ont choisi"
-    },
-    "pastimp": {
-      "1": "je choisissais",
-      "2": "tu choisissais",
-      "3": "il/elle/on choisissait",
-      "4": "nous choisissions",
-      "5": "vous choisissiez",
-      "6": "ils/elles choisissaient"
-    },
-    "future": {
-      "1": "je choisirai",
-      "2": "tu choisiras",
-      "3": "il/elle/on choisira",
-      "4": "nous choisirons",
-      "5": "vous choisirez",
-      "6": "ils/elles choisiront"
-    },
-    "subjunctive": {
-      "1": "que je choisisse",
-      "2": "que tu choisisses",
-      "3": "qu'il/elle/on choisisse",
-      "4": "que nous choisissions",
-      "5": "que vous choisissiez",
-      "6": "qu'ils/elles choisissent"
-    }
-  },
-  "dire": {
-    "present": {
-      "1": "je dis",
-      "2": "tu dis",
-      "3": "il/elle/on dit",
-      "4": "nous disons",
-      "5": "vous dites",
-      "6": "ils/elles disent"
-    },
-    "pastcomp": {
-      "1": "j'ai dit",
-      "2": "tu as dit",
-      "3": "il/elle/on a dit",
-      "4": "nous avons dit",
-      "5": "vous avez dit",
-      "6": "ils/elles ont dit"
-    },
-    "pastimp": {
-      "1": "je disais",
-      "2": "tu disais",
-      "3": "il/elle/on disait",
-      "4": "nous disions",
-      "5": "vous disiez",
-      "6": "ils/elles disaient"
-    },
-    "future": {
-      "1": "je dirai",
-      "2": "tu diras",
-      "3": "il/elle/on dira",
-      "4": "nous dirons",
-      "5": "vous direz",
-      "6": "ils/elles diront"
-    },
-    "subjunctive": {
-      "1": "que je dise",
-      "2": "que tu dises",
-      "3": "qu'il/elle/on dise",
-      "4": "que nous disions",
-      "5": "que vous disiez",
-      "6": "qu'ils/elles disent"
-    }
-  },
-  "voir": {
-    "present": {
-      "1": "je vois",
-      "2": "tu vois",
-      "3": "il/elle/on voit",
-      "4": "nous voyons",
-      "5": "vous voyez",
-      "6": "ils/elles voient"
-    },
-    "pastcomp": {
-      "1": "j'ai vu",
-      "2": "tu as vu",
-      "3": "il/elle/on a vu",
-      "4": "nous avons vu",
-      "5": "vous avez vu",
-      "6": "ils/elles ont vu"
-    },
-    "pastimp": {
-      "1": "je voyais",
-      "2": "tu voyais",
-      "3": "il/elle/on voyait",
-      "4": "nous voyions",
-      "5": "vous voyiez",
-      "6": "ils/elles voyaient"
-    },
-    "future": {
-      "1": "je verrai",
-      "2": "tu verras",
-      "3": "il/elle/on verra",
-      "4": "nous verrons",
-      "5": "vous verrez",
-      "6": "ils/elles verront"
-    },
-    "subjunctive": {
-      "1": "que je voie",
-      "2": "que tu voies",
-      "3": "qu'il/elle/on voie",
-      "4": "que nous voyions",
-      "5": "que vous voyiez",
-      "6": "qu'ils/elles voient"
-    }
-  },
-  "accepter": {
-    "present": {
-      "1": "j'accepte",
-      "2": "tu acceptes",
-      "3": "il/elle/on accepte",
-      "4": "nous acceptons",
-      "5": "vous acceptez",
-      "6": "ils/elles acceptent"
-    },
-    "pastcomp": {
-      "1": "j'ai accepté",
-      "2": "tu as accepté",
-      "3": "il/elle/on a accepté",
-      "4": "nous avons accepté",
-      "5": "vous avez accepté",
-      "6": "ils/elles ont accepté"
-    },
-    "pastimp": {
-      "1": "j'acceptais",
-      "2": "tu acceptais",
-      "3": "il/elle/on acceptait",
-      "4": "nous acceptions",
-      "5": "vous acceptiez",
-      "6": "ils/elles acceptaient"
-    },
-    "future": {
-      "1": "j'accepterai",
-      "2": "tu accepteras",
-      "3": "il/elle/on acceptera",
-      "4": "nous accepterons",
-      "5": "vous accepterez",
-      "6": "ils/elles accepteront"
-    },
-    "subjunctive": {
-      "1": "que j'accepte",
-      "2": "que tu acceptes",
-      "3": "qu'il/elle/on accepte",
-      "4": "que nous acceptions",
-      "5": "que vous acceptiez",
-      "6": "qu'ils/elles acceptent"
-    }
-  },
-  "visiter": {
-    "present": {
-      "1": "je visite",
-      "2": "tu visites",
-      "3": "il/elle/on visite",
-      "4": "nous visitons",
-      "5": "vous visitez",
-      "6": "ils/elles visitent"
-    },
-    "pastcomp": {
-      "1": "j'ai visité",
-      "2": "tu as visité",
-      "3": "il/elle/on a visité",
-      "4": "nous avons visité",
-      "5": "vous avez visité",
-      "6": "ils/elles ont visité"
-    },
-    "pastimp": {
-      "1": "je visitais",
-      "2": "tu visitais",
-      "3": "il/elle/on visitait",
-      "4": "nous visitions",
-      "5": "vous visitiez",
-      "6": "ils/elles visitaient"
-    },
-    "future": {
-      "1": "je visiterai",
-      "2": "tu visiteras",
-      "3": "il/elle/on visitera",
-      "4": "nous visiterons",
-      "5": "vous visiterez",
-      "6": "ils/elles visiteront"
-    },
-    "subjunctive": {
-      "1": "que je visite",
-      "2": "que tu visites",
-      "3": "qu'il/elle/on visite",
-      "4": "que nous visitions",
-      "5": "que vous visitiez",
-      "6": "qu'ils/elles visitent"
-    }
-  },
 
-  "manger": {
-  "present": {
-    "1": "je mange",
-    "2": "tu manges",
-    "3": "il/elle/on mange",
-    "4": "nous mangeons",
-    "5": "vous mangez",
-    "6": "ils/elles mangent"
-  },
-  "pastcomp": {
-    "1": "j'ai mangé",
-    "2": "tu as mangé",
-    "3": "il/elle/on a mangé",
-    "4": "nous avons mangé",
-    "5": "vous avez mangé",
-    "6": "ils/elles ont mangé"
-  },
-  "pastimp": {
-    "1": "je mangeais",
-    "2": "tu mangeais",
-    "3": "il/elle/on mangeait",
-    "4": "nous mangions",
-    "5": "vous mangiez",
-    "6": "ils/elles mangeaient"
-  },
-  "future": {
-    "1": "je mangerai",
-    "2": "tu mangeras",
-    "3": "il/elle/on mangera",
-    "4": "nous mangerons",
-    "5": "vous mangerez",
-    "6": "ils/elles mangeront"
-  },
-  "subjunctive": {
-    "1": "que je mange",
-    "2": "que tu manges",
-    "3": "qu'il/elle/on mange",
-    "4": "que nous mangions",
-    "5": "que vous mangiez",
-    "6": "qu'ils/elles mangent"
-  }
-},
-"recevoir": {
-  "present": {
-    "1": "je reçois",
-    "2": "tu reçois",
-    "3": "il/elle/on reçoit",
-    "4": "nous recevons",
-    "5": "vous recevez",
-    "6": "ils/elles reçoivent"
-  },
-  "pastcomp": {
-    "1": "j'ai reçu",
-    "2": "tu as reçu",
-    "3": "il/elle/on a reçu",
-    "4": "nous avons reçu",
-    "5": "vous avez reçu",
-    "6": "ils/elles ont reçu"
-  },
-  "pastimp": {
-    "1": "je recevais",
-    "2": "tu recevais",
-    "3": "il/elle/on recevait",
-    "4": "nous recevions",
-    "5": "vous receviez",
-    "6": "ils/elles recevaient"
-  },
-  "future": {
-    "1": "je recevrai",
-    "2": "tu recevras",
-    "3": "il/elle/on recevra",
-    "4": "nous recevrons",
-    "5": "vous recevrez",
-    "6": "ils/elles recevront"
-  },
-  "subjunctive": {
-    "1": "que je reçoive",
-    "2": "que tu reçoives",
-    "3": "qu'il/elle/on reçoive",
-    "4": "que nous recevions",
-    "5": "que vous receviez",
-    "6": "qu'ils/elles reçoivent"
-  }
-},
-"envoyer": {
-  "present": {
-    "1": "j'envoie",
-    "2": "tu envoies",
-    "3": "il/elle/on envoie",
-    "4": "nous envoyons",
-    "5": "vous envoyez",
-    "6": "ils/elles envoient"
-  },
-  "pastcomp": {
-    "1": "j'ai envoyé",
-    "2": "tu as envoyé",
-    "3": "il/elle/on a envoyé",
-    "4": "nous avons envoyé",
-    "5": "vous avez envoyé",
-    "6": "ils/elles ont envoyé"
-  },
-  "pastimp": {
-    "1": "j'envoyais",
-    "2": "tu envoyais",
-    "3": "il/elle/on envoyait",
-    "4": "nous envoyions",
-    "5": "vous envoyiez",
-    "6": "ils/elles envoyaient"
-  },
-  "future": {
-    "1": "j'enverrai",
-    "2": "tu enverras",
-    "3": "il/elle/on enverra",
-    "4": "nous enverrons",
-    "5": "vous enverrez",
-    "6": "ils/elles enverront"
-  },
-  "subjunctive": {
-    "1": "que j'envoie",
-    "2": "que tu envoies",
-    "3": "qu'il/elle/on envoie",
-    "4": "que nous envoyions",
-    "5": "que vous envoyiez",
-    "6": "qu'ils/elles envoient"
-  }
-},
-"parler": {
-  "present": {
-    "1": "je parle",
-    "2": "tu parles",
-    "3": "il/elle/on parle",
-    "4": "nous parlons",
-    "5": "vous parlez",
-    "6": "ils/elles parlent"
-  },
-  "pastcomp": {
-    "1": "j'ai parlé",
-    "2": "tu as parlé",
-    "3": "il/elle/on a parlé",
-    "4": "nous avons parlé",
-    "5": "vous avez parlé",
-    "6": "ils/elles ont parlé"
-  },
-  "pastimp": {
-    "1": "je parlais",
-    "2": "tu parlais",
-    "3": "il/elle/on parlait",
-    "4": "nous parlions",
-    "5": "vous parliez",
-    "6": "ils/elles parlaient"
-  },
-  "future": {
-    "1": "je parlerai",
-    "2": "tu parleras",
-    "3": "il/elle/on parlera",
-    "4": "nous parlerons",
-    "5": "vous parlerez",
-    "6": "ils/elles parleront"
-  },
-  "subjunctive": {
-    "1": "que je parle",
-    "2": "que tu parles",
-    "3": "qu'il/elle/on parle",
-    "4": "que nous parlions",
-    "5": "que vous parliez",
-    "6": "qu'ils/elles parlent"
-  }
-},
-"arriver": {
-  "present": {
-    "1": "j'arrive",
-    "2": "tu arrives",
-    "3": "il/elle/on arrive",
-    "4": "nous arrivons",
-    "5": "vous arrivez",
-    "6": "ils/elles arrivent"
-  },
-  "pastcomp": {
-    "1": "je suis arrivé(e)",
-    "2": "tu es arrivé(e)",
-    "3": "il/elle/on est arrivé(e)(e)",
-    "4": "nous sommes arrivé(e)s",
-    "5": "vous êtes arrivé(e)(s)",
-    "6": "ils/elles sont arrivé(e)s"
-  },
-  "pastimp": {
-    "1": "j'arrivais",
-    "2": "tu arrivais",
-    "3": "il/elle/on arrivait",
-    "4": "nous arrivions",
-    "5": "vous arriviez",
-    "6": "ils/elles arrivaient"
-  },
-  "future": {
-    "1": "j'arriverai",
-    "2": "tu arriveras",
-    "3": "il/elle/on arrivera",
-    "4": "nous arriverons",
-    "5": "vous arriverez",
-    "6": "ils/elles arriveront"
-  },
-  "subjunctive": {
-    "1": "que j'arrive",
-    "2": "que tu arrives",
-    "3": "qu'il/elle/on arrive",
-    "4": "que nous arrivions",
-    "5": "que vous arriviez",
-    "6": "qu'ils/elles arrivent"
-  }
-},
-"retourner": {
-  "present": {
-    "1": "je retourne",
-    "2": "tu retournes",
-    "3": "il/elle/on retourne",
-    "4": "nous retournons",
-    "5": "vous retournez",
-    "6": "ils/elles retournent"
-  },
-  "pastcomp": {
-    "1": "je suis retourné(e)",
-    "2": "tu es retourné(e)",
-    "3": "il/elle/on est retourné(e)(s)",
-    "4": "nous sommes retourné(e)s",
-    "5": "vous êtes retourné(e)(s)",
-    "6": "ils/elles sont retourné(e)s"
-  },
-  "pastimp": {
-    "1": "je retournais",
-    "2": "tu retournais",
-    "3": "il/elle/on retournait",
-    "4": "nous retournions",
-    "5": "vous retourniez",
-    "6": "ils/elles retournaient"
-  },
-  "future": {
-    "1": "je retournerai",
-    "2": "tu retourneras",
-    "3": "il/elle/on retournera",
-    "4": "nous retournerons",
-    "5": "vous retournerez",
-    "6": "ils/elles retourneront"
-  },
-  "subjunctive": {
-    "1": "que je retourne",
-    "2": "que tu retournes",
-    "3": "qu'il/elle/on retourne",
-    "4": "que nous retournions",
-    "5": "que vous retourniez",
-    "6": "qu'ils/elles retournent"
-  }
-},
+    "pouvoir": {
+      "present": {
+        "1": "je peux",
+        "2": "tu peux",
+        "3": "il/elle/on peut",
+        "4": "nous pouvons",
+        "5": "vous pouvez",
+        "6": "ils/elles peuvent"
+      },
+      "pastcomp": {
+        "1": "j'ai pu",
+        "2": "tu as pu",
+        "3": "il/elle/on a pu",
+        "4": "nous avons pu",
+        "5": "vous avez pu",
+        "6": "ils/elles ont pu"
+      },
+      "pastimp": {
+        "1": "je pouvais",
+        "2": "tu pouvais",
+        "3": "il/elle/on pouvait",
+        "4": "nous pouvions",
+        "5": "vous pouviez",
+        "6": "ils/elles pouvaient"
+      },
+      "future": {
+        "1": "je pourrai",
+        "2": "tu pourras",
+        "3": "il/elle/on pourra",
+        "4": "nous pourrons",
+        "5": "vous pourrez",
+        "6": "ils/elles pourront"
+      },
+      "subjunctive": {
+        "1": "que je puisse",
+        "2": "que tu puisses",
+        "3": "qu'il/elle/on puisse",
+        "4": "que nous puissions",
+        "5": "que vous puissiez",
+        "6": "qu'ils/elles puissent"
+      }
+    },
+    "monter": {
+      "present": {
+        "1": "je monte",
+        "2": "tu montes",
+        "3": "il/elle/on monte",
+        "4": "nous montons",
+        "5": "vous montez",
+        "6": "ils/elles montent"
+      },
+      "pastcompEtre": {
+        "1": "je suis monté(e)",
+        "2": "tu es monté(e)",
+        "3": "il/elle/on est monté(e)(s)",
+        "4": "nous sommes monté(e)s",
+        "5": "vous êtes monté(e)(s)",
+        "6": "ils/elles sont monté(e)s"
+      },
+      "pastimp": {
+        "1": "je montais",
+        "2": "tu montais",
+        "3": "il/elle/on montait",
+        "4": "nous montions",
+        "5": "vous montiez",
+        "6": "ils/elles montaient"
+      },
+      "future": {
+        "1": "je monterai",
+        "2": "tu monteras",
+        "3": "il/elle/on montera",
+        "4": "nous monterons",
+        "5": "vous monterez",
+        "6": "ils/elles monteront"
+      },
+      "subjunctive": {
+        "1": "que je monte",
+        "2": "que tu montes",
+        "3": "qu'il/elle/on monte",
+        "4": "que nous montions",
+        "5": "que vous montiez",
+        "6": "qu'ils/elles montent"
+      }
+    },
+    "rester": {
+      "present": {
+        "1": "je reste",
+        "2": "tu restes",
+        "3": "il/elle/on reste",
+        "4": "nous restons",
+        "5": "vous restez",
+        "6": "ils/elles restent"
+      },
+      "pastcomp": {
+        "1": "je suis resté(e)",
+        "2": "tu es resté(e)",
+        "3": "il/elle/on est resté(e)(s)",
+        "4": "nous sommes resté(e)s",
+        "5": "vous êtes resté(e)(s)",
+        "6": "ils/elles sont resté(e)s"
+      },
+      "pastimp": {
+        "1": "je restais",
+        "2": "tu restais",
+        "3": "il/elle/on restait",
+        "4": "nous restions",
+        "5": "vous restiez",
+        "6": "ils/elles restaient"
+      },
+      "future": {
+        "1": "je resterai",
+        "2": "tu resteras",
+        "3": "il/elle/on restera",
+        "4": "nous resterons",
+        "5": "vous resterez",
+        "6": "ils/elles resteront"
+      },
+      "subjunctive": {
+        "1": "que je reste",
+        "2": "que tu restes",
+        "3": "qu'il/elle/on reste",
+        "4": "que nous restions",
+        "5": "que vous restiez",
+        "6": "qu'ils/elles restent"
+      }
+    },
+    "aller": {
+      "present": {
+        "1": "je vais",
+        "2": "tu vas",
+        "3": "il/elle/on va",
+        "4": "nous allons",
+        "5": "vous allez",
+        "6": "ils/elles vont"
+      },
+      "pastcomp": {
+        "1": "je suis allé(e)",
+        "2": "tu es allé(e)",
+        "3": "il/elle/on est allé(e)(s)",
+        "4": "nous sommes allé(e)s",
+        "5": "vous êtes allé(e)(s)",
+        "6": "ils/elles sont allé(e)s"
+      },
+      "pastimp": {
+        "1": "j'allais",
+        "2": "tu allais",
+        "3": "il/elle/on allait",
+        "4": "nous allions",
+        "5": "vous alliez",
+        "6": "ils/elles allaient"
+      },
+      "future": {
+        "1": "j'irai",
+        "2": "tu iras",
+        "3": "il/elle/on ira",
+        "4": "nous irons",
+        "5": "vous irez",
+        "6": "ils/elles iront"
+      },
+      "subjunctive": {
+        "1": "que j'aille",
+        "2": "que tu ailles",
+        "3": "qu'il/elle/on aille",
+        "4": "que nous allions",
+        "5": "que vous alliez",
+        "6": "qu'ils/elles aillent"
+      }
+    },
+    "dormir": {
+      "present": {
+        "1": "je dors",
+        "2": "tu dors",
+        "3": "il/elle/on dort",
+        "4": "nous dormons",
+        "5": "vous dormez",
+        "6": "ils/elles dorment"
+      },
+      "pastcomp": {
+        "1": "j'ai dormi",
+        "2": "tu as dormi",
+        "3": "il/elle/on a dormi",
+        "4": "nous avons dormi",
+        "5": "vous avez dormi",
+        "6": "ils/elles ont dormi"
+      },
+      "pastimp": {
+        "1": "je dormais",
+        "2": "tu dormais",
+        "3": "il/elle/on dormait",
+        "4": "nous dormions",
+        "5": "vous dormiez",
+        "6": "ils/elles dormaient"
+      },
+      "future": {
+        "1": "je dormirai",
+        "2": "tu dormiras",
+        "3": "il/elle/on dormira",
+        "4": "nous dormirons",
+        "5": "vous dormirez",
+        "6": "ils/elles dormiront"
+      },
+      "subjunctive": {
+        "1": "que je dorme",
+        "2": "que tu dormes",
+        "3": "qu'il/elle/on dorme",
+        "4": "que nous dormions",
+        "5": "que vous dormiez",
+        "6": "qu'ils/elles dorment"
+      }
+    },
+    "se lever": {
+      "present": {
+        "1": "je me lève",
+        "2": "tu te lèves",
+        "3": "il/elle/on se lève",
+        "4": "nous nous levons",
+        "5": "vous vous levez",
+        "6": "ils/elles se lèvent"
+      },
+      "pastcomp": {
+        "1": "je me suis levé(e)",
+        "2": "tu t'es levé(e)",
+        "3": "il/elle/on s'est levé(e)(s)",
+        "4": "nous nous sommes levé(e)s",
+        "5": "vous vous êtes levé(e)(s)",
+        "6": "ils/elles se sont levé(e)s"
+      },
+      "pastimp": {
+        "1": "je me levais",
+        "2": "tu te levais",
+        "3": "il/elle/on se levait",
+        "4": "nous nous levions",
+        "5": "vous vous leviez",
+        "6": "ils/elles se levaient"
+      },
+      "future": {
+        "1": "je me lèverai",
+        "2": "tu te lèveras",
+        "3": "il/elle/on se lèvera",
+        "4": "nous nous lèverons",
+        "5": "vous vous lèverez",
+        "6": "ils/elles se lèveront"
+      },
+      "subjunctive": {
+        "1": "que je me lève",
+        "2": "que tu te lèves",
+        "3": "qu'il/elle/on se lève",
+        "4": "que nous nous levions",
+        "5": "que vous vous leviez",
+        "6": "qu'ils/elles se lèvent"
+      }
+    },
+    "se voir": {
+      "present": {
+        "1": "je me vois",
+        "2": "tu te vois",
+        "3": "il/elle/on se voit",
+        "4": "nous nous voyons",
+        "5": "vous vous voyez",
+        "6": "ils/elles se voient"
+      },
+      "pastcomp": {
+        "1": "je me suis vu(e)",
+        "2": "tu t'es vu(e)",
+        "3": "il/elle/on s'est vu(e)(s)",
+        "4": "nous nous sommes vu(e)s",
+        "5": "vous vous êtes vu(e)(s)",
+        "6": "ils/elles se sont vu(e)s"
+      },
+      "pastimp": {
+        "1": "je me voyais",
+        "2": "tu te voyais",
+        "3": "il/elle/on se voyait",
+        "4": "nous nous voyions",
+        "5": "vous vous voyiez",
+        "6": "ils/elles se voyaient"
+      },
+      "future": {
+        "1": "je me verrai",
+        "2": "tu te verras",
+        "3": "il/elle/on se verra",
+        "4": "nous nous verrons",
+        "5": "vous vous verrez",
+        "6": "ils/elles se verront"
+      },
+      "subjunctive": {
+        "1": "que je me voie",
+        "2": "que tu te voies",
+        "3": "qu'il/elle/on se voie",
+        "4": "que nous nous voyions",
+        "5": "que vous vous voyiez",
+        "6": "qu'ils/elles se voient"
+      }
+    },
+    "passer": {
+      "present": {
+        "1": "je passe",
+        "2": "tu passes",
+        "3": "il/elle/on passe",
+        "4": "nous passons",
+        "5": "vous passez",
+        "6": "ils/elles passent"
+      },
+      "pastcomp": {
+        "1": "j'ai passé",
+        "2": "tu as passé",
+        "3": "il/elle/on a passé",
+        "4": "nous avons passé",
+        "5": "vous avez passé",
+        "6": "ils/elles ont passé"
+      },
+      "pastcompEtre": {
+        "1": "je suis passé(e)",
+        "2": "tu es passé(e)",
+        "3": "il/elle/on est passé(e)(s)",
+        "4": "nous sommes passé(e)s",
+        "5": "vous êtes passé(e)(s)",
+        "6": "ils/elles sont passé(e)s"
+      },
+      "pastimp": {
+        "1": "je passais",
+        "2": "tu passais",
+        "3": "il/elle/on passait",
+        "4": "nous passions",
+        "5": "vous passiez",
+        "6": "ils/elles passaient"
+      },
+      "future": {
+        "1": "je passerai",
+        "2": "tu passeras",
+        "3": "il/elle/on passera",
+        "4": "nous passerons",
+        "5": "vous passerez",
+        "6": "ils/elles passeront"
+      },
+      "subjunctive": {
+        "1": "que je passe",
+        "2": "que tu passes",
+        "3": "qu'il/elle/on passe",
+        "4": "que nous passions",
+        "5": "que vous passiez",
+        "6": "qu'ils/elles passent"
+      }
+    },
+    "utiliser": {
+      "present": {
+        "1": "j'utilise",
+        "2": "tu utilises",
+        "3": "il/elle/on utilise",
+        "4": "nous utilisons",
+        "5": "vous utilisez",
+        "6": "ils/elles utilisent"
+      },
+      "pastcomp": {
+        "1": "j'ai utilisé",
+        "2": "tu as utilisé",
+        "3": "il/elle/on a utilisé",
+        "4": "nous avons utilisé",
+        "5": "vous avez utilisé",
+        "6": "ils/elles ont utilisé"
+      },
+      "pastimp": {
+        "1": "j'utilisais",
+        "2": "tu utilisais",
+        "3": "il/elle/on utilisait",
+        "4": "nous utilisions",
+        "5": "vous utilisiez",
+        "6": "ils/elles utilisaient"
+      },
+      "future": {
+        "1": "j'utiliserai",
+        "2": "tu utiliseras",
+        "3": "il/elle/on utilisera",
+        "4": "nous utiliserons",
+        "5": "vous utiliserez",
+        "6": "ils/elles utiliseront"
+      },
+      "subjunctive": {
+        "1": "que j'utilise",
+        "2": "que tu utilises",
+        "3": "qu'il/elle/on utilise",
+        "4": "que nous utilisions",
+        "5": "que vous utilisiez",
+        "6": "qu'ils/elles utilisent"
+      }
+    },
+    "déjeuner": {
+      "present": {
+        "1": "je déjeune",
+        "2": "tu déjeunes",
+        "3": "il/elle/on déjeune",
+        "4": "nous déjeunons",
+        "5": "vous déjeunez",
+        "6": "ils/elles déjeunent"
+      },
+      "pastcomp": {
+        "1": "j'ai déjeuné",
+        "2": "tu as déjeuné",
+        "3": "il/elle/on a déjeuné",
+        "4": "nous avons déjeuné",
+        "5": "vous avez déjeuné",
+        "6": "ils/elles ont déjeuné"
+      },
+      "pastimp": {
+        "1": "je déjeunais",
+        "2": "tu déjeunais",
+        "3": "il/elle/on déjeunait",
+        "4": "nous déjeunions",
+        "5": "vous déjeuniez",
+        "6": "ils/elles déjeunaient"
+      },
+      "future": {
+        "1": "je déjeunerai",
+        "2": "tu déjeuneras",
+        "3": "il/elle/on déjeunera",
+        "4": "nous déjeunerons",
+        "5": "vous déjeunerez",
+        "6": "ils/elles déjeuneront"
+      },
+      "subjunctive": {
+        "1": "que je déjeune",
+        "2": "que tu déjeunes",
+        "3": "qu'il/elle/on déjeune",
+        "4": "que nous déjeunions",
+        "5": "que vous déjeuniez",
+        "6": "qu'ils/elles déjeunent"
+      }
+    },
 
-"pouvoir": {
-  "present": {
-    "1": "je peux",
-    "2": "tu peux",
-    "3": "il/elle/on peut",
-    "4": "nous pouvons",
-    "5": "vous pouvez",
-    "6": "ils/elles peuvent"
-  },
-  "pastcomp": {
-    "1": "j'ai pu",
-    "2": "tu as pu",
-    "3": "il/elle/on a pu",
-    "4": "nous avons pu",
-    "5": "vous avez pu",
-    "6": "ils/elles ont pu"
-  },
-  "pastimp": {
-    "1": "je pouvais",
-    "2": "tu pouvais",
-    "3": "il/elle/on pouvait",
-    "4": "nous pouvions",
-    "5": "vous pouviez",
-    "6": "ils/elles pouvaient"
-  },
-  "future": {
-    "1": "je pourrai",
-    "2": "tu pourras",
-    "3": "il/elle/on pourra",
-    "4": "nous pourrons",
-    "5": "vous pourrez",
-    "6": "ils/elles pourront"
-  },
-  "subjunctive": {
-    "1": "que je puisse",
-    "2": "que tu puisses",
-    "3": "qu'il/elle/on puisse",
-    "4": "que nous puissions",
-    "5": "que vous puissiez",
-    "6": "qu'ils/elles puissent"
-  }
-},
-"monter": {
-  "present": {
-    "1": "je monte",
-    "2": "tu montes",
-    "3": "il/elle/on monte",
-    "4": "nous montons",
-    "5": "vous montez",
-    "6": "ils/elles montent"
-  },
-  "pastcomp": {
-    "1": "je suis monté(e)",
-    "2": "tu es monté(e)",
-    "3": "il/elle/on est monté(e)(s)",
-    "4": "nous sommes monté(e)s",
-    "5": "vous êtes monté(e)(s)",
-    "6": "ils/elles sont monté(e)s"
-  },
-  "pastimp": {
-    "1": "je montais",
-    "2": "tu montais",
-    "3": "il/elle/on montait",
-    "4": "nous montions",
-    "5": "vous montiez",
-    "6": "ils/elles montaient"
-  },
-  "future": {
-    "1": "je monterai",
-    "2": "tu monteras",
-    "3": "il/elle/on montera",
-    "4": "nous monterons",
-    "5": "vous monterez",
-    "6": "ils/elles monteront"
-  },
-  "subjunctive": {
-    "1": "que je monte",
-    "2": "que tu montes",
-    "3": "qu'il/elle/on monte",
-    "4": "que nous montions",
-    "5": "que vous montiez",
-    "6": "qu'ils/elles montent"
-  }
-},
-"rester": {
-  "present": {
-    "1": "je reste",
-    "2": "tu restes",
-    "3": "il/elle/on reste",
-    "4": "nous restons",
-    "5": "vous restez",
-    "6": "ils/elles restent"
-  },
-  "pastcomp": {
-    "1": "je suis resté(e)",
-    "2": "tu es resté(e)",
-    "3": "il/elle/on est resté(e)(s)",
-    "4": "nous sommes resté(e)s",
-    "5": "vous êtes resté(e)(s)",
-    "6": "ils/elles sont resté(e)s"
-  },
-  "pastimp": {
-    "1": "je restais",
-    "2": "tu restais",
-    "3": "il/elle/on restait",
-    "4": "nous restions",
-    "5": "vous restiez",
-    "6": "ils/elles restaient"
-  },
-  "future": {
-    "1": "je resterai",
-    "2": "tu resteras",
-    "3": "il/elle/on restera",
-    "4": "nous resterons",
-    "5": "vous resterez",
-    "6": "ils/elles resteront"
-  },
-  "subjunctive": {
-    "1": "que je reste",
-    "2": "que tu restes",
-    "3": "qu'il/elle/on reste",
-    "4": "que nous restions",
-    "5": "que vous restiez",
-    "6": "qu'ils/elles restent"
-  }
-},
-"aller": {
-  "present": {
-    "1": "je vais",
-    "2": "tu vas",
-    "3": "il/elle/on va",
-    "4": "nous allons",
-    "5": "vous allez",
-    "6": "ils/elles vont"
-  },
-  "pastcomp": {
-    "1": "je suis allé(e)",
-    "2": "tu es allé(e)",
-    "3": "il/elle/on est allé(e)(s)",
-    "4": "nous sommes allé(e)s",
-    "5": "vous êtes allé(e)(s)",
-    "6": "ils/elles sont allé(e)s"
-  },
-  "pastimp": {
-    "1": "j'allais",
-    "2": "tu allais",
-    "3": "il/elle/on allait",
-    "4": "nous allions",
-    "5": "vous alliez",
-    "6": "ils/elles allaient"
-  },
-  "future": {
-    "1": "j'irai",
-    "2": "tu iras",
-    "3": "il/elle/on ira",
-    "4": "nous irons",
-    "5": "vous irez",
-    "6": "ils/elles iront"
-  },
-  "subjunctive": {
-    "1": "que j'aille",
-    "2": "que tu ailles",
-    "3": "qu'il/elle/on aille",
-    "4": "que nous allions",
-    "5": "que vous alliez",
-    "6": "qu'ils/elles aillent"
-  }
-},
-"dormir": {
-  "present": {
-    "1": "je dors",
-    "2": "tu dors",
-    "3": "il/elle/on dort",
-    "4": "nous dormons",
-    "5": "vous dormez",
-    "6": "ils/elles dorment"
-  },
-  "pastcomp": {
-    "1": "j'ai dormi",
-    "2": "tu as dormi",
-    "3": "il/elle/on a dormi",
-    "4": "nous avons dormi",
-    "5": "vous avez dormi",
-    "6": "ils/elles ont dormi"
-  },
-  "pastimp": {
-    "1": "je dormais",
-    "2": "tu dormais",
-    "3": "il/elle/on dormait",
-    "4": "nous dormions",
-    "5": "vous dormiez",
-    "6": "ils/elles dormaient"
-  },
-  "future": {
-    "1": "je dormirai",
-    "2": "tu dormiras",
-    "3": "il/elle/on dormira",
-    "4": "nous dormirons",
-    "5": "vous dormirez",
-    "6": "ils/elles dormiront"
-  },
-  "subjunctive": {
-    "1": "que je dorme",
-    "2": "que tu dormes",
-    "3": "qu'il/elle/on dorme",
-    "4": "que nous dormions",
-    "5": "que vous dormiez",
-    "6": "qu'ils/elles dorment"
-  }
-},
-"se lever": {
-  "present": {
-    "1": "je me lève",
-    "2": "tu te lèves",
-    "3": "il/elle/on se lève",
-    "4": "nous nous levons",
-    "5": "vous vous levez",
-    "6": "ils/elles se lèvent"
-  },
-  "pastcomp": {
-    "1": "je me suis levé(e)",
-    "2": "tu t'es levé(e)",
-    "3": "il/elle/on s'est levé(e)(s)",
-    "4": "nous nous sommes levé(e)s",
-    "5": "vous vous êtes levé(e)(s)",
-    "6": "ils/elles se sont levé(e)s"
-  },
-  "pastimp": {
-    "1": "je me levais",
-    "2": "tu te levais",
-    "3": "il/elle/on se levait",
-    "4": "nous nous levions",
-    "5": "vous vous leviez",
-    "6": "ils/elles se levaient"
-  },
-  "future": {
-    "1": "je me lèverai",
-    "2": "tu te lèveras",
-    "3": "il/elle/on se lèvera",
-    "4": "nous nous lèverons",
-    "5": "vous vous lèverez",
-    "6": "ils/elles se lèveront"
-  },
-  "subjunctive": {
-    "1": "que je me lève",
-    "2": "que tu te lèves",
-    "3": "qu'il/elle/on se lève",
-    "4": "que nous nous levions",
-    "5": "que vous vous leviez",
-    "6": "qu'ils/elles se lèvent"
-  }
-},
-"se voir": {
-  "present": {
-    "1": "je me vois",
-    "2": "tu te vois",
-    "3": "il/elle/on se voit",
-    "4": "nous nous voyons",
-    "5": "vous vous voyez",
-    "6": "ils/elles se voient"
-  },
-  "pastcomp": {
-    "1": "je me suis vu(e)",
-    "2": "tu t'es vu(e)",
-    "3": "il/elle/on s'est vu(e)(s)",
-    "4": "nous nous sommes vu(e)s",
-    "5": "vous vous êtes vu(e)(s)",
-    "6": "ils/elles se sont vu(e)s"
-  },
-  "pastimp": {
-    "1": "je me voyais",
-    "2": "tu te voyais",
-    "3": "il/elle/on se voyait",
-    "4": "nous nous voyions",
-    "5": "vous vous voyiez",
-    "6": "ils/elles se voyaient"
-  },
-  "future": {
-    "1": "je me verrai",
-    "2": "tu te verras",
-    "3": "il/elle/on se verra",
-    "4": "nous nous verrons",
-    "5": "vous vous verrez",
-    "6": "ils/elles se verront"
-  },
-  "subjunctive": {
-    "1": "que je me voie",
-    "2": "que tu te voies",
-    "3": "qu'il/elle/on se voie",
-    "4": "que nous nous voyions",
-    "5": "que vous vous voyiez",
-    "6": "qu'ils/elles se voient"
-  }
-},
-"passer": {
-  "present": {
-    "1": "je passe",
-    "2": "tu passes",
-    "3": "il/elle/on passe",
-    "4": "nous passons",
-    "5": "vous passez",
-    "6": "ils/elles passent"
-  },
-  "pastcomp": {
-    "1": "j'ai passé",
-    "2": "tu as passé",
-    "3": "il/elle/on a passé",
-    "4": "nous avons passé",
-    "5": "vous avez passé",
-    "6": "ils/elles ont passé"
-  },
-  "pastcompEtre": {
-    "1": "je suis passé(e)",
-    "2": "tu es passé(e)",
-    "3": "il/elle/on est passé(e)(s)",
-    "4": "nous sommes passé(e)s",
-    "5": "vous êtes passé(e)(s)",
-    "6": "ils/elles sont passé(e)s"
-  },
-  "pastimp": {
-    "1": "je passais",
-    "2": "tu passais",
-    "3": "il/elle/on passait",
-    "4": "nous passions",
-    "5": "vous passiez",
-    "6": "ils/elles passaient"
-  },
-  "future": {
-    "1": "je passerai",
-    "2": "tu passeras",
-    "3": "il/elle/on passera",
-    "4": "nous passerons",
-    "5": "vous passerez",
-    "6": "ils/elles passeront"
-  },
-  "subjunctive": {
-    "1": "que je passe",
-    "2": "que tu passes",
-    "3": "qu'il/elle/on passe",
-    "4": "que nous passions",
-    "5": "que vous passiez",
-    "6": "qu'ils/elles passent"
-  }
-},
-"utiliser": {
-  "present": {
-    "1": "j'utilise",
-    "2": "tu utilises",
-    "3": "il/elle/on utilise",
-    "4": "nous utilisons",
-    "5": "vous utilisez",
-    "6": "ils/elles utilisent"
-  },
-  "pastcomp": {
-    "1": "j'ai utilisé",
-    "2": "tu as utilisé",
-    "3": "il/elle/on a utilisé",
-    "4": "nous avons utilisé",
-    "5": "vous avez utilisé",
-    "6": "ils/elles ont utilisé"
-  },
-  "pastimp": {
-    "1": "j'utilisais",
-    "2": "tu utilisais",
-    "3": "il/elle/on utilisait",
-    "4": "nous utilisions",
-    "5": "vous utilisiez",
-    "6": "ils/elles utilisaient"
-  },
-  "future": {
-    "1": "j'utiliserai",
-    "2": "tu utiliseras",
-    "3": "il/elle/on utilisera",
-    "4": "nous utiliserons",
-    "5": "vous utiliserez",
-    "6": "ils/elles utiliseront"
-  },
-  "subjunctive": {
-    "1": "que j'utilise",
-    "2": "que tu utilises",
-    "3": "qu'il/elle/on utilise",
-    "4": "que nous utilisions",
-    "5": "que vous utilisiez",
-    "6": "qu'ils/elles utilisent"
-  }
-},
-"déjeuner": {
-  "present": {
-    "1": "je déjeune",
-    "2": "tu déjeunes",
-    "3": "il/elle/on déjeune",
-    "4": "nous déjeunons",
-    "5": "vous déjeunez",
-    "6": "ils/elles déjeunent"
-  },
-  "pastcomp": {
-    "1": "j'ai déjeuné",
-    "2": "tu as déjeuné",
-    "3": "il/elle/on a déjeuné",
-    "4": "nous avons déjeuné",
-    "5": "vous avez déjeuné",
-    "6": "ils/elles ont déjeuné"
-  },
-  "pastimp": {
-    "1": "je déjeunais",
-    "2": "tu déjeunais",
-    "3": "il/elle/on déjeunait",
-    "4": "nous déjeunions",
-    "5": "vous déjeuniez",
-    "6": "ils/elles déjeunaient"
-  },
-  "future": {
-    "1": "je déjeunerai",
-    "2": "tu déjeuneras",
-    "3": "il/elle/on déjeunera",
-    "4": "nous déjeunerons",
-    "5": "vous déjeunerez",
-    "6": "ils/elles déjeuneront"
-  },
-  "subjunctive": {
-    "1": "que je déjeune",
-    "2": "que tu déjeunes",
-    "3": "qu'il/elle/on déjeune",
-    "4": "que nous déjeunions",
-    "5": "que vous déjeuniez",
-    "6": "qu'ils/elles déjeunent"
-  }
-},
+    "mettre": {
+      "present": {
+        "1": "je mets",
+        "2": "tu mets",
+        "3": "il/elle/on met",
+        "4": "nous mettons",
+        "5": "vous mettez",
+        "6": "ils/elles mettent"
+      },
+      "pastcomp": {
+        "1": "j'ai mis",
+        "2": "tu as mis",
+        "3": "il/elle/on a mis",
+        "4": "nous avons mis",
+        "5": "vous avez mis",
+        "6": "ils/elles ont mis"
+      },
+      "pastimp": {
+        "1": "je mettais",
+        "2": "tu mettais",
+        "3": "il/elle/on mettait",
+        "4": "nous mettions",
+        "5": "vous mettiez",
+        "6": "ils/elles mettaient"
+      },
+      "future": {
+        "1": "je mettrai",
+        "2": "tu mettras",
+        "3": "il/elle/on mettra",
+        "4": "nous mettrons",
+        "5": "vous mettrez",
+        "6": "ils/elles mettront"
+      },
+      "subjunctive": {
+        "1": "que je mette",
+        "2": "que tu mettes",
+        "3": "qu'il/elle/on mette",
+        "4": "que nous mettions",
+        "5": "que vous mettiez",
+        "6": "qu'ils/elles mettent"
+      }
+    },
+    "ouvrir": {
+      "present": {
+        "1": "j'ouvre",
+        "2": "tu ouvres",
+        "3": "il/elle/on ouvre",
+        "4": "nous ouvrons",
+        "5": "vous ouvrez",
+        "6": "ils/elles ouvrent"
+      },
+      "pastcomp": {
+        "1": "j'ai ouvert",
+        "2": "tu as ouvert",
+        "3": "il/elle/on a ouvert",
+        "4": "nous avons ouvert",
+        "5": "vous avez ouvert",
+        "6": "ils/elles ont ouvert"
+      },
+      "pastimp": {
+        "1": "j'ouvrais",
+        "2": "tu ouvrais",
+        "3": "il/elle/on ouvrait",
+        "4": "nous ouvrions",
+        "5": "vous ouvriez",
+        "6": "ils/elles ouvraient"
+      },
+      "future": {
+        "1": "j'ouvrirai",
+        "2": "tu ouvriras",
+        "3": "il/elle/on ouvrira",
+        "4": "nous ouvrirons",
+        "5": "vous ouvrirez",
+        "6": "ils/elles ouvriront"
+      },
+      "subjunctive": {
+        "1": "que j'ouvre",
+        "2": "que tu ouvres",
+        "3": "qu'il/elle/on ouvre",
+        "4": "que nous ouvrions",
+        "5": "que vous ouvriez",
+        "6": "qu'ils/elles ouvrent"
+      }
+    },
+    "trouver": {
+      "present": {
+        "1": "je trouve",
+        "2": "tu trouves",
+        "3": "il/elle/on trouve",
+        "4": "nous trouvons",
+        "5": "vous trouvez",
+        "6": "ils/elles trouvent"
+      },
+      "pastcomp": {
+        "1": "j'ai trouvé",
+        "2": "tu as trouvé",
+        "3": "il/elle/on a trouvé",
+        "4": "nous avons trouvé",
+        "5": "vous avez trouvé",
+        "6": "ils/elles ont trouvé"
+      },
+      "pastimp": {
+        "1": "je trouvais",
+        "2": "tu trouvais",
+        "3": "il/elle/on trouvait",
+        "4": "nous trouvions",
+        "5": "vous trouviez",
+        "6": "ils/elles trouvaient"
+      },
+      "future": {
+        "1": "je trouverai",
+        "2": "tu trouveras",
+        "3": "il/elle/on trouvera",
+        "4": "nous trouverons",
+        "5": "vous trouverez",
+        "6": "ils/elles trouveront"
+      },
+      "subjunctive": {
+        "1": "que je trouve",
+        "2": "que tu trouves",
+        "3": "qu'il/elle/on trouve",
+        "4": "que nous trouvions",
+        "5": "que vous trouviez",
+        "6": "qu'ils/elles trouvent"
+      }
+    },
+    "descendre": {
+      "present": {
+        "1": "je descends",
+        "2": "tu descends",
+        "3": "il/elle/on descend",
+        "4": "nous descendons",
+        "5": "vous descendez",
+        "6": "ils/elles descendent"
+      },
+      "pastcompEtre": {
+        "1": "je suis descendu(e)",
+        "2": "tu es descendu(e)",
+        "3": "il/elle/on est descendu(e)(s)",
+        "4": "nous sommes descendu(e)s",
+        "5": "vous êtes descendu(e)(s)",
+        "6": "ils/elles sont descendu(e)s"
+      },
+      "pastimp": {
+        "1": "je descendais",
+        "2": "tu descendais",
+        "3": "il/elle/on descendait",
+        "4": "nous descendions",
+        "5": "vous descendiez",
+        "6": "ils/elles descendaient"
+      },
+      "future": {
+        "1": "je descendrai",
+        "2": "tu descendras",
+        "3": "il/elle/on descendra",
+        "4": "nous descendrons",
+        "5": "vous descendrez",
+        "6": "ils/elles descendront"
+      },
+      "subjunctive": {
+        "1": "que je descende",
+        "2": "que tu descendes",
+        "3": "qu'il/elle/on descende",
+        "4": "que nous descendions",
+        "5": "que vous descendiez",
+        "6": "qu'ils/elles descendent"
+      }
+    },
+    "appeler": {
+      "present": {
+        "1": "j'appelle",
+        "2": "tu appelles",
+        "3": "il/elle/on appelle",
+        "4": "nous appelons",
+        "5": "vous appelez",
+        "6": "ils/elles appellent"
+      },
+      "pastcomp": {
+        "1": "j'ai appelé",
+        "2": "tu as appelé",
+        "3": "il/elle/on a appelé",
+        "4": "nous avons appelé",
+        "5": "vous avez appelé",
+        "6": "ils/elles ont appelé"
+      },
+      "pastimp": {
+        "1": "j'appelais",
+        "2": "tu appelais",
+        "3": "il/elle/on appelait",
+        "4": "nous appelions",
+        "5": "vous appeliez",
+        "6": "ils/elles appelaient"
+      },
+      "future": {
+        "1": "j'appellerai",
+        "2": "tu appelleras",
+        "3": "il/elle/on appellera",
+        "4": "nous appellerons",
+        "5": "vous appellerez",
+        "6": "ils/elles appelleront"
+      },
+      "subjunctive": {
+        "1": "que j'appelle",
+        "2": "que tu appelles",
+        "3": "qu'il/elle/on appelle",
+        "4": "que nous appelions",
+        "5": "que vous appeliez",
+        "6": "qu'ils/elles appellent"
+      }
+    },
+    "entrer": {
+      "present": {
+        "1": "j'entre",
+        "2": "tu entres",
+        "3": "il/elle/on entre",
+        "4": "nous entrons",
+        "5": "vous entrez",
+        "6": "ils/elles entrent"
+      },
+      "pastcompEtre": {
+        "1": "je suis entré(e)",
+        "2": "tu es entré(e)",
+        "3": "il/elle/on est entré(e)(s)",
+        "4": "nous sommes entré(e)s",
+        "5": "vous êtes entré(e)(s)",
+        "6": "ils/elles sont entré(e)s"
+      },
+      "pastimp": {
+        "1": "j'entrais",
+        "2": "tu entrais",
+        "3": "il/elle/on entrait",
+        "4": "nous entrions",
+        "5": "vous entriez",
+        "6": "ils/elles entraient"
+      },
+      "future": {
+        "1": "j'entrerai",
+        "2": "tu entreras",
+        "3": "il/elle/on entrera",
+        "4": "nous entrerons",
+        "5": "vous entrerez",
+        "6": "ils/elles entreront"
+      },
+      "subjunctive": {
+        "1": "que j'entre",
+        "2": "que tu entres",
+        "3": "qu'il/elle/on entre",
+        "4": "que nous entrions",
+        "5": "que vous entriez",
+        "6": "qu'ils/elles entrent"
+      }
+    },
 
-"mettre": {
-    "present": {
-      "1": "je mets",
-      "2": "tu mets",
-      "3": "il/elle/on met",
-      "4": "nous mettons",
-      "5": "vous mettez",
-      "6": "ils/elles mettent"
+    "se baigner": {
+      "present": {
+        "1": "je me baigne",
+        "2": "tu te baignes",
+        "3": "il/elle/on se baigne",
+        "4": "nous nous baignons",
+        "5": "vous vous baignez",
+        "6": "ils/elles se baignent"
+      },
+      "pastcomp": {
+        "1": "je me suis baigné(e)",
+        "2": "tu t'es baigné(e)",
+        "3": "il/elle/on s'est baigné(e)(s)",
+        "4": "nous nous sommes baigné(e)s",
+        "5": "vous vous êtes baigné(e)(s)",
+        "6": "ils/elles se sont baigné(e)s"
+      },
+      "pastimp": {
+        "1": "je me baignais",
+        "2": "tu te baignais",
+        "3": "il/elle/on se baignait",
+        "4": "nous nous baignions",
+        "5": "vous vous baigniez",
+        "6": "ils/elles se baignaient"
+      },
+      "future": {
+        "1": "je me baignerai",
+        "2": "tu te baigneras",
+        "3": "il/elle/on se baignera",
+        "4": "nous nous baignerons",
+        "5": "vous vous baignerez",
+        "6": "ils/elles se baigneront"
+      },
+      "subjunctive": {
+        "1": "que je me baigne",
+        "2": "que tu te baignes",
+        "3": "qu'il/elle/on se baigne",
+        "4": "que nous nous baignions",
+        "5": "que vous vous baigniez",
+        "6": "qu'ils/elles se baignent"
+      }
     },
-    "pastcomp": {
-      "1": "j'ai mis",
-      "2": "tu as mis",
-      "3": "il/elle/on a mis",
-      "4": "nous avons mis",
-      "5": "vous avez mis",
-      "6": "ils/elles ont mis"
+    "se promener": {
+      "present": {
+        "1": "je me promène",
+        "2": "tu te promènes",
+        "3": "il/elle/on se promène",
+        "4": "nous nous promenons",
+        "5": "vous vous promenez",
+        "6": "ils/elles se promènent"
+      },
+      "pastcomp": {
+        "1": "je me suis promené(e)",
+        "2": "tu t'es promené(e)",
+        "3": "il/elle/on s'est promené(e)(s)",
+        "4": "nous nous sommes promené(e)s",
+        "5": "vous vous êtes promené(e)(s)",
+        "6": "ils/elles se sont promené(e)s"
+      },
+      "pastimp": {
+        "1": "je me promenais",
+        "2": "tu te promenais",
+        "3": "il/elle/on se promenait",
+        "4": "nous nous promenions",
+        "5": "vous vous promeniez",
+        "6": "ils/elles se promenaient"
+      },
+      "future": {
+        "1": "je me promènerai",
+        "2": "tu te promèneras",
+        "3": "il/elle/on se promènera",
+        "4": "nous nous promènerons",
+        "5": "vous vous promènerez",
+        "6": "ils/elles se promèneront"
+      },
+      "subjunctive": {
+        "1": "que je me promène",
+        "2": "que tu te promènes",
+        "3": "qu'il/elle/on se promène",
+        "4": "que nous nous promenions",
+        "5": "que vous vous promeniez",
+        "6": "qu'ils/elles se promènent"
+      }
     },
-    "pastimp": {
-      "1": "je mettais",
-      "2": "tu mettais",
-      "3": "il/elle/on mettait",
-      "4": "nous mettions",
-      "5": "vous mettiez",
-      "6": "ils/elles mettaient"
+    "se perdre": {
+      "present": {
+        "1": "je me perds",
+        "2": "tu te perds",
+        "3": "il/elle/on se perd",
+        "4": "nous nous perdons",
+        "5": "vous vous perdez",
+        "6": "ils/elles se perdent"
+      },
+      "pastcomp": {
+        "1": "je me suis perdu(e)",
+        "2": "tu t'es perdu(e)",
+        "3": "il/elle/on s'est perdu(e)(s)",
+        "4": "nous nous sommes perdu(e)s",
+        "5": "vous vous êtes perdu(e)(s)",
+        "6": "ils/elles se sont perdu(e)s"
+      },
+      "pastimp": {
+        "1": "je me perdais",
+        "2": "tu te perdais",
+        "3": "il/elle/on se perdait",
+        "4": "nous nous perdions",
+        "5": "vous vous perdiez",
+        "6": "ils/elles se perdaient"
+      },
+      "future": {
+        "1": "je me perdrai",
+        "2": "tu te perdras",
+        "3": "il/elle/on se perdra",
+        "4": "nous nous perdrons",
+        "5": "vous vous perdrez",
+        "6": "ils/elles se perdront"
+      },
+      "subjunctive": {
+        "1": "que je me perde",
+        "2": "que tu te perdes",
+        "3": "qu'il/elle/on se perde",
+        "4": "que nous nous perdions",
+        "5": "que vous vous perdiez",
+        "6": "qu'ils/elles se perdent"
+      }
     },
-    "future": {
-      "1": "je mettrai",
-      "2": "tu mettras",
-      "3": "il/elle/on mettra",
-      "4": "nous mettrons",
-      "5": "vous mettrez",
-      "6": "ils/elles mettront"
+    "perdre": {
+      "present": {
+        "1": "je perds",
+        "2": "tu perds",
+        "3": "il/elle/on perd",
+        "4": "nous perdons",
+        "5": "vous perdez",
+        "6": "ils/elles perdent"
+      },
+      "pastcomp": {
+        "1": "j'ai perdu",
+        "2": "tu as perdu",
+        "3": "il/elle/on a perdu",
+        "4": "nous avons perdu",
+        "5": "vous avez perdu",
+        "6": "ils/elles ont perdu"
+      },
+      "pastimp": {
+        "1": "je perdais",
+        "2": "tu perdais",
+        "3": "il/elle/on perdait",
+        "4": "nous perdions",
+        "5": "vous perdiez",
+        "6": "ils/elles perdaient"
+      },
+      "future": {
+        "1": "je perdrai",
+        "2": "tu perdras",
+        "3": "il/elle/on perdra",
+        "4": "nous perdrons",
+        "5": "vous perdrez",
+        "6": "ils/elles perdront"
+      },
+      "subjunctive": {
+        "1": "que je perde",
+        "2": "que tu perdes",
+        "3": "qu'il/elle/on perde",
+        "4": "que nous perdions",
+        "5": "que vous perdiez",
+        "6": "qu'ils/elles perdent"
+      }
     },
-    "subjunctive": {
-      "1": "que je mette",
-      "2": "que tu mettes",
-      "3": "qu'il/elle/on mette",
-      "4": "que nous mettions",
-      "5": "que vous mettiez",
-      "6": "qu'ils/elles mettent"
-    }
-  },
-  "ouvrir": {
-    "present": {
-      "1": "j'ouvre",
-      "2": "tu ouvres",
-      "3": "il/elle/on ouvre",
-      "4": "nous ouvrons",
-      "5": "vous ouvrez",
-      "6": "ils/elles ouvrent"
+    "s'amuser": {
+      "present": {
+        "1": "je m'amuse",
+        "2": "tu t'amuses",
+        "3": "il/elle/on s'amuse",
+        "4": "nous nous amusons",
+        "5": "vous vous amusez",
+        "6": "ils/elles s'amusent"
+      },
+      "pastcomp": {
+        "1": "je me suis amusé(e)",
+        "2": "tu t'es amusé(e)",
+        "3": "il/elle/on s'est amusé(e)(s)",
+        "4": "nous nous sommes amusé(e)s",
+        "5": "vous vous êtes amusé(e)(s)",
+        "6": "ils/elles se sont amusé(e)s"
+      },
+      "pastimp": {
+        "1": "je m'amusais",
+        "2": "tu t'amusais",
+        "3": "il/elle/on s'amusait",
+        "4": "nous nous amusions",
+        "5": "vous vous amusiez",
+        "6": "ils/elles s'amusaient"
+      },
+      "future": {
+        "1": "je m'amuserai",
+        "2": "tu t'amuseras",
+        "3": "il/elle/on s'amusera",
+        "4": "nous nous amuserons",
+        "5": "vous vous amuserez",
+        "6": "ils/elles s'amuseront"
+      },
+      "subjunctive": {
+        "1": "que je m'amuse",
+        "2": "que tu t'amuses",
+        "3": "qu'il/elle/on s'amuse",
+        "4": "que nous nous amusions",
+        "5": "que vous vous amusiez",
+        "6": "qu'ils/elles s'amusent"
+      }
     },
-    "pastcomp": {
-      "1": "j'ai ouvert",
-      "2": "tu as ouvert",
-      "3": "il/elle/on a ouvert",
-      "4": "nous avons ouvert",
-      "5": "vous avez ouvert",
-      "6": "ils/elles ont ouvert"
+    "se disputer": {
+      "present": {
+        "1": "je me dispute",
+        "2": "tu te disputes",
+        "3": "il/elle/on se dispute",
+        "4": "nous nous disputons",
+        "5": "vous vous disputez",
+        "6": "ils/elles se disputent"
+      },
+      "pastcomp": {
+        "1": "je me suis disputé(e)",
+        "2": "tu t'es disputé(e)",
+        "3": "il/elle/on s'est disputé(e)(s)",
+        "4": "nous nous sommes disputé(e)s",
+        "5": "vous vous êtes disputé(e)(s)",
+        "6": "ils/elles se sont disputé(e)s"
+      },
+      "pastimp": {
+        "1": "je me disputais",
+        "2": "tu te disputais",
+        "3": "il/elle/on se disputait",
+        "4": "nous nous disputions",
+        "5": "vous vous disputiez",
+        "6": "ils/elles se disputaient"
+      },
+      "future": {
+        "1": "je me disputerai",
+        "2": "tu te disputeras",
+        "3": "il/elle/on se disputera",
+        "4": "nous nous disputerons",
+        "5": "vous vous disputerez",
+        "6": "ils/elles se disputeront"
+      },
+      "subjunctive": {
+        "1": "que je me dispute",
+        "2": "que tu te disputes",
+        "3": "qu'il/elle/on se dispute",
+        "4": "que nous nous disputions",
+        "5": "que vous vous disputiez",
+        "6": "qu'ils/elles se disputent"
+      }
     },
-    "pastimp": {
-      "1": "j'ouvrais",
-      "2": "tu ouvrais",
-      "3": "il/elle/on ouvrait",
-      "4": "nous ouvrions",
-      "5": "vous ouvriez",
-      "6": "ils/elles ouvraient"
+    "se téléphoner": {
+      "present": {
+        "1": "je me téléphone",
+        "2": "tu te téléphones",
+        "3": "il/elle/on se téléphone",
+        "4": "nous nous téléphonons",
+        "5": "vous vous téléphonez",
+        "6": "ils/elles se téléphonent"
+      },
+      "pastcomp": {
+        "1": "je me suis téléphoné",
+        "2": "tu t'es téléphoné",
+        "3": "il/elle/on s'est téléphoné",
+        "4": "nous nous sommes téléphoné",
+        "5": "vous vous êtes téléphoné",
+        "6": "ils/elles se sont téléphoné"
+      },
+      "pastimp": {
+        "1": "je me téléphonais",
+        "2": "tu te téléphonais",
+        "3": "il/elle/on se téléphonait",
+        "4": "nous nous téléphonions",
+        "5": "vous vous téléphoniez",
+        "6": "ils/elles se téléphonaient"
+      },
+      "future": {
+        "1": "je me téléphonerai",
+        "2": "tu te téléphoneras",
+        "3": "il/elle/on se téléphonera",
+        "4": "nous nous téléphonerons",
+        "5": "vous vous téléphonerez",
+        "6": "ils/elles se téléphoneront"
+      },
+      "subjunctive": {
+        "1": "que je me téléphone",
+        "2": "que tu te téléphones",
+        "3": "qu'il/elle/on se téléphone",
+        "4": "que nous nous téléphonions",
+        "5": "que vous vous téléphoniez",
+        "6": "qu'ils/elles se téléphonent"
+      }
     },
-    "future": {
-      "1": "j'ouvrirai",
-      "2": "tu ouvriras",
-      "3": "il/elle/on ouvrira",
-      "4": "nous ouvrirons",
-      "5": "vous ouvrirez",
-      "6": "ils/elles ouvriront"
+    "être": {
+      "present": {
+        "1": "je suis",
+        "2": "tu es",
+        "3": "il/elle/on est",
+        "4": "nous sommes",
+        "5": "vous êtes",
+        "6": "ils/elles sont"
+      },
+      "pastcomp": {
+        "1": "j'ai été",
+        "2": "tu as été",
+        "3": "il/elle/on a été",
+        "4": "nous avons été",
+        "5": "vous avez été",
+        "6": "ils/elles ont été"
+      },
+      "pastimp": {
+        "1": "j'étais",
+        "2": "tu étais",
+        "3": "il/elle/on était",
+        "4": "nous étions",
+        "5": "vous étiez",
+        "6": "ils/elles étaient"
+      },
+      "future": {
+        "1": "je serai",
+        "2": "tu seras",
+        "3": "il/elle/on sera",
+        "4": "nous serons",
+        "5": "vous serez",
+        "6": "ils/elles seront"
+      },
+      "subjunctive": {
+        "1": "que je sois",
+        "2": "que tu sois",
+        "3": "qu'il/elle/on soit",
+        "4": "que nous soyons",
+        "5": "que vous soyez",
+        "6": "qu'ils/elles soient"
+      }
     },
-    "subjunctive": {
-      "1": "que j'ouvre",
-      "2": "que tu ouvres",
-      "3": "qu'il/elle/on ouvre",
-      "4": "que nous ouvrions",
-      "5": "que vous ouvriez",
-      "6": "qu'ils/elles ouvrent"
-    }
-  },
-  "trouver": {
-    "present": {
-      "1": "je trouve",
-      "2": "tu trouves",
-      "3": "il/elle/on trouve",
-      "4": "nous trouvons",
-      "5": "vous trouvez",
-      "6": "ils/elles trouvent"
+    "travailler": {
+      "present": {
+        "1": "je travaille",
+        "2": "tu travailles",
+        "3": "il/elle/on travaille",
+        "4": "nous travaillons",
+        "5": "vous travaillez",
+        "6": "ils/elles travaillent"
+      },
+      "pastcomp": {
+        "1": "j'ai travaillé",
+        "2": "tu as travaillé",
+        "3": "il/elle/on a travaillé",
+        "4": "nous avons travaillé",
+        "5": "vous avez travaillé",
+        "6": "ils/elles ont travaillé"
+      },
+      "pastimp": {
+        "1": "je travaillais",
+        "2": "tu travaillais",
+        "3": "il/elle/on travaillait",
+        "4": "nous travaillions",
+        "5": "vous travailliez",
+        "6": "ils/elles travaillaient"
+      },
+      "future": {
+        "1": "je travaillerai",
+        "2": "tu travailleras",
+        "3": "il/elle/on travaillera",
+        "4": "nous travaillerons",
+        "5": "vous travaillerez",
+        "6": "ils/elles travailleront"
+      },
+      "subjunctive": {
+        "1": "que je travaille",
+        "2": "que tu travailles",
+        "3": "qu'il/elle/on travaille",
+        "4": "que nous travaillions",
+        "5": "que vous travailliez",
+        "6": "qu'ils/elles travaillent"
+      }
     },
-    "pastcomp": {
-      "1": "j'ai trouvé",
-      "2": "tu as trouvé",
-      "3": "il/elle/on a trouvé",
-      "4": "nous avons trouvé",
-      "5": "vous avez trouvé",
-      "6": "ils/elles ont trouvé"
+    "conduire": {
+      "present": {
+        "1": "je conduis",
+        "2": "tu conduis",
+        "3": "il/elle/on conduit",
+        "4": "nous conduisons",
+        "5": "vous conduisez",
+        "6": "ils/elles conduisent"
+      },
+      "pastcomp": {
+        "1": "j'ai conduit",
+        "2": "tu as conduit",
+        "3": "il/elle/on a conduit",
+        "4": "nous avons conduit",
+        "5": "vous avez conduit",
+        "6": "ils/elles ont conduit"
+      },
+      "pastimp": {
+        "1": "je conduisais",
+        "2": "tu conduisais",
+        "3": "il/elle/on conduisait",
+        "4": "nous conduisions",
+        "5": "vous conduisiez",
+        "6": "ils/elles conduisaient"
+      },
+      "future": {
+        "1": "je conduirai",
+        "2": "tu conduiras",
+        "3": "il/elle/on conduira",
+        "4": "nous conduirons",
+        "5": "vous conduirez",
+        "6": "ils/elles conduiront"
+      },
+      "subjunctive": {
+        "1": "que je conduise",
+        "2": "que tu conduises",
+        "3": "qu'il/elle/on conduise",
+        "4": "que nous conduisions",
+        "5": "que vous conduisiez",
+        "6": "qu'ils/elles conduisent"
+      }
     },
-    "pastimp": {
-      "1": "je trouvais",
-      "2": "tu trouvais",
-      "3": "il/elle/on trouvait",
-      "4": "nous trouvions",
-      "5": "vous trouviez",
-      "6": "ils/elles trouvaient"
-    },
-    "future": {
-      "1": "je trouverai",
-      "2": "tu trouveras",
-      "3": "il/elle/on trouvera",
-      "4": "nous trouverons",
-      "5": "vous trouverez",
-      "6": "ils/elles trouveront"
-    },
-    "subjunctive": {
-      "1": "que je trouve",
-      "2": "que tu trouves",
-      "3": "qu'il/elle/on trouve",
-      "4": "que nous trouvions",
-      "5": "que vous trouviez",
-      "6": "qu'ils/elles trouvent"
-    }
-  },
-  "descendre": {
-    "present": {
-      "1": "je descends",
-      "2": "tu descends",
-      "3": "il/elle/on descend",
-      "4": "nous descendons",
-      "5": "vous descendez",
-      "6": "ils/elles descendent"
-    },
-    "pastcomp": {
-      "1": "je suis descendu(e)",
-      "2": "tu es descendu(e)",
-      "3": "il/elle/on est descendu(e)(s)",
-      "4": "nous sommes descendu(e)s",
-      "5": "vous êtes descendu(e)(s)",
-      "6": "ils/elles sont descendu(e)s"
-    },
-    "pastimp": {
-      "1": "je descendais",
-      "2": "tu descendais",
-      "3": "il/elle/on descendait",
-      "4": "nous descendions",
-      "5": "vous descendiez",
-      "6": "ils/elles descendaient"
-    },
-    "future": {
-      "1": "je descendrai",
-      "2": "tu descendras",
-      "3": "il/elle/on descendra",
-      "4": "nous descendrons",
-      "5": "vous descendrez",
-      "6": "ils/elles descendront"
-    },
-    "subjunctive": {
-      "1": "que je descende",
-      "2": "que tu descendes",
-      "3": "qu'il/elle/on descende",
-      "4": "que nous descendions",
-      "5": "que vous descendiez",
-      "6": "qu'ils/elles descendent"
-    }
-  },
-  "appeler": {
-    "present": {
-      "1": "j'appelle",
-      "2": "tu appelles",
-      "3": "il/elle/on appelle",
-      "4": "nous appelons",
-      "5": "vous appelez",
-      "6": "ils/elles appellent"
-    },
-    "pastcomp": {
-      "1": "j'ai appelé",
-      "2": "tu as appelé",
-      "3": "il/elle/on a appelé",
-      "4": "nous avons appelé",
-      "5": "vous avez appelé",
-      "6": "ils/elles ont appelé"
-    },
-    "pastimp": {
-      "1": "j'appelais",
-      "2": "tu appelais",
-      "3": "il/elle/on appelait",
-      "4": "nous appelions",
-      "5": "vous appeliez",
-      "6": "ils/elles appelaient"
-    },
-    "future": {
-      "1": "j'appellerai",
-      "2": "tu appelleras",
-      "3": "il/elle/on appellera",
-      "4": "nous appellerons",
-      "5": "vous appellerez",
-      "6": "ils/elles appelleront"
-    },
-    "subjunctive": {
-      "1": "que j'appelle",
-      "2": "que tu appelles",
-      "3": "qu'il/elle/on appelle",
-      "4": "que nous appelions",
-      "5": "que vous appeliez",
-      "6": "qu'ils/elles appellent"
-    }
-  },
-  "entrer": {
-    "present": {
-      "1": "j'entre",
-      "2": "tu entres",
-      "3": "il/elle/on entre",
-      "4": "nous entrons",
-      "5": "vous entrez",
-      "6": "ils/elles entrent"
-    },
-    "pastcomp": {
-      "1": "je suis entré(e)",
-      "2": "tu es entré(e)",
-      "3": "il/elle/on est entré(e)(s)",
-      "4": "nous sommes entré(e)s",
-      "5": "vous êtes entré(e)(s)",
-      "6": "ils/elles sont entré(e)s"
-    },
-    "pastimp": {
-      "1": "j'entrais",
-      "2": "tu entrais",
-      "3": "il/elle/on entrait",
-      "4": "nous entrions",
-      "5": "vous entriez",
-      "6": "ils/elles entraient"
-    },
-    "future": {
-      "1": "j'entrerai",
-      "2": "tu entreras",
-      "3": "il/elle/on entrera",
-      "4": "nous entrerons",
-      "5": "vous entrerez",
-      "6": "ils/elles entreront"
-    },
-    "subjunctive": {
-      "1": "que j'entre",
-      "2": "que tu entres",
-      "3": "qu'il/elle/on entre",
-      "4": "que nous entrions",
-      "5": "que vous entriez",
-      "6": "qu'ils/elles entrent"
-    }
-  },
 
-  "se baigner": {
-    "present": {
-      "1": "je me baigne",
-      "2": "tu te baignes",
-      "3": "il/elle/on se baigne",
-      "4": "nous nous baignons",
-      "5": "vous vous baignez",
-      "6": "ils/elles se baignent"
-    },
-    "pastcomp": {
-      "1": "je me suis baigné(e)",
-      "2": "tu t'es baigné(e)",
-      "3": "il/elle/on s'est baigné(e)(s)",
-      "4": "nous nous sommes baigné(e)s",
-      "5": "vous vous êtes baigné(e)(s)",
-      "6": "ils/elles se sont baigné(e)s"
-    },
-    "pastimp": {
-      "1": "je me baignais",
-      "2": "tu te baignais",
-      "3": "il/elle/on se baignait",
-      "4": "nous nous baignions",
-      "5": "vous vous baigniez",
-      "6": "ils/elles se baignaient"
-    },
-    "future": {
-      "1": "je me baignerai",
-      "2": "tu te baigneras",
-      "3": "il/elle/on se baignera",
-      "4": "nous nous baignerons",
-      "5": "vous vous baignerez",
-      "6": "ils/elles se baigneront"
-    },
-    "subjunctive": {
-      "1": "que je me baigne",
-      "2": "que tu te baignes",
-      "3": "qu'il/elle/on se baigne",
-      "4": "que nous nous baignions",
-      "5": "que vous vous baigniez",
-      "6": "qu'ils/elles se baignent"
-    }
-  },
-  "se promener": {
-    "present": {
-      "1": "je me promène",
-      "2": "tu te promènes",
-      "3": "il/elle/on se promène",
-      "4": "nous nous promenons",
-      "5": "vous vous promenez",
-      "6": "ils/elles se promènent"
-    },
-    "pastcomp": {
-      "1": "je me suis promené(e)",
-      "2": "tu t'es promené(e)",
-      "3": "il/elle/on s'est promené(e)(s)",
-      "4": "nous nous sommes promené(e)s",
-      "5": "vous vous êtes promené(e)(s)",
-      "6": "ils/elles se sont promené(e)s"
-    },
-    "pastimp": {
-      "1": "je me promenais",
-      "2": "tu te promenais",
-      "3": "il/elle/on se promenait",
-      "4": "nous nous promenions",
-      "5": "vous vous promeniez",
-      "6": "ils/elles se promenaient"
-    },
-    "future": {
-      "1": "je me promènerai",
-      "2": "tu te promèneras",
-      "3": "il/elle/on se promènera",
-      "4": "nous nous promènerons",
-      "5": "vous vous promènerez",
-      "6": "ils/elles se promèneront"
-    },
-    "subjunctive": {
-      "1": "que je me promène",
-      "2": "que tu te promènes",
-      "3": "qu'il/elle/on se promène",
-      "4": "que nous nous promenions",
-      "5": "que vous vous promeniez",
-      "6": "qu'ils/elles se promènent"
-    }
-  },
-  "se perdre": {
-    "present": {
-      "1": "je me perds",
-      "2": "tu te perds",
-      "3": "il/elle/on se perd",
-      "4": "nous nous perdons",
-      "5": "vous vous perdez",
-      "6": "ils/elles se perdent"
-    },
-    "pastcomp": {
-      "1": "je me suis perdu(e)",
-      "2": "tu t'es perdu(e)",
-      "3": "il/elle/on s'est perdu(e)(s)",
-      "4": "nous nous sommes perdu(e)s",
-      "5": "vous vous êtes perdu(e)(s)",
-      "6": "ils/elles se sont perdu(e)s"
-    },
-    "pastimp": {
-      "1": "je me perdais",
-      "2": "tu te perdais",
-      "3": "il/elle/on se perdait",
-      "4": "nous nous perdions",
-      "5": "vous vous perdiez",
-      "6": "ils/elles se perdaient"
-    },
-    "future": {
-      "1": "je me perdrai",
-      "2": "tu te perdras",
-      "3": "il/elle/on se perdra",
-      "4": "nous nous perdrons",
-      "5": "vous vous perdrez",
-      "6": "ils/elles se perdront"
-    },
-    "subjunctive": {
-      "1": "que je me perde",
-      "2": "que tu te perdes",
-      "3": "qu'il/elle/on se perde",
-      "4": "que nous nous perdions",
-      "5": "que vous vous perdiez",
-      "6": "qu'ils/elles se perdent"
-    }
-  },
-  "perdre": {
-    "present": {
-      "1": "je perds",
-      "2": "tu perds",
-      "3": "il/elle/on perd",
-      "4": "nous perdons",
-      "5": "vous perdez",
-      "6": "ils/elles perdent"
-    },
-    "pastcomp": {
-      "1": "j'ai perdu",
-      "2": "tu as perdu",
-      "3": "il/elle/on a perdu",
-      "4": "nous avons perdu",
-      "5": "vous avez perdu",
-      "6": "ils/elles ont perdu"
-    },
-    "pastimp": {
-      "1": "je perdais",
-      "2": "tu perdais",
-      "3": "il/elle/on perdait",
-      "4": "nous perdions",
-      "5": "vous perdiez",
-      "6": "ils/elles perdaient"
-    },
-    "future": {
-      "1": "je perdrai",
-      "2": "tu perdras",
-      "3": "il/elle/on perdra",
-      "4": "nous perdrons",
-      "5": "vous perdrez",
-      "6": "ils/elles perdront"
-    },
-    "subjunctive": {
-      "1": "que je perde",
-      "2": "que tu perdes",
-      "3": "qu'il/elle/on perde",
-      "4": "que nous perdions",
-      "5": "que vous perdiez",
-      "6": "qu'ils/elles perdent"
-    }
-  },
-  "s'amuser": {
-    "present": {
-      "1": "je m'amuse",
-      "2": "tu t'amuses",
-      "3": "il/elle/on s'amuse",
-      "4": "nous nous amusons",
-      "5": "vous vous amusez",
-      "6": "ils/elles s'amusent"
-    },
-    "pastcomp": {
-      "1": "je me suis amusé(e)",
-      "2": "tu t'es amusé(e)",
-      "3": "il/elle/on s'est amusé(e)(s)",
-      "4": "nous nous sommes amusé(e)s",
-      "5": "vous vous êtes amusé(e)(s)",
-      "6": "ils/elles se sont amusé(e)s"
-    },
-    "pastimp": {
-      "1": "je m'amusais",
-      "2": "tu t'amusais",
-      "3": "il/elle/on s'amusait",
-      "4": "nous nous amusions",
-      "5": "vous vous amusiez",
-      "6": "ils/elles s'amusaient"
-    },
-    "future": {
-      "1": "je m'amuserai",
-      "2": "tu t'amuseras",
-      "3": "il/elle/on s'amusera",
-      "4": "nous nous amuserons",
-      "5": "vous vous amuserez",
-      "6": "ils/elles s'amuseront"
-    },
-    "subjunctive": {
-      "1": "que je m'amuse",
-      "2": "que tu t'amuses",
-      "3": "qu'il/elle/on s'amuse",
-      "4": "que nous nous amusions",
-      "5": "que vous vous amusiez",
-      "6": "qu'ils/elles s'amusent"
-    }
-  },
-  "se disputer": {
-    "present": {
-      "1": "je me dispute",
-      "2": "tu te disputes",
-      "3": "il/elle/on se dispute",
-      "4": "nous nous disputons",
-      "5": "vous vous disputez",
-      "6": "ils/elles se disputent"
-    },
-    "pastcomp": {
-      "1": "je me suis disputé(e)",
-      "2": "tu t'es disputé(e)",
-      "3": "il/elle/on s'est disputé(e)(s)",
-      "4": "nous nous sommes disputé(e)s",
-      "5": "vous vous êtes disputé(e)(s)",
-      "6": "ils/elles se sont disputé(e)s"
-    },
-    "pastimp": {
-      "1": "je me disputais",
-      "2": "tu te disputais",
-      "3": "il/elle/on se disputait",
-      "4": "nous nous disputions",
-      "5": "vous vous disputiez",
-      "6": "ils/elles se disputaient"
-    },
-    "future": {
-      "1": "je me disputerai",
-      "2": "tu te disputeras",
-      "3": "il/elle/on se disputera",
-      "4": "nous nous disputerons",
-      "5": "vous vous disputerez",
-      "6": "ils/elles se disputeront"
-    },
-    "subjunctive": {
-      "1": "que je me dispute",
-      "2": "que tu te disputes",
-      "3": "qu'il/elle/on se dispute",
-      "4": "que nous nous disputions",
-      "5": "que vous vous disputiez",
-      "6": "qu'ils/elles se disputent"
-    }
-  },
-  "se téléphoner": {
-    "present": {
-      "1": "je me téléphone",
-      "2": "tu te téléphones",
-      "3": "il/elle/on se téléphone",
-      "4": "nous nous téléphonons",
-      "5": "vous vous téléphonez",
-      "6": "ils/elles se téléphonent"
-    },
-    "pastcomp": {
-      "1": "je me suis téléphoné",
-      "2": "tu t'es téléphoné(",
-      "3": "il/elle/on s'est téléphoné",
-      "4": "nous nous sommes téléphoné",
-      "5": "vous vous êtes téléphoné",
-      "6": "ils/elles se sont téléphoné"
-    },
-    "pastimp": {
-      "1": "je me téléphonais",
-      "2": "tu te téléphonais",
-      "3": "il/elle/on se téléphonait",
-      "4": "nous nous téléphonions",
-      "5": "vous vous téléphoniez",
-      "6": "ils/elles se téléphonaient"
-    },
-    "future": {
-      "1": "je me téléphonerai",
-      "2": "tu te téléphoneras",
-      "3": "il/elle/on se téléphonera",
-      "4": "nous nous téléphonerons",
-      "5": "vous vous téléphonerez",
-      "6": "ils/elles se téléphoneront"
-    },
-    "subjunctive": {
-      "1": "que je me téléphone",
-      "2": "que tu te téléphones",
-      "3": "qu'il/elle/on se téléphone",
-      "4": "que nous nous téléphonions",
-      "5": "que vous vous téléphoniez",
-      "6": "qu'ils/elles se téléphonent"
-    }
-  },
-  "être": {
-    "present": {
-      "1": "je suis",
-      "2": "tu es",
-      "3": "il/elle/on est",
-      "4": "nous sommes",
-      "5": "vous êtes",
-      "6": "ils/elles sont"
-    },
-    "pastcomp": {
-      "1": "j'ai été",
-      "2": "tu as été",
-      "3": "il/elle/on a été",
-      "4": "nous avons été",
-      "5": "vous avez été",
-      "6": "ils/elles ont été"
-    },
-    "pastimp": {
-      "1": "j'étais",
-      "2": "tu étais",
-      "3": "il/elle/on était",
-      "4": "nous étions",
-      "5": "vous étiez",
-      "6": "ils/elles étaient"
-    },
-    "future": {
-      "1": "je serai",
-      "2": "tu seras",
-      "3": "il/elle/on sera",
-      "4": "nous serons",
-      "5": "vous serez",
-      "6": "ils/elles seront"
-    },
-    "subjunctive": {
-      "1": "que je sois",
-      "2": "que tu sois",
-      "3": "qu'il/elle/on soit",
-      "4": "que nous soyons",
-      "5": "que vous soyez",
-      "6": "qu'ils/elles soient"
-    }
-  },
-  "travailler": {
-    "present": {
-      "1": "je travaille",
-      "2": "tu travailles",
-      "3": "il/elle/on travaille",
-      "4": "nous travaillons",
-      "5": "vous travaillez",
-      "6": "ils/elles travaillent"
-    },
-    "pastcomp": {
-      "1": "j'ai travaillé",
-      "2": "tu as travaillé",
-      "3": "il/elle/on a travaillé",
-      "4": "nous avons travaillé",
-      "5": "vous avez travaillé",
-      "6": "ils/elles ont travaillé"
-    },
-    "pastimp": {
-      "1": "je travaillais",
-      "2": "tu travaillais",
-      "3": "il/elle/on travaillait",
-      "4": "nous travaillions",
-      "5": "vous travailliez",
-      "6": "ils/elles travaillaient"
-    },
-    "future": {
-      "1": "je travaillerai",
-      "2": "tu travailleras",
-      "3": "il/elle/on travaillera",
-      "4": "nous travaillerons",
-      "5": "vous travaillerez",
-      "6": "ils/elles travailleront"
-    },
-    "subjunctive": {
-      "1": "que je travaille",
-      "2": "que tu travailles",
-      "3": "qu'il/elle/on travaille",
-      "4": "que nous travaillions",
-      "5": "que vous travailliez",
-      "6": "qu'ils/elles travaillent"
-    }
-  },
-  "conduire": {
-    "present": {
-      "1": "je conduis",
-      "2": "tu conduis",
-      "3": "il/elle/on conduit",
-      "4": "nous conduisons",
-      "5": "vous conduisez",
-      "6": "ils/elles conduisent"
-    },
-    "pastcomp": {
-      "1": "j'ai conduit",
-      "2": "tu as conduit",
-      "3": "il/elle/on a conduit",
-      "4": "nous avons conduit",
-      "5": "vous avez conduit",
-      "6": "ils/elles ont conduit"
-    },
-    "pastimp": {
-      "1": "je conduisais",
-      "2": "tu conduisais",
-      "3": "il/elle/on conduisait",
-      "4": "nous conduisions",
-      "5": "vous conduisiez",
-      "6": "ils/elles conduisaient"
-    },
-    "future": {
-      "1": "je conduirai",
-      "2": "tu conduiras",
-      "3": "il/elle/on conduira",
-      "4": "nous conduirons",
-      "5": "vous conduirez",
-      "6": "ils/elles conduiront"
-    },
-    "subjunctive": {
-      "1": "que je conduise",
-      "2": "que tu conduises",
-      "3": "qu'il/elle/on conduise",
-      "4": "que nous conduisions",
-      "5": "que vous conduisiez",
-      "6": "qu'ils/elles conduisent"
-    }
-  },  
-
-
-
-    
     "jouer": {
       "present": {
         "1": "je joue",
@@ -3046,21 +3042,21 @@
         "6": "ils/elles couraient"
       },
       "future": {
-      "1": "je courrai",
-      "2": "tu courras",
-      "3": "il/elle/on courra",
-      "4": "nous courrons",
-      "5": "vous courrez",
-      "6": "ils/elles courront"
-    },
-    "subjunctive": {
-      "1": "que je coure",
-      "2": "que tu coures",
-      "3": "qu'il/elle/on coure",
-      "4": "que nous courions",
-      "5": "que vous couriez",
-      "6": "qu'ils/elles courent"
-    }
+        "1": "je courrai",
+        "2": "tu courras",
+        "3": "il/elle/on courra",
+        "4": "nous courrons",
+        "5": "vous courrez",
+        "6": "ils/elles courront"
+      },
+      "subjunctive": {
+        "1": "que je coure",
+        "2": "que tu coures",
+        "3": "qu'il/elle/on coure",
+        "4": "que nous courions",
+        "5": "que vous couriez",
+        "6": "qu'ils/elles courent"
+      }
     },
     "cuisiner": {
       "present": {
@@ -3088,21 +3084,21 @@
         "6": "ils/elles cuisinaient"
       },
       "future": {
-      "1": "je cuisinerai",
-      "2": "tu cuisineras",
-      "3": "il/elle/on cuisinera",
-      "4": "nous cuisinerons",
-      "5": "vous cuisinerez",
-      "6": "ils/elles cuisineront"
-    },
-    "subjunctive": {
-      "1": "que je cuisine",
-      "2": "que tu cuisines",
-      "3": "qu'il/elle/on cuisine",
-      "4": "que nous cuisinions",
-      "5": "que vous cuisiniez",
-      "6": "qu'ils/elles cuisinent"
-    }
+        "1": "je cuisinerai",
+        "2": "tu cuisineras",
+        "3": "il/elle/on cuisinera",
+        "4": "nous cuisinerons",
+        "5": "vous cuisinerez",
+        "6": "ils/elles cuisineront"
+      },
+      "subjunctive": {
+        "1": "que je cuisine",
+        "2": "que tu cuisines",
+        "3": "qu'il/elle/on cuisine",
+        "4": "que nous cuisinions",
+        "5": "que vous cuisiniez",
+        "6": "qu'ils/elles cuisinent"
+      }
     },
     "regarder": {
       "present": {
@@ -3130,21 +3126,21 @@
         "6": "ils/elles regardaient"
       },
       "future": {
-      "1": "je regarderai",
-      "2": "tu regarderas",
-      "3": "il/elle/on regardera",
-      "4": "nous regarderons",
-      "5": "vous regarderez",
-      "6": "ils/elles regarderont"
-    },
-    "subjunctive": {
-      "1": "que je regarde",
-      "2": "que tu regardes",
-      "3": "qu'il/elle/on regarde",
-      "4": "que nous regardions",
-      "5": "que vous regardiez",
-      "6": "qu'ils/elles regardent"
-    }
+        "1": "je regarderai",
+        "2": "tu regarderas",
+        "3": "il/elle/on regardera",
+        "4": "nous regarderons",
+        "5": "vous regarderez",
+        "6": "ils/elles regarderont"
+      },
+      "subjunctive": {
+        "1": "que je regarde",
+        "2": "que tu regardes",
+        "3": "qu'il/elle/on regarde",
+        "4": "que nous regardions",
+        "5": "que vous regardiez",
+        "6": "qu'ils/elles regardent"
+      }
     },
     "pleuvoir": {
       "present": {
@@ -3157,11 +3153,11 @@
         "1": "il pleuvait"
       },
       "future": {
-      "1": "il pleuvra"
-    },
-    "subjunctive": {
-      "1": "qu'il pleuve"
-    }
+        "1": "il pleuvra"
+      },
+      "subjunctive": {
+        "1": "qu'il pleuve"
+      }
     },
     "rendre visite": {
       "present": {
@@ -3189,21 +3185,21 @@
         "6": "ils/elles rendaient visite"
       },
       "future": {
-      "1": "je rendrai visite",
-      "2": "tu rendras visite",
-      "3": "il/elle/on rendra visite",
-      "4": "nous rendrons visite",
-      "5": "vous rendrez visite",
-      "6": "ils/elles rendront visite"
-    },
-    "subjunctive": {
-      "1": "que je rende visite",
-      "2": "que tu rendes visite",
-      "3": "qu'il/elle/on rende visite",
-      "4": "que nous rendions visite",
-      "5": "que vous rendiez visite",
-      "6": "qu'ils/elles rendent visite"
-    }
+        "1": "je rendrai visite",
+        "2": "tu rendras visite",
+        "3": "il/elle/on rendra visite",
+        "4": "nous rendrons visite",
+        "5": "vous rendrez visite",
+        "6": "ils/elles rendront visite"
+      },
+      "subjunctive": {
+        "1": "que je rende visite",
+        "2": "que tu rendes visite",
+        "3": "qu'il/elle/on rende visite",
+        "4": "que nous rendions visite",
+        "5": "que vous rendiez visite",
+        "6": "qu'ils/elles rendent visite"
+      }
     },
     "habiter": {
       "present": {
@@ -3231,21 +3227,21 @@
         "6": "ils/elles habitaient"
       },
       "future": {
-      "1": "j'habiterai",
-      "2": "tu habiteras",
-      "3": "il/elle/on habitera",
-      "4": "nous habiterons",
-      "5": "vous habiterez",
-      "6": "ils/elles habiteront"
-    },
-    "subjunctive": {
-      "1": "que j'habite",
-      "2": "que tu habites",
-      "3": "qu'il/elle/on habite",
-      "4": "que nous habitions",
-      "5": "que vous habitiez",
-      "6": "qu'ils/elles habitent"
-    }
+        "1": "j'habiterai",
+        "2": "tu habiteras",
+        "3": "il/elle/on habitera",
+        "4": "nous habiterons",
+        "5": "vous habiterez",
+        "6": "ils/elles habiteront"
+      },
+      "subjunctive": {
+        "1": "que j'habite",
+        "2": "que tu habites",
+        "3": "qu'il/elle/on habite",
+        "4": "que nous habitions",
+        "5": "que vous habitiez",
+        "6": "qu'ils/elles habitent"
+      }
     },
     "écouter": {
       "present": {
@@ -3273,21 +3269,21 @@
         "6": "ils/elles écoutaient"
       },
       "future": {
-      "1": "j'écouterai",
-      "2": "tu écouteras",
-      "3": "il/elle/on écoutera",
-      "4": "nous écouterons",
-      "5": "vous écouterez",
-      "6": "ils/elles écouteront"
-    },
-    "subjunctive": {
-      "1": "que j'écoute",
-      "2": "que tu écoutes",
-      "3": "qu'il/elle/on écoute",
-      "4": "que nous écoutions",
-      "5": "que vous écoutiez",
-      "6": "qu'ils/elles écoutent"
-    }
+        "1": "j'écouterai",
+        "2": "tu écouteras",
+        "3": "il/elle/on écoutera",
+        "4": "nous écouterons",
+        "5": "vous écouterez",
+        "6": "ils/elles écouteront"
+      },
+      "subjunctive": {
+        "1": "que j'écoute",
+        "2": "que tu écoutes",
+        "3": "qu'il/elle/on écoute",
+        "4": "que nous écoutions",
+        "5": "que vous écoutiez",
+        "6": "qu'ils/elles écoutent"
+      }
     },
     "connaître": {
       "present": {
@@ -3315,21 +3311,21 @@
         "6": "ils/elles connaissaient"
       },
       "future": {
-      "1": "je connaîtrai",
-      "2": "tu connaîtras",
-      "3": "il/elle/on connaîtra",
-      "4": "nous connaîtrons",
-      "5": "vous connaîtrez",
-      "6": "ils/elles connaîtront"
-    },
-    "subjunctive": {
-      "1": "que je connaisse",
-      "2": "que tu connaisses",
-      "3": "qu'il/elle/on connaisse",
-      "4": "que nous connaissions",
-      "5": "que vous connaissiez",
-      "6": "qu'ils/elles connaissent"
-    }
+        "1": "je connaîtrai",
+        "2": "tu connaîtras",
+        "3": "il/elle/on connaîtra",
+        "4": "nous connaîtrons",
+        "5": "vous connaîtrez",
+        "6": "ils/elles connaîtront"
+      },
+      "subjunctive": {
+        "1": "que je connaisse",
+        "2": "que tu connaisses",
+        "3": "qu'il/elle/on connaisse",
+        "4": "que nous connaissions",
+        "5": "que vous connaissiez",
+        "6": "qu'ils/elles connaissent"
+      }
     },
     "vouloir": {
       "present": {
@@ -3357,24 +3353,22 @@
         "6": "ils/elles voulaient"
       },
       "future": {
-      "1": "je voudrai",
-      "2": "tu voudras",
-      "3": "il/elle/on voudra",
-      "4": "nous voudrons",
-      "5": "vous voudrez",
-      "6": "ils/elles voudront"
+        "1": "je voudrai",
+        "2": "tu voudras",
+        "3": "il/elle/on voudra",
+        "4": "nous voudrons",
+        "5": "vous voudrez",
+        "6": "ils/elles voudront"
+      },
+      "subjunctive": {
+        "1": "que je veuille",
+        "2": "que tu veuilles",
+        "3": "qu'il/elle/on veuille",
+        "4": "que nous voulions",
+        "5": "que vous vouliez",
+        "6": "qu'ils/elles veuillent"
+      }
     },
-    "subjunctive": {
-      "1": "que je veuille",
-      "2": "que tu veuilles",
-      "3": "qu'il/elle/on veuille",
-      "4": "que nous voulions",
-      "5": "que vous vouliez",
-      "6": "qu'ils/elles veuillent"
-    }
-    },
-
-
 
     "se sentir": {
       "present": {
@@ -3402,21 +3396,21 @@
         "6": "ils/elles se sentaient"
       },
       "future": {
-      "1": "je me sentirai",
-      "2": "tu te sentiras",
-      "3": "il/elle/on se sentira",
-      "4": "nous nous sentirons",
-      "5": "vous vous sentirez",
-      "6": "ils/elles se sentiront"
-    },
-    "subjunctive": {
-      "1": "que je me sente",
-      "2": "que tu te sentes",
-      "3": "qu'il/elle/on se sente",
-      "4": "que nous nous sentions",
-      "5": "que vous vous sentiez",
-      "6": "qu'ils/elles se sentent"
-    }
+        "1": "je me sentirai",
+        "2": "tu te sentiras",
+        "3": "il/elle/on se sentira",
+        "4": "nous nous sentirons",
+        "5": "vous vous sentirez",
+        "6": "ils/elles se sentiront"
+      },
+      "subjunctive": {
+        "1": "que je me sente",
+        "2": "que tu te sentes",
+        "3": "qu'il/elle/on se sente",
+        "4": "que nous nous sentions",
+        "5": "que vous vous sentiez",
+        "6": "qu'ils/elles se sentent"
+      }
     },
     "servir": {
       "present": {
@@ -3444,21 +3438,21 @@
         "6": "ils/elles servaient"
       },
       "future": {
-      "1": "je servirai",
-      "2": "tu serviras",
-      "3": "il/elle/on servira",
-      "4": "nous servirons",
-      "5": "vous servirez",
-      "6": "ils/elles serviront"
-    },
-    "subjunctive": {
-      "1": "que je serve",
-      "2": "que tu serves",
-      "3": "qu'il/elle/on serve",
-      "4": "que nous servions",
-      "5": "que vous serviez",
-      "6": "qu'ils/elles servent"
-    }
+        "1": "je servirai",
+        "2": "tu serviras",
+        "3": "il/elle/on servira",
+        "4": "nous servirons",
+        "5": "vous servirez",
+        "6": "ils/elles serviront"
+      },
+      "subjunctive": {
+        "1": "que je serve",
+        "2": "que tu serves",
+        "3": "qu'il/elle/on serve",
+        "4": "que nous servions",
+        "5": "que vous serviez",
+        "6": "qu'ils/elles servent"
+      }
     },
     "continuer": {
       "present": {
@@ -3486,21 +3480,21 @@
         "6": "ils/elles continuaient"
       },
       "future": {
-      "1": "je continuerai",
-      "2": "tu continueras",
-      "3": "il/elle/on continuera",
-      "4": "nous continuerons",
-      "5": "vous continuerez",
-      "6": "ils/elles continueront"
-    },
-    "subjunctive": {
-      "1": "que je continue",
-      "2": "que tu continues",
-      "3": "qu'il/elle/on continue",
-      "4": "que nous continuions",
-      "5": "que vous continuiez",
-      "6": "qu'ils/elles continuent"
-    }
+        "1": "je continuerai",
+        "2": "tu continueras",
+        "3": "il/elle/on continuera",
+        "4": "nous continuerons",
+        "5": "vous continuerez",
+        "6": "ils/elles continueront"
+      },
+      "subjunctive": {
+        "1": "que je continue",
+        "2": "que tu continues",
+        "3": "qu'il/elle/on continue",
+        "4": "que nous continuions",
+        "5": "que vous continuiez",
+        "6": "qu'ils/elles continuent"
+      }
     },
     "danser": {
       "present": {
@@ -3528,21 +3522,21 @@
         "6": "ils/elles dansaient"
       },
       "future": {
-      "1": "je danserai",
-      "2": "tu danseras",
-      "3": "il/elle/on dansera",
-      "4": "nous danserons",
-      "5": "vous danserez",
-      "6": "ils/elles danseront"
-    },
-    "subjunctive": {
-      "1": "que je danse",
-      "2": "que tu danses",
-      "3": "qu'il/elle/on danse",
-      "4": "que nous dansions",
-      "5": "que vous dansiez",
-      "6": "qu'ils/elles dansent"
-    }
+        "1": "je danserai",
+        "2": "tu danseras",
+        "3": "il/elle/on dansera",
+        "4": "nous danserons",
+        "5": "vous danserez",
+        "6": "ils/elles danseront"
+      },
+      "subjunctive": {
+        "1": "que je danse",
+        "2": "que tu danses",
+        "3": "qu'il/elle/on danse",
+        "4": "que nous dansions",
+        "5": "que vous dansiez",
+        "6": "qu'ils/elles dansent"
+      }
     },
     "faire": {
       "present": {
@@ -3570,21 +3564,21 @@
         "6": "ils/elles faisaient"
       },
       "future": {
-      "1": "je ferai",
-      "2": "tu feras",
-      "3": "il/elle/on fera",
-      "4": "nous ferons",
-      "5": "vous ferez",
-      "6": "ils/elles feront"
-    },
-    "subjunctive": {
-      "1": "que je fasse",
-      "2": "que tu fasses",
-      "3": "qu'il/elle/on fasse",
-      "4": "que nous fassions",
-      "5": "que vous fassiez",
-      "6": "qu'ils/elles fassent"
-    }
+        "1": "je ferai",
+        "2": "tu feras",
+        "3": "il/elle/on fera",
+        "4": "nous ferons",
+        "5": "vous ferez",
+        "6": "ils/elles feront"
+      },
+      "subjunctive": {
+        "1": "que je fasse",
+        "2": "que tu fasses",
+        "3": "qu'il/elle/on fasse",
+        "4": "que nous fassions",
+        "5": "que vous fassiez",
+        "6": "qu'ils/elles fassent"
+      }
     },
     "arrêter": {
       "present": {
@@ -3612,23 +3606,22 @@
         "6": "ils/elles arrêtaient"
       },
       "future": {
-      "1": "j'arrêterai",
-      "2": "tu arrêteras",
-      "3": "il/elle/on arrêtera",
-      "4": "nous arrêterons",
-      "5": "vous arrêterez",
-      "6": "ils/elles arrêteront"
+        "1": "j'arrêterai",
+        "2": "tu arrêteras",
+        "3": "il/elle/on arrêtera",
+        "4": "nous arrêterons",
+        "5": "vous arrêterez",
+        "6": "ils/elles arrêteront"
+      },
+      "subjunctive": {
+        "1": "que j'arrête",
+        "2": "que tu arrêtes",
+        "3": "qu'il/elle/on arrête",
+        "4": "que nous arrêtions",
+        "5": "que vous arrêtiez",
+        "6": "qu'ils/elles arrêtent"
+      }
     },
-    "subjunctive": {
-      "1": "que j'arrête",
-      "2": "que tu arrêtes",
-      "3": "qu'il/elle/on arrête",
-      "4": "que nous arrêtions",
-      "5": "que vous arrêtiez",
-      "6": "qu'ils/elles arrêtent"
-    }
-    },
-
 
     "attendre": {
       "present": {
@@ -3656,21 +3649,21 @@
         "6": "ils/elles attendaient"
       },
       "future": {
-      "1": "j'attendrai",
-      "2": "tu attendras",
-      "3": "il/elle/on attendra",
-      "4": "nous attendrons",
-      "5": "vous attendrez",
-      "6": "ils/elles attendront"
-    },
-    "subjunctive": {
-      "1": "que j'attende",
-      "2": "que tu attendes",
-      "3": "qu'il/elle/on attende",
-      "4": "que nous attendions",
-      "5": "que vous attendiez",
-      "6": "qu'ils/elles attendent"
-    }
+        "1": "j'attendrai",
+        "2": "tu attendras",
+        "3": "il/elle/on attendra",
+        "4": "nous attendrons",
+        "5": "vous attendrez",
+        "6": "ils/elles attendront"
+      },
+      "subjunctive": {
+        "1": "que j'attende",
+        "2": "que tu attendes",
+        "3": "qu'il/elle/on attende",
+        "4": "que nous attendions",
+        "5": "que vous attendiez",
+        "6": "qu'ils/elles attendent"
+      }
     },
     "dîner": {
       "present": {
@@ -3698,21 +3691,21 @@
         "6": "ils/elles dînaient"
       },
       "future": {
-      "1": "je dînerai",
-      "2": "tu dîneras",
-      "3": "il/elle/on dînera",
-      "4": "nous dînerons",
-      "5": "vous dînerez",
-      "6": "ils/elles dîneront"
-    },
-    "subjunctive": {
-      "1": "que je dîne",
-      "2": "que tu dînes",
-      "3": "qu'il/elle/on dîne",
-      "4": "que nous dînions",
-      "5": "que vous dîniez",
-      "6": "qu'ils/elles dînent"
-    }
+        "1": "je dînerai",
+        "2": "tu dîneras",
+        "3": "il/elle/on dînera",
+        "4": "nous dînerons",
+        "5": "vous dînerez",
+        "6": "ils/elles dîneront"
+      },
+      "subjunctive": {
+        "1": "que je dîne",
+        "2": "que tu dînes",
+        "3": "qu'il/elle/on dîne",
+        "4": "que nous dînions",
+        "5": "que vous dîniez",
+        "6": "qu'ils/elles dînent"
+      }
     },
     "expliquer": {
       "present": {
@@ -3740,21 +3733,21 @@
         "6": "ils/elles expliquaient"
       },
       "future": {
-      "1": "j'expliquerai",
-      "2": "tu expliqueras",
-      "3": "il/elle/on expliquera",
-      "4": "nous expliquerons",
-      "5": "vous expliquerez",
-      "6": "ils/elles expliqueront"
-    },
-    "subjunctive": {
-      "1": "que j'explique",
-      "2": "que tu expliques",
-      "3": "qu'il/elle/on explique",
-      "4": "que nous expliquions",
-      "5": "que vous expliquiez",
-      "6": "qu'ils/elles expliquent"
-    }
+        "1": "j'expliquerai",
+        "2": "tu expliqueras",
+        "3": "il/elle/on expliquera",
+        "4": "nous expliquerons",
+        "5": "vous expliquerez",
+        "6": "ils/elles expliqueront"
+      },
+      "subjunctive": {
+        "1": "que j'explique",
+        "2": "que tu expliques",
+        "3": "qu'il/elle/on explique",
+        "4": "que nous expliquions",
+        "5": "que vous expliquiez",
+        "6": "qu'ils/elles expliquent"
+      }
     },
     "chercher": {
       "present": {
@@ -3782,21 +3775,21 @@
         "6": "ils/elles cherchaient"
       },
       "future": {
-      "1": "je chercherai",
-      "2": "tu chercheras",
-      "3": "il/elle/on cherchera",
-      "4": "nous chercherons",
-      "5": "vous chercherez",
-      "6": "ils/elles chercheront"
-    },
-    "subjunctive": {
-      "1": "que je cherche",
-      "2": "que tu cherches",
-      "3": "qu'il/elle/on cherche",
-      "4": "que nous cherchions",
-      "5": "que vous cherchiez",
-      "6": "qu'ils/elles cherchent"
-    }
+        "1": "je chercherai",
+        "2": "tu chercheras",
+        "3": "il/elle/on cherchera",
+        "4": "nous chercherons",
+        "5": "vous chercherez",
+        "6": "ils/elles chercheront"
+      },
+      "subjunctive": {
+        "1": "que je cherche",
+        "2": "que tu cherches",
+        "3": "qu'il/elle/on cherche",
+        "4": "que nous cherchions",
+        "5": "que vous cherchiez",
+        "6": "qu'ils/elles cherchent"
+      }
     },
     "fermer": {
       "present": {
@@ -3824,21 +3817,21 @@
         "6": "ils/elles fermaient"
       },
       "future": {
-      "1": "je fermerai",
-      "2": "tu fermeras",
-      "3": "il/elle/on fermera",
-      "4": "nous fermerons",
-      "5": "vous fermerez",
-      "6": "ils/elles fermeront"
-    },
-    "subjunctive": {
-      "1": "que je ferme",
-      "2": "que tu fermes",
-      "3": "qu'il/elle/on ferme",
-      "4": "que nous fermions",
-      "5": "que vous fermiez",
-      "6": "qu'ils/elles ferment"
-    }
+        "1": "je fermerai",
+        "2": "tu fermeras",
+        "3": "il/elle/on fermera",
+        "4": "nous fermerons",
+        "5": "vous fermerez",
+        "6": "ils/elles fermeront"
+      },
+      "subjunctive": {
+        "1": "que je ferme",
+        "2": "que tu fermes",
+        "3": "qu'il/elle/on ferme",
+        "4": "que nous fermions",
+        "5": "que vous fermiez",
+        "6": "qu'ils/elles ferment"
+      }
     },
     "détester": {
       "present": {
@@ -3866,21 +3859,21 @@
         "6": "ils/elles détestaient"
       },
       "future": {
-      "1": "je détesterai",
-      "2": "tu détesteras",
-      "3": "il/elle/on détestera",
-      "4": "nous détesterons",
-      "5": "vous détesterez",
-      "6": "ils/elles détesteront"
-    },
-    "subjunctive": {
-      "1": "que je déteste",
-      "2": "que tu détestes",
-      "3": "qu'il/elle/on déteste",
-      "4": "que nous détestions",
-      "5": "que vous détestiez",
-      "6": "qu'ils/elles détestent"
-    }
+        "1": "je détesterai",
+        "2": "tu détesteras",
+        "3": "il/elle/on détestera",
+        "4": "nous détesterons",
+        "5": "vous détesterez",
+        "6": "ils/elles détesteront"
+      },
+      "subjunctive": {
+        "1": "que je déteste",
+        "2": "que tu détestes",
+        "3": "qu'il/elle/on déteste",
+        "4": "que nous détestions",
+        "5": "que vous détestiez",
+        "6": "qu'ils/elles détestent"
+      }
     },
     "téléphoner": {
       "present": {
@@ -3950,21 +3943,21 @@
         "6": "ils/elles savaient"
       },
       "future": {
-      "1": "je saurai",
-      "2": "tu sauras",
-      "3": "il/elle/on saura",
-      "4": "nous saurons",
-      "5": "vous saurez",
-      "6": "ils/elles sauront"
-    },
-    "subjunctive": {
-      "1": "que je sache",
-      "2": "que tu saches",
-      "3": "qu'il/elle/on sache",
-      "4": "que nous sachions",
-      "5": "que vous sachiez",
-      "6": "qu'ils/elles sachent"
-    }
+        "1": "je saurai",
+        "2": "tu sauras",
+        "3": "il/elle/on saura",
+        "4": "nous saurons",
+        "5": "vous saurez",
+        "6": "ils/elles sauront"
+      },
+      "subjunctive": {
+        "1": "que je sache",
+        "2": "que tu saches",
+        "3": "qu'il/elle/on sache",
+        "4": "que nous sachions",
+        "5": "que vous sachiez",
+        "6": "qu'ils/elles sachent"
+      }
     },
 
     "chanter": {
@@ -3993,21 +3986,21 @@
         "6": "ils/elles chantaient"
       },
       "future": {
-      "1": "je chanterai",
-      "2": "tu chanteras",
-      "3": "il/elle/on chantera",
-      "4": "nous chanterons",
-      "5": "vous chanterez",
-      "6": "ils/elles chanteront"
-    },
-    "subjunctive": {
-      "1": "que je chante",
-      "2": "que tu chantes",
-      "3": "qu'il/elle/on chante",
-      "4": "que nous chantions",
-      "5": "que vous chantiez",
-      "6": "qu'ils/elles chantent"
-    }
+        "1": "je chanterai",
+        "2": "tu chanteras",
+        "3": "il/elle/on chantera",
+        "4": "nous chanterons",
+        "5": "vous chanterez",
+        "6": "ils/elles chanteront"
+      },
+      "subjunctive": {
+        "1": "que je chante",
+        "2": "que tu chantes",
+        "3": "qu'il/elle/on chante",
+        "4": "que nous chantions",
+        "5": "que vous chantiez",
+        "6": "qu'ils/elles chantent"
+      }
     },
     "coûter": {
       "present": {
@@ -4035,21 +4028,21 @@
         "6": "ils/elles coûtaient"
       },
       "future": {
-      "1": "je coûterai",
-      "2": "tu coûteras",
-      "3": "il/elle/on coûtera",
-      "4": "nous coûterons",
-      "5": "vous coûterez",
-      "6": "ils/elles coûteront"
-    },
-    "subjunctive": {
-      "1": "que je coûte",
-      "2": "que tu coûtes",
-      "3": "qu'il/elle/on coûte",
-      "4": "que nous coûtions",
-      "5": "que vous coûtiez",
-      "6": "qu'ils/elles coûtent"
-    }
+        "1": "je coûterai",
+        "2": "tu coûteras",
+        "3": "il/elle/on coûtera",
+        "4": "nous coûterons",
+        "5": "vous coûterez",
+        "6": "ils/elles coûteront"
+      },
+      "subjunctive": {
+        "1": "que je coûte",
+        "2": "que tu coûtes",
+        "3": "qu'il/elle/on coûte",
+        "4": "que nous coûtions",
+        "5": "que vous coûtiez",
+        "6": "qu'ils/elles coûtent"
+      }
     },
     "s'occuper": {
       "present": {
@@ -4077,21 +4070,21 @@
         "6": "ils/elles s'occupaient"
       },
       "future": {
-      "1": "je m'occuperai",
-      "2": "tu t'occuperas",
-      "3": "il/elle/on s'occupera",
-      "4": "nous nous occuperons",
-      "5": "vous vous occuperez",
-      "6": "ils/elles s'occuperont"
-    },
-    "subjunctive": {
-      "1": "que je m'occupe",
-      "2": "que tu t'occupes",
-      "3": "qu'il/elle/on s'occupe",
-      "4": "que nous nous occupions",
-      "5": "que vous vous occupiez",
-      "6": "qu'ils/elles s'occupent"
-    }
+        "1": "je m'occuperai",
+        "2": "tu t'occuperas",
+        "3": "il/elle/on s'occupera",
+        "4": "nous nous occuperons",
+        "5": "vous vous occuperez",
+        "6": "ils/elles s'occuperont"
+      },
+      "subjunctive": {
+        "1": "que je m'occupe",
+        "2": "que tu t'occupes",
+        "3": "qu'il/elle/on s'occupe",
+        "4": "que nous nous occupions",
+        "5": "que vous vous occupiez",
+        "6": "qu'ils/elles s'occupent"
+      }
     },
     "laver": {
       "present": {
@@ -4119,21 +4112,21 @@
         "6": "ils/elles lavaient"
       },
       "future": {
-      "1": "je laverai",
-      "2": "tu laveras",
-      "3": "il/elle/on lavera",
-      "4": "nous laverons",
-      "5": "vous laverez",
-      "6": "ils/elles laveront"
-    },
-    "subjunctive": {
-      "1": "que je lave",
-      "2": "que tu laves",
-      "3": "qu'il/elle/on lave",
-      "4": "que nous lavions",
-      "5": "que vous laviez",
-      "6": "qu'ils/elles lavent"
-    }
+        "1": "je laverai",
+        "2": "tu laveras",
+        "3": "il/elle/on lavera",
+        "4": "nous laverons",
+        "5": "vous laverez",
+        "6": "ils/elles laveront"
+      },
+      "subjunctive": {
+        "1": "que je lave",
+        "2": "que tu laves",
+        "3": "qu'il/elle/on lave",
+        "4": "que nous lavions",
+        "5": "que vous laviez",
+        "6": "qu'ils/elles lavent"
+      }
     },
     "revenir": {
       "present": {
@@ -4161,21 +4154,21 @@
         "6": "ils/elles revenaient"
       },
       "future": {
-      "1": "je reviendrai",
-      "2": "tu reviendras",
-      "3": "il/elle/on reviendra",
-      "4": "nous reviendrons",
-      "5": "vous reviendrez",
-      "6": "ils/elles reviendront"
-    },
-    "subjunctive": {
-      "1": "que je revienne",
-      "2": "que tu reviennes",
-      "3": "qu'il/elle/on revienne",
-      "4": "que nous revenions",
-      "5": "que vous reveniez",
-      "6": "qu'ils/elles reviennent"
-    }
+        "1": "je reviendrai",
+        "2": "tu reviendras",
+        "3": "il/elle/on reviendra",
+        "4": "nous reviendrons",
+        "5": "vous reviendrez",
+        "6": "ils/elles reviendront"
+      },
+      "subjunctive": {
+        "1": "que je revienne",
+        "2": "que tu reviennes",
+        "3": "qu'il/elle/on revienne",
+        "4": "que nous revenions",
+        "5": "que vous reveniez",
+        "6": "qu'ils/elles reviennent"
+      }
     },
     "comprendre": {
       "present": {
@@ -4203,278 +4196,274 @@
         "6": "ils/elles comprenaient"
       },
       "future": {
-      "1": "je comprendrai",
-      "2": "tu comprendras",
-      "3": "il/elle/on comprendra",
-      "4": "nous comprendrons",
-      "5": "vous comprendrez",
-      "6": "ils/elles comprendront"
-    },
-    "subjunctive": {
-      "1": "que je comprenne",
-      "2": "que tu comprennes",
-      "3": "qu'il/elle/on comprenne",
-      "4": "que nous comprenions",
-      "5": "que vous compreniez",
-      "6": "qu'ils/elles comprennent"
-    }
+        "1": "je comprendrai",
+        "2": "tu comprendras",
+        "3": "il/elle/on comprendra",
+        "4": "nous comprendrons",
+        "5": "vous comprendrez",
+        "6": "ils/elles comprendront"
+      },
+      "subjunctive": {
+        "1": "que je comprenne",
+        "2": "que tu comprennes",
+        "3": "qu'il/elle/on comprenne",
+        "4": "que nous comprenions",
+        "5": "que vous compreniez",
+        "6": "qu'ils/elles comprennent"
+      }
     },
     "briller": {
-    "present": {
-      "1": "je brille",
-      "2": "tu brilles",
-      "3": "il/elle/on brille",
-      "4": "nous brillons",
-      "5": "vous brillez",
-      "6": "ils/elles brillent"
-    },
-    "pastcomp": {
-      "1": "j'ai brillé",
-      "2": "tu as brillé",
-      "3": "il/elle/on a brillé",
-      "4": "nous avons brillé",
-      "5": "vous avez brillé",
-      "6": "ils/elles ont brillé"
-    },
-    "pastimp": {
-      "1": "je brillais",
-      "2": "tu brillais",
-      "3": "il/elle/on brillait",
-      "4": "nous brillions",
-      "5": "vous brilliez",
-      "6": "ils/elles brillaient"
-    },
-    "future": {
-      "1": "je brillerai",
-      "2": "tu brilleras",
-      "3": "il/elle/on brillera",
-      "4": "nous brillerons",
-      "5": "vous brillerez",
-      "6": "ils/elles brilleront"
-    },
-    "subjunctive": {
-      "1": "que je brille",
-      "2": "que tu brilles",
-      "3": "qu'il/elle/on brille",
-      "4": "que nous brillions",
-      "5": "que vous brilliez",
-      "6": "qu'ils/elles brillent"
-    }
+      "present": {
+        "1": "je brille",
+        "2": "tu brilles",
+        "3": "il/elle/on brille",
+        "4": "nous brillons",
+        "5": "vous brillez",
+        "6": "ils/elles brillent"
+      },
+      "pastcomp": {
+        "1": "j'ai brillé",
+        "2": "tu as brillé",
+        "3": "il/elle/on a brillé",
+        "4": "nous avons brillé",
+        "5": "vous avez brillé",
+        "6": "ils/elles ont brillé"
+      },
+      "pastimp": {
+        "1": "je brillais",
+        "2": "tu brillais",
+        "3": "il/elle/on brillait",
+        "4": "nous brillions",
+        "5": "vous brilliez",
+        "6": "ils/elles brillaient"
+      },
+      "future": {
+        "1": "je brillerai",
+        "2": "tu brilleras",
+        "3": "il/elle/on brillera",
+        "4": "nous brillerons",
+        "5": "vous brillerez",
+        "6": "ils/elles brilleront"
+      },
+      "subjunctive": {
+        "1": "que je brille",
+        "2": "que tu brilles",
+        "3": "qu'il/elle/on brille",
+        "4": "que nous brillions",
+        "5": "que vous brilliez",
+        "6": "qu'ils/elles brillent"
+      }
     },
 
     "nager": {
-    "present": {
-      "1": "je nage",
-      "2": "tu nages",
-      "3": "il/elle/on nage",
-      "4": "nous nageons",
-      "5": "vous nagez",
-      "6": "ils/elles nagent"
+      "present": {
+        "1": "je nage",
+        "2": "tu nages",
+        "3": "il/elle/on nage",
+        "4": "nous nageons",
+        "5": "vous nagez",
+        "6": "ils/elles nagent"
+      },
+      "pastcomp": {
+        "1": "j'ai nagé",
+        "2": "tu as nagé",
+        "3": "il/elle/on a nagé",
+        "4": "nous avons nagé",
+        "5": "vous avez nagé",
+        "6": "ils/elles ont nagé"
+      },
+      "pastimp": {
+        "1": "je nageais",
+        "2": "tu nageais",
+        "3": "il/elle/on nageait",
+        "4": "nous nagions",
+        "5": "vous nagiez",
+        "6": "ils/elles nageaient"
+      },
+      "future": {
+        "1": "je nagerai",
+        "2": "tu nageras",
+        "3": "il/elle/on nagera",
+        "4": "nous nagerons",
+        "5": "vous nagerez",
+        "6": "ils/elles nageront"
+      },
+      "subjunctive": {
+        "1": "que je nage",
+        "2": "que tu nages",
+        "3": "qu'il/elle/on nage",
+        "4": "que nous nagions",
+        "5": "que vous nagiez",
+        "6": "qu'ils/elles nagent"
+      }
     },
-    "pastcomp": {
-      "1": "j'ai nagé",
-      "2": "tu as nagé",
-      "3": "il/elle/on a nagé",
-      "4": "nous avons nagé",
-      "5": "vous avez nagé",
-      "6": "ils/elles ont nagé"
+    "signer": {
+      "present": {
+        "1": "je signe",
+        "2": "tu signes",
+        "3": "il/elle/on signe",
+        "4": "nous signons",
+        "5": "vous signez",
+        "6": "ils/elles signent"
+      },
+      "pastcomp": {
+        "1": "j'ai signé",
+        "2": "tu as signé",
+        "3": "il/elle/on a signé",
+        "4": "nous avons signé",
+        "5": "vous avez signé",
+        "6": "ils/elles ont signé"
+      },
+      "pastimp": {
+        "1": "je signais",
+        "2": "tu signais",
+        "3": "il/elle/on signait",
+        "4": "nous signions",
+        "5": "vous signiez",
+        "6": "ils/elles signaient"
+      },
+      "future": {
+        "1": "je signerai",
+        "2": "tu signeras",
+        "3": "il/elle/on signera",
+        "4": "nous signerons",
+        "5": "vous signerez",
+        "6": "ils/elles signeront"
+      },
+      "subjunctive": {
+        "1": "que je signe",
+        "2": "que tu signes",
+        "3": "qu'il/elle/on signe",
+        "4": "que nous signions",
+        "5": "que vous signiez",
+        "6": "qu'ils/elles signent"
+      }
     },
-    "pastimp": {
-      "1": "je nageais",
-      "2": "tu nageais",
-      "3": "il/elle/on nageait",
-      "4": "nous nagions",
-      "5": "vous nagiez",
-      "6": "ils/elles nageaient"
+    "se marier": {
+      "present": {
+        "1": "je me marie",
+        "2": "tu te maries",
+        "3": "il/elle/on se marie",
+        "4": "nous nous marions",
+        "5": "vous vous mariez",
+        "6": "ils/elles se marient"
+      },
+      "pastcomp": {
+        "1": "je me suis marié(e)",
+        "2": "tu t'es marié(e)",
+        "3": "il/elle/on s'est marié(e)(s)",
+        "4": "nous nous sommes marié(e)s",
+        "5": "vous vous êtes marié(e)(s)",
+        "6": "ils/elles se sont marié(e)s"
+      },
+      "pastimp": {
+        "1": "je me mariais",
+        "2": "tu te mariais",
+        "3": "il/elle/on se mariait",
+        "4": "nous nous mariions",
+        "5": "vous vous mariiez",
+        "6": "ils/elles se mariaient"
+      },
+      "future": {
+        "1": "je me marierai",
+        "2": "tu te marieras",
+        "3": "il/elle/on se mariera",
+        "4": "nous nous marierons",
+        "5": "vous vous marierez",
+        "6": "ils/elles se marieront"
+      },
+      "subjunctive": {
+        "1": "que je me marie",
+        "2": "que tu te maries",
+        "3": "qu'il/elle/on se marie",
+        "4": "que nous nous mariions",
+        "5": "que vous vous mariiez",
+        "6": "qu'ils/elles se marient"
+      }
     },
-    "future": {
-      "1": "je nagerai",
-      "2": "tu nageras",
-      "3": "il/elle/on nagera",
-      "4": "nous nagerons",
-      "5": "vous nagerez",
-      "6": "ils/elles nageront"
+    "retrouver": {
+      "present": {
+        "1": "je retrouve",
+        "2": "tu retrouves",
+        "3": "il/elle/on retrouve",
+        "4": "nous retrouvons",
+        "5": "vous retrouvez",
+        "6": "ils/elles retrouvent"
+      },
+      "pastcomp": {
+        "1": "j'ai retrouvé",
+        "2": "tu as retrouvé",
+        "3": "il/elle/on a retrouvé",
+        "4": "nous avons retrouvé",
+        "5": "vous avez retrouvé",
+        "6": "ils/elles ont retrouvé"
+      },
+      "pastimp": {
+        "1": "je retrouvais",
+        "2": "tu retrouvais",
+        "3": "il/elle/on retrouvait",
+        "4": "nous retrouvions",
+        "5": "vous retrouviez",
+        "6": "ils/elles retrouvaient"
+      },
+      "future": {
+        "1": "je retrouverai",
+        "2": "tu retrouveras",
+        "3": "il/elle/on retrouvera",
+        "4": "nous retrouverons",
+        "5": "vous retrouverez",
+        "6": "ils/elles retrouveront"
+      },
+      "subjunctive": {
+        "1": "que je retrouve",
+        "2": "que tu retrouves",
+        "3": "qu'il/elle/on retrouve",
+        "4": "que nous retrouvions",
+        "5": "que vous retrouviez",
+        "6": "qu'ils/elles retrouvent"
+      }
     },
-    "subjunctive": {
-      "1": "que je nage",
-      "2": "que tu nages",
-      "3": "qu'il/elle/on nage",
-      "4": "que nous nagions",
-      "5": "que vous nagiez",
-      "6": "qu'ils/elles nagent"
+    "offrir": {
+      "present": {
+        "1": "j'offre",
+        "2": "tu offres",
+        "3": "il/elle/on offre",
+        "4": "nous offrons",
+        "5": "vous offrez",
+        "6": "ils/elles offrent"
+      },
+      "pastcomp": {
+        "1": "j'ai offert",
+        "2": "tu as offert",
+        "3": "il/elle/on a offert",
+        "4": "nous avons offert",
+        "5": "vous avez offert",
+        "6": "ils/elles ont offert"
+      },
+      "pastimp": {
+        "1": "j'offrais",
+        "2": "tu offrais",
+        "3": "il/elle/on offrait",
+        "4": "nous offrions",
+        "5": "vous offriez",
+        "6": "ils/elles offraient"
+      },
+      "future": {
+        "1": "j'offrirai",
+        "2": "tu offriras",
+        "3": "il/elle/on offrira",
+        "4": "nous offrirons",
+        "5": "vous offrirez",
+        "6": "ils/elles offriront"
+      },
+      "subjunctive": {
+        "1": "que j'offre",
+        "2": "que tu offres",
+        "3": "qu'il/elle/on offre",
+        "4": "que nous offrions",
+        "5": "que vous offriez",
+        "6": "qu'ils/elles offrent"
+      }
     }
-  },
-  "signer": {
-  "present": {
-    "1": "je signe",
-    "2": "tu signes",
-    "3": "il/elle/on signe",
-    "4": "nous signons",
-    "5": "vous signez",
-    "6": "ils/elles signent"
-  },
-  "pastcomp": {
-    "1": "j'ai signé",
-    "2": "tu as signé",
-    "3": "il/elle/on a signé",
-    "4": "nous avons signé",
-    "5": "vous avez signé",
-    "6": "ils/elles ont signé"
-  },
-  "pastimp": {
-    "1": "je signais",
-    "2": "tu signais",
-    "3": "il/elle/on signait",
-    "4": "nous signions",
-    "5": "vous signiez",
-    "6": "ils/elles signaient"
-  },
-  "future": {
-    "1": "je signerai",
-    "2": "tu signeras",
-    "3": "il/elle/on signera",
-    "4": "nous signerons",
-    "5": "vous signerez",
-    "6": "ils/elles signeront"
-  },
-  "subjunctive": {
-    "1": "que je signe",
-    "2": "que tu signes",
-    "3": "qu'il/elle/on signe",
-    "4": "que nous signions",
-    "5": "que vous signiez",
-    "6": "qu'ils/elles signent"
-  }
-},
-"se marier": {
-  "present": {
-    "1": "je me marie",
-    "2": "tu te maries",
-    "3": "il/elle/on se marie",
-    "4": "nous nous marions",
-    "5": "vous vous mariez",
-    "6": "ils/elles se marient"
-  },
-  "pastcomp": {
-    "1": "je me suis marié(e)",
-    "2": "tu t'es marié(e)",
-    "3": "il/elle/on s'est marié(e)(s)",
-    "4": "nous nous sommes marié(e)s",
-    "5": "vous vous êtes marié(e)(s)",
-    "6": "ils/elles se sont marié(e)s"
-  },
-  "pastimp": {
-    "1": "je me mariais",
-    "2": "tu te mariais",
-    "3": "il/elle/on se mariait",
-    "4": "nous nous mariions",
-    "5": "vous vous mariiez",
-    "6": "ils/elles se mariaient"
-  },
-  "future": {
-    "1": "je me marierai",
-    "2": "tu te marieras",
-    "3": "il/elle/on se mariera",
-    "4": "nous nous marierons",
-    "5": "vous vous marierez",
-    "6": "ils/elles se marieront"
-  },
-  "subjunctive": {
-    "1": "que je me marie",
-    "2": "que tu te maries",
-    "3": "qu'il/elle/on se marie",
-    "4": "que nous nous mariions",
-    "5": "que vous vous mariiez",
-    "6": "qu'ils/elles se marient"
-  }
-},
-"retrouver": {
-  "present": {
-    "1": "je retrouve",
-    "2": "tu retrouves",
-    "3": "il/elle/on retrouve",
-    "4": "nous retrouvons",
-    "5": "vous retrouvez",
-    "6": "ils/elles retrouvent"
-  },
-  "pastcomp": {
-    "1": "j'ai retrouvé",
-    "2": "tu as retrouvé",
-    "3": "il/elle/on a retrouvé",
-    "4": "nous avons retrouvé",
-    "5": "vous avez retrouvé",
-    "6": "ils/elles ont retrouvé"
-  },
-  "pastimp": {
-    "1": "je retrouvais",
-    "2": "tu retrouvais",
-    "3": "il/elle/on retrouvait",
-    "4": "nous retrouvions",
-    "5": "vous retrouviez",
-    "6": "ils/elles retrouvaient"
-  },
-  "future": {
-    "1": "je retrouverai",
-    "2": "tu retrouveras",
-    "3": "il/elle/on retrouvera",
-    "4": "nous retrouverons",
-    "5": "vous retrouverez",
-    "6": "ils/elles retrouveront"
-  },
-  "subjunctive": {
-    "1": "que je retrouve",
-    "2": "que tu retrouves",
-    "3": "qu'il/elle/on retrouve",
-    "4": "que nous retrouvions",
-    "5": "que vous retrouviez",
-    "6": "qu'ils/elles retrouvent"
-  }
-},
-"offrir": {
-  "present": {
-    "1": "j'offre",
-    "2": "tu offres",
-    "3": "il/elle/on offre",
-    "4": "nous offrons",
-    "5": "vous offrez",
-    "6": "ils/elles offrent"
-  },
-  "pastcomp": {
-    "1": "j'ai offert",
-    "2": "tu as offert",
-    "3": "il/elle/on a offert",
-    "4": "nous avons offert",
-    "5": "vous avez offert",
-    "6": "ils/elles ont offert"
-  },
-  "pastimp": {
-    "1": "j'offrais",
-    "2": "tu offrais",
-    "3": "il/elle/on offrait",
-    "4": "nous offrions",
-    "5": "vous offriez",
-    "6": "ils/elles offraient"
-  },
-  "future": {
-    "1": "j'offrirai",
-    "2": "tu offriras",
-    "3": "il/elle/on offrira",
-    "4": "nous offrirons",
-    "5": "vous offrirez",
-    "6": "ils/elles offriront"
-  },
-  "subjunctive": {
-    "1": "que j'offre",
-    "2": "que tu offres",
-    "3": "qu'il/elle/on offre",
-    "4": "que nous offrions",
-    "5": "que vous offriez",
-    "6": "qu'ils/elles offrent"
-  }
-}
-
-
-
-
   }
 }
