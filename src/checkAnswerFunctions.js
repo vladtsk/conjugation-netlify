@@ -72,7 +72,7 @@ export function handleIncorrectAnswer(
   const speaker = document.getElementById("speaker");
 
   const soundOn = JSON.parse(localStorage.getItem("soundOn"));
-  console.log(soundOn);
+
   if (soundOn) {
     playIncorrect();
   }
@@ -106,7 +106,7 @@ export function handleCorrectAnswerQuiz(phraseDivCorrect, fullPhrase) {
   const speaker = document.getElementById("speaker"); // the speaker icon
 
   const soundOn = JSON.parse(localStorage.getItem("soundOn"));
-  console.log(soundOn);
+
   if (soundOn) {
     playCorrect();
   }

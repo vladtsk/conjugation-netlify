@@ -160,7 +160,7 @@ export function handleQuizAnswerSubmit({
     const option3 = document.querySelector(".option3");
     const option4 = document.querySelector(".option4");
 
-    console.log("before", { score, boxes, lives });
+ 
 
     if (option1 && option2 && option3 && option4) {
       const options = [option1, option2, option3, option4];
@@ -170,7 +170,7 @@ export function handleQuizAnswerSubmit({
       });
 
       function handleClick(event) {
-        console.log("click, event:", event.target);
+       
 
         let answer = event.target.textContent;
         event.target.classList.add("selectedOption");
@@ -187,7 +187,6 @@ export function handleQuizAnswerSubmit({
         });
         ({ score, boxes, lives } = quizResult);
 
-        console.log("inside", { score, boxes, lives });
 
         options.forEach((opt) => {
           opt.removeEventListener("click", handleClick);

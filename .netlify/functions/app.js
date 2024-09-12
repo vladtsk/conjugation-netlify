@@ -7,24 +7,16 @@ import checkoutRouter from "./stripeCheckOutRouter.js";
 import portalSessionRouter from "./stripePortalSessionRouter.js";
 import webhookRouter from "./stripeWebhookRouter.js";
 import cors from "cors";
-import bodyParser from 'body-parser';
+import bodyParser from "body-parser";
 
 const app = express();
 
-/*const router = Router();
-router.get("/hello", (req, res) => res.send("Hello World!"));
-app.use("/api/", router)
-*/
-
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api/", checkoutRouter);
 app.use("/api/", portalSessionRouter);
 app.use("/api/", webhookRouter);
 
-app.use(
-    cors()
-    );
-    
+app.use(cors());
 
 export const handler = serverless(app);
-
