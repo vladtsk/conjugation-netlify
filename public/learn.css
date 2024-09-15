@@ -3,7 +3,8 @@
   background-color: var(--color-primary);
 }
 
-.fa-compass, .fa-chess-rook {
+.fa-compass,
+.fa-chess-rook {
   color: var(--color-tertiary);
 }
 
@@ -15,14 +16,15 @@
   color: var(--color-secondary);
 }
 
-
 h1,
 h2,
 h3 {
   text-align: left;
 }
 
-.menu, .contentNav, .bonus-menu {
+.menu,
+.contentNav,
+.bonus-menu {
   margin-top: 20px;
 }
 
@@ -50,6 +52,8 @@ h3 {
 .subjunctive-submenu,
 .bonus1Menu,
 .bonus2Menu,
+.bonus3Menu,
+.bonus4Menu,
 .bonus-intro {
   padding-inline: 20px;
   border-radius: 5px;
@@ -62,7 +66,9 @@ h3 {
 .future-menu,
 .subjunctive-menu,
 .bonus1Menu,
-.bonus2Menu {
+.bonus2Menu,
+.bonus3Menu,
+.bonus4Menu {
   /*background-color: var(--color-primary);
   color: var(--color-secondary);*/
   border: solid 2px var(--color-primary);
@@ -83,7 +89,9 @@ h3 {
 .future-menu,
 .subjunctive-menu,
 .bonus1Menu,
-.bonus2Menu {
+.bonus2Menu,
+.bonus3Menu,
+.bonus4Menu {
   font-size: 18px;
   margin-top: 20px;
   padding-block: 20px;
@@ -112,18 +120,19 @@ h3 {
 }
 
 .bonus1Btn,
-.bonus2Btn  {
+.bonus2Btn,
+.bonus4Btn {
   padding-inline: 6px;
   padding-block: 4px;
   border: solid 2px var(--color-tertiary);
   border-radius: 4px;
   font-size: 18px;
   font-weight: 600;
-  
 }
 
 .bonus1Btn:hover,
-.bonus2Btn:hover {
+.bonus2Btn:hover,
+.bonus4Btn:hover {
   background-color: var(--color-primary);
   color: var(--color-secondary);
   border-color: var(--color-secondary);
@@ -143,7 +152,8 @@ h3 {
   color: var(--color-tertiary);
 }
 
-.fa-circle-chevron-right, .fa-lock {
+.fa-circle-chevron-right,
+.fa-lock {
   display: inline-block;
   margin-right: 10px;
   font-size: 16px;
@@ -156,28 +166,28 @@ h3 {
 .fa-lock {
   color: var(--color-tertiary);
 }
- 
 
 .present-menu,
 .past-menu,
 .future-menu,
 .subjunctive-menu,
 .bonus1Menu,
-.bonus2Menu {
+.bonus2Menu,
+.bonus3Menu,
+.bonus4Menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-
-
 
 .present-menu i,
 .past-menu i,
 .future-menu i,
 .subjunctive-menu i,
 .bonus1Menu i,
-.bonus2Menu i {
+.bonus2Menu i,
+.bonus3Menu i,
+.bonus4Menu i {
   display: inline-block;
 }
 
@@ -187,7 +197,12 @@ h3 {
 }
 
 .fa-calendar-check,
-.fa-compass, .fa-house, .fa-mountain, .fa-chess-rook {
+.fa-compass,
+.fa-house,
+.fa-mountain,
+.fa-chess-rook,
+.bonus-menu .fa-fire,
+.bonus-menu .fa-key {
   margin-right: 10px;
 }
 
@@ -218,10 +233,10 @@ h3 {
 }
 
 .page-content div,
-  .page-content p,
-  .page-content ul {
-    line-height: 1.4;
-  }
+.page-content p,
+.page-content ul {
+  line-height: 1.4;
+}
 
 .page-content p {
   font-size: 18px;
@@ -252,7 +267,6 @@ table {
   overflow-x: auto;
   width: 100%;
 }
-
 
 .table-title {
   background-color: var(--color-secondary);
@@ -309,7 +323,8 @@ th {
   color: var(--color-primary);
 }
 
-.examples, .explanation {
+.examples,
+.explanation {
   margin-top: 30px;
   margin-bottom: 10px;
 }
@@ -340,7 +355,6 @@ th {
   padding-top: 5px;
   font-size: 18px;
   list-style-type: none;
-
 }
 
 .list-paragraph {
@@ -359,7 +373,6 @@ th {
 .fa-arrow-right {
   display: inline-block;
   margin-right: 5px;
-
 }
 
 .fa-exclamation-triangle {
@@ -397,16 +410,14 @@ th {
   color: var(--color-tertiary);
 }
 
-
-.premiumStatsH1, .premiumStatsMessage {
+.premiumStatsH1,
+.premiumStatsMessage {
   padding-inline: 20px;
 }
-
 
 .premium {
   border: solid gray 1px;
   text-align: center;
-
 }
 
 .locked {
@@ -431,7 +442,6 @@ th {
     padding: 0;
     margin-top: 0;
   }
-
 }
 @media screen and (max-width: 599px) {
   .page-content {
@@ -444,7 +454,6 @@ th {
   .bonus-menu {
     padding-inline: 20px;
     padding-bottom: 100px;
-    
   }
 
   .contentNav {
