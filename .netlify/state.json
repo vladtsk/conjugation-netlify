@@ -12,9 +12,10 @@
 			},
 			"timezone": "Europe/Paris",
 			"latitude": 45.748,
-			"longitude": 4.85
+			"longitude": 4.85,
+			"postalCode": "69007"
 		},
-		"timestamp": 1726412781653
+		"timestamp": 1732695865897
 	},
 	"siteId": "96bbc0e1-2407-43e4-92dc-5e4bcf6155f3"
 }
